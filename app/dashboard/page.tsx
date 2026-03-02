@@ -1435,12 +1435,25 @@ export default function DashboardPage() {
 
                     {activeQuestionData.options && activeQuestionData.options.length > 0 ? (
                       <>
-                        <div className="space-y-3">
+                        <div className={`
+                          ${activePartData?.title?.toLowerCase().includes('matching')
+                            ? 'grid grid-cols-2 sm:grid-cols-3 gap-3'
+                            : 'space-y-3'
+                          }
+                        `}>
                           {activeQuestionData.options.map((opt, index) => {
                             const letter = String.fromCharCode('A'.charCodeAt(0) + index);
                             const isSubmitted = submittedQuestions.has(currentQuestion);
-                            const correctOption = activeQuestionData.correctOption;
-                            const isCorrectAnswer = letter === correctOption;
+                            const rawCorrectOption = activeQuestionData.correctOption || '';
+                            let normalizedCorrectLetter = rawCorrectOption;
+                            // If correctOption is something like "A. True", extract just "A" 
+                            const match = rawCorrectOption.match(/^([A-Z])[\.\)]?\s/i);
+                            if (match) {
+                              normalizedCorrectLetter = match[1].toUpperCase();
+                            } else if (rawCorrectOption.length === 1) {
+                              normalizedCorrectLetter = rawCorrectOption.toUpperCase();
+                            }
+                            const isCorrectAnswer = letter === normalizedCorrectLetter;
                             const isSelected = answers[currentQuestion] === letter;
 
                             let optionClass = "border-gray-200 hover:bg-blue-50 hover:border-blue-400";
@@ -1454,7 +1467,29 @@ export default function DashboardPage() {
                               }
                             }
 
-                            return (
+                            const isMatching = activePartData?.title?.toLowerCase().includes('matching');
+
+                            return isMatching ? (
+                              <label key={opt} className={`relative flex flex-col items-center justify-center p-4 bg-white rounded-xl border-2 transition-all cursor-pointer group ${isSubmitted
+                                ? isCorrectAnswer
+                                  ? 'border-green-500 bg-green-50'
+                                  : (isSelected && !isCorrectAnswer) ? 'border-red-500 bg-red-50' : 'border-gray-200 opacity-60'
+                                : isSelected ? 'border-blue-500 bg-blue-50 shadow-md' : 'border-gray-200 hover:border-blue-300 hover:bg-slate-50'
+                                }`}>
+                                <input
+                                  type="radio"
+                                  name={`q${currentQuestion}`}
+                                  className="sr-only"
+                                  checked={isSelected}
+                                  onChange={() => handleAnswer(currentQuestion, letter)}
+                                  disabled={isSubmitted}
+                                />
+                                <div className={`text-lg font-bold mb-1 ${isSelected ? 'text-blue-700' : 'text-gray-500 group-hover:text-blue-500'}`}>{letter}</div>
+                                <div className="text-xs text-center text-gray-700 font-medium line-clamp-3">{opt}</div>
+                                {isSubmitted && isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full p-1 shadow-sm"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg></div>}
+                                {isSubmitted && isSelected && !isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-sm"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg></div>}
+                              </label>
+                            ) : (
                               <label key={opt} className={`flex items-center gap-3 p-3 bg-white rounded-md border transition-all group ${isSubmitted ? '' : 'cursor-pointer'} ${optionClass}`}>
                                 <input
                                   type="radio"
@@ -1481,9 +1516,9 @@ export default function DashboardPage() {
                             value={answers[currentQuestion] || ''}
                             onChange={(e) => handleAnswer(currentQuestion, e.target.value)}
                             disabled={submittedQuestions.has(currentQuestion)}
-                            placeholder="Type your answer here..."
+                            placeholder={activePartData?.title?.toLowerCase().includes('gap') || activePartData?.title?.toLowerCase().includes('cloze') ? "Type the missing word(s)..." : "Type your answer here..."}
                             className={`flex-1 p-3 rounded-md border outline-none transition-all ${submittedQuestions.has(currentQuestion)
-                              ? (answers[currentQuestion] || '').trim().toLowerCase() === activeQuestionData.correctOption.trim().toLowerCase()
+                              ? (answers[currentQuestion] || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase() === (activeQuestionData.correctOption || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase()
                                 ? 'border-green-500 bg-green-50 text-green-900'
                                 : 'border-red-500 bg-red-50 text-red-900'
                               : 'border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200'
@@ -1511,7 +1546,7 @@ export default function DashboardPage() {
                             <span className="font-bold">Answer:</span> {activeQuestionData.correctOption}
                           </div>
                         )}
-                        {submittedQuestions.has(currentQuestion) && (answers[currentQuestion] || '').trim().toLowerCase() !== activeQuestionData.correctOption.trim().toLowerCase() && (
+                        {submittedQuestions.has(currentQuestion) && (answers[currentQuestion] || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase() !== (activeQuestionData.correctOption || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase() && (
                           <div className="text-sm text-red-600 bg-red-50 p-2 rounded border border-red-100">
                             <span className="font-bold">Correct Answer:</span> {activeQuestionData.correctOption}
                           </div>
