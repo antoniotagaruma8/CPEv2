@@ -17,6 +17,7 @@ export default function LandingPage() {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
+            <Link href="#testimonials" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Testimonials</Link>
             <Link href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
           </nav>
           <button
@@ -170,6 +171,98 @@ export default function LandingPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Public Sharing</h3>
                 <p className="text-slate-600 leading-relaxed">Share your exam results and generated content with a public link. Great for showing your progress to teachers or peers.</p>
               </div>
+            </div>
+          </div>
+        </div>
+        {/* Testimonials Section */}
+        <div id="testimonials" className="bg-white py-24 border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-800 mb-4">
+                <span className="flex h-2 w-2 rounded-full bg-indigo-600 mr-2"></span>
+                Trusted by educators
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What our users say</h2>
+              <p className="text-lg text-slate-600">
+                Teachers and students from around the world use CEFR Mock Exams to prepare for success.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "María García",
+                  role: "English Teacher",
+                  location: "Madrid, Spain",
+                  quote: "I use this daily with my B2 and C1 classes. The AI-generated exams are incredibly realistic — my students can't believe they're not from Cambridge. It's saved me hours of prep time every week.",
+                  stars: 5,
+                  accent: "from-blue-600 to-blue-400",
+                },
+                {
+                  name: "Lukas Müller",
+                  role: "C1 Student",
+                  location: "Munich, Germany",
+                  quote: "I passed my CAE with a score of 192 after practising here for just 3 weeks. The detailed feedback on every question helped me understand exactly where I was going wrong.",
+                  stars: 5,
+                  accent: "from-indigo-600 to-indigo-400",
+                },
+                {
+                  name: "Sophie Laurent",
+                  role: "Language Academy Director",
+                  location: "Lyon, France",
+                  quote: "We've integrated this into our curriculum across all levels. The ability to generate unlimited custom exams on any topic is a game-changer for differentiated learning.",
+                  stars: 5,
+                  accent: "from-teal-600 to-teal-400",
+                },
+                {
+                  name: "Tomáš Novák",
+                  role: "B2 Student",
+                  location: "Prague, Czech Republic",
+                  quote: "The speaking practice with AI assessment is brilliant. I was too shy to practise with my teacher, but here I can record as many attempts as I want.",
+                  stars: 5,
+                  accent: "from-purple-600 to-purple-400",
+                },
+                {
+                  name: "Anna Kowalski",
+                  role: "Private Tutor",
+                  location: "Warsaw, Poland",
+                  quote: "My students love the instant feedback. I can assign exams on specific topics we've covered in class and track their progress. The premium plan is worth every cent.",
+                  stars: 5,
+                  accent: "from-rose-600 to-rose-400",
+                },
+                {
+                  name: "Dimitris Papadopoulos",
+                  role: "C2 Student",
+                  location: "Athens, Greece",
+                  quote: "Finding CPE practice material is nearly impossible. This platform generates fresh, high-quality C2 exams every time. I've recommended it to everyone at my language school.",
+                  stars: 5,
+                  accent: "from-amber-600 to-amber-400",
+                },
+              ].map((testimonial, i) => (
+                <div
+                  key={i}
+                  className="relative bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col"
+                >
+                  <div className={`absolute top-0 left-8 right-8 h-1 rounded-b-full bg-gradient-to-r ${testimonial.accent}`}></div>
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: testimonial.stars }).map((_, j) => (
+                      <svg key={j} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-slate-700 leading-relaxed mb-6 flex-1 italic">"{testimonial.quote}"</p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-slate-200">
+                    <div className={`h-10 w-10 rounded-full bg-gradient-to-br ${testimonial.accent} flex items-center justify-center text-white font-bold text-sm shadow-sm`}>
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900 text-sm">{testimonial.name}</div>
+                      <div className="text-xs text-slate-500">{testimonial.role} · {testimonial.location}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
