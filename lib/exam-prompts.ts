@@ -36,7 +36,7 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
 - Theme & Complexity: ${themePrompt}
     - Tone & Register: Match the required register(formal / informal) perfectly to the task.
 - Distractors: For multiple choice, distractors MUST be plausible and test specific ${cefrLevel} reading / listening skills(e.g., understanding implication, attitude, text organization).
-- Gap - Fills: NEVER include question numbers(e.g., "1.", "(2)", "3)") inside the actual text / content of any gap - fill or gapped text exercise.Keep the text flowing cleanly with just blanks(e.g., "_____").
+- Gap - Fills: For cloze or gap-fill tasks, you MUST number the gaps sequentially within the text, e.g., "(1) _____", "(2) _____". In the 'questions' array, DO NOT repeat the sentence. Instead, set the 'question' field simply to "Gap 1", "Gap 2", etc., followed by the options.
 `;
 
     switch (examType) {
