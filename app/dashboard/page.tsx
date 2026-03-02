@@ -10,6 +10,7 @@ import { saveExam, getSavedExams, deleteSavedExam } from '../actions/examActions
 import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
 import { toggleExamFavorite } from '../actions/favoriteActions';
+import { assessSpeakingAction } from '../actions/assessSpeaking';
 
 interface Question {
   id: number;
@@ -318,6 +319,12 @@ export default function DashboardPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [savedExamsList, setSavedExamsList] = useState<any[]>([]);
   const [helpVisibility, setHelpVisibility] = useState<Record<string, boolean>>({});
+
+  // Speaking Recording Assessment States
+  const [isRecording, setIsRecording] = useState(false);
+  const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder | null>(null);
+  const [isAssessing, setIsAssessing] = useState(false);
+  const [assessmentResult, setAssessmentResult] = useState<{ transcript: string, isCorrect: boolean, feedback: string, suggestion: string } | null>(null);
 
   useEffect(() => {
     // Persistence logic: Use generatedExam from context, or fallback to localStorage
@@ -1238,6 +1245,73 @@ export default function DashboardPage() {
   const activeQuestionData = examQuestions.find(q => q.id === currentQuestion);
   const activePartData = examParts.find(p => p.part === activeQuestionData?.part);
 
+  // --- SPEAKING TEST ASSESSMENT LOGIC ---
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      const audioChunks: Blob[] = [];
+
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) audioChunks.push(e.data);
+      };
+
+      recorder.onstop = async () => {
+        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+        // Stop all hardware tracks immediately
+        stream.getTracks().forEach(track => track.stop());
+
+        // Convert to Base64 to send to Server Action
+        const reader = new FileReader();
+        reader.readAsDataURL(audioBlob);
+        reader.onloadend = async () => {
+          const base64Audio = reader.result as string;
+          await submitAudioForAssessment(base64Audio);
+        };
+      };
+
+      recorder.start();
+      setMediaRecorder(recorder);
+      setIsRecording(true);
+      setAssessmentResult(null);
+    } catch (err) {
+      console.error('Error accessing microphone:', err);
+      alert('Could not access your microphone. Please check your browser permissions.');
+    }
+  };
+
+  const stopRecording = () => {
+    if (mediaRecorder && isRecording) {
+      mediaRecorder.stop();
+      setIsRecording(false);
+      setIsAssessing(true);
+    }
+  };
+
+  const submitAudioForAssessment = async (base64Audio: string) => {
+    try {
+      if (!activeQuestionData) return;
+      const result = await assessSpeakingAction(base64Audio, activeQuestionData.question, cefrLevel);
+
+      if (result.success && result.transcript && result.isCorrect !== undefined && result.feedback && result.suggestion) {
+        setAssessmentResult({
+          transcript: result.transcript,
+          isCorrect: result.isCorrect,
+          feedback: result.feedback,
+          suggestion: result.suggestion
+        });
+      } else {
+        alert(result.error || 'Failed to assess audio.');
+      }
+    } catch (error) {
+      console.error('Assessment failed:', error);
+      alert('An error occurred during assessment.');
+    } finally {
+      setIsAssessing(false);
+    }
+  };
+  // ------------------------------------
+
   const checkTextAnswer = (userAnswer: string, correctAnswer: string) => {
     if (!userAnswer || !correctAnswer) return false;
 
@@ -1626,7 +1700,76 @@ export default function DashboardPage() {
                           })}
                         </div>
                       </>
-                    ) : examType === 'Speaking' ? null : (
+                    ) : examType === 'Speaking' ? (
+                      <div className="flex flex-col items-center gap-4 mt-8">
+                        {isAssessing ? (
+                          <div className="flex flex-col items-center gap-3 p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 w-full animate-pulse">
+                            <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            <span className="text-sm font-bold text-slate-700 dark:text-slate-300">Examiner is analyzing your speech...</span>
+                          </div>
+                        ) : (
+                          <button
+                            onClick={isRecording ? stopRecording : startRecording}
+                            className={`flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all transform hover:scale-105 ${isRecording
+                              ? 'bg-red-500 hover:bg-red-600 text-white animate-pulse ring-4 ring-red-200 dark:ring-red-900'
+                              : 'bg-blue-600 hover:bg-blue-700 text-white ring-4 ring-blue-100 dark:ring-blue-900'
+                              }`}
+                          >
+                            {isRecording ? (
+                              <>
+                                <div className="w-4 h-4 bg-white rounded-sm"></div>
+                                Stop Recording
+                              </>
+                            ) : (
+                              <>
+                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                                Record Answer
+                              </>
+                            )}
+                          </button>
+                        )}
+
+                        {isRecording && <div className="text-sm font-medium text-red-500 animate-pulse">Recording audio... Speak clearly.</div>}
+
+                        {/* Assessment Modal Feedback */}
+                        {assessmentResult && !isRecording && !isAssessing && (
+                          <div className={`mt-6 p-6 rounded-xl border-2 w-full transition-all flex flex-col gap-4 shadow-sm ${assessmentResult.isCorrect
+                            ? 'bg-green-50 dark:bg-green-900/20 border-green-400 dark:border-green-600'
+                            : 'bg-orange-50 dark:bg-orange-900/20 border-orange-400 dark:border-orange-600'
+                            }`}>
+                            <div className="flex items-center gap-3">
+                              <div className={`p-2 rounded-full ${assessmentResult.isCorrect ? 'bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300' : 'bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-300'}`}>
+                                {assessmentResult.isCorrect ? (
+                                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                ) : (
+                                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                                )}
+                              </div>
+                              <div>
+                                <h3 className={`font-bold text-lg ${assessmentResult.isCorrect ? 'text-green-800 dark:text-green-400' : 'text-orange-800 dark:text-orange-400'}`}>
+                                  {assessmentResult.isCorrect ? 'Good Answer!' : 'Needs Improvement'}
+                                </h3>
+                                <p className={`text-xs uppercase tracking-wider font-bold ${assessmentResult.isCorrect ? 'text-green-600 dark:text-green-500' : 'text-orange-600 dark:text-orange-500'}`}>Examiner Feedback</p>
+                              </div>
+                            </div>
+
+                            <div className="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+                              <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-1 uppercase tracking-wider">You said:</p>
+                              <p className="text-gray-800 dark:text-slate-200 italic">"{assessmentResult.transcript}"</p>
+                            </div>
+
+                            <p className="text-gray-800 dark:text-slate-200 font-medium leading-relaxed">{assessmentResult.feedback}</p>
+
+                            <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg border border-blue-200 dark:border-blue-800/50 mt-2">
+                              <p className="text-xs text-blue-600 dark:text-blue-400 font-bold mb-1 uppercase tracking-wider flex items-center gap-2">
+                                <span>💡</span> Tip for Next Time
+                              </p>
+                              <p className="text-sm text-blue-900 dark:text-blue-200">{assessmentResult.suggestion}</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
                       <div className="space-y-4">
                         <div className="flex gap-2">
                           <input
