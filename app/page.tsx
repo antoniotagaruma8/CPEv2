@@ -232,7 +232,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-500">&copy; 2024 CEFR Mock Exams. All rights reserved.</p>
+            <p className="text-sm text-slate-500">&copy; 2026 CEFR Mock Exams. All rights reserved.</p>
             <div className="flex gap-6">
               {/* Social icons could go here */}
             </div>
