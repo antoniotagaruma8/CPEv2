@@ -374,8 +374,8 @@ export default function DashboardPage() {
         switch (cefrLevel) {
           case 'A1':
           case 'A2':
-            if (examType === 'Reading') timeInMinutes = 60; // Reading & Writing is 60m, let's say 30 for reading
-            else if (examType === 'Writing') timeInMinutes = 30; // 30+30 = 60m combined
+            if (examType === 'Reading') timeInMinutes = 60; // Reading & Writing is 60m overall, default 60m for context
+            else if (examType === 'Writing') timeInMinutes = 60;
             else if (examType === 'Listening') timeInMinutes = 30;
             else if (examType === 'Speaking') timeInMinutes = 10;
             break;
@@ -383,11 +383,11 @@ export default function DashboardPage() {
             if (examType === 'Reading') timeInMinutes = 45;
             else if (examType === 'Writing') timeInMinutes = 45;
             else if (examType === 'Listening') timeInMinutes = 30;
-            else if (examType === 'Speaking') timeInMinutes = 15;
+            else if (examType === 'Speaking') timeInMinutes = 17;
             break;
           case 'B2':
-            if (examType === 'Reading') timeInMinutes = 75;
-            else if (examType === 'Writing') timeInMinutes = 80;
+            if (examType === 'Reading') timeInMinutes = 75; // 1 hr 15 mins
+            else if (examType === 'Writing') timeInMinutes = 80; // 1 hr 20 mins
             else if (examType === 'Listening') timeInMinutes = 40;
             else if (examType === 'Speaking') timeInMinutes = 14;
             break;
