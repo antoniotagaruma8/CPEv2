@@ -113,7 +113,7 @@ The "parts" array should follow the format of:
 
             if (speakingParts >= 3) {
                 enhancedTopic += `- Part 3 (Collaborative Task / Discussion): Provide 'title', 'instructions', 'content' (context). Let 'questions' array have ONE object with:
-  - 'question': The discussion prompt. MUST include a bulleted list of 5 concepts to discuss.
+  - 'question': The discussion prompt followed by a list of 5 discussion topics. CRITICAL FORMATTING: Use plain newline characters (\\n) to separate lines. Use "- " (dash space) to prefix each bullet topic. Do NOT use HTML tags like <br/>, do NOT use asterisks (*) for bullets. Example format: "Discuss the following topics:\\n- Topic one\\n- Topic two\\n- Topic three"
   - 'options': [].
   - 'possibleAnswers': 3-4 complex example sentences demonstrating how a ${cefrLevel} candidate should initiate discussion, express opinions, agree/disagree politely, and move the conversation forward.
   - 'tips': Comprehensive advice for ${cefrLevel} candidate interaction. Emphasize that this is a collaborative task, not a monologue. Focus on active listening, turn-taking, and referencing the partner's points.

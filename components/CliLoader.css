@@ -1,67 +1,269 @@
-.cli-loader-container {
+/* Modal Overlay */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #f0f2f5; /* Light, clean background */
-  font-family: 'SF Mono', 'Courier New', Courier, monospace;
-  color: #333;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: overlayFadeIn 0.3s ease-out;
 }
 
-.cli-loader {
-  background-color: #ffffff;
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
-  padding: 24px;
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Card */
+.loader-modal {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  padding: 48px 40px 40px;
   width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 440px;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-align: center;
+  animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.cli-loader p {
-  margin: 0 0 12px 0;
-  font-size: 1em;
+.loader-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-size: 300% 100%;
+  animation: shimmerTop 2s ease-in-out infinite;
 }
 
-.prompt {
-  color: #1890ff; /* A nice blue for the prompt */
-  font-weight: bold;
+@keyframes shimmerTop {
+  0% { background-position: 100% 0; }
+  50% { background-position: 0 0; }
+  100% { background-position: 100% 0; }
 }
 
-.prompt-success {
-    color: #52c41a; /* Green for success */
-    font-weight: bold;
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.progress-line {
+/* Animated Icon */
+.loader-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+.loader-spinner-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #e2e8f0;
+  border-top-color: #3b82f6;
+  border-right-color: #8b5cf6;
+  animation: spinRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  position: absolute;
+  inset: 0;
+}
+
+.loader-inner-icon {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
-  font-size: 1em;
-  white-space: nowrap;
+  justify-content: center;
+  font-size: 28px;
+  animation: pulseIcon 2s ease-in-out infinite;
 }
 
-.progress-percent {
-  margin-left: 12px;
-  font-weight: bold;
-  color: #1890ff;
+@keyframes spinRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.cursor {
-  display: inline-block;
-  width: 10px;
-  height: 1.2em;
-  background-color: #333;
-  animation: blink 1s step-end infinite;
-  vertical-align: bottom;
-  margin-top: 4px;
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
-@keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #333;
-  }
+/* Text */
+.loader-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.loader-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Progress Bar */
+.loader-progress-wrapper {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.loader-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-progress-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.loader-progress-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmerBar 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmerBar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.loader-progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.loader-progress-percent {
+  font-weight: 700;
+  font-size: 0.875rem;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Status Steps */
+.loader-steps {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.loader-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.813rem;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+.loader-step.active {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.loader-step.done {
+  color: #10b981;
+}
+
+.loader-step-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.loader-step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.loader-step.active .loader-step-dot {
+  background: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+  animation: pulseDot 1.5s ease-in-out infinite;
+}
+
+.loader-step.done .loader-step-dot {
+  background: #10b981;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.1); }
+}
+
+/* Success State */
+.loader-success {
+  animation: successPop 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loader-success .loader-spinner-ring {
+  border-color: #10b981;
+  animation: none;
+}
+
+.loader-success .loader-inner-icon {
+  animation: none;
+  font-size: 32px;
+}
+
+.loader-success .loader-title {
+  color: #059669;
+}
+
+.loader-success .loader-progress-fill {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+@keyframes successPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
 }

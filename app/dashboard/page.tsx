@@ -868,14 +868,7 @@ export default function DashboardPage() {
     return <div className="flex h-screen items-center justify-center">Loading...</div>;
   }
 
-  if (loading || isProcessing || isLoaderVisible) {
-    return (
-      <CliLoader
-        finished={!loading && !isProcessing}
-        onComplete={() => setIsLoaderVisible(false)}
-      />
-    );
-  }
+  const showLoaderModal = loading || isProcessing || isLoaderVisible;
 
   const anyError = error || localError;
   if (anyError) {
@@ -894,6 +887,12 @@ export default function DashboardPage() {
   if (examQuestions.length === 0) {
     return (
       <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
+        {showLoaderModal && (
+          <CliLoader
+            finished={!loading && !isProcessing}
+            onComplete={() => setIsLoaderVisible(false)}
+          />
+        )}
         <header className="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 flex justify-between items-center shadow-sm sticky top-0 z-20">
           <h1 className="text-lg sm:text-xl font-bold text-slate-800 flex items-center gap-2">
             <svg className="w-8 h-8 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1253,7 +1252,40 @@ export default function DashboardPage() {
                         ))}
                       </div>
                     ) : (
-                      <div className="font-semibold text-gray-800 mb-4 whitespace-pre-line">{activeQuestionData.question}</div>
+                      <div className="font-semibold text-gray-800 mb-4">
+                        {(() => {
+                          const rawQ = activeQuestionData.question || '';
+                          // Normalize: replace <br/>, <br>, <br /> with \n
+                          let normalized = rawQ.replace(/<br\s*\/?>/gi, '\n');
+                          const lines = normalized.split('\n').filter(l => l.trim());
+                          const introLines: string[] = [];
+                          const bulletItems: string[] = [];
+                          let foundBullet = false;
+                          for (const line of lines) {
+                            const trimmed = line.trim();
+                            // Detect bullet: starts with *, -, •, or numbered like "1."
+                            if (/^[\*\-\•]\s+/.test(trimmed) || /^\d+[\.\)]\s+/.test(trimmed)) {
+                              foundBullet = true;
+                              bulletItems.push(trimmed.replace(/^[\*\-\•]\s+/, '').replace(/^\d+[\.\)]\s+/, ''));
+                            } else if (foundBullet) {
+                              // If we already found bullets, treat remaining non-bullet as bullet too
+                              bulletItems.push(trimmed);
+                            } else {
+                              introLines.push(trimmed);
+                            }
+                          }
+                          return (
+                            <>
+                              {introLines.map((line, i) => <p key={i} className="mb-2">{line}</p>)}
+                              {bulletItems.length > 0 && (
+                                <ul className="list-disc list-inside space-y-1 mt-2 ml-2 text-gray-700 font-normal">
+                                  {bulletItems.map((item, i) => <li key={i}>{item}</li>)}
+                                </ul>
+                              )}
+                            </>
+                          );
+                        })()}
+                      </div>
                     )}
 
                     {isSpeakingPart3 && activeQuestionData.tips && (
