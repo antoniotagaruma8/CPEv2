@@ -1512,8 +1512,8 @@ export default function DashboardPage() {
 
             {activeQuestionData && examType !== 'Writing' && (
               <div className="space-y-6">
-                <div className={`p-4 bg-gray-50 rounded-lg border border-gray-200 ${isSpeakingPart3 ? 'flex flex-col md:flex-row gap-6' : ''}`}>
-                  <div className={isSpeakingPart3 ? 'flex-1' : ''}>
+                <div className={`p-4 bg-gray-50 rounded-lg border border-gray-200 ${isSpeakingPart3 ? 'flex flex-col gap-6' : ''}`}>
+                  <div className="w-full">
                     {activeQuestionData.part1Questions && activeQuestionData.part1Questions.length > 0 ? (
                       <div className="space-y-6">
                         <div className="font-semibold text-gray-800 mb-4">{activeQuestionData.question}</div>
@@ -1811,8 +1811,8 @@ export default function DashboardPage() {
                     )}
                   </div>
 
-                  {isSpeakingPart3 && (
-                    <div className="flex-1 space-y-4 md:border-l md:border-gray-200 md:pl-6">
+                  {isSpeakingPart3 && (activeQuestionData.tips || (activeQuestionData.possibleAnswers && activeQuestionData.possibleAnswers.length > 0)) && (
+                    <div className="w-full space-y-4 pt-4 border-t border-gray-200 mt-2">
 
                       {activeQuestionData.tips && (
                         <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg shadow-sm">
@@ -1989,7 +1989,7 @@ export default function DashboardPage() {
                 )}
               </div>
 
-              <div className="p-0 flex flex-col md:flex-row h-full overflow-y-auto w-full">
+              <div className="p-0 flex flex-col h-full overflow-y-auto w-full">
                 {isRecording && (
                   <div className="p-6 flex-1 flex flex-col items-center justify-center gap-6 py-12 md:py-24 w-full">
                     <div className="relative flex items-center justify-center">
@@ -2028,14 +2028,14 @@ export default function DashboardPage() {
 
                     {/* LEFT PANE: Transcript & Tips */}
                     <div className="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 flex flex-col gap-6">
-                      <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700">
+                      <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shrink-0">
                         <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-2 uppercase tracking-wider flex items-center gap-2">
                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg> What you said
                         </p>
                         <p className="text-slate-800 dark:text-slate-200 italic text-base leading-relaxed">"{assessmentResult.transcript}"</p>
                       </div>
 
-                      <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50 flex-1 flex flex-col justify-center min-h-[120px]">
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50 grow shrink-0 flex flex-col justify-center min-h-[120px]">
                         <p className="text-sm text-blue-600 dark:text-blue-400 font-bold mb-2 flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg> Actionable Tip
                         </p>
