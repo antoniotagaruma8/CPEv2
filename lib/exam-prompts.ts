@@ -66,6 +66,7 @@ CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
 The "parts" array should follow standard Cambridge formats for ${cefrLevel}. 
 CRITICAL STRUCTURE REQUIREMENT: The exam MUST have EXACTLY ${totalReadingQuestions} questions in total, appropriately distributed across the ${partCount} parts.
 FORMAT REQUIREMENT: ${readingFormatStr}
+WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive (e.g., "Part 1: Multiple-Choice Cloze on Environmental Issues"). Do NOT simply name it "Part 1" or "Part 2".
 Crucially, every single part MUST include a 'content' field with a MINIMUM of 150 words of reading text.
 If it is a multiple-choice section, provide 'options' and a 'correctOption'. 
 If it is an open cloze or word formation, 'options' can be empty, but provide the 'correctOption'.
@@ -121,6 +122,7 @@ CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
 2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
 
 The "parts" array should follow the format of:
+WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive (e.g., "Part 1: Writing an Email to a Friend"). Do NOT simply name it "Part 1" or "Part 2".
 - Part 1 (${taskTypesPart1}): Provide 'title', 'instructions' (MUST explicitly state the task type and required word count: ${wordCountPart1}), 'content' (the prompt/notes/texts to respond to). The 'questions' array should have ONE object with 'question' (e.g., "Write your response"), an empty 'options' array. Include 'howToApproach' (a detailed 4-step numbered guide on planning and structure), 'modelAnswer' (an extensive example answer matching the word count and demonstrating ${cefrLevel} grammar/vocab; MUST be clearly formatted with correct styling and multiple paragraphs explicitly separated using \\n\\n), and 'tips' (multi-sentence strategy on register).
 - Part 2 (Choice of task: ${taskTypesPart2}): Provide 'title', 'instructions' (MUST explicitly state the required word count: ${wordCountPart2}), 'content' (the scenario). The 'questions' array has ONE object with empty 'options'. Include highly detailed 'howToApproach', 'modelAnswer' (MUST be clearly formatted with multiple paragraphs explicitly separated using \\n\\n), and 'tips' properties just like Part 1.
 ${cambridgeStandards}
@@ -165,6 +167,7 @@ CRITICAL STRUCTURE REQUIREMENT: The exam MUST have EXACTLY ${totalListeningQuest
 FORMAT REQUIREMENT: ${listeningFormatStr}
 
 The "parts" array should follow the format of:
+WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive and indicate the task type and topic (e.g., "Part 1: Multiple-Choice Short Interviews on Daily Life"). Do NOT simply name it "Part 1" or "Part 2".
 Provide 'title', 'instructions', 'content' (a highly detailed transcript of the audio).
 IMPORTANT TRANSCRIPT FORMAT: The 'content' field MUST be a labeled dialogue with speakers on separate lines, e.g.:
 "Interviewer: Welcome to the show, Sarah.\\nSarah: Thank you for having me.\\nInterviewer: So tell us about your work."
@@ -223,6 +226,7 @@ CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
 2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
 
 The "parts" array should follow the format of:
+WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive and indicate the task type (e.g., "Part 1: Examiner Interview" or "Part 3: Collaborative Discussion on the Environment"). Do NOT simply name it "Part 1" or "Part 2".
 ${speakingFormatStr}
 ${cambridgeStandards}
 `;
