@@ -10,7 +10,7 @@ export default function LandingPage() {
       <header className="h-16 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between px-6 sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <svg className="h-7 w-7 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor" />
           </svg>
           <span className="font-bold text-lg tracking-tight">CPE Practice</span>
         </div>
@@ -19,7 +19,7 @@ export default function LandingPage() {
             <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
             <Link href="#" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
           </nav>
-          <button 
+          <button
             onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
             className="text-sm font-semibold text-white bg-slate-900 px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors"
           >
@@ -40,14 +40,14 @@ export default function LandingPage() {
                   AI-Powered Exam Prep
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] tracking-tight mb-6">
-                  Create Your <br className="hidden lg:block"/>
+                  Create Your <br className="hidden lg:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Custom Exam</span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   Experience realistic exam simulations for B2 First, C1 Advanced, and C2 Proficiency. Get instant, detailed AI feedback on your writing and speaking.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <button 
+                  <button
                     onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
                     className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg shadow-blue-600/20"
                   >
@@ -59,16 +59,16 @@ export default function LandingPage() {
                 </div>
                 <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
                   <div className="flex -space-x-2">
-                    {[1,2,3,4].map((i) => (
+                    {[1, 2, 3, 4].map((i) => (
                       <div key={i} className={`h-8 w-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600 overflow-hidden`}>
-                         <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300"></div>
+                        <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300"></div>
                       </div>
                     ))}
                   </div>
                   <p>Join 1,000+ students today</p>
                 </div>
               </div>
-              
+
               {/* Hero Visual */}
               <div className="flex-1 w-full max-w-xl lg:max-w-none">
                 <div className="relative">
@@ -117,22 +117,22 @@ export default function LandingPage() {
         {/* Stats Section */}
         <div className="border-y border-slate-100 bg-white">
           <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-             <div>
-                <div className="text-4xl font-bold text-slate-900 mb-1">C2</div>
-                <div className="text-sm font-medium text-slate-500">Proficiency Level</div>
-             </div>
-             <div>
-                <div className="text-4xl font-bold text-slate-900 mb-1">24/7</div>
-                <div className="text-sm font-medium text-slate-500">AI Availability</div>
-             </div>
-             <div>
-                <div className="text-4xl font-bold text-slate-900 mb-1">Instant</div>
-                <div className="text-sm font-medium text-slate-500">Feedback</div>
-             </div>
-             <div>
-                <div className="text-4xl font-bold text-slate-900 mb-1">100%</div>
-                <div className="text-sm font-medium text-slate-500">Exam Focused</div>
-             </div>
+            <div>
+              <div className="text-4xl font-bold text-slate-900 mb-1">C2</div>
+              <div className="text-sm font-medium text-slate-500">Proficiency Level</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-slate-900 mb-1">24/7</div>
+              <div className="text-sm font-medium text-slate-500">AI Availability</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-slate-900 mb-1">Instant</div>
+              <div className="text-sm font-medium text-slate-500">Feedback</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-slate-900 mb-1">100%</div>
+              <div className="text-sm font-medium text-slate-500">Exam Focused</div>
+            </div>
           </div>
         </div>
 
@@ -145,16 +145,16 @@ export default function LandingPage() {
                 We've analyzed the official marking criteria to build tools that actually help you improve your score.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-blue-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-600/20">
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Realistic Interface</h3>
-                <p className="text-slate-600 leading-relaxed">Practice with a UI that mirrors the official computer-based Cambridge exams. Get comfortable with the format before exam day.</p>
+                <p className="text-slate-600 leading-relaxed">Practice with a UI that mirrors the official computer-based CEFR Mock exams. Get comfortable with the format before exam day.</p>
               </div>
-              
+
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-indigo-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-indigo-600/20">
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
@@ -162,7 +162,7 @@ export default function LandingPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-3">AI-Powered Feedback</h3>
                 <p className="text-slate-600 leading-relaxed">Get instant, detailed analysis. Every question comes with a rationale, approach strategy, and helpful tips.</p>
               </div>
-              
+
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-teal-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-600/20">
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
@@ -180,15 +180,15 @@ export default function LandingPage() {
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/30 rounded-full blur-3xl"></div>
           </div>
-          
+
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               Ready to ace your exam?
             </h2>
             <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-              Join thousands of students who are already using our platform to prepare for their Cambridge English exams.
+              Join thousands of students who are already using our platform to prepare for their CEFR English exams.
             </p>
-            <button 
+            <button
               onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
               className="px-10 py-5 rounded-xl bg-white text-slate-900 font-bold text-xl hover:bg-blue-50 transition-all hover:scale-105 shadow-xl"
             >
@@ -206,12 +206,12 @@ export default function LandingPage() {
             <div className="col-span-2">
               <div className="flex items-center gap-2 mb-4">
                 <svg className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor" />
                 </svg>
                 <span className="font-bold text-xl text-slate-900">CPE Practice</span>
               </div>
               <p className="text-slate-500 max-w-sm">
-                The smartest way to prepare for Cambridge English exams. AI-powered feedback, realistic simulations, and progress tracking.
+                The smartest way to prepare for CEFR English exams. AI-powered feedback, realistic simulations, and progress tracking.
               </p>
             </div>
             <div>

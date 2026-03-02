@@ -26,8 +26,8 @@ interface WritingGraderProps {
   placeholder?: string;
 }
 
-export default function WritingGrader({ 
-  prompt = "", 
+export default function WritingGrader({
+  prompt = "",
   taskType = "CPE Writing",
   label = "Your Answer",
   placeholder = "Type your essay here..."
@@ -38,7 +38,7 @@ export default function WritingGrader({
 
   const handleGrade = async () => {
     if (!input.trim()) return;
-    
+
     setLoading(true);
     setResult(null);
 
@@ -100,7 +100,7 @@ export default function WritingGrader({
           <div className="flex items-center justify-between mb-6 border-b pb-4">
             <div>
               <h3 className="text-2xl font-bold text-gray-900">Assessment Result</h3>
-              <p className="text-gray-500">Based on Cambridge C2 Proficiency scales</p>
+              <p className="text-gray-500">Based on CEFR Mock C2 Proficiency scales</p>
             </div>
             <div className="text-right">
               <div className="text-3xl font-bold text-blue-600">{result.score}/20</div>

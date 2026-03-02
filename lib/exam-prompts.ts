@@ -29,7 +29,7 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
     }
 
     // ... (Constants for Cambridge Standards)
-    const cambridgeStandards = `CRITICAL ${cefrLevel} CAMBRIDGE STANDARDS:
+    const cambridgeStandards = `CRITICAL ${cefrLevel} CEFR MOCK EXAM STANDARDS:
     - ${difficultyPrompt} Strictly adhere to this difficulty scale.
 - Vocabulary: Use ${cefrLevel} relevant vocabulary(refer to English Vocabulary Profile).
 - Grammar: Employ complex grammar structures expected at ${cefrLevel} (e.g., conditionals, passive voice, inversion for C1 / C2).
@@ -70,19 +70,19 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
                 readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze (exactly 8 qs).\\nPart 2: Open cloze (exactly 8 qs).\\nPart 3: Word formation (exactly 8 qs).\\nPart 4: Key word transformations (up to 8 words) (exactly 6 qs).\\nPart 5: Multiple-choice reading (exactly 6 qs).\\nPart 6: Gapped text (exactly 7 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
             }
 
-            enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Reading and Use of English exam.
+            enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Reading and Use of English exam.
 CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
     1. "examTitle": A short, descriptive title for the exam based on the content(max 10 words).
-2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
+2. "parts": An array containing EXACTLY ${partCount} part objects formatted for CEFR ${cefrLevel}.
 
-        The "parts" array should follow standard Cambridge formats for ${cefrLevel}. 
+        The "parts" array should follow standard CEFR formats for ${cefrLevel}. 
 CRITICAL STRUCTURE REQUIREMENT: The exam MUST have EXACTLY ${totalReadingQuestions} questions in total, appropriately distributed across the ${partCount} parts.
 FORMAT REQUIREMENT: ${readingFormatStr}
 WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e.g., "Part 1: Multiple-Choice Cloze on Environmental Issues").Do NOT simply name it "Part 1" or "Part 2".
         Crucially, every single part MUST include a 'content' field with a MINIMUM of 150 words of reading text.
 If it is a multiple - choice section, provide 'options' and a 'correctOption'. 
 If it is an open cloze or word formation, 'options' can be empty, but provide the 'correctOption'.
-For each question, provide an 'explanation'(2 - 3 sentences) detailing why the answer is correct and why distractors are wrong based on Cambridge grading.
+For each question, provide an 'explanation'(2 - 3 sentences) detailing why the answer is correct and why distractors are wrong based on CEFR grading.
         Include 'tips' for approaching this specific part type.
             ${cambridgeStandards}
     `;
@@ -129,10 +129,10 @@ For each question, provide an 'explanation'(2 - 3 sentences) detailing why the a
             }
 
             if (cefrLevel === 'A2') {
-                enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Writing exam.
+                enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Writing exam.
 CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
     1. "examTitle": A short, descriptive title for the exam based on the content(max 10 words).
-2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
+2. "parts": An array containing EXACTLY ${partCount} part objects formatted for CEFR ${cefrLevel}.
 
         The "parts" array should follow the format of:
 WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e.g., "Part 1: Writing an Email to a Friend").Do NOT simply name it "Part 1" or "Part 2".
@@ -141,10 +141,10 @@ WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e
 ${cambridgeStandards}
     `;
             } else {
-                enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Writing exam.
+                enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Writing exam.
 CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
     1. "examTitle": A short, descriptive title for the exam based on the content(max 10 words).
-2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
+2. "parts": An array containing EXACTLY ${partCount} part objects formatted for CEFR ${cefrLevel}.
 
         The "parts" array should follow the format of:
 WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e.g., "Part 1: Writing an Email to a Friend").Do NOT simply name it "Part 1" or "Part 2".
@@ -183,12 +183,12 @@ ${cambridgeStandards}
                 }
             }
 
-            enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Listening exam.
+            enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Listening exam.
 CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
     1. "examTitle": A short, descriptive title for the exam based on the content(max 10 words).
-2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
+2. "parts": An array containing EXACTLY ${partCount} part objects formatted for CEFR ${cefrLevel}.
 
-        The "parts" array should follow standard Cambridge formats for ${cefrLevel}.
+        The "parts" array should follow standard CEFR formats for ${cefrLevel}.
 CRITICAL STRUCTURE REQUIREMENT: The exam MUST have EXACTLY ${totalListeningQuestions} questions in total, distributed across the ${partCount} parts according to the standard specs.
 FORMAT REQUIREMENT: ${listeningFormatStr}
 
@@ -247,10 +247,10 @@ For each question, provide a 2 - 3 sentence 'explanation' explaining why the sel
 `;
             }
 
-            enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Speaking exam.
+            enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Speaking exam.
 CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
     1. "examTitle": A short, descriptive title for the exam based on the content(max 10 words).
-2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
+2. "parts": An array containing EXACTLY ${partCount} part objects formatted for CEFR ${cefrLevel}.
 
         The "parts" array should follow the format of:
 WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive and indicate the task type(e.g., "Part 1: Examiner Interview" or "Part 3: Collaborative Discussion on the Environment").Do NOT simply name it "Part 1" or "Part 2".

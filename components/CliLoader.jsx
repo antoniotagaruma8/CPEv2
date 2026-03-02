@@ -5,7 +5,7 @@ import './CliLoader.css';
 const STEPS = [
   { label: 'Initializing AI context', threshold: 10 },
   { label: 'Generating content & questions', threshold: 40 },
-  { label: 'Applying Cambridge rubric', threshold: 65 },
+  { label: 'Applying CEFR Mock rubric', threshold: 65 },
   { label: 'Finalizing exam structure', threshold: 90 },
   { label: 'Ready!', threshold: 100 },
 ];
@@ -68,7 +68,7 @@ const CliLoader = ({ onComplete, finished }) => {
           </h2>
           <p className="loader-subheading dark:text-slate-400 text-slate-500">
             {isComplete
-              ? 'Your personalized Cambridge materials are ready.'
+              ? 'Your personalized CEFR Mock materials are ready.'
               : 'Our AI is dynamically assembling questions and grading logic.'}
           </p>
 

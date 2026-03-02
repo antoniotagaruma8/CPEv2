@@ -51,7 +51,7 @@ export async function generateExamAction(
         const groq = new Groq({ apiKey });
 
         const messages: any[] = [
-          { role: 'system', content: 'You are an expert in creating Cambridge English Qualification exams. Your output must be a valid JSON object.' },
+          { role: 'system', content: 'You are an expert in creating CEFR Mock English Qualification exams. Your output must be a valid JSON object.' },
         ];
 
         if (fileData && fileData.startsWith('data:image') && !visionFailed) {
