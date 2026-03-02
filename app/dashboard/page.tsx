@@ -990,16 +990,39 @@ export default function DashboardPage() {
         const data = JSON.parse(exam.data);
         if (data.isFinished) totalCompleted++;
 
-        if (typeof data.score === 'number' && typeof data.totalQuestions === 'number') {
-          const type = exam.type as keyof typeof stats;
-          if (stats[type]) {
-            if (type === 'Reading' || type === 'Listening') {
-              stats[type].correct += data.score;
-              stats[type].total += data.totalQuestions;
-            } else if (type === 'Writing' || type === 'Speaking') {
-              const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
-              stats[type].correct += answeredCount;
-              stats[type].total += data.totalQuestions;
+        const type = exam.type as keyof typeof stats;
+        if (!stats[type]) return;
+
+        if (type === 'Reading' || type === 'Listening') {
+          // Only count answered questions (not total)
+          const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
+          if (answeredCount > 0) {
+            const correctCount = typeof data.score === 'number' ? data.score : 0;
+            stats[type].correct += correctCount;
+            stats[type].total += answeredCount; // Only count attempted
+          }
+        } else if (type === 'Writing') {
+          const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
+          stats[type].correct += answeredCount;
+          stats[type].total += answeredCount; // Only count attempted
+        } else if (type === 'Speaking') {
+          // For Speaking, score >= 6 counts as correct
+          if (data.answers && typeof data.answers === 'object') {
+            Object.values(data.answers).forEach((answer: any) => {
+              if (answer && typeof answer === 'string' && answer.trim()) {
+                stats[type].total += 1; // Attempted
+                // Check if there's a score associated — look in exam data
+              }
+            });
+          }
+          // If a numeric score is stored (from assessment), use it
+          if (typeof data.score === 'number' && typeof data.totalQuestions === 'number') {
+            const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
+            if (answeredCount > 0) {
+              // Average score across answered questions; count as correct if avg >= 6 (out of 10)
+              const avgScore = data.score / answeredCount;
+              stats[type].total = answeredCount;
+              stats[type].correct += avgScore >= 6 ? answeredCount : Math.round(answeredCount * (avgScore / 10));
             }
           }
         }
@@ -1371,7 +1394,7 @@ export default function DashboardPage() {
                   </div>
                   <div className="bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800/50 p-2 rounded-lg">
                     <div className="text-lg font-bold text-red-600 dark:text-red-400">{progressStats.globalTotal > 0 ? progressStats.globalTotal - progressStats.globalCorrect : 0}</div>
-                    <div className="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wide">Wrong/Missed</div>
+                    <div className="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wide">Wrong</div>
                   </div>
                 </div>
               </div>
