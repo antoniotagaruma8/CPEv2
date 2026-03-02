@@ -7,7 +7,9 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
 
     let themePrompt = '';
     // Determine typical themes and complexity by level
-    if (cefrLevel === 'A1' || cefrLevel === 'A2' || cefrLevel === 'B1') {
+    if (cefrLevel === 'A1') {
+        themePrompt = 'Focus on highly visual, purely literal, and extremely basic situations (e.g., street signs, short notices, one-line text messages, basic personal info).';
+    } else if (cefrLevel === 'A2' || cefrLevel === 'B1') {
         themePrompt = 'Focus on concrete, everyday situations (e.g., hobbies, daily routines, travel, shopping, ordering food, basic school/work life, simple personal opinions).';
     } else if (cefrLevel === 'B2' || cefrLevel === 'C1') {
         themePrompt = 'Focus on abstract and professional themes (e.g., environment, technology, societal changes, psychology, complex workplace scenarios, global culture).';
@@ -30,26 +32,30 @@ CRITICAL ${cefrLevel} CAMBRIDGE STANDARDS:
             // Reading logic...
             let readingFormatStr = '';
             let totalReadingQuestions = 0;
-            if (cefrLevel === 'A1' || cefrLevel === 'A2') {
-                partCount = 5; // A2 Reading (30 questions total)
+            if (cefrLevel === 'A1') {
+                partCount = 5;
                 totalReadingQuestions = 30;
-                readingFormatStr = "Include tasks like multiple-choice for short texts/signs, matching, multiple-choice for longer texts, multiple-choice gap-fill, open gap-fill.";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice for short texts/signs.\\nPart 2: Matching.\\nPart 3: Multiple-choice for longer texts.\\nPart 4: Multiple-choice gap-fill.\\nPart 5: Open gap-fill.";
+            } else if (cefrLevel === 'A2') {
+                partCount = 5; // A2 Key Reading (30 questions total)
+                totalReadingQuestions = 30;
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice for short texts/signs.\\nPart 2: Matching.\\nPart 3: Multiple-choice for longer texts.\\nPart 4: Multiple-choice gap-fill.\\nPart 5: Open gap-fill.";
             } else if (cefrLevel === 'B1') {
                 partCount = 6; // B1 Reading (32 questions total)
                 totalReadingQuestions = 32;
-                readingFormatStr = "Include tasks like multiple-choice (short texts), matching profiles to texts, multiple-choice (long text), gapped text (inserting sentences), multiple-choice gap-fill, open gap-fill.";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (short texts).\\nPart 2: Matching profiles to texts.\\nPart 3: Multiple-choice (long text).\\nPart 4: Gapped text (inserting sentences).\\nPart 5: Multiple-choice gap-fill.\\nPart 6: Open gap-fill.";
             } else if (cefrLevel === 'B2') {
                 partCount = 7; // B2 Reading (52 questions total)
                 totalReadingQuestions = 52;
-                readingFormatStr = "Include tasks like multiple-choice cloze, open cloze, word formation, key word transformations (grammar/vocabulary), multiple-choice reading, gapped text (inserting paragraphs), multiple matching.";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze.\\nPart 2: Open cloze.\\nPart 3: Word formation.\\nPart 4: Key word transformations (grammar/vocabulary).\\nPart 5: Multiple-choice reading.\\nPart 6: Gapped text (inserting paragraphs).\\nPart 7: Multiple matching.";
             } else if (cefrLevel === 'C1') {
                 partCount = 8; // C1 Reading (56 questions total)
                 totalReadingQuestions = 56;
-                readingFormatStr = "Include tasks like multiple-choice cloze, open cloze, word formation, key word transformations, cross-text multiple matching (comparing 4 short texts), multiple-choice reading, gapped text, multiple matching.";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze.\\nPart 2: Open cloze.\\nPart 3: Word formation.\\nPart 4: Key word transformations.\\nPart 5: Cross-text multiple matching (comparing 4 short texts).\\nPart 6: Multiple-choice reading.\\nPart 7: Gapped text.\\nPart 8: Multiple matching.";
             } else {
                 partCount = 7; // C2 Reading (53 questions total)
                 totalReadingQuestions = 53;
-                readingFormatStr = "Include tasks like multiple-choice cloze, open cloze, word formation, key word transformations (up to 8 words), multiple-choice reading, gapped text, multiple matching.";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze.\\nPart 2: Open cloze.\\nPart 3: Word formation.\\nPart 4: Key word transformations (up to 8 words).\\nPart 5: Multiple-choice reading.\\nPart 6: Gapped text.\\nPart 7: Multiple matching.";
             }
 
             enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Reading and Use of English exam.
@@ -80,8 +86,8 @@ ${cambridgeStandards}
             if (cefrLevel === 'A1') {
                 wordCountPart1 = "20-30 words";
                 wordCountPart2 = "20-30 words";
-                taskTypesPart1 = "short email/note";
-                taskTypesPart2 = "short story";
+                taskTypesPart1 = "very short email/note";
+                taskTypesPart2 = "simple description based on pictures";
             } else if (cefrLevel === 'A2') {
                 wordCountPart1 = "25+ words";
                 wordCountPart2 = "35+ words";
@@ -115,8 +121,8 @@ CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
 2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
 
 The "parts" array should follow the format of:
-- Part 1 (${taskTypesPart1}): Provide 'title', 'instructions' (MUST explicitly state the task type and required word count: ${wordCountPart1}), 'content' (the prompt/notes/texts to respond to). The 'questions' array should have ONE object with 'question' (e.g., "Write your response"), an empty 'options' array. Include 'howToApproach' (a detailed 4-step numbered guide on planning and structure), 'modelAnswer' (an extensive, multi-paragraph example answer matching the word count and demonstrating ${cefrLevel} grammar/vocab), and 'tips' (multi-sentence strategy on register).
-- Part 2 (Choice of task: ${taskTypesPart2}): Provide 'title', 'instructions' (MUST explicitly state the required word count: ${wordCountPart2}), 'content' (the scenario). The 'questions' array has ONE object with empty 'options'. Include highly detailed 'howToApproach', 'modelAnswer', and 'tips' properties just like Part 1.
+- Part 1 (${taskTypesPart1}): Provide 'title', 'instructions' (MUST explicitly state the task type and required word count: ${wordCountPart1}), 'content' (the prompt/notes/texts to respond to). The 'questions' array should have ONE object with 'question' (e.g., "Write your response"), an empty 'options' array. Include 'howToApproach' (a detailed 4-step numbered guide on planning and structure), 'modelAnswer' (an extensive example answer matching the word count and demonstrating ${cefrLevel} grammar/vocab; MUST be clearly formatted with correct styling and multiple paragraphs explicitly separated using \\n\\n), and 'tips' (multi-sentence strategy on register).
+- Part 2 (Choice of task: ${taskTypesPart2}): Provide 'title', 'instructions' (MUST explicitly state the required word count: ${wordCountPart2}), 'content' (the scenario). The 'questions' array has ONE object with empty 'options'. Include highly detailed 'howToApproach', 'modelAnswer' (MUST be clearly formatted with multiple paragraphs explicitly separated using \\n\\n), and 'tips' properties just like Part 1.
 ${cambridgeStandards}
 `;
             break;
@@ -125,23 +131,27 @@ ${cambridgeStandards}
             let totalListeningQuestions = 0;
             let listeningFormatStr = '';
 
-            if (cefrLevel === 'A1' || cefrLevel === 'A2') {
+            if (cefrLevel === 'A1') {
                 partCount = 5;
                 totalListeningQuestions = 25;
-                listeningFormatStr = "Tasks: Multiple-choice (pictures), gap-fill from a monologue, multiple-choice (conversation), multiple-choice for main idea, matching.";
+                listeningFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (pictures).\\nPart 2: Very simple gap-fill from a monologue.\\nPart 3: Multiple-choice (short conversation).\\nPart 4: Multiple-choice for main idea.\\nPart 5: Basic matching.";
+            } else if (cefrLevel === 'A2') {
+                partCount = 5;
+                totalListeningQuestions = 25;
+                listeningFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (pictures).\\nPart 2: Gap-fill from a monologue.\\nPart 3: Multiple-choice (conversation).\\nPart 4: Multiple-choice for main idea.\\nPart 5: Matching.";
             } else if (cefrLevel === 'B1') {
                 partCount = 4;
                 totalListeningQuestions = 25;
-                listeningFormatStr = "Tasks: Multiple-choice (pictures), multiple-choice (short recordings), gap-fill (notes), multiple-choice (long interview).";
+                listeningFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (pictures).\\nPart 2: Multiple-choice (short recordings).\\nPart 3: Gap-fill (notes).\\nPart 4: Multiple-choice (long interview).";
             } else if (cefrLevel === 'B2' || cefrLevel === 'C1' || cefrLevel === 'C2') {
                 partCount = 4;
                 totalListeningQuestions = 30;
                 if (cefrLevel === 'B2') {
-                    listeningFormatStr = "Tasks: Multiple-choice (short extracts), sentence completion (monologue), multiple matching (5 speakers), multiple-choice (long interview).";
+                    listeningFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (short extracts).\\nPart 2: Sentence completion (monologue).\\nPart 3: Multiple matching (5 speakers).\\nPart 4: Multiple-choice (long interview).";
                 } else if (cefrLevel === 'C1') {
-                    listeningFormatStr = "Tasks: Multiple-choice (3 short extracts), sentence completion, multiple-choice (long interview), multiple matching (2 tasks simultaneously based on 5 speakers).";
+                    listeningFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (3 short extracts).\\nPart 2: Sentence completion.\\nPart 3: Multiple-choice (long interview).\\nPart 4: Multiple matching (2 tasks simultaneously based on 5 speakers).";
                 } else { // C2
-                    listeningFormatStr = "Tasks: Multiple-choice (short extracts), sentence completion, multiple-choice (long interview), multiple matching (complex).";
+                    listeningFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (short extracts).\\nPart 2: Sentence completion.\\nPart 3: Multiple-choice (long interview).\\nPart 4: Multiple matching (complex).";
                 }
             }
 
@@ -171,7 +181,41 @@ ${cambridgeStandards}
             if (cefrLevel === 'A1' || cefrLevel === 'A2') partCount = 2;
             else if (cefrLevel === 'B1' || cefrLevel === 'B2' || cefrLevel === 'C1') partCount = 4;
             else partCount = 3; // C2
-            const speakingParts = partCount;
+
+            let speakingFormatStr = '';
+            if (cefrLevel === 'A1' || cefrLevel === 'A2') {
+                speakingFormatStr = `
+- Part 1 (Examiner interview - personal questions): Provide 'title', 'instructions', 'content' (interlocutor script). The 'questions' array MUST contain EXACTLY ONE object with: 'question': "Interview Questions", 'options': [], 'tips': "A strategy guide.", 'part1Questions': An array of 5-8 objects (Q1-3 personal, the rest topic-related). Each has 'question', a detailed 'answer' (2-3 sentences), and 'tip'.
+- Part 2 (Collaborative task with a partner): Provide 'title', 'instructions', 'content'. Let 'questions' array have ONE object with: 'question': The task prompt, 'options': [], 'imagePrompts': 2 distinct strings for AI image generation depicting contrasting visual scenarios related to the topic, 'possibleAnswers': 3-4 example phrases.
+`;
+            } else if (cefrLevel === 'B1') {
+                speakingFormatStr = `
+- Part 1 (Interview): Provide 'title', 'instructions', 'content'. The 'questions' array MUST contain EXACTLY ONE object with 'part1Questions' (5-8 questions/answers).
+- Part 2 (Extended turn - describing a photograph for 1 minute): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'imagePrompts' (2 distinct strings depicting contrasting scenarios) and 'possibleAnswers'.
+- Part 3 (Collaborative task - discussing options with a partner): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'question' (the prompt followed by 5 discussion topics separated by \\n and prefixed with "- "), 'possibleAnswers', and 'tips'.
+- Part 4 (General discussion based on the collaborative task): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'part1Questions' (5-6 deep discussion questions/answers).
+`;
+            } else if (cefrLevel === 'B2') {
+                speakingFormatStr = `
+- Part 1 (Interview): Provide 'title', 'instructions', 'content'. The 'questions' array MUST contain EXACTLY ONE object with 'part1Questions' (5-8 questions/answers).
+- Part 2 (Long turn - comparing 2 photos): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'imagePrompts' (4 distinct strings depicting contrasting scenarios) and 'possibleAnswers'.
+- Part 3 (Collaborative task): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'question' (the prompt followed by 5 discussion topics separated by \\n and prefixed with "- "), 'possibleAnswers', and 'tips'.
+- Part 4 (Deeper discussion of the collaborative topic): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'part1Questions' (5-6 deep discussion questions/answers).
+`;
+            } else if (cefrLevel === 'C1') {
+                speakingFormatStr = `
+- Part 1 (Interview): Provide 'title', 'instructions', 'content'. The 'questions' array MUST contain EXACTLY ONE object with 'part1Questions' (5-8 questions/answers).
+- Part 2 (Long turn - comparing 2 of 3 photos): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'imagePrompts' (4 distinct strings depicting contrasting scenarios) and 'possibleAnswers'.
+- Part 3 (Collaborative task): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'question' (the prompt followed by 5 discussion topics separated by \\n and prefixed with "- "), 'possibleAnswers', and 'tips'.
+- Part 4 (Advanced abstract discussion): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'part1Questions' (5-6 deep discussion questions/answers).
+`;
+            } else { // C2
+                speakingFormatStr = `
+- Part 1 (Interview): Provide 'title', 'instructions', 'content'. The 'questions' array MUST contain EXACTLY ONE object with 'part1Questions' (5-8 questions/answers).
+- Part 2 (Collaborative task): Provide 'title', 'instructions', 'content'. The 'questions' array has ONE object with 'question' (the prompt followed by 5 discussion topics separated by \\n and prefixed with "- "), 'possibleAnswers', and 'tips'.
+- Part 3 (Long turn - 2 minutes based on a prompt card, followed by deeply analytical discussion): Provide 'title', 'instructions', 'content'. The 'questions' array has ZERO 'imagePrompts'. Instead, it has EXACTLY ONE object with 'question': The task prompt text card content, and 'part1Questions' containing extensive analytical discussion questions.
+`;
+            }
 
             enhancedTopic = `Based on the ${topicPrompt}, generate a complete Cambridge ${cefrLevel} Speaking exam.
 CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
@@ -179,40 +223,9 @@ CRITICAL REQUIREMENT: The output MUST be a JSON object containing:
 2. "parts": An array containing EXACTLY ${partCount} part objects formatted for Cambridge ${cefrLevel}.
 
 The "parts" array should follow the format of:
-- Part 1 (Interview): Provide 'title', 'instructions', 'content' (interlocutor script). The 'questions' array MUST contain EXACTLY ONE object with:
-  - 'question': "Interview Questions".
-  - 'options': [].
-  - 'tips': A comprehensive strategy guide for Part 1. Include advice on expanding answers beyond a simple 'yes' or 'no', using linking words, and sounding natural.
-  - 'part1Questions': An array of 5-8 objects. Questions 1-3 should be personal ("Where are you from?"). The rest related to ${topicPrompt}. Each object has 'question', a detailed, high-scoring 'answer' (2-3 sentences long) at ${cefrLevel} level demonstrating good vocabulary, and 'tip' (specific advice on grammar/vocab for that question).
+${speakingFormatStr}
+${cambridgeStandards}
 `;
-
-            if (speakingParts >= 2) {
-                enhancedTopic += `- Part 2 (Long turn / Collaborative task depending on level): Provide 'title', 'instructions', 'content'. Let the 'questions' array have ONE object with:
-  - 'question': The task prompt.
-  - 'options': [].
-  - 'imagePrompts': For B1-C2, provide 4 distinct strings for AI image generation. For A1/A2, provide just 2 strings. CRITICAL CAMBRIDGE STANDARD: These prompts MUST depict contrasting visual scenarios related to the same topic (e.g., "A stressful, crowded office environment" vs. "A peaceful, remote work setting" or "An extreme outdoor sport" vs. "A relaxing indoor hobby"). This is essential so candidates can "compare and contrast" the different situations as required by Cambridge exams.
-  - 'possibleAnswers': 3-4 example sentences or phrases demonstrating how a ${cefrLevel} candidate should compare, contrast, or speculate about the images.
-  - 'tips': Extensive advice for ${cefrLevel} candidates. Focus on time management (e.g., "Don't spend too long describing"), discourse management, and interactive communication.
-`;
-            }
-
-            if (speakingParts >= 3) {
-                enhancedTopic += `- Part 3 (Collaborative Task / Discussion): Provide 'title', 'instructions', 'content' (context). Let 'questions' array have ONE object with:
-  - 'question': The discussion prompt followed by a list of 5 discussion topics. CRITICAL FORMATTING: Use plain newline characters (\\n) to separate lines. Use "- " (dash space) to prefix each bullet topic. Do NOT use HTML tags like <br/>, do NOT use asterisks (*) for bullets. Example format: "Discuss the following topics:\\n- Topic one\\n- Topic two\\n- Topic three"
-  - 'options': [].
-  - 'possibleAnswers': 3-4 complex example sentences demonstrating how a ${cefrLevel} candidate should initiate discussion, express opinions, agree/disagree politely, and move the conversation forward.
-  - 'tips': Comprehensive advice for ${cefrLevel} candidate interaction. Emphasize that this is a collaborative task, not a monologue. Focus on active listening, turn-taking, and referencing the partner's points.
-`;
-            }
-
-            if (speakingParts >= 4) {
-                enhancedTopic += `- Part 4 (Discussion): Provide 'title', 'instructions', 'content' (context). Let 'questions' array have ONE object with:
-  - 'question': "Discussion on topics related to Part 3".
-  - 'options': [].
-  - 'part1Questions': An array of 5-6 deep, abstract discussion questions. Each with 'question', an extensive 3-4 sentence 'answer' modeling ${cefrLevel} discourse, and 'tip'.
-`;
-            }
-            enhancedTopic += `${cambridgeStandards}\n`;
             break;
     }
 
