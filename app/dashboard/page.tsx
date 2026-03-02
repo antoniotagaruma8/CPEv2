@@ -883,27 +883,40 @@ export default function DashboardPage() {
       Speaking: { correct: 0, total: 0 }
     };
 
+    let totalGenerated = 0;
+    let totalCompleted = 0;
+
     savedExamsList.forEach(exam => {
+      totalGenerated++;
       try {
         const data = JSON.parse(exam.data);
-        // Only include finished exams
-        if (data.isFinished && typeof data.score === 'number' && typeof data.totalQuestions === 'number') {
+        if (data.isFinished) totalCompleted++;
+
+        if (typeof data.score === 'number' && typeof data.totalQuestions === 'number') {
           const type = exam.type as keyof typeof stats;
           if (stats[type]) {
-            stats[type].correct += data.score;
-            stats[type].total += data.totalQuestions;
+            if (type === 'Reading' || type === 'Listening') {
+              stats[type].correct += data.score;
+              stats[type].total += data.totalQuestions;
+            } else if (type === 'Writing' || type === 'Speaking') {
+              const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
+              stats[type].correct += answeredCount;
+              stats[type].total += data.totalQuestions;
+            }
           }
         }
       } catch (e) {
-        // Ignore malformed data or old format without score
+        // Ignore malformed data
       }
     });
 
-    return Object.entries(stats).map(([name, { correct, total }]) => ({
+    const parsedStats = Object.entries(stats).map(([name, { correct, total }]) => ({
       name: name === 'Reading' ? 'Reading & Use of English' : name,
       progress: total > 0 ? Math.round((correct / total) * 100) : 0,
       color: name === 'Reading' ? 'bg-blue-500' : name === 'Writing' ? 'bg-purple-500' : name === 'Listening' ? 'bg-green-500' : 'bg-yellow-500'
     }));
+
+    return { parsedStats, totalGenerated, totalCompleted };
   }, [savedExamsList]);
 
   // Check if the current exam is already saved
@@ -1116,24 +1129,37 @@ export default function DashboardPage() {
 
             {/* Progress Tracking Column (1/4) */}
             <div className="lg:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg h-fit border border-slate-100 dark:border-slate-700 sticky top-4 transition-colors">
-              <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
+              <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
                 <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                 Progress Tracking
               </h3>
               <div className="space-y-4">
-                {progressStats.map((skill) => (
+                {progressStats.parsedStats.map((skill) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between text-xs font-bold text-slate-600 mb-1">
+                    <div className="flex justify-between text-xs font-bold text-slate-600 dark:text-slate-400 mb-1">
                       <span>{skill.name}</span>
                       <span>{skill.progress}%</span>
                     </div>
-                    <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                    <div className="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
                       <div className={`${skill.color} h-2.5 rounded-full transition-all duration-1000`} style={{ width: `${skill.progress}%` }}></div>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 p-4 bg-blue-50 rounded border border-blue-100 text-xs text-blue-800">
+              <div className="mt-6 border-t border-slate-100 dark:border-slate-700 pt-4">
+                <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">Overall Statistics</h4>
+                <div className="grid grid-cols-2 gap-2 text-center">
+                  <div className="bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-2 rounded-lg">
+                    <div className="text-xl font-bold text-blue-600 dark:text-blue-400">{progressStats.totalGenerated}</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">Generated</div>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-2 rounded-lg">
+                    <div className="text-xl font-bold text-green-600 dark:text-green-400">{progressStats.totalCompleted}</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">Completed</div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded border border-blue-100 dark:border-blue-800 text-xs text-blue-800 dark:text-blue-300">
                 <p className="font-bold mb-1">Weekly Goal</p>
                 <p>Complete 3 more exams to reach your weekly target!</p>
               </div>
