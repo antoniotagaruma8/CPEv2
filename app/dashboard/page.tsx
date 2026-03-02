@@ -1066,11 +1066,11 @@ export default function DashboardPage() {
                   <label htmlFor="cefrLevel" className="block text-sm font-bold text-slate-600 mb-2">CEFR Level</label>
                   <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
                     <option value="A1">A1 Beginner</option>
-                    <option value="A2">A2 Elementary</option>
-                    <option value="B1">B1 Intermediate</option>
-                    <option value="B2">B2 Upper Intermediate</option>
-                    <option value="C1">C1 Advanced</option>
-                    <option value="C2">C2 Proficiency</option>
+                    <option value="A2">A2 Key (KET)</option>
+                    <option value="B1">B1 Preliminary (PET)</option>
+                    <option value="B2">B2 First (FCE)</option>
+                    <option value="C1">C1 Advanced (CAE)</option>
+                    <option value="C2">C2 Proficiency (CPE)</option>
                   </select>
                 </div>
                 <div>
@@ -1149,17 +1149,37 @@ export default function DashboardPage() {
   const activeQuestionData = examQuestions.find(q => q.id === currentQuestion);
   const activePartData = examParts.find(p => p.part === activeQuestionData?.part);
 
+  const checkTextAnswer = (userAnswer: string, correctAnswer: string) => {
+    if (!userAnswer || !correctAnswer) return false;
+
+    // Normalize spaces and remove punctuation including quotes and question marks
+    const normalize = (str: string) => str.trim().toLowerCase().replace(/[.,/#!$%^&*;:{}=\-_`~()'"?]/g, "").replace(/\s+/g, " ");
+
+    const u = normalize(userAnswer);
+    let c = correctAnswer.trim().toLowerCase().replace(/^(answer:\s*|correct answer:\s*|correct option:\s*)/i, "");
+
+    if (u === normalize(c)) return true;
+
+    const possibleAnswers = c.split(/\s*(?:\/|,|\bor\b)\s*/).map(a => normalize(a)).filter(Boolean);
+    if (possibleAnswers.length > 0 && possibleAnswers.includes(u)) return true;
+
+    if (u.length > 2 && normalize(c).includes(u)) return true;
+    if (normalize(c).length > 2 && u.includes(normalize(c))) return true;
+
+    return false;
+  };
+
   const isSpeakingWideLayout = examType === 'Speaking';
   const isSpeakingPart3 = examType === 'Speaking' && activePartData?.part === 3;
 
   const getLevelLabel = (level: string) => {
     switch (level) {
       case 'A1': return 'A1 Beginner';
-      case 'A2': return 'A2 Elementary';
-      case 'B1': return 'B1 Intermediate';
-      case 'B2': return 'B2 Upper Intermediate';
-      case 'C1': return 'C1 Advanced';
-      case 'C2': return 'C2 Proficiency';
+      case 'A2': return 'A2 Key (KET)';
+      case 'B1': return 'B1 Preliminary (PET)';
+      case 'B2': return 'B2 First (FCE)';
+      case 'C1': return 'C1 Advanced (CAE)';
+      case 'C2': return 'C2 Proficiency (CPE)';
       default: return level;
     }
   };
@@ -1445,15 +1465,24 @@ export default function DashboardPage() {
                             const letter = String.fromCharCode('A'.charCodeAt(0) + index);
                             const isSubmitted = submittedQuestions.has(currentQuestion);
                             const rawCorrectOption = activeQuestionData.correctOption || '';
-                            let normalizedCorrectLetter = rawCorrectOption;
-                            // If correctOption is something like "A. True", extract just "A" 
+                            let normalizedCorrectLetter = rawCorrectOption.trim();
                             const match = rawCorrectOption.match(/^([A-Z])[\.\)]?\s/i);
                             if (match) {
                               normalizedCorrectLetter = match[1].toUpperCase();
-                            } else if (rawCorrectOption.length === 1) {
-                              normalizedCorrectLetter = rawCorrectOption.toUpperCase();
+                            } else if (rawCorrectOption.trim().length === 1) {
+                              normalizedCorrectLetter = rawCorrectOption.trim().toUpperCase();
                             }
-                            const isCorrectAnswer = letter === normalizedCorrectLetter;
+
+                            const cleanOpt = opt.trim().toLowerCase();
+                            const cleanCorrectOption = rawCorrectOption.trim().toLowerCase().replace(/^(answer:\s*|correct answer:\s*|correct option:\s*)/i, "");
+
+                            const isCorrectAnswer = letter === normalizedCorrectLetter
+                              || cleanOpt === cleanCorrectOption
+                              || cleanCorrectOption === `option ${letter.toLowerCase()}`
+                              || cleanCorrectOption === `letter ${letter.toLowerCase()}`
+                              || (cleanOpt.length > 3 && cleanCorrectOption.includes(cleanOpt))
+                              || (cleanCorrectOption.length > 3 && cleanOpt.includes(cleanCorrectOption));
+
                             const isSelected = answers[currentQuestion] === letter;
 
                             let optionClass = "border-gray-200 hover:bg-blue-50 hover:border-blue-400";
@@ -1518,7 +1547,7 @@ export default function DashboardPage() {
                             disabled={submittedQuestions.has(currentQuestion)}
                             placeholder={activePartData?.title?.toLowerCase().includes('gap') || activePartData?.title?.toLowerCase().includes('cloze') ? "Type the missing word(s)..." : "Type your answer here..."}
                             className={`flex-1 p-3 rounded-md border outline-none transition-all ${submittedQuestions.has(currentQuestion)
-                              ? (answers[currentQuestion] || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase() === (activeQuestionData.correctOption || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase()
+                              ? checkTextAnswer(answers[currentQuestion] || '', activeQuestionData.correctOption || '')
                                 ? 'border-green-500 bg-green-50 text-green-900'
                                 : 'border-red-500 bg-red-50 text-red-900'
                               : 'border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200'
@@ -1546,7 +1575,7 @@ export default function DashboardPage() {
                             <span className="font-bold">Answer:</span> {activeQuestionData.correctOption}
                           </div>
                         )}
-                        {submittedQuestions.has(currentQuestion) && (answers[currentQuestion] || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase() !== (activeQuestionData.correctOption || '').trim().replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase() && (
+                        {submittedQuestions.has(currentQuestion) && !checkTextAnswer(answers[currentQuestion] || '', activeQuestionData.correctOption || '') && (
                           <div className="text-sm text-red-600 bg-red-50 p-2 rounded border border-red-100">
                             <span className="font-bold">Correct Answer:</span> {activeQuestionData.correctOption}
                           </div>
