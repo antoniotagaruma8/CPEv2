@@ -27,6 +27,10 @@ export async function getUserSubscription(userEmail: string) {
 
 export async function createCheckoutSession(userEmail: string) {
     try {
+        console.log('Creating checkout session for:', userEmail)
+        console.log('Price ID:', process.env.STRIPE_PREMIUM_PRICE_ID)
+        console.log('Stripe key present:', !!process.env.STRIPE_SECRET_KEY)
+
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items: [
@@ -46,8 +50,8 @@ export async function createCheckoutSession(userEmail: string) {
 
         return { sessionId: session.id, url: session.url }
     } catch (error: any) {
-        console.error('Stripe Checkout Error:', error)
-        throw new Error(error.message)
+        console.error('Stripe Checkout Error:', error.message, error.type, error.raw?.message)
+        return { error: error.message || 'Unknown Stripe error' }
     }
 }
 

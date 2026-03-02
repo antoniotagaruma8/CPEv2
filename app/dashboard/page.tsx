@@ -303,12 +303,16 @@ export default function DashboardPage() {
     setIsUpgrading(true);
     try {
       const result = await createCheckoutSession(session.user.email);
-      if (result.url) {
+      if (result.error) {
+        alert(`Checkout error: ${result.error}`);
+      } else if (result.url) {
         window.location.href = result.url;
+      } else {
+        alert('Failed to start checkout — no URL returned.');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Checkout error:', err);
-      alert('Failed to start checkout. Please try again.');
+      alert(`Failed to start checkout: ${err.message || 'Unknown error'}`);
     } finally {
       setIsUpgrading(false);
     }
