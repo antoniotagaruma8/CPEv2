@@ -12,7 +12,7 @@ export default function LandingPage() {
           <svg className="h-7 w-7 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor" />
           </svg>
-          <span className="font-bold text-lg tracking-tight">CPE Practice</span>
+          <span className="font-bold text-lg tracking-tight">CEFR Mock Exams</span>
         </div>
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6">
@@ -80,7 +80,7 @@ export default function LandingPage() {
                         <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                         <div className="w-3 h-3 rounded-full bg-green-400"></div>
                       </div>
-                      <div className="ml-4 bg-white px-3 py-1 rounded-md text-xs text-slate-400 border border-slate-200 flex-1 text-center font-mono">cpe-practice.com/practice/review</div>
+                      <div className="ml-4 bg-white px-3 py-1 rounded-md text-xs text-slate-400 border border-slate-200 flex-1 text-center font-mono">cefr-mock-exams.com/practice/review</div>
                     </div>
                     <div className="p-6 md:p-8 bg-white">
                       <div className="flex gap-4 mb-6">
@@ -208,7 +208,7 @@ export default function LandingPage() {
                 <svg className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor" />
                 </svg>
-                <span className="font-bold text-xl text-slate-900">CPE Practice</span>
+                <span className="font-bold text-xl text-slate-900">CEFR Mock Exams</span>
               </div>
               <p className="text-slate-500 max-w-sm">
                 The smartest way to prepare for CEFR English exams. AI-powered feedback, realistic simulations, and progress tracking.
@@ -232,7 +232,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-500">&copy; 2024 CPE Practice. All rights reserved.</p>
+            <p className="text-sm text-slate-500">&copy; 2024 CEFR Mock Exams. All rights reserved.</p>
             <div className="flex gap-6">
               {/* Social icons could go here */}
             </div>

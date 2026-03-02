@@ -1070,7 +1070,7 @@ export default function DashboardPage() {
                     <option value="B1">B1 Preliminary (PET)</option>
                     <option value="B2">B2 First (FCE)</option>
                     <option value="C1">C1 Advanced (CAE)</option>
-                    <option value="C2">C2 Proficiency (CPE)</option>
+                    <option value="C2">C2 Proficiency</option>
                   </select>
                 </div>
                 <div>
@@ -1179,7 +1179,7 @@ export default function DashboardPage() {
       case 'B1': return 'B1 Preliminary (PET)';
       case 'B2': return 'B2 First (FCE)';
       case 'C1': return 'C1 Advanced (CAE)';
-      case 'C2': return 'C2 Proficiency (CPE)';
+      case 'C2': return 'C2 Proficiency';
       default: return level;
     }
   };
