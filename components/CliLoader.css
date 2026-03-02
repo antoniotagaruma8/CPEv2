@@ -1,0 +1,67 @@
+.cli-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f2f5; /* Light, clean background */
+  font-family: 'SF Mono', 'Courier New', Courier, monospace;
+  color: #333;
+}
+
+.cli-loader {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cli-loader p {
+  margin: 0 0 12px 0;
+  font-size: 1em;
+}
+
+.prompt {
+  color: #1890ff; /* A nice blue for the prompt */
+  font-weight: bold;
+}
+
+.prompt-success {
+    color: #52c41a; /* Green for success */
+    font-weight: bold;
+}
+
+.progress-line {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.progress-percent {
+  margin-left: 12px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: #333;
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+  margin-top: 4px;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #333;
+  }
+}
