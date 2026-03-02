@@ -14,6 +14,7 @@ const ADMIN_EMAILS = [
 ]
 
 const FREE_GENERATION_LIMIT = 10
+const PREMIUM_GENERATION_LIMIT = 100
 
 export async function getGenerationStatus(userEmail: string) {
     const isAdmin = ADMIN_EMAILS.includes(userEmail)
@@ -27,8 +28,8 @@ export async function getGenerationStatus(userEmail: string) {
 
     const isPremium = sub?.plan === 'premium'
 
-    if (isAdmin || isPremium) {
-        return { allowed: true, count: 0, limit: Infinity, isAdmin: true, plan: isPremium ? 'premium' : 'admin' }
+    if (isAdmin) {
+        return { allowed: true, count: 0, limit: Infinity, isAdmin: true, plan: 'admin' }
     }
 
     // Try to get existing record
@@ -44,9 +45,16 @@ export async function getGenerationStatus(userEmail: string) {
     }
 
     const count = data?.generation_count || 0
-    const allowed = count < FREE_GENERATION_LIMIT
+    const limit = isPremium ? PREMIUM_GENERATION_LIMIT : FREE_GENERATION_LIMIT
+    const allowed = count < limit
 
-    return { allowed, count, limit: FREE_GENERATION_LIMIT, isAdmin: false, plan: 'free' }
+    return {
+        allowed,
+        count,
+        limit,
+        isAdmin: false,
+        plan: isPremium ? 'premium' : 'free'
+    }
 }
 
 export async function getGenerationInfo(userEmail: string) {

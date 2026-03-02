@@ -50,3 +50,28 @@ export async function createCheckoutSession(userEmail: string) {
         throw new Error(error.message)
     }
 }
+
+export async function createPortalSession(userEmail: string) {
+    try {
+        // Look up the customer ID from the subscriptions table
+        const { data: sub } = await supabase
+            .from('subscriptions')
+            .select('stripe_customer_id')
+            .eq('user_email', userEmail)
+            .single()
+
+        if (!sub?.stripe_customer_id) {
+            throw new Error('No active subscription found')
+        }
+
+        const session = await stripe.billingPortal.sessions.create({
+            customer: sub.stripe_customer_id,
+            return_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/dashboard`,
+        })
+
+        return { url: session.url }
+    } catch (error: any) {
+        console.error('Stripe Portal Error:', error)
+        throw new Error(error.message)
+    }
+}

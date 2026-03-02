@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useExam } from './ExamContext';
 import CliLoader from '../../components/CliLoader';
 import { fetchStockImageAction } from '../actions/fetchStockImage';
@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
 import { toggleExamFavorite } from '../actions/favoriteActions';
 import { assessSpeakingAction } from '../actions/assessSpeaking';
+import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 
 interface Question {
   id: number;
@@ -272,12 +273,59 @@ export default function DashboardPage() {
 
   const { data: session, status } = useSession();
   const router = useRouter();
+  const [checkoutBanner, setCheckoutBanner] = useState<'success' | 'canceled' | null>(null);
+  const [isUpgrading, setIsUpgrading] = useState(false);
 
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/');
     }
   }, [status, router]);
+
+  // Handle Stripe checkout redirect params
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      setCheckoutBanner('success');
+      window.history.replaceState({}, '', '/dashboard');
+      const t = setTimeout(() => setCheckoutBanner(null), 8000);
+      return () => clearTimeout(t);
+    } else if (params.get('canceled') === 'true') {
+      setCheckoutBanner('canceled');
+      window.history.replaceState({}, '', '/dashboard');
+      const t = setTimeout(() => setCheckoutBanner(null), 6000);
+      return () => clearTimeout(t);
+    }
+  }, []);
+
+  const handleUpgrade = useCallback(async () => {
+    if (!session?.user?.email || isUpgrading) return;
+    setIsUpgrading(true);
+    try {
+      const result = await createCheckoutSession(session.user.email);
+      if (result.url) {
+        window.location.href = result.url;
+      }
+    } catch (err) {
+      console.error('Checkout error:', err);
+      alert('Failed to start checkout. Please try again.');
+    } finally {
+      setIsUpgrading(false);
+    }
+  }, [session?.user?.email, isUpgrading]);
+
+  const handleManageSubscription = useCallback(async () => {
+    if (!session?.user?.email) return;
+    try {
+      const result = await createPortalSession(session.user.email);
+      if (result.url) {
+        window.location.href = result.url;
+      }
+    } catch (err) {
+      console.error('Portal error:', err);
+      alert('Failed to open subscription management. Please try again.');
+    }
+  }, [session?.user?.email]);
 
   // Set user email for generation tracking
   useEffect(() => {
@@ -1022,6 +1070,19 @@ export default function DashboardPage() {
             onComplete={() => setIsLoaderVisible(false)}
           />
         )}
+        {/* Checkout Success/Cancel Banner */}
+        {checkoutBanner === 'success' && (
+          <div className="bg-green-500 text-white text-center py-3 px-4 text-sm font-bold flex items-center justify-center gap-2 animate-fade-in">
+            <span>🎉</span> Welcome to Premium! Your subscription is now active. Enjoy unlimited exams and Listening access.
+            <button onClick={() => setCheckoutBanner(null)} className="ml-4 text-white/80 hover:text-white">✕</button>
+          </div>
+        )}
+        {checkoutBanner === 'canceled' && (
+          <div className="bg-amber-500 text-white text-center py-3 px-4 text-sm font-bold flex items-center justify-center gap-2 animate-fade-in">
+            <span>ℹ️</span> Checkout was canceled. No charges were made.
+            <button onClick={() => setCheckoutBanner(null)} className="ml-4 text-white/80 hover:text-white">✕</button>
+          </div>
+        )}
         <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center shadow-sm sticky top-0 z-20 transition-colors duration-300">
           <h1 className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
             <svg className="w-8 h-8 text-blue-900 dark:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1040,11 +1101,28 @@ export default function DashboardPage() {
               <span className="text-sm text-slate-600 dark:text-slate-400 hidden sm:block">Welcome, <span className="font-bold text-slate-900 dark:text-slate-200">{session?.user?.name || session?.user?.email?.split('@')[0]}</span></span>
               {generationInfo && (
                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tight ${generationInfo.plan === 'admin' ? 'bg-purple-100 text-purple-700 border border-purple-200' :
-                    generationInfo.plan === 'premium' ? 'bg-amber-100 text-amber-700 border border-amber-200' :
-                      'bg-slate-100 text-slate-600 border border-slate-200'
+                  generationInfo.plan === 'premium' ? 'bg-amber-100 text-amber-700 border border-amber-200' :
+                    'bg-slate-100 text-slate-600 border border-slate-200'
                   }`}>
                   {generationInfo.plan === 'admin' ? 'Admin' : generationInfo.plan === 'premium' ? 'Premium ⭐' : 'Free Plan'}
                 </span>
+              )}
+              {generationInfo && generationInfo.plan === 'free' && (
+                <button
+                  onClick={handleUpgrade}
+                  disabled={isUpgrading}
+                  className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all disabled:opacity-50 shadow-sm"
+                >
+                  {isUpgrading ? '...' : '⚡ Upgrade'}
+                </button>
+              )}
+              {generationInfo && generationInfo.plan === 'premium' && (
+                <button
+                  onClick={handleManageSubscription}
+                  className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 transition-all"
+                >
+                  Manage
+                </button>
               )}
             </div>
             <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-red-600 dark:hover:text-red-400 hover:border-red-200 dark:hover:border-red-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2">
@@ -1208,7 +1286,13 @@ export default function DashboardPage() {
                   <div className="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
                     <p className="font-bold flex items-center gap-1"><span>⚠️</span> Free tier limit reached</p>
                     <p className="mt-1 text-xs">You have used all {generationInfo.limit} free exam generations. Subscribe to Premium for unlimited access.</p>
-                    <Link href="/pricing" className="mt-2 block text-center w-full py-2 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors">Upgrade to Premium</Link>
+                    <button
+                      onClick={handleUpgrade}
+                      disabled={isUpgrading}
+                      className="mt-2 block text-center w-full py-2 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors disabled:opacity-50"
+                    >
+                      {isUpgrading ? 'Redirecting to Stripe...' : 'Upgrade to Premium'}
+                    </button>
                   </div>
                 )}
               </form>
