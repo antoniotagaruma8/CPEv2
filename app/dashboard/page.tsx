@@ -925,13 +925,20 @@ export default function DashboardPage() {
       }
     });
 
-    const parsedStats = Object.entries(stats).map(([name, { correct, total }]) => ({
-      name: name === 'Reading' ? 'Reading & Use of English' : name,
-      progress: total > 0 ? Math.round((correct / total) * 100) : 0,
-      color: name === 'Reading' ? 'bg-blue-500' : name === 'Writing' ? 'bg-purple-500' : name === 'Listening' ? 'bg-green-500' : 'bg-yellow-500'
-    }));
+    let globalCorrect = 0;
+    let globalTotal = 0;
 
-    return { parsedStats, totalGenerated, totalCompleted };
+    const parsedStats = Object.entries(stats).map(([name, { correct, total }]) => {
+      globalCorrect += correct;
+      globalTotal += total;
+      return {
+        name: name === 'Reading' ? 'Reading & Use of English' : name,
+        progress: total > 0 ? Math.round((correct / total) * 100) : 0,
+        color: name === 'Reading' ? 'bg-blue-500' : name === 'Writing' ? 'bg-purple-500' : name === 'Listening' ? 'bg-green-500' : 'bg-yellow-500'
+      };
+    });
+
+    return { parsedStats, totalGenerated, totalCompleted, globalCorrect, globalTotal };
   }, [savedExamsList]);
 
   // Check if the current exam is already saved
@@ -1162,15 +1169,56 @@ export default function DashboardPage() {
                 ))}
               </div>
               <div className="mt-6 border-t border-slate-100 dark:border-slate-700 pt-4">
-                <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">Overall Statistics</h4>
+                <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">Overall Statistics</h4>
+
+                {/* SVG Donut Chart */}
+                <div className="flex justify-center mb-6 relative">
+                  <div className="w-32 h-32 relative">
+                    <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90">
+                      {/* Background circle */}
+                      <path
+                        className="text-slate-100 dark:text-slate-700"
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                      />
+                      {/* Progress circle */}
+                      <path
+                        className="text-green-500 dark:text-green-400 transition-all duration-1000 ease-out"
+                        strokeDasharray={`${progressStats.globalTotal > 0 ? (progressStats.globalCorrect / progressStats.globalTotal) * 100 : 0}, 100`}
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-2xl font-bold text-slate-800 dark:text-slate-200">
+                        {progressStats.globalTotal > 0 ? Math.round((progressStats.globalCorrect / progressStats.globalTotal) * 100) : 0}%
+                      </span>
+                      <span className="text-[9px] text-slate-500 uppercase font-bold tracking-wider pt-1">Accuracy</span>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-2 gap-2 text-center">
                   <div className="bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-2 rounded-lg">
-                    <div className="text-xl font-bold text-blue-600 dark:text-blue-400">{progressStats.totalGenerated}</div>
-                    <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">Generated</div>
+                    <div className="text-lg font-bold text-blue-600 dark:text-blue-400">{progressStats.totalGenerated}</div>
+                    <div className="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wide">Generated</div>
                   </div>
                   <div className="bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-2 rounded-lg">
-                    <div className="text-xl font-bold text-green-600 dark:text-green-400">{progressStats.totalCompleted}</div>
-                    <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">Completed</div>
+                    <div className="text-lg font-bold text-purple-600 dark:text-purple-400">{progressStats.totalCompleted}</div>
+                    <div className="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wide">Completed</div>
+                  </div>
+                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800/50 p-2 rounded-lg">
+                    <div className="text-lg font-bold text-green-600 dark:text-green-400">{progressStats.globalCorrect}</div>
+                    <div className="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wide">Correct</div>
+                  </div>
+                  <div className="bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800/50 p-2 rounded-lg">
+                    <div className="text-lg font-bold text-red-600 dark:text-red-400">{progressStats.globalTotal > 0 ? progressStats.globalTotal - progressStats.globalCorrect : 0}</div>
+                    <div className="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wide">Wrong/Missed</div>
                   </div>
                 </div>
               </div>
