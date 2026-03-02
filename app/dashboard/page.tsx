@@ -1724,7 +1724,7 @@ export default function DashboardPage() {
                   />
                 )}
 
-                {activePartData?.modelAnswer && (
+                {activePartData?.modelAnswer && (isAdmin || retryCount[activeQuestionData?.id.toString() || ''] >= 2) && (
                   <WritingHelpSection
                     key={`model-${activePartData.part}`}
                     title="Model Answer"
@@ -1736,6 +1736,11 @@ export default function DashboardPage() {
                     isVisible={!!helpVisibility[`${activePartData.part}-model`]}
                     onToggle={() => setHelpVisibility(prev => ({ ...prev, [`${activePartData.part}-model`]: !prev[`${activePartData.part}-model`] }))}
                   />
+                )}
+                {activePartData?.modelAnswer && !isAdmin && (retryCount[activeQuestionData?.id.toString() || ''] || 0) < 2 && (
+                  <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center text-sm text-slate-500 italic flex items-center justify-center gap-2">
+                    <span>🔒</span> Attempt this question {2 - (retryCount[activeQuestionData?.id.toString() || ''] || 0)} more time{(2 - (retryCount[activeQuestionData?.id.toString() || ''] || 0)) === 1 ? '' : 's'} to unlock the Model Answer.
+                  </div>
                 )}
               </div>
             )}
