@@ -611,7 +611,12 @@ export default function DashboardPage() {
                   })
                   : [],
                 tips: q.tips ? (typeof q.tips === 'object' ? JSON.stringify(q.tips) : String(q.tips)) : '',
-                part1Questions: q.part1Questions,
+                part1Questions: Array.isArray(q.part1Questions)
+                  ? q.part1Questions.map((pq: any) => ({
+                    ...pq,
+                    tip: pq.tip || pq.tips || '',
+                  }))
+                  : q.part1Questions,
               });
             });
           } else {
