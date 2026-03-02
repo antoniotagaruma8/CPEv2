@@ -265,7 +265,9 @@ export default function DashboardPage() {
     setExamFor,
     file,
     setFile,
-    generateExam
+    generateExam,
+    generationInfo,
+    setUserEmail,
   } = useExam();
 
   const { data: session, status } = useSession();
@@ -276,6 +278,13 @@ export default function DashboardPage() {
       router.push('/');
     }
   }, [status, router]);
+
+  // Set user email for generation tracking
+  useEffect(() => {
+    if (session?.user?.email) {
+      setUserEmail(session.user.email);
+    }
+  }, [session?.user?.email, setUserEmail]);
 
   const [examParts, setExamParts] = useState<ExamPart[]>([]);
   const [examQuestions, setExamQuestions] = useState<Question[]>([]);
@@ -910,7 +919,7 @@ export default function DashboardPage() {
   };
 
   const adminEmails = ['antoniotagaruma7@gmail.com', 'antoniotagaruma8@gmail.com', 'public.y2026@gmail.com'];
-  const isAdmin = session?.user?.email && adminEmails.includes(session.user.email);
+  const isAdmin = !!(session?.user?.email && adminEmails.includes(session.user.email));
   // Calculate progress stats from saved exams
   const progressStats = useMemo(() => {
     const stats = {
@@ -1112,12 +1121,21 @@ export default function DashboardPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="examType" className="block text-sm font-bold text-slate-600 mb-2">Exam Skill</label>
-                  <select id="examType" value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
+                  <select id="examType" value={examType} onChange={(e) => {
+                    const val = e.target.value;
+                    if (val === 'Listening' && generationInfo && !generationInfo.isAdmin) {
+                      return; // Don't allow selecting Listening for free tier
+                    }
+                    setExamType(val);
+                  }} className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
                     <option value="Reading">Reading & Use of English</option>
                     <option value="Writing">Writing</option>
-                    <option value="Listening">Listening</option>
+                    <option value="Listening" disabled={!!(generationInfo && !generationInfo.isAdmin)}>{generationInfo && !generationInfo.isAdmin ? '🔒 Listening (Premium)' : 'Listening'}</option>
                     <option value="Speaking">Speaking</option>
                   </select>
+                  {generationInfo && !generationInfo.isAdmin && (
+                    <p className="mt-1 text-xs text-amber-600 flex items-center gap-1"><span>🔒</span> Listening exam generation is a Premium feature.</p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="cefrLevel" className="block text-sm font-bold text-slate-600 mb-2">CEFR Level</label>
@@ -1165,9 +1183,23 @@ export default function DashboardPage() {
                   </div>
                   <p className="mt-1 text-xs text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
                 </div>
-                <button type="submit" disabled={loading} className={`w-full py-3 px-4 rounded-lg text-white font-bold shadow-sm transition-all ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
-                  {loading ? 'Generating...' : 'Generate Exam'}
+                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-3 px-4 rounded-lg text-white font-bold shadow-sm transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
+                  {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
+                {generationInfo && !generationInfo.isAdmin && (
+                  <div className="mt-3 flex items-center justify-between text-sm">
+                    <span className="text-slate-500">Free generations used:</span>
+                    <span className={`font-bold ${generationInfo.count >= generationInfo.limit ? 'text-red-600' : generationInfo.count >= generationInfo.limit * 0.8 ? 'text-amber-600' : 'text-green-600'}`}>
+                      {generationInfo.count} / {generationInfo.limit}
+                    </span>
+                  </div>
+                )}
+                {generationInfo && !generationInfo.allowed && !generationInfo.isAdmin && (
+                  <div className="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
+                    <p className="font-bold flex items-center gap-1"><span>⚠️</span> Free tier limit reached</p>
+                    <p className="mt-1 text-xs">You have used all {generationInfo.limit} free exam generations. Subscribe to Premium for unlimited access.</p>
+                  </div>
+                )}
               </form>
             </div>
 

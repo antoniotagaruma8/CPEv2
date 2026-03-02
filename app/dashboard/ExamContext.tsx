@@ -1,10 +1,18 @@
 /* c:\Users\Anton\Desktop\OLD FILES\GOALS\AI\GitHub 2025\CPE\app\dashboard\ExamContext.tsx */
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { getExamPrompt } from '../../lib/exam-prompts';
 import { generateExamAction } from '../actions/generateExam';
 import { generateAudioAction } from '../actions/generateAudio';
+import { getGenerationInfo, incrementGenerationCount } from '../actions/generationLimit';
+
+interface GenerationInfo {
+  allowed: boolean;
+  count: number;
+  limit: number;
+  isAdmin: boolean;
+}
 
 interface ExamContextType {
   examType: string;
@@ -21,6 +29,8 @@ interface ExamContextType {
   loading: boolean;
   error: string;
   generateExam: () => Promise<void>;
+  generationInfo: GenerationInfo | null;
+  setUserEmail: (email: string) => void;
 }
 
 const ExamContext = createContext<ExamContextType | undefined>(undefined);
@@ -34,12 +44,40 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
   const [generatedExam, setGeneratedExam] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [generationInfo, setGenerationInfo] = useState<GenerationInfo | null>(null);
+
+  // Fetch generation info when userEmail is set
+  useEffect(() => {
+    if (userEmail) {
+      getGenerationInfo(userEmail).then(info => setGenerationInfo(info)).catch(console.error);
+    }
+  }, [userEmail]);
 
   const generateExam = async () => {
     if (!topic && !file) {
       setError('Please enter a topic or upload a file to generate an exam.');
       return;
     }
+
+    // Check generation limits for free tier
+    if (userEmail) {
+      try {
+        const info = await getGenerationInfo(userEmail);
+        setGenerationInfo(info);
+        if (!info.allowed) {
+          setError(`You have reached the free tier limit of ${info.limit} exam generations. Please subscribe to continue generating exams.`);
+          return;
+        }
+        if (examType === 'Listening' && !info.isAdmin) {
+          setError('Listening exam generation is a Premium feature. Please subscribe to access it.');
+          return;
+        }
+      } catch (err) {
+        console.error('Error checking generation limits:', err);
+      }
+    }
+
     setLoading(true);
     setError('');
     setGeneratedExam('');
@@ -166,6 +204,17 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         }
 
         setGeneratedExam(finalExamContent);
+
+        // Increment generation count after successful generation
+        if (userEmail) {
+          try {
+            await incrementGenerationCount(userEmail);
+            const updatedInfo = await getGenerationInfo(userEmail);
+            setGenerationInfo(updatedInfo);
+          } catch (err) {
+            console.error('Error incrementing generation count:', err);
+          }
+        }
       } else {
         setError(result.error || 'An unknown error occurred.');
       }
@@ -181,7 +230,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <ExamContext.Provider value={{ examType, setExamType, cefrLevel, setCefrLevel, topic, setTopic, examFor, setExamFor, file, setFile, generatedExam, loading, error, generateExam }}>
+    <ExamContext.Provider value={{ examType, setExamType, cefrLevel, setCefrLevel, topic, setTopic, examFor, setExamFor, file, setFile, generatedExam, loading, error, generateExam, generationInfo, setUserEmail }}>
       {children}
     </ExamContext.Provider>
   );
