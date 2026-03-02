@@ -1746,7 +1746,7 @@ export default function DashboardPage() {
               </h3>
             )}
 
-            {activeQuestionData && examType !== 'Writing' && (
+            {activeQuestionData && (
               <div className="space-y-6">
                 <div className={`p-4 bg-gray-50 rounded-lg border border-gray-200 ${isSpeakingPart3 ? 'flex flex-col gap-6' : ''}`}>
                   <div className="w-full">
