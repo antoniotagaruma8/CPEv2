@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
 import { toggleExamFavorite } from '../actions/favoriteActions';
 import { assessSpeakingAction } from '../actions/assessSpeaking';
+import { assessWritingAction } from '../actions/assessWriting';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 
 interface Question {
@@ -364,15 +365,15 @@ export default function DashboardPage() {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
   };
-  const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [scores, setScores] = useState<Record<string, number>>({});
   const [flagged, setFlagged] = useState<Set<number>>(new Set());
-  const [submittedQuestions, setSubmittedQuestions] = useState<Set<number>>(new Set());
-  const [revealedAnswers, setRevealedAnswers] = useState<Set<number>>(new Set());
-  const [revealedPossibleAnswers, setRevealedPossibleAnswers] = useState<Set<number>>(new Set());
+  const [submittedQuestions, setSubmittedQuestions] = useState<Set<string>>(new Set());
+  const [revealedAnswers, setRevealedAnswers] = useState<Set<string>>(new Set());
+  const [revealedPossibleAnswers, setRevealedPossibleAnswers] = useState<Set<string>>(new Set());
   const [revealedImageSets, setRevealedImageSets] = useState<Record<string, boolean>>({});
   const [revealedTips, setRevealedTips] = useState<Set<number>>(new Set());
   const [localError, setLocalError] = useState('');
@@ -389,6 +390,14 @@ export default function DashboardPage() {
   const [recordingQuestionId, setRecordingQuestionId] = useState<string | null>(null);
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
+
+  // Writing Assessment States
+  const [isWritingModalOpen, setIsWritingModalOpen] = useState(false);
+  const [writingContent, setWritingContent] = useState('');
+  const [isAssessingWriting, setIsAssessingWriting] = useState(false);
+  const [writingAssessmentResult, setWritingAssessmentResult] = useState<{ score: number, feedback: string, suggestion: string } | null>(null);
+  const [writingQuestionId, setWritingQuestionId] = useState<string | null>(null);
+
 
   useEffect(() => {
     // Persistence logic: Use generatedExam from context, or fallback to localStorage
@@ -432,6 +441,7 @@ export default function DashboardPage() {
       if (generatedExam) {
         setCurrentQuestion(1);
         setAnswers({});
+        setScores({});
         setFlagged(new Set());
         setSubmittedQuestions(new Set());
         setRevealedAnswers(new Set());
@@ -747,16 +757,26 @@ export default function DashboardPage() {
       const totalQ = examQuestions.length;
       const answeredQ = Object.keys(answers).length;
       let correctCount = 0;
-      examQuestions.forEach(q => {
-        if (answers[q.id] === q.correctOption) {
-          correctCount++;
+
+      if (examType === 'Speaking' || examType === 'Writing') {
+        const scoreValues = Object.values(scores);
+        if (scoreValues.length > 0) {
+          correctCount = Math.round(scoreValues.reduce((a, b) => a + b, 0) / scoreValues.length);
         }
-      });
+      } else {
+        examQuestions.forEach(q => {
+          if (answers[q.id] === q.correctOption) {
+            correctCount++;
+          }
+        });
+      }
+
       const isFinished = totalQ > 0 && answeredQ === totalQ;
 
       const examDataToSave = {
         content: generatedExam,
         answers: answers,
+        scores: scores,
         score: correctCount,
         totalQuestions: totalQ,
         isFinished: isFinished,
@@ -1001,28 +1021,22 @@ export default function DashboardPage() {
             stats[type].correct += correctCount;
             stats[type].total += answeredCount; // Only count attempted
           }
-        } else if (type === 'Writing') {
-          const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
-          stats[type].correct += answeredCount;
-          stats[type].total += answeredCount; // Only count attempted
-        } else if (type === 'Speaking') {
-          // For Speaking, score >= 6 counts as correct
-          if (data.answers && typeof data.answers === 'object') {
-            Object.values(data.answers).forEach((answer: any) => {
-              if (answer && typeof answer === 'string' && answer.trim()) {
-                stats[type].total += 1; // Attempted
-                // Check if there's a score associated — look in exam data
+        } else if (type === 'Writing' || type === 'Speaking') {
+          if (data.scores && typeof data.scores === 'object') {
+            const answeredIds = Object.keys(data.answers || {});
+            stats[type].total += answeredIds.length;
+            answeredIds.forEach((id: string) => {
+              const qScore = data.scores[id];
+              if (typeof qScore === 'number' && qScore >= 6) {
+                stats[type].correct += 1;
               }
             });
-          }
-          // If a numeric score is stored (from assessment), use it
-          if (typeof data.score === 'number' && typeof data.totalQuestions === 'number') {
+          } else {
+            // Fallback to old behavior if no scores array
             const answeredCount = data.answers ? Object.keys(data.answers).length : 0;
-            if (answeredCount > 0) {
-              // Average score across answered questions; count as correct if avg >= 6 (out of 10)
-              const avgScore = data.score / answeredCount;
-              stats[type].total = answeredCount;
-              stats[type].correct += avgScore >= 6 ? answeredCount : Math.round(answeredCount * (avgScore / 10));
+            if (answeredCount > 0 && typeof data.score === 'number') {
+              stats[type].total += answeredCount;
+              stats[type].correct += data.score >= 6 ? answeredCount : Math.round(answeredCount * (data.score / 10));
             }
           }
         }
@@ -1487,6 +1501,7 @@ export default function DashboardPage() {
           ...prev,
           [targetQuestionId]: (prev[targetQuestionId] || 0) + 1
         }));
+        setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
       } else {
         alert(result.error || 'Failed to assess audio.');
       }
@@ -1495,6 +1510,64 @@ export default function DashboardPage() {
       alert('An error occurred during assessment.');
     } finally {
       setIsAssessing(false);
+    }
+  };
+  // ------------------------------------
+
+  // --- WRITING TEST ASSESSMENT LOGIC ---
+  const handleWritingClick = (targetQuestionId: string, currentAnswerContext?: string) => {
+    const attempts = retryCount[targetQuestionId] || 0;
+    if (attempts >= 2) {
+      alert("You have already used your retry for this question.");
+      return;
+    }
+    setWritingQuestionId(targetQuestionId);
+
+    // Auto-fill textarea with current unsaved draft if any, or empty
+    const existingDraft = answers[targetQuestionId] || '';
+    setWritingContent(existingDraft);
+
+    setWritingAssessmentResult(null);
+    setIsAssessingWriting(false);
+    setIsWritingModalOpen(true);
+  };
+
+  const submitWritingForAssessment = async (targetQuestionId: string, targetQuestionText: string) => {
+    if (!writingContent.trim()) {
+      alert("Please write an answer before submitting.");
+      return;
+    }
+
+    setIsAssessingWriting(true);
+    setWritingAssessmentResult(null);
+
+    try {
+      const result = await assessWritingAction(writingContent, targetQuestionText, cefrLevel);
+
+      if (result.success && result.score !== undefined && result.feedback && result.suggestion) {
+        setWritingAssessmentResult({
+          score: result.score,
+          feedback: result.feedback,
+          suggestion: result.suggestion
+        });
+
+        // Save the written content to answers object so it isn't lost
+        setAnswers(prev => ({ ...prev, [targetQuestionId]: writingContent }));
+        setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
+
+        // Increment attempt count on successful assessment
+        setRetryCount(prev => ({
+          ...prev,
+          [targetQuestionId]: (prev[targetQuestionId] || 0) + 1
+        }));
+      } else {
+        alert(result.error || 'Failed to assess writing.');
+      }
+    } catch (error) {
+      console.error('Writing assessment failed:', error);
+      alert('An error occurred during assessment.');
+    } finally {
+      setIsAssessingWriting(false);
     }
   };
   // ------------------------------------
@@ -1905,6 +1978,21 @@ export default function DashboardPage() {
                       <div className="text-sm text-slate-500 italic mt-6">
                         Click the microphone icon next to a question to record your answer.
                       </div>
+                    ) : examType === 'Writing' ? (
+                      <div className="mt-6 flex flex-col gap-4">
+                        <div className="text-sm text-slate-500 italic">
+                          Click below to open the writing assessment editor.
+                        </div>
+                        <button
+                          onClick={() => handleWritingClick(activeQuestionData.id.toString(), activeQuestionData.question)}
+                          className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold shadow-md transition-all transform hover:scale-[1.02]
+                            ${answers[activeQuestionData.id.toString()] ? 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border border-indigo-200' : 'bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-600'}`}
+                          title="Open Writing Editor"
+                        >
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                          {answers[activeQuestionData.id.toString()] ? 'Edit Written Answer' : 'Write Answer'}
+                        </button>
+                      </div>
                     ) : (
                       <div className="space-y-4">
                         <div className="flex gap-2">
@@ -2246,6 +2334,127 @@ export default function DashboardPage() {
             </div>
           </div>
         )}
+
+        {/* Global Writing Assessment Modal overlay */}
+        {isWritingModalOpen && writingQuestionId && (() => {
+          const qText = examQuestions.find(q => q.id.toString() === writingQuestionId)?.question || '';
+          return (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800 transform transition-all h-[95vh]">
+
+                {/* Header */}
+                <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 shrink-0">
+                  <h3 className="font-bold text-lg text-slate-800 dark:text-slate-100 flex items-center gap-3">
+                    ✍️ Writing Assessment
+                  </h3>
+                  {!isAssessingWriting && (
+                    <button onClick={() => setIsWritingModalOpen(false)} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1">
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                  )}
+                </div>
+
+                {/* Content Area */}
+                <div className="p-0 flex flex-col lg:flex-row h-full overflow-hidden w-full">
+
+                  {/* LEFT PANE: Prompt & Editor */}
+                  <div className={`p-6 flex-1 flex flex-col border-r border-slate-200 dark:border-slate-800 ${writingAssessmentResult ? 'lg:flex-[1]' : 'w-full'}`}>
+
+                    {/* The Prompt */}
+                    <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-4 shrink-0 max-h-[30%] overflow-y-auto custom-scrollbar">
+                      <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-2 uppercase tracking-wider flex items-center gap-2">
+                        Task Prompt
+                      </p>
+                      <p className="text-slate-800 dark:text-slate-200 text-base leading-relaxed whitespace-pre-wrap">{qText}</p>
+                    </div>
+
+                    {/* The Editor */}
+                    <div className="flex-1 flex flex-col min-h-[250px] relative">
+                      <textarea
+                        className="w-full h-full p-4 border border-slate-300 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none transition-all custom-scrollbar flex-1"
+                        placeholder="Write your answer here..."
+                        value={writingContent}
+                        onChange={(e) => setWritingContent(e.target.value)}
+                        disabled={isAssessingWriting}
+                      />
+                      <div className="absolute bottom-3 right-4 text-xs font-bold text-slate-400 bg-white/80 dark:bg-slate-900/80 px-2 py-1 rounded backdrop-blur">
+                        {writingContent.trim().split(/\s+/).filter(Boolean).length} words
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 shrink-0 flex justify-between items-center gap-4">
+                      {isAssessingWriting ? (
+                        <div className="flex items-center justify-center gap-3 w-full p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 font-bold rounded-xl animate-pulse">
+                          <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Examiner is evaluating...
+                        </div>
+                      ) : (
+                        <>
+                          <button onClick={() => setIsWritingModalOpen(false)} className="px-6 py-3 font-bold text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors">
+                            Save Draft & Close
+                          </button>
+                          <button
+                            onClick={() => submitWritingForAssessment(writingQuestionId, qText)}
+                            disabled={!writingContent.trim()}
+                            className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-md transition-all disabled:opacity-50 flex items-center gap-2"
+                          >
+                            Submit Answer
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* RIGHT PANE: Results (Only visible if assessed) */}
+                  {writingAssessmentResult && !isAssessingWriting && (
+                    <div className="flex-[0.8] shrink-0 p-6 flex flex-col bg-slate-50 dark:bg-slate-900/50 overflow-y-auto custom-scrollbar animate-fade-in border-t lg:border-t-0 border-slate-200 dark:border-slate-800">
+
+                      <div className="flex flex-col items-center mb-6">
+                        <div className="relative w-32 h-32 shrink-0 flex items-center justify-center mb-4">
+                          <svg className="w-full h-full transform -rotate-90">
+                            <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent" className="text-slate-200 dark:text-slate-800" />
+                            <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent"
+                              strokeDasharray={351.8}
+                              strokeDashoffset={351.8 - (351.8 * (writingAssessmentResult.score / 10))}
+                              strokeLinecap="round"
+                              className={`transition-all duration-1000 ease-out ${writingAssessmentResult.score >= 8 ? 'text-green-500' : writingAssessmentResult.score >= 5 ? 'text-yellow-500' : 'text-red-500'}`}
+                            />
+                          </svg>
+                          <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <span className={`text-4xl font-black ${writingAssessmentResult.score >= 8 ? 'text-green-600 dark:text-green-400' : writingAssessmentResult.score >= 5 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'}`}>{writingAssessmentResult.score}</span>
+                            <span className="text-xs text-slate-400 font-bold uppercase tracking-wider relative -top-1">/ 10 points</span>
+                          </div>
+                        </div>
+
+                        <h3 className={`font-black text-2xl text-center ${writingAssessmentResult.score >= 8 ? 'text-green-700 dark:text-green-400' : writingAssessmentResult.score >= 5 ? 'text-yellow-700 dark:text-yellow-400' : 'text-red-700 dark:text-red-400'}`}>
+                          {writingAssessmentResult.score >= 8 ? 'Excellent Writing!' : writingAssessmentResult.score >= 5 ? 'Good Effort' : 'Needs Work'}
+                        </h3>
+                      </div>
+
+                      <div className="mb-6 bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Examiner Feedback</p>
+                        <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{writingAssessmentResult.feedback}</p>
+                      </div>
+
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50 shadow-sm flex-1">
+                        <p className="text-sm text-blue-600 dark:text-blue-400 font-bold mb-2 flex items-center gap-2">
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg> Actionable Tips
+                        </p>
+                        <p className="text-sm text-blue-900 dark:text-blue-200 leading-relaxed font-medium">{writingAssessmentResult.suggestion}</p>
+                      </div>
+
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
       </main>
 
       <footer className="bg-[#2d2d2d] text-white flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:py-0 shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] gap-2 sm:gap-0 h-auto sm:h-20">
