@@ -50,12 +50,14 @@ export async function assessSpeakingAction(base64Audio: string, questionText: st
 
         // 3. AI Assessment (Text to Insights) using Llama-3.3-70b-versatile
         const systemPrompt = `You are a certified Cambridge/CEFR English Examiner for the ${cefrLevel} level test.
-Your job is to evaluate a candidate's spoken response to an interview question.
+Your job is to evaluate a candidate's spoken response to an interview question. 
+CRITICAL: You are speaking DIRECTLY to the candidate. Address them as "you" and "your". Never use "the candidate" or "they".
+
 You MUST output your evaluation strictly as a valid JSON object matching this schema:
 {
-  "score": number, // Integer from 1 to 10 grading their accuracy, vocabulary, grammar, and relevance to the ${cefrLevel} standard (10 is perfect).
-  "feedback": "string", // 2-3 sentences of direct, encouraging feedback explaining the score.
-  "suggestion": "string" // 1-2 actionable tips on how they could improve this specific answer or what they omitted.
+  "score": number, // Integer from 1 to 10 grading your accuracy, vocabulary, grammar, and relevance to the ${cefrLevel} standard (10 is perfect).
+  "feedback": "string", // 2-3 sentences of direct, encouraging feedback explaining the score and addressing the candidate directly as "you".
+  "suggestion": "string" // 1-2 actionable tips on how they could improve this specific answer or what they omitted, addressing them directly as "you".
 }
 Do not return any markdown wrappers, ONLY the raw JSON object.`;
 
