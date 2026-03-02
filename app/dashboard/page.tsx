@@ -1313,17 +1313,17 @@ export default function DashboardPage() {
       <main className="flex-1 flex flex-col lg:flex-row overflow-hidden p-2 sm:p-4 gap-2 sm:gap-4">
         <div className={`${isSpeakingWideLayout ? 'lg:flex-[1]' : 'flex-1'} bg-white dark:bg-slate-900 rounded-md shadow-sm border border-gray-200 dark:border-slate-800 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xl font-bold mb-4 text-gray-800 border-b pb-3">
+            <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-slate-100 border-b border-gray-200 dark:border-slate-800 pb-3">
               Part {activePartData?.part}{activePartData?.title ? `: ${activePartData.title}` : ''}
             </h2>
-            <div className="prose prose-slate max-w-none text-gray-800 leading-relaxed">
+            <div className="prose prose-slate max-w-none text-gray-800 dark:text-slate-300 leading-relaxed">
               {(activePartData?.instructions || '').split('\n').filter(line => line.trim()).map((line, index) => (
                 <p key={index}>{line}</p>
               ))}
             </div>
             {activePartData?.content && (
-              <div className="mt-6 p-4 bg-slate-50 border border-slate-200 rounded-lg">
-                <h4 className="font-semibold text-slate-600 mb-2 text-sm uppercase tracking-wider">
+              <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg">
+                <h4 className="font-semibold text-slate-600 dark:text-slate-400 mb-2 text-sm uppercase tracking-wider">
                   {examType === 'Listening' ? 'Audio Track' : 'Context'}
                 </h4>
 
@@ -1331,16 +1331,16 @@ export default function DashboardPage() {
                   <>
                     <AudioPlayer audioUrl={activePartData.audioUrl} />
                     <details className="text-xs text-slate-400 mt-2">
-                      <summary className="cursor-pointer hover:text-slate-600 transition-colors">Show Transcript</summary>
-                      <p className="mt-2 p-2 bg-white rounded border border-slate-100 italic">{typeof activePartData.content === 'string' ? activePartData.content : JSON.stringify(activePartData.content)}</p>
+                      <summary className="cursor-pointer hover:text-slate-600 dark:hover:text-slate-300 transition-colors">Show Transcript</summary>
+                      <p className="mt-2 p-2 bg-white dark:bg-slate-900 rounded border border-slate-100 dark:border-slate-800 italic">{typeof activePartData.content === 'string' ? activePartData.content : JSON.stringify(activePartData.content)}</p>
                     </details>
                   </>
                 ) : (
-                  <div className="prose prose-slate max-w-none text-slate-700 leading-relaxed">
+                  <div className="prose prose-slate max-w-none text-slate-700 dark:text-slate-300 leading-relaxed">
                     {examType === 'Writing' && activePartData.part === 1 && activePartData.content.includes('---SPLIT---') ? (
                       activePartData.content.split('---SPLIT---').map((text, idx) => (
-                        <div key={idx} className="mb-4 p-4 bg-white rounded border border-gray-200 shadow-sm last:mb-0">
-                          <h5 className="font-bold text-gray-800 mb-2 text-xs uppercase tracking-wider">Text {idx + 1}</h5>
+                        <div key={idx} className="mb-4 p-4 bg-white dark:bg-slate-900 rounded border border-gray-200 dark:border-slate-800 shadow-sm last:mb-0">
+                          <h5 className="font-bold text-gray-800 dark:text-slate-200 mb-2 text-xs uppercase tracking-wider">Text {idx + 1}</h5>
                           {text.split('\n').filter(line => line.trim()).map((line, i) => (
                             <p key={i} className="mb-2 last:mb-0">{line}</p>
                           ))}
