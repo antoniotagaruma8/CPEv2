@@ -35,7 +35,7 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
 - Grammar: Employ complex grammar structures expected at ${cefrLevel} (e.g., conditionals, passive voice, inversion for C1 / C2).
 - Theme & Complexity: ${themePrompt}
     - Tone & Register: Match the required register(formal / informal) perfectly to the task.
-- Distractors: For multiple choice, distractors MUST be plausible and test specific ${cefrLevel} reading / listening skills(e.g., understanding implication, attitude, text organization).
+- Distractors/Options: Options MUST NOT be structurally repetitive or use the exact same phrasing (e.g., avoid "a practice that harms", "a practice that helps"). Options must be distinctly phrased, sound natural, and genuinely test ${cefrLevel} skills rather than relying on cheap structural repetition.
 - Gap - Fills: For cloze or gap-fill tasks, you MUST number the gaps sequentially within the text, e.g., "(1) _____", "(2) _____". In the 'questions' array, DO NOT repeat the sentence. Instead, set the 'question' field simply to "Gap 1", "Gap 2", etc., followed by the options.
 `;
 
