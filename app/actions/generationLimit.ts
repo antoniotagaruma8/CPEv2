@@ -13,13 +13,22 @@ const ADMIN_EMAILS = [
     'public.y2026@gmail.com',
 ]
 
-const FREE_GENERATION_LIMIT = 30
+const FREE_GENERATION_LIMIT = 10
 
-export async function getGenerationInfo(userEmail: string) {
+export async function getGenerationStatus(userEmail: string) {
     const isAdmin = ADMIN_EMAILS.includes(userEmail)
 
-    if (isAdmin) {
-        return { allowed: true, count: 0, limit: Infinity, isAdmin: true }
+    // Check subscription status
+    const { data: sub } = await supabase
+        .from('subscriptions')
+        .select('plan')
+        .eq('user_email', userEmail)
+        .single()
+
+    const isPremium = sub?.plan === 'premium'
+
+    if (isAdmin || isPremium) {
+        return { allowed: true, count: 0, limit: Infinity, isAdmin: true, plan: isPremium ? 'premium' : 'admin' }
     }
 
     // Try to get existing record
@@ -37,7 +46,11 @@ export async function getGenerationInfo(userEmail: string) {
     const count = data?.generation_count || 0
     const allowed = count < FREE_GENERATION_LIMIT
 
-    return { allowed, count, limit: FREE_GENERATION_LIMIT, isAdmin: false }
+    return { allowed, count, limit: FREE_GENERATION_LIMIT, isAdmin: false, plan: 'free' }
+}
+
+export async function getGenerationInfo(userEmail: string) {
+    return getGenerationStatus(userEmail)
 }
 
 export async function incrementGenerationCount(userEmail: string) {

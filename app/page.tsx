@@ -17,7 +17,7 @@ export default function LandingPage() {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
-            <Link href="#" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
+            <Link href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
           </nav>
           <button
             onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
@@ -174,6 +174,88 @@ export default function LandingPage() {
           </div>
         </div>
 
+        {/* Pricing Section */}
+        <div id="pricing" className="bg-slate-50 py-24 border-y border-slate-200">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Simple, transparent pricing</h2>
+              <p className="text-lg text-slate-600">Choose the plan that's right for your exam preparation journey.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Free Plan */}
+              <div className="bg-white rounded-3xl p-10 border border-slate-200 shadow-sm relative flex flex-col">
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">Free Plan</h3>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold text-slate-900">€0</span>
+                    <span className="text-slate-500">/forever</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-10 flex-1">
+                  <li className="flex items-center gap-3 text-slate-600">
+                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    10 Exam Generations
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-600">
+                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    Reading & Use of English
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-600">
+                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    Writing & Speaking
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-400 decoration-slate-300">
+                    <svg className="w-5 h-5 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                    No Listening Exams
+                  </li>
+                </ul>
+                <button
+                  onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+                  className="w-full py-4 rounded-xl bg-slate-100 text-slate-900 font-bold hover:bg-slate-200 transition-all"
+                >
+                  Get Started
+                </button>
+              </div>
+
+              {/* Premium Plan */}
+              <div className="bg-white rounded-3xl p-10 border-2 border-blue-600 shadow-xl shadow-blue-600/10 relative flex flex-col scale-105">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Most Popular</div>
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">Premium Plan</h3>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold text-slate-900">€10</span>
+                    <span className="text-slate-500">/month</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-10 flex-1">
+                  <li className="flex items-center gap-3 text-slate-900 font-medium">
+                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    Unlimited Generations
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-900 font-medium">
+                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    Listening Exams (High Fidelity Audio)
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-900 font-medium">
+                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    Full Access to All Skills
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-900 font-medium">
+                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    Unlimited Speaking Practice
+                  </li>
+                </ul>
+                <button
+                  onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+                  className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
+                >
+                  Upgrade to Premium
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* CTA Section */}
         <div className="bg-slate-900 py-24 relative overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">

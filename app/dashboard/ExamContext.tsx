@@ -12,6 +12,7 @@ interface GenerationInfo {
   count: number;
   limit: number;
   isAdmin: boolean;
+  plan: 'free' | 'premium' | 'admin';
 }
 
 interface ExamContextType {
@@ -50,7 +51,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
   // Fetch generation info when userEmail is set
   useEffect(() => {
     if (userEmail) {
-      getGenerationInfo(userEmail).then(info => setGenerationInfo(info)).catch(console.error);
+      getGenerationInfo(userEmail).then(info => setGenerationInfo(info as GenerationInfo)).catch(console.error);
     }
   }, [userEmail]);
 
@@ -63,7 +64,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
     // Check generation limits for free tier
     if (userEmail) {
       try {
-        const info = await getGenerationInfo(userEmail);
+        const info = await getGenerationInfo(userEmail) as GenerationInfo;
         setGenerationInfo(info);
         if (!info.allowed) {
           setError(`You have reached the free tier limit of ${info.limit} exam generations. Please subscribe to continue generating exams.`);
@@ -209,7 +210,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         if (userEmail) {
           try {
             await incrementGenerationCount(userEmail);
-            const updatedInfo = await getGenerationInfo(userEmail);
+            const updatedInfo = await getGenerationInfo(userEmail) as GenerationInfo;
             setGenerationInfo(updatedInfo);
           } catch (err) {
             console.error('Error incrementing generation count:', err);

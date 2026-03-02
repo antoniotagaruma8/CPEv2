@@ -14,13 +14,16 @@
     "@google/generative-ai": "^0.24.1",
     "@huggingface/inference": "^4.13.14",
     "@supabase/supabase-js": "^2.95.3",
+    "@types/micro": "^10.0.0",
     "elevenlabs": "^1.50.0",
     "groq-sdk": "^0.37.0",
+    "micro": "^10.0.1",
     "next": "16.1.6",
     "next-auth": "^4.24.13",
     "openai": "^4.28.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "stripe": "^20.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",

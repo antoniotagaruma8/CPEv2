@@ -1036,7 +1036,17 @@ export default function DashboardPage() {
             >
               {isDarkMode ? '☀️ Classic' : '🌙 Dark'}
             </button>
-            <span className="text-sm text-slate-600 dark:text-slate-400 hidden sm:block">Welcome, <span className="font-bold text-slate-900 dark:text-slate-200">{session?.user?.name || session?.user?.email?.split('@')[0]}</span></span>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-slate-600 dark:text-slate-400 hidden sm:block">Welcome, <span className="font-bold text-slate-900 dark:text-slate-200">{session?.user?.name || session?.user?.email?.split('@')[0]}</span></span>
+              {generationInfo && (
+                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tight ${generationInfo.plan === 'admin' ? 'bg-purple-100 text-purple-700 border border-purple-200' :
+                    generationInfo.plan === 'premium' ? 'bg-amber-100 text-amber-700 border border-amber-200' :
+                      'bg-slate-100 text-slate-600 border border-slate-200'
+                  }`}>
+                  {generationInfo.plan === 'admin' ? 'Admin' : generationInfo.plan === 'premium' ? 'Premium ⭐' : 'Free Plan'}
+                </span>
+              )}
+            </div>
             <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-red-600 dark:hover:text-red-400 hover:border-red-200 dark:hover:border-red-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
               Sign Out
@@ -1123,17 +1133,17 @@ export default function DashboardPage() {
                   <label htmlFor="examType" className="block text-sm font-bold text-slate-600 mb-2">Exam Skill</label>
                   <select id="examType" value={examType} onChange={(e) => {
                     const val = e.target.value;
-                    if (val === 'Listening' && generationInfo && !generationInfo.isAdmin) {
+                    if (val === 'Listening' && generationInfo && generationInfo.plan === 'free') {
                       return; // Don't allow selecting Listening for free tier
                     }
                     setExamType(val);
                   }} className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
                     <option value="Reading">Reading & Use of English</option>
                     <option value="Writing">Writing</option>
-                    <option value="Listening" disabled={!!(generationInfo && !generationInfo.isAdmin)}>{generationInfo && !generationInfo.isAdmin ? '🔒 Listening (Premium)' : 'Listening'}</option>
+                    <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>{generationInfo && generationInfo.plan === 'free' ? '🔒 Listening (Premium)' : 'Listening'}</option>
                     <option value="Speaking">Speaking</option>
                   </select>
-                  {generationInfo && !generationInfo.isAdmin && (
+                  {generationInfo && generationInfo.plan === 'free' && (
                     <p className="mt-1 text-xs text-amber-600 flex items-center gap-1"><span>🔒</span> Listening exam generation is a Premium feature.</p>
                   )}
                 </div>
@@ -1186,7 +1196,7 @@ export default function DashboardPage() {
                 <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-3 px-4 rounded-lg text-white font-bold shadow-sm transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
-                {generationInfo && !generationInfo.isAdmin && (
+                {generationInfo && generationInfo.plan === 'free' && (
                   <div className="mt-3 flex items-center justify-between text-sm">
                     <span className="text-slate-500">Free generations used:</span>
                     <span className={`font-bold ${generationInfo.count >= generationInfo.limit ? 'text-red-600' : generationInfo.count >= generationInfo.limit * 0.8 ? 'text-amber-600' : 'text-green-600'}`}>
@@ -1194,10 +1204,11 @@ export default function DashboardPage() {
                     </span>
                   </div>
                 )}
-                {generationInfo && !generationInfo.allowed && !generationInfo.isAdmin && (
+                {generationInfo && !generationInfo.allowed && generationInfo.plan === 'free' && (
                   <div className="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
                     <p className="font-bold flex items-center gap-1"><span>⚠️</span> Free tier limit reached</p>
                     <p className="mt-1 text-xs">You have used all {generationInfo.limit} free exam generations. Subscribe to Premium for unlimited access.</p>
+                    <Link href="/pricing" className="mt-2 block text-center w-full py-2 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors">Upgrade to Premium</Link>
                   </div>
                 )}
               </form>
