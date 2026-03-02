@@ -200,6 +200,7 @@ IMPORTANT TRANSCRIPT FORMAT: The 'content' field MUST be a labeled dialogue with
     "Interviewer: Welcome to the show, Sarah.\\nSarah: Thank you for having me.\\nInterviewer: So tell us about your work."
 Each speaker's line MUST start with their name followed by a colon. Use realistic, natural-sounding dialogue appropriate for ${cefrLevel}.
 The 'questions' array MUST contain the correct number of questions for this part — either multiple - choice or gap - fill format.
+CRITICAL FORMATTING INSTRUCTION FOR LISTENING GAP-FILLS (e.g. Sentence Completion): For any gap-fill questions in the Listening section, the 'question' field MUST contain the full, logical sentence with the gap explicitly numbered (e.g., "The main problem is related to (1) _____ in the city center."). NEVER output just "Gap 1" or similar abstract pointers, because the candidate must logically read this sentence context while listening to the audio track.
 For multiple - choice questions, provide 'options'(array of 3 - 4 choices A - C / D) and 'correctOption'.
         ${cefrLevel === 'A1' || cefrLevel === 'A2' || cefrLevel === 'B1' ? `CRITICAL CUE: If the part is "Multiple-choice (pictures)", the questions array MUST include an 'imagePrompts' array containing exactly 3 distinct, highly descriptive prompts per question for generating the visual options.` : ''}
 For each question, provide a 2 - 3 sentence 'explanation' explaining why the selected answer is correct AND interpreting speaker intent / distractors.
