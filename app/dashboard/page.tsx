@@ -599,7 +599,16 @@ export default function DashboardPage() {
                   if (typeof p === 'object' && p !== null) return p.description || p.text || p.prompt || '';
                   return '';
                 }).filter((s: string) => s && s.trim().length > 0),
-                possibleAnswers: q.possibleAnswers,
+                possibleAnswers: Array.isArray(q.possibleAnswers)
+                  ? q.possibleAnswers.map((ans: any) => {
+                    if (typeof ans === 'string') return ans;
+                    if (typeof ans === 'object' && ans !== null) {
+                      // Attempt to extract the text from common keys the AI might use
+                      return ans.phrase || ans.answer || ans.text || Object.values(ans)[0] || JSON.stringify(ans);
+                    }
+                    return String(ans);
+                  })
+                  : [],
                 tips: q.tips,
                 part1Questions: q.part1Questions,
               });
@@ -1297,7 +1306,7 @@ export default function DashboardPage() {
 
         <div className={`${isSpeakingWideLayout ? 'lg:flex-[3]' : 'flex-1'} bg-white dark:bg-slate-900 rounded-md shadow-sm border border-gray-200 dark:border-slate-800 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
           <div className={`${isSpeakingWideLayout ? 'max-w-none' : 'max-w-2xl'} mx-auto`}>
-            {examType === 'Writing' && (
+            {(examType === 'Writing' || examType === 'Speaking') && (
               <div className="mb-8 space-y-6">
                 {activePartData?.howToApproach && (
                   <WritingHelpSection
