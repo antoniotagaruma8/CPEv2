@@ -3,10 +3,10 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './CliLoader.css';
 
 const STEPS = [
-  { label: 'Initializing exam engine', threshold: 10 },
-  { label: 'Generating questions & content', threshold: 35 },
-  { label: 'Applying Cambridge standards', threshold: 60 },
-  { label: 'Finalizing exam paper', threshold: 85 },
+  { label: 'Initializing AI context', threshold: 10 },
+  { label: 'Generating content & questions', threshold: 40 },
+  { label: 'Applying Cambridge rubric', threshold: 65 },
+  { label: 'Finalizing exam structure', threshold: 90 },
   { label: 'Ready!', threshold: 100 },
 ];
 
@@ -17,23 +17,18 @@ const CliLoader = ({ onComplete, finished }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress(oldProgress => {
-        // Cap at 90% until actually finished
-        if (!finished && oldProgress >= 90) {
-          return 90;
-        }
+        if (!finished && oldProgress >= 90) return 90;
 
         if (oldProgress >= 100) {
           clearInterval(interval);
-          if (onComplete) {
-            setTimeout(onComplete, 800);
-          }
+          if (onComplete) setTimeout(onComplete, 1000);
           return 100;
         }
 
-        const increment = finished ? 10 : Math.floor(Math.random() * 4) + 1;
+        const increment = finished ? 8 : Math.floor(Math.random() * 3) + 1;
         return Math.min(oldProgress + increment, 100);
       });
-    }, 180);
+    }, 150);
 
     return () => clearInterval(interval);
   }, [onComplete, finished]);
@@ -46,63 +41,56 @@ const CliLoader = ({ onComplete, finished }) => {
   }, [progress]);
 
   return (
-    <div className="loader-overlay">
-      <div className={`loader-modal ${isComplete ? 'loader-success' : ''}`}>
-        {/* Animated Icon */}
-        <div className="loader-icon-container">
-          <div className="loader-spinner-ring"></div>
-          <div className="loader-inner-icon">
-            {isComplete ? '✓' : '📝'}
-          </div>
-        </div>
+    <div className="modern-loader-overlay dark:bg-slate-900/80 bg-slate-900/60 transition-colors duration-500">
+      <div className={`modern-loader-modal dark:bg-slate-800 dark:border-slate-700 bg-white border-slate-200 ${isComplete ? 'is-complete' : ''}`}>
 
-        {/* Title */}
-        <div className="loader-title">
-          {isComplete ? 'Exam Ready!' : 'Generating Your Exam'}
-        </div>
-        <div className="loader-subtitle">
-          {isComplete
-            ? 'Your Cambridge exam has been generated successfully.'
-            : 'AI is crafting your personalized Cambridge exam paper...'}
-        </div>
+        {/* Top Glow Ring */}
+        <div className="loader-glow-ring dark:opacity-40 opacity-20"></div>
 
-        {/* Progress Bar */}
-        <div className="loader-progress-wrapper">
-          <div className="loader-progress-track">
-            <div
-              className="loader-progress-fill"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-          <div className="loader-progress-label">
-            <span>{STEPS[currentStepIndex]?.label}</span>
-            <span className="loader-progress-percent">{progress}%</span>
-          </div>
-        </div>
-
-        {/* Step indicators */}
-        <div className="loader-steps">
-          {STEPS.slice(0, -1).map((step, idx) => {
-            const isDone = progress >= STEPS[idx + 1]?.threshold;
-            const isActive = currentStepIndex === idx && !isDone;
-            return (
-              <div
-                key={idx}
-                className={`loader-step ${isDone ? 'done' : isActive ? 'active' : ''}`}
-              >
-                <div className="loader-step-icon">
-                  {isDone ? (
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M3 8.5L6.5 12L13 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ) : (
-                    <div className="loader-step-dot"></div>
-                  )}
-                </div>
-                <span>{step.label}</span>
+        <div className="loader-content-wrapper">
+          {/* Animated Graphic */}
+          <div className="loader-graphic-container">
+            {isComplete ? (
+              <div className="success-checkmark dark:text-emerald-400 text-emerald-500">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
               </div>
-            );
-          })}
+            ) : (
+              <div className="pulse-orbs">
+                <div className="orb orb-1"></div>
+                <div className="orb orb-2"></div>
+                <div className="orb orb-3"></div>
+              </div>
+            )}
+          </div>
+
+          <h2 className="loader-heading dark:text-white text-slate-800">
+            {isComplete ? 'Exam Generated' : 'Crafting Your Exam'}
+          </h2>
+          <p className="loader-subheading dark:text-slate-400 text-slate-500">
+            {isComplete
+              ? 'Your personalized Cambridge materials are ready.'
+              : 'Our AI is dynamically assembling questions and grading logic.'}
+          </p>
+
+          <div className="loader-progress-section">
+            <div className="progress-bar-container dark:bg-slate-700 bg-slate-100">
+              <div
+                className="progress-bar-fill dark:bg-blue-500 bg-blue-600"
+                style={{ width: `${progress}%` }}
+              >
+                <div className="progress-bar-shine"></div>
+              </div>
+            </div>
+
+            <div className="progress-details">
+              <span className="step-label dark:text-slate-300 text-slate-600">
+                {STEPS[currentStepIndex]?.label}
+              </span>
+              <span className="step-percent dark:text-white text-slate-900">
+                {progress}%
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

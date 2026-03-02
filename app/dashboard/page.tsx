@@ -279,7 +279,33 @@ export default function DashboardPage() {
   const [examParts, setExamParts] = useState<ExamPart[]>([]);
   const [examQuestions, setExamQuestions] = useState<Question[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState(1);
-  const [timeLeft, setTimeLeft] = useState(90 * 60); // 1 hour 30 mins in seconds
+  const [timeLeft, setTimeLeft] = useState(90 * 60); // Default to 90 mins, will update dynamically
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // On mount, read preference
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [flagged, setFlagged] = useState<Set<number>>(new Set());
   const [submittedQuestions, setSubmittedQuestions] = useState<Set<number>>(new Set());
@@ -342,6 +368,43 @@ export default function DashboardPage() {
         setRevealedImageSets({});
         setLocalError('');
         setHelpVisibility({});
+
+        // Set dynamic time limit based on Level and Type
+        let timeInMinutes = 90;
+        switch (cefrLevel) {
+          case 'A1':
+          case 'A2':
+            if (examType === 'Reading') timeInMinutes = 60; // Reading & Writing is 60m, let's say 30 for reading
+            else if (examType === 'Writing') timeInMinutes = 30; // 30+30 = 60m combined
+            else if (examType === 'Listening') timeInMinutes = 30;
+            else if (examType === 'Speaking') timeInMinutes = 10;
+            break;
+          case 'B1':
+            if (examType === 'Reading') timeInMinutes = 45;
+            else if (examType === 'Writing') timeInMinutes = 45;
+            else if (examType === 'Listening') timeInMinutes = 30;
+            else if (examType === 'Speaking') timeInMinutes = 15;
+            break;
+          case 'B2':
+            if (examType === 'Reading') timeInMinutes = 75;
+            else if (examType === 'Writing') timeInMinutes = 80;
+            else if (examType === 'Listening') timeInMinutes = 40;
+            else if (examType === 'Speaking') timeInMinutes = 14;
+            break;
+          case 'C1':
+            if (examType === 'Reading') timeInMinutes = 90;
+            else if (examType === 'Writing') timeInMinutes = 90;
+            else if (examType === 'Listening') timeInMinutes = 40;
+            else if (examType === 'Speaking') timeInMinutes = 15;
+            break;
+          case 'C2':
+            if (examType === 'Reading') timeInMinutes = 90;
+            else if (examType === 'Writing') timeInMinutes = 90;
+            else if (examType === 'Listening') timeInMinutes = 40;
+            else if (examType === 'Speaking') timeInMinutes = 16;
+            break;
+        }
+        setTimeLeft(timeInMinutes * 60);
       }
 
       try {
@@ -886,22 +949,29 @@ export default function DashboardPage() {
   // Check if we have questions (either from context or restored from storage)
   if (examQuestions.length === 0) {
     return (
-      <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans flex flex-col transition-colors duration-300">
         {showLoaderModal && (
           <CliLoader
             finished={!loading && !isProcessing}
             onComplete={() => setIsLoaderVisible(false)}
           />
         )}
-        <header className="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 flex justify-between items-center shadow-sm sticky top-0 z-20">
-          <h1 className="text-lg sm:text-xl font-bold text-slate-800 flex items-center gap-2">
-            <svg className="w-8 h-8 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center shadow-sm sticky top-0 z-20 transition-colors duration-300">
+          <h1 className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
+            <svg className="w-8 h-8 text-blue-900 dark:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg> Cambridge Exam Practice
           </h1>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-slate-600 hidden sm:block">Welcome, <span className="font-bold text-slate-900">{session?.user?.name || session?.user?.email?.split('@')[0]}</span></span>
-            <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-red-600 hover:border-red-200 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-1.5 sm:p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold"
+              title={isDarkMode ? "Switch to Classic Mode" : "Switch to Dark Mode"}
+            >
+              {isDarkMode ? '☀️ Classic' : '🌙 Dark'}
+            </button>
+            <span className="text-sm text-slate-600 dark:text-slate-400 hidden sm:block">Welcome, <span className="font-bold text-slate-900 dark:text-slate-200">{session?.user?.name || session?.user?.email?.split('@')[0]}</span></span>
+            <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-red-600 dark:hover:text-red-400 hover:border-red-200 dark:hover:border-red-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
               Sign Out
             </button>
@@ -911,7 +981,7 @@ export default function DashboardPage() {
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-6">
 
             {/* Saved Exams Column (1/4) */}
-            <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-lg h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-100 sticky top-4">
+            <div className="lg:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-100 dark:border-slate-700 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
                 <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
                 Saved Exams
@@ -972,7 +1042,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Generator Column (2/4) */}
-            <div className="lg:col-span-2 bg-white p-8 rounded-lg shadow-lg w-full border border-slate-100">
+            <div className="lg:col-span-2 bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg w-full border border-slate-100 dark:border-slate-700 transition-colors">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
@@ -1045,7 +1115,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Progress Tracking Column (1/4) */}
-            <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-lg h-fit border border-slate-100 sticky top-4">
+            <div className="lg:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg h-fit border border-slate-100 dark:border-slate-700 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
                 <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                 Progress Tracking
@@ -1099,23 +1169,30 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-[#e9e9e9] font-sans text-[#333]">
-      <header className="bg-white border-b border-gray-300 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-2 sm:py-0 shrink-0 shadow-sm z-10 gap-2 sm:gap-0 h-auto sm:h-16">
+    <div className="flex flex-col h-screen bg-[#e9e9e9] dark:bg-slate-950 font-sans text-[#333] dark:text-slate-300 transition-colors duration-300">
+      <header className="bg-white dark:bg-slate-900 border-b border-gray-300 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-2 sm:py-0 shrink-0 shadow-sm z-10 gap-2 sm:gap-0 h-auto sm:h-16 transition-colors duration-300">
         <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
-          <h1 className="text-base sm:text-lg font-semibold text-gray-700 truncate">{getLevelLabel(cefrLevel)}: {getExamTypeLabel(examType)}</h1>
-          <div className="h-6 w-px bg-gray-300"></div>
-          <div className="text-xs sm:text-sm text-gray-600 hidden sm:block">Candidate: <span className="font-bold text-black">{session?.user?.name || session?.user?.email}</span></div>
+          <h1 className="text-base sm:text-lg font-semibold text-gray-700 dark:text-slate-100 truncate">{getLevelLabel(cefrLevel)}: {getExamTypeLabel(examType)}</h1>
+          <div className="h-6 w-px bg-gray-300 dark:bg-slate-700"></div>
+          <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400 hidden sm:block">Candidate: <span className="font-bold text-black dark:text-white">{session?.user?.name || session?.user?.email}</span></div>
           {topic && (
             <>
-              <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
-              <div className="text-xs sm:text-sm text-gray-600 hidden sm:block">Topic: <span className="font-bold text-black">{topic}</span></div>
+              <div className="h-6 w-px bg-gray-300 dark:bg-slate-700 hidden sm:block"></div>
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400 hidden sm:block">Topic: <span className="font-bold text-black dark:text-white">{topic}</span></div>
             </>
           )}
         </div>
         <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
+          <button
+            onClick={toggleTheme}
+            className="p-1 sm:p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold"
+            title={isDarkMode ? "Switch to Classic Mode" : "Switch to Dark Mode"}
+          >
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
           <div className="flex flex-col items-end">
-            <span className="text-[8px] sm:text-[10px] uppercase tracking-wider text-gray-500 font-bold">Time Remaining</span>
-            <span className="text-lg sm:text-xl font-mono font-bold text-gray-900">{formatTime(timeLeft)}</span>
+            <span className="text-[8px] sm:text-[10px] uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">Time Remaining</span>
+            <span className="text-lg sm:text-xl font-mono font-bold text-gray-900 dark:text-white">{formatTime(timeLeft)}</span>
           </div>
           <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded text-xs sm:text-sm font-bold hover:bg-red-700 transition-colors flex items-center gap-2">
             <span className="hidden sm:inline">Sign Out</span>
@@ -1125,7 +1202,7 @@ export default function DashboardPage() {
       </header>
 
       <main className="flex-1 flex flex-col lg:flex-row overflow-hidden p-2 sm:p-4 gap-2 sm:gap-4">
-        <div className={`${isSpeakingWideLayout ? 'lg:flex-[1]' : 'flex-1'} bg-white rounded-md shadow-sm border border-gray-200 overflow-y-auto p-4 sm:p-6 custom-scrollbar`}>
+        <div className={`${isSpeakingWideLayout ? 'lg:flex-[1]' : 'flex-1'} bg-white dark:bg-slate-900 rounded-md shadow-sm border border-gray-200 dark:border-slate-800 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
           <div className="max-w-2xl mx-auto">
             <h2 className="text-xl font-bold mb-4 text-gray-800 border-b pb-3">
               Part {activePartData?.part}{activePartData?.title ? `: ${activePartData.title}` : ''}
@@ -1172,7 +1249,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className={`${isSpeakingWideLayout ? 'lg:flex-[3]' : 'flex-1'} bg-white rounded-md shadow-sm border border-gray-200 overflow-y-auto p-4 sm:p-6 custom-scrollbar`}>
+        <div className={`${isSpeakingWideLayout ? 'lg:flex-[3]' : 'flex-1'} bg-white dark:bg-slate-900 rounded-md shadow-sm border border-gray-200 dark:border-slate-800 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
           <div className={`${isSpeakingWideLayout ? 'max-w-none' : 'max-w-2xl'} mx-auto`}>
             {examType === 'Writing' && (
               <div className="mb-8 space-y-6">
