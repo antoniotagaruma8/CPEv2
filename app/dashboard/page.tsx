@@ -902,6 +902,15 @@ export default function DashboardPage() {
     }
   }, [loading, isProcessing]);
 
+  // Calculate overall score (weighted sum of components)
+  const calculateTotalScore = (scores: any) => {
+    if (!scores) return 0;
+    const { grammar, vocabulary, pronunciation, fluency, relevance } = scores;
+    return Math.round((grammar * 0.2) + (vocabulary * 0.2) + (pronunciation * 0.2) + (fluency * 0.2) + (relevance * 0.2));
+  };
+
+  const adminEmails = ['antoniotagaruma7@gmail.com', 'antoniotagaruma8@gmail.com', 'public.y2026@gmail.com'];
+  const isAdmin = session?.user?.email && adminEmails.includes(session.user.email);
   // Calculate progress stats from saved exams
   const progressStats = useMemo(() => {
     const stats = {
@@ -1542,10 +1551,16 @@ export default function DashboardPage() {
                                 </div>
                               </div>
                               <div className="flex-1 md:border-l md:border-gray-100 md:pl-4">
-                                <div className="text-sm text-gray-700 bg-blue-50 p-3 rounded border border-blue-100 h-full">
-                                  <span className="font-bold text-blue-800 block mb-1">Possible Answer:</span>
-                                  {item.answer}
-                                </div>
+                                {isAdmin || (retryCount[questionId] >= 2) ? (
+                                  <div className="text-sm text-gray-700 bg-blue-50 p-3 rounded border border-blue-100 h-full">
+                                    <span className="font-bold text-blue-800 block mb-1">Possible Answer:</span>
+                                    {item.answer}
+                                  </div>
+                                ) : (
+                                  <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded border border-gray-100 h-full flex items-center justify-center italic text-center">
+                                    <span>🔒 Attempt this question {2 - (retryCount[questionId] || 0)} more time{(2 - (retryCount[questionId] || 0)) === 1 ? '' : 's'} to unlock the possible answer.</span>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           );
@@ -1821,29 +1836,37 @@ export default function DashboardPage() {
                             <h4 className="font-bold text-indigo-800 flex items-center gap-2">
                               <span>🗣️</span> Possible Answers / Useful Language
                             </h4>
-                            <button
-                              onClick={() => setRevealedPossibleAnswers(prev => {
-                                const newSet = new Set(prev);
-                                if (newSet.has(activeQuestionData.id)) newSet.delete(activeQuestionData.id);
-                                else newSet.add(activeQuestionData.id);
-                                return newSet;
-                              })}
-                              className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-100 transition-colors"
-                              title={revealedPossibleAnswers.has(activeQuestionData.id) ? "Hide" : "Show"}
-                            >
-                              {revealedPossibleAnswers.has(activeQuestionData.id) ? (
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
-                              ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                              )}
-                            </button>
+                            {isAdmin || (retryCount[activeQuestionData.id.toString()] >= 2) ? (
+                              <button
+                                onClick={() => setRevealedPossibleAnswers(prev => {
+                                  const newSet = new Set(prev);
+                                  if (newSet.has(activeQuestionData.id)) newSet.delete(activeQuestionData.id);
+                                  else newSet.add(activeQuestionData.id);
+                                  return newSet;
+                                })}
+                                className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-100 transition-colors"
+                                title={revealedPossibleAnswers.has(activeQuestionData.id) ? "Hide" : "Show"}
+                              >
+                                {revealedPossibleAnswers.has(activeQuestionData.id) ? (
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
+                                ) : (
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                )}
+                              </button>
+                            ) : null}
                           </div>
-                          {revealedPossibleAnswers.has(activeQuestionData.id) && (
-                            <ul className="list-disc list-inside text-sm text-indigo-800 space-y-1 animate-fade-in">
-                              {activeQuestionData.possibleAnswers.map((ans, idx) => (
-                                <li key={idx} className="leading-relaxed">{ans}</li>
-                              ))}
-                            </ul>
+                          {isAdmin || (retryCount[activeQuestionData.id.toString()] >= 2) ? (
+                            revealedPossibleAnswers.has(activeQuestionData.id) && (
+                              <ul className="list-disc list-inside text-sm text-indigo-800 space-y-1 animate-fade-in">
+                                {activeQuestionData.possibleAnswers.map((ans, idx) => (
+                                  <li key={idx} className="leading-relaxed">{ans}</li>
+                                ))}
+                              </ul>
+                            )
+                          ) : (
+                            <p className="text-sm text-gray-500 italic flex items-center gap-2 mt-2">
+                              <span>🔒</span> Attempt this question {2 - (retryCount[activeQuestionData.id.toString()] || 0)} more time{(2 - (retryCount[activeQuestionData.id.toString()] || 0)) === 1 ? '' : 's'} to unlock possible answers.
+                            </p>
                           )}
                         </div>
                       )}
@@ -1888,29 +1911,37 @@ export default function DashboardPage() {
                           <h4 className="font-bold text-indigo-800 flex items-center gap-2">
                             <span>🗣️</span> Possible Answers / Useful Language
                           </h4>
-                          <button
-                            onClick={() => setRevealedPossibleAnswers(prev => {
-                              const newSet = new Set(prev);
-                              if (newSet.has(activeQuestionData.id)) newSet.delete(activeQuestionData.id);
-                              else newSet.add(activeQuestionData.id);
-                              return newSet;
-                            })}
-                            className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-100 transition-colors"
-                            title={revealedPossibleAnswers.has(activeQuestionData.id) ? "Hide" : "Show"}
-                          >
-                            {revealedPossibleAnswers.has(activeQuestionData.id) ? (
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
-                            ) : (
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                            )}
-                          </button>
+                          {isAdmin || (retryCount[activeQuestionData.id.toString()] >= 2) ? (
+                            <button
+                              onClick={() => setRevealedPossibleAnswers(prev => {
+                                const newSet = new Set(prev);
+                                if (newSet.has(activeQuestionData.id)) newSet.delete(activeQuestionData.id);
+                                else newSet.add(activeQuestionData.id);
+                                return newSet;
+                              })}
+                              className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-100 transition-colors"
+                              title={revealedPossibleAnswers.has(activeQuestionData.id) ? "Hide" : "Show"}
+                            >
+                              {revealedPossibleAnswers.has(activeQuestionData.id) ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
+                              ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                              )}
+                            </button>
+                          ) : null}
                         </div>
-                        {revealedPossibleAnswers.has(activeQuestionData.id) && (
-                          <ul className="list-disc list-inside text-sm text-indigo-800 space-y-1 animate-fade-in">
-                            {activeQuestionData.possibleAnswers.map((ans, idx) => (
-                              <li key={idx} className="leading-relaxed">{ans}</li>
-                            ))}
-                          </ul>
+                        {isAdmin || (retryCount[activeQuestionData.id.toString()] >= 2) ? (
+                          revealedPossibleAnswers.has(activeQuestionData.id) && (
+                            <ul className="list-disc list-inside text-sm text-indigo-800 space-y-1 animate-fade-in">
+                              {activeQuestionData.possibleAnswers.map((ans, idx) => (
+                                <li key={idx} className="leading-relaxed">{ans}</li>
+                              ))}
+                            </ul>
+                          )
+                        ) : (
+                          <p className="text-sm text-gray-500 italic flex items-center gap-2 mt-2">
+                            <span>🔒</span> Attempt this question {2 - (retryCount[activeQuestionData.id.toString()] || 0)} more time{(2 - (retryCount[activeQuestionData.id.toString()] || 0)) === 1 ? '' : 's'} to unlock possible answers.
+                          </p>
                         )}
                       </div>
                     )}
