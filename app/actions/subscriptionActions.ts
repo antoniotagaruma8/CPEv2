@@ -7,9 +7,18 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: '2025-01-27' as any,
-})
+let _stripe: Stripe | null = null
+function getStripe(): Stripe {
+    if (!_stripe) {
+        if (!process.env.STRIPE_SECRET_KEY) {
+            throw new Error('STRIPE_SECRET_KEY is not set')
+        }
+        _stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+            apiVersion: '2025-01-27' as any,
+        })
+    }
+    return _stripe
+}
 
 export async function getUserSubscription(userEmail: string) {
     const { data, error } = await supabase
@@ -27,9 +36,13 @@ export async function getUserSubscription(userEmail: string) {
 
 export async function createCheckoutSession(userEmail: string) {
     try {
-        console.log('Creating checkout session for:', userEmail)
-        console.log('Price ID:', process.env.STRIPE_PREMIUM_PRICE_ID)
-        console.log('Stripe key present:', !!process.env.STRIPE_SECRET_KEY)
+        if (!process.env.STRIPE_PREMIUM_PRICE_ID) {
+            return { error: 'STRIPE_PREMIUM_PRICE_ID is not configured' }
+        }
+
+        const stripe = getStripe()
+
+        console.log('Creating checkout for:', userEmail, 'price:', process.env.STRIPE_PREMIUM_PRICE_ID)
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
@@ -48,9 +61,9 @@ export async function createCheckoutSession(userEmail: string) {
             },
         })
 
-        return { sessionId: session.id, url: session.url }
+        return { sessionId: session.id, url: session.url || '' }
     } catch (error: any) {
-        console.error('Stripe Checkout Error:', error.message, error.type, error.raw?.message)
+        console.error('Stripe Checkout Error:', error.message)
         return { error: error.message || 'Unknown Stripe error' }
     }
 }
@@ -68,6 +81,7 @@ export async function createPortalSession(userEmail: string) {
             throw new Error('No active subscription found')
         }
 
+        const stripe = getStripe()
         const session = await stripe.billingPortal.sessions.create({
             customer: sub.stripe_customer_id,
             return_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/dashboard`,
