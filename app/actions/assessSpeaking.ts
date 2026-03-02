@@ -19,7 +19,7 @@ function getGroqClient(): Groq {
     return new Groq({ apiKey: key });
 }
 
-export async function assessSpeakingAction(base64Audio: string, questionText: string, cefrLevel: string): Promise<{ success: boolean; error?: string; transcript?: string; isCorrect?: boolean; feedback?: string; suggestion?: string; }> {
+export async function assessSpeakingAction(base64Audio: string, questionText: string, cefrLevel: string): Promise<{ success: boolean; error?: string; transcript?: string; score?: number; feedback?: string; suggestion?: string; }> {
     if (!base64Audio) return { success: false, error: 'No audio provided.' };
     if (!questionText) return { success: false, error: 'No question context provided.' };
 
@@ -53,8 +53,8 @@ export async function assessSpeakingAction(base64Audio: string, questionText: st
 Your job is to evaluate a candidate's spoken response to an interview question.
 You MUST output your evaluation strictly as a valid JSON object matching this schema:
 {
-  "isCorrect": boolean, // True if the answer conceptually addresses the prompt sensibly, otherwise false.
-  "feedback": "string", // 2-3 sentences of direct, encouraging feedback assessing their vocabulary, grammar, and relevance to the ${cefrLevel} standard.
+  "score": number, // Integer from 1 to 10 grading their accuracy, vocabulary, grammar, and relevance to the ${cefrLevel} standard (10 is perfect).
+  "feedback": "string", // 2-3 sentences of direct, encouraging feedback explaining the score.
   "suggestion": "string" // 1-2 actionable tips on how they could improve this specific answer or what they omitted.
 }
 Do not return any markdown wrappers, ONLY the raw JSON object.`;
@@ -86,7 +86,7 @@ Evaluate the candidate's response.`;
         return {
             success: true,
             transcript: transcriptText,
-            isCorrect: assessmentJSON.isCorrect,
+            score: typeof assessmentJSON.score === 'number' ? assessmentJSON.score : 0,
             feedback: assessmentJSON.feedback,
             suggestion: assessmentJSON.suggestion
         };
