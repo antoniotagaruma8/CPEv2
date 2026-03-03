@@ -205,7 +205,16 @@ export default function AdminDashboard() {
                                 <tbody className="divide-y divide-slate-100">
                                     {stats?.recentUsers?.map((user: any, index: number) => (
                                         <tr key={index} className="hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-medium text-slate-800">{user.user_email}</td>
+                                            <td className="px-6 py-4 font-medium text-slate-800">
+                                                <div className="flex items-center gap-2">
+                                                    {user.user_email}
+                                                    {user.isPremium && (
+                                                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-700 border border-amber-200 shadow-sm" title="Premium Subscriber">
+                                                            <Crown className="w-3 h-3" strokeWidth={2.5} /> PRO
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </td>
                                             <td className="px-6 py-4">
                                                 <span className={`font-bold px-2 py-1 rounded-md ${user.generation_count >= 100 ? 'bg-purple-100 text-purple-700' :
                                                     user.generation_count >= 10 ? 'bg-amber-100 text-amber-700' :

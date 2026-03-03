@@ -29,10 +29,12 @@ export async function getAdminStats(userEmail: string) {
             .select('*', { count: 'exact', head: true });
 
         // 2. Get premium subscriptions
-        const { count: premiumCount, error: subsError } = await supabase
+        const { count: premiumCount, data: premiumData, error: subsError } = await supabase
             .from('subscriptions')
-            .select('*', { count: 'exact', head: true })
+            .select('user_email', { count: 'exact' })
             .eq('plan', 'premium');
+
+        const premiumEmails = new Set(premiumData?.map(s => s.user_email) || []);
 
         // 3. Get total exams generated
         const { count: totalExamsCount, error: examsError } = await supabase
@@ -45,6 +47,11 @@ export async function getAdminStats(userEmail: string) {
             .select('user_email, generation_count, updated_at')
             .order('updated_at', { ascending: false })
             .limit(50);
+
+        const enrichedUsers = recentUsers?.map((user: any) => ({
+            ...user,
+            isPremium: premiumEmails.has(user.user_email)
+        })) || [];
 
         // 5. Get recent saved exams to see what people are generating
         const { data: recentExams, error: recentExamsError } = await supabase
@@ -61,7 +68,7 @@ export async function getAdminStats(userEmail: string) {
             totalUsers: totalUsersCount || 0,
             premiumUsers: premiumCount || 0,
             totalExamsGenerated: totalExamsCount || 0,
-            recentUsers: recentUsers || [],
+            recentUsers: enrichedUsers,
             recentExams: recentExams || []
         };
     } catch (error) {
