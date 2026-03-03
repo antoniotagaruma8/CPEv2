@@ -1104,7 +1104,8 @@ export default function DashboardPage() {
   // Check if we have questions (either from context or restored from storage)
   if (examQuestions.length === 0) {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans flex flex-col transition-colors duration-300">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans flex flex-col transition-colors duration-300 relative z-0">
+        <div className="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
         {showLoaderModal && (
           <CliLoader
             finished={!loading && !isProcessing}
@@ -1147,6 +1148,15 @@ export default function DashboardPage() {
                   }`}>
                   {generationInfo.plan === 'admin' ? 'Admin' : generationInfo.plan === 'premium' ? 'Premium ⭐' : 'Free Plan'}
                 </span>
+              )}
+              {generationInfo && generationInfo.plan === 'admin' && (
+                <Link
+                  href="/admin"
+                  className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition-all shadow-sm flex items-center gap-1"
+                >
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  Admin
+                </Link>
               )}
               {generationInfo && generationInfo.plan === 'free' && (
                 <button
@@ -1612,7 +1622,8 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-[#e9e9e9] dark:bg-slate-950 font-sans text-[#333] dark:text-slate-300 transition-colors duration-300">
+    <div className="flex flex-col h-screen bg-[#e9e9e9] dark:bg-slate-950 font-sans text-[#333] dark:text-slate-300 transition-colors duration-300 relative z-0">
+      <div className="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
       <header className="bg-white dark:bg-slate-900 border-b border-gray-300 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-2 sm:py-0 shrink-0 shadow-sm z-10 gap-2 sm:gap-0 h-auto sm:h-16 transition-colors duration-300">
         <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
           <h1 className="text-base sm:text-lg font-semibold text-gray-700 dark:text-slate-100 truncate">{getLevelLabel(cefrLevel)}: {getExamTypeLabel(examType)}</h1>
