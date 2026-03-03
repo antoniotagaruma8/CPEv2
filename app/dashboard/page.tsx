@@ -2367,7 +2367,7 @@ export default function DashboardPage() {
                     <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-3 uppercase tracking-wider flex items-center gap-2 shrink-0">
                       Task Prompt
                     </p>
-                    <div className="text-slate-800 dark:text-slate-200 text-base leading-relaxed whitespace-pre-wrap shrink-0">
+                    <div className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-relaxed whitespace-pre-wrap shrink-0">
                       {(() => {
                         const rawQ = recordingQuestionText || '';
                         let normalized = rawQ.replace(/<br\s*\/?>/gi, '\n');
@@ -2390,7 +2390,7 @@ export default function DashboardPage() {
                           <>
                             {introLines.map((line, i) => <p key={i} className="mb-2">{line}</p>)}
                             {bulletItems.length > 0 && (
-                              <ul className="list-disc list-inside space-y-1 mt-2 ml-2 text-slate-700 dark:text-slate-300 font-normal">
+                              <ul className="list-disc list-inside space-y-1 mt-2 ml-2 text-slate-800 dark:text-slate-200 font-bold">
                                 {bulletItems.map((item, i) => <li key={i}>{item}</li>)}
                               </ul>
                             )}
