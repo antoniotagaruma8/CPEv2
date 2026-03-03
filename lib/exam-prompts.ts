@@ -81,11 +81,13 @@ CRITICAL STRUCTURE REQUIREMENT: The exam MUST have EXACTLY ${totalReadingQuestio
 FORMAT REQUIREMENT: ${readingFormatStr}
 WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e.g., "Part 1: Multiple-Choice Cloze on Environmental Issues").Do NOT simply name it "Part 1" or "Part 2".
         Crucially, every single part MUST include a 'content' field with a MINIMUM of 150 words of reading text.
+        Every single part MUST also contain an 'instructions' field, providing clear directions to the student (e.g., "Read the text below and decide which answer best fits each gap.", or "Read the text and answer the questions.").
 
 CRITICAL MULTIPLE-CHOICE FORMAT INSTRUCTION: 
 Whenever a part specifies "Multiple-choice" (e.g. Multiple-choice cloze, Multiple-choice reading), you MUST provide an 'options' array containing EXACTLY 4 distinct choices (e.g., ["A. Word1", "B. Word2", "C. Word3", "D. Word4"]). DO NOT leave 'options' empty for Multiple-choice questions.
 ABSOLUTE STRICT RULE FOR "Multiple-choice reading" (Standard Comprehension): You MUST write full, explicit reading comprehension questions (e.g. "What does the writer suggest about the event in the first paragraph?"). NEVER use "Gap 1" or blank underlines. This is a conventional reading test, NOT a cloze test.
-IF the part is explicitly a "cloze" or "gap-fill" (e.g. "Multiple-choice cloze"), you may use "Gap 1", "Gap 2". BUT NEVER DO THIS FOR "Multiple-choice reading".
+IF the part is explicitly a "cloze" or "gap-fill" (e.g. "Multiple-choice cloze", "Open cloze"), you MUST represent the missing words in the 'content' text using a number inside parentheses immediately followed by a blank space composed of 7 underscores.  
+EXAMPLE REQUIRED FORMAT FOR GAPS: "(1) _______", "(2) _______". NEVER just use "(1)" or "Gap 1" without the underscores!
 If it is an open cloze or word formation part designed specifically as a gap-fill without choices, 'options' MUST be an empty array [], but you MUST provide the 'correctOption'.
 
 For each question, provide an 'explanation'(2 - 3 sentences) detailing why the answer is correct and why distractors are wrong based on CEFR grading.
