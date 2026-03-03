@@ -25,6 +25,7 @@ function LandingPageContent() {
         </div>
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-6">
+            <Link href="#how-it-works" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">How it Works</Link>
             <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
             <Link href="#testimonials" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Testimonials</Link>
             <Link href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
@@ -164,6 +165,66 @@ function LandingPageContent() {
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-1">100%</div>
               <div className="text-sm font-medium text-slate-500">Exam Focused</div>
+            </div>
+          </div>
+        </div>
+
+        {/* How It Works Section */}
+        <div id="how-it-works" className="bg-slate-50 py-24 border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800 mb-4">
+                <span className="flex h-2 w-2 rounded-full bg-blue-600 mr-2"></span>
+                Step-by-Step Guide
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How it works</h2>
+              <p className="text-lg text-slate-600">
+                Master your CEFR exam in three simple steps.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 relative">
+              {/* Connector Line (Desktop Only) */}
+              <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-slate-200 z-0"></div>
+
+              {/* Step 1 */}
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-2xl font-bold">1</div>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Generate Custom Exam</h3>
+                <p className="text-slate-600 leading-relaxed max-w-xs">
+                  Select your skill (Reading, Writing, Listening, Speaking), CEFR level, and optional topics or files to instantly create a customized mock exam.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-2xl font-bold">2</div>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Take the Test</h3>
+                <p className="text-slate-600 leading-relaxed max-w-xs">
+                  Practice with our highly realistic interface that simulates the official computer-based exam environment perfectly.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center text-teal-600 text-2xl font-bold">3</div>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Get Instant AI Feedback</h3>
+                <p className="text-slate-600 leading-relaxed max-w-xs">
+                  Receive detailed analysis, accurate scores, comprehensive rationales, and actionable tips for improvement instantly.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 text-center">
+              <Link href="/how-to-use" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                View detailed guide <span className="ml-2">→</span>
+              </Link>
             </div>
           </div>
         </div>

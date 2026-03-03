@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useTheme } from 'next-themes';
 import { useExam } from './ExamContext';
 import CliLoader from '../../components/CliLoader';
+import OnboardingTour from '../../components/OnboardingTour';
 import { fetchStockImageAction } from '../actions/fetchStockImage';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -1153,6 +1154,7 @@ export default function DashboardPage() {
   if (examQuestions.length === 0) {
     return (
       <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans flex flex-col transition-colors duration-300 relative z-0">
+        <OnboardingTour />
         <div className="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
         {showLoaderModal && (
           <CliLoader
@@ -1179,7 +1181,17 @@ export default function DashboardPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg> CEFR Mock Exam Practice
           </h1>
-          <div className="flex items-center gap-4">
+          <div id="user-settings-section" className="flex items-center gap-2 sm:gap-4">
+            <button
+              onClick={() => {
+                const event = new CustomEvent('startOnboardingTour');
+                window.dispatchEvent(event);
+              }}
+              className="p-1.5 sm:p-2 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center"
+              title="Help / Tour"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" x2="12.01" y1="17" y2="17" /></svg>
+            </button>
             <button
               onClick={toggleTheme}
               className="p-1.5 sm:p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold"
@@ -1245,7 +1257,7 @@ export default function DashboardPage() {
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-6">
 
             {/* Saved Exams Column (1/4) */}
-            <div className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
+            <div id="saved-exams-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
                 <Library className="w-5 h-5 text-blue-600" strokeWidth={2} />
                 Saved Exams
@@ -1306,7 +1318,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Generator Column (2/4) */}
-            <div className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
+            <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-200">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
                   <Lightbulb className="w-6 h-6" strokeWidth={2.5} />
