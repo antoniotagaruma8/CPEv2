@@ -1360,43 +1360,53 @@ export default function DashboardPage() {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label htmlFor="examFor" className="block text-xs font-bold text-slate-600 mb-1.5">Exam for (Class/Group)</label>
-                    <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                {isAdmin && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label htmlFor="examFor" className="block text-xs font-bold text-slate-600 mb-1.5">Exam for (Class/Group)</label>
+                      <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                    </div>
+                    <div>
+                      <label htmlFor="topic" className="block text-xs font-bold text-slate-600 mb-1.5">Topic / Theme {file ? '(Optional)' : ''}</label>
+                      <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                    </div>
                   </div>
+                )}
+                {!isAdmin && (
                   <div>
                     <label htmlFor="topic" className="block text-xs font-bold text-slate-600 mb-1.5">Topic / Theme {file ? '(Optional)' : ''}</label>
                     <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
                   </div>
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-600 mb-1.5">Upload Material (Optional)</label>
-                  <div className="relative">
-                    <input
-                      type="file"
-                      id="fileUpload"
-                      accept=".jpg,.jpeg,.png,.pdf"
-                      onChange={(e) => setFile(e.target.files ? e.target.files[0] : null)}
-                      className="block w-full text-sm text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer border border-slate-300 rounded-lg bg-slate-50"
-                    />
-                    {file && (
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setFile(null);
-                          const input = document.getElementById('fileUpload') as HTMLInputElement;
-                          if (input) input.value = '';
-                        }}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-red-500 p-1 bg-slate-50 rounded-full"
-                        title="Remove file"
-                      >
-                        <X className="w-4 h-4" strokeWidth={2.5} />
-                      </button>
-                    )}
+                )}
+                {isAdmin && (
+                  <div>
+                    <label className="block text-xs font-bold text-slate-600 mb-1.5">Upload Material (Optional)</label>
+                    <div className="relative">
+                      <input
+                        type="file"
+                        id="fileUpload"
+                        accept=".jpg,.jpeg,.png,.pdf"
+                        onChange={(e) => setFile(e.target.files ? e.target.files[0] : null)}
+                        className="block w-full text-sm text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer border border-slate-300 rounded-lg bg-slate-50"
+                      />
+                      {file && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setFile(null);
+                            const input = document.getElementById('fileUpload') as HTMLInputElement;
+                            if (input) input.value = '';
+                          }}
+                          className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-red-500 p-1 bg-slate-50 rounded-full"
+                          title="Remove file"
+                        >
+                          <X className="w-4 h-4" strokeWidth={2.5} />
+                        </button>
+                      )}
+                    </div>
+                    <p className="mt-1 text-[10px] text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
                   </div>
-                  <p className="mt-1 text-[10px] text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
-                </div>
+                )}
                 <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-2.5 px-4 rounded-xl text-white font-bold text-base shadow-lg shadow-blue-600/20 transition-all ${(loading || (generationInfo !== null && !generationInfo.allowed)) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
