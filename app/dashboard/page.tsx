@@ -400,6 +400,8 @@ export default function DashboardPage() {
 
   const handleSaveAndExit = () => {
     setGeneratedExam('');
+    setExamParts([]);
+    setExamQuestions([]);
     if (typeof window !== 'undefined') {
       localStorage.removeItem('cpe_exam_data_backup');
     }
