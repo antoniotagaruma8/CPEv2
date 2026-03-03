@@ -1243,7 +1243,7 @@ export default function DashboardPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-800">Create Your Custom CEFR Mock Exam</h3>
-                  <p className="text-sm text-slate-500">Fill out the details below to generate a new exam paper.</p>
+                  <p className="text-sm text-slate-500">Select your target skill and CEFR level to instantly generate realistic exam practice materials.</p>
                 </div>
               </div>
               <form onSubmit={handleSubmit} className="space-y-3">
