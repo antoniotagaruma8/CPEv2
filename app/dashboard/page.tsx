@@ -1737,6 +1737,10 @@ export default function DashboardPage() {
             <span className="text-[8px] sm:text-[10px] uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">Time Remaining</span>
             <span className="text-lg sm:text-xl font-mono font-bold text-gray-900 dark:text-white">{formatTime(timeLeft)}</span>
           </div>
+          <button onClick={() => setExamStarted(false)} className="bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 px-3 py-1.5 sm:px-4 sm:py-2 rounded text-xs sm:text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors flex items-center gap-2">
+            <span className="hidden sm:inline">Save & Exit</span>
+            <span className="sm:hidden">Save</span>
+          </button>
           <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded text-xs sm:text-sm font-bold hover:bg-red-700 transition-colors flex items-center gap-2">
             <span className="hidden sm:inline">Sign Out</span>
             <span className="sm:hidden">Exit</span>
