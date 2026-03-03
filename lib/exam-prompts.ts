@@ -48,27 +48,27 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
             if (cefrLevel === 'A1') {
                 partCount = 5;
                 totalReadingQuestions = 30;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice for short texts/signs.\\nPart 2: Matching.\\nPart 3: Multiple-choice for longer texts.\\nPart 4: Multiple-choice gap-fill.\\nPart 5: Open gap-fill.";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a longer text).\\nPart 2: Matching.\\nPart 3: Multiple-choice for short texts/signs.\\nPart 4: Multiple-choice gap-fill.\\nPart 5: Open gap-fill.";
             } else if (cefrLevel === 'A2') {
-                partCount = 5; // A2 Key Reading (30 questions total)
+                partCount = 5; // A2 Key Reading
                 totalReadingQuestions = 30; // 6 questions per part
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice for short texts/signs (exactly 6 qs).\\nPart 2: Matching (exactly 6 qs).\\nPart 3: Multiple-choice for longer texts (exactly 6 qs).\\nPart 4: Multiple-choice gap-fill (exactly 6 qs).\\nPart 5: Open gap-fill (exactly 6 qs).";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a longer text) (exactly 6 qs).\\nPart 2: Matching (exactly 6 qs).\\nPart 3: Multiple-choice for short texts/signs (exactly 6 qs).\\nPart 4: Multiple-choice gap-fill (exactly 6 qs).\\nPart 5: Open gap-fill (exactly 6 qs).";
             } else if (cefrLevel === 'B1') {
-                partCount = 6; // B1 Reading (30 questions total)
+                partCount = 6; // B1 Reading
                 totalReadingQuestions = 30; // 5 questions per part
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice (short texts) (exactly 5 qs).\\nPart 2: Matching profiles to texts (exactly 5 qs).\\nPart 3: Multiple-choice (long text) (exactly 5 qs).\\nPart 4: Gapped text (inserting sentences) (exactly 5 qs).\\nPart 5: Multiple-choice gap-fill (exactly 5 qs).\\nPart 6: Open gap-fill (exactly 5 qs).";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 5 qs).\\nPart 2: Matching profiles to texts (exactly 5 qs).\\nPart 3: Multiple-choice (short texts) (exactly 5 qs).\\nPart 4: Gapped text (inserting sentences) (exactly 5 qs).\\nPart 5: Multiple-choice gap-fill (exactly 5 qs).\\nPart 6: Open gap-fill (exactly 5 qs).";
             } else if (cefrLevel === 'B2') {
-                partCount = 7; // B2 Reading (52 questions total)
+                partCount = 7; // B2 Reading
                 totalReadingQuestions = 52;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze (exactly 8 qs).\\nPart 2: Open cloze (exactly 8 qs).\\nPart 3: Word formation (exactly 8 qs).\\nPart 4: Key word transformations (grammar/vocabulary) (exactly 6 qs).\\nPart 5: Multiple-choice reading (exactly 6 qs).\\nPart 6: Gapped text (inserting paragraphs) (exactly 6 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (grammar/vocabulary) (exactly 6 qs).\\nPart 6: Gapped text (inserting paragraphs) (exactly 6 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
             } else if (cefrLevel === 'C1') {
-                partCount = 8; // C1 Reading (56 questions total)
+                partCount = 8; // C1 Reading
                 totalReadingQuestions = 56;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze (exactly 8 qs).\\nPart 2: Open cloze (exactly 8 qs).\\nPart 3: Word formation (exactly 8 qs).\\nPart 4: Key word transformations (exactly 6 qs).\\nPart 5: Cross-text multiple matching (comparing 4 short texts) (exactly 6 qs).\\nPart 6: Multiple-choice reading (exactly 6 qs).\\nPart 7: Gapped text (exactly 6 qs).\\nPart 8: Multiple matching (exactly 8 qs).";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (exactly 6 qs).\\nPart 6: Cross-text multiple matching (comparing 4 short texts) (exactly 6 qs).\\nPart 7: Gapped text (exactly 6 qs).\\nPart 8: Multiple matching (exactly 8 qs).";
             } else {
-                partCount = 7; // C2 Reading (53 questions total)
+                partCount = 7; // C2 Reading
                 totalReadingQuestions = 53;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice cloze (exactly 8 qs).\\nPart 2: Open cloze (exactly 8 qs).\\nPart 3: Word formation (exactly 8 qs).\\nPart 4: Key word transformations (up to 8 words) (exactly 6 qs).\\nPart 5: Multiple-choice reading (exactly 6 qs).\\nPart 6: Gapped text (exactly 7 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (up to 8 words) (exactly 6 qs).\\nPart 6: Gapped text (exactly 7 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
             }
 
             enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Reading and Use of English exam.
