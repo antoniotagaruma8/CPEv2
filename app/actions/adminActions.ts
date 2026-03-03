@@ -31,8 +31,9 @@ export async function getAdminStats(userEmail: string) {
         // 2. Get premium subscriptions
         const { count: premiumCount, data: premiumData, error: subsError } = await supabase
             .from('subscriptions')
-            .select('user_email', { count: 'exact' })
-            .eq('plan', 'premium');
+            .select('user_email, created_at, plan', { count: 'exact' })
+            .eq('plan', 'premium')
+            .order('created_at', { ascending: false });
 
         const premiumEmails = new Set(premiumData?.map(s => s.user_email) || []);
 
@@ -54,11 +55,16 @@ export async function getAdminStats(userEmail: string) {
         })) || [];
 
         // 5. Get recent saved exams to see what people are generating
-        const { data: recentExams, error: recentExamsError } = await supabase
+        const { data: recentExamsRow, error: recentExamsError } = await supabase
             .from('exams')
             .select('id, user_email, type, level, topic, created_at, is_favorite')
             .order('created_at', { ascending: false })
             .limit(20);
+
+        const recentExams = recentExamsRow?.map((exam: any) => ({
+            ...exam,
+            isPremium: premiumEmails.has(exam.user_email)
+        })) || [];
 
         if (usersError || subsError || examsError) {
             console.error('Error fetching aggregate stats:', usersError || subsError || examsError);
@@ -67,6 +73,7 @@ export async function getAdminStats(userEmail: string) {
         return {
             totalUsers: totalUsersCount || 0,
             premiumUsers: premiumCount || 0,
+            premiumDataList: premiumData || [],
             totalExamsGenerated: totalExamsCount || 0,
             recentUsers: enrichedUsers,
             recentExams: recentExams || []

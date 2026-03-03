@@ -1,10 +1,20 @@
 "use client";
 
 import Link from 'next/link';
-import { signIn } from 'next-auth/react';
+import { signIn, SessionProvider, useSession } from 'next-auth/react';
 import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2 } from 'lucide-react';
 
 export default function LandingPage() {
+  return (
+    <SessionProvider>
+      <LandingPageContent />
+    </SessionProvider>
+  );
+}
+
+function LandingPageContent() {
+  const { data: session, status } = useSession();
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
       {/* Top Bar */}
@@ -19,12 +29,23 @@ export default function LandingPage() {
             <Link href="#testimonials" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Testimonials</Link>
             <Link href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
           </nav>
-          <button
-            onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-            className="text-sm font-semibold text-white bg-slate-900 px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors"
-          >
-            Log in
-          </button>
+          {status === "loading" ? (
+            <div className="w-16 h-9 bg-slate-200 animate-pulse rounded-lg"></div>
+          ) : session ? (
+            <Link
+              href="/dashboard"
+              className="text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+            >
+              Dashboard
+            </Link>
+          ) : (
+            <button
+              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+              className="text-sm font-semibold text-white bg-slate-900 px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors"
+            >
+              Log in
+            </button>
+          )}
         </div>
       </header>
 
@@ -47,12 +68,23 @@ export default function LandingPage() {
                   Experience realistic exam simulations for B2 First, C1 Advanced, and C2 Proficiency. Get instant, detailed AI feedback on your writing and speaking.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <button
-                    onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-                    className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg shadow-blue-600/20"
-                  >
-                    Start Practicing Free
-                  </button>
+                  {status === "loading" ? (
+                    <div className="px-8 py-4 w-56 h-14 rounded-xl bg-slate-200 animate-pulse"></div>
+                  ) : session ? (
+                    <Link
+                      href="/dashboard"
+                      className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg shadow-blue-600/20 text-center flex items-center justify-center"
+                    >
+                      Go to Dashboard
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+                      className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg shadow-blue-600/20"
+                    >
+                      Start Practicing Free
+                    </button>
+                  )}
                   <Link href="#features" className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300">
                     Learn More
                   </Link>
@@ -300,12 +332,23 @@ export default function LandingPage() {
                     No Listening Exams
                   </li>
                 </ul>
-                <button
-                  onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-                  className="w-full py-4 rounded-xl bg-slate-100 text-slate-900 font-bold hover:bg-slate-200 transition-all"
-                >
-                  Get Started
-                </button>
+                {status === "loading" ? (
+                  <div className="w-full py-4 h-14 rounded-xl bg-slate-200 animate-pulse"></div>
+                ) : session ? (
+                  <Link
+                    href="/dashboard"
+                    className="w-full py-4 rounded-xl bg-slate-100 text-slate-900 font-bold hover:bg-slate-200 transition-all text-center flex items-center justify-center"
+                  >
+                    Go to Dashboard
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+                    className="w-full py-4 rounded-xl bg-slate-100 text-slate-900 font-bold hover:bg-slate-200 transition-all"
+                  >
+                    Get Started
+                  </button>
+                )}
               </div>
 
               {/* Premium Plan */}
@@ -336,12 +379,23 @@ export default function LandingPage() {
                     Unlimited Speaking Practice
                   </li>
                 </ul>
-                <button
-                  onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-                  className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
-                >
-                  Upgrade to Premium
-                </button>
+                {status === "loading" ? (
+                  <div className="w-full py-4 h-14 rounded-xl bg-blue-200 animate-pulse"></div>
+                ) : session ? (
+                  <Link
+                    href="/dashboard"
+                    className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 text-center flex items-center justify-center"
+                  >
+                    Go to Dashboard
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+                    className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
+                  >
+                    Upgrade to Premium
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -360,12 +414,23 @@ export default function LandingPage() {
             <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
               Join thousands of students who are already using our platform to prepare for their CEFR English exams.
             </p>
-            <button
-              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-              className="px-10 py-5 rounded-xl bg-white text-slate-900 font-bold text-xl hover:bg-blue-50 transition-all hover:scale-105 shadow-xl"
-            >
-              Get Started for Free
-            </button>
+            {status === "loading" ? (
+              <div className="mx-auto w-64 h-16 rounded-xl bg-slate-700 animate-pulse"></div>
+            ) : session ? (
+              <Link
+                href="/dashboard"
+                className="inline-flex items-center justify-center px-10 py-5 rounded-xl bg-white text-slate-900 font-bold text-xl hover:bg-blue-50 transition-all hover:scale-105 shadow-xl"
+              >
+                Go to Dashboard
+              </Link>
+            ) : (
+              <button
+                onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+                className="px-10 py-5 rounded-xl bg-white text-slate-900 font-bold text-xl hover:bg-blue-50 transition-all hover:scale-105 shadow-xl"
+              >
+                Get Started for Free
+              </button>
+            )}
             <p className="mt-6 text-sm text-slate-400">No credit card required for free tier.</p>
           </div>
         </div>
