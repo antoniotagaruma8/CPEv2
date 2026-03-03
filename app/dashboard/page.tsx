@@ -13,6 +13,7 @@ import { createClient } from '@supabase/supabase-js';
 import { toggleExamFavorite } from '../actions/favoriteActions';
 import { assessSpeakingAction } from '../actions/assessSpeaking';
 import { assessWritingAction } from '../actions/assessWriting';
+import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2 } from 'lucide-react';
 
@@ -386,6 +387,11 @@ export default function DashboardPage() {
   const [isAssessingWriting, setIsAssessingWriting] = useState(false);
   const [writingAssessmentResult, setWritingAssessmentResult] = useState<{ score: number, feedback: string, suggestion: string } | null>(null);
   const [writingQuestionId, setWritingQuestionId] = useState<string | null>(null);
+
+  // Reading Assessment States
+  const [isAssessingReading, setIsAssessingReading] = useState(false);
+  const [isReadingModalOpen, setIsReadingModalOpen] = useState(false);
+  const [readingAssessmentResult, setReadingAssessmentResult] = useState<{ score: number, feedback: string, suggestion: string } | null>(null);
 
 
   useEffect(() => {
@@ -825,7 +831,35 @@ export default function DashboardPage() {
     }
   };
 
-  const handleFinishTest = () => {
+  const handleFinishTest = async () => {
+    // If it's a Reading exam, trigger assessment before clearing if it hasn't been assessed yet
+    if (examType === 'Reading' && !isAssessingReading && !readingAssessmentResult) {
+      if (confirm("Are you sure you want to finish the exam and get your assessment?")) {
+        setIsAssessingReading(true);
+        setIsReadingModalOpen(false);
+        try {
+          const result = await assessReadingAction(answers, examQuestions, cefrLevel);
+          if (result.success && result.score !== undefined) {
+            setReadingAssessmentResult({
+              score: result.score,
+              feedback: result.feedback || "Good effort.",
+              suggestion: result.suggestion || "Keep practicing."
+            });
+            setIsReadingModalOpen(true);
+          } else {
+            console.error("Reading Assessment failed:", result.error);
+            alert("Failed to assess the Reading exam.");
+          }
+        } catch (error) {
+          console.error("Error calling reading assessment:", error);
+          alert("Error assessing exam.");
+        } finally {
+          setIsAssessingReading(false);
+        }
+      }
+      return;
+    }
+
     // Clear local state and storage to allow generating a new exam
     setExamParts([]);
     setExamQuestions([]);
@@ -922,12 +956,37 @@ export default function DashboardPage() {
     return () => clearInterval(timer);
   }, [timeLeft]);
 
-  const handleSubmitAnswer = () => {
+  const handleSubmitAnswer = async () => {
     if (!answers[currentQuestion] && examType !== 'Speaking' && examType !== 'Writing') {
-      // Do not submit if no answer is selected, unless it's a Speaking exam
+      // Do not submit if no answer is selected, unless it's a Speaking/Writing exam
       return;
     }
-    setSubmittedQuestions(prev => new Set(prev).add(currentQuestion));
+
+    const newSubmitted = new Set(submittedQuestions).add(currentQuestion);
+    setSubmittedQuestions(newSubmitted);
+
+    // AI Assessment Trigger for Reading Exams
+    if (examType === 'Reading' && newSubmitted.size === totalQuestions) {
+      setIsAssessingReading(true);
+      setIsReadingModalOpen(false); // Make sure it's closed while loading
+      try {
+        const result = await assessReadingAction(answers, examQuestions, cefrLevel);
+        if (result.success && result.score !== undefined) {
+          setReadingAssessmentResult({
+            score: result.score,
+            feedback: result.feedback || "Good effort.",
+            suggestion: result.suggestion || "Keep practicing."
+          });
+          setIsReadingModalOpen(true);
+        } else {
+          console.error("Reading Assessment failed:", result.error);
+        }
+      } catch (error) {
+        console.error("Error calling reading assessment:", error);
+      } finally {
+        setIsAssessingReading(false);
+      }
+    }
   };
 
   const formatTime = (seconds: number) => {
@@ -2462,6 +2521,106 @@ export default function DashboardPage() {
         })()}
 
       </main>
+
+      {/* --- READING ASSESSMENT MODAL --- */}
+      {isReadingModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm animate-fade-in custom-scrollbar">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl md:rounded-3xl shadow-2xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden max-h-[90vh] border border-slate-200 dark:border-slate-800">
+            {/* Header for Mobile */}
+            <div className="md:hidden flex justify-between items-center p-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
+              <h2 className="text-lg font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                <Check className="w-5 h-5 text-green-500" /> Reading Assessment
+              </h2>
+              <button onClick={() => setIsReadingModalOpen(false)} className="p-2 bg-white dark:bg-slate-800 rounded-full text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition-colors shadow-sm border border-slate-200 dark:border-slate-700">
+                <X className="w-5 h-5" strokeWidth={2.5} />
+              </button>
+            </div>
+
+            {/* LEFT PANE: Information */}
+            <div className="flex-1 bg-slate-50 dark:bg-slate-900/50 p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 relative z-10 custom-scrollbar overflow-y-auto">
+              {/* Desktop Header */}
+              <div className="hidden md:flex justify-between items-start mb-8">
+                <div>
+                  <h2 className="text-3xl font-black text-slate-800 dark:text-slate-100 tracking-tight flex items-center gap-3">
+                    <Check className="w-8 h-8 text-green-500" /> Assessment Result
+                  </h2>
+                  <p className="text-slate-500 dark:text-slate-400 mt-2 font-medium">Automatic CEFR grading for Reading & Use of English.</p>
+                </div>
+              </div>
+
+              {/* Assessment Loader */}
+              {isAssessingReading && (
+                <div className="flex-1 flex flex-col items-center justify-center gap-6 py-12 md:py-24 animate-fade-in w-full">
+                  <div className="loader-graphic-container mb-4 scale-125">
+                    <div className="pulse-orbs">
+                      <div className="orb orb-1"></div>
+                      <div className="orb orb-2"></div>
+                      <div className="orb orb-3"></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-2">Analyzing Answers...</p>
+                    <p className="text-md text-slate-500 dark:text-slate-400">Examiner is evaluating your responses using CEFR grading rubric.</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Results Container */}
+              {readingAssessmentResult && !isAssessingReading && (
+                <div className="flex flex-col gap-6 w-full animate-fade-in h-full overflow-y-auto custom-scrollbar pr-2 pb-4">
+                  <div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm shrink-0">
+                    <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+                      Examiner Feedback
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm md:text-base leading-relaxed">{readingAssessmentResult.feedback}</p>
+                  </div>
+
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50 shrink-0 flex flex-col justify-center min-h-[120px]">
+                    <p className="text-sm text-blue-600 dark:text-blue-400 font-bold mb-2 flex items-center gap-2">
+                      <Zap className="w-5 h-5" /> Actionable Tips
+                    </p>
+                    <p className="text-sm md:text-base text-blue-900 dark:text-blue-200 leading-relaxed font-medium">{readingAssessmentResult.suggestion}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* RIGHT PANE: Score Ring & Actions (Only visible if assessed) */}
+            {readingAssessmentResult && !isAssessingReading && (
+              <div className="flex-[0.8] shrink-0 p-6 flex flex-col bg-slate-50 dark:bg-slate-900/50 overflow-y-auto custom-scrollbar animate-fade-in border-t lg:border-t-0 border-slate-200 dark:border-slate-800">
+
+                <div className="flex flex-col items-center mb-6 mt-10">
+                  <div className="relative w-32 h-32 shrink-0 flex items-center justify-center mb-4">
+                    <svg className="w-full h-full transform -rotate-90">
+                      <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent" className="text-slate-200 dark:text-slate-800" />
+                      <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent"
+                        strokeDasharray={351.8}
+                        strokeDashoffset={351.8 - (351.8 * (readingAssessmentResult.score / 10))}
+                        strokeLinecap="round"
+                        className={`transition-all duration-1000 ease-out ${readingAssessmentResult.score >= 8 ? 'text-green-500' : readingAssessmentResult.score >= 5 ? 'text-yellow-500' : 'text-red-500'}`}
+                      />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className={`text-4xl font-black ${readingAssessmentResult.score >= 8 ? 'text-green-600 dark:text-green-400' : readingAssessmentResult.score >= 5 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'}`}>{readingAssessmentResult.score}</span>
+                      <span className="text-xs text-slate-400 font-bold uppercase tracking-wider relative -top-1">/ 10 points</span>
+                    </div>
+                  </div>
+
+                  <h3 className={`font-black text-2xl text-center ${readingAssessmentResult.score >= 8 ? 'text-green-700 dark:text-green-400' : readingAssessmentResult.score >= 5 ? 'text-yellow-700 dark:text-yellow-400' : 'text-red-700 dark:text-red-400'}`}>
+                    {readingAssessmentResult.score >= 8 ? 'Excellent Comprehension!' : readingAssessmentResult.score >= 5 ? 'Good Effort' : 'Needs Work'}
+                  </h3>
+                </div>
+
+                <div className="mt-auto pt-6 flex flex-col gap-3 w-full">
+                  <button onClick={() => setIsReadingModalOpen(false)} className="w-full px-6 py-4 bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-white rounded-xl font-bold shadow-md transition-all flex justify-center items-center gap-2">
+                    Close and Review Answers
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       <footer className="bg-[#2d2d2d] text-white flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:py-0 shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] gap-2 sm:gap-0 h-auto sm:h-20">
         <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
