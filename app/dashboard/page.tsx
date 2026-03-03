@@ -1899,7 +1899,7 @@ export default function DashboardPage() {
                         })}
                       </div>
                     ) : (
-                      <div className="font-semibold text-gray-800 mb-4">
+                      <div className={`mb-4 ${examType === 'Listening' ? 'text-xl font-bold text-gray-900' : 'font-semibold text-gray-800'}`}>
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1">
                             {(() => {

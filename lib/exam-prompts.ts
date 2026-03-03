@@ -81,8 +81,11 @@ CRITICAL STRUCTURE REQUIREMENT: The exam MUST have EXACTLY ${totalReadingQuestio
 FORMAT REQUIREMENT: ${readingFormatStr}
 WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e.g., "Part 1: Multiple-Choice Cloze on Environmental Issues").Do NOT simply name it "Part 1" or "Part 2".
         Crucially, every single part MUST include a 'content' field with a MINIMUM of 150 words of reading text.
-If it is a multiple - choice section, provide 'options' and a 'correctOption'. 
-If it is an open cloze or word formation, 'options' can be empty, but provide the 'correctOption'.
+
+CRITICAL MULTIPLE-CHOICE FORMAT INSTRUCTION: 
+Whenever a part specifies "Multiple-choice" (e.g. Multiple-choice cloze, Multiple-choice reading), you MUST provide an 'options' array containing EXACTLY 4 distinct choices (e.g., ["A. Word1", "B. Word2", "C. Word3", "D. Word4"]). DO NOT leave 'options' empty for Multiple-choice questions. DO NOT output open-ended or gap-fill questions when Multiple-choice is requested.
+If it is an open cloze or word formation part designed specifically as a gap-fill without choices, 'options' MUST be an empty array [], but you MUST provide the 'correctOption'.
+
 For each question, provide an 'explanation'(2 - 3 sentences) detailing why the answer is correct and why distractors are wrong based on CEFR grading.
         Include 'tips' for approaching this specific part type.
             ${cambridgeStandards}
