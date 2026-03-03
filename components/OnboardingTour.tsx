@@ -33,6 +33,11 @@ export default function OnboardingTour() {
             placement: 'left',
         },
         {
+            target: '#progress-tracking-section',
+            content: 'Track your overall accuracy, skills progress, and weekly goals to see your improvement over time.',
+            placement: 'left',
+        },
+        {
             target: '#user-settings-section',
             content: 'Change your theme, manage account settings, and review the guide. Click the Help icon to restart this tour.',
             placement: 'bottom-end'

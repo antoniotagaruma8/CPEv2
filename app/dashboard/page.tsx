@@ -1425,7 +1425,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Progress Tracking Column (1/4) */}
-            <div className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl h-fit border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
+            <div id="progress-tracking-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl h-fit border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
                 <BarChart2 className="w-5 h-5 text-green-600" strokeWidth={2.5} />
                 Progress Tracking
