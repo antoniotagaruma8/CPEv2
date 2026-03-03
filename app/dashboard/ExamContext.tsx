@@ -27,6 +27,7 @@ interface ExamContextType {
   file: File | null;
   setFile: (file: File | null) => void;
   generatedExam: string;
+  setGeneratedExam: (exam: string) => void;
   loading: boolean;
   error: string;
   generateExam: () => Promise<void>;
@@ -242,7 +243,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <ExamContext.Provider value={{ examType, setExamType, cefrLevel, setCefrLevel, topic, setTopic, examFor, setExamFor, file, setFile, generatedExam, loading, error, generateExam, generationInfo, setUserEmail }}>
+    <ExamContext.Provider value={{ examType, setExamType, cefrLevel, setCefrLevel, topic, setTopic, examFor, setExamFor, file, setFile, generatedExam, setGeneratedExam, loading, error, generateExam, generationInfo, setUserEmail }}>
       {children}
     </ExamContext.Provider>
   );
