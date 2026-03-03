@@ -60,7 +60,7 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
             } else if (cefrLevel === 'B2') {
                 partCount = 7; // B2 Reading
                 totalReadingQuestions = 52;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (grammar/vocabulary) (exactly 6 qs).\\nPart 6: Gapped text (inserting paragraphs) (exactly 6 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
+                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard reading comprehension of a long text - NOT a gap fill, MUST use full question sentences) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (grammar/vocabulary) (exactly 6 qs).\\nPart 6: Gapped text (inserting paragraphs) (exactly 6 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
             } else if (cefrLevel === 'C1') {
                 partCount = 8; // C1 Reading
                 totalReadingQuestions = 56;
@@ -83,8 +83,9 @@ WARNING ON TITLES: The 'title' field for each part MUST be heavily descriptive(e
         Crucially, every single part MUST include a 'content' field with a MINIMUM of 150 words of reading text.
 
 CRITICAL MULTIPLE-CHOICE FORMAT INSTRUCTION: 
-Whenever a part specifies "Multiple-choice" (e.g. Multiple-choice cloze, Multiple-choice reading), you MUST provide an 'options' array containing EXACTLY 4 distinct choices (e.g., ["A. Word1", "B. Word2", "C. Word3", "D. Word4"]). DO NOT leave 'options' empty for Multiple-choice questions. DO NOT output open-ended or gap-fill questions when Multiple-choice is requested.
-ABSOLUTE STRICT RULE FOR "Multiple-choice reading" (Standard Comprehension): The 'question' field MUST be a full, written-out question about the text (e.g., "What is the main idea of the second paragraph?"). NEVER use "Gap 1", "Gap 2", or similar placeholder text for standard reading comprehension questions.
+Whenever a part specifies "Multiple-choice" (e.g. Multiple-choice cloze, Multiple-choice reading), you MUST provide an 'options' array containing EXACTLY 4 distinct choices (e.g., ["A. Word1", "B. Word2", "C. Word3", "D. Word4"]). DO NOT leave 'options' empty for Multiple-choice questions.
+ABSOLUTE STRICT RULE FOR "Multiple-choice reading" (Standard Comprehension): You MUST write full, explicit reading comprehension questions (e.g. "What does the writer suggest about the event in the first paragraph?"). NEVER use "Gap 1" or blank underlines. This is a conventional reading test, NOT a cloze test.
+IF the part is explicitly a "cloze" or "gap-fill" (e.g. "Multiple-choice cloze"), you may use "Gap 1", "Gap 2". BUT NEVER DO THIS FOR "Multiple-choice reading".
 If it is an open cloze or word formation part designed specifically as a gap-fill without choices, 'options' MUST be an empty array [], but you MUST provide the 'correctOption'.
 
 For each question, provide an 'explanation'(2 - 3 sentences) detailing why the answer is correct and why distractors are wrong based on CEFR grading.

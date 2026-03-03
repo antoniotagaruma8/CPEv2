@@ -404,6 +404,7 @@ export default function DashboardPage() {
     setExamQuestions([]);
     if (typeof window !== 'undefined') {
       localStorage.removeItem('cpe_exam_data_backup');
+      window.location.reload();
     }
   };
 
