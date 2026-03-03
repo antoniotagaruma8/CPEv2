@@ -97,7 +97,7 @@ function HowToUseContent() {
                             </div>
                             <div>
                                 <h4 className="font-bold text-slate-900 mb-1">3. Custom Preferences (Optional)</h4>
-                                <p className="text-slate-600 text-sm">Input a custom text, URL, or specific topic you want the AI to generate the exam around. Hit "Generate" and you're ready to go!</p>
+                                <p className="text-slate-600 text-sm">Input a specific topic you want the AI to generate the exam around. Hit "Generate" and you're ready to go!</p>
                             </div>
                         </div>
                     </section>

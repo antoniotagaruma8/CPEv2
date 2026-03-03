@@ -194,7 +194,7 @@ function LandingPageContent() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Generate Custom Exam</h3>
                 <p className="text-slate-600 leading-relaxed max-w-xs">
-                  Select your skill (Reading, Writing, Listening, Speaking), CEFR level, and optional topics or files to instantly create a customized mock exam.
+                  Select your skill (Reading, Writing, Listening, Speaking), CEFR level, and optional topics to instantly create a customized mock exam.
                 </p>
               </div>
 
