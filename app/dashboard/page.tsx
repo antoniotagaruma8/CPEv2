@@ -379,6 +379,8 @@ export default function DashboardPage() {
   const [isAssessing, setIsAssessing] = useState(false);
   const [assessmentResult, setAssessmentResult] = useState<{ transcript: string, score: number, feedback: string, suggestion: string } | null>(null);
   const [recordingQuestionId, setRecordingQuestionId] = useState<string | null>(null);
+  const [recordingQuestionText, setRecordingQuestionText] = useState<string>('');
+  const [recordingImagePrompts, setRecordingImagePrompts] = useState<string[]>([]);
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
 
@@ -1524,13 +1526,15 @@ export default function DashboardPage() {
   const activePartData = examParts.find(p => p.part === activeQuestionData?.part);
 
   // --- SPEAKING TEST ASSESSMENT LOGIC ---
-  const handleMicClick = (targetQuestionId: string, targetQuestionText: string) => {
+  const handleMicClick = (targetQuestionId: string, targetQuestionText: string, imagePrompts: string[] = []) => {
     const attempts = retryCount[targetQuestionId] || 0;
     if (attempts >= 2) {
       alert("You have already used your retry for this question.");
       return;
     }
     setRecordingQuestionId(targetQuestionId);
+    setRecordingQuestionText(targetQuestionText);
+    setRecordingImagePrompts(imagePrompts);
     setIsAssessmentModalOpen(true);
     // Auto-start recording when modal opens
     startRecording(targetQuestionId, targetQuestionText);
@@ -1931,7 +1935,7 @@ export default function DashboardPage() {
                               );
                             })()}
                           </div>
-                          {examType === 'Speaking' && (
+                          {examType === 'Speaking' && (!activeQuestionData.imagePrompts || activeQuestionData.imagePrompts.length === 0) && (
                             <div className="shrink-0 mt-1">
                               <button
                                 onClick={() => handleMicClick(`main-${activeQuestionData.id}`, activeQuestionData.question)}
@@ -1982,6 +1986,25 @@ export default function DashboardPage() {
                                     {set.prompts.map((prompt, idx) => (
                                       <AIImage key={`${set.id}-${idx}`} prompt={prompt} />
                                     ))}
+                                  </div>
+                                )}
+                                {examType === 'Speaking' && (
+                                  <div className="mt-4 pt-3 border-t border-gray-100 dark:border-slate-800 flex justify-end">
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleMicClick(`set-${activeQuestionData.id}-${set.id}`, activeQuestionData.question, set.prompts);
+                                      }}
+                                      className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold shadow-sm transition-all transform hover:scale-105
+                                        ${isRecording && recordingQuestionId === `set-${activeQuestionData.id}-${set.id}` ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto justify-center'}`}
+                                      title="Record Answer for this Set"
+                                    >
+                                      {isRecording && recordingQuestionId === `set-${activeQuestionData.id}-${set.id}` ? (
+                                        <><div className="w-3 h-3 bg-white rounded-sm"></div> Recording...</>
+                                      ) : (
+                                        <><Mic className="w-4 h-4" /> Answer for {set.title}</>
+                                      )}
+                                    </button>
                                   </div>
                                 )}
                               </div>
@@ -2323,7 +2346,8 @@ export default function DashboardPage() {
         {/* Global Assessment Modal overlay */}
         {isAssessmentModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
-            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800 transform transition-all h-[90vh] sm:h-auto max-h-[90vh]">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800 transform transition-all h-[95vh]">
+
               <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 shrink-0">
                 <h3 className="font-bold text-lg text-slate-800 dark:text-slate-100 flex items-center gap-3">
                   {isRecording ? <span className="w-3 h-3 rounded-full bg-red-500 animate-pulse ring-4 ring-red-500/30"></span> : '🎤'} Speaking Assessment
@@ -2335,63 +2359,95 @@ export default function DashboardPage() {
                 )}
               </div>
 
-              <div className="p-0 flex flex-col h-full overflow-y-auto w-full">
-                {isRecording && (
-                  <div className="p-6 flex-1 flex flex-col items-center justify-center gap-6 py-12 md:py-24 w-full">
-                    <div className="relative flex items-center justify-center">
-                      <div className="absolute w-32 h-32 bg-red-100 dark:bg-red-900/30 rounded-full animate-ping"></div>
-                      <div className="absolute w-24 h-24 bg-red-200 dark:bg-red-800/40 rounded-full animate-pulse"></div>
-                      <svg className="w-12 h-12 text-red-500 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+              <div className="p-0 flex flex-col lg:flex-row h-full overflow-hidden w-full">
+
+                {/* LEFT PANE: Task Prompt & Images */}
+                <div className={`p-6 flex-1 flex flex-col border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800 w-full lg:w-1/2`}>
+                  <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex-1 overflow-y-auto custom-scrollbar flex flex-col">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-3 uppercase tracking-wider flex items-center gap-2 shrink-0">
+                      Task Prompt
+                    </p>
+                    <div className="text-slate-800 dark:text-slate-200 text-base leading-relaxed whitespace-pre-wrap shrink-0">
+                      {(() => {
+                        const rawQ = recordingQuestionText || '';
+                        let normalized = rawQ.replace(/<br\s*\/?>/gi, '\n');
+                        const lines = normalized.split('\n').filter(l => l.trim());
+                        const introLines: string[] = [];
+                        const bulletItems: string[] = [];
+                        let foundBullet = false;
+                        for (const line of lines) {
+                          const trimmed = line.trim();
+                          if (/^[\*\-\•]\s+/.test(trimmed) || /^\d+[\.\)]\s+/.test(trimmed)) {
+                            foundBullet = true;
+                            bulletItems.push(trimmed.replace(/^[\*\-\•]\s+/, '').replace(/^\d+[\.\)]\s+/, ''));
+                          } else if (foundBullet) {
+                            bulletItems.push(trimmed);
+                          } else {
+                            introLines.push(trimmed);
+                          }
+                        }
+                        return (
+                          <>
+                            {introLines.map((line, i) => <p key={i} className="mb-2">{line}</p>)}
+                            {bulletItems.length > 0 && (
+                              <ul className="list-disc list-inside space-y-1 mt-2 ml-2 text-slate-700 dark:text-slate-300 font-normal">
+                                {bulletItems.map((item, i) => <li key={i}>{item}</li>)}
+                              </ul>
+                            )}
+                          </>
+                        );
+                      })()}
                     </div>
-                    <div className="text-center">
-                      <p className="text-xl font-bold text-slate-800 dark:text-slate-200">Recording Answer...</p>
-                      <p className="text-md text-slate-500 dark:text-slate-400 mt-2">Speak clearly into your microphone.</p>
-                    </div>
-                    <button onClick={stopRecording} className="mt-4 px-8 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-bold shadow-md transition-colors flex items-center justify-center gap-2">
-                      <div className="w-4 h-4 bg-white rounded-sm"></div> Stop Recording
-                    </button>
+                    {recordingImagePrompts && recordingImagePrompts.length > 0 && (
+                      <div className="mt-6 grid grid-cols-1 gap-4 shrink-0 pb-4">
+                        {recordingImagePrompts.map((prompt, idx) => (
+                          <AIImage key={idx} prompt={prompt} />
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
 
-                {isAssessing && (
-                  <div className="p-6 flex-1 flex flex-col items-center justify-center gap-6 py-12 md:py-24 w-full">
-                    <div className="loader-graphic-container mb-4 scale-125">
-                      <div className="pulse-orbs">
-                        <div className="orb orb-1"></div>
-                        <div className="orb orb-2"></div>
-                        <div className="orb orb-3"></div>
+                {/* RIGHT PANE: Recording & Assessment */}
+                <div className={`flex flex-col flex-[1.2] shrink-0 bg-white dark:bg-slate-900 overflow-y-auto custom-scrollbar relative`}>
+
+                  {isRecording && (
+                    <div className="p-6 flex flex-col items-center justify-center gap-6 py-12 md:py-24 h-full">
+                      <div className="relative flex items-center justify-center">
+                        <div className="absolute w-32 h-32 bg-red-100 dark:bg-red-900/30 rounded-full animate-ping"></div>
+                        <div className="absolute w-24 h-24 bg-red-200 dark:bg-red-800/40 rounded-full animate-pulse"></div>
+                        <svg className="w-12 h-12 text-red-500 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-xl font-bold text-slate-800 dark:text-slate-200">Recording Answer...</p>
+                        <p className="text-md text-slate-500 dark:text-slate-400 mt-2">Speak clearly into your microphone.</p>
+                      </div>
+                      <button onClick={stopRecording} className="mt-4 px-8 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-bold shadow-md transition-colors flex items-center justify-center gap-2">
+                        <div className="w-4 h-4 bg-white rounded-sm"></div> Stop Recording
+                      </button>
+                    </div>
+                  )}
+
+                  {isAssessing && (
+                    <div className="p-6 flex flex-col items-center justify-center gap-6 py-12 md:py-24 h-full">
+                      <div className="loader-graphic-container mb-4 scale-125">
+                        <div className="pulse-orbs">
+                          <div className="orb orb-1"></div>
+                          <div className="orb orb-2"></div>
+                          <div className="orb orb-3"></div>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-2">Analyzing Speech...</p>
+                        <p className="text-md text-slate-500 dark:text-slate-400">Examiner is evaluating your answer using CEFR grading rubric.</p>
                       </div>
                     </div>
-                    <div className="text-center">
-                      <p className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-2">Analyzing Speech...</p>
-                      <p className="text-md text-slate-500 dark:text-slate-400">Examiner is evaluating your answer using CEFR grading rubric.</p>
-                    </div>
-                  </div>
-                )}
+                  )}
 
-                {assessmentResult && !isRecording && !isAssessing && (
-                  <div className="flex flex-col md:flex-row w-full animate-fade-in">
-
-                    {/* LEFT PANE: Transcript & Tips */}
-                    <div className="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 flex flex-col gap-6">
-                      <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shrink-0">
-                        <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-2 uppercase tracking-wider flex items-center gap-2">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg> What you said
-                        </p>
-                        <p className="text-slate-800 dark:text-slate-200 italic text-base leading-relaxed">"{assessmentResult.transcript}"</p>
-                      </div>
-
-                      <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50 grow shrink-0 flex flex-col justify-center min-h-[120px]">
-                        <p className="text-sm text-blue-600 dark:text-blue-400 font-bold mb-2 flex items-center gap-2">
-                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg> Actionable Tip
-                        </p>
-                        <p className="text-base text-blue-900 dark:text-blue-200 leading-relaxed font-medium">{assessmentResult.suggestion}</p>
-                      </div>
-                    </div>
-
-                    {/* RIGHT PANE: Score & Feedback */}
-                    <div className="flex-[0.85] shrink-0 p-6 md:p-8 flex flex-col bg-white dark:bg-slate-900 justify-between">
-                      <div className="flex flex-col items-center mb-6">
+                  {assessmentResult && !isRecording && !isAssessing && (
+                    <div className="flex flex-col w-full animate-fade-in p-6 md:p-8 gap-8">
+                      {/* Score Circle */}
+                      <div className="flex flex-col items-center">
                         <div className="relative w-32 h-32 shrink-0 flex items-center justify-center mb-4">
                           <svg className="w-full h-full transform -rotate-90">
                             <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent" className="text-slate-100 dark:text-slate-800" />
@@ -2407,18 +2463,34 @@ export default function DashboardPage() {
                             <span className="text-xs text-slate-400 font-bold uppercase tracking-wider relative -top-1">/ 10 points</span>
                           </div>
                         </div>
-
                         <h3 className={`font-black text-2xl text-center ${assessmentResult.score >= 8 ? 'text-green-700 dark:text-green-400' : assessmentResult.score >= 5 ? 'text-yellow-700 dark:text-yellow-400' : 'text-red-700 dark:text-red-400'}`}>
                           {assessmentResult.score >= 8 ? 'Excellent!' : assessmentResult.score >= 5 ? 'Good Effort' : 'Needs Work'}
                         </h3>
                       </div>
 
-                      <div className="mb-8">
-                        <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Examiner Feedback</p>
-                        <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{assessmentResult.feedback}</p>
+                      {/* Feedback & Transcript */}
+                      <div className="flex flex-col gap-6">
+                        <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700">
+                          <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-2 uppercase tracking-wider flex items-center gap-2">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg> What you said
+                          </p>
+                          <p className="text-slate-800 dark:text-slate-200 italic text-base leading-relaxed">"{assessmentResult.transcript}"</p>
+                        </div>
+
+                        <div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                          <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Examiner Feedback</p>
+                          <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{assessmentResult.feedback}</p>
+                        </div>
+
+                        <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50">
+                          <p className="text-sm text-blue-600 dark:text-blue-400 font-bold mb-2 flex items-center gap-2">
+                            <Zap className="w-5 h-5" /> Actionable Tip
+                          </p>
+                          <p className="text-base text-blue-900 dark:text-blue-200 leading-relaxed font-medium">{assessmentResult.suggestion}</p>
+                        </div>
                       </div>
 
-                      <div className="flex gap-3 mt-auto">
+                      <div className="flex gap-3 mt-4">
                         <button onClick={() => setIsAssessmentModalOpen(false)} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl font-bold transition-colors">
                           Close
                         </button>
@@ -2429,8 +2501,9 @@ export default function DashboardPage() {
                         )}
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
+
+                </div>
               </div>
             </div>
           </div>
