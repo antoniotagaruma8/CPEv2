@@ -1248,8 +1248,8 @@ export default function DashboardPage() {
             </div>
 
             {/* Generator Column (2/4) */}
-            <div className="lg:col-span-3 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
+            <div className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-200">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
                 </div>
@@ -1258,7 +1258,7 @@ export default function DashboardPage() {
                   <p className="text-sm text-slate-500">Fill out the details below to generate a new exam paper.</p>
                 </div>
               </div>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="examType" className="block text-sm font-bold text-slate-600 mb-2">Exam Skill</label>
                   <select id="examType" value={examType} onChange={(e) => {
@@ -1323,7 +1323,7 @@ export default function DashboardPage() {
                   </div>
                   <p className="mt-1 text-xs text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
                 </div>
-                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-4 px-4 rounded-xl text-white font-bold text-lg shadow-lg shadow-blue-600/20 transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
+                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-3 px-4 rounded-xl text-white font-bold text-lg shadow-lg shadow-blue-600/20 transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
                 {generationInfo && generationInfo.plan === 'free' && (
@@ -1351,7 +1351,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Progress Tracking Column (1/4) */}
-            <div className="lg:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg h-fit border border-slate-100 dark:border-slate-700 sticky top-4 transition-colors">
+            <div className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl h-fit border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
                 <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                 Progress Tracking
