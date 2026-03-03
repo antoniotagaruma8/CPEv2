@@ -48,27 +48,222 @@ export function getExamPrompt(examType: string, cefrLevel: string, topicPrompt: 
             if (cefrLevel === 'A1') {
                 partCount = 5;
                 totalReadingQuestions = 30;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a longer text).\\nPart 2: Matching.\\nPart 3: Multiple-choice for short texts/signs.\\nPart 4: Multiple-choice gap-fill.\\nPart 5: Open gap-fill.";
+                readingFormatStr = `MANDATORY PART STRUCTURE (A1 Beginner - Reading):
+
+Part 1: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
+  FORMAT: Provide a simple 'content' passage (100+ words) about an everyday topic. Each question MUST be a full written-out comprehension question (e.g., "What colour is the cat?"). NEVER use "Gap 1".
+  Each question MUST have 3 options (A/B/C) with simple words or short phrases.
+  The 'instructions' field MUST say: "Read the text. Choose the correct answer A, B or C."
+
+Part 2: MATCHING (exactly 6 qs).
+  FORMAT: Provide 6 short descriptions/sentences in 'content' and a list of labeled items (A-H). Students match descriptions to items. More items than questions (so there are distractors).
+  Options MUST be letters (e.g., ["A", "B", "C", "D", "E", "F", "G", "H"]).
+  The 'instructions' field MUST say: "Match the descriptions to the correct item. There are more items than you need."
+
+Part 3: MULTIPLE-CHOICE FOR SHORT TEXTS/SIGNS (exactly 6 qs).
+  FORMAT: In 'content', provide 6 very short texts (signs, notices, labels, text messages — each 1-3 sentences). Each question asks what the sign/text means. Each question MUST have 3 options (A/B/C).
+  The 'instructions' field MUST say: "Read the signs and short texts. For each question, choose the correct answer A, B or C."
+
+Part 4: MULTIPLE-CHOICE GAP-FILL (exactly 6 qs).
+  FORMAT: Provide a simple 'content' passage (100+ words) with 6 numbered gaps "(1) _______". For each gap, provide 3 options (A/B/C) testing basic vocabulary at A1 level.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text. Choose the best word (A, B or C) for each gap."
+
+Part 5: OPEN GAP-FILL (exactly 6 qs).
+  FORMAT: Provide a simple 'content' passage (100+ words) with 6 numbered gaps "(1) _______". Students type the missing word (very basic words: is, the, a, my, etc.).
+  'options' MUST be an empty array []. 'correctOption' provides the answer.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text. Write ONE word for each gap."`;
             } else if (cefrLevel === 'A2') {
-                partCount = 5; // A2 Key Reading
+                partCount = 5; // A2 Key (KET) Reading
                 totalReadingQuestions = 30; // 6 questions per part
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a longer text) (exactly 6 qs).\\nPart 2: Matching (exactly 6 qs).\\nPart 3: Multiple-choice for short texts/signs (exactly 6 qs).\\nPart 4: Multiple-choice gap-fill (exactly 6 qs).\\nPart 5: Open gap-fill (exactly 6 qs).";
+                readingFormatStr = `MANDATORY PART STRUCTURE (A2 Key / KET - Reading):
+
+Part 1: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
+  FORMAT: Provide a 'content' passage (120+ words) about an everyday topic. Each question MUST be a full written-out comprehension question (e.g., "Why did Sarah go to the shop?"). NEVER use "Gap 1".
+  Each question MUST have 3 options (A/B/C) with short phrases.
+  The 'instructions' field MUST say: "Read the text and answer the questions. For each question, choose the correct answer A, B or C."
+
+Part 2: MATCHING (exactly 6 qs).
+  FORMAT: Provide 5-8 short labeled descriptions of people/situations in 'content'. Give 8 labeled options (A-H: places, items, or activities). Students match each person/situation to the correct option.
+  Options MUST be letters (e.g., ["A", "B", "C", "D", "E", "F", "G", "H"]).
+  The 'instructions' field MUST say: "Read the descriptions of the people. Choose the best option (A-H) for each person."
+
+Part 3: MULTIPLE-CHOICE FOR SHORT TEXTS/SIGNS (exactly 6 qs).
+  FORMAT: In 'content', provide 6 short texts (emails, notices, signs, labels — each 2-4 sentences). Each question asks about the meaning or purpose. Each question MUST have 3 options (A/B/C).
+  The 'instructions' field MUST say: "Read the texts and short messages. For each question, choose the correct answer A, B or C."
+
+Part 4: MULTIPLE-CHOICE GAP-FILL (exactly 6 qs).
+  FORMAT: Provide a 'content' passage (120+ words) with 6 numbered gaps "(1) _______". For each gap, provide 3 options (A/B/C) testing A2-level vocabulary and basic grammar.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text. Choose the best word (A, B or C) for each gap."
+
+Part 5: OPEN GAP-FILL (exactly 6 qs).
+  FORMAT: Provide a 'content' passage (120+ words) with 6 numbered gaps "(1) _______". Students type the missing word (basic grammar: prepositions, articles, pronouns, simple verb forms).
+  'options' MUST be an empty array []. 'correctOption' provides the answer.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text. Write ONE word for each gap."`;
             } else if (cefrLevel === 'B1') {
-                partCount = 6; // B1 Reading
+                partCount = 6; // B1 Preliminary (PET) Reading
                 totalReadingQuestions = 30; // 5 questions per part
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 5 qs).\\nPart 2: Matching profiles to texts (exactly 5 qs).\\nPart 3: Multiple-choice (short texts) (exactly 5 qs).\\nPart 4: Gapped text (inserting sentences) (exactly 5 qs).\\nPart 5: Multiple-choice gap-fill (exactly 5 qs).\\nPart 6: Open gap-fill (exactly 5 qs).";
+                readingFormatStr = `MANDATORY PART STRUCTURE (B1 Preliminary / PET - Reading):
+
+Part 1: MULTIPLE-CHOICE READING COMPREHENSION (exactly 5 qs).
+  FORMAT: Provide a 'content' passage (200+ words). Each question MUST be a full written-out comprehension question (e.g., "What does the writer say about the festival?"). NEVER use "Gap 1".
+  Each question MUST have 4 options (A/B/C/D) with full phrases or sentences.
+  The 'instructions' field MUST say: "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
+
+Part 2: MATCHING PROFILES TO TEXTS (exactly 5 qs).
+  FORMAT: Provide 5 short person descriptions AND 8 labeled short texts (A-H) in 'content'. Students match each person to the most suitable text.
+  Options MUST be text labels (e.g., ["A", "B", "C", "D", "E", "F", "G", "H"]).
+  The 'instructions' field MUST say: "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person."
+
+Part 3: MULTIPLE-CHOICE FOR SHORT TEXTS (exactly 5 qs).
+  FORMAT: In 'content', provide 5 short real-world texts (adverts, notices, messages — each 2-5 sentences). Each question asks about meaning. Each question MUST have 3 options (A/B/C).
+  The 'instructions' field MUST say: "Read the texts. For each question, choose the correct answer A, B or C."
+
+Part 4: GAPPED TEXT — INSERTING SENTENCES (exactly 5 qs).
+  FORMAT: Provide a 'content' passage (200+ words) from which 5 sentences have been REMOVED. Mark removal points as "(1) _______". Provide the removed sentences as options (A-F, with 1 extra distractor).
+  The 'instructions' field MUST say: "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use."
+
+Part 5: MULTIPLE-CHOICE GAP-FILL / CLOZE (exactly 5 qs).
+  FORMAT: Provide a 'content' passage (150+ words) with 5 numbered gaps "(1) _______". For each gap, provide 4 options (A/B/C/D) testing vocabulary and grammar at B1 level.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and choose the correct word for each gap."
+
+Part 6: OPEN GAP-FILL (exactly 5 qs).
+  FORMAT: Provide a 'content' passage (150+ words) with 5 numbered gaps "(1) _______". Students type the missing word (grammar words: prepositions, auxiliary verbs, pronouns, conjunctions).
+  'options' MUST be an empty array []. 'correctOption' provides the answer.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and think of the word which best fits each gap. Use only one word in each gap."`;
             } else if (cefrLevel === 'B2') {
-                partCount = 7; // B2 Reading
+                partCount = 7; // B2 First (FCE) Reading & Use of English
                 totalReadingQuestions = 52;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard reading comprehension of a long text - NOT a gap fill, MUST use full question sentences) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (grammar/vocabulary) (exactly 6 qs).\\nPart 6: Gapped text (inserting paragraphs) (exactly 6 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
+                readingFormatStr = `MANDATORY PART STRUCTURE (B2 First / FCE - Reading & Use of English):
+
+Part 1: MULTIPLE-CHOICE CLOZE (exactly 8 qs).
+  FORMAT: Provide a long 'content' passage (200+ words) with 8 numbered gaps formatted as "(1) _______". For EACH gap, provide 4 options (A/B/C/D). These options test vocabulary and grammar at B2 level (e.g., collocations, phrasal verbs, linking words — NOT simple elementary words).
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and decide which answer (A, B, C or D) best fits each gap."
+
+Part 2: OPEN CLOZE (exactly 8 qs).
+  FORMAT: Provide a DIFFERENT long 'content' passage (200+ words) with 8 numbered gaps formatted as "(1) _______". Students must type the missing word themselves (NO options given). Gaps test grammar words: articles, prepositions, pronouns, auxiliary verbs, conjunctions, relative pronouns at B2 level.
+  'options' MUST be an empty array []. 'correctOption' provides the answer.
+  QUESTION FIELD: Set to "Gap 9", "Gap 10", etc. (numbered sequentially from Part 1).
+  The 'instructions' field MUST say: "Read the text below and think of the word which best fits each gap. Use only one word in each gap."
+
+Part 3: WORD FORMATION (exactly 8 qs).
+  FORMAT: Provide a DIFFERENT long 'content' passage (200+ words). The passage must have 8 numbered gaps "(1) _______" where each gap requires a WORD TRANSFORMATION. Next to each gap in the text, place the BASE WORD in UPPERCASE inside parentheses, e.g.: "The town has seen a significant (1) _______ (IMPROVE) in public services." Students must transform IMPROVE → IMPROVEMENT.
+  'options' MUST be an empty array []. The 'question' field MUST show the base word, e.g. "IMPROVE". The 'correctOption' provides the transformed answer, e.g. "improvement".
+  DO NOT ask isolated grammar questions like "Form the past participle of run" — this is NOT how Word Formation works. It ALWAYS uses a reading passage.
+  The 'instructions' field MUST say: "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line."
+
+Part 4: KEY WORD TRANSFORMATIONS (exactly 6 qs).
+  FORMAT: The 'content' can be a short introduction. Each question gives a lead-in sentence and a KEY WORD. Students must complete a second gapped sentence using the key word so that it means the same as the first sentence, using between 2 and 5 words including the key word.
+  'question' field: the full lead-in sentence + the key word + the gapped sentence. e.g. "I haven't seen her for ages. SINCE: It's been a long time _______ her."
+  'options' MUST be an empty array []. 'correctOption' provides the answer phrase.
+  The 'instructions' field MUST say: "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given."
+
+Part 5: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
+  FORMAT: Provide a LONG 'content' passage (300+ words) on the topic. Each question MUST be a full, written-out comprehension question about the text (e.g., "What does the writer suggest about climate change in the third paragraph?"). This is a standard reading test — NOT a gap-fill or cloze.
+  NEVER use "Gap 1" or numbered blanks for this part.
+  Each question MUST have 4 options (A/B/C/D) that are full sentences or phrases.
+  The 'instructions' field MUST say: "Read the text and answer Questions X-X. For each question, choose the correct answer A, B, C or D."
+
+Part 6: GAPPED TEXT (exactly 6 qs).
+  FORMAT: Provide a long 'content' passage (300+ words) from which 6 sentences/paragraphs have been REMOVED. Mark removal points as "(1) _______". Provide the removed sentences as the 4 options (plus 1 extra distractor = 7 options total labeled A-G). Students must decide which removed sentence fits in each gap.
+  The 'instructions' field MUST say: "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use."
+
+Part 7: MULTIPLE MATCHING (exactly 10 qs).
+  FORMAT: Provide 4-6 distinct short labeled paragraphs (A, B, C, D, etc.) in the 'content'. Each question asks "Which text/person...?" and students match to the correct paragraph letter.
+  Options MUST be paragraph letters only (e.g., ["A", "B", "C", "D"]).
+  The 'instructions' field MUST say: "Read the texts below. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once."`;
             } else if (cefrLevel === 'C1') {
-                partCount = 8; // C1 Reading
+                partCount = 8; // C1 Advanced (CAE) Reading & Use of English
                 totalReadingQuestions = 56;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (exactly 6 qs).\\nPart 6: Cross-text multiple matching (comparing 4 short texts) (exactly 6 qs).\\nPart 7: Gapped text (exactly 6 qs).\\nPart 8: Multiple matching (exactly 8 qs).";
+                readingFormatStr = `MANDATORY PART STRUCTURE (C1 Advanced / CAE - Reading & Use of English):
+
+Part 1: MULTIPLE-CHOICE CLOZE (exactly 8 qs).
+  FORMAT: Provide a long 'content' passage (250+ words) with 8 numbered gaps "(1) _______". For EACH gap, provide 4 options (A/B/C/D). Options test advanced vocabulary: collocations, phrasal verbs, idioms, subtle differences in meaning at C1 level.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and decide which answer (A, B, C or D) best fits each gap."
+
+Part 2: OPEN CLOZE (exactly 8 qs).
+  FORMAT: Provide a DIFFERENT long 'content' passage (250+ words) with 8 numbered gaps "(1) _______". Students type the missing word (NO options). Gaps test advanced grammar: relative pronouns, complex prepositions, linking phrases, modal verbs at C1 level.
+  'options' MUST be an empty array []. 'correctOption' provides the answer.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and think of the word which best fits each gap. Use only one word in each gap."
+
+Part 3: WORD FORMATION (exactly 8 qs).
+  FORMAT: Provide a DIFFERENT long 'content' passage (250+ words). The passage MUST have 8 numbered gaps "(1) _______" where each gap requires a WORD TRANSFORMATION. Place the BASE WORD in UPPERCASE next to each gap, e.g.: "The (1) _______ (SIGNIFY) of this discovery cannot be overstated."
+  'options' MUST be an empty array []. The 'question' field MUST show the base word (e.g., "SIGNIFY"). 'correctOption' provides the transformed answer (e.g., "significance").
+  DO NOT ask isolated grammar questions. Word Formation ALWAYS uses a reading passage with gaps.
+  The 'instructions' field MUST say: "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line."
+
+Part 4: KEY WORD TRANSFORMATIONS (exactly 6 qs).
+  FORMAT: Each question gives a lead-in sentence and a KEY WORD. Students complete a second gapped sentence using 3-6 words including the key word. Tests advanced grammar and vocabulary at C1.
+  'question' field: the lead-in sentence + key word + gapped sentence.
+  'options' MUST be an empty array []. 'correctOption' provides the answer phrase.
+  The 'instructions' field MUST say: "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given."
+
+Part 5: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
+  FORMAT: Provide a LONG 'content' passage (400+ words). Each question MUST be a full, written-out comprehension question. This is a standard reading test — NOT a gap-fill.
+  NEVER use "Gap 1" or numbered blanks. Each question MUST have 4 options (A/B/C/D) with full sentences.
+  The 'instructions' field MUST say: "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
+
+Part 6: CROSS-TEXT MULTIPLE MATCHING (exactly 6 qs).
+  FORMAT: Provide 4 short texts (labeled A-D) by different writers in 'content', all on a related theme. Questions ask which writer shares/disagrees with another writer's view, or which writer expresses a particular opinion.
+  Options MUST be writer labels (e.g., ["A", "B", "C", "D"]).
+  The 'instructions' field MUST say: "Read the four texts about the topic. For Questions X-X, choose from the writers A-D."
+
+Part 7: GAPPED TEXT (exactly 6 qs).
+  FORMAT: Provide a long 'content' passage (350+ words) from which 6 paragraphs have been removed. Mark removal points as "(1) _______". Provide 7 removed paragraphs (A-G, 1 extra distractor).
+  The 'instructions' field MUST say: "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use."
+
+Part 8: MULTIPLE MATCHING (exactly 8 qs).
+  FORMAT: Provide 4-6 distinct labeled paragraphs/sections in 'content'. Questions ask "Which section/text mentions...?" and students match to the correct label.
+  Options MUST be paragraph letters (e.g., ["A", "B", "C", "D"]).
+  The 'instructions' field MUST say: "Read the text. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once."`;
             } else {
-                partCount = 7; // C2 Reading
+                partCount = 7; // C2 Proficiency (CPE) Reading & Use of English
                 totalReadingQuestions = 53;
-                readingFormatStr = "MANDATORY PART STRUCTURE:\\nPart 1: Multiple-choice reading (standard comprehension of a long text) (exactly 6 qs).\\nPart 2: Multiple-choice cloze (gap-fill with options) (exactly 8 qs).\\nPart 3: Open cloze (exactly 8 qs).\\nPart 4: Word formation (exactly 8 qs).\\nPart 5: Key word transformations (up to 8 words) (exactly 6 qs).\\nPart 6: Gapped text (exactly 7 qs).\\nPart 7: Multiple matching (exactly 10 qs).";
+                readingFormatStr = `MANDATORY PART STRUCTURE (C2 Proficiency / CPE - Reading & Use of English):
+
+Part 1: MULTIPLE-CHOICE CLOZE (exactly 8 qs).
+  FORMAT: Provide a sophisticated 'content' passage (250+ words) with 8 numbered gaps "(1) _______". For EACH gap, provide 4 options (A/B/C/D). Options test nuanced vocabulary: near-synonyms, idiomatic usage, precise collocations, and register distinctions at C2 mastery level.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and decide which answer (A, B, C or D) best fits each gap."
+
+Part 2: OPEN CLOZE (exactly 8 qs).
+  FORMAT: Provide a DIFFERENT long 'content' passage (250+ words) with 8 numbered gaps "(1) _______". Students type the missing word. Gaps test highly advanced grammar at C2: complex preposition phrases, discourse markers, subtle pronoun references, rare auxiliary constructions.
+  'options' MUST be an empty array []. 'correctOption' provides the answer.
+  QUESTION FIELD: Set to "Gap 1", "Gap 2", etc.
+  The 'instructions' field MUST say: "Read the text below and think of the word which best fits each gap. Use only one word in each gap."
+
+Part 3: WORD FORMATION (exactly 8 qs).
+  FORMAT: Provide a DIFFERENT long 'content' passage (250+ words). The passage MUST have 8 numbered gaps "(1) _______" where each gap requires an advanced WORD TRANSFORMATION. Place the BASE WORD in UPPERCASE next to each gap, e.g.: "Her (1) _______ (PERSEVERE) in the face of adversity was truly remarkable."
+  'options' MUST be an empty array []. The 'question' field MUST show the base word. 'correctOption' provides the transformed answer (e.g., "perseverance").
+  Word Formation ALWAYS uses a reading passage — NEVER isolated grammar drills.
+  The 'instructions' field MUST say: "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line."
+
+Part 4: KEY WORD TRANSFORMATIONS (exactly 6 qs).
+  FORMAT: Each question gives a lead-in sentence and a KEY WORD. Students complete a second gapped sentence using 3-8 words including the key word, testing highly advanced grammar and vocabulary at C2.
+  'options' MUST be an empty array []. 'correctOption' provides the answer phrase.
+  The 'instructions' field MUST say: "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and eight words, including the word given."
+
+Part 5: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
+  FORMAT: Provide a LONG 'content' passage (400+ words) on an intellectually demanding topic. Each question MUST be a full, written-out comprehension question testing inference, writer's attitude, rhetorical purpose, etc. NOT a gap-fill.
+  Each question MUST have 4 options (A/B/C/D) with full sentences.
+  The 'instructions' field MUST say: "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
+
+Part 6: GAPPED TEXT (exactly 7 qs).
+  FORMAT: Provide a long 'content' passage (400+ words) from which 7 paragraphs have been removed. Mark removal points as "(1) _______". Provide 8 removed paragraphs (A-H, 1 extra distractor).
+  The 'instructions' field MUST say: "Seven paragraphs have been removed from the text. Choose from the paragraphs A-H the one which fits each gap. There is one extra paragraph which you do not need to use."
+
+Part 7: MULTIPLE MATCHING (exactly 10 qs).
+  FORMAT: Provide 4-6 distinct labeled texts/sections in 'content'. Questions ask "Which section/text...?" and students match to the correct label.
+  Options MUST be section letters (e.g., ["A", "B", "C", "D"]).
+  The 'instructions' field MUST say: "Read the text. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once."`;
             }
 
             enhancedTopic = `Based on the ${topicPrompt}, generate a complete CEFR ${cefrLevel} Mock Reading and Use of English exam.
