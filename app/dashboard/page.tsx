@@ -1126,7 +1126,7 @@ export default function DashboardPage() {
             <button onClick={() => setCheckoutBanner(null)} className="ml-4 text-white/80 hover:text-white">✕</button>
           </div>
         )}
-        <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center shadow-sm sticky top-0 z-20 transition-colors duration-300">
+        <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center shadow-md sticky top-0 z-20 transition-colors duration-300">
           <h1 className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
             <svg className="w-8 h-8 text-blue-900 dark:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -1187,7 +1187,7 @@ export default function DashboardPage() {
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-6">
 
             {/* Saved Exams Column (1/4) */}
-            <div className="lg:col-span-1 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-100 dark:border-slate-700 sticky top-4 transition-colors">
+            <div className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
                 <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
                 Saved Exams
@@ -1248,10 +1248,10 @@ export default function DashboardPage() {
             </div>
 
             {/* Generator Column (2/4) */}
-            <div className="lg:col-span-2 bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg w-full border border-slate-100 dark:border-slate-700 transition-colors">
+            <div className="lg:col-span-3 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-800">Create Your Custom CEFR Mock Exam</h3>
@@ -1323,7 +1323,7 @@ export default function DashboardPage() {
                   </div>
                   <p className="mt-1 text-xs text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
                 </div>
-                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-3 px-4 rounded-lg text-white font-bold shadow-sm transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
+                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-4 px-4 rounded-xl text-white font-bold text-lg shadow-lg shadow-blue-600/20 transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
                 {generationInfo && generationInfo.plan === 'free' && (
@@ -1625,7 +1625,7 @@ export default function DashboardPage() {
   return (
     <div className="flex flex-col h-screen bg-[#e9e9e9] dark:bg-slate-950 font-sans text-[#333] dark:text-slate-300 transition-colors duration-300 relative z-0">
       <div className="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
-      <header className="bg-white dark:bg-slate-900 border-b border-gray-300 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-2 sm:py-0 shrink-0 shadow-sm z-10 gap-2 sm:gap-0 h-auto sm:h-16 transition-colors duration-300">
+      <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-300 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-2 sm:py-0 shrink-0 shadow-md z-10 gap-2 sm:gap-0 h-auto sm:h-16 transition-colors duration-300">
         <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
           <h1 className="text-base sm:text-lg font-semibold text-gray-700 dark:text-slate-100 truncate">{getLevelLabel(cefrLevel)}: {getExamTypeLabel(examType)}</h1>
           <div className="h-6 w-px bg-gray-300 dark:bg-slate-700"></div>
@@ -1657,7 +1657,7 @@ export default function DashboardPage() {
       </header>
 
       <main className="flex-1 flex flex-col lg:flex-row overflow-hidden p-2 sm:p-4 gap-2 sm:gap-4">
-        <div className={`${isSpeakingWideLayout ? 'lg:flex-[1]' : 'flex-1'} bg-white dark:bg-slate-900 rounded-md shadow-sm border border-gray-200 dark:border-slate-800 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
+        <div className={`${isSpeakingWideLayout ? 'lg:flex-[1]' : 'flex-1'} bg-white/95 dark:bg-slate-900/95 rounded-2xl shadow-xl border border-gray-200/60 dark:border-slate-800/60 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
           <div className="max-w-2xl mx-auto">
             <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-slate-100 border-b border-gray-200 dark:border-slate-800 pb-3">
               Part {activePartData?.part}{activePartData?.title ? `: ${activePartData.title}` : ''}
@@ -2221,7 +2221,7 @@ export default function DashboardPage() {
                     {activePartData?.examinerNotes && (
                       <div className="p-4 bg-green-50 border-l-4 border-green-400 rounded-r-lg">
                         <div className="flex items-start gap-3">
-                          <svg className="w-6 h-6 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
+                          <svg className="w-6 h-6 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
                           <div>
                             <h4 className="font-bold text-green-800">Tips</h4>
                             <p className="text-sm text-gray-700 mt-1 whitespace-pre-line">{activePartData.examinerNotes}</p>
