@@ -123,7 +123,8 @@ Part 3: MULTIPLE-CHOICE FOR SHORT TEXTS (exactly 5 qs).
   The 'instructions' field MUST say: "Read the texts. For each question, choose the correct answer A, B or C."
 
 Part 4: GAPPED TEXT — INSERTING SENTENCES (exactly 5 qs).
-  FORMAT: Provide a 'content' passage (200+ words) from which 5 sentences have been REMOVED. Mark removal points as "(1) _______". Provide the removed sentences as options (A-F, with 1 extra distractor).
+  FORMAT: Write a coherent 'content' passage (200+ words). Then REMOVE 5 sentences from it, replacing each with a numbered gap marker: "[Gap 1]", "[Gap 2]", etc. The passage in 'content' MUST show these gap markers — do NOT leave the passage as continuous text.
+  CRITICAL: Create 6 removed sentences labeled A-F (5 correct + 1 distractor). Each question ("Gap 1", "Gap 2", etc.) MUST have the SAME 'options' array: ["A. <sentence>", "B. <sentence>", "C. <sentence>", "D. <sentence>", "E. <sentence>", "F. <sentence>"]. The 'correctOption' for each question is the letter of the sentence that fits that specific gap.
   The 'instructions' field MUST say: "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use."
 
 Part 5: MULTIPLE-CHOICE GAP-FILL / CLOZE (exactly 5 qs).
@@ -171,7 +172,8 @@ Part 5: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
   The 'instructions' field MUST say: "Read the text and answer Questions X-X. For each question, choose the correct answer A, B, C or D."
 
 Part 6: GAPPED TEXT (exactly 6 qs).
-  FORMAT: Provide a long 'content' passage (300+ words) from which 6 sentences/paragraphs have been REMOVED. Mark removal points as "(1) _______". Provide the removed sentences as the 4 options (plus 1 extra distractor = 7 options total labeled A-G). Students must decide which removed sentence fits in each gap.
+  FORMAT: Write a coherent 'content' passage (300+ words). Then REMOVE 6 sentences from it, replacing each with a numbered gap marker: "[Gap 1]", "[Gap 2]", etc. The passage in 'content' MUST show these gap markers — do NOT leave the passage as continuous unbroken text.
+  CRITICAL: Create 7 removed sentences labeled A-G (6 correct + 1 distractor). Each question ("Gap 1", "Gap 2", etc.) MUST have the SAME 'options' array: ["A. <sentence>", "B. <sentence>", ..., "G. <sentence>"]. The 'correctOption' for each question is the letter of the sentence that fills that specific gap.
   The 'instructions' field MUST say: "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use."
 
 Part 7: MULTIPLE MATCHING (exactly 10 qs).
@@ -217,7 +219,8 @@ Part 6: CROSS-TEXT MULTIPLE MATCHING (exactly 6 qs).
   The 'instructions' field MUST say: "Read the four texts about the topic. For Questions X-X, choose from the writers A-D."
 
 Part 7: GAPPED TEXT (exactly 6 qs).
-  FORMAT: Provide a long 'content' passage (350+ words) from which 6 paragraphs have been removed. Mark removal points as "(1) _______". Provide 7 removed paragraphs (A-G, 1 extra distractor).
+  FORMAT: Write a coherent 'content' passage (350+ words). Then REMOVE 6 paragraphs from it, replacing each with a numbered gap marker: "[Gap 1]", "[Gap 2]", etc. The passage in 'content' MUST show these gap markers — do NOT leave the passage continuous.
+  CRITICAL: Create 7 removed paragraphs labeled A-G (6 correct + 1 distractor). Each question ("Gap 1", "Gap 2", etc.) MUST have the SAME 'options' array: ["A. <paragraph>", "B. <paragraph>", ..., "G. <paragraph>"]. The 'correctOption' for each question is the letter of the paragraph that fills that gap.
   The 'instructions' field MUST say: "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use."
 
 Part 8: MULTIPLE MATCHING (exactly 8 qs).
@@ -257,7 +260,8 @@ Part 5: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
   The 'instructions' field MUST say: "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
 
 Part 6: GAPPED TEXT (exactly 7 qs).
-  FORMAT: Provide a long 'content' passage (400+ words) from which 7 paragraphs have been removed. Mark removal points as "(1) _______". Provide 8 removed paragraphs (A-H, 1 extra distractor).
+  FORMAT: Write a coherent 'content' passage (400+ words). Then REMOVE 7 paragraphs from it, replacing each with a numbered gap marker: "[Gap 1]", "[Gap 2]", etc. The passage in 'content' MUST show these gap markers — do NOT leave the passage continuous.
+  CRITICAL: Create 8 removed paragraphs labeled A-H (7 correct + 1 distractor). Each question ("Gap 1", "Gap 2", etc.) MUST have the SAME 'options' array: ["A. <paragraph>", "B. <paragraph>", ..., "H. <paragraph>"]. The 'correctOption' for each question is the letter of the paragraph that fills that gap.
   The 'instructions' field MUST say: "Seven paragraphs have been removed from the text. Choose from the paragraphs A-H the one which fits each gap. There is one extra paragraph which you do not need to use."
 
 Part 7: MULTIPLE MATCHING (exactly 10 qs).
