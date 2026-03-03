@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { signIn, SessionProvider, useSession } from 'next-auth/react';
-import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,26 @@ export default function LandingPage() {
 
 function LandingPageContent() {
   const { data: session, status } = useSession();
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "How accurate is the AI grading compared to real Cambridge examiners?",
+      answer: "Our AI model has been trained on official CEFR marking rubrics and thousands of graded exam papers. While it shouldn't replace a real examiner for official certification, it provides highly accurate score estimations and actionable feedback that closely mirrors Cambridge standards."
+    },
+    {
+      question: "Are the Listening audios realistic?",
+      answer: "Yes, our Premium plan includes high-fidelity text-to-speech voices with various accents (British, American, Australian) to simulate the authentic listening conditions of the real exams."
+    },
+    {
+      question: "Can I cancel my Premium subscription anytime?",
+      answer: "Absolutely. There are no lock-in contracts. You can cancel your subscription at any time from your account settings, and you'll retain Premium access until the end of your billing cycle."
+    },
+    {
+      question: "Can I use this to prepare my own students?",
+      answer: "Yes! Many teachers use our platform to generate custom Mock Exams on specific topics, assign them to students, and review their auto-graded results using the public sharing links."
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
@@ -86,9 +107,10 @@ function LandingPageContent() {
                       Start Practicing Free
                     </button>
                   )}
-                  <Link href="#features" className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300">
-                    Learn More
-                  </Link>
+                  <button className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
+                    <PlayCircle className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                    See it in action
+                  </button>
                 </div>
                 <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
                   <div className="flex -space-x-2">
@@ -143,6 +165,21 @@ function LandingPageContent() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Badges Banner */}
+        <div className="bg-white border-b border-slate-100 py-6">
+          <div className="max-w-7xl mx-auto px-6">
+            <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Aligned with Global Standards</p>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+              {['B2 First', 'C1 Advanced', 'C2 Proficiency', 'CEFR Framework'].map((badge) => (
+                <div key={badge} className="flex items-center gap-2 font-bold text-lg text-slate-700">
+                  <ShieldCheck className="w-6 h-6 text-blue-600" />
+                  {badge}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -266,6 +303,49 @@ function LandingPageContent() {
             </div>
           </div>
         </div>
+
+        {/* Who is this for Section */}
+        <div className="bg-slate-50 py-24 border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Who is this for?</h2>
+              <p className="text-lg text-slate-600">Built to save time and boost scores for both learners and educators.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex gap-6 hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 shrink-0">
+                  <GraduationCap className="w-7 h-7" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">For Students</h3>
+                  <p className="text-slate-600 mb-4">Aiming to pass B2 First, C1 Advanced, or C2 Proficiency? Stop relying on generic practice tests.</p>
+                  <ul className="space-y-2 text-sm text-slate-700 font-medium">
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Overcome speaking anxiety with AI practice</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Know your exact weak points in writing</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Practice with endless, fresh mock exams</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex gap-6 hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                  <Users className="w-7 h-7" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">For Teachers & Tutors</h3>
+                  <p className="text-slate-600 mb-4">Tired of marking endless essays or searching for relevant reading materials?</p>
+                  <ul className="space-y-2 text-sm text-slate-700 font-medium">
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Generate exams on grammar topics you just taught</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Let AI do the heavy lifting for writing corrections</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Reduce lesson prep time by 80%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Testimonials Section */}
         <div id="testimonials" className="bg-white py-24 border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-6">
@@ -357,6 +437,34 @@ function LandingPageContent() {
           </div>
         </div>
 
+        {/* FAQ Section */}
+        <div className="bg-white py-24 border-t border-slate-100 max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-slate-600">Common questions about CEFR Mock Exams.</p>
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border border-slate-200 rounded-xl overflow-hidden bg-white hover:border-blue-300 transition-colors">
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  className="w-full flex items-center justify-between p-6 text-left bg-white font-bold text-slate-900"
+                >
+                  <span className="pr-4">{faq.question}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ${openFaqIndex === index ? 'rotate-180' : ''}`} />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <p className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Pricing Section */}
         <div id="pricing" className="bg-slate-50 py-24 border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-6">
@@ -374,6 +482,7 @@ function LandingPageContent() {
                     <span className="text-4xl font-extrabold text-slate-900">€0</span>
                     <span className="text-slate-500">/forever</span>
                   </div>
+                  <p className="text-sm text-slate-500 mt-2">No credit card required.</p>
                 </div>
                 <ul className="space-y-4 mb-10 flex-1">
                   <li className="flex items-center gap-3 text-slate-600">
@@ -421,6 +530,7 @@ function LandingPageContent() {
                     <span className="text-4xl font-extrabold text-slate-900">€10</span>
                     <span className="text-slate-500">/month</span>
                   </div>
+                  <p className="text-sm text-blue-600 font-medium mt-2 flex items-center gap-1"><ShieldCheck className="w-4 h-4" /> Cancel anytime. Secure payment.</p>
                 </div>
                 <ul className="space-y-4 mb-10 flex-1">
                   <li className="flex items-center gap-3 text-slate-900 font-medium">
