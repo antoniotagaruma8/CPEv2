@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
+import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2 } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -9,9 +10,7 @@ export default function LandingPage() {
       {/* Top Bar */}
       <header className="h-16 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between px-6 sticky top-0 z-50">
         <div className="flex items-center gap-3">
-          <svg className="h-7 w-7 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor" />
-          </svg>
+          <BookOpen className="h-7 w-7 text-blue-600" strokeWidth={2.5} />
           <span className="font-bold text-lg tracking-tight">CEFR Mock Exams</span>
         </div>
         <div className="flex items-center gap-6">
@@ -86,7 +85,7 @@ export default function LandingPage() {
                     <div className="p-6 md:p-8 bg-white">
                       <div className="flex gap-4 mb-6">
                         <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                          <Lightbulb className="w-6 h-6" strokeWidth={2} />
                         </div>
                         <div>
                           <h3 className="font-bold text-slate-900">Question Analysis</h3>
@@ -150,7 +149,7 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-blue-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-600/20">
-                  <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  <Monitor className="w-7 h-7" strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Realistic Interface</h3>
                 <p className="text-slate-600 leading-relaxed">Practice with a UI that mirrors the official computer-based CEFR Mock exams. Get comfortable with the format before exam day.</p>
@@ -158,7 +157,7 @@ export default function LandingPage() {
 
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-indigo-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-indigo-600/20">
-                  <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                  <Sparkles className="w-7 h-7" strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">AI-Powered Feedback</h3>
                 <p className="text-slate-600 leading-relaxed">Get instant, detailed analysis. Every question comes with a rationale, approach strategy, and helpful tips.</p>
@@ -166,7 +165,7 @@ export default function LandingPage() {
 
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-teal-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-600/20">
-                  <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+                  <Share2 className="w-7 h-7" strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Public Sharing</h3>
                 <p className="text-slate-600 leading-relaxed">Share your exam results and generated content with a public link. Great for showing your progress to teachers or peers.</p>
@@ -246,9 +245,7 @@ export default function LandingPage() {
                   <div className={`absolute top-0 left-8 right-8 h-1 rounded-b-full bg-gradient-to-r ${testimonial.accent}`}></div>
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.stars }).map((_, j) => (
-                      <svg key={j} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                      <Star key={j} className="w-5 h-5 text-amber-400 fill-amber-400" />
                     ))}
                   </div>
                   <p className="text-slate-700 leading-relaxed mb-6 flex-1 italic">"{testimonial.quote}"</p>
@@ -287,19 +284,19 @@ export default function LandingPage() {
                 </div>
                 <ul className="space-y-4 mb-10 flex-1">
                   <li className="flex items-center gap-3 text-slate-600">
-                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    <Check className="w-5 h-5 text-green-500" strokeWidth={3} />
                     10 Exam Generations
                   </li>
                   <li className="flex items-center gap-3 text-slate-600">
-                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    <Check className="w-5 h-5 text-green-500" strokeWidth={3} />
                     Reading & Use of English
                   </li>
                   <li className="flex items-center gap-3 text-slate-600">
-                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    <Check className="w-5 h-5 text-green-500" strokeWidth={3} />
                     Writing & Speaking
                   </li>
                   <li className="flex items-center gap-3 text-slate-400 decoration-slate-300">
-                    <svg className="w-5 h-5 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                    <X className="w-5 h-5 text-slate-300" strokeWidth={3} />
                     No Listening Exams
                   </li>
                 </ul>
@@ -323,19 +320,19 @@ export default function LandingPage() {
                 </div>
                 <ul className="space-y-4 mb-10 flex-1">
                   <li className="flex items-center gap-3 text-slate-900 font-medium">
-                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
                     100 Exam Generations
                   </li>
                   <li className="flex items-center gap-3 text-slate-900 font-medium">
-                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
                     Listening Exams (High Fidelity Audio)
                   </li>
                   <li className="flex items-center gap-3 text-slate-900 font-medium">
-                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
                     Full Access to All Skills
                   </li>
                   <li className="flex items-center gap-3 text-slate-900 font-medium">
-                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
                     Unlimited Speaking Practice
                   </li>
                 </ul>
@@ -380,9 +377,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <svg className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14l1.41-1.41L11 14.17l4.59-4.59L17 11l-6 6z" fill="currentColor" />
-                </svg>
+                <BookOpen className="h-6 w-6 text-blue-600" strokeWidth={2.5} />
                 <span className="font-bold text-xl text-slate-900">CEFR Mock Exams</span>
               </div>
               <p className="text-slate-500 max-w-sm">

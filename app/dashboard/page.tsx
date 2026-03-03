@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useTheme } from 'next-themes';
 import { useExam } from './ExamContext';
 import CliLoader from '../../components/CliLoader';
 import { fetchStockImageAction } from '../actions/fetchStockImage';
@@ -13,6 +14,7 @@ import { toggleExamFavorite } from '../actions/favoriteActions';
 import { assessSpeakingAction } from '../actions/assessSpeaking';
 import { assessWritingAction } from '../actions/assessWriting';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2 } from 'lucide-react';
 
 interface Question {
   id: number;
@@ -343,31 +345,17 @@ export default function DashboardPage() {
   const [examQuestions, setExamQuestions] = useState<Question[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [timeLeft, setTimeLeft] = useState(90 * 60); // Default to 90 mins, will update dynamically
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // On mount, read preference
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    }
+    setMounted(true);
   }, []);
 
+  const isDarkMode = mounted && resolvedTheme === 'dark';
+
   const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [scores, setScores] = useState<Record<string, number>>({});
@@ -1155,7 +1143,7 @@ export default function DashboardPage() {
                   href="/admin"
                   className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition-all shadow-sm flex items-center gap-1"
                 >
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  <Settings className="w-3 h-3" strokeWidth={2.5} />
                   Admin
                 </Link>
               )}
@@ -1178,7 +1166,7 @@ export default function DashboardPage() {
               )}
             </div>
             <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-red-600 dark:hover:text-red-400 hover:border-red-200 dark:hover:border-red-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
+              <LogOut className="w-4 h-4" />
               Sign Out
             </button>
           </div>
@@ -1189,7 +1177,7 @@ export default function DashboardPage() {
             {/* Saved Exams Column (1/4) */}
             <div className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
-                <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                <Library className="w-5 h-5 text-blue-600" strokeWidth={2} />
                 Saved Exams
               </h3>
 
@@ -1223,14 +1211,14 @@ export default function DashboardPage() {
                                 className={`transition-colors p-1 mr-1 ${exam.is_favorite ? 'text-yellow-400 hover:text-yellow-500' : 'text-slate-300 hover:text-yellow-400 opacity-0 group-hover:opacity-100'}`}
                                 title={exam.is_favorite ? "Remove from favorites" : "Add to favorites"}
                               >
-                                <svg className="w-4 h-4" fill={exam.is_favorite ? "currentColor" : "none"} viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+                                <Star className="w-4 h-4" fill={exam.is_favorite ? "currentColor" : "none"} strokeWidth={2} />
                               </button>
                               <button
                                 onClick={(e) => handleDeleteSavedExam(exam.id, e)}
                                 className="text-slate-400 hover:text-red-500 transition-colors p-1 opacity-0 group-hover:opacity-100"
                                 title="Delete"
                               >
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                                <Trash2 className="w-4 h-4" strokeWidth={2.5} />
                               </button>
                             </div>
                           </div>
@@ -1251,60 +1239,64 @@ export default function DashboardPage() {
             <div className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-200">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
+                  <Lightbulb className="w-6 h-6" strokeWidth={2.5} />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-800">Create Your Custom CEFR Mock Exam</h3>
                   <p className="text-sm text-slate-500">Fill out the details below to generate a new exam paper.</p>
                 </div>
               </div>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="examType" className="block text-sm font-bold text-slate-600 mb-2">Exam Skill</label>
-                  <select id="examType" value={examType} onChange={(e) => {
-                    const val = e.target.value;
-                    if (val === 'Listening' && generationInfo && generationInfo.plan === 'free') {
-                      return; // Don't allow selecting Listening for free tier
-                    }
-                    setExamType(val);
-                  }} className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
-                    <option value="Reading">Reading & Use of English</option>
-                    <option value="Writing">Writing</option>
-                    <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>{generationInfo && generationInfo.plan === 'free' ? '🔒 Listening (Premium)' : 'Listening'}</option>
-                    <option value="Speaking">Speaking</option>
-                  </select>
-                  {generationInfo && generationInfo.plan === 'free' && (
-                    <p className="mt-1 text-xs text-amber-600 flex items-center gap-1"><span>🔒</span> Listening exam generation is a Premium feature.</p>
-                  )}
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label htmlFor="examType" className="block text-xs font-bold text-slate-600 mb-1.5">Exam Skill</label>
+                    <select id="examType" value={examType} onChange={(e) => {
+                      const val = e.target.value;
+                      if (val === 'Listening' && generationInfo && generationInfo.plan === 'free') {
+                        return; // Don't allow selecting Listening for free tier
+                      }
+                      setExamType(val);
+                    }} className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
+                      <option value="Reading">Reading & Use of English</option>
+                      <option value="Writing">Writing</option>
+                      <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>{generationInfo && generationInfo.plan === 'free' ? '🔒 Listening (Premium)' : 'Listening'}</option>
+                      <option value="Speaking">Speaking</option>
+                    </select>
+                    {generationInfo && generationInfo.plan === 'free' && (
+                      <p className="mt-1 text-[10px] text-amber-600 flex items-center gap-1"><span>🔒</span> Premium feature</p>
+                    )}
+                  </div>
+                  <div>
+                    <label htmlFor="cefrLevel" className="block text-xs font-bold text-slate-600 mb-1.5">CEFR Level</label>
+                    <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
+                      <option value="A1">A1 Beginner</option>
+                      <option value="A2">A2 Key (KET)</option>
+                      <option value="B1">B1 Preliminary (PET)</option>
+                      <option value="B2">B2 First (FCE)</option>
+                      <option value="C1">C1 Advanced (CAE)</option>
+                      <option value="C2">C2 Proficiency</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label htmlFor="examFor" className="block text-xs font-bold text-slate-600 mb-1.5">Exam for (Class/Group)</label>
+                    <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                  </div>
+                  <div>
+                    <label htmlFor="topic" className="block text-xs font-bold text-slate-600 mb-1.5">Topic / Theme {file ? '(Optional)' : ''}</label>
+                    <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                  </div>
                 </div>
                 <div>
-                  <label htmlFor="cefrLevel" className="block text-sm font-bold text-slate-600 mb-2">CEFR Level</label>
-                  <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
-                    <option value="A1">A1 Beginner</option>
-                    <option value="A2">A2 Key (KET)</option>
-                    <option value="B1">B1 Preliminary (PET)</option>
-                    <option value="B2">B2 First (FCE)</option>
-                    <option value="C1">C1 Advanced (CAE)</option>
-                    <option value="C2">C2 Proficiency</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="examFor" className="block text-sm font-bold text-slate-600 mb-2">Exam for (Class/Group)</label>
-                  <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
-                </div>
-                <div>
-                  <label htmlFor="topic" className="block text-sm font-bold text-slate-600 mb-2">Topic / Theme {file ? '(Optional)' : ''}</label>
-                  <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-600 mb-2">Upload Material (Optional)</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">Upload Material (Optional)</label>
                   <div className="relative">
                     <input
                       type="file"
                       id="fileUpload"
                       accept=".jpg,.jpeg,.png,.pdf"
                       onChange={(e) => setFile(e.target.files ? e.target.files[0] : null)}
-                      className="block w-full text-sm text-slate-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer border border-slate-300 rounded-lg bg-slate-50"
+                      className="block w-full text-sm text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer border border-slate-300 rounded-lg bg-slate-50"
                     />
                     {file && (
                       <button
@@ -1317,13 +1309,13 @@ export default function DashboardPage() {
                         className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-red-500 p-1 bg-slate-50 rounded-full"
                         title="Remove file"
                       >
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                        <X className="w-4 h-4" strokeWidth={2.5} />
                       </button>
                     )}
                   </div>
-                  <p className="mt-1 text-xs text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
+                  <p className="mt-1 text-[10px] text-slate-500">Supports JPG, PNG, PDF. Leave topic empty to generate based solely on file.</p>
                 </div>
-                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-3 px-4 rounded-xl text-white font-bold text-lg shadow-lg shadow-blue-600/20 transition-all ${loading || (generationInfo !== null && !generationInfo.allowed) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
+                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-2.5 px-4 rounded-xl text-white font-bold text-base shadow-lg shadow-blue-600/20 transition-all ${(loading || (generationInfo !== null && !generationInfo.allowed)) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
                 {generationInfo && generationInfo.plan === 'free' && (
@@ -1353,7 +1345,7 @@ export default function DashboardPage() {
             {/* Progress Tracking Column (1/4) */}
             <div className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl h-fit border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
               <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
-                <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                <BarChart2 className="w-5 h-5 text-green-600" strokeWidth={2.5} />
                 Progress Tracking
               </h3>
               <div className="space-y-4">
@@ -1785,7 +1777,7 @@ export default function DashboardPage() {
                                         ${isRecordingThis ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/60'}`}
                                       title={isRecordingThis ? 'Recording...' : 'Record Answer'}
                                     >
-                                      {isRecordingThis ? <div className="w-4 h-4 bg-white rounded-sm"></div> : <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>}
+                                      {isRecordingThis ? <div className="w-4 h-4 bg-white rounded-sm"></div> : <Mic className="w-5 h-5" />}
                                     </button>
                                   )}
                                 </div>
@@ -1858,7 +1850,7 @@ export default function DashboardPage() {
                                 {isRecording && recordingQuestionId === `main-${activeQuestionData.id}` ? (
                                   <><div className="w-3 h-3 bg-white rounded-sm"></div> Recording...</>
                                 ) : (
-                                  <><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg> Answer</>
+                                  <><Mic className="w-4 h-4" /> Answer</>
                                 )}
                               </button>
                             </div>
@@ -1890,7 +1882,7 @@ export default function DashboardPage() {
                                   <h4 className="font-bold text-gray-700 text-sm">{set.title}</h4>
                                   <button className="text-blue-600 hover:text-blue-800 p-1 rounded hover:bg-blue-50 transition-colors flex items-center gap-2 text-xs font-medium">
                                     {isRevealed ? 'Hide Images' : 'Show Images'}
-                                    {isRevealed ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+                                    {isRevealed ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                                   </button>
                                 </div>
                                 {isRevealed && (
@@ -1969,8 +1961,8 @@ export default function DashboardPage() {
                                 />
                                 <div className={`text-lg font-bold mb-1 ${isSelected ? 'text-blue-700' : 'text-gray-500 group-hover:text-blue-500'}`}>{letter}</div>
                                 <div className="text-xs text-center text-gray-700 font-medium line-clamp-3">{opt}</div>
-                                {isSubmitted && isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full p-1 shadow-sm"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg></div>}
-                                {isSubmitted && isSelected && !isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-sm"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg></div>}
+                                {isSubmitted && isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full p-1 shadow-sm"><Check className="w-3 h-3" strokeWidth={3} /></div>}
+                                {isSubmitted && isSelected && !isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-sm"><X className="w-3 h-3" strokeWidth={3} /></div>}
                               </label>
                             ) : (
                               <label key={opt} className={`flex items-center gap-3 p-3 bg-white rounded-md border transition-all group ${isSubmitted ? '' : 'cursor-pointer'} ${optionClass}`}>
@@ -2006,7 +1998,7 @@ export default function DashboardPage() {
                             ${answers[activeQuestionData.id.toString()] ? 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border border-indigo-200' : 'bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-600'}`}
                           title="Open Writing Editor"
                         >
-                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                          <Pencil className="w-5 h-5" />
                           {answers[activeQuestionData.id.toString()] ? 'Edit Written Answer' : 'Write Answer'}
                         </button>
                       </div>
@@ -2037,9 +2029,9 @@ export default function DashboardPage() {
                             title={revealedAnswers.has(currentQuestion) ? "Hide Answer" : "Show Answer"}
                           >
                             {revealedAnswers.has(currentQuestion) ? (
-                              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" /></svg>
+                              <EyeOff className="w-5 h-5" />
                             ) : (
-                              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                              <Eye className="w-5 h-5" />
                             )}
                           </button>
                         </div>
@@ -2403,10 +2395,7 @@ export default function DashboardPage() {
                     <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 shrink-0 flex justify-between items-center gap-4">
                       {isAssessingWriting ? (
                         <div className="flex items-center justify-center gap-3 w-full p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 font-bold rounded-xl animate-pulse">
-                          <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                          </svg>
+                          <Loader2 className="animate-spin h-5 w-5" />
                           Examiner is evaluating...
                         </div>
                       ) : (
@@ -2459,7 +2448,7 @@ export default function DashboardPage() {
 
                       <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800/50 shadow-sm flex-1">
                         <p className="text-sm text-blue-600 dark:text-blue-400 font-bold mb-2 flex items-center gap-2">
-                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg> Actionable Tips
+                          <Zap className="w-5 h-5" /> Actionable Tips
                         </p>
                         <p className="text-sm text-blue-900 dark:text-blue-200 leading-relaxed font-medium">{writingAssessmentResult.suggestion}</p>
                       </div>
@@ -2487,7 +2476,7 @@ export default function DashboardPage() {
             onClick={() => toggleFlag(currentQuestion)}
             className="px-3 py-1.5 sm:px-4 sm:py-2 rounded bg-[#3d3d3d] hover:bg-[#4d4d4d] text-xs sm:text-sm font-medium transition-colors text-gray-300 hover:text-white flex items-center gap-2"
           >
-            <svg className={`w-3 h-3 sm:w-4 sm:h-4 ${flagged.has(currentQuestion) ? 'text-yellow-400 fill-current' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-2l9-9 4 4-9 9H3zm12.3-12.3l-4-4 1.4-1.4c.4-.4 1-.4 1.4 0l1.2 1.2c.4.4.4 1 0 1.4l-1.4 1.4z" /></svg>
+            <Flag className={`w-3 h-3 sm:w-4 sm:h-4 ${flagged.has(currentQuestion) ? 'text-yellow-400 fill-current' : ''}`} strokeWidth={2.5} />
             <span className="hidden sm:inline">Review</span>
           </button>
           <button
