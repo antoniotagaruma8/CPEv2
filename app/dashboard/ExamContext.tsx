@@ -46,14 +46,25 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [userEmail, setUserEmail] = useState('');
+  const [deviceId, setDeviceId] = useState('');
   const [generationInfo, setGenerationInfo] = useState<GenerationInfo | null>(null);
+
+  // Initialize and get device ID
+  useEffect(() => {
+    let currentDeviceId = localStorage.getItem('cpe_device_id');
+    if (!currentDeviceId) {
+      currentDeviceId = crypto.randomUUID ? crypto.randomUUID() : `device_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+      localStorage.setItem('cpe_device_id', currentDeviceId);
+    }
+    setDeviceId(currentDeviceId);
+  }, []);
 
   // Fetch generation info when userEmail is set
   useEffect(() => {
     if (userEmail) {
-      getGenerationInfo(userEmail).then(info => setGenerationInfo(info as GenerationInfo)).catch(console.error);
+      getGenerationInfo(userEmail, deviceId).then(info => setGenerationInfo(info as GenerationInfo)).catch(console.error);
     }
-  }, [userEmail]);
+  }, [userEmail, deviceId]);
 
   const generateExam = async () => {
     if (!topic && !file) {
@@ -64,7 +75,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
     // Check generation limits for free tier
     if (userEmail) {
       try {
-        const info = await getGenerationInfo(userEmail) as GenerationInfo;
+        const info = await getGenerationInfo(userEmail, deviceId) as GenerationInfo;
         setGenerationInfo(info);
         if (!info.allowed) {
           setError(`You have reached the free tier limit of ${info.limit} exam generations. Please subscribe to continue generating exams.`);
@@ -209,8 +220,8 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         // Increment generation count after successful generation
         if (userEmail) {
           try {
-            await incrementGenerationCount(userEmail);
-            const updatedInfo = await getGenerationInfo(userEmail) as GenerationInfo;
+            await incrementGenerationCount(userEmail, deviceId);
+            const updatedInfo = await getGenerationInfo(userEmail, deviceId) as GenerationInfo;
             setGenerationInfo(updatedInfo);
           } catch (err) {
             console.error('Error incrementing generation count:', err);

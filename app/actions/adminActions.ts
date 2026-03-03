@@ -69,3 +69,26 @@ export async function getAdminStats(userEmail: string) {
         throw new Error('Failed to fetch admin stats');
     }
 }
+
+export async function resetDeviceLimit(userEmail: string, deviceId: string) {
+    if (!ADMIN_EMAILS.includes(userEmail)) {
+        throw new Error('Unauthorized');
+    }
+
+    try {
+        const { error } = await supabase
+            .from('device_generations')
+            .delete()
+            .eq('device_id', deviceId);
+
+        if (error) {
+            console.error('Error resetting device limit:', error);
+            throw new Error(error.message);
+        }
+
+        return { success: true };
+    } catch (error: any) {
+        console.error('Error in resetDeviceLimit:', error);
+        throw new Error(error.message || 'Failed to reset device limit');
+    }
+}

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { checkIsAdmin, getAdminStats } from '../actions/adminActions';
+import { checkIsAdmin, getAdminStats, resetDeviceLimit } from '../actions/adminActions';
 import Link from 'next/link';
 
 export default function AdminDashboard() {
@@ -47,6 +47,28 @@ export default function AdminDashboard() {
             setError(err.message || 'Failed to load stats');
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleResetDevice = async () => {
+        const deviceId = localStorage.getItem('cpe_device_id');
+        if (!deviceId || !session?.user?.email) {
+            alert('No device ID found or user not logged in.');
+            return;
+        }
+
+        if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return; // Prevent testing in pure static
+
+        if (confirm('This will reset the generation limit count for this specific computer. Are you sure?')) {
+            try {
+                setLoading(true);
+                await resetDeviceLimit(session.user.email, deviceId);
+                alert('Your computer has been successfully unblocked! You can test free accounts again.');
+                await loadStats();
+            } catch (err: any) {
+                alert(err.message || 'Failed to unblock device.');
+                setLoading(false);
+            }
         }
     };
 
@@ -95,6 +117,15 @@ export default function AdminDashboard() {
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
                         )}
                         Refresh Data
+                    </button>
+                    <button
+                        onClick={handleResetDevice}
+                        disabled={loading}
+                        className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-md text-sm font-bold flex items-center gap-2 shadow-sm transition"
+                        title="Resets the limit counter for this specific computer"
+                    >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" /></svg>
+                        Unblock My Computer
                     </button>
                     <Link href="/dashboard" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-md text-sm font-bold shadow-sm transition">
                         Exit to Dashboard
@@ -176,8 +207,8 @@ export default function AdminDashboard() {
                                             <td className="px-6 py-4 font-medium text-slate-800">{user.user_email}</td>
                                             <td className="px-6 py-4">
                                                 <span className={`font-bold px-2 py-1 rounded-md ${user.generation_count >= 100 ? 'bg-purple-100 text-purple-700' :
-                                                        user.generation_count >= 10 ? 'bg-amber-100 text-amber-700' :
-                                                            'bg-slate-100 text-slate-700'
+                                                    user.generation_count >= 10 ? 'bg-amber-100 text-amber-700' :
+                                                        'bg-slate-100 text-slate-700'
                                                     }`}>
                                                     {user.generation_count}
                                                 </span>
