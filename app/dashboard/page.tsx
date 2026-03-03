@@ -2618,19 +2618,19 @@ export default function DashboardPage() {
                       <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent" className="text-slate-200 dark:text-slate-800" />
                       <circle cx="64" cy="64" r="56" stroke="currentColor" strokeWidth="12" fill="transparent"
                         strokeDasharray={351.8}
-                        strokeDashoffset={351.8 - (351.8 * (readingAssessmentResult.score / 10))}
+                        strokeDashoffset={totalQuestions > 0 ? 351.8 - (351.8 * (readingAssessmentResult.score / totalQuestions)) : 351.8}
                         strokeLinecap="round"
-                        className={`transition-all duration-1000 ease-out ${readingAssessmentResult.score >= 8 ? 'text-green-500' : readingAssessmentResult.score >= 5 ? 'text-yellow-500' : 'text-red-500'}`}
+                        className={`transition-all duration-1000 ease-out ${totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.8 ? 'text-green-500' : totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.5 ? 'text-yellow-500' : 'text-red-500'}`}
                       />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <span className={`text-4xl font-black ${readingAssessmentResult.score >= 8 ? 'text-green-600 dark:text-green-400' : readingAssessmentResult.score >= 5 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'}`}>{readingAssessmentResult.score}</span>
-                      <span className="text-xs text-slate-400 font-bold uppercase tracking-wider relative -top-1">/ 10 points</span>
+                      <span className={`text-4xl font-black ${totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.8 ? 'text-green-600 dark:text-green-400' : totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.5 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'}`}>{readingAssessmentResult.score}</span>
+                      <span className="text-xs text-slate-400 font-bold uppercase tracking-wider relative -top-1">/ {totalQuestions} points</span>
                     </div>
                   </div>
 
-                  <h3 className={`font-black text-2xl text-center ${readingAssessmentResult.score >= 8 ? 'text-green-700 dark:text-green-400' : readingAssessmentResult.score >= 5 ? 'text-yellow-700 dark:text-yellow-400' : 'text-red-700 dark:text-red-400'}`}>
-                    {readingAssessmentResult.score >= 8 ? 'Excellent Comprehension!' : readingAssessmentResult.score >= 5 ? 'Good Effort' : 'Needs Work'}
+                  <h3 className={`font-black text-2xl text-center ${totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.8 ? 'text-green-700 dark:text-green-400' : totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.5 ? 'text-yellow-700 dark:text-yellow-400' : 'text-red-700 dark:text-red-400'}`}>
+                    {totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.8 ? 'Excellent Comprehension!' : totalQuestions > 0 && (readingAssessmentResult.score / totalQuestions) >= 0.5 ? 'Good Effort' : 'Needs Work'}
                   </h3>
                 </div>
 
