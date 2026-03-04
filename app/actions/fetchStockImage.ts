@@ -8,12 +8,14 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// HuggingFace models to try in order (Stable Diffusion focus)
+// HuggingFace models to try in order (Expanded Stable Diffusion list)
 const HF_MODELS = [
   'runwayml/stable-diffusion-v1-5',
-  'prompthero/openjourney',
+  'Lykon/DreamShaper',
+  'prompthero/openjourney-v4',
   'stabilityai/stable-diffusion-2-1',
-  'stabilityai/stable-diffusion-xl-base-1.0'
+  'SG_161222/RealVisXL_V4.0',
+  'OIG/SD-v1.5-Inference-V2'
 ];
 
 async function uploadToSupabase(filename: string, buffer: Buffer, mimeType: string): Promise<string | null> {
@@ -55,7 +57,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
     console.error("Error checking Supabase cache:", error);
   }
 
-  // 2. STAGE 1: Hugging Face (Stable Diffusion Only)
+  // 2. STAGE 1: Hugging Face (Stable Diffusion Rotation)
   const apiKey = process.env.HUGGINGFACE_API_KEY;
   const enhancedPrompt = `${query}, high quality realistic detailed photography, 4k, professional`;
   let lastError = '';
@@ -65,7 +67,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
       try {
         console.log(`[Stable Diffusion] Trying model: ${model}`);
         const response = await fetch(
-          `https://router.huggingface.co/hf-inference/models/${model}`,
+          `https://api-inference.huggingface.co/models/${model}`,
           {
             method: 'POST',
             headers: {
@@ -77,16 +79,16 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
         );
 
         if (response.status === 402 || response.status === 429) {
-          console.warn(`[Stable Diffusion] Limit hit (${response.status}) on ${model}.`);
+          console.warn(`[Stable Diffusion] Limit hit (${response.status}) on ${model}. Trying next model...`);
           lastError = `Limit reached (${response.status})`;
-          continue; // Try next SD model
+          continue;
         }
 
         if (response.status === 503) {
           const text = await response.text();
           if (text.includes('loading')) {
             console.warn(`[Stable Diffusion] Model ${model} is loading. Trying next...`);
-            lastError = `Model is loading`;
+            lastError = `Model ${model} is loading`;
             continue;
           }
         }
@@ -96,7 +98,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
           const arrayBuffer = await response.arrayBuffer();
           const buffer = Buffer.from(arrayBuffer);
 
-          if (buffer.length > 1000) {
+          if (buffer.length > 500) {
             console.log(`[Stable Diffusion] Success (${model}) — ${Math.round(buffer.length / 1024)}KB`);
             const publicUrl = await uploadToSupabase(filename, buffer, contentType);
             if (publicUrl) return { success: true, imageUrl: publicUrl };
@@ -113,11 +115,34 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
       }
     }
   } else {
-    lastError = 'No HF API Key found in environment';
+    lastError = 'No HF API Key found';
+  }
+
+  // 3. STAGE 2: Stock Photo Fallback (Last Resort)
+  try {
+    console.log(`[Fallback] All SD models hit limits. Trying high-quality stock photo for: ${query}`);
+    // Using Unsplash Source (via keyword search)
+    const stockUrl = `https://images.unsplash.com/photo-1545641203-7d072a14e3b2?auto=format&fit=crop&w=1024&q=80&q=${encodeURIComponent(query)}`;
+
+    const response = await fetch(`https://source.unsplash.com/featured/1024x1024?${encodeURIComponent(query)}`);
+    if (response.ok) {
+      const ct = response.headers.get('content-type') || 'image/jpeg';
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      if (buffer.length > 1000) {
+        console.log(`[Fallback] Stock Photo Success — ${Math.round(buffer.length / 1024)}KB`);
+        const publicUrl = await uploadToSupabase(filename, buffer, ct);
+        if (publicUrl) return { success: true, imageUrl: publicUrl };
+        return { success: true, imageUrl: `data:${ct};base64,${buffer.toString('base64')}` };
+      }
+    }
+  } catch (err: any) {
+    console.warn(`[Fallback] Stock photo failure:`, err?.message || err);
   }
 
   return {
     success: false,
-    error: `Stable Diffusion image generation failed. (HF Error: ${lastError}). Please try again later or use a different topic.`
+    error: `All image generation methods failed. (HF: ${lastError}). Please try a more general topic.`
   };
 }
