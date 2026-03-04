@@ -1714,29 +1714,32 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full mt-1 py-2 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all ${(loading || (generationInfo !== null && !generationInfo.allowed)) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
-                  {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
-                </button>
-                {generationInfo && generationInfo.plan === 'free' && (
-                  <div className="mt-3 flex items-center justify-between text-sm p-2 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
-                    <span className="text-slate-600 dark:text-slate-300 font-medium">Free generations remaining:</span>
-                    <span className={`font-bold text-lg px-2 py-0.5 rounded-md ${generationInfo.count >= generationInfo.limit ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : generationInfo.count >= generationInfo.limit * 0.8 ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'}`}>
-                      {Math.max(0, generationInfo.limit - generationInfo.count)}
-                    </span>
-                  </div>
-                )}
-                {generationInfo && !generationInfo.allowed && generationInfo.plan === 'free' && (
-                  <div className="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
-                    <p className="font-bold flex items-center gap-1"><span>⚠️</span> Free tier limit reached</p>
-                    <p className="mt-1 text-xs">You have used all {generationInfo.limit} free exam generations. Subscribe to Premium for unlimited access.</p>
-                    <button
-                      onClick={handleUpgrade}
-                      disabled={isUpgrading}
-                      className="mt-2 block text-center w-full py-2 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors disabled:opacity-50"
-                    >
-                      {isUpgrading ? 'Redirecting to Stripe...' : 'Upgrade to Premium'}
-                    </button>
-                  </div>
+                {generationInfo && !generationInfo.allowed && generationInfo.plan === 'free' ? (
+                  <button
+                    type="button"
+                    onClick={handleUpgrade}
+                    disabled={isUpgrading}
+                    className="w-full mt-2 py-2.5 px-4 rounded-lg bg-amber-500 hover:bg-amber-600 focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                  >
+                    {isUpgrading ? 'Redirecting...' : 'Upgrade to Premium — Out of Free Credits'}
+                    <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded ml-1">🔒</span>
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className={`w-full mt-2 py-2.5 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all flex items-center justify-between ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}
+                  >
+                    <span>{loading ? 'Generating...' : 'Generate Exam'}</span>
+                    {generationInfo && generationInfo.plan === 'free' && !loading && (
+                      <div className="flex items-center gap-2 bg-black/10 px-2 py-0.5 rounded text-[11px] font-medium border border-white/10">
+                        <span>Free remaining:</span>
+                        <span className={`font-bold text-[12px] bg-white text-slate-900 px-1 rounded shadow-sm`}>
+                          {Math.max(0, generationInfo.limit - generationInfo.count)}
+                        </span>
+                      </div>
+                    )}
+                  </button>
                 )}
               </form>
             </div>
@@ -1821,7 +1824,7 @@ export default function DashboardPage() {
             </div>
 
           </div>
-        </div>
+        </div >
       </div >
     );
   }
