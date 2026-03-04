@@ -47,12 +47,44 @@ interface ExamPart {
 }
 
 const AudioPlayer = ({ audioUrl }: { audioUrl?: string }) => {
-  // If we have a generated audio URL, show the native audio player
+  const [playCount, setPlayCount] = useState(0);
+  const maxPlays = 2;
+  const isExhausted = playCount >= maxPlays;
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   if (audioUrl) {
     return (
-      <div className="w-full p-4 bg-blue-50 rounded-lg border border-blue-100 mb-4">
-        <div className="text-sm font-bold text-blue-900 mb-2">Audio Track</div>
-        <audio controls src={audioUrl} className="w-full focus:outline-none" />
+      <div className={`w-full p-4 rounded-xl border transition-all duration-500 mb-4 ${isExhausted ? 'bg-slate-100 border-slate-300 opacity-70 grayscale' : 'bg-blue-50/80 border-blue-200 shadow-[0_0_15px_rgba(59,130,246,0.4)] ring-2 ring-blue-400'}`}>
+        <div className="flex justify-between items-center mb-3">
+          <div className="text-sm font-bold text-blue-900 flex items-center gap-2">
+            {!isExhausted && <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.8)]"></div>}
+            Audio Track
+          </div>
+          <div className={`text-xs font-bold px-2 py-1 rounded-md ${isExhausted ? 'bg-slate-200 text-slate-500' : 'bg-blue-100 text-blue-700'}`}>
+            Plays remaining: {Math.max(0, maxPlays - playCount)}
+          </div>
+        </div>
+
+        {isExhausted ? (
+          <div className="text-sm text-center text-slate-500 italic p-3 bg-white/50 rounded-lg border border-slate-200">
+            Maximum plays reached for this track. Cambridge Standard prohibits further listens.
+          </div>
+        ) : (
+          <audio
+            ref={audioRef}
+            controls
+            controlsList="nodownload"
+            src={audioUrl}
+            className="w-full focus:outline-none custom-audio-player"
+            onEnded={() => setPlayCount(prev => prev + 1)}
+            onPlay={() => {
+              if (isExhausted && audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.currentTime = 0;
+              }
+            }}
+          />
+        )}
       </div>
     );
   }
@@ -1708,6 +1740,42 @@ export default function DashboardPage() {
     ]
     : (activeQuestionData?.possibleAnswers || []);
 
+  const [partChangeAnim, setPartChangeAnim] = useState(false);
+  const prevPartRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (examType === 'Listening' && activePartData?.part) {
+      if (prevPartRef.current !== null && prevPartRef.current !== activePartData.part) {
+        try {
+          const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+          const ctx = new AudioContext();
+          const osc = ctx.createOscillator();
+          const gainNode = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(800, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(1600, ctx.currentTime + 0.1);
+
+          gainNode.gain.setValueAtTime(0, ctx.currentTime);
+          gainNode.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.05);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1.5);
+
+          osc.connect(gainNode);
+          gainNode.connect(ctx.destination);
+
+          osc.start();
+          osc.stop(ctx.currentTime + 1.5);
+        } catch (e) {
+          console.error("Audio context error:", e);
+        }
+
+        setPartChangeAnim(true);
+        setTimeout(() => setPartChangeAnim(false), 1500);
+      }
+      prevPartRef.current = activePartData.part;
+    }
+  }, [activePartData?.part, examType]);
+
   // --- SPEAKING TEST ASSESSMENT LOGIC ---
   const handleMicClick = (targetQuestionId: string, targetQuestionText: string, imagePrompts: string[] = [], imageUrls: string[] = []) => {
     const attempts = retryCount[targetQuestionId] || 0;
@@ -1787,10 +1855,9 @@ export default function DashboardPage() {
         });
 
         // Increment attempt count on successful assessment
-        setRetryCount((prev: Record<string, number>) => {
-          const next: Record<string, number> = { ...prev };
-          next[targetQuestionId] = (prev[targetQuestionId] || 0) + 1;
-          return next;
+        setRetryCount(prev => {
+          const currentCount = prev[targetQuestionId] ?? 0;
+          return { ...prev, [targetQuestionId]: currentCount + 1 };
         });
         setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
       } else {
@@ -1848,9 +1915,8 @@ export default function DashboardPage() {
 
         // Increment attempt count on successful assessment
         setRetryCount(prev => {
-          const next = { ...prev };
-          next[targetQuestionId] = (Number(next[targetQuestionId]) || 0) + 1;
-          return next;
+          const currentCount = prev[targetQuestionId] ?? 0;
+          return { ...prev, [targetQuestionId]: currentCount + 1 };
         });
       } else {
         alert(result.error || 'Failed to assess writing.');
@@ -1944,7 +2010,7 @@ export default function DashboardPage() {
       <main className="flex-1 flex flex-col lg:flex-row overflow-hidden p-2 sm:p-4 gap-2 sm:gap-4">
         <div className={`${isSpeakingWideLayout ? 'lg:flex-[1]' : 'flex-1'} bg-white/95 dark:bg-slate-900/95 rounded-2xl shadow-xl border border-gray-200/60 dark:border-slate-800/60 overflow-y-auto p-4 sm:p-6 custom-scrollbar transition-colors duration-300`}>
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-slate-100 border-b border-gray-200 dark:border-slate-800 pb-3">
+            <h2 className={`text-xl font-bold mb-4 border-b border-gray-200 dark:border-slate-800 pb-3 transition-transform duration-700 ease-out origin-left ${partChangeAnim ? 'scale-105 text-blue-600 dark:text-blue-400 drop-shadow-md' : 'text-gray-800 dark:text-slate-100'}`}>
               Part {activePartData?.part}{activePartData?.title ? `: ${activePartData.title}` : ''}
             </h2>
             <div className="prose prose-slate max-w-none text-gray-800 dark:text-slate-300 leading-relaxed">
@@ -2545,7 +2611,7 @@ export default function DashboardPage() {
                   </div>
                 )}
 
-                {submittedQuestions.has(currentQuestion) && (
+                {submittedQuestions.has(currentQuestion.toString()) && (
                   <div className="mt-6 space-y-4 animate-fade-in">
                     <div className="p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
                       <div className="flex items-start gap-3">
@@ -3036,7 +3102,7 @@ export default function DashboardPage() {
             disabled={(!submittedQuestions.has(currentQuestion.toString()) && !answers[currentQuestion.toString()] && examType !== 'Speaking' && examType !== 'Writing') || (submittedQuestions.has(currentQuestion.toString()) && currentQuestion === totalQuestions)}
             className="px-4 py-1.5 sm:px-6 sm:py-2 rounded bg-blue-600 hover:bg-blue-700 text-xs sm:text-sm font-bold transition-colors text-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {submittedQuestions.has(currentQuestion) ? 'Next' : (examType === 'Speaking' || examType === 'Writing' ? 'Done' : 'Submit')}
+            {submittedQuestions.has(currentQuestion.toString()) ? 'Next' : (examType === 'Speaking' || examType === 'Writing' ? 'Done' : 'Submit')}
           </button>
         </div>
 
