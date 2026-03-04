@@ -614,7 +614,14 @@ export default function DashboardPage() {
             if (rawContent.speaker && rawContent.transcript) {
               partContent = `${rawContent.speaker}: ${rawContent.transcript}`;
             } else {
-              partContent = JSON.stringify(rawContent);
+              // Handle labeled text objects (e.g., {"A": "text", "B": "text"} for cross-text matching)
+              const keys = Object.keys(rawContent);
+              const looksLabeled = keys.every(k => /^[A-Z]$/i.test(k) || /^(Writer|Text|Section)\s*[A-Z]$/i.test(k));
+              if (looksLabeled && keys.length > 0) {
+                partContent = keys.map(k => `${k}:\n${rawContent[k]}`).join('\n\n');
+              } else {
+                partContent = JSON.stringify(rawContent);
+              }
             }
           } else {
             partContent = String(rawContent || '');

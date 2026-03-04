@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { signIn, SessionProvider, useSession } from 'next-auth/react';
-import { BookOpen, Monitor, CheckCircle2, FileText, Mic, LayoutDashboard } from 'lucide-react';
+import { BookOpen, Monitor, CheckCircle2, FileText, Mic, LayoutDashboard, Video } from 'lucide-react';
 
 export default function HowToUsePage() {
     return (
@@ -48,6 +48,41 @@ function HowToUseContent() {
                 </div>
 
                 <div className="space-y-12">
+                    {/* Quick Overview */}
+                    <section className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
+                                <Video className="w-6 h-6" strokeWidth={2} />
+                            </div>
+                            <h2 className="text-2xl font-bold text-slate-900">Quick Overview</h2>
+                        </div>
+                        <p className="text-slate-600 mb-6">
+                            Watch our quick tutorial video or review our presentation to see what the platform can do for you.
+                        </p>
+
+                        <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-slate-900 aspect-video mb-6">
+                            <video
+                                src="/videos/CEFR_Mock_Exams.mp4"
+                                controls
+                                className="w-full h-full object-cover"
+                            >
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 items-center">
+                            <a
+                                href="/presentation/AI_CEFR_Mastery.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 rounded-xl font-medium transition-colors border border-blue-200 shadow-sm inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                            >
+                                <FileText className="w-5 h-5" />
+                                View Platform Presentation (PDF)
+                            </a>
+                        </div>
+                    </section>
+
                     {/* Section 1 */}
                     <section className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
                         <div className="flex items-center gap-4 mb-6">

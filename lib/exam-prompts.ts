@@ -214,8 +214,11 @@ Part 5: MULTIPLE-CHOICE READING COMPREHENSION (exactly 6 qs).
   The 'instructions' field MUST say: "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
 
 Part 6: CROSS-TEXT MULTIPLE MATCHING (exactly 6 qs).
-  FORMAT: Provide 4 short texts (labeled A-D) by different writers in 'content', all on a related theme. Questions ask which writer shares/disagrees with another writer's view, or which writer expresses a particular opinion.
-  Options MUST be writer labels (e.g., ["A", "B", "C", "D"]).
+  FORMAT: The 'content' field MUST be a single formatted STRING (NOT a JSON object) containing 4 distinct texts by different writers, each 100+ words. Format them clearly with labels like this:
+  "Writer A:\\n[Writer A's full text here]\\n\\nWriter B:\\n[Writer B's full text here]\\n\\nWriter C:\\n[Writer C's full text here]\\n\\nWriter D:\\n[Writer D's full text here]"
+  All 4 texts must discuss the same theme but from different perspectives or with different opinions.
+  Questions ask which writer shares/disagrees with another writer's view, or which writer expresses a particular opinion.
+  Options MUST be writer labels: ["A", "B", "C", "D"].
   The 'instructions' field MUST say: "Read the four texts about the topic. For Questions X-X, choose from the writers A-D."
 
 Part 7: GAPPED TEXT (exactly 6 qs).
