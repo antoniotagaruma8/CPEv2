@@ -25,7 +25,8 @@ interface ExamPart {
     content: string;
 }
 
-export default function SharedExamPage({ params }: { params: { id: string } }) {
+export default function SharedExamPage({ params }: { params: Promise<{ id: string }> }) {
+    const resolvedParams = React.use(params);
     const [dbRecord, setDbRecord] = useState<any>(null);
     const [examData, setExamData] = useState<any>(null);
     const [examParts, setExamParts] = useState<ExamPart[]>([]);
@@ -184,7 +185,7 @@ export default function SharedExamPage({ params }: { params: { id: string } }) {
     useEffect(() => {
         const fetchExam = async () => {
             try {
-                const record = await getExamById(params.id);
+                const record = await getExamById(resolvedParams.id);
                 if (!record) {
                     setError('Exam not found or the link is invalid.');
                     return;
@@ -214,7 +215,7 @@ export default function SharedExamPage({ params }: { params: { id: string } }) {
         };
 
         fetchExam();
-    }, [params.id]);
+    }, [resolvedParams.id]);
 
     if (loading) {
         return (

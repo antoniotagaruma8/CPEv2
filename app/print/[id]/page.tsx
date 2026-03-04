@@ -24,7 +24,8 @@ interface ExamPart {
     content: string;
 }
 
-export default function PrintExamPage({ params }: { params: { id: string } }) {
+export default function PrintExamPage({ params }: { params: Promise<{ id: string }> }) {
+    const resolvedParams = React.use(params);
     const [dbRecord, setDbRecord] = useState<any>(null);
     const [examData, setExamData] = useState<any>(null);
     const [examParts, setExamParts] = useState<ExamPart[]>([]);
@@ -183,7 +184,7 @@ export default function PrintExamPage({ params }: { params: { id: string } }) {
     useEffect(() => {
         const fetchExam = async () => {
             try {
-                const record = await getExamById(params.id);
+                const record = await getExamById(resolvedParams.id);
                 if (!record) {
                     setError('Exam not found.');
                     return;
@@ -218,7 +219,7 @@ export default function PrintExamPage({ params }: { params: { id: string } }) {
         };
 
         fetchExam();
-    }, [params.id]);
+    }, [resolvedParams.id]);
 
     if (loading) return <div className="p-10 font-sans text-center">Preparing Document for Print...</div>;
     if (error) return <div className="p-10 font-sans text-center text-red-600">{error}</div>;
