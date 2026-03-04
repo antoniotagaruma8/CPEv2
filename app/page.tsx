@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { signIn, SessionProvider, useSession } from 'next-auth/react';
-import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap } from 'lucide-react';
+import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap, FileText } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -107,10 +107,14 @@ function LandingPageContent() {
                       Start Practicing Free
                     </button>
                   )}
-                  <button className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
+                  <a href="/videos/CEFR_Mock_Exams.mp4" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
                     <PlayCircle className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
                     See it in action
-                  </button>
+                  </a>
+                  <a href="/presentation/AI_CEFR_Mastery.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
+                    <FileText className="w-5 h-5 text-slate-400 group-hover:text-orange-600 transition-colors" />
+                    Presentation
+                  </a>
                 </div>
                 <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
                   <div className="flex -space-x-2">
