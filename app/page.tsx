@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { signIn, SessionProvider, useSession } from 'next-auth/react';
-import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap, FileText } from 'lucide-react';
+import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap, FileText, Download, BarChart2 } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -282,13 +282,13 @@ function LandingPageContent() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-blue-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-600/20">
                   <Monitor className="w-7 h-7" strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Realistic Interface</h3>
-                <p className="text-slate-600 leading-relaxed">Practice with a UI that mirrors the official computer-based CEFR Mock exams. Get comfortable with the format before exam day.</p>
+                <p className="text-slate-600 leading-relaxed">Practice with a UI that mirrors the official computer-based CEFR exams. Get comfortable with the format before test day.</p>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -300,11 +300,35 @@ function LandingPageContent() {
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="h-14 w-14 rounded-xl bg-orange-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-orange-600/20">
+                  <Download className="w-7 h-7" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Printable PDF Exams</h3>
+                <p className="text-slate-600 leading-relaxed">Download any reading, writing, or listening exam fully formatted to mimic official Cambridge test papers, complete with answer sheets.</p>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="h-14 w-14 rounded-xl bg-purple-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-purple-600/20">
+                  <FileText className="w-7 h-7" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Advanced Writing</h3>
+                <p className="text-slate-600 leading-relaxed">Choose between multiple writing prompts per exam. Review detailed model answers and comprehensive writing strategies.</p>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="h-14 w-14 rounded-xl bg-emerald-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-emerald-600/20">
+                  <BarChart2 className="w-7 h-7" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Progress Tracking</h3>
+                <p className="text-slate-600 leading-relaxed">Monitor your accuracy and specific CEFR skill milestones over time. Share beautiful scorecards of your progress instantly.</p>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="h-14 w-14 rounded-xl bg-teal-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-600/20">
                   <Share2 className="w-7 h-7" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Public Sharing</h3>
-                <p className="text-slate-600 leading-relaxed">Share your exam results and generated content with a public link. Great for showing your progress to teachers or peers.</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Public Exam Sharing</h3>
+                <p className="text-slate-600 leading-relaxed">Generate mock exams on specific literature topics, save them, and share them with your students or peers using a public link.</p>
               </div>
             </div>
           </div>
@@ -344,7 +368,7 @@ function LandingPageContent() {
                   <ul className="space-y-2 text-sm text-slate-700 font-medium">
                     <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Generate exams on grammar topics you just taught</li>
                     <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Let AI do the heavy lifting for writing corrections</li>
-                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Reduce lesson prep time by 80%</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Print authentic Cambridge-style PDFs for class</li>
                   </ul>
                 </div>
               </div>
