@@ -375,6 +375,14 @@ export default function DashboardPage() {
   const [savedExamsList, setSavedExamsList] = useState<any[]>([]);
   const [helpVisibility, setHelpVisibility] = useState<Record<string, boolean>>({});
 
+  const sortedExams = useMemo(() => {
+    if (!savedExamsList || savedExamsList.length === 0) return [];
+    return [...savedExamsList].sort((a, b) => {
+      if (!!a.is_favorite !== !!b.is_favorite) return a.is_favorite ? -1 : 1;
+      return new Date(b.created_at || b.createdAt).getTime() - new Date(a.created_at || a.createdAt).getTime();
+    });
+  }, [savedExamsList]);
+
   // Speaking Recording Assessment States
   const [isRecording, setIsRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder | null>(null);
@@ -1298,16 +1306,12 @@ export default function DashboardPage() {
                 Saved Exams
               </h3>
 
-              {savedExamsList.length === 0 ? (
+              {sortedExams.length === 0 ? (
                 <p className="text-sm text-slate-500 italic">No saved exams found.</p>
               ) : (
                 <div className="space-y-3">
-                  {[...savedExamsList]
-                    .sort((a, b) => {
-                      if (!!a.is_favorite !== !!b.is_favorite) return a.is_favorite ? -1 : 1;
-                      return new Date(b.created_at || b.createdAt).getTime() - new Date(a.created_at || a.createdAt).getTime();
-                    })
-                    .map((exam) => {
+                  {sortedExams
+                    .map((exam: any) => {
                       let examForLabel = null;
                       if (typeof exam.data === 'string') {
                         const match = exam.data.match(/"examFor"\s*:\s*"([^"]+)"/);
