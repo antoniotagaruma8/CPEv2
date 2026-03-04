@@ -1322,17 +1322,17 @@ export default function DashboardPage() {
                         >
                           <div className="flex justify-between items-start mb-1">
                             <span className="text-[10px] font-bold text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded uppercase tracking-wider">{exam.level}</span>
-                            <div className="flex items-center">
+                            <div className="flex flex-col items-end gap-1.5 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                               <button
                                 onClick={(e) => handleToggleFavorite(exam.id, !!exam.is_favorite, e)}
-                                className={`transition-colors p-1 mr-1 ${exam.is_favorite ? 'text-yellow-400 hover:text-yellow-500' : 'text-slate-300 hover:text-yellow-400 opacity-0 group-hover:opacity-100'}`}
+                                className={`transition-colors p-1 ${exam.is_favorite ? 'text-yellow-400 hover:text-yellow-500' : 'text-slate-300 hover:text-yellow-400'}`}
                                 title={exam.is_favorite ? "Remove from favorites" : "Add to favorites"}
                               >
                                 <Star className="w-4 h-4" fill={exam.is_favorite ? "currentColor" : "none"} strokeWidth={2} />
                               </button>
                               <button
                                 onClick={(e) => handleShareExam(exam.id, e)}
-                                className="text-slate-400 hover:text-blue-500 transition-colors p-1 opacity-0 group-hover:opacity-100 mr-2"
+                                className="text-slate-400 hover:text-blue-500 transition-colors p-1"
                                 title="Copy Share Link"
                               >
                                 <Share2 className="w-4 h-4" strokeWidth={2.5} />
@@ -1342,14 +1342,14 @@ export default function DashboardPage() {
                                   e.stopPropagation();
                                   window.open(`/print/${exam.id}`, '_blank');
                                 }}
-                                className="text-slate-400 hover:text-green-600 transition-colors p-1 opacity-0 group-hover:opacity-100 mr-2"
+                                className="text-slate-400 hover:text-green-600 transition-colors p-1"
                                 title="Download as PDF"
                               >
                                 <Download className="w-4 h-4" strokeWidth={2.5} />
                               </button>
                               <button
                                 onClick={(e) => handleDeleteSavedExam(exam.id, e)}
-                                className="text-slate-400 hover:text-red-500 transition-colors p-1 opacity-0 group-hover:opacity-100"
+                                className="text-slate-400 hover:text-red-500 transition-colors p-1"
                                 title="Delete"
                               >
                                 <Trash2 className="w-4 h-4" strokeWidth={2.5} />
