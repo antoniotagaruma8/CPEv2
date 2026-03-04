@@ -16,6 +16,8 @@ export default function LandingPage() {
 function LandingPageContent() {
   const { data: session, status } = useSession();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
 
   const faqs = [
     {
@@ -107,14 +109,14 @@ function LandingPageContent() {
                       Start Practicing Free
                     </button>
                   )}
-                  <a href="/videos/CEFR_Mock_Exams.mp4" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
+                  <button onClick={() => setIsVideoModalOpen(true)} className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
                     <PlayCircle className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
                     See it in action
-                  </a>
-                  <a href="/presentation/AI_CEFR_Mastery.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
+                  </button>
+                  <button onClick={() => setIsPdfModalOpen(true)} className="px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300 flex items-center justify-center gap-2 group">
                     <FileText className="w-5 h-5 text-slate-400 group-hover:text-orange-600 transition-colors" />
                     Presentation
-                  </a>
+                  </button>
                 </div>
                 <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
                   <div className="flex -space-x-2">
@@ -649,6 +651,63 @@ function LandingPageContent() {
           </div>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      {isVideoModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsVideoModalOpen(false)}>
+          <div className="bg-slate-900 rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl ring-1 ring-white/20" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center px-4 py-3 border-b border-white/10 bg-slate-800">
+              <h3 className="text-white font-bold flex items-center gap-2">
+                <PlayCircle className="w-5 h-5 text-blue-400" />
+                CEFR Mock Exams Overview
+              </h3>
+              <button
+                onClick={() => setIsVideoModalOpen(false)}
+                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="aspect-video w-full">
+              <video
+                src="/videos/CEFR_Mock_Exams.mp4"
+                controls
+                autoPlay
+                className="w-full h-full object-contain"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* PDF Presentation Modal */}
+      {isPdfModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsPdfModalOpen(false)}>
+          <div className="bg-white rounded-2xl w-full max-w-5xl h-[85vh] overflow-hidden shadow-2xl flex flex-col" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center px-4 py-3 border-b border-slate-200 bg-slate-50">
+              <h3 className="text-slate-800 font-bold flex items-center gap-2">
+                <FileText className="w-5 h-5 text-orange-500" />
+                Platform Presentation
+              </h3>
+              <button
+                onClick={() => setIsPdfModalOpen(false)}
+                className="p-1 flex items-center gap-1 rounded-lg text-slate-500 font-medium hover:text-slate-900 hover:bg-slate-200 transition-colors"
+              >
+                Close <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="w-full flex-1 bg-slate-200">
+              <iframe
+                src="/presentation/AI_CEFR_Mastery.pdf"
+                className="w-full h-full border-none"
+                title="AI CEFR Mastery Presentation"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

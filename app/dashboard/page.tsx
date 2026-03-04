@@ -281,6 +281,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const [checkoutBanner, setCheckoutBanner] = useState<'success' | 'canceled' | null>(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
+  const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -1212,15 +1213,13 @@ export default function DashboardPage() {
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" x2="12.01" y1="17" y2="17" /></svg>
             </button>
-            <a
-              href="/presentation/AI_CEFR_Mastery.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsPdfModalOpen(true)}
               className="p-1.5 sm:p-2 rounded-lg bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-900/60 transition-colors flex items-center justify-center"
               title="View Presentation"
             >
               <FileText className="w-4 h-4 sm:w-[18px] sm:h-[18px]" strokeWidth={2} />
-            </a>
+            </button>
             <button
               onClick={toggleTheme}
               className="p-1.5 sm:p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold"
