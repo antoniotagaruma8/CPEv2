@@ -77,30 +77,46 @@ function generateQueryVariations(baseQuery: string): string[] {
 }
 
 // --- Main Action ---
-export async function fetchStockImageAction(query: string, providerIndex?: number): Promise<{ success: boolean; imageOptions?: string[]; error?: string }> {
+export async function fetchStockImageAction(query: string, providerIndex?: number, currentUrl?: string): Promise<{ success: boolean; imageOptions?: string[]; error?: string }> {
   console.log(`[StockImage] Searching for: "${query}"${providerIndex !== undefined ? ` (reload slot ${providerIndex})` : ''}`);
 
   // --- Single Slot Reload ---
   if (providerIndex !== undefined && providerIndex >= 0 && providerIndex < 4) {
-    const variations = generateQueryVariations(query);
-    const variation = variations[providerIndex] || query;
+    // Use a randomly selected modifier so every reload click produces a different search
+    const modifiers = ['activity', 'lifestyle', 'scene', 'moment', 'view', 'landscape', 'portrait', 'street', 'building', 'food', 'work', 'family', 'friends', 'sunset', 'morning', 'night', 'crowd', 'alone', 'beach', 'mountain', 'park', 'office', 'home', 'celebration', 'group'];
+    const randomModifier = modifiers[Math.floor(Math.random() * modifiers.length)];
+    const reloadQuery = `${query} ${randomModifier}`;
     const seed = crypto.randomBytes(6).toString('hex');
 
-    // Try multiple providers for the reload
-    const attempts = [
-      () => fetchLoremFlickr(variation, Math.floor(Math.random() * 99999)),
-      async () => { const r = await fetchWikimediaResults(variation, 8); return r[Math.floor(Math.random() * r.length)] || null; },
-      async () => { const r = await fetchOpenverseResults(variation, 8); return r[Math.floor(Math.random() * r.length)] || null; },
-      () => Promise.resolve(getPicsumUrl(seed)),
-    ];
+    console.log(`[StockImage] Reload query: "${reloadQuery}"`);
 
-    for (const attempt of attempts) {
-      const url = await attempt();
-      if (url) return { success: true, imageOptions: [url] };
+    // Try multiple sources in parallel for speed
+    const [flickrUrl, wikiResults, openverseResults] = await Promise.all([
+      fetchLoremFlickr(reloadQuery, Math.floor(Math.random() * 99999)),
+      fetchWikimediaResults(reloadQuery, 10),
+      fetchOpenverseResults(reloadQuery, 10),
+    ]);
+
+    // Collect all candidates, excluding the current URL
+    const candidates: string[] = [];
+    if (flickrUrl && flickrUrl !== currentUrl) candidates.push(flickrUrl);
+    for (const url of wikiResults) {
+      if (url !== currentUrl) candidates.push(url);
+    }
+    for (const url of openverseResults) {
+      if (url !== currentUrl) candidates.push(url);
     }
 
-    return { success: false, error: `Failed to reload slot ${providerIndex + 1}` };
+    if (candidates.length > 0) {
+      // Pick a random one from all candidates
+      const pick = candidates[Math.floor(Math.random() * candidates.length)];
+      return { success: true, imageOptions: [pick] };
+    }
+
+    // Ultimate fallback: Picsum with unique seed (always different)
+    return { success: true, imageOptions: [getPicsumUrl(seed)] };
   }
+
 
   // --- Full Fetch: Get 4 DIFFERENT images ---
   const variations = generateQueryVariations(query);

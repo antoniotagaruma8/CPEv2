@@ -112,7 +112,8 @@ const AIImage = ({ prompt, indices = [0, 1, 2, 3], onImagesLoaded }: { prompt: s
     setError(null);
 
     try {
-      const result = await fetchStockImageAction(prompt, specificProvider);
+      const currentUrl = specificProvider !== undefined ? images[specificProvider] : undefined;
+      const result = await fetchStockImageAction(prompt, specificProvider, currentUrl);
 
       if (result.success && result.imageOptions) {
         if (specificProvider !== undefined) {
