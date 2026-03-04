@@ -428,21 +428,6 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
                                                                     ))}
                                                                 </div>
                                                             )}
-
-                                                            {/* EXPLICIT WRITE-IN AREA FOR PRINT */}
-                                                            {q.options && q.options.length > 0 ? (
-                                                                <div className="mt-4 flex items-center gap-3">
-                                                                    <span className="font-bold text-xs uppercase text-slate-500">Write letter here:</span>
-                                                                    <div className="w-10 h-10 border-2 border-slate-400 bg-slate-50"></div>
-                                                                </div>
-                                                            ) : (
-                                                                dbRecord.type !== 'Speaking' && (
-                                                                    <div className="mt-6 flex items-end gap-3 w-full">
-                                                                        <span className="font-bold text-xs uppercase text-slate-500 pb-1 shrink-0">Write answer here:</span>
-                                                                        <div className="flex-1 border-b-2 border-slate-400 h-6"></div>
-                                                                    </div>
-                                                                )
-                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -456,6 +441,71 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
 
                     <div className="text-center font-bold uppercase mt-12 mb-8 hidden print:block border-t border-black pt-4">
                         end of test
+                    </div>
+
+                    {/* DEDICATED ANSWER SHEET (Cambridge Style) */}
+                    <div className="print:break-before-page pt-12 print:pt-4 pb-20">
+                        <div className="border-2 border-black p-6 mb-8 text-sm">
+                            <h2 className="text-2xl font-black uppercase text-center mb-6 tracking-widest">
+                                Candidate Answer Sheet
+                            </h2>
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-6 font-bold uppercase text-sm mb-4">
+                                <div className="col-span-2 flex items-end gap-2">
+                                    <span className="shrink-0">CANDIDATE NAME:</span>
+                                    <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
+                                </div>
+                                <div className="col-span-1 flex items-end gap-2">
+                                    <span className="shrink-0">CENTRE NUMBER:</span>
+                                    <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
+                                </div>
+                                <div className="col-span-1 flex items-end gap-2">
+                                    <span className="shrink-0">CANDIDATE NUMBER:</span>
+                                    <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
+                                </div>
+                            </div>
+                            <p className="text-center font-bold italic mt-6 pt-4 border-t-2 border-black">
+                                Instructions: Transfer all your answers to this sheet. Use a pencil.
+                            </p>
+                        </div>
+
+                        <div className="space-y-8">
+                            {examParts.map((part) => {
+                                const partQuestions = examQuestions.filter(q => q.part === part.part);
+                                if (partQuestions.length === 0) return null;
+
+                                return (
+                                    <div key={`answersheet-part-${part.part}`} className="break-inside-avoid border border-slate-300 rounded overflow-hidden">
+                                        <h3 className="font-bold text-base uppercase bg-slate-100 p-2 border-b border-slate-300">
+                                            Part {part.part}
+                                        </h3>
+                                        <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
+                                            {partQuestions.map((q) => {
+                                                const globalIndex = examQuestions.findIndex(eq => eq.id === q.id) + 1;
+                                                const isMultipleChoice = q.options && q.options.length > 0;
+
+                                                return (
+                                                    <div key={`as-${q.id}`} className="flex items-center gap-4 border-b border-slate-200 pb-2 border-dashed">
+                                                        <span className="font-bold w-6 text-right">{globalIndex}.</span>
+                                                        {isMultipleChoice ? (
+                                                            <div className="flex gap-2 w-full max-w-[150px]">
+                                                                {q.options.map((_, i) => (
+                                                                    <div key={i} className="flex-1 flex flex-col items-center gap-1">
+                                                                        <span className="text-[10px] text-slate-500 font-bold">{String.fromCharCode(65 + i)}</span>
+                                                                        <div className="w-full h-4 border border-slate-400 bg-slate-50"></div>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        ) : (
+                                                            <div className="flex-1 h-6 border-b border-slate-400"></div>
+                                                        )}
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
 
                     {/* ANSWER KEY PAGE */}
