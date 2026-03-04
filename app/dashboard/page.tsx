@@ -1645,28 +1645,28 @@ export default function DashboardPage() {
                 </div>
               </div>
               <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div>
-                    <label htmlFor="examType" className="block text-xs font-bold text-slate-600 mb-1.5">Exam Skill</label>
+                    <label htmlFor="examType" className="block text-[11px] font-bold text-slate-600 mb-1">Exam Skill</label>
                     <select id="examType" value={examType} onChange={(e) => {
                       const val = e.target.value;
                       if (val === 'Listening' && generationInfo && generationInfo.plan === 'free') {
                         return; // Don't allow selecting Listening for free tier
                       }
                       setExamType(val);
-                    }} className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
+                    }} className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
                       <option value="Reading">Reading & Use of English</option>
                       <option value="Writing">Writing</option>
                       <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>{generationInfo && generationInfo.plan === 'free' ? '🔒 Listening (Premium)' : 'Listening'}</option>
                       <option value="Speaking">Speaking</option>
                     </select>
                     {generationInfo && generationInfo.plan === 'free' && (
-                      <p className="mt-1 text-[10px] text-amber-600 flex items-center gap-1"><span>🔒</span> Premium feature</p>
+                      <p className="mt-0.5 text-[10px] text-amber-600 flex items-center gap-1 leading-tight"><span>🔒</span> Premium feature</p>
                     )}
                   </div>
                   <div>
-                    <label htmlFor="cefrLevel" className="block text-xs font-bold text-slate-600 mb-1.5">CEFR Level</label>
-                    <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
+                    <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">CEFR Level</label>
+                    <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
                       <option value="A1">A1 Beginner</option>
                       <option value="A2">A2 Key (KET)</option>
                       <option value="B1">B1 Preliminary (PET)</option>
@@ -1677,33 +1677,33 @@ export default function DashboardPage() {
                   </div>
                 </div>
                 {isAdmin && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div>
-                      <label htmlFor="examFor" className="block text-xs font-bold text-slate-600 mb-1.5">Exam for (Class/Group)</label>
-                      <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                      <label htmlFor="examFor" className="block text-[11px] font-bold text-slate-600 mb-1">Exam for (Class/Group)</label>
+                      <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
                     </div>
                     <div>
-                      <label htmlFor="topic" className="block text-xs font-bold text-slate-600 mb-1.5">Topic / Theme {file ? '(Optional)' : ''}</label>
-                      <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                      <label htmlFor="topic" className="block text-[11px] font-bold text-slate-600 mb-1">Topic / Theme {file ? '(Optional)' : ''}</label>
+                      <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
                     </div>
                   </div>
                 )}
                 {!isAdmin && (
                   <div>
-                    <label htmlFor="topic" className="block text-xs font-bold text-slate-600 mb-1.5">Topic / Theme {file ? '(Optional)' : ''}</label>
-                    <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                    <label htmlFor="topic" className="block text-[11px] font-bold text-slate-600 mb-1">Topic / Theme {file ? '(Optional)' : ''}</label>
+                    <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
                   </div>
                 )}
 
-                <div className="space-y-2">
-                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">CEFR Frequently Used Topics</label>
-                  <div className="flex flex-wrap gap-1.5">
+                <div className="space-y-1">
+                  <label className="block text-[9px] font-bold text-slate-400 uppercase tracking-wider">CEFR Frequently Used Topics</label>
+                  <div className="flex flex-wrap gap-1">
                     {CEFR_TOPICS.map((t) => (
                       <button
                         key={t}
                         type="button"
                         onClick={() => setTopic(t)}
-                        className={`text-[11px] px-2.5 py-1 rounded-full border transition-all ${topic === t
+                        className={`text-[10px] px-2 py-0.5 rounded-md border transition-all ${topic === t
                           ? 'bg-blue-600 border-blue-600 text-white shadow-sm font-bold'
                           : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50'
                           }`}
@@ -1714,7 +1714,7 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full py-2.5 px-4 rounded-xl text-white font-bold text-base shadow-lg shadow-blue-600/20 transition-all ${(loading || (generationInfo !== null && !generationInfo.allowed)) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
+                <button type="submit" disabled={loading || (generationInfo !== null && !generationInfo.allowed)} className={`w-full mt-1 py-2 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all ${(loading || (generationInfo !== null && !generationInfo.allowed)) ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}>
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
                 {generationInfo && generationInfo.plan === 'free' && (
