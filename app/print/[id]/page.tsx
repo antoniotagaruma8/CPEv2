@@ -456,11 +456,11 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                                                                 {q.options.map((_, i) => {
                                                                     const isCorrect = i === correctOptIndex;
                                                                     return (
-                                                                        <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                                                                            <span className={`text-[10px] font-bold ${isCorrect ? 'text-blue-700' : 'text-slate-400'}`}>
+                                                                        <div key={i} className={`flex-1 flex flex-col items-center gap-1 p-1.5 rounded ${isCorrect ? 'bg-blue-100 ring-2 ring-blue-500' : ''}`}>
+                                                                            <span className={`text-xs font-black ${isCorrect ? 'text-white bg-blue-700 w-5 h-5 rounded-full flex items-center justify-center' : 'text-slate-400'}`}>
                                                                                 {String.fromCharCode(65 + i)}
                                                                             </span>
-                                                                            <div className={`w-full h-4 border ${isCorrect ? 'border-blue-600 bg-blue-600' : 'border-slate-300 bg-slate-50'}`}></div>
+                                                                            <div className={`w-full h-4 border ${isCorrect ? 'border-blue-700 bg-blue-700' : 'border-slate-300 bg-white'}`}></div>
                                                                         </div>
                                                                     );
                                                                 })}
