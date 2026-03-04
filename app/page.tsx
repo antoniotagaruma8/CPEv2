@@ -654,26 +654,26 @@ function LandingPageContent() {
 
       {/* Video Modal */}
       {isVideoModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsVideoModalOpen(false)}>
-          <div className="bg-slate-900 rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl ring-1 ring-white/20" onClick={e => e.stopPropagation()}>
-            <div className="flex justify-between items-center px-4 py-3 border-b border-white/10 bg-slate-800">
-              <h3 className="text-white font-bold flex items-center gap-2">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsVideoModalOpen(false)}>
+          <div className="bg-slate-900 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl ring-1 ring-white/20 flex flex-col" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center px-4 py-3 border-b border-white/10 bg-slate-800 shrink-0">
+              <h3 className="text-white font-bold flex items-center gap-2 text-sm sm:text-base">
                 <PlayCircle className="w-5 h-5 text-blue-400" />
                 CEFR Mock Exams Overview
               </h3>
               <button
                 onClick={() => setIsVideoModalOpen(false)}
-                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="aspect-video w-full">
+            <div className="w-full flex-1 bg-black overflow-hidden flex items-center justify-center">
               <video
                 src="/videos/CEFR_Mock_Exams.mp4"
                 controls
                 autoPlay
-                className="w-full h-full object-contain"
+                className="w-full h-full max-h-[calc(90vh-60px)] object-contain"
               >
                 Your browser does not support the video tag.
               </video>

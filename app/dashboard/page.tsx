@@ -2658,6 +2658,34 @@ export default function DashboardPage() {
 
       </main>
 
+      {/* PDF Presentation Modal */}
+      {isPdfModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsPdfModalOpen(false)}>
+          <div className="bg-white dark:bg-slate-900 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl flex flex-col ring-1 ring-slate-200 dark:ring-slate-800" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center px-4 py-3 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 shrink-0">
+              <h3 className="text-slate-800 dark:text-white font-bold flex items-center gap-2 text-sm sm:text-base">
+                <FileText className="w-5 h-5 text-orange-500" />
+                CEFR Platform Presentation
+              </h3>
+              <button
+                onClick={() => setIsPdfModalOpen(false)}
+                className="p-1.5 flex items-center gap-1 rounded-lg text-slate-500 font-medium hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shrink-0"
+              >
+                <span className="hidden sm:inline">Close</span> <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="w-full flex-1 bg-slate-200 dark:bg-slate-800 min-h-0">
+              <iframe
+                src="/presentation/AI_CEFR_Mastery.pdf"
+                className="w-full h-full border-none"
+                style={{ minHeight: '60vh' }}
+                title="AI CEFR Mastery Presentation"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* --- READING ASSESSMENT MODAL --- */}
       {isReadingModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm animate-fade-in custom-scrollbar">
