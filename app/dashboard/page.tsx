@@ -1895,7 +1895,7 @@ export default function DashboardPage() {
                 <p key={index}>{line}</p>
               ))}
             </div>
-            {activePartData?.content && (
+            {activePartData?.content && examType !== 'Speaking' && (
               <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg">
                 <h4 className="font-semibold text-slate-600 dark:text-slate-400 mb-2 text-sm uppercase tracking-wider">
                   {examType === 'Listening' ? 'Audio Track' : 'Context'}
@@ -2101,7 +2101,7 @@ export default function DashboardPage() {
                         {[1, 2].map((setId) => {
                           const setKey = `${activeQuestionData.id}-set-${setId}`;
                           const isRevealed = !!revealedImageSets[setKey];
-                          const primaryPrompt = activeQuestionData.imagePrompts?.[0] || activeQuestionData.topic || "Speaking Subject";
+                          const primaryPrompt = activeQuestionData.topic || "Speaking Subject";
                           const indices = setId === 1 ? [0, 1] : [2, 3];
 
                           return (
