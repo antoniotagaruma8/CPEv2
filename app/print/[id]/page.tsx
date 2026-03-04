@@ -267,7 +267,7 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                     <div className="font-bold text-center border-t-2 border-black pt-4">
                         <h1 className="text-2xl font-black tracking-widest uppercase mb-1">
-                            CAMBRIDGE ENGLISH
+                            CEFR ENGLISH EXAM
                         </h1>
                         <h2 className="text-xl font-bold mb-4">{cambridgeLevelName()}</h2>
                         <h3 className="text-lg uppercase">
@@ -356,6 +356,77 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                 <div className="text-center font-bold uppercase mt-12 mb-8 hidden print:block border-t border-black pt-4">
                     — end of test —
+                </div>
+
+                {/* ANSWER KEY PAGE */}
+                <div className="print:break-before-page pt-12 print:pt-4 pb-20">
+                    <h2 className="text-2xl font-black uppercase border-b-2 border-black pb-2 mb-8 text-slate-800">
+                        Answer Key & Rationale
+                    </h2>
+
+                    <div className="space-y-10">
+                        {examParts.map((part) => {
+                            const partQuestions = examQuestions.filter(q => q.part === part.part);
+
+                            // Check if this part has any questions that have an answer or explanation
+                            const hasAnswers = partQuestions.some(q => q.correctOption || q.explanation || (q.possibleAnswers && q.possibleAnswers.length > 0));
+                            if (!hasAnswers) return null;
+
+                            return (
+                                <div key={`answer-key-part-${part.part}`} className="break-inside-avoid">
+                                    <h3 className="font-bold text-lg mb-4 uppercase bg-slate-100 p-2 rounded">Part {part.part}</h3>
+                                    <div className="grid grid-cols-1 gap-y-6">
+                                        {partQuestions.map((q, qIndex) => {
+                                            // Determine letter for M/C options
+                                            let correctLetter = '';
+                                            if (q.options && q.options.length > 0 && q.correctOption) {
+                                                const optIndex = q.options.indexOf(q.correctOption);
+                                                if (optIndex !== -1) {
+                                                    correctLetter = String.fromCharCode(65 + optIndex);
+                                                }
+                                            }
+
+                                            return (
+                                                <div key={`answer-${q.id}`} className="flex gap-4 text-sm border-b border-slate-100 pb-4 last:border-0">
+                                                    <span className="font-bold min-w-[2rem] text-slate-500">{qIndex + 1}.</span>
+                                                    <div className="flex-1">
+                                                        {/* Exact Answer if exists */}
+                                                        {q.correctOption && (
+                                                            <div className="font-bold mb-2 text-slate-900">
+                                                                <span className="text-gray-500 mr-2 uppercase text-xs">Answer:</span>
+                                                                {correctLetter ? <span className="text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 mr-2">{correctLetter}</span> : null}
+                                                                {q.correctOption}
+                                                            </div>
+                                                        )}
+
+                                                        {/* Possible Answers (for Speaking / Writing) */}
+                                                        {(!q.correctOption && q.possibleAnswers && q.possibleAnswers.length > 0) && (
+                                                            <div className="mb-2">
+                                                                <span className="text-gray-500 mr-2 uppercase text-xs font-bold">Suggested Answers:</span>
+                                                                <ul className="list-disc pl-5 mt-1 space-y-1">
+                                                                    {q.possibleAnswers.map((pa, paIdx) => (
+                                                                        <li key={paIdx} className="text-slate-800 italic">{pa}</li>
+                                                                    ))}
+                                                                </ul>
+                                                            </div>
+                                                        )}
+
+                                                        {/* Rationale / Explanation */}
+                                                        {q.explanation && (
+                                                            <div className="text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-r border-l-4 border-blue-300">
+                                                                <span className="font-bold text-slate-700 uppercase text-xs block mb-1">Rationale:</span>
+                                                                {q.explanation}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
 
             </div>

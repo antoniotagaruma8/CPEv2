@@ -146,7 +146,7 @@ function HowToUseContent() {
                             <h2 className="text-2xl font-bold text-slate-900">Taking Reading & Listening Tests</h2>
                         </div>
                         <p className="text-slate-600 mb-4">
-                            Our interface mirrors the official computer-based testing format for Cambridge English exams.
+                            Our interface mirrors the official computer-based testing format for standardized CEFR exams.
                         </p>
                         <ul className="space-y-3 mt-4">
                             <li className="flex gap-3 text-slate-600">
