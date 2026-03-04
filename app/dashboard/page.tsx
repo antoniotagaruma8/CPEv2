@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useTheme } from 'next-themes';
 import { useExam } from './ExamContext';
 import CliLoader from '../../components/CliLoader';
@@ -412,6 +412,22 @@ export default function DashboardPage() {
   const [analyzingSet, setAnalyzingSet] = useState<Record<string, boolean>>({});
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
+  const [recordingTimeLeft, setRecordingTimeLeft] = useState<number>(60);
+  const [recordingMaxTime, setRecordingMaxTime] = useState<number>(60);
+  const recordingTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Cambridge Speaking time limits by CEFR level
+  const getRecordingTimeLimit = useCallback((questionId: string) => {
+    const isPhotoSet = questionId.includes('-set-');
+    const level = (cefrLevel || 'B2').toUpperCase();
+    if (isPhotoSet) {
+      // Part 2 (Long Turn / Photo Comparison)
+      return level === 'C2' ? 120 : 60; // C2 = 2min, all others = 1min
+    } else {
+      // Part 1 (Interview questions)
+      return (level === 'C1' || level === 'C2') ? 45 : 30;
+    }
+  }, [cefrLevel]);
 
   // Writing Assessment States
   const [isWritingModalOpen, setIsWritingModalOpen] = useState(false);
@@ -1706,6 +1722,21 @@ export default function DashboardPage() {
       setMediaRecorder(recorder);
       setIsRecording(true);
       setAssessmentResult(null);
+
+      // Start countdown timer
+      const timeLimit = getRecordingTimeLimit(targetQuestionId);
+      setRecordingMaxTime(timeLimit);
+      setRecordingTimeLeft(timeLimit);
+      if (recordingTimerRef.current) clearInterval(recordingTimerRef.current);
+      recordingTimerRef.current = setInterval(() => {
+        setRecordingTimeLeft(prev => {
+          if (prev <= 1) {
+            if (recordingTimerRef.current) clearInterval(recordingTimerRef.current);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
     } catch (err) {
       console.error('Error accessing microphone:', err);
       alert('Could not access your microphone. Please check your browser permissions.');
@@ -1713,7 +1744,18 @@ export default function DashboardPage() {
     }
   };
 
+  // Auto-stop recording when timer reaches 0
+  useEffect(() => {
+    if (isRecording && recordingTimeLeft === 0) {
+      stopRecording();
+    }
+  }, [recordingTimeLeft, isRecording]);
+
   const stopRecording = () => {
+    if (recordingTimerRef.current) {
+      clearInterval(recordingTimerRef.current);
+      recordingTimerRef.current = null;
+    }
     if (mediaRecorder && isRecording) {
       mediaRecorder.stop();
       setIsRecording(false);
@@ -2591,14 +2633,31 @@ export default function DashboardPage() {
 
                   {isRecording && (
                     <div className="p-6 flex flex-col items-center justify-center gap-6 py-12 md:py-24 h-full">
+                      {/* Countdown Timer Ring */}
                       <div className="relative flex items-center justify-center">
-                        <div className="absolute w-32 h-32 bg-red-100 dark:bg-red-900/30 rounded-full animate-ping"></div>
-                        <div className="absolute w-24 h-24 bg-red-200 dark:bg-red-800/40 rounded-full animate-pulse"></div>
-                        <svg className="w-12 h-12 text-red-500 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                        <svg className="w-36 h-36 transform -rotate-90">
+                          <circle cx="72" cy="72" r="62" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-100 dark:text-slate-800" />
+                          <circle cx="72" cy="72" r="62" stroke="currentColor" strokeWidth="8" fill="transparent"
+                            strokeDasharray={389.56}
+                            strokeDashoffset={389.56 - (389.56 * (recordingTimeLeft / recordingMaxTime))}
+                            strokeLinecap="round"
+                            className={`transition-all duration-1000 ease-linear ${recordingTimeLeft > 30 ? 'text-green-500' : recordingTimeLeft > 10 ? 'text-amber-500' : 'text-red-500 animate-pulse'}`}
+                          />
+                        </svg>
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                          <span className={`text-4xl font-black font-mono ${recordingTimeLeft > 30 ? 'text-green-600 dark:text-green-400' : recordingTimeLeft > 10 ? 'text-amber-600 dark:text-amber-400' : 'text-red-600 dark:text-red-400'}`}>
+                            {Math.floor(recordingTimeLeft / 60)}:{String(recordingTimeLeft % 60).padStart(2, '0')}
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">
+                            of {recordingMaxTime >= 60 ? `${Math.floor(recordingMaxTime / 60)} min` : `${recordingMaxTime}s`}
+                          </span>
+                        </div>
                       </div>
                       <div className="text-center">
                         <p className="text-xl font-bold text-slate-800 dark:text-slate-200">Recording Answer...</p>
-                        <p className="text-md text-slate-500 dark:text-slate-400 mt-2">Speak clearly into your microphone.</p>
+                        <p className="text-md text-slate-500 dark:text-slate-400 mt-2">
+                          {recordingTimeLeft <= 10 ? '⏰ Time is almost up!' : 'Speak clearly into your microphone.'}
+                        </p>
                       </div>
                       <button onClick={stopRecording} className="mt-4 px-8 py-3 bg-red-500 hover:bg-red-600 text-white rounded-xl font-bold shadow-md transition-colors flex items-center justify-center gap-2">
                         <div className="w-4 h-4 bg-white rounded-sm"></div> Stop Recording
