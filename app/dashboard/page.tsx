@@ -1709,7 +1709,7 @@ export default function DashboardPage() {
     : (activeQuestionData?.possibleAnswers || []);
 
   // --- SPEAKING TEST ASSESSMENT LOGIC ---
-  const handleMicClick = (targetQuestionId: string, targetQuestionText: string, imagePrompts: string[] = []) => {
+  const handleMicClick = (targetQuestionId: string, targetQuestionText: string, imagePrompts: string[] = [], imageUrls: string[] = []) => {
     const attempts = retryCount[targetQuestionId] || 0;
     if (attempts >= 2) {
       alert("You have already used your retry for this question.");
@@ -1718,6 +1718,7 @@ export default function DashboardPage() {
     setRecordingQuestionId(targetQuestionId);
     setRecordingQuestionText(targetQuestionText);
     setRecordingImagePrompts(imagePrompts);
+    setRecordingImageUrls(imageUrls);
     setIsAssessmentModalOpen(true);
     // Auto-start recording when modal opens
     startRecording(targetQuestionId, targetQuestionText);
@@ -2223,8 +2224,7 @@ export default function DashboardPage() {
                                 <button
                                   onClick={() => {
                                     const question = generatedSetQuestions[setKey] || `Here are your photographs. I'd like you to compare the photographs, and say ${setId === 1 ? 'which shows a more positive experience.' : 'how the people might be feeling in each situation.'}`;
-                                    setRecordingImageUrls(loadedSetImages[setKey] || []);
-                                    handleMicClick(setKey, question);
+                                    handleMicClick(setKey, question, [], loadedSetImages[setKey] || []);
                                   }}
                                   disabled={analyzingSet[setKey]}
                                   className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold font-mono shadow-md transition-all transform hover:scale-[1.03] w-full md:w-auto justify-center
