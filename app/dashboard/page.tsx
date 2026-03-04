@@ -1661,7 +1661,7 @@ export default function DashboardPage() {
                       <option value="Speaking">Speaking</option>
                     </select>
                     {generationInfo && generationInfo.plan === 'free' && (
-                      <p className="mt-0.5 text-[10px] text-amber-600 flex items-center gap-1 leading-tight"><span>🔒</span> Premium feature</p>
+                      <p className="mt-0.5 text-[10px] text-amber-600 flex items-center gap-1 leading-tight"><span>🔒</span> Listening is a Premium feature</p>
                     )}
                   </div>
                   <div>
