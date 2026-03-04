@@ -1344,7 +1344,7 @@ export default function DashboardPage() {
                         >
                           <div className="flex justify-between items-center mb-1.5 gap-2">
                             <span className="text-[10px] font-bold text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded uppercase tracking-wider shrink-0">{exam.level}</span>
-                            <div className="flex flex-row items-center gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                            <div className="flex flex-row items-center gap-1 opacity-100 transition-opacity">
                               <button
                                 onClick={(e) => handleToggleFavorite(exam.id, !!exam.is_favorite, e)}
                                 className={`transition-colors p-1 ${exam.is_favorite ? 'text-yellow-400 hover:text-yellow-500' : 'text-slate-300 hover:text-yellow-400'}`}
