@@ -55,7 +55,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
     console.error("Error checking Supabase cache:", error);
   }
 
-  // 2. Generate with Stable Diffusion via HuggingFace (free)
+  // 2. STAGE 1: Hugging Face
   const apiKey = process.env.HUGGINGFACE_API_KEY;
   const enhancedPrompt = `${query}, high quality realistic detailed photography, 4k, professional`;
   let lastError = '';
@@ -63,8 +63,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
   if (apiKey) {
     for (const model of HF_MODELS) {
       try {
-        console.log(`Generating image via HuggingFace (${model}) for hash: ${hash}`);
-
+        console.log(`[STAGE 1] Trying HF (${model}) for hash: ${hash}`);
         const response = await fetch(
           `https://router.huggingface.co/hf-inference/models/${model}`,
           {
@@ -77,101 +76,86 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
           }
         );
 
-        if (response.status === 503) {
-          const text = await response.text();
-          if (text.includes('loading')) {
-            console.warn(`Model ${model} is loading. Trying next...`);
-            lastError = `Model ${model} is loading`;
-            continue;
-          }
-        }
-
-        // Detect 402 (Payment Required/Limit) or 429 (Too Many Requests)
         if (response.status === 402 || response.status === 429) {
-          console.warn(`HuggingFace limit reached (${response.status}) for ${model}. Fast-tracking Pollinations fallback.`);
+          console.warn(`[STAGE 1] HF Limit hit (${response.status}) on ${model}. Switching to fallbacks.`);
           lastError = `HF Limit (${response.status})`;
-          break; // Exit loop to trigger Pollinations immediately
+          break; // Stop trying HF
         }
 
-        if (!response.ok) {
+        if (response.ok) {
+          const contentType = response.headers.get('content-type') || 'image/jpeg';
+          const arrayBuffer = await response.arrayBuffer();
+          const buffer = Buffer.from(arrayBuffer);
+
+          if (buffer.length > 1000) {
+            console.log(`[STAGE 1] HF Success (${model}) — ${Math.round(buffer.length / 1024)}KB`);
+            const publicUrl = await uploadToSupabase(filename, buffer, contentType);
+            if (publicUrl) return { success: true, imageUrl: publicUrl };
+            return { success: true, imageUrl: `data:${contentType};base64,${buffer.toString('base64')}` };
+          }
+        } else {
           const text = await response.text();
-          console.warn(`HuggingFace ${model} returned ${response.status}: ${text.substring(0, 100)}`);
+          console.warn(`[STAGE 1] HF ${model} failed (${response.status}): ${text.substring(0, 50)}`);
           lastError = `${model}: ${response.status}`;
-          continue;
         }
-
-        const contentType = response.headers.get('content-type') || '';
-        if (!contentType.startsWith('image/')) {
-          console.warn(`HuggingFace ${model} returned ${contentType}, not an image`);
-          lastError = `${model} returned non-image content`;
-          continue;
-        }
-
-        const arrayBuffer = await response.arrayBuffer();
-        const buffer = Buffer.from(arrayBuffer);
-
-        if (buffer.length < 1000) {
-          console.warn(`HuggingFace ${model} returned too-small image (${buffer.length} bytes)`);
-          lastError = `${model} returned tiny image`;
-          continue;
-        }
-
-        console.log(`HuggingFace (${model}) success — ${Math.round(buffer.length / 1024)}KB`);
-
-        // 3. Upload to Supabase
-        const publicUrl = await uploadToSupabase(filename, buffer, contentType);
-        if (publicUrl) return { success: true, imageUrl: publicUrl };
-
-        const base64 = buffer.toString('base64');
-        return { success: true, imageUrl: `data:${contentType};base64,${base64}` };
-
-      } catch (error: any) {
-        const msg = error?.message || String(error);
-        console.warn(`HuggingFace (${model}) failed:`, msg.substring(0, 150));
-        lastError = msg;
-        continue;
+      } catch (err: any) {
+        console.warn(`[STAGE 1] HF ${model} exception:`, err?.message || err);
+        lastError = err?.message || String(err);
       }
     }
   } else {
-    lastError = 'Missing HUGGINGFACE_API_KEY';
+    lastError = 'No HF API Key';
   }
 
-  // 4. Fallback to Pollinations AI (More robust logic)
+  // 3. STAGE 2: Pollinations (Complex Prompt)
   try {
-    console.log(`HF failed (Last error: ${lastError}). Trying Pollinations AI fallback...`);
-    const encodedPrompt = encodeURIComponent(enhancedPrompt);
+    console.log(`[STAGE 2] Trying Pollinations (Complex) for: ${hash}`);
+    const encodedComplex = encodeURIComponent(enhancedPrompt);
+    const seed = Math.floor(Math.random() * 999999);
+    const url = `https://pollinations.ai/p/${encodedComplex}?width=1024&height=1024&seed=${seed}&model=flux&nologo=true`;
 
-    // Try up to 2 seeds if needed
-    for (const attempt of [1, 2]) {
-      const seed = Math.floor(Math.random() * 1000000);
-      const url = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1024&height=1024&seed=${seed}&nologo=true&model=flux`;
-
-      try {
-        const response = await fetch(url, {
-          headers: { 'Accept': 'image/*', 'User-Agent': 'Mozilla/5.0' },
-          redirect: 'follow',
-          next: { revalidate: 0 } // Bypass Next.js cache for this attempt
-        });
-
-        if (response.ok) {
-          const ct = response.headers.get('content-type') || 'image/jpeg';
-          const ab = await response.arrayBuffer();
-          const buf = Buffer.from(ab);
-
-          if (buf.length > 2000) { // Slightly stricter min size for quality
-            console.log(`Pollinations success (attempt ${attempt}) — ${Math.round(buf.length / 1024)}KB`);
-            const publicUrl = await uploadToSupabase(filename, buf, ct);
-            if (publicUrl) return { success: true, imageUrl: publicUrl };
-            return { success: true, imageUrl: `data:${ct};base64,${buf.toString('base64')}` };
-          }
-        }
-      } catch (e) {
-        console.warn(`Pollinations attempt ${attempt} failed:`, e);
+    const response = await fetch(url);
+    if (response.ok) {
+      const ct = response.headers.get('content-type') || 'image/jpeg';
+      const ab = await response.arrayBuffer();
+      const buf = Buffer.from(ab);
+      if (buf.length > 500) { // Lower threshold for safety
+        console.log(`[STAGE 2] Pollinations Success — ${Math.round(buf.length / 1024)}KB`);
+        const publicUrl = await uploadToSupabase(filename, buf, ct);
+        if (publicUrl) return { success: true, imageUrl: publicUrl };
+        return { success: true, imageUrl: `data:${ct};base64,${buf.toString('base64')}` };
       }
     }
-  } catch (e) {
-    console.error('Critical failure in Pollinations fallback logic:', e);
+    console.warn(`[STAGE 2] Pollinations complex failed with status: ${response.status}`);
+  } catch (err: any) {
+    console.warn(`[STAGE 2] Pollinations complex exception:`, err?.message || err);
   }
 
-  return { success: false, error: `Image generation failed. (HF: ${lastError} -> Pollinations: Failed)` };
+  // 4. STAGE 3: Pollinations (Simple Prompt)
+  try {
+    console.log(`[STAGE 3] Trying Pollinations (Simple) for: ${hash}`);
+    const encodedSimple = encodeURIComponent(query);
+    const seed = Math.floor(Math.random() * 999999);
+    const url = `https://pollinations.ai/p/${encodedSimple}?width=1024&height=1024&seed=${seed}&model=flux&nologo=true`;
+
+    const response = await fetch(url);
+    if (response.ok) {
+      const ct = response.headers.get('content-type') || 'image/jpeg';
+      const ab = await response.arrayBuffer();
+      const buf = Buffer.from(ab);
+      if (buf.length > 500) {
+        console.log(`[STAGE 3] Pollinations Simple Success — ${Math.round(buf.length / 1024)}KB`);
+        const publicUrl = await uploadToSupabase(filename, buf, ct);
+        if (publicUrl) return { success: true, imageUrl: publicUrl };
+        return { success: true, imageUrl: `data:${ct};base64,${buf.toString('base64')}` };
+      }
+    }
+  } catch (err: any) {
+    console.error(`[STAGE 3] Critical failure:`, err?.message || err);
+  }
+
+  return {
+    success: false,
+    error: `Image generation failed at all stages. Last HF Error: ${lastError}. Please try a different topic or try again later.`
+  };
 }
