@@ -256,6 +256,13 @@ const WritingHelpSection = ({ title, icon, content, colorClass, borderColorClass
   );
 };
 
+const CEFR_TOPICS = [
+  "Travel & Tourism", "Work & Career", "Education & Learning", "Environment & Climate",
+  "Technology & Innovation", "Health & Lifestyle", "Hobbies & Leisure", "Social Media",
+  "Arts & Culture", "Science & Research", "Shopping & Fashion", "Relationships & Family",
+  "Food & Nutrition", "Sport & Fitness"
+];
+
 export default function DashboardPage() {
   const {
     generatedExam,
@@ -1507,6 +1514,25 @@ export default function DashboardPage() {
                     <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
                   </div>
                 )}
+
+                <div className="space-y-2">
+                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">CEFR Frequently Used Topics</label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {CEFR_TOPICS.map((t) => (
+                      <button
+                        key={t}
+                        type="button"
+                        onClick={() => setTopic(t)}
+                        className={`text-[11px] px-2.5 py-1 rounded-full border transition-all ${topic === t
+                            ? 'bg-blue-600 border-blue-600 text-white shadow-sm font-bold'
+                            : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50'
+                          }`}
+                      >
+                        {t}
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 {isAdmin && (
                   <div>
                     <label className="block text-xs font-bold text-slate-600 mb-1.5">Upload Material (Optional)</label>
