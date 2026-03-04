@@ -16,7 +16,7 @@ import { assessSpeakingAction } from '../actions/assessSpeaking';
 import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
-import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2 } from 'lucide-react';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download } from 'lucide-react';
 
 interface Question {
   id: number;
@@ -1336,6 +1336,16 @@ export default function DashboardPage() {
                                 title="Copy Share Link"
                               >
                                 <Share2 className="w-4 h-4" strokeWidth={2.5} />
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  window.open(`/print/${exam.id}`, '_blank');
+                                }}
+                                className="text-slate-400 hover:text-green-600 transition-colors p-1 opacity-0 group-hover:opacity-100 mr-2"
+                                title="Download as PDF"
+                              >
+                                <Download className="w-4 h-4" strokeWidth={2.5} />
                               </button>
                               <button
                                 onClick={(e) => handleDeleteSavedExam(exam.id, e)}

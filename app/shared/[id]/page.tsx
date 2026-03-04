@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { getExamById } from '../../actions/examActions';
-import { BookOpen, CheckCircle2, XCircle, BarChart2, Calendar, LayoutDashboard, Share2, Lightbulb } from 'lucide-react';
+import { BookOpen, CheckCircle2, XCircle, BarChart2, Calendar, LayoutDashboard, Share2, Lightbulb, Download } from 'lucide-react';
 import Link from 'next/link';
 
 interface Question {
@@ -285,7 +285,14 @@ export default function SharedExamPage({ params }: { params: { id: string } }) {
                         <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold uppercase tracking-wider">
                             Read-Only View
                         </span>
-                        <Link href="/" className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-bold hover:bg-slate-800 transition">
+                        <button
+                            onClick={() => window.open(`/print/${dbRecord?.id}`, '_blank')}
+                            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg text-sm font-bold hover:bg-slate-50 transition"
+                        >
+                            <Download className="w-4 h-4" />
+                            Download PDF
+                        </button>
+                        <Link href="/" className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-bold hover:bg-slate-800 transition hidden sm:flex">
                             Create Your Own
                         </Link>
                     </div>
