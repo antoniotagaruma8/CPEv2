@@ -54,24 +54,28 @@ function getPicsumUrl(seed: string): string {
 }
 
 // --- Keyword Variation Engine ---
-// Creates 4 different search angles from a single topic to ensure diverse results
+// Creates 4 different search angles from a single topic to ensure diverse, Cambridge-style results
+// Cambridge Speaking tests almost always use photos of *people* doing activities, interacting, or handling relatable lifestyles (not empty landscapes or objects)
 function generateQueryVariations(baseQuery: string): string[] {
   const words = baseQuery.trim().split(/\s+/);
-  const variations: string[] = [baseQuery]; // Original query
+  const variations: string[] = [];
 
+  // Always force human/lifestyle context
   if (words.length >= 2) {
-    // Variation 2: First word + "people"
-    variations.push(`${words[0]} people`);
-    // Variation 3: Last word + "outdoors"  
-    variations.push(`${words[words.length - 1]} outdoors`);
-    // Variation 4: First word + "close up"
-    variations.push(`${words[0]} close up`);
+    variations.push(`${baseQuery} people lifestyle`);      // Original concept + humans
+    variations.push(`people interacting ${words[0]}`);      // Focus on interaction
+    variations.push(`${words[words.length - 1]} activity candid`); // Focus on candid action
+    variations.push(`people discussing ${words[0]}`);       // Focus on conversation/discussion
   } else {
-    // Single word topic - add contextual modifiers
-    variations.push(`${baseQuery} people`);
-    variations.push(`${baseQuery} nature`);
-    variations.push(`${baseQuery} city`);
+    // Single word topic - add heavy contextual human modifiers
+    variations.push(`${baseQuery} people candid`);
+    variations.push(`lifestyle ${baseQuery} interacting`);
+    variations.push(`${baseQuery} everyday life people`);
+    variations.push(`two people ${baseQuery} activity`);
   }
+
+  // Fallback to original if needed
+  variations.push(baseQuery);
 
   return variations.slice(0, 4);
 }
@@ -83,7 +87,8 @@ export async function fetchStockImageAction(query: string, providerIndex?: numbe
   // --- Single Slot Reload ---
   if (providerIndex !== undefined && providerIndex >= 0 && providerIndex < 4) {
     // Use a randomly selected modifier so every reload click produces a different search
-    const modifiers = ['activity', 'lifestyle', 'scene', 'moment', 'view', 'landscape', 'portrait', 'street', 'building', 'food', 'work', 'family', 'friends', 'sunset', 'morning', 'night', 'crowd', 'alone', 'beach', 'mountain', 'park', 'office', 'home', 'celebration', 'group'];
+    // Focus heavily on verbs and situations for Cambridge-style interaction
+    const modifiers = ['interacting', 'lifestyle', 'discussion', 'active lifestyle', 'two people', 'candid', 'conversation', 'friends', 'colleagues', 'everyday life', 'casual', 'outdoors people', 'group activity', 'smiling people', 'sharing', 'learning together'];
     const randomModifier = modifiers[Math.floor(Math.random() * modifiers.length)];
     const reloadQuery = `${query} ${randomModifier}`;
     const seed = crypto.randomBytes(6).toString('hex');

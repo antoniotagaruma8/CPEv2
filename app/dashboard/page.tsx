@@ -2580,7 +2580,7 @@ export default function DashboardPage() {
               <div className="p-0 flex flex-col lg:flex-row h-full overflow-hidden w-full">
 
                 {/* LEFT PANE: Task Prompt & Images */}
-                <div className={`p-6 flex-1 flex flex-col border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800 w-full lg:w-1/2`}>
+                <div className={`p-6 flex-none flex flex-col border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800 w-full transition-all duration-700 ease-in-out ${isRecording ? 'lg:w-[75%]' : 'lg:w-[50%]'}`}>
                   <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex-1 overflow-y-auto custom-scrollbar flex flex-col">
                     <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-3 uppercase tracking-wider flex items-center gap-2 shrink-0">
                       Task Prompt
@@ -2629,23 +2629,23 @@ export default function DashboardPage() {
                 </div>
 
                 {/* RIGHT PANE: Recording & Assessment */}
-                <div className={`flex flex-col flex-[1.2] shrink-0 bg-white dark:bg-slate-900 overflow-y-auto custom-scrollbar relative`}>
+                <div className={`flex flex-col flex-none shrink-0 bg-white dark:bg-slate-900 overflow-y-auto custom-scrollbar relative transition-all duration-700 ease-in-out w-full ${isRecording ? 'lg:w-[25%]' : 'lg:w-[50%]'}`}>
 
                   {isRecording && (
                     <div className="p-6 flex flex-col items-center justify-center gap-6 py-12 md:py-24 h-full">
                       {/* Countdown Timer Ring */}
-                      <div className="relative flex items-center justify-center">
-                        <svg className="w-36 h-36 transform -rotate-90">
-                          <circle cx="72" cy="72" r="62" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-100 dark:text-slate-800" />
-                          <circle cx="72" cy="72" r="62" stroke="currentColor" strokeWidth="8" fill="transparent"
-                            strokeDasharray={389.56}
-                            strokeDashoffset={389.56 - (389.56 * (recordingTimeLeft / recordingMaxTime))}
+                      <div className="relative flex items-center justify-center transition-all duration-700">
+                        <svg className={`transform -rotate-90 transition-all duration-700 ${isRecording ? 'w-24 h-24 lg:w-28 lg:h-28' : 'w-36 h-36'}`}>
+                          <circle cx="50%" cy="50%" r="42%" stroke="currentColor" strokeWidth="8%" fill="transparent" className="text-slate-100 dark:text-slate-800" />
+                          <circle cx="50%" cy="50%" r="42%" stroke="currentColor" strokeWidth="8%" fill="transparent"
+                            strokeDasharray="264"
+                            strokeDashoffset={264 - (264 * (recordingTimeLeft / recordingMaxTime))}
                             strokeLinecap="round"
                             className={`transition-all duration-1000 ease-linear ${recordingTimeLeft > 30 ? 'text-green-500' : recordingTimeLeft > 10 ? 'text-amber-500' : 'text-red-500 animate-pulse'}`}
                           />
                         </svg>
                         <div className="absolute inset-0 flex flex-col items-center justify-center">
-                          <span className={`text-4xl font-black font-mono ${recordingTimeLeft > 30 ? 'text-green-600 dark:text-green-400' : recordingTimeLeft > 10 ? 'text-amber-600 dark:text-amber-400' : 'text-red-600 dark:text-red-400'}`}>
+                          <span className={`font-black font-mono transition-all duration-700 ${isRecording ? 'text-2xl lg:text-3xl' : 'text-4xl'} ${recordingTimeLeft > 30 ? 'text-green-600 dark:text-green-400' : recordingTimeLeft > 10 ? 'text-amber-600 dark:text-amber-400' : 'text-red-600 dark:text-red-400'}`}>
                             {Math.floor(recordingTimeLeft / 60)}:{String(recordingTimeLeft % 60).padStart(2, '0')}
                           </span>
                           <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">
