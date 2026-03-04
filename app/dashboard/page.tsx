@@ -409,6 +409,7 @@ export default function DashboardPage() {
   const [recordingImageUrls, setRecordingImageUrls] = useState<string[]>([]);
   const [loadedSetImages, setLoadedSetImages] = useState<Record<string, string[]>>({});
   const [generatedSetQuestions, setGeneratedSetQuestions] = useState<Record<string, string>>({});
+  const [generatedSetAnswers, setGeneratedSetAnswers] = useState<Record<string, string[]>>({});
   const [analyzingSet, setAnalyzingSet] = useState<Record<string, boolean>>({});
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
@@ -1698,6 +1699,15 @@ export default function DashboardPage() {
   const activeQuestionData = examQuestions.find(q => q.id === currentQuestion);
   const activePartData = examParts.find(p => p.part === activeQuestionData?.part);
 
+  const dynamicSet1Answers = generatedSetAnswers[`${currentQuestion}-set-1`] || [];
+  const dynamicSet2Answers = generatedSetAnswers[`${currentQuestion}-set-2`] || [];
+  const displayPossibleAnswers = (dynamicSet1Answers.length > 0 || dynamicSet2Answers.length > 0)
+    ? [
+      ...(dynamicSet1Answers.length > 0 ? ['--- Set 1 (Top Photos) Answers ---', ...dynamicSet1Answers] : []),
+      ...(dynamicSet2Answers.length > 0 ? ['--- Set 2 (Bottom Photos) Answers ---', ...dynamicSet2Answers] : [])
+    ]
+    : (activeQuestionData?.possibleAnswers || []);
+
   // --- SPEAKING TEST ASSESSMENT LOGIC ---
   const handleMicClick = (targetQuestionId: string, targetQuestionText: string, imagePrompts: string[] = []) => {
     const attempts = retryCount[targetQuestionId] || 0;
@@ -1776,8 +1786,8 @@ export default function DashboardPage() {
         });
 
         // Increment attempt count on successful assessment
-        setRetryCount(prev => {
-          const next = { ...prev };
+        setRetryCount((prev: Record<string, number>) => {
+          const next: Record<string, number> = { ...prev };
           next[targetQuestionId] = (prev[targetQuestionId] || 0) + 1;
           return next;
         });
@@ -1838,7 +1848,7 @@ export default function DashboardPage() {
         // Increment attempt count on successful assessment
         setRetryCount(prev => {
           const next = { ...prev };
-          next[targetQuestionId] = (next[targetQuestionId] || 0) + 1;
+          next[targetQuestionId] = (Number(next[targetQuestionId]) || 0) + 1;
           return next;
         });
       } else {
@@ -2179,6 +2189,9 @@ export default function DashboardPage() {
                                       analyzePhotosAction(urls, levelForAnalysis).then(result => {
                                         if (result.success && result.question) {
                                           setGeneratedSetQuestions(prev => ({ ...prev, [setKey]: result.question! }));
+                                          if (result.possibleAnswers && result.possibleAnswers.length > 0) {
+                                            setGeneratedSetAnswers(prev => ({ ...prev, [setKey]: result.possibleAnswers! }));
+                                          }
                                         }
                                         setAnalyzingSet(prev => ({ ...prev, [setKey]: false }));
                                       }).catch(() => {
@@ -2382,7 +2395,7 @@ export default function DashboardPage() {
                     )}
                   </div>
 
-                  {isSpeakingPart3 && (activeQuestionData.tips || (activeQuestionData.possibleAnswers && activeQuestionData.possibleAnswers.length > 0)) && (
+                  {isSpeakingPart3 && (activeQuestionData.tips || (displayPossibleAnswers && displayPossibleAnswers.length > 0)) && (
                     <div className="w-full space-y-4 pt-4 border-t border-gray-200 mt-2">
 
                       {activeQuestionData.tips && (
@@ -2414,7 +2427,7 @@ export default function DashboardPage() {
                         </div>
                       )}
 
-                      {activeQuestionData.possibleAnswers && activeQuestionData.possibleAnswers.length > 0 && (
+                      {displayPossibleAnswers && displayPossibleAnswers.length > 0 && (
                         <div className="p-4 bg-indigo-50 border-l-4 border-indigo-400 rounded-r-lg shadow-sm">
                           <div className="flex justify-between items-center mb-2">
                             <h4 className="font-bold text-indigo-800 flex items-center gap-2">
@@ -2424,14 +2437,14 @@ export default function DashboardPage() {
                               <button
                                 onClick={() => setRevealedPossibleAnswers(prev => {
                                   const newSet = new Set(prev);
-                                  if (newSet.has(activeQuestionData.id)) newSet.delete(activeQuestionData.id);
-                                  else newSet.add(activeQuestionData.id);
+                                  if (newSet.has(activeQuestionData.id.toString())) newSet.delete(activeQuestionData.id.toString());
+                                  else newSet.add(activeQuestionData.id.toString());
                                   return newSet;
                                 })}
                                 className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-100 transition-colors"
-                                title={revealedPossibleAnswers.has(activeQuestionData.id) ? "Hide" : "Show"}
+                                title={revealedPossibleAnswers.has(activeQuestionData.id.toString()) ? "Hide" : "Show"}
                               >
-                                {revealedPossibleAnswers.has(activeQuestionData.id) ? (
+                                {revealedPossibleAnswers.has(activeQuestionData.id.toString()) ? (
                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
                                 ) : (
                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -2440,9 +2453,9 @@ export default function DashboardPage() {
                             ) : null}
                           </div>
                           {isAdmin || (retryCount[activeQuestionData.id.toString()] >= 2) ? (
-                            revealedPossibleAnswers.has(activeQuestionData.id) && (
+                            revealedPossibleAnswers.has(activeQuestionData.id.toString()) && (
                               <ul className="list-disc list-inside text-sm text-indigo-800 space-y-1 animate-fade-in">
-                                {activeQuestionData.possibleAnswers.map((ans, idx) => (
+                                {displayPossibleAnswers.map((ans, idx) => (
                                   <li key={idx} className="leading-relaxed">{ans}</li>
                                 ))}
                               </ul>
@@ -2458,7 +2471,7 @@ export default function DashboardPage() {
                   )}
                 </div>
 
-                {!isSpeakingPart3 && (activeQuestionData.tips || (activeQuestionData.possibleAnswers && activeQuestionData.possibleAnswers.length > 0)) && (
+                {!isSpeakingPart3 && (activeQuestionData.tips || (displayPossibleAnswers && displayPossibleAnswers.length > 0)) && (
                   <div className="space-y-4 animate-fade-in">
                     {activeQuestionData.tips && (
                       <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg shadow-sm">
@@ -2489,7 +2502,7 @@ export default function DashboardPage() {
                       </div>
                     )}
 
-                    {activeQuestionData.possibleAnswers && activeQuestionData.possibleAnswers.length > 0 && (
+                    {displayPossibleAnswers && displayPossibleAnswers.length > 0 && (
                       <div className="p-4 bg-indigo-50 border-l-4 border-indigo-400 rounded-r-lg shadow-sm">
                         <div className="flex justify-between items-center mb-2">
                           <h4 className="font-bold text-indigo-800 flex items-center gap-2">
@@ -2499,14 +2512,14 @@ export default function DashboardPage() {
                             <button
                               onClick={() => setRevealedPossibleAnswers(prev => {
                                 const newSet = new Set(prev);
-                                if (newSet.has(activeQuestionData.id)) newSet.delete(activeQuestionData.id);
-                                else newSet.add(activeQuestionData.id);
+                                if (newSet.has(activeQuestionData.id.toString())) newSet.delete(activeQuestionData.id.toString());
+                                else newSet.add(activeQuestionData.id.toString());
                                 return newSet;
                               })}
                               className="text-indigo-600 hover:text-indigo-800 p-1 rounded hover:bg-indigo-100 transition-colors"
-                              title={revealedPossibleAnswers.has(activeQuestionData.id) ? "Hide" : "Show"}
+                              title={revealedPossibleAnswers.has(activeQuestionData.id.toString()) ? "Hide" : "Show"}
                             >
-                              {revealedPossibleAnswers.has(activeQuestionData.id) ? (
+                              {revealedPossibleAnswers.has(activeQuestionData.id.toString()) ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
                               ) : (
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -2515,9 +2528,9 @@ export default function DashboardPage() {
                           ) : null}
                         </div>
                         {isAdmin || (retryCount[activeQuestionData.id.toString()] >= 2) ? (
-                          revealedPossibleAnswers.has(activeQuestionData.id) && (
+                          revealedPossibleAnswers.has(activeQuestionData.id.toString()) && (
                             <ul className="list-disc list-inside text-sm text-indigo-800 space-y-1 animate-fade-in">
-                              {activeQuestionData.possibleAnswers.map((ans, idx) => (
+                              {displayPossibleAnswers.map((ans, idx) => (
                                 <li key={idx} className="leading-relaxed">{ans}</li>
                               ))}
                             </ul>

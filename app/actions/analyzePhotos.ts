@@ -15,7 +15,7 @@ function getGenAI() {
 export async function analyzePhotosAction(
     imageUrls: string[],
     cefrLevel: string = 'B2'
-): Promise<{ success: boolean; question?: string; error?: string }> {
+): Promise<{ success: boolean; question?: string; possibleAnswers?: string[]; error?: string }> {
     if (!imageUrls || imageUrls.length < 2) {
         return { success: false, error: 'Need at least 2 image URLs' };
     }
@@ -50,32 +50,49 @@ export async function analyzePhotosAction(
 
         const model = getGenAI().getGenerativeModel({ model: 'gemini-1.5-flash' });
 
-        const prompt = `You are a Cambridge ${cefrLevel} Speaking exam interlocutor. Look at these two photographs carefully.
+        const prompt = `You are a Cambridge ${cefrLevel} Speaking exam interlocutor and evaluator. Look closely at these two photographs.
 
 Your task:
-1. Identify what each photo shows (subject, setting, mood, activity)
-2. Find a meaningful thematic connection between the two photos
-3. Generate ONE Cambridge-style Speaking Part 2 comparison question
+1. Identify what each photo shows (subject, setting, mood, activity).
+2. Find a meaningful thematic connection between the two photos.
+3. Generate ONE Cambridge-style Speaking Part 2 comparison question.
+4. Generate TWO distinct, high-quality candidate 'possible answers' (3-4 sentences each) that directly describe and compare the specific visual details seen in THESE two specific photos.
 
-The question MUST:
-- Start with "Here are your photographs. They show..."
-- Include a brief thematic link (e.g., "They show different ways people spend their free time")
-- End with a comparison task (e.g., "I'd like you to compare the photographs, and say which situation looks more enjoyable and why.")
-- Be natural and relevant to what's actually visible in the photos
-- Be 1-3 sentences maximum
+REQUIREMENTS:
+- The question MUST start with "Here are your photographs. They show..." and end with a comparison task (e.g., "I'd like you to compare the photographs, and say...").
+- The two possible answers MUST explicitly reference the visual elements in the photos (e.g. "In the first photo, I can see a woman reading a book on a crowded train, whereas the second photo shows...").
 
-Respond with ONLY the question text, nothing else. No quotes, no labels, no explanation.`;
+CRITICAL: You MUST respond ONLY with a valid JSON object matching this schema exactly:
+{
+  "question": "string",
+  "possibleAnswers": ["string", "string"]
+}
+Do not include markdown wrappers or any other text.`;
 
-        const result = await model.generateContent([prompt, ...validParts]);
+        const result = await model.generateContent([
+            prompt,
+            ...validParts,
+            { text: "Output JSON only." }
+        ]);
         const response = await result.response;
-        const question = response.text()?.trim();
+        const textResponse = response.text()?.trim().replace(/^```json\s*/i, '').replace(/```$/i, '');
 
-        if (!question) {
+        if (!textResponse) {
             return { success: false, error: 'Gemini returned empty response' };
         }
 
-        console.log(`[analyzePhotos] Generated question: "${question.substring(0, 100)}..."`);
-        return { success: true, question };
+        try {
+            const parsed = JSON.parse(textResponse);
+            console.log(`[analyzePhotos] Generated question & answers successfully.`);
+            return {
+                success: true,
+                question: parsed.question,
+                possibleAnswers: parsed.possibleAnswers
+            };
+        } catch (jsonErr) {
+            console.error('[analyzePhotos] JSON parse failed on:', textResponse);
+            return { success: false, error: 'Gemini did not return valid JSON' };
+        }
 
     } catch (error: any) {
         console.error('[analyzePhotos] Error:', error);
