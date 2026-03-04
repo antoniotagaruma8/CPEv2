@@ -1309,10 +1309,15 @@ export default function DashboardPage() {
                     })
                     .map((exam) => {
                       let examForLabel = null;
-                      try {
-                        const parsed = JSON.parse(exam.data);
-                        if (parsed.examFor) examForLabel = parsed.examFor;
-                      } catch (e) { }
+                      if (typeof exam.data === 'string') {
+                        const match = exam.data.match(/"examFor"\s*:\s*"([^"]+)"/);
+                        if (match && match[1]) {
+                          examForLabel = match[1];
+                        }
+                      } else if (exam.data && typeof exam.data === 'object') {
+                        // Fallback if data is already parsed
+                        examForLabel = exam.data.examFor || null;
+                      }
 
                       return (
                         <div
