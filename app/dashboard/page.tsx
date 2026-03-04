@@ -177,10 +177,19 @@ const AIImage = ({ prompt, indices = [0, 1, 2, 3] }: { prompt: string, indices?:
   const validIndices = indices.filter(idx => !!images[idx]);
 
   return (
-    <div className={`grid gap-3 ${validIndices.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-      {validIndices.map((providerIdx, i) => {
+    <div className="grid gap-3 grid-cols-2">
+      {indices.map((providerIdx) => {
         const url = images[providerIdx];
         const isReloading = reloadingIndex === providerIdx;
+
+        if (!url) {
+          return (
+            <div key={providerIdx} className="aspect-square rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/20 flex flex-col items-center justify-center gap-2">
+              <RefreshCcw className="w-5 h-5 text-slate-400" />
+              <button onClick={() => generate(providerIdx)} className="text-[10px] font-bold text-blue-600 hover:underline">Load Photo</button>
+            </div>
+          );
+        }
 
         return (
           <div key={providerIdx} className="group relative aspect-square overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-sm transition-all hover:shadow-md hover:scale-[1.01]">
