@@ -23,23 +23,35 @@ export default function OnboardingTour() {
     const steps: Step[] = [
         {
             target: '#generator-section',
-            content: 'Here you can customize and generate your mock exam. Select the skill, level, and optional topics to get started.',
+            content: '🚀 This is where the magic happens! Select your target CEFR level, choose a skill (Reading, Writing, Listening, or Speaking), and optionally add a theme to generate a tailored mock exam.',
             disableBeacon: true,
             placement: 'bottom',
         },
         {
             target: '#saved-exams-section',
-            content: 'Access all your previously generated and attempted exams right here. You can review feedback or resume tests anytime.',
-            placement: 'left',
+            content: '📚 All your hard work is saved here. You can revisit past attempts, check your scores, and even share your results with a public link.',
+            placement: 'right',
         },
         {
             target: '#progress-tracking-section',
-            content: 'Track your overall accuracy, skills progress, and weekly goals to see your improvement over time.',
+            content: '📈 Visualize your growth! Track your accuracy across different skills and stay motivated with your weekly goals.',
             placement: 'left',
         },
         {
             target: '#user-settings-section',
-            content: 'Change your theme, manage account settings, and review the guide. Click the Help icon to restart this tour.',
+            content: (
+                <div className="text-center">
+                    <p className="mb-3">🌓 Switch between Dark and Classic modes, manage your subscription, or restart this tour anytime by clicking the Help icon.</p>
+                    <hr className="my-2 opacity-20" />
+                    <p className="font-bold text-blue-600">Want more details?</p>
+                    <a
+                        href="/how-to-use"
+                        className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors"
+                    >
+                        View Full Guide →
+                    </a>
+                </div>
+            ),
             placement: 'bottom-end'
         },
     ];

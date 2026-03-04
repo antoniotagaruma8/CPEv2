@@ -440,6 +440,7 @@ export default function DashboardPage() {
       // Only try to load if we don't have a new one coming in
       const cached = localStorage.getItem(STORAGE_KEY);
       if (cached) {
+        console.log("DEBUG: [Dashboard] Found cached exam in localStorage, length:", cached.length);
         activeExamData = cached;
       }
     }
@@ -510,14 +511,29 @@ export default function DashboardPage() {
       }
 
       try {
-        const rawData = JSON.parse(activeExamData);
+        let rawData;
+        try {
+          rawData = typeof activeExamData === 'string' ? JSON.parse(activeExamData) : activeExamData;
+        } catch (e) {
+          console.error("DEBUG: [Dashboard] Initial JSON parse failed:", e);
+          rawData = activeExamData;
+        }
+
         let data: any;
         let processedData = rawData;
 
         // Handle wrapper object from saved exams (contains answers and score)
-        if (processedData && typeof processedData === 'object' && processedData.content) {
-          // Restore answers if available
-          if (processedData.answers) setAnswers(processedData.answers);
+        // Repeatable unwrap in case of double-wrapping
+        let safetyCounter = 0;
+        while (processedData && typeof processedData === 'object' && processedData.content && safetyCounter < 3) {
+          console.log(`DEBUG: [Dashboard] Unwrapping container (level ${safetyCounter + 1}). Content type:`, typeof processedData.content);
+
+          // Restore answers if available in ANY layer
+          if (processedData.answers) {
+            console.log("DEBUG: [Dashboard] Restoring answers from wrapper");
+            setAnswers(processedData.answers);
+          }
+          if (processedData.scores) setScores(processedData.scores);
 
           // Restore metadata if available and not currently generating a new exam
           if (!generatedExam) {
@@ -528,7 +544,9 @@ export default function DashboardPage() {
           }
 
           // Use the inner content for exam generation
-          processedData = typeof processedData.content === 'string' ? JSON.parse(processedData.content) : processedData.content;
+          const innerContent = processedData.content;
+          processedData = typeof innerContent === 'string' ? JSON.parse(innerContent) : innerContent;
+          safetyCounter++;
         }
 
         // Drill down if we have a single-key object wrapper like {"Writing": ...} or similar
@@ -898,44 +916,62 @@ export default function DashboardPage() {
   };
 
   const handleLoadSavedExam = (exam: any) => {
-    if (confirm(`Load "${exam.topic}" exam? This will overwrite any current active exam.`)) {
-      // Check if data is JSON and has content/answers wrapper
+    if (!exam || !exam.data) {
+      console.error("No exam data to load", exam);
+      return;
+    }
+
+    if (confirm(`Load "${exam.topic || 'Untitled'}" exam? This will overwrite any current active exam.`)) {
+      console.log("DEBUG: [Dashboard] Loading saved exam:", exam.id);
+
       try {
-        let parsed = JSON.parse(exam.data);
+        let parsed;
+        if (typeof exam.data === 'string') {
+          try {
+            parsed = JSON.parse(exam.data);
+          } catch (e) {
+            console.warn("DEBUG: [Dashboard] exam.data is string but not valid JSON, using as-is", e);
+            parsed = exam.data;
+          }
+        } else {
+          parsed = exam.data;
+        }
 
         // Ensure metadata is present in the stored object
-        if (!parsed.type) parsed.type = exam.type;
-        if (!parsed.level) parsed.level = exam.level;
-        if (!parsed.topic) parsed.topic = exam.topic;
+        if (typeof parsed === 'object' && parsed !== null) {
+          if (!parsed.type) parsed.type = exam.type;
+          if (!parsed.level) parsed.level = exam.level;
+          if (!parsed.topic) parsed.topic = exam.topic;
+          if (!parsed.examFor) parsed.examFor = exam.examFor;
+        }
 
-        // If it's a raw content object (old format), wrap it
-        if (!parsed.content) {
-          parsed = {
-            content: exam.data,
+        // If it was already wrapped (from a previous save), we just store it
+        // If it was NOT wrapped (raw content from DB), wrap it now for the loader
+        let finalToSave = parsed;
+        if (typeof parsed !== 'object' || !parsed.content) {
+          console.log("DEBUG: [Dashboard] Wrapping raw exam content for storage");
+          finalToSave = {
+            content: exam.data, // original data
             type: exam.type,
             level: exam.level,
             topic: exam.topic,
+            examFor: exam.examFor,
             answers: {}
           };
         }
 
         try {
-          localStorage.setItem('cpe_exam_data_backup', JSON.stringify(parsed));
+          localStorage.setItem('cpe_exam_data_backup', JSON.stringify(finalToSave));
+          console.log("DEBUG: [Dashboard] Saved to localStorage, reloading...");
+          window.location.reload();
         } catch (e) {
-          console.warn('Failed to save loaded exam to localStorage (QuotaExceeded):', e);
+          console.error('Failed to save loaded exam to localStorage (QuotaExceeded):', e);
+          alert("Could NOT load this exam: Your browser's storage is full. Please try deleting some old records first.");
         }
       } catch (e) {
-        // Fallback for non-JSON data
-        try {
-          localStorage.setItem('cpe_exam_data_backup', JSON.stringify({
-            content: exam.data,
-            type: exam.type,
-            level: exam.level,
-            topic: exam.topic
-          }));
-        } catch (ignore) { }
+        console.error("Critical failure during handleLoadSavedExam", e);
+        alert("An error occurred while preparing to load this exam.");
       }
-      window.location.reload();
     }
   };
 
