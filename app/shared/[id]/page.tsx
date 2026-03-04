@@ -2,8 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { getExamById } from '../../actions/examActions';
+import { isUserTeacher } from '../../actions/teacherActions';
 import { BookOpen, CheckCircle2, XCircle, BarChart2, Calendar, LayoutDashboard, Share2, Lightbulb, Download } from 'lucide-react';
 import Link from 'next/link';
+import { useSession, SessionProvider } from 'next-auth/react';
 
 interface Question {
     id: number;
@@ -26,13 +28,26 @@ interface ExamPart {
 }
 
 export default function SharedExamPage({ params }: { params: Promise<{ id: string }> }) {
+    return (
+        <SessionProvider>
+            <SharedExamContent params={params} />
+        </SessionProvider>
+    );
+}
+
+function SharedExamContent({ params }: { params: Promise<{ id: string }> }) {
     const resolvedParams = React.use(params);
+    const { data: session } = useSession();
+    const adminEmails = ['antoniotagaruma8@gmail.com', 'lloydsntos@gmail.com', 'admin@cefr-mock-exams.com'];
+    const isAdmin = !!(session?.user?.email && adminEmails.includes(session.user.email));
+
     const [dbRecord, setDbRecord] = useState<any>(null);
     const [examData, setExamData] = useState<any>(null);
     const [examParts, setExamParts] = useState<ExamPart[]>([]);
     const [examQuestions, setExamQuestions] = useState<Question[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const [isTeacher, setIsTeacher] = useState(false);
 
     // Reused parsing logic for robustness
     const parseExamData = (activeExamData: string) => {
@@ -207,6 +222,11 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
                 setExamParts(extracted.parts);
                 setExamQuestions(extracted.questions);
 
+                if (session?.user?.email) {
+                    const teacherStatus = await isUserTeacher(session.user.email);
+                    setIsTeacher(teacherStatus);
+                }
+
             } catch (err) {
                 setError('An error occurred while loading this exam.');
             } finally {
@@ -284,6 +304,27 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
         }
     };
 
+    const renderListeningPart = (part: any) => {
+        return part.questions.map((q: any) => (
+            <div key={q.id} className="mb-6 pb-6 border-b border-slate-100 last:border-0 last:mb-0 last:pb-0">
+                <p className="mb-3 whitespace-pre-wrap">{q.question}</p>
+                {q.options && (
+                    <div className="space-y-3">
+                        {q.options.map((opt: any, oIdx: any) => {
+                            const eq = examQuestions.find((eq: any) => eq.part === part.part && eq.id === q.id);
+                            return (
+                                <div key={oIdx} className="flex gap-2 items-start">
+                                    <span className="font-bold uppercase min-w-[1.5rem]">{String.fromCharCode(65 + oIdx)}</span>
+                                    <span>{opt}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
+            </div>
+        ));
+    };
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-20">
             {/* Header */}
@@ -320,13 +361,15 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
                             <Share2 className="w-4 h-4" />
                             Share
                         </button>
-                        <button
-                            onClick={() => window.open(`/print/${dbRecord?.id}`, '_blank')}
-                            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg text-sm font-bold hover:bg-slate-50 transition"
-                        >
-                            <Download className="w-4 h-4" />
-                            Download PDF
-                        </button>
+                        {(isAdmin || isTeacher) && (
+                            <button
+                                onClick={() => window.open(`/print/${dbRecord?.id}`, '_blank')}
+                                className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg text-sm font-bold hover:bg-slate-50 transition"
+                            >
+                                <Download className="w-4 h-4" />
+                                Download PDF
+                            </button>
+                        )}
                         <Link href="/" className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-bold hover:bg-slate-800 transition hidden sm:flex">
                             Create Your Own
                         </Link>
@@ -409,9 +452,15 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
                                         </div>
                                     )}
 
-                                    {partQuestions.length > 0 && (
+                                    {dbRecord.type === 'Listening' && partQuestions.length > 0 && (
                                         <div className="space-y-6">
-                                            {partQuestions.map((q, qIndex) => (
+                                            {renderListeningPart(part)}
+                                        </div>
+                                    )}
+
+                                    {dbRecord.type !== 'Listening' && partQuestions.length > 0 && (
+                                        <div className="space-y-6">
+                                            {partQuestions.map((q: any, qIndex: any) => (
                                                 <div key={q.id} className="text-base break-inside-avoid shadow-none">
                                                     <div className="flex gap-4">
                                                         <span className="font-bold min-w-[2rem]">{examQuestions.findIndex(eq => eq.id === q.id) + 1}.</span>
@@ -420,7 +469,7 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
 
                                                             {q.options && q.options.length > 0 && (
                                                                 <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-2 ml-4">
-                                                                    {q.options.map((opt, oIdx) => (
+                                                                    {q.options.map((opt: any, oIdx: any) => (
                                                                         <div key={oIdx} className="flex gap-2 items-start">
                                                                             <span className="font-bold uppercase min-w-[1.5rem]">{String.fromCharCode(65 + oIdx)}</span>
                                                                             <span>{opt}</span>

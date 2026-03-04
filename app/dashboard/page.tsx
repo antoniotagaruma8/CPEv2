@@ -17,7 +17,8 @@ import { assessSpeakingAction } from '../actions/assessSpeaking';
 import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
-import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw } from 'lucide-react';
+import { isUserTeacher, activateTeacherStatus } from '../actions/teacherActions';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw, GraduationCap } from 'lucide-react';
 import html2canvas from 'html2canvas';
 
 interface Question {
@@ -331,6 +332,36 @@ export default function DashboardPage() {
   const [checkoutBanner, setCheckoutBanner] = useState<'success' | 'canceled' | null>(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
+
+  const [isTeacher, setIsTeacher] = useState(false);
+  const [isTeacherModalOpen, setIsTeacherModalOpen] = useState(false);
+  const [teacherCode, setTeacherCode] = useState('');
+  const [teacherStatusMsg, setTeacherStatusMsg] = useState('');
+
+  useEffect(() => {
+    if (session?.user?.email) {
+      isUserTeacher(session.user.email).then(status => {
+        setIsTeacher(status);
+      });
+    }
+  }, [session?.user?.email]);
+
+  const handleActivateTeacher = async () => {
+    if (!session?.user?.email) return;
+    setTeacherStatusMsg('Verifying code...');
+    const result = await activateTeacherStatus(session.user.email, teacherCode);
+    if (result.success) {
+      setIsTeacher(true);
+      setTeacherStatusMsg('Success! Teacher features are now active.');
+      setTimeout(() => {
+        setIsTeacherModalOpen(false);
+        setTeacherStatusMsg('');
+        setTeacherCode('');
+      }, 2000);
+    } else {
+      setTeacherStatusMsg(result.error || 'Failed to activate.');
+    }
+  };
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -1602,6 +1633,12 @@ export default function DashboardPage() {
                 </div>
               )}
             </div>
+            {!isTeacher && !isAdmin && (
+              <button onClick={() => setIsTeacherModalOpen(true)} className="p-2 sm:px-3 sm:py-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-800/50 transition-all shadow-sm flex items-center gap-2" title="Teacher Access">
+                <GraduationCap className="w-4 h-4" />
+                <span className="hidden sm:inline text-sm font-bold">Teacher Access</span>
+              </button>
+            )}
             <button onClick={() => signOut({ callbackUrl: '/' })} className="p-2 sm:px-3 sm:py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-red-500 hover:border-red-200 dark:hover:border-red-800 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all shadow-sm flex items-center gap-2" title="Sign Out">
               <LogOut className="w-4 h-4" />
               <span className="hidden sm:inline text-sm font-bold">Sign Out</span>
@@ -1658,16 +1695,18 @@ export default function DashboardPage() {
                               >
                                 <Share2 className="w-4 h-4" strokeWidth={2.5} />
                               </button>
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  window.open(`/print/${exam.id}`, '_blank');
-                                }}
-                                className="text-slate-400 hover:text-green-600 transition-colors p-1"
-                                title="Download as PDF"
-                              >
-                                <Download className="w-4 h-4" strokeWidth={2.5} />
-                              </button>
+                              {(isAdmin || isTeacher) && (
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.open(`/print/${exam.id}`, '_blank');
+                                  }}
+                                  className="text-slate-400 hover:text-green-600 transition-colors p-1"
+                                  title="Download as PDF"
+                                >
+                                  <Download className="w-4 h-4" strokeWidth={2.5} />
+                                </button>
+                              )}
                               <button
                                 onClick={(e) => handleDeleteSavedExam(exam.id, e)}
                                 className="text-slate-400 hover:text-red-500 transition-colors p-1"
@@ -1990,7 +2029,11 @@ export default function DashboardPage() {
           next[targetQuestionId] = (prev[targetQuestionId] ?? 0) + 1;
           return next;
         });
-        setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
+        setScores(prev => {
+          const newScores: Record<string, number> = { ...prev };
+          newScores[targetQuestionId] = result.score as number;
+          return newScores;
+        });
       } else {
         alert(result.error || 'Failed to assess audio.');
       }
@@ -2042,7 +2085,11 @@ export default function DashboardPage() {
 
         // Save the written content to answers object so it isn't lost
         setAnswers(prev => ({ ...prev, [targetQuestionId]: writingContent }));
-        setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
+        setScores(prev => {
+          const newScores: Record<string, number> = { ...prev };
+          newScores[targetQuestionId] = result.score as number;
+          return newScores;
+        });
 
         // Increment attempt count on successful assessment
         setRetryCount(prev => {
@@ -3347,6 +3394,60 @@ export default function DashboardPage() {
           </button>
         </div>
       </footer>
+
+      {isTeacherModalOpen && (
+        <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative animate-spring-up overflow-hidden">
+            <button
+              onClick={() => setIsTeacherModalOpen(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="mb-6 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 rounded-2xl flex items-center justify-center mb-4">
+                <GraduationCap className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-800 dark:text-white">Activate Teacher Tools</h2>
+              <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
+                Enter your Teacher Access Code to unlock PDF printables and educator features.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Enter Access Code..."
+                  value={teacherCode}
+                  onChange={(e) => setTeacherCode(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-center tracking-widest uppercase"
+                />
+              </div>
+
+              {teacherStatusMsg && (
+                <div className={`p-3 rounded-lg text-sm text-center font-semibold ${teacherStatusMsg.includes('Success') || teacherStatusMsg.includes('Already') ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' : teacherStatusMsg.includes('Checking') || teacherStatusMsg.includes('Verifying') ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400' : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'}`}>
+                  {teacherStatusMsg}
+                </div>
+              )}
+
+              <button
+                onClick={handleActivateTeacher}
+                disabled={!teacherCode || teacherStatusMsg.includes('Verifying')}
+                className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-indigo-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {teacherStatusMsg.includes('Verifying') ? 'Verifying...' : 'Activate Account'}
+              </button>
+            </div>
+
+            <p className="text-xs text-center text-slate-500 dark:text-slate-500 mt-6">
+              If you believe you should have access, please contact the administrator for your code.
+            </p>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
