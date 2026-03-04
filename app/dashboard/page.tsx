@@ -6,6 +6,7 @@ import { useExam } from './ExamContext';
 import CliLoader from '../../components/CliLoader';
 import OnboardingTour from '../../components/OnboardingTour';
 import { fetchStockImageAction } from '../actions/fetchStockImage';
+import { analyzePhotosAction } from '../actions/analyzePhotos';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { saveExam, getSavedExams, deleteSavedExam, getExamById } from '../actions/examActions';
@@ -407,6 +408,8 @@ export default function DashboardPage() {
   const [recordingImagePrompts, setRecordingImagePrompts] = useState<string[]>([]);
   const [recordingImageUrls, setRecordingImageUrls] = useState<string[]>([]);
   const [loadedSetImages, setLoadedSetImages] = useState<Record<string, string[]>>({});
+  const [generatedSetQuestions, setGeneratedSetQuestions] = useState<Record<string, string>>({});
+  const [analyzingSet, setAnalyzingSet] = useState<Record<string, boolean>>({});
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
 
@@ -2104,6 +2107,7 @@ export default function DashboardPage() {
                           const isRevealed = !!revealedImageSets[setKey];
                           const primaryPrompt = activeQuestionData.topic || "Speaking Subject";
                           const indices = setId === 1 ? [0, 1] : [2, 3];
+                          const levelForAnalysis = cefrLevel || 'B2';
 
                           return (
                             <div key={setId} className="bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm transition-all">
@@ -2125,7 +2129,35 @@ export default function DashboardPage() {
 
                               {isRevealed && (
                                 <div className="animate-fade-in mb-4">
-                                  <AIImage prompt={primaryPrompt} indices={indices} onImagesLoaded={(urls) => setLoadedSetImages(prev => ({ ...prev, [setKey]: urls }))} />
+                                  <AIImage prompt={primaryPrompt} indices={indices} onImagesLoaded={(urls) => {
+                                    setLoadedSetImages(prev => ({ ...prev, [setKey]: urls }));
+                                    // Trigger AI photo analysis to generate a relevant question
+                                    if (!generatedSetQuestions[setKey] && urls.length >= 2) {
+                                      setAnalyzingSet(prev => ({ ...prev, [setKey]: true }));
+                                      analyzePhotosAction(urls, levelForAnalysis).then(result => {
+                                        if (result.success && result.question) {
+                                          setGeneratedSetQuestions(prev => ({ ...prev, [setKey]: result.question! }));
+                                        }
+                                        setAnalyzingSet(prev => ({ ...prev, [setKey]: false }));
+                                      }).catch(() => {
+                                        setAnalyzingSet(prev => ({ ...prev, [setKey]: false }));
+                                      });
+                                    }
+                                  }} />
+                                </div>
+                              )}
+
+                              {/* AI-Generated Question for this set */}
+                              {generatedSetQuestions[setKey] && (
+                                <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 rounded-xl">
+                                  <p className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-1">Task</p>
+                                  <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed">{generatedSetQuestions[setKey]}</p>
+                                </div>
+                              )}
+                              {analyzingSet[setKey] && (
+                                <div className="mb-4 p-3 bg-slate-50 dark:bg-slate-800/30 rounded-xl flex items-center gap-2">
+                                  <Loader2 className="w-4 h-4 text-blue-500 animate-spin" />
+                                  <p className="text-xs text-slate-500 dark:text-slate-400">Analyzing photos to generate a relevant question...</p>
                                 </div>
                               )}
 
@@ -2135,15 +2167,18 @@ export default function DashboardPage() {
                                 </p>
                                 <button
                                   onClick={() => {
-                                    const cambridgePrompt = `Here are your photographs. I'd like you to compare the photographs, and say ${setId === 1 ? 'which shows a more positive experience.' : 'how the people might be feeling in each situation.'}`;
+                                    const question = generatedSetQuestions[setKey] || `Here are your photographs. I'd like you to compare the photographs, and say ${setId === 1 ? 'which shows a more positive experience.' : 'how the people might be feeling in each situation.'}`;
                                     setRecordingImageUrls(loadedSetImages[setKey] || []);
-                                    handleMicClick(setKey, cambridgePrompt);
+                                    handleMicClick(setKey, question);
                                   }}
+                                  disabled={analyzingSet[setKey]}
                                   className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold font-mono shadow-md transition-all transform hover:scale-[1.03] w-full md:w-auto justify-center
-                                     ${isRecording && recordingQuestionId === setKey ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+                                     ${isRecording && recordingQuestionId === setKey ? 'bg-red-500 text-white animate-pulse' : analyzingSet[setKey] ? 'bg-slate-400 cursor-not-allowed text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                                 >
                                   {isRecording && recordingQuestionId === setKey ? (
                                     <><div className="w-3 h-3 bg-white rounded-sm"></div> Recording...</>
+                                  ) : analyzingSet[setKey] ? (
+                                    <><Loader2 className="w-4 h-4 animate-spin" /> Analyzing...</>
                                   ) : (
                                     <><Mic className="w-4 h-4" /> Record Set {setId}</>
                                   )}
