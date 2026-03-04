@@ -97,15 +97,15 @@ export async function fetchStockImageAction(query: string, providerIndex?: numbe
   }
 
   const results = await Promise.all(fetchers.map(f => f()));
-  const validImages = results.filter((url): url is string => url !== null);
+  const totalFound = results.filter(url => url !== null).length;
 
-  if (validImages.length > 0) {
-    console.log(`Found ${validImages.length} stock image options for ${query}`);
-    return { success: true, imageOptions: validImages };
+  if (totalFound > 0) {
+    console.log(`Initial search: Found ${totalFound} stock images`);
+    return { success: true, imageOptions: results as string[] }; // Keep nulls in the array for index matching
   }
 
   return {
     success: false,
-    error: `No stock images found for "${query}" across 4 providers. Please try a more general description.`
+    error: `No stock images found for "${query}". Please try a more general description.`
   };
 }

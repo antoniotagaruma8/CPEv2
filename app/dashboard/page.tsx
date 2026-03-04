@@ -174,16 +174,16 @@ const AIImage = ({ prompt, indices = [0, 1, 2, 3] }: { prompt: string, indices?:
     );
   }
 
-  const displayedImages = images.filter((_, i) => indices.includes(i));
+  const validIndices = indices.filter(idx => !!images[idx]);
 
   return (
-    <div className={`grid gap-3 ${displayedImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-      {displayedImages.map((url, i) => {
-        const providerIdx = indices[i];
+    <div className={`grid gap-3 ${validIndices.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+      {validIndices.map((providerIdx, i) => {
+        const url = images[providerIdx];
         const isReloading = reloadingIndex === providerIdx;
 
         return (
-          <div key={i} className="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-sm transition-all hover:shadow-md hover:scale-[1.01]">
+          <div key={providerIdx} className="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-sm transition-all hover:shadow-md hover:scale-[1.01]">
             <img
               src={url}
               alt={`Stock photo ${providerIdx + 1}`}
