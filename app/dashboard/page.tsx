@@ -424,6 +424,7 @@ export default function DashboardPage() {
 
     if (activeExamData) {
       // Save with metadata to persist state on refresh
+      // NOTE: We try to save a backup, but if it fails (QuotaExceeded), we just continue in-memory.
       const dataToSave = {
         content: activeExamData,
         type: examType,
@@ -434,25 +435,31 @@ export default function DashboardPage() {
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave));
       } catch (e) {
-        console.warn('Failed to save exam to localStorage (QuotaExceeded):', e);
+        // Only warn once
+        if (!(window as any).__ls_quota_warned) {
+          console.warn('LocalStorage Quota Exceeded. Active exam will not persist across browser refreshes.');
+          (window as any).__ls_quota_warned = true;
+        }
       }
     } else if (typeof window !== 'undefined') {
       // Only try to load if we don't have a new one coming in
       const cached = localStorage.getItem(STORAGE_KEY);
       if (cached) {
-        console.log("DEBUG: [Dashboard] Found cached exam in localStorage, length:", cached.length);
         activeExamData = cached;
       }
     }
 
     if (activeExamData) {
-      console.log("DEBUG: [Dashboard] Processing activeExamData...");
-      try {
-        const parsedPreview = JSON.parse(activeExamData);
-        console.log("DEBUG: [Dashboard] Parsed structure keys:", Object.keys(parsedPreview));
-        if (parsedPreview.parts) console.log("DEBUG: [Dashboard] Parts length:", parsedPreview.parts.length);
-      } catch (e) {
-        console.error("DEBUG: [Dashboard] Failed to parse activeExamData as JSON:", e);
+      // Basic structure validation for console/debugging (minimized)
+      if (activeExamData.length > 100000) {
+        // Don't log or deep-parse huge strings here, just note the size
+      } else {
+        try {
+          const parsedPreview = JSON.parse(activeExamData);
+          if (parsedPreview.parts) {
+            // Valid structure
+          }
+        } catch (e) { }
       }
 
       // Reset all exam-specific state when a new exam is generated
@@ -526,11 +533,8 @@ export default function DashboardPage() {
         // Repeatable unwrap in case of double-wrapping
         let safetyCounter = 0;
         while (processedData && typeof processedData === 'object' && processedData.content && safetyCounter < 3) {
-          console.log(`DEBUG: [Dashboard] Unwrapping container (level ${safetyCounter + 1}). Content type:`, typeof processedData.content);
-
           // Restore answers if available in ANY layer
           if (processedData.answers) {
-            console.log("DEBUG: [Dashboard] Restoring answers from wrapper");
             setAnswers(processedData.answers);
           }
           if (processedData.scores) setScores(processedData.scores);
@@ -916,13 +920,10 @@ export default function DashboardPage() {
   };
 
   const handleLoadSavedExam = (exam: any) => {
-    if (!exam || !exam.data) {
-      console.error("No exam data to load", exam);
-      return;
-    }
+    if (!exam || !exam.data) return;
 
     if (confirm(`Load "${exam.topic || 'Untitled'}" exam? This will overwrite any current active exam.`)) {
-      console.log("DEBUG: [Dashboard] Loading saved exam:", exam.id);
+      setIsLoaderVisible(true);
 
       try {
         let parsed;
@@ -930,47 +931,59 @@ export default function DashboardPage() {
           try {
             parsed = JSON.parse(exam.data);
           } catch (e) {
-            console.warn("DEBUG: [Dashboard] exam.data is string but not valid JSON, using as-is", e);
-            parsed = exam.data;
+            parsed = { content: exam.data };
           }
         } else {
           parsed = exam.data;
         }
 
-        // Ensure metadata is present in the stored object
-        if (typeof parsed === 'object' && parsed !== null) {
-          if (!parsed.type) parsed.type = exam.type;
-          if (!parsed.level) parsed.level = exam.level;
-          if (!parsed.topic) parsed.topic = exam.topic;
-          if (!parsed.examFor) parsed.examFor = exam.examFor;
-        }
+        // Direct state update (Avoids reload and localStorage quota issues)
+        const finalContent = parsed.content || exam.data;
 
-        // If it was already wrapped (from a previous save), we just store it
-        // If it was NOT wrapped (raw content from DB), wrap it now for the loader
-        let finalToSave = parsed;
-        if (typeof parsed !== 'object' || !parsed.content) {
-          console.log("DEBUG: [Dashboard] Wrapping raw exam content for storage");
-          finalToSave = {
-            content: exam.data, // original data
-            type: exam.type,
-            level: exam.level,
-            topic: exam.topic,
-            examFor: exam.examFor,
-            answers: {}
-          };
-        }
+        // Use a small delay to allow loader to show and prevent UI freeze
+        setTimeout(() => {
+          // Set primary exam data
+          setGeneratedExam(finalContent);
 
-        try {
-          localStorage.setItem('cpe_exam_data_backup', JSON.stringify(finalToSave));
-          console.log("DEBUG: [Dashboard] Saved to localStorage, reloading...");
-          window.location.reload();
-        } catch (e) {
-          console.error('Failed to save loaded exam to localStorage (QuotaExceeded):', e);
-          alert("Could NOT load this exam: Your browser's storage is full. Please try deleting some old records first.");
-        }
+          // Set metadata
+          if (parsed.type || exam.type) setExamType(parsed.type || exam.type);
+          if (parsed.level || exam.level) setCefrLevel(parsed.level || exam.level);
+          if (parsed.topic || exam.topic) setTopic(parsed.topic || exam.topic);
+          if (parsed.examFor || exam.examFor) setExamFor(parsed.examFor || exam.examFor);
+
+          // Restore associated states if they exist in the saved object
+          if (parsed.answers) setAnswers(parsed.answers);
+          if (parsed.scores) setScores(parsed.scores);
+          if (parsed.scores && Object.keys(parsed.scores).length > 0) {
+            // If it has scores, it's probably finished
+            // setIsFinished(true); // If we had this state in context
+          }
+
+          // Reset navigation
+          setCurrentQuestion(1);
+          setIsLoaderVisible(false);
+
+          // Backup to localStorage (best effort only)
+          try {
+            const STORAGE_KEY = 'cpe_exam_data_backup';
+            const dataToSave = {
+              content: finalContent,
+              type: parsed.type || exam.type,
+              level: parsed.level || exam.level,
+              topic: parsed.topic || exam.topic,
+              examFor: parsed.examFor || exam.examFor,
+              answers: parsed.answers || {}
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave));
+          } catch (quotaError) {
+            console.warn("Could not backup loaded exam to localStorage (size too large)");
+          }
+        }, 500);
+
       } catch (e) {
         console.error("Critical failure during handleLoadSavedExam", e);
-        alert("An error occurred while preparing to load this exam.");
+        setIsLoaderVisible(false);
+        alert("An error occurred while loading this exam.");
       }
     }
   };
