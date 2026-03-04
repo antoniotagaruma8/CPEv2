@@ -183,7 +183,7 @@ const AIImage = ({ prompt, indices = [0, 1, 2, 3] }: { prompt: string, indices?:
         const isReloading = reloadingIndex === providerIdx;
 
         return (
-          <div key={providerIdx} className="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-sm transition-all hover:shadow-md hover:scale-[1.01]">
+          <div key={providerIdx} className="group relative aspect-square overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-sm transition-all hover:shadow-md hover:scale-[1.01]">
             <img
               src={url}
               alt={`Stock photo ${providerIdx + 1}`}
