@@ -31,7 +31,7 @@ export async function saveExam(exam: any, userEmail: string) {
 export async function getSavedExams(userEmail: string) {
   const { data, error } = await supabase
     .from('exams')
-    .select('*')
+    .select('id, created_at, type, level, topic, is_favorite')
     .eq('user_email', userEmail)
     .order('created_at', { ascending: false })
 

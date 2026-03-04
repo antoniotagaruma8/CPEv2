@@ -919,66 +919,70 @@ export default function DashboardPage() {
     window.location.reload();
   };
 
-  const handleLoadSavedExam = (exam: any) => {
-    if (!exam || !exam.data) return;
+  const handleLoadSavedExam = async (exam: any) => {
+    if (!exam) return;
 
     if (confirm(`Load "${exam.topic || 'Untitled'}" exam? This will overwrite any current active exam.`)) {
       setIsLoaderVisible(true);
 
       try {
+        let fullExam = exam;
+
+        // If data is missing (due to optimization), fetch it now
+        if (!exam.data) {
+          const fetched = await getExamById(exam.id);
+          if (!fetched || !fetched.data) {
+            throw new Error("Could not retrieve exam data");
+          }
+          fullExam = fetched;
+        }
+
         let parsed;
-        if (typeof exam.data === 'string') {
+        if (typeof fullExam.data === 'string') {
           try {
-            parsed = JSON.parse(exam.data);
+            parsed = JSON.parse(fullExam.data);
           } catch (e) {
-            parsed = { content: exam.data };
+            parsed = { content: fullExam.data };
           }
         } else {
-          parsed = exam.data;
+          parsed = fullExam.data;
         }
 
         // Direct state update (Avoids reload and localStorage quota issues)
-        const finalContent = parsed.content || exam.data;
+        const finalContent = parsed.content || fullExam.data;
 
-        // Use a small delay to allow loader to show and prevent UI freeze
-        setTimeout(() => {
-          // Set primary exam data
-          setGeneratedExam(finalContent);
+        // Set primary exam data
+        setGeneratedExam(finalContent);
 
-          // Set metadata
-          if (parsed.type || exam.type) setExamType(parsed.type || exam.type);
-          if (parsed.level || exam.level) setCefrLevel(parsed.level || exam.level);
-          if (parsed.topic || exam.topic) setTopic(parsed.topic || exam.topic);
-          if (parsed.examFor || exam.examFor) setExamFor(parsed.examFor || exam.examFor);
+        // Set metadata
+        if (parsed.type || fullExam.type) setExamType(parsed.type || fullExam.type);
+        if (parsed.level || fullExam.level) setCefrLevel(parsed.level || fullExam.level);
+        if (parsed.topic || fullExam.topic) setTopic(parsed.topic || fullExam.topic);
+        if (parsed.examFor || fullExam.examFor) setExamFor(parsed.examFor || fullExam.examFor);
 
-          // Restore associated states if they exist in the saved object
-          if (parsed.answers) setAnswers(parsed.answers);
-          if (parsed.scores) setScores(parsed.scores);
-          if (parsed.scores && Object.keys(parsed.scores).length > 0) {
-            // If it has scores, it's probably finished
-            // setIsFinished(true); // If we had this state in context
-          }
+        // Restore associated states if they exist in the saved object
+        if (parsed.answers) setAnswers(parsed.answers);
+        if (parsed.scores) setScores(parsed.scores);
 
-          // Reset navigation
-          setCurrentQuestion(1);
-          setIsLoaderVisible(false);
+        // Reset navigation
+        setCurrentQuestion(1);
+        setIsLoaderVisible(false);
 
-          // Backup to localStorage (best effort only)
-          try {
-            const STORAGE_KEY = 'cpe_exam_data_backup';
-            const dataToSave = {
-              content: finalContent,
-              type: parsed.type || exam.type,
-              level: parsed.level || exam.level,
-              topic: parsed.topic || exam.topic,
-              examFor: parsed.examFor || exam.examFor,
-              answers: parsed.answers || {}
-            };
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave));
-          } catch (quotaError) {
-            console.warn("Could not backup loaded exam to localStorage (size too large)");
-          }
-        }, 500);
+        // Backup to localStorage (best effort only)
+        try {
+          const STORAGE_KEY = 'cpe_exam_data_backup';
+          const dataToSave = {
+            content: finalContent,
+            type: parsed.type || fullExam.type,
+            level: parsed.level || fullExam.level,
+            topic: parsed.topic || fullExam.topic,
+            examFor: parsed.examFor || fullExam.examFor,
+            answers: parsed.answers || {}
+          };
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave));
+        } catch (quotaError) {
+          console.warn("Could not backup loaded exam to localStorage (size too large)");
+        }
 
       } catch (e) {
         console.error("Critical failure during handleLoadSavedExam", e);
@@ -1153,8 +1157,10 @@ export default function DashboardPage() {
 
     savedExamsList.forEach(exam => {
       totalGenerated++;
+      if (!exam.data) return; // Skip if data is not loaded (on-demand)
+
       try {
-        const data = JSON.parse(exam.data);
+        const data = typeof exam.data === 'string' ? JSON.parse(exam.data) : exam.data;
         if (data.isFinished) totalCompleted++;
 
         const type = exam.type as keyof typeof stats;
