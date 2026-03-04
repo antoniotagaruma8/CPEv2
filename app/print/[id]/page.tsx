@@ -364,7 +364,7 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                         Answer Key & Rationale
                     </h2>
 
-                    <div className="space-y-10">
+                    <div className="space-y-4">
                         {examParts.map((part) => {
                             const partQuestions = examQuestions.filter(q => q.part === part.part);
 
@@ -374,8 +374,8 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                             return (
                                 <div key={`answer-key-part-${part.part}`} className="break-inside-avoid">
-                                    <h3 className="font-bold text-lg mb-4 uppercase bg-slate-100 p-2 rounded">Part {part.part}</h3>
-                                    <div className="grid grid-cols-1 gap-y-6">
+                                    <h3 className="font-bold text-base mb-2 uppercase bg-slate-100 p-1 rounded">Part {part.part}</h3>
+                                    <div className="grid grid-cols-1 gap-y-2">
                                         {partQuestions.map((q, qIndex) => {
                                             // Determine letter for M/C options
                                             let correctLetter = '';
@@ -387,23 +387,23 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                                             }
 
                                             return (
-                                                <div key={`answer-${q.id}`} className="flex gap-4 text-sm border-b border-slate-100 pb-4 last:border-0">
-                                                    <span className="font-bold min-w-[2rem] text-slate-500">{qIndex + 1}.</span>
+                                                <div key={`answer-${q.id}`} className="flex gap-4 text-xs border-b border-slate-100 pb-2 last:border-0">
+                                                    <span className="font-bold min-w-[1.5rem] text-slate-500">{qIndex + 1}.</span>
                                                     <div className="flex-1">
                                                         {/* Exact Answer if exists */}
                                                         {q.correctOption && (
-                                                            <div className="font-bold mb-2 text-slate-900">
-                                                                <span className="text-gray-500 mr-2 uppercase text-xs">Answer:</span>
-                                                                {correctLetter ? <span className="text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 mr-2">{correctLetter}</span> : null}
+                                                            <div className="font-bold mb-1 text-slate-900">
+                                                                <span className="text-gray-500 mr-2 uppercase text-[10px]">Answer:</span>
+                                                                {correctLetter ? <span className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200 mr-2">{correctLetter}</span> : null}
                                                                 {q.correctOption}
                                                             </div>
                                                         )}
 
                                                         {/* Possible Answers (for Speaking / Writing) */}
                                                         {(!q.correctOption && q.possibleAnswers && q.possibleAnswers.length > 0) && (
-                                                            <div className="mb-2">
-                                                                <span className="text-gray-500 mr-2 uppercase text-xs font-bold">Suggested Answers:</span>
-                                                                <ul className="list-disc pl-5 mt-1 space-y-1">
+                                                            <div className="mb-1">
+                                                                <span className="text-gray-500 mr-2 uppercase text-[10px] font-bold">Suggested Answers:</span>
+                                                                <ul className="list-disc pl-4 mt-0.5 space-y-0.5">
                                                                     {q.possibleAnswers.map((pa, paIdx) => (
                                                                         <li key={paIdx} className="text-slate-800 italic">{pa}</li>
                                                                     ))}
@@ -413,8 +413,8 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                                                         {/* Rationale / Explanation */}
                                                         {q.explanation && (
-                                                            <div className="text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-r border-l-4 border-blue-300">
-                                                                <span className="font-bold text-slate-700 uppercase text-xs block mb-1">Rationale:</span>
+                                                            <div className="text-slate-600 leading-snug bg-slate-50 p-1.5 rounded-r border-l-2 border-blue-300">
+                                                                <span className="font-bold text-slate-700 uppercase text-[10px] block mb-0.5">Rationale:</span>
                                                                 {q.explanation}
                                                             </div>
                                                         )}
