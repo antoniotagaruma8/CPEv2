@@ -1153,7 +1153,7 @@ export default function DashboardPage() {
     }
 
     const activeQuestionData = examQuestions.find(
-      q => q.id.toString() === currentQuestion.toString() || q.questionNumber === currentQuestion
+      q => q.id.toString() === currentQuestion.toString()
     );
 
     if (examType !== 'Speaking' && examType !== 'Writing' && activeQuestionData) {
@@ -1190,7 +1190,11 @@ export default function DashboardPage() {
       if (!isCorrect && !isAdmin) {
         const currentRetry = retryCount[currentQuestion.toString()] || 0;
         if (currentRetry < 1) {
-          setRetryCount(prev => ({ ...prev, [currentQuestion.toString()]: currentRetry + 1 }));
+          setRetryCount(prev => {
+            const next = { ...prev };
+            next[currentQuestion.toString()] = currentRetry + 1;
+            return next;
+          });
           alert("Incorrect answer. Please try again! (1 attempt remaining)");
           return;
         } else {
@@ -1277,7 +1281,7 @@ export default function DashboardPage() {
   };
 
   const adminEmails = ['antoniotagaruma7@gmail.com', 'antoniotagaruma8@gmail.com', 'public.y2026@gmail.com'];
-  const isAdmin = !!(session?.user?.email && adminEmails.includes(session.user.email));
+  const isAdmin = mounted && !!(session?.user?.email && adminEmails.includes(session.user.email));
   // Calculate progress stats from saved exams
   const progressStats = useMemo(() => {
     const stats = {
@@ -1369,6 +1373,46 @@ export default function DashboardPage() {
       }
     });
   }, [generatedExam, answers, savedExamsList]);
+
+  const totalQuestions = examQuestions.length;
+  const activeQuestionData = examQuestions.find(q => q.id === currentQuestion);
+  const activePartData = examParts.find(p => p.part === activeQuestionData?.part);
+
+  const [partChangeAnim, setPartChangeAnim] = useState(false);
+  const prevPartRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (examType === 'Listening' && activePartData?.part) {
+      if (prevPartRef.current !== null && prevPartRef.current !== activePartData.part) {
+        try {
+          const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+          const ctx = new AudioContext();
+          const osc = ctx.createOscillator();
+          const gainNode = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(800, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(1600, ctx.currentTime + 0.1);
+
+          gainNode.gain.setValueAtTime(0, ctx.currentTime);
+          gainNode.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.05);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1.5);
+
+          osc.connect(gainNode);
+          gainNode.connect(ctx.destination);
+
+          osc.start();
+          osc.stop(ctx.currentTime + 1.5);
+        } catch (e) {
+          console.error("Audio context error:", e);
+        }
+
+        setPartChangeAnim(true);
+        setTimeout(() => setPartChangeAnim(false), 1500);
+      }
+      prevPartRef.current = activePartData.part;
+    }
+  }, [activePartData?.part, examType]);
 
   if (status === 'loading') {
     return <div className="flex h-screen items-center justify-center">Loading...</div>;
@@ -1774,10 +1818,6 @@ export default function DashboardPage() {
     );
   }
 
-  const totalQuestions = examQuestions.length;
-  const activeQuestionData = examQuestions.find(q => q.id === currentQuestion);
-  const activePartData = examParts.find(p => p.part === activeQuestionData?.part);
-
   const dynamicSet1Answers = generatedSetAnswers[`${currentQuestion}-set-1`] || [];
   const dynamicSet2Answers = generatedSetAnswers[`${currentQuestion}-set-2`] || [];
   const displayPossibleAnswers = (dynamicSet1Answers.length > 0 || dynamicSet2Answers.length > 0)
@@ -1786,42 +1826,6 @@ export default function DashboardPage() {
       ...(dynamicSet2Answers.length > 0 ? ['--- Set 2 (Bottom Photos) Answers ---', ...dynamicSet2Answers] : [])
     ]
     : (activeQuestionData?.possibleAnswers || []);
-
-  const [partChangeAnim, setPartChangeAnim] = useState(false);
-  const prevPartRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (examType === 'Listening' && activePartData?.part) {
-      if (prevPartRef.current !== null && prevPartRef.current !== activePartData.part) {
-        try {
-          const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-          const ctx = new AudioContext();
-          const osc = ctx.createOscillator();
-          const gainNode = ctx.createGain();
-
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(800, ctx.currentTime);
-          osc.frequency.exponentialRampToValueAtTime(1600, ctx.currentTime + 0.1);
-
-          gainNode.gain.setValueAtTime(0, ctx.currentTime);
-          gainNode.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.05);
-          gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1.5);
-
-          osc.connect(gainNode);
-          gainNode.connect(ctx.destination);
-
-          osc.start();
-          osc.stop(ctx.currentTime + 1.5);
-        } catch (e) {
-          console.error("Audio context error:", e);
-        }
-
-        setPartChangeAnim(true);
-        setTimeout(() => setPartChangeAnim(false), 1500);
-      }
-      prevPartRef.current = activePartData.part;
-    }
-  }, [activePartData?.part, examType]);
 
   // --- SPEAKING TEST ASSESSMENT LOGIC ---
   const handleMicClick = (targetQuestionId: string, targetQuestionText: string, imagePrompts: string[] = [], imageUrls: string[] = []) => {
@@ -1903,8 +1907,9 @@ export default function DashboardPage() {
 
         // Increment attempt count on successful assessment
         setRetryCount(prev => {
-          const currentCount = prev[targetQuestionId] ?? 0;
-          return { ...prev, [targetQuestionId]: currentCount + 1 };
+          const next: Record<string, number> = { ...prev };
+          next[targetQuestionId] = (prev[targetQuestionId] ?? 0) + 1;
+          return next;
         });
         setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
       } else {
@@ -1962,8 +1967,9 @@ export default function DashboardPage() {
 
         // Increment attempt count on successful assessment
         setRetryCount(prev => {
-          const currentCount = prev[targetQuestionId] ?? 0;
-          return { ...prev, [targetQuestionId]: currentCount + 1 };
+          const next: Record<string, number> = { ...prev };
+          next[targetQuestionId] = (prev[targetQuestionId] ?? 0) + 1;
+          return next;
         });
       } else {
         alert(result.error || 'Failed to assess writing.');
@@ -2023,7 +2029,7 @@ export default function DashboardPage() {
         <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
           <h1 className="text-base sm:text-lg font-semibold text-gray-700 dark:text-slate-100 truncate">{getLevelLabel(cefrLevel)}: {getExamTypeLabel(examType)}</h1>
           <div className="h-6 w-px bg-gray-300 dark:bg-slate-700"></div>
-          <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400 hidden sm:block">Candidate: <span className="font-bold text-black dark:text-white">{session?.user?.name || session?.user?.email}</span></div>
+          <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400 hidden sm:block">Candidate: <span className="font-bold text-black dark:text-white">{mounted ? (session?.user?.name || session?.user?.email) : ''}</span></div>
           {topic && (
             <>
               <div className="h-6 w-px bg-gray-300 dark:bg-slate-700 hidden sm:block"></div>
