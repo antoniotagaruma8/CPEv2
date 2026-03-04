@@ -414,7 +414,7 @@ export default function DashboardPage() {
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
   const [recordingTimeLeft, setRecordingTimeLeft] = useState<number>(60);
   const [recordingMaxTime, setRecordingMaxTime] = useState<number>(60);
-  const recordingTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const recordingTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Cambridge Speaking time limits by CEFR level
   const getRecordingTimeLimit = useCallback((questionId: string) => {
@@ -1744,14 +1744,7 @@ export default function DashboardPage() {
     }
   };
 
-  // Auto-stop recording when timer reaches 0
-  useEffect(() => {
-    if (isRecording && recordingTimeLeft === 0) {
-      stopRecording();
-    }
-  }, [recordingTimeLeft, isRecording]);
-
-  const stopRecording = () => {
+  const stopRecording = useCallback(() => {
     if (recordingTimerRef.current) {
       clearInterval(recordingTimerRef.current);
       recordingTimerRef.current = null;
@@ -1761,7 +1754,14 @@ export default function DashboardPage() {
       setIsRecording(false);
       setIsAssessing(true);
     }
-  };
+  }, [mediaRecorder, isRecording]);
+
+  // Auto-stop recording when timer reaches 0
+  useEffect(() => {
+    if (isRecording && recordingTimeLeft === 0) {
+      stopRecording();
+    }
+  }, [recordingTimeLeft, isRecording, stopRecording]);
 
   const submitAudioForAssessment = async (base64Audio: string, targetQuestionId: string, targetQuestionText: string) => {
     try {

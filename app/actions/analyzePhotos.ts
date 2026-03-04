@@ -2,7 +2,11 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+let genAI: GoogleGenerativeAI | null = null;
+function getGenAI() {
+    if (!genAI) genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
+    return genAI;
+}
 
 /**
  * Analyzes 2 stock photos via Gemini vision and generates a Cambridge-style
@@ -44,7 +48,7 @@ export async function analyzePhotosAction(
             return { success: false, error: 'Could not download enough images for analysis' };
         }
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = getGenAI().getGenerativeModel({ model: 'gemini-1.5-flash' });
 
         const prompt = `You are a Cambridge ${cefrLevel} Speaking exam interlocutor. Look at these two photographs carefully.
 
