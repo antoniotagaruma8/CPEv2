@@ -1635,13 +1635,13 @@ export default function DashboardPage() {
 
             {/* Generator Column (2/4) */}
             <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-200">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
-                  <Lightbulb className="w-6 h-6" strokeWidth={2.5} />
+              <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600 shrink-0">
+                  <Lightbulb className="w-4 h-4" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-800">Create Your Custom CEFR Mock Exam</h3>
-                  <p className="text-sm text-slate-500">Select your target skill and CEFR level to instantly generate realistic exam practice materials.</p>
+                  <h3 className="text-base font-bold text-slate-800 leading-tight">Create Your Custom CEFR Mock Exam</h3>
+                  <p className="text-xs text-slate-500 leading-tight">Select your target skill and CEFR level to instantly generate realistic exam practice materials.</p>
                 </div>
               </div>
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -1718,10 +1718,10 @@ export default function DashboardPage() {
                   {loading ? 'Generating...' : (generationInfo !== null && !generationInfo.allowed) ? 'Free Tier Limit Reached' : 'Generate Exam'}
                 </button>
                 {generationInfo && generationInfo.plan === 'free' && (
-                  <div className="mt-3 flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Free generations used:</span>
-                    <span className={`font-bold ${generationInfo.count >= generationInfo.limit ? 'text-red-600' : generationInfo.count >= generationInfo.limit * 0.8 ? 'text-amber-600' : 'text-green-600'}`}>
-                      {generationInfo.count} / {generationInfo.limit}
+                  <div className="mt-3 flex items-center justify-between text-sm p-2 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+                    <span className="text-slate-600 dark:text-slate-300 font-medium">Free generations remaining:</span>
+                    <span className={`font-bold text-lg px-2 py-0.5 rounded-md ${generationInfo.count >= generationInfo.limit ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : generationInfo.count >= generationInfo.limit * 0.8 ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'}`}>
+                      {Math.max(0, generationInfo.limit - generationInfo.count)}
                     </span>
                   </div>
                 )}
