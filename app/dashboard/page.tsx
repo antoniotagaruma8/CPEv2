@@ -8,7 +8,7 @@ import OnboardingTour from '../../components/OnboardingTour';
 import { fetchStockImageAction } from '../actions/fetchStockImage';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { saveExam, getSavedExams, deleteSavedExam } from '../actions/examActions';
+import { saveExam, getSavedExams, deleteSavedExam, getExamById } from '../actions/examActions';
 import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
 import { toggleExamFavorite } from '../actions/favoriteActions';
@@ -16,7 +16,7 @@ import { assessSpeakingAction } from '../actions/assessSpeaking';
 import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
-import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download } from 'lucide-react';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw } from 'lucide-react';
 
 interface Question {
   id: number;
@@ -96,32 +96,54 @@ const getImageFromDB = async (prompt: string): Promise<string | null> => {
 
 const imageCache: Record<string, string> = {};
 
-const AIImage = ({ prompt }: { prompt: string }) => {
+const AIImage = ({ prompt, indices = [0, 1, 2, 3] }: { prompt: string, indices?: number[] }) => {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const generate = async () => {
-    setLoading(true);
+  const [reloadingIndex, setReloadingIndex] = useState<number | null>(null);
+
+  const generate = async (specificProvider?: number) => {
+    if (specificProvider !== undefined) {
+      setReloadingIndex(specificProvider);
+    } else {
+      setLoading(true);
+    }
     setError(null);
 
     try {
-      const result = await fetchStockImageAction(prompt);
+      const result = await fetchStockImageAction(prompt, specificProvider);
 
       if (result.success && result.imageOptions) {
-        setImages(result.imageOptions);
+        if (specificProvider !== undefined) {
+          setImages(prev => {
+            const next = [...prev];
+            next[specificProvider] = result.imageOptions![0];
+            return next;
+          });
+        } else {
+          setImages(result.imageOptions);
+        }
         setLoading(false);
+        setReloadingIndex(null);
       } else {
-        setError(result.error || 'Failed to find images');
-        setLoading(false);
+        if (specificProvider === undefined) {
+          setError(result.error || 'Failed to find images');
+          setLoading(false);
+        } else {
+          setReloadingIndex(null);
+        }
       }
     } catch (e) {
       console.error('[AIImage] Unexpected error:', e);
-      setError('An unexpected error occurred');
-      setLoading(false);
+      if (specificProvider === undefined) {
+        setError('An unexpected error occurred');
+        setLoading(false);
+      } else {
+        setReloadingIndex(null);
+      }
     }
   };
-
   useEffect(() => {
     generate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -129,10 +151,10 @@ const AIImage = ({ prompt }: { prompt: string }) => {
 
   if (loading) {
     return (
-      <div className="w-full aspect-video bg-gray-50 flex items-center justify-center rounded-xl border-2 border-dashed border-gray-200 animate-pulse">
-        <div className="text-gray-400 flex flex-col items-center gap-2">
+      <div className="w-full aspect-video bg-slate-50 dark:bg-slate-800/20 flex items-center justify-center rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 animate-pulse">
+        <div className="text-slate-400 flex flex-col items-center gap-2">
           <Loader2 className="w-6 h-6 animate-spin" />
-          <span className="text-xs font-medium">Fetching stock photos...</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest">Loading...</span>
         </div>
       </div>
     );
@@ -140,39 +162,56 @@ const AIImage = ({ prompt }: { prompt: string }) => {
 
   if (error) {
     return (
-      <div className="w-full p-6 bg-red-50 rounded-xl border border-red-100 text-center">
-        <p className="text-red-700 text-sm font-medium mb-1">Image Error</p>
-        <p className="text-red-500 text-xs">{error}</p>
+      <div className="w-full p-6 bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-100 dark:border-red-800/30 text-center">
+        <p className="text-red-700 dark:text-red-400 text-xs font-bold mb-2">Image Error</p>
         <button
           onClick={() => generate()}
-          className="mt-3 px-4 py-1.5 bg-white text-red-600 text-xs font-bold rounded-full border border-red-200 hover:bg-red-50 transition-colors"
+          className="px-4 py-1.5 bg-white dark:bg-slate-800 text-red-600 dark:text-red-400 text-[10px] font-bold rounded-full border border-red-200 dark:border-red-800 hover:bg-red-50 transition-colors"
         >
-          Try Again
+          Retry
         </button>
       </div>
     );
   }
 
+  const displayedImages = images.filter((_, i) => indices.includes(i));
+
   return (
-    <div className="space-y-3">
-      <div className="grid grid-cols-2 gap-2 mt-4">
-        {images.slice(0, 4).map((url, i) => (
-          <div key={i} className="group relative aspect-video overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-sm transition-all hover:shadow-md hover:scale-[1.02]">
+    <div className={`grid gap-3 ${displayedImages.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+      {displayedImages.map((url, i) => {
+        const providerIdx = indices[i];
+        const isReloading = reloadingIndex === providerIdx;
+
+        return (
+          <div key={i} className="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-sm transition-all hover:shadow-md hover:scale-[1.01]">
             <img
               src={url}
-              alt={`Stock photo ${i + 1}`}
-              className="w-full h-full object-cover transition-opacity duration-500"
+              alt={`Stock photo ${providerIdx + 1}`}
+              className={`w-full h-full object-cover transition-opacity duration-700 ${isReloading ? 'opacity-40 grayscale' : 'opacity-100'}`}
               loading="lazy"
             />
-            <div className="absolute bottom-1 right-1 px-1.5 py-0.5 bg-black/50 backdrop-blur-md rounded text-[10px] text-white font-mono opacity-0 group-hover:opacity-100 transition-opacity">
-              P{i + 1}
+
+            <div className="absolute top-2 left-2 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded text-[9px] text-white font-bold font-mono opacity-0 group-hover:opacity-100 transition-opacity z-10">
+              P{providerIdx + 1}
             </div>
+
+            <button
+              onClick={() => generate(providerIdx)}
+              disabled={isReloading}
+              className={`absolute top-2 right-2 p-1.5 bg-white/90 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 opacity-0 group-hover:opacity-100 transition-all hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 z-10 ${isReloading ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+              title="Reload Photo"
+            >
+              <RefreshCcw className={`w-3.5 h-3.5 ${isReloading ? 'animate-spin' : ''}`} />
+            </button>
+
+            {isReloading && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Loader2 className="w-5 h-5 text-blue-600 animate-spin" />
+              </div>
+            )}
           </div>
-        ))}
-      </div>
-      <p className="text-[10px] text-gray-400 text-center italic">
-        Topic: "{prompt}" — Photos from 4 different providers
-      </p>
+        );
+      })}
     </div>
   );
 };
@@ -1026,7 +1065,8 @@ export default function DashboardPage() {
       return;
     }
 
-    const newSubmitted = new Set(submittedQuestions).add(currentQuestion);
+    const newSubmitted = new Set(submittedQuestions);
+    newSubmitted.add(currentQuestion.toString());
     setSubmittedQuestions(newSubmitted);
 
     // AI Assessment Trigger for Reading Exams
@@ -1080,7 +1120,7 @@ export default function DashboardPage() {
     if (currentQuestion === q) {
       return 'bg-blue-600 text-white ring-2 ring-blue-400 ring-offset-2 ring-offset-[#2d2d2d]';
     }
-    if (answers[q]) {
+    if (answers[q.toString()]) {
       return 'bg-gray-500 text-white';
     }
     return 'bg-[#3d3d3d] text-gray-300 hover:bg-[#4d4d4d]';
@@ -1703,10 +1743,11 @@ export default function DashboardPage() {
         });
 
         // Increment attempt count on successful assessment
-        setRetryCount(prev => ({
-          ...prev,
-          [targetQuestionId]: (prev[targetQuestionId] || 0) + 1
-        }));
+        setRetryCount(prev => {
+          const next = { ...prev };
+          next[targetQuestionId] = (prev[targetQuestionId] || 0) + 1;
+          return next;
+        });
         setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
       } else {
         alert(result.error || 'Failed to assess audio.');
@@ -1762,10 +1803,11 @@ export default function DashboardPage() {
         setScores(prev => ({ ...prev, [targetQuestionId]: result.score }));
 
         // Increment attempt count on successful assessment
-        setRetryCount(prev => ({
-          ...prev,
-          [targetQuestionId]: (prev[targetQuestionId] || 0) + 1
-        }));
+        setRetryCount(prev => {
+          const next = { ...prev };
+          next[targetQuestionId] = (next[targetQuestionId] || 0) + 1;
+          return next;
+        });
       } else {
         alert(result.error || 'Failed to assess writing.');
       }
@@ -2069,59 +2111,55 @@ export default function DashboardPage() {
 
                     {activeQuestionData.imagePrompts && activeQuestionData.imagePrompts.length > 0 && (
                       <div className="mb-6 space-y-6">
-                        {(() => {
-                          const prompts = activeQuestionData.imagePrompts || [];
-                          const sets = [];
-                          if (prompts.length >= 4) {
-                            sets.push({ title: 'Visual Material 1', prompts: prompts.slice(0, 2), id: 1 });
-                            sets.push({ title: 'Visual Material 2', prompts: prompts.slice(2, 4), id: 2 });
-                          } else {
-                            sets.push({ title: 'Visual Materials', prompts: prompts, id: 1 });
-                          }
+                        {[1, 2].map((setId) => {
+                          const setKey = `${activeQuestionData.id}-set-${setId}`;
+                          const isRevealed = !!revealedImageSets[setKey];
+                          const primaryPrompt = activeQuestionData.imagePrompts?.[0] || activeQuestionData.topic || "Speaking Subject";
+                          const indices = setId === 1 ? [0, 1] : [2, 3];
 
-                          return sets.map((set) => {
-                            const setKey = `${activeQuestionData.id}-set-${set.id}`;
-                            const isRevealed = !!revealedImageSets[setKey];
-
-                            return (
-                              <div key={set.id} className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                                <div className="flex justify-between items-center mb-3 cursor-pointer select-none" onClick={() => setRevealedImageSets(prev => ({ ...prev, [setKey]: !prev[setKey] }))}>
-                                  <h4 className="font-bold text-gray-700 text-sm">{set.title}</h4>
-                                  <button className="text-blue-600 hover:text-blue-800 p-1 rounded hover:bg-blue-50 transition-colors flex items-center gap-2 text-xs font-medium">
-                                    {isRevealed ? 'Hide Images' : 'Show Images'}
-                                    {isRevealed ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                          return (
+                            <div key={setId} className="bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm transition-all">
+                              <div className="flex justify-between items-center mb-4">
+                                <h4 className="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                                  <span className="w-6 h-6 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center text-xs">{setId}</span>
+                                  Visual Material {setId}
+                                </h4>
+                                <div className="flex items-center gap-1">
+                                  <button
+                                    onClick={() => setRevealedImageSets(prev => ({ ...prev, [setKey]: !prev[setKey] }))}
+                                    className="p-2 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                                    title={isRevealed ? "Hide Images" : "Show Images"}
+                                  >
+                                    {isRevealed ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                                   </button>
                                 </div>
-                                {isRevealed && (
-                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
-                                    {set.prompts.map((prompt, idx) => (
-                                      <AIImage key={`${set.id}-${idx}`} prompt={prompt} />
-                                    ))}
-                                  </div>
-                                )}
-                                {examType === 'Speaking' && (
-                                  <div className="mt-4 pt-3 border-t border-gray-100 dark:border-slate-800 flex justify-end">
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleMicClick(`set-${activeQuestionData.id}-${set.id}`, activeQuestionData.question, set.prompts);
-                                      }}
-                                      className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold shadow-sm transition-all transform hover:scale-105
-                                        ${isRecording && recordingQuestionId === `set-${activeQuestionData.id}-${set.id}` ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto justify-center'}`}
-                                      title="Record Answer for this Set"
-                                    >
-                                      {isRecording && recordingQuestionId === `set-${activeQuestionData.id}-${set.id}` ? (
-                                        <><div className="w-3 h-3 bg-white rounded-sm"></div> Recording...</>
-                                      ) : (
-                                        <><Mic className="w-4 h-4" /> Answer for {set.title}</>
-                                      )}
-                                    </button>
-                                  </div>
-                                )}
                               </div>
-                            );
-                          });
-                        })()}
+
+                              {isRevealed && (
+                                <div className="animate-fade-in mb-4">
+                                  <AIImage prompt={primaryPrompt} indices={indices} />
+                                </div>
+                              )}
+
+                              <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                                <p className="text-[10px] text-slate-400 dark:text-slate-500 italic max-w-[200px]">
+                                  {setId === 1 ? 'Comparing Photos from Provider 1 & 2' : 'Comparing Photos from Provider 3 & 4'}
+                                </p>
+                                <button
+                                  onClick={() => handleMicClick(setKey, activeQuestionData.question)}
+                                  className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold font-mono shadow-md transition-all transform hover:scale-[1.03] w-full md:w-auto justify-center
+                                     ${isRecording && recordingQuestionId === setKey ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+                                >
+                                  {isRecording && recordingQuestionId === setKey ? (
+                                    <><div className="w-3 h-3 bg-white rounded-sm"></div> Recording...</>
+                                  ) : (
+                                    <><Mic className="w-4 h-4" /> Record Set {setId}</>
+                                  )}
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     )}
 
@@ -2135,7 +2173,7 @@ export default function DashboardPage() {
                         `}>
                           {activeQuestionData.options.map((opt, index) => {
                             const letter = String.fromCharCode('A'.charCodeAt(0) + index);
-                            const isSubmitted = submittedQuestions.has(currentQuestion);
+                            const isSubmitted = submittedQuestions.has(currentQuestion.toString());
                             const rawCorrectOption = activeQuestionData.correctOption || '';
                             let normalizedCorrectLetter = rawCorrectOption.trim();
                             const match = rawCorrectOption.match(/^([A-Z])[\.\)]?\s/i);
@@ -2155,7 +2193,7 @@ export default function DashboardPage() {
                               || (cleanOpt.length > 3 && cleanCorrectOption.includes(cleanOpt))
                               || (cleanCorrectOption.length > 3 && cleanOpt.includes(cleanCorrectOption));
 
-                            const isSelected = answers[currentQuestion] === letter;
+                            const isSelected = answers[currentQuestion.toString()] === letter;
 
                             let optionClass = "border-gray-200 hover:bg-blue-50 hover:border-blue-400";
                             if (isSubmitted) {
@@ -2233,12 +2271,12 @@ export default function DashboardPage() {
                         <div className="flex gap-2">
                           <input
                             type="text"
-                            value={answers[currentQuestion] || ''}
+                            value={answers[currentQuestion.toString()] || ''}
                             onChange={(e) => handleAnswer(currentQuestion, e.target.value)}
-                            disabled={submittedQuestions.has(currentQuestion)}
+                            disabled={submittedQuestions.has(currentQuestion.toString())}
                             placeholder={activePartData?.title?.toLowerCase().includes('gap') || activePartData?.title?.toLowerCase().includes('cloze') ? "Type the missing word(s)..." : "Type your answer here..."}
-                            className={`flex-1 p-3 rounded-md border outline-none transition-all ${submittedQuestions.has(currentQuestion)
-                              ? checkTextAnswer(answers[currentQuestion] || '', activeQuestionData.correctOption || '')
+                            className={`flex-1 p-3 rounded-md border outline-none transition-all ${submittedQuestions.has(currentQuestion.toString())
+                              ? checkTextAnswer(answers[currentQuestion.toString()] || '', activeQuestionData.correctOption || '')
                                 ? 'border-green-500 bg-green-50 text-green-900'
                                 : 'border-red-500 bg-red-50 text-red-900'
                               : 'border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200'
@@ -2247,26 +2285,26 @@ export default function DashboardPage() {
                           <button
                             onClick={() => setRevealedAnswers(prev => {
                               const newSet = new Set(prev);
-                              if (newSet.has(currentQuestion)) newSet.delete(currentQuestion);
-                              else newSet.add(currentQuestion);
+                              if (newSet.has(currentQuestion.toString())) newSet.delete(currentQuestion.toString());
+                              else newSet.add(currentQuestion.toString());
                               return newSet;
                             })}
                             className="px-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-md border border-gray-300 transition-colors"
-                            title={revealedAnswers.has(currentQuestion) ? "Hide Answer" : "Show Answer"}
+                            title={revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Answer"}
                           >
-                            {revealedAnswers.has(currentQuestion) ? (
+                            {revealedAnswers.has(currentQuestion.toString()) ? (
                               <EyeOff className="w-5 h-5" />
                             ) : (
                               <Eye className="w-5 h-5" />
                             )}
                           </button>
                         </div>
-                        {revealedAnswers.has(currentQuestion) && (
+                        {revealedAnswers.has(currentQuestion.toString()) && (
                           <div className="text-sm text-blue-600 bg-blue-50 p-2 rounded border border-blue-100">
                             <span className="font-bold">Answer:</span> {activeQuestionData.correctOption}
                           </div>
                         )}
-                        {submittedQuestions.has(currentQuestion) && !checkTextAnswer(answers[currentQuestion] || '', activeQuestionData.correctOption || '') && (
+                        {submittedQuestions.has(currentQuestion.toString()) && !checkTextAnswer(answers[currentQuestion.toString()] || '', activeQuestionData.correctOption || '') && (
                           <div className="text-sm text-red-600 bg-red-50 p-2 rounded border border-red-100">
                             <span className="font-bold">Correct Answer:</span> {activeQuestionData.correctOption}
                           </div>
@@ -2885,7 +2923,7 @@ export default function DashboardPage() {
           </button>
           <button
             onClick={() => {
-              const isSubmitted = submittedQuestions.has(currentQuestion);
+              const isSubmitted = submittedQuestions.has(currentQuestion.toString());
               if (isSubmitted) {
                 if (currentQuestion < totalQuestions) {
                   setCurrentQuestion(q => q + 1);
@@ -2894,7 +2932,7 @@ export default function DashboardPage() {
                 handleSubmitAnswer();
               }
             }}
-            disabled={(!submittedQuestions.has(currentQuestion) && !answers[currentQuestion] && examType !== 'Speaking' && examType !== 'Writing') || (submittedQuestions.has(currentQuestion) && currentQuestion === totalQuestions)}
+            disabled={(!submittedQuestions.has(currentQuestion.toString()) && !answers[currentQuestion.toString()] && examType !== 'Speaking' && examType !== 'Writing') || (submittedQuestions.has(currentQuestion.toString()) && currentQuestion === totalQuestions)}
             className="px-4 py-1.5 sm:px-6 sm:py-2 rounded bg-blue-600 hover:bg-blue-700 text-xs sm:text-sm font-bold transition-colors text-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {submittedQuestions.has(currentQuestion) ? 'Next' : (examType === 'Speaking' || examType === 'Writing' ? 'Done' : 'Submit')}

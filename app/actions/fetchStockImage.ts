@@ -73,17 +73,30 @@ async function uploadToSupabase(filename: string, buffer: Buffer, mimeType: stri
   }
 }
 
-export async function fetchStockImageAction(query: string): Promise<{ success: boolean; imageOptions?: string[]; error?: string }> {
+export async function fetchStockImageAction(query: string, providerIndex?: number): Promise<{ success: boolean; imageOptions?: string[]; error?: string }> {
   // We'll try to get images from all 4 providers to give the user options
-  console.log(`Searching stock photos for: ${query}`);
+  console.log(`Searching stock photos for: ${query}${providerIndex !== undefined ? ` (Reloading provider ${providerIndex + 1})` : ''}`);
 
-  const results = await Promise.all([
-    fetchUnsplash(query),
-    fetchLoremFlickr(query),
-    fetchWikimedia(query),
-    fetchOpenverse(query)
-  ]);
+  // Add a random component to the query for providers that support redirect-based randomness
+  const randomSig = crypto.randomBytes(4).toString('hex');
+  const randomizedQuery = `${query}&sig=${randomSig}`;
 
+  const fetchers = [
+    () => fetchUnsplash(randomizedQuery),
+    () => fetchLoremFlickr(randomizedQuery),
+    () => fetchWikimedia(query), // Wikimedia handles its own randomization/search logic
+    () => fetchOpenverse(query)  // Openverse handles its own randomization/search logic
+  ];
+
+  if (providerIndex !== undefined && providerIndex >= 0 && providerIndex < fetchers.length) {
+    const url = await fetchers[providerIndex]();
+    if (url) {
+      return { success: true, imageOptions: [url] };
+    }
+    return { success: false, error: `Failed to refresh provider ${providerIndex + 1}` };
+  }
+
+  const results = await Promise.all(fetchers.map(f => f()));
   const validImages = results.filter((url): url is string => url !== null);
 
   if (validImages.length > 0) {
