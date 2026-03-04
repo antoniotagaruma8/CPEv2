@@ -1931,8 +1931,62 @@ export default function DashboardPage() {
             </div>
 
           </div>
-        </div >
-      </div >
+        </div>
+
+        {isTeacherModalOpen && (
+          <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative animate-spring-up overflow-hidden">
+              <button
+                onClick={() => setIsTeacherModalOpen(false)}
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="mb-6 flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 rounded-2xl flex items-center justify-center mb-4">
+                  <GraduationCap className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                </div>
+                <h2 className="text-2xl font-black text-slate-800 dark:text-white">Activate Teacher Tools</h2>
+                <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
+                  Enter your Teacher Access Code to unlock PDF printables and educator features.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Enter Access Code..."
+                    value={teacherCode}
+                    onChange={(e) => setTeacherCode(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-center tracking-widest uppercase"
+                  />
+                </div>
+
+                {teacherStatusMsg && (
+                  <div className={`p-3 rounded-lg text-sm text-center font-semibold ${teacherStatusMsg.includes('Success') || teacherStatusMsg.includes('Already') ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' : teacherStatusMsg.includes('Checking') || teacherStatusMsg.includes('Verifying') ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400' : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'}`}>
+                    {teacherStatusMsg}
+                  </div>
+                )}
+
+                <button
+                  onClick={handleActivateTeacher}
+                  disabled={!teacherCode || teacherStatusMsg.includes('Verifying')}
+                  className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-indigo-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {teacherStatusMsg.includes('Verifying') ? 'Verifying...' : 'Activate Account'}
+                </button>
+              </div>
+
+              <p className="text-xs text-center text-slate-500 dark:text-slate-500 mt-6">
+                If you believe you should have access, please contact the administrator for your code.
+              </p>
+            </div>
+          </div>
+        )}
+
+      </div>
     );
   }
 
