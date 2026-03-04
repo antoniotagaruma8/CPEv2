@@ -250,18 +250,18 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                 {/* EXAM COVER PAGE HEADER (Cambridge Style) */}
                 <div className="border-2 border-black p-6 mb-8 text-sm">
-                    <div className="flex justify-between font-bold mb-4 uppercase">
-                        <span>Candidate Name:</span>
-                        <span className="w-1/2 border-b-2 border-dashed border-black"></span>
-                    </div>
-                    <div className="flex justify-between font-bold mb-6 gap-8">
-                        <div className="flex-1 flex gap-2 uppercase">
-                            <span>Centre Number:</span>
-                            <span className="flex-1 border-b-2 border-dashed border-black"></span>
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-6 font-bold uppercase mb-6 text-sm">
+                        <div className="col-span-2 flex items-end gap-2">
+                            <span className="shrink-0">CANDIDATE NAME:</span>
+                            <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
                         </div>
-                        <div className="flex-1 flex gap-2 uppercase">
-                            <span>Candidate Number:</span>
-                            <span className="flex-1 border-b-2 border-dashed border-black"></span>
+                        <div className="col-span-1 flex items-end gap-2">
+                            <span className="shrink-0">CENTRE NUMBER:</span>
+                            <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
+                        </div>
+                        <div className="col-span-1 flex items-end gap-2">
+                            <span className="shrink-0">CANDIDATE NUMBER:</span>
+                            <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
                         </div>
                     </div>
 
