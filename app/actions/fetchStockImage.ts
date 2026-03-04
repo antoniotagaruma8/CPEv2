@@ -8,15 +8,50 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// HuggingFace models to try in order (Expanded Stable Diffusion list)
-const HF_MODELS = [
-  'runwayml/stable-diffusion-v1-5',
-  'Lykon/DreamShaper',
-  'prompthero/openjourney-v4',
-  'stabilityai/stable-diffusion-2-1',
-  'SG_161222/RealVisXL_V4.0',
-  'OIG/SD-v1.5-Inference-V2'
-];
+// 1. Unsplash (via direct source endpoint)
+async function fetchUnsplash(query: string): Promise<string | null> {
+  try {
+    const response = await fetch(`https://source.unsplash.com/featured/1024x1024?${encodeURIComponent(query)}`);
+    if (response.ok) return response.url;
+  } catch (e) { console.warn("Unsplash fetch failed", e); }
+  return null;
+}
+
+// 2. Lorem Flickr (keyword based)
+async function fetchLoremFlickr(query: string): Promise<string | null> {
+  try {
+    const response = await fetch(`https://loremflickr.com/1024/1024/${encodeURIComponent(query)}`);
+    if (response.ok) return response.url;
+  } catch (e) { console.warn("Lorem Flickr fetch failed", e); }
+  return null;
+}
+
+// 3. Wikimedia Commons
+async function fetchWikimedia(query: string): Promise<string | null> {
+  try {
+    const url = `https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=pageimages&generator=search&piprop=original&gsrsearch=${encodeURIComponent(query)}&gsrlimit=1&origin=*`;
+    const response = await fetch(url);
+    if (!response.ok) return null;
+    const data = await response.json();
+    const pages = data.query?.pages;
+    if (pages) {
+      const pageId = Object.keys(pages)[0];
+      return pages[pageId].original?.source || null;
+    }
+  } catch (e) { console.warn("Wikimedia fetch failed", e); }
+  return null;
+}
+
+// 4. Openverse (via public API)
+async function fetchOpenverse(query: string): Promise<string | null> {
+  try {
+    const response = await fetch(`https://api.openverse.org/v1/images/?q=${encodeURIComponent(query)}&page_size=1`);
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data.results?.[0]?.url || null;
+  } catch (e) { console.warn("Openverse fetch failed", e); }
+  return null;
+}
 
 async function uploadToSupabase(filename: string, buffer: Buffer, mimeType: string): Promise<string | null> {
   try {
@@ -38,111 +73,26 @@ async function uploadToSupabase(filename: string, buffer: Buffer, mimeType: stri
   }
 }
 
-export async function fetchStockImageAction(query: string): Promise<{ success: boolean; imageUrl?: string; error?: string }> {
-  const hash = crypto.createHash('sha256').update(query).digest('hex');
-  const filename = `${hash}.jpeg`;
+export async function fetchStockImageAction(query: string): Promise<{ success: boolean; imageOptions?: string[]; error?: string }> {
+  // We'll try to get images from all 4 providers to give the user options
+  console.log(`Searching stock photos for: ${query}`);
 
-  // 1. Check Supabase cache
-  try {
-    const { data: fileList, error: listError } = await supabase.storage.from('images').list('', {
-      search: filename
-    });
+  const results = await Promise.all([
+    fetchUnsplash(query),
+    fetchLoremFlickr(query),
+    fetchWikimedia(query),
+    fetchOpenverse(query)
+  ]);
 
-    if (!listError && fileList && fileList.length > 0 && fileList.some(f => f.name === filename)) {
-      console.log(`Image cache hit for hash: ${hash}`);
-      const { data: publicUrlData } = supabase.storage.from('images').getPublicUrl(filename);
-      return { success: true, imageUrl: publicUrlData.publicUrl };
-    }
-  } catch (error) {
-    console.error("Error checking Supabase cache:", error);
-  }
+  const validImages = results.filter((url): url is string => url !== null);
 
-  // 2. STAGE 1: Hugging Face (Stable Diffusion Rotation)
-  const apiKey = process.env.HUGGINGFACE_API_KEY;
-  const enhancedPrompt = `${query}, high quality realistic detailed photography, 4k, professional`;
-  let lastError = '';
-
-  if (apiKey) {
-    for (const model of HF_MODELS) {
-      try {
-        console.log(`[Stable Diffusion] Trying model: ${model}`);
-        const response = await fetch(
-          `https://api-inference.huggingface.co/models/${model}`,
-          {
-            method: 'POST',
-            headers: {
-              Authorization: `Bearer ${apiKey}`,
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ inputs: enhancedPrompt }),
-          }
-        );
-
-        if (response.status === 402 || response.status === 429) {
-          console.warn(`[Stable Diffusion] Limit hit (${response.status}) on ${model}. Trying next model...`);
-          lastError = `Limit reached (${response.status})`;
-          continue;
-        }
-
-        if (response.status === 503) {
-          const text = await response.text();
-          if (text.includes('loading')) {
-            console.warn(`[Stable Diffusion] Model ${model} is loading. Trying next...`);
-            lastError = `Model ${model} is loading`;
-            continue;
-          }
-        }
-
-        if (response.ok) {
-          const contentType = response.headers.get('content-type') || 'image/jpeg';
-          const arrayBuffer = await response.arrayBuffer();
-          const buffer = Buffer.from(arrayBuffer);
-
-          if (buffer.length > 500) {
-            console.log(`[Stable Diffusion] Success (${model}) — ${Math.round(buffer.length / 1024)}KB`);
-            const publicUrl = await uploadToSupabase(filename, buffer, contentType);
-            if (publicUrl) return { success: true, imageUrl: publicUrl };
-            return { success: true, imageUrl: `data:${contentType};base64,${buffer.toString('base64')}` };
-          }
-        } else {
-          const text = await response.text();
-          console.warn(`[Stable Diffusion] ${model} failed (${response.status}): ${text.substring(0, 50)}`);
-          lastError = `${model}: ${response.status}`;
-        }
-      } catch (err: any) {
-        console.warn(`[Stable Diffusion] ${model} exception:`, err?.message || err);
-        lastError = err?.message || String(err);
-      }
-    }
-  } else {
-    lastError = 'No HF API Key found';
-  }
-
-  // 3. STAGE 2: Stock Photo Fallback (Last Resort)
-  try {
-    console.log(`[Fallback] All SD models hit limits. Trying high-quality stock photo for: ${query}`);
-    // Using Unsplash Source (via keyword search)
-    const stockUrl = `https://images.unsplash.com/photo-1545641203-7d072a14e3b2?auto=format&fit=crop&w=1024&q=80&q=${encodeURIComponent(query)}`;
-
-    const response = await fetch(`https://source.unsplash.com/featured/1024x1024?${encodeURIComponent(query)}`);
-    if (response.ok) {
-      const ct = response.headers.get('content-type') || 'image/jpeg';
-      const arrayBuffer = await response.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
-
-      if (buffer.length > 1000) {
-        console.log(`[Fallback] Stock Photo Success — ${Math.round(buffer.length / 1024)}KB`);
-        const publicUrl = await uploadToSupabase(filename, buffer, ct);
-        if (publicUrl) return { success: true, imageUrl: publicUrl };
-        return { success: true, imageUrl: `data:${ct};base64,${buffer.toString('base64')}` };
-      }
-    }
-  } catch (err: any) {
-    console.warn(`[Fallback] Stock photo failure:`, err?.message || err);
+  if (validImages.length > 0) {
+    console.log(`Found ${validImages.length} stock image options for ${query}`);
+    return { success: true, imageOptions: validImages };
   }
 
   return {
     success: false,
-    error: `All image generation methods failed. (HF: ${lastError}). Please try a more general topic.`
+    error: `No stock images found for "${query}" across 4 providers. Please try a more general description.`
   };
 }

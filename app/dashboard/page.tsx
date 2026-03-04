@@ -97,128 +97,82 @@ const getImageFromDB = async (prompt: string): Promise<string | null> => {
 const imageCache: Record<string, string> = {};
 
 const AIImage = ({ prompt }: { prompt: string }) => {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [retryCount, setRetryCount] = useState(0);
 
-  const generate = async (forceRefresh = false) => {
-    // 1. Check in-memory cache first (fastest), unless force refreshing
-    if (!forceRefresh && imageCache[prompt]) {
-      setImageUrl(imageCache[prompt]);
-      setLoading(false);
-      return;
-    }
-
-    // Clear stale cache entry on force refresh
-    if (forceRefresh) {
-      delete imageCache[prompt];
-    }
-
+  const generate = async () => {
     setLoading(true);
     setError(null);
 
     try {
       const result = await fetchStockImageAction(prompt);
 
-      if (result.success && result.imageUrl) {
-        // Cache the newly generated image
-        imageCache[prompt] = result.imageUrl;
-        storeImageInDB(prompt, result.imageUrl);
-
-        setImageUrl(result.imageUrl);
+      if (result.success && result.imageOptions) {
+        setImages(result.imageOptions);
+        setLoading(false);
       } else {
-        setError(result.error || 'Failed to generate image');
+        setError(result.error || 'Failed to find images');
         setLoading(false);
       }
     } catch (e) {
-      console.error('[AIImage] Unexpected error generating image:', e);
+      console.error('[AIImage] Unexpected error:', e);
       setError('An unexpected error occurred');
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    setRetryCount(0);
     generate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prompt]);
 
-  const handleImageLoad = () => {
-    setLoading(false);
-    setRetryCount(0); // Reset retry count on successful load
-  };
-
-  const handleImageError = () => {
-    console.warn(`[AIImage] Image load failed for URL: ${imageUrl?.substring(0, 80)}... (retry ${retryCount})`);
-
-    // Auto-retry once by force-refreshing (clears cache, re-fetches from server)
-    if (retryCount < 1) {
-      setRetryCount(prev => prev + 1);
-      setImageUrl(null);
-      generate(true);
-      return;
-    }
-
-    setLoading(false);
-    setError('Failed to load image. Please try again.');
-    setImageUrl(null);
-  };
-
-  if (imageUrl) {
-    return (
-      <div className="relative group rounded-lg overflow-hidden border border-gray-200 shadow-sm bg-white min-h-[250px]">
-        {loading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-50 z-10">
-            <div className="flex flex-col items-center gap-2">
-              <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-              <span className="text-xs text-gray-500 font-medium">Loading Photo...</span>
-            </div>
-          </div>
-        )}
-        <img
-          src={imageUrl}
-          alt={prompt}
-          className={`w-full h-auto object-cover hover:scale-105 transition-transform duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}
-          onLoad={handleImageLoad}
-          onError={handleImageError}
-          referrerPolicy="no-referrer"
-          crossOrigin="anonymous"
-        />
-        <button
-          onClick={(e) => { e.stopPropagation(); setRetryCount(0); generate(true); }}
-          className="absolute top-2 right-2 p-1.5 bg-white/80 hover:bg-white text-gray-700 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-all focus:opacity-100"
-          title="Regenerate Image"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-        </button>
-      </div>
-    );
-  }
-
   if (loading) {
     return (
-      <div className="w-full min-h-[250px] bg-gray-50 rounded-lg border border-gray-200 shadow-sm flex items-center justify-center">
-        <div className="flex flex-col items-center gap-2">
-          <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-          <span className="text-xs text-gray-500 font-medium">Loading Photo...</span>
+      <div className="w-full aspect-video bg-gray-50 flex items-center justify-center rounded-xl border-2 border-dashed border-gray-200 animate-pulse">
+        <div className="text-gray-400 flex flex-col items-center gap-2">
+          <Loader2 className="w-6 h-6 animate-spin" />
+          <span className="text-xs font-medium">Fetching stock photos...</span>
         </div>
       </div>
     );
   }
 
+  if (error) {
+    return (
+      <div className="w-full p-6 bg-red-50 rounded-xl border border-red-100 text-center">
+        <p className="text-red-700 text-sm font-medium mb-1">Image Error</p>
+        <p className="text-red-500 text-xs">{error}</p>
+        <button
+          onClick={() => generate()}
+          className="mt-3 px-4 py-1.5 bg-white text-red-600 text-xs font-bold rounded-full border border-red-200 hover:bg-red-50 transition-colors"
+        >
+          Try Again
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <div className="w-full min-h-[250px] bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-6 text-center transition-colors hover:bg-gray-100">
-      <p className="text-sm text-gray-600 mb-4 italic max-w-xs">{prompt}</p>
-      {error && <p className="text-xs text-red-500 mb-3 font-bold">{error}</p>}
-      <button
-        onClick={() => { setRetryCount(0); generate(true); }}
-        disabled={loading}
-        className="px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-md hover:bg-blue-700 disabled:opacity-50 transition-all shadow-sm flex items-center gap-2"
-      >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-        {error ? 'Retry Load Photo' : 'Load Stock Photo'}
-      </button>
+    <div className="space-y-3">
+      <div className="grid grid-cols-2 gap-2 mt-4">
+        {images.slice(0, 4).map((url, i) => (
+          <div key={i} className="group relative aspect-video overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-sm transition-all hover:shadow-md hover:scale-[1.02]">
+            <img
+              src={url}
+              alt={`Stock photo ${i + 1}`}
+              className="w-full h-full object-cover transition-opacity duration-500"
+              loading="lazy"
+            />
+            <div className="absolute bottom-1 right-1 px-1.5 py-0.5 bg-black/50 backdrop-blur-md rounded text-[10px] text-white font-mono opacity-0 group-hover:opacity-100 transition-opacity">
+              P{i + 1}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="text-[10px] text-gray-400 text-center italic">
+        Topic: "{prompt}" — Photos from 4 different providers
+      </p>
     </div>
   );
 };
@@ -1524,8 +1478,8 @@ export default function DashboardPage() {
                         type="button"
                         onClick={() => setTopic(t)}
                         className={`text-[11px] px-2.5 py-1 rounded-full border transition-all ${topic === t
-                            ? 'bg-blue-600 border-blue-600 text-white shadow-sm font-bold'
-                            : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50'
+                          ? 'bg-blue-600 border-blue-600 text-white shadow-sm font-bold'
+                          : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50'
                           }`}
                       >
                         {t}
