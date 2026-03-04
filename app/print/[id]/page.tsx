@@ -419,67 +419,71 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                     </div>
                 </div>
 
-                {/* ANSWER KEY PAGE */}
+                {/* ANSWER KEY PAGE (Answer Sheet Style) */}
                 <div className="print:break-before-page pt-12 print:pt-4 pb-20">
-                    <h2 className="text-2xl font-black uppercase border-b-2 border-black pb-2 mb-8 text-slate-800">
-                        Answer Key & Rationale
+                    <h2 className="text-2xl font-black uppercase text-center mb-8 border-b-2 border-black pb-4 tracking-widest text-slate-800">
+                        Answer Key (Answer Sheet)
                     </h2>
 
-                    <div className="space-y-4">
+                    <div className="space-y-8">
                         {examParts.map((part) => {
                             const partQuestions = examQuestions.filter(q => q.part === part.part);
-
-                            // Check if this part has any questions that have an answer or explanation
                             const hasAnswers = partQuestions.some(q => q.correctOption || q.explanation || (q.possibleAnswers && q.possibleAnswers.length > 0));
                             if (!hasAnswers) return null;
 
                             return (
-                                <div key={`answer-key-part-${part.part}`} className="break-inside-avoid">
-                                    <h3 className="font-bold text-base mb-2 uppercase bg-slate-100 p-1 rounded">Part {part.part}</h3>
-                                    <div className="grid grid-cols-1 gap-y-2">
-                                        {partQuestions.map((q, qIndex) => {
-                                            // Determine letter for M/C options
-                                            let correctLetter = '';
-                                            if (q.options && q.options.length > 0 && q.correctOption) {
-                                                const optIndex = q.options.indexOf(q.correctOption);
-                                                if (optIndex !== -1) {
-                                                    correctLetter = String.fromCharCode(65 + optIndex);
-                                                }
+                                <div key={`answer-key-part-${part.part}`} className="break-inside-avoid border border-blue-200 rounded overflow-hidden">
+                                    <h3 className="font-bold text-base uppercase bg-blue-50 text-blue-900 p-2 border-b border-blue-200">
+                                        Part {part.part} Key
+                                    </h3>
+                                    <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
+                                        {partQuestions.map((q) => {
+                                            const globalIndex = examQuestions.findIndex(eq => eq.id === q.id) + 1;
+                                            const isMultipleChoice = q.options && q.options.length > 0;
+                                            let correctOptIndex = -1;
+
+                                            if (isMultipleChoice && q.correctOption) {
+                                                correctOptIndex = q.options.indexOf(q.correctOption);
                                             }
 
                                             return (
-                                                <div key={`answer-${q.id}`} className="flex gap-4 text-xs border-b border-slate-100 pb-2 last:border-0">
-                                                    <span className="font-bold min-w-[2rem] text-slate-500">{examQuestions.findIndex(eq => eq.id === q.id) + 1}.</span>
-                                                    <div className="flex-1">
-                                                        {/* Exact Answer if exists */}
-                                                        {q.correctOption && (
-                                                            <div className="font-bold mb-1 text-slate-900">
-                                                                <span className="text-gray-500 mr-2 uppercase text-[10px]">Answer:</span>
-                                                                {correctLetter ? <span className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200 mr-2">{correctLetter}</span> : null}
-                                                                {q.correctOption}
+                                                <div key={`ak-${q.id}`} className="flex flex-col gap-2 border-b border-blue-100 pb-4 border-dashed">
+                                                    {/* The Simulated Answer Line/Grid  */}
+                                                    <div className="flex items-center gap-4">
+                                                        <span className="font-bold w-6 text-right text-blue-700">{globalIndex}.</span>
+                                                        {isMultipleChoice ? (
+                                                            <div className="flex gap-2 w-full max-w-[150px]">
+                                                                {q.options.map((_, i) => {
+                                                                    const isCorrect = i === correctOptIndex;
+                                                                    return (
+                                                                        <div key={i} className="flex-1 flex flex-col items-center gap-1">
+                                                                            <span className={`text-[10px] font-bold ${isCorrect ? 'text-blue-700' : 'text-slate-400'}`}>
+                                                                                {String.fromCharCode(65 + i)}
+                                                                            </span>
+                                                                            <div className={`w-full h-4 border ${isCorrect ? 'border-blue-600 bg-blue-600' : 'border-slate-300 bg-slate-50'}`}></div>
+                                                                        </div>
+                                                                    );
+                                                                })}
                                                             </div>
-                                                        )}
-
-                                                        {/* Possible Answers (for Speaking / Writing) */}
-                                                        {(!q.correctOption && q.possibleAnswers && q.possibleAnswers.length > 0) && (
-                                                            <div className="mb-1">
-                                                                <span className="text-gray-500 mr-2 uppercase text-[10px] font-bold">Suggested Answers:</span>
-                                                                <ul className="list-disc pl-4 mt-0.5 space-y-0.5">
-                                                                    {q.possibleAnswers.map((pa, paIdx) => (
-                                                                        <li key={paIdx} className="text-slate-800 italic">{pa}</li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        )}
-
-                                                        {/* Rationale / Explanation */}
-                                                        {q.explanation && (
-                                                            <div className="text-slate-600 leading-snug bg-slate-50 p-1.5 rounded-r border-l-2 border-blue-300">
-                                                                <span className="font-bold text-slate-700 uppercase text-[10px] block mb-0.5">Rationale:</span>
-                                                                {q.explanation}
+                                                        ) : (
+                                                            <div className="flex-1 relative">
+                                                                <div className="absolute bottom-1 w-full translate-y-full border-b border-slate-400"></div>
+                                                                <div className="font-bold text-blue-800 italic px-2">
+                                                                    {q.correctOption ? q.correctOption : (
+                                                                        q.possibleAnswers && q.possibleAnswers.length > 0 ? q.possibleAnswers.join(' / ') : 'Answers will vary'
+                                                                    )}
+                                                                </div>
                                                             </div>
                                                         )}
                                                     </div>
+
+                                                    {/* Rationale appended underneath */}
+                                                    {q.explanation && (
+                                                        <div className="ml-10 mt-2 text-xs text-slate-600 bg-slate-50 p-2 rounded-r border-l-2 border-blue-300">
+                                                            <span className="font-bold text-slate-700 uppercase text-[9px] block mb-1 tracking-wider">Rationale:</span>
+                                                            <span className="leading-snug">{q.explanation}</span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             );
                                         })}
