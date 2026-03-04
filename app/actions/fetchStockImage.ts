@@ -8,12 +8,12 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// HuggingFace models to try in order
+// HuggingFace models to try in order (Stable Diffusion focus)
 const HF_MODELS = [
-  'stabilityai/stable-diffusion-3.5-large',
-  'black-forest-labs/FLUX.1-schnell',
-  'stabilityai/stable-diffusion-xl-base-1.0',
+  'runwayml/stable-diffusion-v1-5',
   'prompthero/openjourney',
+  'stabilityai/stable-diffusion-2-1',
+  'stabilityai/stable-diffusion-xl-base-1.0'
 ];
 
 async function uploadToSupabase(filename: string, buffer: Buffer, mimeType: string): Promise<string | null> {
@@ -55,7 +55,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
     console.error("Error checking Supabase cache:", error);
   }
 
-  // 2. STAGE 1: Hugging Face
+  // 2. STAGE 1: Hugging Face (Stable Diffusion Only)
   const apiKey = process.env.HUGGINGFACE_API_KEY;
   const enhancedPrompt = `${query}, high quality realistic detailed photography, 4k, professional`;
   let lastError = '';
@@ -63,7 +63,7 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
   if (apiKey) {
     for (const model of HF_MODELS) {
       try {
-        console.log(`[STAGE 1] Trying HF (${model}) for hash: ${hash}`);
+        console.log(`[Stable Diffusion] Trying model: ${model}`);
         const response = await fetch(
           `https://router.huggingface.co/hf-inference/models/${model}`,
           {
@@ -77,9 +77,18 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
         );
 
         if (response.status === 402 || response.status === 429) {
-          console.warn(`[STAGE 1] HF Limit hit (${response.status}) on ${model}. Switching to fallbacks.`);
-          lastError = `HF Limit (${response.status})`;
-          break; // Stop trying HF
+          console.warn(`[Stable Diffusion] Limit hit (${response.status}) on ${model}.`);
+          lastError = `Limit reached (${response.status})`;
+          continue; // Try next SD model
+        }
+
+        if (response.status === 503) {
+          const text = await response.text();
+          if (text.includes('loading')) {
+            console.warn(`[Stable Diffusion] Model ${model} is loading. Trying next...`);
+            lastError = `Model is loading`;
+            continue;
+          }
         }
 
         if (response.ok) {
@@ -88,74 +97,27 @@ export async function fetchStockImageAction(query: string): Promise<{ success: b
           const buffer = Buffer.from(arrayBuffer);
 
           if (buffer.length > 1000) {
-            console.log(`[STAGE 1] HF Success (${model}) — ${Math.round(buffer.length / 1024)}KB`);
+            console.log(`[Stable Diffusion] Success (${model}) — ${Math.round(buffer.length / 1024)}KB`);
             const publicUrl = await uploadToSupabase(filename, buffer, contentType);
             if (publicUrl) return { success: true, imageUrl: publicUrl };
             return { success: true, imageUrl: `data:${contentType};base64,${buffer.toString('base64')}` };
           }
         } else {
           const text = await response.text();
-          console.warn(`[STAGE 1] HF ${model} failed (${response.status}): ${text.substring(0, 50)}`);
+          console.warn(`[Stable Diffusion] ${model} failed (${response.status}): ${text.substring(0, 50)}`);
           lastError = `${model}: ${response.status}`;
         }
       } catch (err: any) {
-        console.warn(`[STAGE 1] HF ${model} exception:`, err?.message || err);
+        console.warn(`[Stable Diffusion] ${model} exception:`, err?.message || err);
         lastError = err?.message || String(err);
       }
     }
   } else {
-    lastError = 'No HF API Key';
-  }
-
-  // 3. STAGE 2: Pollinations (Complex Prompt)
-  try {
-    console.log(`[STAGE 2] Trying Pollinations (Complex) for: ${hash}`);
-    const encodedComplex = encodeURIComponent(enhancedPrompt);
-    const seed = Math.floor(Math.random() * 999999);
-    const url = `https://pollinations.ai/p/${encodedComplex}?width=1024&height=1024&seed=${seed}&model=flux&nologo=true`;
-
-    const response = await fetch(url);
-    if (response.ok) {
-      const ct = response.headers.get('content-type') || 'image/jpeg';
-      const ab = await response.arrayBuffer();
-      const buf = Buffer.from(ab);
-      if (buf.length > 500) { // Lower threshold for safety
-        console.log(`[STAGE 2] Pollinations Success — ${Math.round(buf.length / 1024)}KB`);
-        const publicUrl = await uploadToSupabase(filename, buf, ct);
-        if (publicUrl) return { success: true, imageUrl: publicUrl };
-        return { success: true, imageUrl: `data:${ct};base64,${buf.toString('base64')}` };
-      }
-    }
-    console.warn(`[STAGE 2] Pollinations complex failed with status: ${response.status}`);
-  } catch (err: any) {
-    console.warn(`[STAGE 2] Pollinations complex exception:`, err?.message || err);
-  }
-
-  // 4. STAGE 3: Pollinations (Simple Prompt)
-  try {
-    console.log(`[STAGE 3] Trying Pollinations (Simple) for: ${hash}`);
-    const encodedSimple = encodeURIComponent(query);
-    const seed = Math.floor(Math.random() * 999999);
-    const url = `https://pollinations.ai/p/${encodedSimple}?width=1024&height=1024&seed=${seed}&model=flux&nologo=true`;
-
-    const response = await fetch(url);
-    if (response.ok) {
-      const ct = response.headers.get('content-type') || 'image/jpeg';
-      const ab = await response.arrayBuffer();
-      const buf = Buffer.from(ab);
-      if (buf.length > 500) {
-        console.log(`[STAGE 3] Pollinations Simple Success — ${Math.round(buf.length / 1024)}KB`);
-        const publicUrl = await uploadToSupabase(filename, buf, ct);
-        if (publicUrl) return { success: true, imageUrl: publicUrl };
-        return { success: true, imageUrl: `data:${ct};base64,${buf.toString('base64')}` };
-      }
-    }
-  } catch (err: any) {
-    console.error(`[STAGE 3] Critical failure:`, err?.message || err);
+    lastError = 'No HF API Key found in environment';
   }
 
   return {
     success: false,
-    error: `Image generation failed at all stages. Last HF Error: ${lastError}. Please try a different topic or try again later.`
+    error: `Stable Diffusion image generation failed. (HF Error: ${lastError}). Please try again later or use a different topic.`
   };
 }
