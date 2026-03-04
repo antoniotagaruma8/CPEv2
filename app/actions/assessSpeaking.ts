@@ -27,7 +27,7 @@ export async function assessSpeakingAction(base64Audio: string, questionText: st
 
     try {
         // 1. Decode generic Base64 string to a temporary WebM file for Groq Whisper
-        const base64Data = base64Audio.replace(/^data:audio\/\w+;base64,/, '');
+        const base64Data = base64Audio.includes(',') ? base64Audio.split(',')[1] : base64Audio;
         const audioBuffer = Buffer.from(base64Data, 'base64');
         fs.writeFileSync(tempFilePath, audioBuffer);
 
