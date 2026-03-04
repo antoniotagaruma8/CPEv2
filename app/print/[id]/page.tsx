@@ -325,7 +325,7 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                                         {partQuestions.map((q, qIndex) => (
                                             <div key={q.id} className="text-base break-inside-avoid shadow-none">
                                                 <div className="flex gap-4">
-                                                    <span className="font-bold min-w-[1.5rem]">{qIndex + 1}</span>
+                                                    <span className="font-bold min-w-[2rem]">{examQuestions.findIndex(eq => eq.id === q.id) + 1}.</span>
                                                     <div className="w-full">
                                                         <p className="mb-3 whitespace-pre-wrap">{q.question}</p>
 
@@ -399,7 +399,7 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                                             return (
                                                 <div key={`answer-${q.id}`} className="flex gap-4 text-xs border-b border-slate-100 pb-2 last:border-0">
-                                                    <span className="font-bold min-w-[1.5rem] text-slate-500">{qIndex + 1}.</span>
+                                                    <span className="font-bold min-w-[2rem] text-slate-500">{examQuestions.findIndex(eq => eq.id === q.id) + 1}.</span>
                                                     <div className="flex-1">
                                                         {/* Exact Answer if exists */}
                                                         {q.correctOption && (

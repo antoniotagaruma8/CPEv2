@@ -273,6 +273,17 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
         }
     }
 
+    const cambridgeLevelName = () => {
+        switch (dbRecord.level) {
+            case 'A2': return 'A2 Key (KET)';
+            case 'B1': return 'B1 Preliminary (PET)';
+            case 'B2': return 'B2 First (FCE)';
+            case 'C1': return 'C1 Advanced (CAE)';
+            case 'C2': return 'C2 Proficiency (CPE)';
+            default: return `CEFR ${dbRecord.level}`;
+        }
+    };
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-20">
             {/* Header */}
@@ -324,153 +335,199 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
             </header>
 
             {/* Main Content */}
-            <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-10">
-
-                {/* Exam Metadata Card */}
-                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-8 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
-
-                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
-                        <div>
-                            <div className="flex items-center gap-2 mb-3">
-                                <span className="px-2.5 py-1 bg-blue-100 text-blue-700 rounded text-xs font-black tracking-widest uppercase">
-                                    {dbRecord.level}
-                                </span>
-                                <span className="px-2.5 py-1 bg-slate-100 text-slate-600 rounded text-xs font-bold uppercase">
-                                    {dbRecord.type}
-                                </span>
+            <main className="mx-auto px-4 sm:px-6 py-10 flex justify-center">
+                <div className="max-w-[210mm] w-full p-8 sm:p-[15mm] bg-white shadow-xl min-h-[297mm]">
+                    {/* EXAM COVER PAGE HEADER (Cambridge Style) */}
+                    <div className="border-2 border-black p-6 mb-8 text-sm">
+                        <div className="grid grid-cols-2 gap-x-8 gap-y-6 font-bold uppercase mb-6 text-sm">
+                            <div className="col-span-2 flex items-end gap-2">
+                                <span className="shrink-0">CANDIDATE NAME:</span>
+                                <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
                             </div>
-                            <h1 className="text-3xl font-extrabold text-slate-900 mb-2">
-                                {dbRecord.topic || 'Custom Practice Exam'}
-                            </h1>
-                            <p className="text-slate-500 flex items-center gap-2 text-sm">
-                                <Calendar className="w-4 h-4" />
-                                Generated on {new Date(dbRecord.created_at || new Date()).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
-                            </p>
-                            {examData.examFor && (
-                                <p className="mt-2 text-sm text-slate-600 font-medium">
-                                    Prepared for: <span className="text-slate-900 font-bold bg-slate-100 px-2 py-0.5 rounded">{examData.examFor}</span>
-                                </p>
-                            )}
+                            <div className="col-span-1 flex items-end gap-2">
+                                <span className="shrink-0">CENTRE NUMBER:</span>
+                                <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
+                            </div>
+                            <div className="col-span-1 flex items-end gap-2">
+                                <span className="shrink-0">CANDIDATE NUMBER:</span>
+                                <span className="flex-1 border-b-2 border-dashed border-black pb-1"></span>
+                            </div>
                         </div>
 
-                        {/* Score Display */}
-                        {isFinished && (
-                            <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 min-w-[200px] flex flex-col items-center justify-center text-center">
-                                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Final Result</h3>
-                                <div className={`text-3xl font-black mb-1 ${accuracyPercentage >= 80 ? 'text-green-600' : accuracyPercentage >= 60 ? 'text-blue-600' : 'text-amber-600'}`}>
-                                    {scoreText}
-                                </div>
-                                <div className="w-full bg-slate-200 h-2 rounded-full mt-2 overflow-hidden">
-                                    <div
-                                        className={`h-full ${accuracyPercentage >= 80 ? 'bg-green-500' : accuracyPercentage >= 60 ? 'bg-blue-500' : 'bg-amber-500'}`}
-                                        style={{ width: `${accuracyPercentage}%` }}
-                                    ></div>
-                                </div>
-                            </div>
-                        )}
-                        {!isFinished && (
-                            <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 flex items-center justify-center text-center">
-                                <p className="text-slate-500 font-medium text-sm">This exam was saved as a draft<br />and is not fully completed.</p>
-                            </div>
-                        )}
+                        <div className="font-bold text-center border-t-2 border-black pt-4">
+                            <h1 className="text-2xl font-black tracking-widest uppercase mb-1">
+                                CEFR ENGLISH EXAM
+                            </h1>
+                            <h2 className="text-xl font-bold mb-4">{cambridgeLevelName()}</h2>
+                            <h3 className="text-lg uppercase">
+                                {dbRecord.type === 'Reading' ? 'Reading and Use of English' : dbRecord.type}
+                            </h3>
+                            {dbRecord.topic && <p className="mt-2 text-md font-normal italic">Topic: {dbRecord.topic}</p>}
+                        </div>
+
+                        <div className="mt-8 font-bold text-center border-b-2 border-black pb-4">
+                            <p>Time <span className="font-normal italic">(approx)</span>: {
+                                dbRecord.type === 'Reading' ? '1 hour 15 minutes' :
+                                    dbRecord.type === 'Writing' ? '1 hour 20 minutes' :
+                                        dbRecord.type === 'Listening' ? '40 minutes' : '15 minutes'
+                            }</p>
+                        </div>
+
+                        <div className="mt-6 mb-2 space-y-3 font-bold">
+                            <p className="uppercase text-lg">Instructions to candidates</p>
+                            <p className="font-normal">Do not open this question paper until you are told to do so.</p>
+                            <p className="font-normal">Write your name, centre number and candidate number on your answer sheet if they are not already there.</p>
+                            <p className="font-normal">Read the instructions for each part of the paper carefully.</p>
+                            <p className="font-normal">Answer all the questions.</p>
+                            <p className="font-normal">Read the instructions on the answer sheet. Write on the answer sheet. Use a pencil.</p>
+                            <p className="font-normal">You must complete the answer sheet within the time limit.</p>
+                            <p className="font-normal">At the end of the test, hand in both this question paper and your answer sheet.</p>
+                        </div>
                     </div>
-                </div>
 
-                {/* Responses Layout */}
-                <h2 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-                    <LayoutDashboard className="w-5 h-5 text-blue-500" /> Exam Content & Responses
-                </h2>
+                    {/* EXAM CONTENTS */}
+                    <div className="space-y-12 pb-20">
+                        {examParts.map((part, index) => {
+                            const partQuestions = examQuestions.filter(q => q.part === part.part);
+                            const isFirst = index === 0;
 
-                <div className="space-y-12">
-                    {examParts.map((part) => {
-                        const partQuestions = examQuestions.filter(q => q.part === part.part);
+                            return (
+                                <div key={part.part} className={`print:break-before-auto ${!isFirst ? 'print:mt-12 mt-12' : ''}`}>
+                                    <h3 className="font-bold text-lg mb-2 uppercase">Part {part.part}</h3>
 
-                        return (
-                            <section key={part.part} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                                <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                                    <div>
-                                        <h3 className="font-bold text-slate-800 text-lg">Part {part.part}: {part.title}</h3>
-                                        {part.instructions && <p className="text-sm text-slate-500 mt-1">{part.instructions}</p>}
-                                    </div>
-                                </div>
+                                    {part.instructions && (
+                                        <p className="mb-6 font-bold italic text-justify leading-relaxed">
+                                            {part.instructions}
+                                        </p>
+                                    )}
 
-                                <div className="p-6">
-                                    {/* Reading / Context material */}
                                     {part.content && (
-                                        <div className="bg-slate-50 rounded-xl p-6 border border-slate-100 mb-8 whitespace-pre-wrap font-serif text-slate-700 leading-relaxed shadow-inner overflow-x-auto">
-                                            {part.content}
+                                        <div className="mb-8 border-y-2 border-black py-4 mb-6">
+                                            <p className="font-sans whitespace-pre-wrap text-justify leading-relaxed">
+                                                {part.content}
+                                            </p>
                                         </div>
                                     )}
 
-                                    {/* Questions */}
                                     {partQuestions.length > 0 && (
-                                        <div className="space-y-8">
-                                            {partQuestions.map((question, qIdx) => {
-                                                const userAnswer = userAnswers[question.id];
-                                                const isCorrect = userAnswer === question.correctOption;
-                                                const isAttempted = userAnswer !== undefined;
+                                        <div className="space-y-6">
+                                            {partQuestions.map((q, qIndex) => (
+                                                <div key={q.id} className="text-base break-inside-avoid shadow-none">
+                                                    <div className="flex gap-4">
+                                                        <span className="font-bold min-w-[2rem]">{examQuestions.findIndex(eq => eq.id === q.id) + 1}.</span>
+                                                        <div className="w-full">
+                                                            <p className="mb-3 whitespace-pre-wrap">{q.question}</p>
+
+                                                            {q.options && q.options.length > 0 && (
+                                                                <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-2 ml-4">
+                                                                    {q.options.map((opt, oIdx) => (
+                                                                        <div key={oIdx} className="flex gap-2 items-start">
+                                                                            <span className="font-bold uppercase min-w-[1.5rem]">{String.fromCharCode(65 + oIdx)}</span>
+                                                                            <span>{opt}</span>
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                            )}
+
+                                                            {/* EXPLICIT WRITE-IN AREA FOR PRINT */}
+                                                            {q.options && q.options.length > 0 ? (
+                                                                <div className="mt-4 flex items-center gap-3">
+                                                                    <span className="font-bold text-xs uppercase text-slate-500">Write letter here:</span>
+                                                                    <div className="w-10 h-10 border-2 border-slate-400 bg-slate-50"></div>
+                                                                </div>
+                                                            ) : (
+                                                                dbRecord.type !== 'Speaking' && (
+                                                                    <div className="mt-6 flex items-end gap-3 w-full">
+                                                                        <span className="font-bold text-xs uppercase text-slate-500 pb-1 shrink-0">Write answer here:</span>
+                                                                        <div className="flex-1 border-b-2 border-slate-400 h-6"></div>
+                                                                    </div>
+                                                                )
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="text-center font-bold uppercase mt-12 mb-8 hidden print:block border-t border-black pt-4">
+                        end of test
+                    </div>
+
+                    {/* ANSWER KEY PAGE */}
+                    <div className="print:break-before-page pt-12 print:pt-4 pb-20">
+                        <h2 className="text-2xl font-black uppercase border-b-2 border-black pb-2 mb-8 text-slate-800">
+                            Answer Key & Rationale
+                        </h2>
+
+                        <div className="space-y-4">
+                            {examParts.map((part) => {
+                                const partQuestions = examQuestions.filter(q => q.part === part.part);
+
+                                // Check if this part has any questions that have an answer or explanation
+                                const hasAnswers = partQuestions.some(q => q.correctOption || q.explanation || (q.possibleAnswers && q.possibleAnswers.length > 0));
+                                if (!hasAnswers) return null;
+
+                                return (
+                                    <div key={`answer-key-part-${part.part}`} className="break-inside-avoid">
+                                        <h3 className="font-bold text-base mb-2 uppercase bg-slate-100 p-1 rounded">Part {part.part}</h3>
+                                        <div className="grid grid-cols-1 gap-y-2">
+                                            {partQuestions.map((q, qIndex) => {
+                                                // Determine letter for M/C options
+                                                let correctLetter = '';
+                                                if (q.options && q.options.length > 0 && q.correctOption) {
+                                                    const optIndex = q.options.indexOf(q.correctOption);
+                                                    if (optIndex !== -1) {
+                                                        correctLetter = String.fromCharCode(65 + optIndex);
+                                                    }
+                                                }
 
                                                 return (
-                                                    <div key={question.id} className="pt-6 border-t border-slate-100 first:pt-0 first:border-0">
-                                                        <h4 className="font-bold text-slate-800 mb-4 whitespace-pre-wrap">
-                                                            <span className="text-blue-500 mr-2">{qIdx + 1}.</span>
-                                                            {question.question}
-                                                        </h4>
-
-                                                        {/* Options for Reading/Listening */}
-                                                        {question.options && question.options.length > 0 && (
-                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                                                                {question.options.map((option, optIdx) => {
-                                                                    const letter = String.fromCharCode(65 + optIdx);
-                                                                    const isSelected = userAnswer === option;
-                                                                    const isActuallyCorrect = question.correctOption === option;
-
-                                                                    let bgClass = "bg-slate-50 border-slate-200 text-slate-600";
-                                                                    if (isSelected && isActuallyCorrect) {
-                                                                        bgClass = "bg-green-50 border-green-300 text-green-800 ring-1 ring-green-300";
-                                                                    } else if (isSelected && !isActuallyCorrect) {
-                                                                        bgClass = "bg-red-50 border-red-300 text-red-800 ring-1 ring-red-300 opacity-70";
-                                                                    } else if (!isSelected && isActuallyCorrect && isFinished) {
-                                                                        bgClass = "bg-green-50 border-green-300 text-green-800 border-dashed border-2 opacity-80";
-                                                                    }
-
-                                                                    return (
-                                                                        <div key={optIdx} className={`p-3 rounded-xl border flex items-center gap-3 transition-all ${bgClass}`}>
-                                                                            <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${isSelected ? (isActuallyCorrect ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800') : 'bg-slate-200 text-slate-500'}`}>
-                                                                                {letter}
-                                                                            </div>
-                                                                            <span className="flex-1 text-sm">{option}</span>
-                                                                            {isSelected && isActuallyCorrect && <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />}
-                                                                            {isSelected && !isActuallyCorrect && <XCircle className="w-5 h-5 text-red-500 shrink-0" />}
-                                                                        </div>
-                                                                    );
-                                                                })}
-                                                            </div>
-                                                        )}
-
-                                                        {/* Un-optioned open text like Writing/Speaking answers isn't fully supported in Read-Only natively unless we saved their transcript, 
-                                but we can display the AI explanation right away. */}
-
-                                                        {/* Rationale Display */}
-                                                        {examData.isFinished && question.explanation && (
-                                                            <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-100 flex gap-3">
-                                                                <Lightbulb className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                                                                <div>
-                                                                    <span className="text-xs font-bold text-blue-800 uppercase tracking-widest block mb-1">Rationale</span>
-                                                                    <p className="text-sm text-blue-900 leading-relaxed">{question.explanation}</p>
+                                                    <div key={`answer-${q.id}`} className="flex gap-4 text-xs border-b border-slate-100 pb-2 last:border-0">
+                                                        <span className="font-bold min-w-[2rem] text-slate-500">{examQuestions.findIndex(eq => eq.id === q.id) + 1}.</span>
+                                                        <div className="flex-1">
+                                                            {/* Exact Answer if exists */}
+                                                            {q.correctOption && (
+                                                                <div className="font-bold mb-1 text-slate-900">
+                                                                    <span className="text-gray-500 mr-2 uppercase text-[10px]">Answer:</span>
+                                                                    {correctLetter ? <span className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200 mr-2">{correctLetter}</span> : null}
+                                                                    {q.correctOption}
                                                                 </div>
-                                                            </div>
-                                                        )}
+                                                            )}
+
+                                                            {/* Possible Answers (for Speaking / Writing) */}
+                                                            {(!q.correctOption && q.possibleAnswers && q.possibleAnswers.length > 0) && (
+                                                                <div className="mb-1">
+                                                                    <span className="text-gray-500 mr-2 uppercase text-[10px] font-bold">Suggested Answers:</span>
+                                                                    <ul className="list-disc pl-4 mt-0.5 space-y-0.5">
+                                                                        {q.possibleAnswers.map((pa, paIdx) => (
+                                                                            <li key={paIdx} className="text-slate-800 italic">{pa}</li>
+                                                                        ))}
+                                                                    </ul>
+                                                                </div>
+                                                            )}
+
+                                                            {/* Rationale / Explanation */}
+                                                            {q.explanation && (
+                                                                <div className="text-slate-600 leading-snug bg-slate-50 p-1.5 rounded-r border-l-2 border-blue-300">
+                                                                    <span className="font-bold text-slate-700 uppercase text-[10px] block mb-0.5">Rationale:</span>
+                                                                    {q.explanation}
+                                                                </div>
+                                                            )}
+                                                        </div>
                                                     </div>
                                                 );
                                             })}
                                         </div>
-                                    )}
-                                </div>
-                            </section>
-                        );
-                    })}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
