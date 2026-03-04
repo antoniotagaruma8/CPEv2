@@ -53,3 +53,17 @@ export async function deleteSavedExam(examId: string) {
   }
   return true
 }
+
+export async function getExamById(examId: string) {
+  const { data, error } = await supabase
+    .from('exams')
+    .select('*')
+    .eq('id', examId)
+    .single()
+
+  if (error) {
+    console.error('Error fetching exam by ID:', error)
+    return null
+  }
+  return data
+}

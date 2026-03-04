@@ -16,7 +16,7 @@ import { assessSpeakingAction } from '../actions/assessSpeaking';
 import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
-import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText } from 'lucide-react';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2 } from 'lucide-react';
 
 interface Question {
   id: number;
@@ -944,6 +944,13 @@ export default function DashboardPage() {
     }
   };
 
+  const handleShareExam = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const url = `${window.location.origin}/shared/${id}`;
+    navigator.clipboard.writeText(url);
+    alert('Public link copied to clipboard:\n' + url);
+  };
+
   const handleToggleFavorite = async (id: string, currentStatus: boolean, e: React.MouseEvent) => {
     e.stopPropagation();
 
@@ -1322,6 +1329,13 @@ export default function DashboardPage() {
                                 title={exam.is_favorite ? "Remove from favorites" : "Add to favorites"}
                               >
                                 <Star className="w-4 h-4" fill={exam.is_favorite ? "currentColor" : "none"} strokeWidth={2} />
+                              </button>
+                              <button
+                                onClick={(e) => handleShareExam(exam.id, e)}
+                                className="text-slate-400 hover:text-blue-500 transition-colors p-1 opacity-0 group-hover:opacity-100 mr-2"
+                                title="Copy Share Link"
+                              >
+                                <Share2 className="w-4 h-4" strokeWidth={2.5} />
                               </button>
                               <button
                                 onClick={(e) => handleDeleteSavedExam(exam.id, e)}
