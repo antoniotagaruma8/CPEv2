@@ -96,7 +96,7 @@ const getImageFromDB = async (prompt: string): Promise<string | null> => {
 
 const imageCache: Record<string, string> = {};
 
-const AIImage = ({ prompt, indices = [0, 1, 2, 3] }: { prompt: string, indices?: number[] }) => {
+const AIImage = ({ prompt, indices = [0, 1, 2, 3], onImagesLoaded }: { prompt: string, indices?: number[], onImagesLoaded?: (urls: string[]) => void }) => {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -123,6 +123,10 @@ const AIImage = ({ prompt, indices = [0, 1, 2, 3] }: { prompt: string, indices?:
           });
         } else {
           setImages(result.imageOptions);
+          if (onImagesLoaded) {
+            const selectedUrls = indices.map(i => result.imageOptions![i]).filter(Boolean);
+            onImagesLoaded(selectedUrls);
+          }
         }
         setLoading(false);
         setReloadingIndex(null);
@@ -400,6 +404,8 @@ export default function DashboardPage() {
   const [recordingQuestionId, setRecordingQuestionId] = useState<string | null>(null);
   const [recordingQuestionText, setRecordingQuestionText] = useState<string>('');
   const [recordingImagePrompts, setRecordingImagePrompts] = useState<string[]>([]);
+  const [recordingImageUrls, setRecordingImageUrls] = useState<string[]>([]);
+  const [loadedSetImages, setLoadedSetImages] = useState<Record<string, string[]>>({});
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
   const [isAssessmentModalOpen, setIsAssessmentModalOpen] = useState(false);
 
@@ -2118,7 +2124,7 @@ export default function DashboardPage() {
 
                               {isRevealed && (
                                 <div className="animate-fade-in mb-4">
-                                  <AIImage prompt={primaryPrompt} indices={indices} />
+                                  <AIImage prompt={primaryPrompt} indices={indices} onImagesLoaded={(urls) => setLoadedSetImages(prev => ({ ...prev, [setKey]: urls }))} />
                                 </div>
                               )}
 
@@ -2127,7 +2133,11 @@ export default function DashboardPage() {
                                   {setId === 1 ? 'Comparing Photos from Provider 1 & 2' : 'Comparing Photos from Provider 3 & 4'}
                                 </p>
                                 <button
-                                  onClick={() => handleMicClick(setKey, activeQuestionData.question)}
+                                  onClick={() => {
+                                    const cambridgePrompt = `Here are your photographs. I'd like you to compare the photographs, and say ${setId === 1 ? 'which shows a more positive experience.' : 'how the people might be feeling in each situation.'}`;
+                                    setRecordingImageUrls(loadedSetImages[setKey] || []);
+                                    handleMicClick(setKey, cambridgePrompt);
+                                  }}
                                   className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold font-mono shadow-md transition-all transform hover:scale-[1.03] w-full md:w-auto justify-center
                                      ${isRecording && recordingQuestionId === setKey ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                                 >
@@ -2528,10 +2538,12 @@ export default function DashboardPage() {
                         );
                       })()}
                     </div>
-                    {recordingImagePrompts && recordingImagePrompts.length > 0 && (
-                      <div className="mt-6 grid grid-cols-1 gap-4 shrink-0 pb-4">
-                        {recordingImagePrompts.map((prompt, idx) => (
-                          <AIImage key={idx} prompt={prompt} />
+                    {recordingImageUrls && recordingImageUrls.length > 0 && (
+                      <div className="mt-6 grid grid-cols-2 gap-3 shrink-0 pb-4">
+                        {recordingImageUrls.map((url, idx) => (
+                          <div key={idx} className="aspect-square rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
+                            <img src={url} alt={`Photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                          </div>
                         ))}
                       </div>
                     )}
