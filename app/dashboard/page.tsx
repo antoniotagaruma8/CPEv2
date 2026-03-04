@@ -429,6 +429,25 @@ export default function DashboardPage() {
     }
   }, [cefrLevel]);
 
+  const stopRecording = useCallback(() => {
+    if (recordingTimerRef.current) {
+      clearInterval(recordingTimerRef.current);
+      recordingTimerRef.current = null;
+    }
+    if (mediaRecorder && isRecording) {
+      mediaRecorder.stop();
+      setIsRecording(false);
+      setIsAssessing(true);
+    }
+  }, [mediaRecorder, isRecording]);
+
+  // Auto-stop recording when timer reaches 0
+  useEffect(() => {
+    if (isRecording && recordingTimeLeft === 0) {
+      stopRecording();
+    }
+  }, [recordingTimeLeft, isRecording, stopRecording]);
+
   // Writing Assessment States
   const [isWritingModalOpen, setIsWritingModalOpen] = useState(false);
   const [writingContent, setWritingContent] = useState('');
@@ -1743,25 +1762,6 @@ export default function DashboardPage() {
       setIsAssessmentModalOpen(false);
     }
   };
-
-  const stopRecording = useCallback(() => {
-    if (recordingTimerRef.current) {
-      clearInterval(recordingTimerRef.current);
-      recordingTimerRef.current = null;
-    }
-    if (mediaRecorder && isRecording) {
-      mediaRecorder.stop();
-      setIsRecording(false);
-      setIsAssessing(true);
-    }
-  }, [mediaRecorder, isRecording]);
-
-  // Auto-stop recording when timer reaches 0
-  useEffect(() => {
-    if (isRecording && recordingTimeLeft === 0) {
-      stopRecording();
-    }
-  }, [recordingTimeLeft, isRecording, stopRecording]);
 
   const submitAudioForAssessment = async (base64Audio: string, targetQuestionId: string, targetQuestionText: string) => {
     try {
