@@ -31,6 +31,7 @@ interface Question {
   imagePrompts?: string[];
   possibleAnswers?: string[];
   tips?: string;
+  modelAnswer?: string;
   part1Questions?: { question: string; answer: string; tip: string }[];
 }
 
@@ -2701,11 +2702,11 @@ export default function DashboardPage() {
                       </div>
                     )}
 
-                    {isAdmin && (
+                    {(isAdmin || (activeQuestionData.correctOption && activeQuestionData.correctOption.length > 0)) && (
                       <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg shadow-sm">
                         <div className="flex justify-between items-center">
                           <h4 className="font-bold text-yellow-800 flex items-center gap-2">
-                            <span>💡</span> Answer Key
+                            <span>💡</span> {examType === 'Writing' ? 'How to Approach' : 'Answer Key'}
                           </h4>
                           {isAdmin || (retryCount[currentQuestion.toString()] >= 2) ? (
                             <button
@@ -2716,7 +2717,7 @@ export default function DashboardPage() {
                                 return newSet;
                               })}
                               className="px-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-md border border-gray-300 transition-colors"
-                              title={revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Correct Answer"}
+                              title={revealedAnswers.has(currentQuestion.toString()) ? "Hide" : "Show"}
                             >
                               {revealedAnswers.has(currentQuestion.toString()) ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" /></svg>
@@ -2725,15 +2726,54 @@ export default function DashboardPage() {
                               )}
                             </button>
                           ) : (
-                            <div className="flex items-center justify-center px-3 bg-slate-50 border border-slate-200 text-slate-400 rounded-md cursor-help" title="Try answering 2 times to unlock the answer key">
+                            <div className="flex items-center justify-center px-3 bg-slate-50 border border-slate-200 text-slate-400 rounded-md cursor-help" title={`Try answering ${2 - (retryCount[currentQuestion.toString()] || 0)} more time(s) to unlock`}>
                               <span className="text-xs font-medium">🔒</span>
                             </div>
                           )}
                         </div>
                         {isAdmin || (retryCount[currentQuestion.toString()] >= 2) ? (
                           revealedAnswers.has(currentQuestion.toString()) && (
-                            <div className="mt-2 text-sm text-green-700 bg-green-50 p-3 rounded-md border border-green-200 animate-fade-in font-medium">
-                              Correct answer: <span className="font-bold">{activeQuestionData.correctOption}</span>
+                            <div className="mt-2 text-sm text-green-700 bg-green-50 p-3 rounded-md border border-green-200 animate-fade-in font-medium whitespace-pre-line">
+                              {examType === 'Writing' ? '' : 'Correct answer: '}<span className={examType === 'Writing' ? 'font-normal font-sans' : 'font-bold'}>{activeQuestionData.correctOption}</span>
+                            </div>
+                          )
+                        ) : null}
+                      </div>
+                    )}
+
+                    {examType === 'Writing' && activeQuestionData.modelAnswer && (
+                      <div className="p-4 bg-emerald-50 border-l-4 border-emerald-400 rounded-r-lg shadow-sm">
+                        <div className="flex justify-between items-center">
+                          <h4 className="font-bold text-emerald-800 flex items-center gap-2">
+                            <span>📝</span> Model Answer
+                          </h4>
+                          {isAdmin || (retryCount[currentQuestion.toString()] >= 2) ? (
+                            <button
+                              onClick={() => setRevealedPossibleAnswers(prev => {
+                                const newSet = new Set(prev);
+                                if (newSet.has('model' + currentQuestion.toString())) newSet.delete('model' + currentQuestion.toString());
+                                else newSet.add('model' + currentQuestion.toString());
+                                return newSet;
+                              })}
+                              className="px-3 bg-emerald-100 hover:bg-emerald-200 text-emerald-700 rounded-md border border-emerald-300 transition-colors"
+                              title={revealedPossibleAnswers.has('model' + currentQuestion.toString()) ? "Hide Model Answer" : "Show Model Answer"}
+                            >
+                              {revealedPossibleAnswers.has('model' + currentQuestion.toString()) ? (
+                                <EyeOff className="w-5 h-5" />
+                              ) : (
+                                <Eye className="w-5 h-5" />
+                              )}
+                            </button>
+                          ) : (
+                            <div className="flex items-center justify-center px-3 bg-slate-50 border border-slate-200 text-slate-400 rounded-md cursor-help" title={`Try answering ${2 - (retryCount[currentQuestion.toString()] || 0)} more time(s) to unlock`}>
+                              <span className="text-xs font-medium">🔒</span>
+                            </div>
+                          )}
+                        </div>
+                        {isAdmin || (retryCount[currentQuestion.toString()] >= 2) ? (
+                          revealedPossibleAnswers.has('model' + currentQuestion.toString()) && (
+                            <div className="mt-2 text-sm text-emerald-800 bg-emerald-100/50 p-3 rounded-md border border-emerald-200 animate-fade-in font-medium whitespace-pre-line leading-relaxed">
+                              {activeQuestionData.modelAnswer}
                             </div>
                           )
                         ) : null}
