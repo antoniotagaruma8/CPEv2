@@ -287,6 +287,29 @@ export default function SharedExamPage({ params }: { params: Promise<{ id: strin
                             Read-Only View
                         </span>
                         <button
+                            onClick={async () => {
+                                const url = window.location.href;
+                                if (navigator.share) {
+                                    try {
+                                        await navigator.share({
+                                            title: dbRecord?.topic || 'CEFR Mock Exam',
+                                            text: 'Check out this Cambridge-style English mock exam!',
+                                            url: url,
+                                        });
+                                    } catch (err) {
+                                        console.log('Share canceled or failed:', err);
+                                    }
+                                } else {
+                                    navigator.clipboard.writeText(url);
+                                    alert('Link copied to clipboard:\n' + url);
+                                }
+                            }}
+                            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg text-sm font-bold hover:bg-slate-50 transition"
+                        >
+                            <Share2 className="w-4 h-4" />
+                            Share
+                        </button>
+                        <button
                             onClick={() => window.open(`/print/${dbRecord?.id}`, '_blank')}
                             className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg text-sm font-bold hover:bg-slate-50 transition"
                         >

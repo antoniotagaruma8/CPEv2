@@ -952,11 +952,24 @@ export default function DashboardPage() {
     }
   };
 
-  const handleShareExam = (id: string, e: React.MouseEvent) => {
+  const handleShareExam = async (id: string, topic: string, e: React.MouseEvent) => {
     e.stopPropagation();
     const url = `${window.location.origin}/shared/${id}`;
-    navigator.clipboard.writeText(url);
-    alert('Public link copied to clipboard:\n' + url);
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: topic || 'CEFR Mock Exam',
+          text: 'Check out this Cambridge-style English mock exam!',
+          url: url,
+        });
+      } catch (err) {
+        console.log('Share canceled or failed:', err);
+      }
+    } else {
+      navigator.clipboard.writeText(url);
+      alert('Public link copied to clipboard:\n' + url);
+    }
   };
 
   const handleToggleFavorite = async (id: string, currentStatus: boolean, e: React.MouseEvent) => {
@@ -1340,7 +1353,7 @@ export default function DashboardPage() {
                                 <Star className="w-4 h-4" fill={exam.is_favorite ? "currentColor" : "none"} strokeWidth={2} />
                               </button>
                               <button
-                                onClick={(e) => handleShareExam(exam.id, e)}
+                                onClick={(e) => handleShareExam(exam.id, exam.topic || 'Untitled Exam', e)}
                                 className="text-slate-400 hover:text-blue-500 transition-colors p-1"
                                 title="Copy Share Link"
                               >
