@@ -1387,22 +1387,30 @@ export default function DashboardPage() {
         try {
           const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
           const ctx = new AudioContext();
-          const osc = ctx.createOscillator();
-          const gainNode = ctx.createGain();
 
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(800, ctx.currentTime);
-          osc.frequency.exponentialRampToValueAtTime(1600, ctx.currentTime + 0.1);
+          const playBeep = (startTime: number) => {
+            const osc = ctx.createOscillator();
+            const gainNode = ctx.createGain();
 
-          gainNode.gain.setValueAtTime(0, ctx.currentTime);
-          gainNode.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.05);
-          gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1.5);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(1000, startTime); // Standard 1000Hz beep tone
 
-          osc.connect(gainNode);
-          gainNode.connect(ctx.destination);
+            // Quick fade in and fade out to avoid popping/clicking, lower volume
+            gainNode.gain.setValueAtTime(0, startTime);
+            gainNode.gain.linearRampToValueAtTime(0.3, startTime + 0.01);
+            gainNode.gain.setValueAtTime(0.3, startTime + 0.1);
+            gainNode.gain.linearRampToValueAtTime(0, startTime + 0.12);
 
-          osc.start();
-          osc.stop(ctx.currentTime + 1.5);
+            osc.connect(gainNode);
+            gainNode.connect(ctx.destination);
+
+            osc.start(startTime);
+            osc.stop(startTime + 0.15);
+          };
+
+          // Play double beep (Cambridge exam style)
+          playBeep(ctx.currentTime);
+          playBeep(ctx.currentTime + 0.2); // Second beep 0.2s after the first
         } catch (e) {
           console.error("Audio context error:", e);
         }
