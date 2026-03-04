@@ -444,6 +444,17 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
 
                                             if (isMultipleChoice && q.correctOption) {
                                                 correctOptIndex = q.options.indexOf(q.correctOption);
+                                                // Fallback: if correctOption is just a letter like "A", "B", "C", "D"
+                                                if (correctOptIndex === -1 && q.correctOption.trim().length === 1) {
+                                                    const letterIndex = q.correctOption.trim().toUpperCase().charCodeAt(0) - 65;
+                                                    if (letterIndex >= 0 && letterIndex < q.options.length) {
+                                                        correctOptIndex = letterIndex;
+                                                    }
+                                                }
+                                                // Fallback: case-insensitive / trimmed match
+                                                if (correctOptIndex === -1) {
+                                                    correctOptIndex = q.options.findIndex(opt => opt.trim().toLowerCase() === q.correctOption.trim().toLowerCase());
+                                                }
                                             }
 
                                             return (
