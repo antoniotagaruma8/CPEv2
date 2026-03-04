@@ -1787,7 +1787,7 @@ export default function DashboardPage() {
       }
     } catch (error) {
       console.error('Assessment failed:', error);
-      alert('An error occurred during assessment.');
+      alert(`An error occurred during assessment: ${error instanceof Error ? error.message : String(error)}`);
     } finally {
       setIsAssessing(false);
     }
