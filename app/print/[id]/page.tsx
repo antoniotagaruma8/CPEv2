@@ -340,8 +340,19 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                                                             </div>
                                                         )}
 
-                                                        {(!q.options || q.options.length === 0) && dbRecord.type !== 'Speaking' && (
-                                                            <div className="mt-4 border-b-2 border-dotted border-gray-400 w-full h-8"></div>
+                                                        {/* EXPLICIT WRITE-IN AREA FOR PRINT */}
+                                                        {q.options && q.options.length > 0 ? (
+                                                            <div className="mt-4 flex items-center gap-3">
+                                                                <span className="font-bold text-xs uppercase text-slate-500">Write letter here:</span>
+                                                                <div className="w-10 h-10 border-2 border-slate-400 bg-slate-50"></div>
+                                                            </div>
+                                                        ) : (
+                                                            dbRecord.type !== 'Speaking' && (
+                                                                <div className="mt-6 flex items-end gap-3 w-full">
+                                                                    <span className="font-bold text-xs uppercase text-slate-500 pb-1 shrink-0">Write answer here:</span>
+                                                                    <div className="flex-1 border-b-2 border-slate-400 h-6"></div>
+                                                                </div>
+                                                            )
                                                         )}
                                                     </div>
                                                 </div>
