@@ -18,6 +18,7 @@ import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw } from 'lucide-react';
+import html2canvas from 'html2canvas';
 
 interface Question {
   id: number;
@@ -420,6 +421,7 @@ export default function DashboardPage() {
   const [isLoaderVisible, setIsLoaderVisible] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [savedExamsList, setSavedExamsList] = useState<any[]>([]);
+  const [isSharingProgress, setIsSharingProgress] = useState(false);
   const [helpVisibility, setHelpVisibility] = useState<Record<string, boolean>>({});
 
   const sortedExams = useMemo(() => {
@@ -647,7 +649,7 @@ export default function DashboardPage() {
           const keys = Object.keys(processedData);
           if (keys.length === 1 && !knownArrayKeys.includes(keys[0])) {
             const key = keys[0];
-            if (typeof processedData[key] === 'object') {
+            if (processedData[key] && typeof processedData[key] === 'object') {
               processedData = processedData[key];
             }
           } else if (keys.length === 2 && keys.includes('examTitle')) {
@@ -970,12 +972,66 @@ export default function DashboardPage() {
     }
   };
 
+  const handleShareProgress = async () => {
+    setIsSharingProgress(true);
+    try {
+      // Small delay to ensure any layout shifts are done
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      const element = document.getElementById('progress-tracking-section');
+      if (!element) return;
+
+      const canvas = await html2canvas(element, {
+        scale: 2,
+        backgroundColor: resolvedTheme === 'dark' ? '#1e293b' : '#ffffff',
+        logging: false,
+      });
+
+      canvas.toBlob(async (blob) => {
+        if (!blob) return;
+
+        const file = new File([blob], `cpe-progress-${Date.now()}.png`, { type: 'image/png' });
+
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: 'My CEFR Practice Progress',
+              text: 'Check out my English exam practice progress on NativeX! 🚀',
+              files: [file],
+            });
+          } catch (error: any) {
+            // Fallback for cancel/unsupported
+            if (error.name !== 'AbortError') {
+              const url = URL.createObjectURL(blob);
+              window.open(url, '_blank');
+            }
+          }
+        } else {
+          // Fallback if Web Share API not supported
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `cpe-progress-${Date.now()}.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }
+      }, 'image/png', 0.95);
+
+      setIsSharingProgress(false);
+    } catch (err) {
+      console.error("Error generating progress image:", err);
+      setIsSharingProgress(false);
+    }
+  };
+
   const handleFinishTest = async () => {
     // If it's a Reading exam, trigger assessment before clearing if it hasn't been assessed yet
     if (examType === 'Reading' && !isAssessingReading && !readingAssessmentResult) {
       if (confirm("Are you sure you want to finish the exam and get your assessment?")) {
         setIsAssessingReading(true);
-        setIsReadingModalOpen(false);
+        setIsReadingModalOpen(false); // Make sure it's closed while loading
         try {
           const result = await assessReadingAction(answers, examQuestions, cefrLevel);
           if (result.success && result.score !== undefined) {
@@ -1746,10 +1802,21 @@ export default function DashboardPage() {
 
             {/* Progress Tracking Column (1/4) */}
             <div id="progress-tracking-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl h-fit border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
-              <h3 className="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
-                <BarChart2 className="w-5 h-5 text-green-600" strokeWidth={2.5} />
-                Progress Tracking
-              </h3>
+              <div className="flex items-center justify-between mb-4 border-b border-slate-100 dark:border-slate-700 pb-2">
+                <h3 className="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                  <BarChart2 className="w-5 h-5 text-green-600" strokeWidth={2.5} />
+                  Progress Tracking
+                </h3>
+                <button
+                  onClick={handleShareProgress}
+                  disabled={isSharingProgress}
+                  className="text-slate-400 hover:text-blue-600 transition-colors p-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 flex items-center gap-1 text-xs font-semibold"
+                  title="Share Progress"
+                >
+                  <Share2 className="w-3.5 h-3.5" strokeWidth={2.5} />
+                  {isSharingProgress ? 'Preparing...' : 'Share'}
+                </button>
+              </div>
               <div className="space-y-4">
                 {progressStats.parsedStats.map((skill) => (
                   <div key={skill.name}>
