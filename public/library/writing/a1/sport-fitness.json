@@ -1,0 +1,67 @@
+{
+  "examTitle": "CEFR A1 Mock Writing - Sport & Fitness",
+   "parts": [
+      {
+         "title": "Part 1: Writing an Email to a Friend",
+         "instructions": "Write an email to a friend about the new sports centre in your town. Write 20-30 words.",
+         "content": "You want to tell your friend about the new sports centre in your town.",
+         "questions": [
+            {
+               "question": "Write your response",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Write a greeting to your friend",
+                  "Step 2: Tell your friend about the new sports centre",
+                  "Step 3: Explain the facilities at the centre",
+                  "Step 4: Say goodbye to your friend"
+               ],
+               "modelAnswer": "Dear Sarah,\nI want to tell you about the new sports centre in our town. It has a big swimming pool and a nice gym. We can play football there too. Bye,\nTom\n\n",
+               "tips": "Use a friendly tone and include some basic vocabulary about sports and facilities."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Choose One Task",
+         "instructions": "Choose ONE of the tasks below and write your response in 20-30 words.",
+         "content": "You are at a fitness class and have seen the following announcement in the gym.",
+         "questions": [
+            {
+               "question": "Task A: ARTICLE\n\nYou have seen the following announcement in an international magazine: 'New Sports Centre Opens in London'. Write an article about it.",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Write a headline about the new sports centre",
+                  "Step 2: Describe the facilities at the centre",
+                  "Step 3: Explain when the centre opens",
+                  "Step 4: Add a closing sentence"
+               ],
+               "modelAnswer": "New Sports Centre Opens in London\n\nThe new sports centre in London has opened. It has a big swimming pool and a nice gym. We can play football there too. The centre opens at 6 am.",
+               "tips": "Use a formal tone and include some basic vocabulary about sports and facilities."
+            },
+            {
+               "question": "Task B: LETTER\n\nYou have received a letter from a friend who has moved to a new city. Write a letter to your friend about the sports centre in your town.",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Write a greeting to your friend",
+                  "Step 2: Tell your friend about the sports centre",
+                  "Step 3: Explain how to get to the centre",
+                  "Step 4: Say goodbye to your friend"
+               ],
+               "modelAnswer": "Dear John,\nI want to tell you about the sports centre in our town. It has a big swimming pool and a nice gym. To get there, take the bus number 12. Bye,\nTom\n\n",
+               "tips": "Use a friendly tone and include some basic vocabulary about sports and facilities."
+            },
+            {
+               "question": "Task C: REVIEW\n\nYou have seen a review of a new fitness class on social media. Write a review about the class.",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Write a headline about the fitness class",
+                  "Step 2: Describe the class and the instructor",
+                  "Step 3: Explain how you feel about the class",
+                  "Step 4: Add a rating and a closing sentence"
+               ],
+               "modelAnswer": "Fitness Class Review\n\nI did a fitness class today. The instructor was nice and the music was good. I feel happy and tired after the class. I give it 5 stars. I recommend it!",
+               "tips": "Use an informal tone and include some basic vocabulary about sports and fitness."
+            }
+         ]
+      }
+   ]
+}

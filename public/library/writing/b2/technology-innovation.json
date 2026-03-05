@@ -1,0 +1,67 @@
+{
+  "examTitle": "Technology & Innovation B2 Mock Writing Exam",
+   "parts": [
+      {
+         "title": "Part 1: Writing an Essay on the Impact of Artificial Intelligence",
+         "instructions": "Write a well-structured essay in 140-190 words. Discuss the potential benefits and drawbacks of artificial intelligence on society.",
+         "content": "The increasing use of artificial intelligence (AI) has led to significant advancements in various fields, including healthcare, education, and transportation. However, some experts argue that AI poses a threat to human employment and autonomy.",
+         "questions": [
+            {
+               "question": "Write your response",
+               "options": [],
+               "howToApproach": [
+                  "Read the prompt carefully and identify the task",
+                  "Brainstorm ideas and organize them logically",
+                  "Write a clear and concise introduction, main body, and conclusion",
+                  "Use relevant vocabulary and grammar structures to support your arguments"
+               ],
+               "modelAnswer": "The rapid development of artificial intelligence has both positive and negative consequences. On the one hand, AI can improve healthcare by analyzing medical data and identifying patterns, leading to more accurate diagnoses and treatments. For instance, AI-powered systems can assist doctors in diagnosing diseases such as cancer and Alzheimer's. On the other hand, AI may replace human jobs, leading to unemployment and social unrest. Additionally, the increasing reliance on AI may erode human skills and creativity. To mitigate these risks, it is essential to develop strategies for upskilling and reskilling workers, as well as implementing regulations to ensure AI is used responsibly.",
+               "tips": "Use transitional phrases to connect your ideas, provide specific examples to support your arguments, and avoid clichés like 'the future of work'."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Choose One Task",
+         "instructions": "Choose ONE of the tasks below and write your response in 140-190 words.",
+         "content": "The following tasks relate to the theme of technology and innovation. Choose one that interests you and write a response based on the instruction.",
+         "questions": [
+            {
+               "question": "Task A: ARTICLE\n\nYou have seen the following announcement in an international magazine:\n\n'Global Tech Giants to Invest $10 Billion in Renewable Energy'\n\nWrite an article discussing the potential impact of this investment on the environment and the economy.",
+               "options": [],
+               "howToApproach": [
+                  "Read the announcement carefully and identify the key points",
+                  "Brainstorm ideas on the potential impact of the investment",
+                  "Write a clear and concise article with a logical structure",
+                  "Use relevant vocabulary and grammar structures to support your arguments"
+               ],
+               "modelAnswer": "The recent announcement by global tech giants to invest $10 billion in renewable energy marks a significant shift towards sustainability. This investment has the potential to reduce carbon emissions and mitigate the effects of climate change. Furthermore, it can create new job opportunities in the renewable energy sector, stimulating economic growth. However, it is crucial to ensure that the investment is used efficiently and effectively, with clear goals and timelines in place.",
+               "tips": "Use specific examples to support your arguments, provide a clear conclusion, and avoid jargon."
+            },
+            {
+               "question": "Task B: LETTER TO THE EDITOR\n\nWrite a letter to the editor of a local newspaper discussing the importance of digital literacy in the 21st century. Use specific examples to support your argument.",
+               "options": [],
+               "howToApproach": [
+                  "Read the prompt carefully and identify the task",
+                  "Brainstorm ideas on the importance of digital literacy",
+                  "Write a clear and concise letter with a logical structure",
+                  "Use relevant vocabulary and grammar structures to support your arguments"
+               ],
+               "modelAnswer": "Dear Editor,\n\nAs we continue to live in a digital age, it is essential that we prioritize digital literacy. With the increasing reliance on technology, it is crucial that individuals have the skills to navigate the digital world effectively. For instance, being able to use online resources to access information, communicate with others, and solve problems can greatly improve one's productivity and employability. Furthermore, digital literacy can also help bridge the gap between the haves and have-nots, providing equal access to information and opportunities.\n\nSincerely,\n[Your Name]",
+               "tips": "Use a formal tone, provide specific examples to support your argument, and avoid clichés like 'in today's world'."
+            },
+            {
+               "question": "Task C: REPORT\n\nA local company has developed a new app that aims to reduce food waste by connecting consumers with surplus food from restaurants and grocery stores. Write a report discussing the potential benefits and drawbacks of this app.",
+               "options": [],
+               "howToApproach": [
+                  "Read the prompt carefully and identify the task",
+                  "Brainstorm ideas on the benefits and drawbacks of the app",
+                  "Write a clear and concise report with a logical structure",
+                  "Use relevant vocabulary and grammar structures to support your arguments"
+               ],
+               "modelAnswer": "The new app developed by the local company has the potential to significantly reduce food waste. By connecting consumers with surplus food from restaurants and grocery stores, the app can help reduce the amount of food that is discarded. Additionally, the app can also provide consumers with access to affordable and healthy food options. However, there are also potential drawbacks to consider. For instance, the app may require consumers to have a smartphone and internet access, which could create barriers for some users. Furthermore, there may be concerns about food safety and hygiene.",
+               "tips": "Use specific examples to support your arguments, provide a clear conclusion, and avoid jargon."
+            }
+         ]
+      }
+   ]
+}

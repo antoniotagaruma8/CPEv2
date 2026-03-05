@@ -1820,26 +1820,29 @@ export default function DashboardPage() {
 
               {/* ── Custom Generator Form ── */}
               <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="w-full">
-                  <label htmlFor="examType" className="block text-[11px] font-bold text-slate-600 mb-1">Exam Skill</label>
-                  <select id="examType" value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
-                    <option value="Reading">Reading & Use of English</option>
-                    <option value="Writing">Writing</option>
-                    <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>Listening {generationInfo && generationInfo.plan === 'free' ? '(PRO)' : ''}</option>
-                    <option value="Speaking">Speaking</option>
-                  </select>
+                <div className="grid grid-cols-2 gap-2">
+                  <div>
+                    <label htmlFor="examType" className="block text-[11px] font-bold text-slate-600 mb-1">Exam Skill</label>
+                    <select id="examType" value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
+                      <option value="Reading">Reading & Use of English</option>
+                      <option value="Writing">Writing</option>
+                      <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>Listening {generationInfo && generationInfo.plan === 'free' ? '(PRO)' : ''}</option>
+                      <option value="Speaking">Speaking</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">Target CEFR Level</label>
+                    <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
+                      <option value="A1">A1 Beginner</option>
+                      <option value="A2">A2 Key (KET)</option>
+                      <option value="B1">B1 Preliminary (PET)</option>
+                      <option value="B2">B2 First (FCE)</option>
+                      <option value="C1">C1 Advanced (CAE)</option>
+                      <option value="C2">C2 Proficiency</option>
+                    </select>
+                  </div>
                 </div>
-                <div className="w-full">
-                  <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">Target CEFR Level</label>
-                  <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
-                    <option value="A1">A1 Beginner</option>
-                    <option value="A2">A2 Key (KET)</option>
-                    <option value="B1">B1 Preliminary (PET)</option>
-                    <option value="B2">B2 First (FCE)</option>
-                    <option value="C1">C1 Advanced (CAE)</option>
-                    <option value="C2">C2 Proficiency</option>
-                  </select>
-                </div>
+
                 {isAdmin && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div>
@@ -1858,25 +1861,6 @@ export default function DashboardPage() {
                     <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
                   </div>
                 )}
-
-                <div className="space-y-1">
-                  <label className="block text-[9px] font-bold text-slate-400 uppercase tracking-wider">CEFR Frequently Used Topics</label>
-                  <div className="flex flex-wrap gap-1">
-                    {CEFR_TOPICS.map((t) => (
-                      <button
-                        key={t}
-                        type="button"
-                        onClick={() => setTopic(t)}
-                        className={`text-[10px] px-2 py-0.5 rounded-md border transition-all ${topic === t
-                          ? 'bg-blue-600 border-blue-600 text-white shadow-sm font-bold'
-                          : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50'
-                          }`}
-                      >
-                        {t}
-                      </button>
-                    ))}
-                  </div>
-                </div>
 
                 {generationInfo && !generationInfo.allowed && generationInfo.plan === 'free' ? (
                   <button
