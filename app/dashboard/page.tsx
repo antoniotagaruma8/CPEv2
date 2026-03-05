@@ -2073,6 +2073,75 @@ export default function DashboardPage() {
           </div>
         )}
 
+        {/* ── Pre-loaded Exams Library Modal (empty state) ── */}
+        {libraryModalSkill && (
+          <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative animate-spring-up overflow-hidden max-h-[85vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+              <button
+                onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors z-10"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="mb-5 flex items-center gap-3">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center">
+                  {libraryModalSkill === 'Reading' && <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
+                  {libraryModalSkill === 'Writing' && <Edit3 className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
+                  {libraryModalSkill === 'Listening' && <Headphones className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
+                  {libraryModalSkill === 'Speaking' && <Mic className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
+                </div>
+                <div>
+                  <h2 className="text-xl font-black text-slate-800 dark:text-white">{libraryModalSkill} Exams</h2>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Select a CEFR level, then pick a topic.</p>
+                </div>
+              </div>
+
+              {/* Level Selection */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {CEFR_LEVELS.map(({ value, label }) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
+                    className={`text-xs px-3 py-1.5 rounded-lg border-2 font-bold transition-all ${librarySelectedLevel === value ? 'bg-blue-600 border-blue-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700'}`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Topic Cards Grid */}
+              {librarySelectedLevel ? (
+                <div>
+                  <p className="text-[10px] font-bold text-blue-500 uppercase tracking-wider mb-2">
+                    {libraryModalSkill} · {librarySelectedLevel} — Choose a Topic
+                  </p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {CEFR_TOPICS.map((t) => (
+                      <button
+                        key={t}
+                        type="button"
+                        disabled={!!loadingLibraryTopic}
+                        onClick={() => handleLoadPreloadedExam(libraryModalSkill!, librarySelectedLevel, t)}
+                        className={`text-left p-3 rounded-xl border-2 transition-all group ${loadingLibraryTopic === t ? 'bg-blue-50 dark:bg-blue-900/40 border-blue-300 dark:border-blue-700 animate-pulse' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-slate-700/60 hover:shadow-md active:scale-[0.97]'}`}
+                      >
+                        <span className={`text-sm font-semibold leading-tight block ${loadingLibraryTopic === t ? 'text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400'}`}>
+                          {loadingLibraryTopic === t ? '⏳ Loading...' : t}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-8 text-slate-400 dark:text-slate-500">
+                  <p className="text-sm">👆 Select a level above to see available topics</p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
       </div>
     );
   }

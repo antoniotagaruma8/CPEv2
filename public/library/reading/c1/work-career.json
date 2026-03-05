@@ -1,0 +1,272 @@
+{
+  "examTitle": "Work & Career: Advanced Professional Topics",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Career Development",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "content": "The company is undergoing a period of significant change, requiring employees to adapt to new technologies and workflows. This is an opportunity for staff to (1) _______ (UPSKILL) and take on new challenges. The training program is designed to help employees (2) _______ (ACCOMMODATE) to the changing work environment. By doing so, the company aims to (3) _______ (RETAIN) its skilled workforce.",
+         "options": [
+            "A. lose",
+            "B. upskill",
+            "C. accommodate",
+            "D. retain"
+         ],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "B. upskill",
+               "explanation": "The correct answer is 'upskill' because the text states that the period of change is an opportunity for staff to 'upskill' and take on new challenges. Options A and C are incorrect because 'lose' and 'accommodate' do not fit the context of the sentence. Option D is also incorrect because 'retain' is the object of the sentence.",
+               "tips": "Read the text carefully and focus on the context of each sentence to determine the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "C. accommodate",
+               "explanation": "The correct answer is 'accommodate' because the text states that the training program is designed to help employees 'accommodate' to the changing work environment. Options A and B are incorrect because 'lose' does not fit the context of the sentence and 'upskill' is the object of the sentence. Option D is also incorrect because 'retain' is the object of the sentence.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "D. retain",
+               "explanation": "The correct answer is 'retain' because the text states that the company aims to 'retain' its skilled workforce. Options A, B, and C are incorrect because 'lose', 'upskill', and 'accommodate' do not fit the context of the sentence.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Professional Ethics",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The company has a (1) _______ (POLICY) to ensure that all employees are treated fairly and with respect. This policy is (2) _______ (IMPLEMENTED) at all levels of the organization. The company's code of conduct is (3) _______ (UPHOLD) by all employees, and any breaches of the code will be dealt with (4) _______ (SEVERELY).",
+         "options": [],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "policy",
+               "explanation": "The correct answer is 'policy' because the text states that the company has a policy to ensure that all employees are treated fairly and with respect. Options are incorrect because 'procedure' is not relevant to the context, 'protocol' is too formal, and 'regulation' is too strict.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "implemented",
+               "explanation": "The correct answer is 'implemented' because the text states that the policy is implemented at all levels of the organization. Options are incorrect because 'enforced' is too strict, 'observed' is too passive, and 'ignored' is too negative.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "upheld",
+               "explanation": "The correct answer is 'upheld' because the text states that the company's code of conduct is upheld by all employees. Options are incorrect because 'broken' is too negative, 'ignored' is too passive, and 'disregarded' is too strong.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "severely",
+               "explanation": "The correct answer is 'severely' because the text states that any breaches of the code will be dealt with severely. Options are incorrect because 'lightly' is too lenient, 'gently' is too passive, and 'carelessly' is too negative.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Business Communications",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "content": "The company's (1) _______ (MANAGE) of communication is crucial to its success. Effective (2) _______ (NEGOTIATE) is essential for building strong relationships with clients. The company's (3) _______ (IMPLEMENT) strategy has been successful in increasing sales. The (4) _______ (ASSIGN) of tasks is critical to the project's completion.",
+         "options": [],
+         "questions": [
+            {
+               "question": "MANAGE",
+               "correctOption": "management",
+               "explanation": "The correct answer is 'management' because it is the word that fits the context of the sentence. Options are incorrect because 'manage' is a verb, 'management' is a noun, and 'managing' is a gerund.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            },
+            {
+               "question": "NEGOTIATE",
+               "correctOption": "negotiation",
+               "explanation": "The correct answer is 'negotiation' because it is the word that fits the context of the sentence. Options are incorrect because 'negotiate' is a verb, 'negotiating' is a gerund, and 'negotiator' is a noun.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "IMPLEMENT",
+               "correctOption": "implementation",
+               "explanation": "The correct answer is 'implementation' because it is the word that fits the context of the sentence. Options are incorrect because 'implement' is a verb, 'implementing' is a gerund, and 'implementation' is a noun.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            },
+            {
+               "question": "ASSIGN",
+               "correctOption": "assignment",
+               "explanation": "The correct answer is 'assignment' because it is the word that fits the context of the sentence. Options are incorrect because 'assign' is a verb, 'assigning' is a gerund, and 'assignee' is a noun.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Business Strategy",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+         "content": [
+            {
+               "question": "The company's new strategy has been very successful in increasing sales. The strategy has been to (1) _______ (FOCUS) on customer needs and provide high-quality products.",
+               "options": [],
+               "correctOption": "focus on customer needs and provide high-quality products",
+               "explanation": "The correct answer is 'focus on customer needs and provide high-quality products' because it has a similar meaning to the first sentence. Option is incorrect because it does not have a similar meaning to the first sentence.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            },
+            {
+               "question": "The company's new strategy has been very successful in increasing sales. The strategy has been to (1) _______ (EMPHASIZE) the importance of customer satisfaction.",
+               "options": [],
+               "correctOption": "emphasize the importance of customer satisfaction",
+               "explanation": "The correct answer is 'emphasize the importance of customer satisfaction' because it has a similar meaning to the first sentence. Option is incorrect because it does not have a similar meaning to the first sentence.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "The company's new strategy has been very successful in increasing sales. The strategy has been to (1) _______ (ADAPT) to changing market conditions.",
+               "options": [],
+               "correctOption": "adapt to changing market conditions",
+               "explanation": "The correct answer is 'adapt to changing market conditions' because it has a similar meaning to the first sentence. Option is incorrect because it does not have a similar meaning to the first sentence.",
+               "tips": "Look for words and phrases that indicate the main idea of each sentence to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Business Trends",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The business world is constantly changing, with new trends and technologies emerging every year. One of the most significant trends in recent years has been the rise of e-commerce. This has led to a shift in consumer behavior, with more and more people shopping online. In fact, a recent survey found that over 70% of consumers prefer to shop online.",
+         "options": [
+            "A. The rise of e-commerce has led to a decrease in consumer spending.",
+            "B. The rise of e-commerce has led to a shift in consumer behavior, with more people shopping online.",
+            "C. The rise of e-commerce has led to a decrease in the number of physical stores.",
+            "D. The rise of e-commerce has led to an increase in consumer spending."
+         ],
+         "questions": [
+            {
+               "question": "What is one of the most significant trends in recent years in the business world?",
+               "correctOption": "B. The rise of e-commerce has led to a shift in consumer behavior, with more people shopping online.",
+               "explanation": "The correct answer is B because the text states that the rise of e-commerce has led to a shift in consumer behavior. Options A, C, and D are incorrect because they do not accurately reflect the trend described in the text.",
+               "tips": "Read the text carefully and focus on the main ideas to determine the correct answer."
+            },
+            {
+               "question": "What has led to a shift in consumer behavior?",
+               "correctOption": "B. The rise of e-commerce has led to a shift in consumer behavior, with more people shopping online.",
+               "explanation": "The correct answer is B because the text states that the rise of e-commerce has led to a shift in consumer behavior. Options A, C, and D are incorrect because they do not accurately reflect the trend described in the text.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "What percentage of consumers prefer to shop online?",
+               "correctOption": "A. Over 70% of consumers prefer to shop online.",
+               "explanation": "The correct answer is A because the text states that over 70% of consumers prefer to shop online. Options B, C, and D are incorrect because they do not accurately reflect the percentage given in the text.",
+               "tips": "Read the text carefully and focus on specific details to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Business Ethics",
+         "instructions": "Read the four texts about the topic. For Questions X-X, choose from the writers A-D.",
+         "content": "Writer A:\nThe company's code of conduct is clear and concise, outlining the expected behavior of all employees. This code is (1) _______ (ENFORCED) at all levels of the organization.\n\nWriter B:\nThe company's code of conduct is a mere suggestion, and employees are not held accountable for their actions.\n\nWriter C:\nThe company's code of conduct is a set of guidelines that employees are expected to follow, but there is no consequences for non-compliance.\n\nWriter D:\nThe company's code of conduct is a set of rules that employees must follow, and any breaches will be dealt with (2) _______ (SEVERELY).\n",
+         "options": [
+            "A. enforced",
+            "B. suggested",
+            "C. followed",
+            "D. enforced"
+         ],
+         "questions": [
+            {
+               "question": "Which writer agrees that the company's code of conduct is enforced at all levels of the organization?",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because Writer A states that the company's code of conduct is enforced at all levels of the organization. Options B, C, and D are incorrect because they do not accurately reflect the view of Writer A.",
+               "tips": "Read the texts carefully and focus on the main ideas to determine the correct answer."
+            },
+            {
+               "question": "Which writer agrees that the company's code of conduct is enforced at all levels of the organization?",
+               "correctOption": "D",
+               "explanation": "The correct answer is D because Writer D states that the company's code of conduct is enforced at all levels of the organization. Options A, B, and C are incorrect because they do not accurately reflect the view of Writer D.",
+               "tips": "Identify the main idea of each text and look for words and phrases that support it to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Gapped Text on Business Communication",
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use.",
+         "content": "The company's (1) _______ (MANAGE) of communication is crucial to its success. Effective communication (2) _______ (ENSURE) that all employees are aware of the company's goals and objectives. The company's (3) _______ (IMPLEMENT) strategy has been successful in increasing sales. The (4) _______ (ASSIGN) of tasks is critical to the project's completion. The company's (5) _______ (ADAPT) to changing market conditions has been essential to its success. The company's (6) _______ (UPHOLD) of its values and principles has been critical to its reputation.",
+         "options": [
+            "A. The company's communication strategy is clear and concise.",
+            "B. The company's communication strategy is effective in conveying its message.",
+            "C. The company's communication strategy is crucial to its success.",
+            "D. The company's communication strategy is not effective in conveying its message.",
+            "E. The company's communication strategy is not clear and concise.",
+            "F. The company's communication strategy is not crucial to its success.",
+            "G. The company's communication strategy is not effective in conveying its message to all employees."
+         ],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that the company's management of communication is crucial to its success. Options A, B, D, E, F, and G are incorrect because they do not accurately reflect the idea in the text.",
+               "tips": "Read the text carefully and focus on the main ideas to determine the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that effective communication ensures that all employees are aware of the company's goals and objectives. Options A, C, D, E, F, and G are incorrect because they do not accurately reflect the idea in the text.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the company's implementation strategy has been successful in increasing sales. Options B, C, D, E, F, and G are incorrect because they do not accurately reflect the idea in the text.",
+               "tips": "Read the text carefully and focus on specific details to determine the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that the assignment of tasks is critical to the project's completion. Options A, B, D, E, F, and G are incorrect because they do not accurately reflect the idea in the text.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "E",
+               "explanation": "The correct answer is E because the text states that the company's adaptability to changing market conditions has been essential to its success. Options A, B, C, D, F, and G are incorrect because they do not accurately reflect the idea in the text.",
+               "tips": "Read the text carefully and focus on the main ideas to determine the correct answer."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text states that the company's upholding of its values and principles has been critical to its reputation. Options A, B, C, D, E, and G are incorrect because they do not accurately reflect the idea in the text.",
+               "tips": "Identify the main idea of the text and look for words and phrases that support it to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 8: Multiple Matching on Business Trends",
+         "instructions": "Read the text. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once.",
+         "content": "Section A:\nThe rise of e-commerce has led to a shift in consumer behavior, with more and more people shopping online. This has led to a decrease in the number of physical stores.\n\nSection B:\nThe rise of e-commerce has led to an increase in consumer spending. This has led to a shift in consumer behavior, with more people shopping online.\n\nSection C:\nThe rise of e-commerce has led to a shift in consumer behavior, with more people shopping online. However, this has led to a decrease in the number of physical stores.\n\nSection D:\nThe rise of e-commerce has led to an increase in consumer spending. However, this has led to a shift in consumer behavior, with more people shopping online.",
+         "options": [
+            "A. The rise of e-commerce has led to a shift in consumer behavior, with more people shopping online.",
+            "B. The rise of e-commerce has led to an increase in consumer spending.",
+            "C. The rise of e-commerce has led to a decrease in the number of physical stores.",
+            "D. The rise of e-commerce has led to an increase in consumer spending and a shift in consumer behavior."
+         ],
+         "questions": [
+            {
+               "question": "Which section mentions that the rise of e-commerce has led to a shift in consumer behavior, with more people shopping online?",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because Section A states that the rise of e-commerce has led to a shift in consumer behavior, with more people shopping online. Options B, C, and D are incorrect because they do not accurately reflect the idea in Section A.",
+               "tips": "Read the sections carefully and focus on the main ideas to determine the correct answer."
+            },
+            {
+               "question": "Which section mentions that the rise of e-commerce has led to an increase in consumer spending?",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because Section B states that the rise of e-commerce has led to an increase in consumer spending. Options A, C, and D are incorrect because they do not accurately reflect the idea in Section B.",
+               "tips": "Identify the main idea of each section and look for words and phrases that support it to determine the correct answer."
+            },
+            {
+               "question": "Which section mentions that the rise of e-commerce has led to a shift in consumer behavior, with more people shopping online?",
+               "correctOption": "C",
+               "explanation": "The correct answer is C because Section C states that the rise of e-commerce has led to a shift in consumer behavior, with more people shopping online. Options A, B, and D are incorrect because they do not accurately reflect the idea in Section C.",
+               "tips": "Read the sections carefully and focus on the main ideas to determine the correct answer."
+            },
+            {
+               "question": "Which section mentions that the rise of e-commerce has led to an increase in consumer spending?",
+               "correctOption": "D",
+               "explanation": "The correct answer is D because Section D states that the rise of e-commerce has led to an increase in consumer spending. Options A, B, and C are incorrect because they do not accurately reflect the idea in Section D.",
+               "tips": "Identify the main idea of each section and look for words and phrases that support it to determine the correct answer."
+            }
+         ]
+      }
+   ]
+}

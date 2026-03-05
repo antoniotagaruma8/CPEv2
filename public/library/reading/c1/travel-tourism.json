@@ -1,0 +1,247 @@
+{
+  "examTitle": "C1 Advanced Travel & Tourism Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Sustainable Travel",
+         "content": "The increasing popularity of sustainable travel has led to a (1) _______ in the number of eco-friendly accommodations available to tourists. This trend is particularly evident in (2) _______ destinations such as Costa Rica and Peru, which have made significant efforts to reduce their carbon footprint. One of the key factors driving this shift is the growing awareness of the (3) _______ effects of tourism on the environment. In response, many tour operators are now offering (4) _______ packages that cater to environmentally-conscious travelers. These packages often include activities such as hiking and wildlife spotting, which allow tourists to (5) _______ with nature while also supporting local communities. As a result, sustainable travel has become a (6) _______ option for those looking to explore the world while minimizing their impact on the environment.",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. decline", "B. increase", "C. stagnation", "D. fluctuation"],
+               "correctOption": "B. increase",
+               "explanation": "The correct answer is 'increase' because the popularity of sustainable travel has led to a rise in the number of eco-friendly accommodations available to tourists. The distractors 'decline', 'stagnation', and 'fluctuation' are incorrect because they do not accurately describe the trend in sustainable travel.",
+               "tips": "When answering multiple-choice cloze questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. major", "B. minor", "C. popular", "D. off-the-beaten-path"],
+               "correctOption": "C. popular",
+               "explanation": "The correct answer is 'popular' because the text states that Costa Rica and Peru are 'destinations such as'. The distractors 'major', 'minor', and 'off-the-beaten-path' are incorrect because they do not accurately describe the type of destinations mentioned.",
+               "tips": "When answering multiple-choice cloze questions, pay close attention to the prepositions and adjectives used in the text. This will help you to choose the correct option and avoid distractors."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. positive", "B. negative", "C. neutral", "D. environmental"],
+               "correctOption": "D. environmental",
+               "explanation": "The correct answer is 'environmental' because the text states that tourism has a 'growing awareness of the negative effects on the environment'. The distractors 'positive', 'negative', and 'neutral' are incorrect because they do not accurately describe the type of effects mentioned.",
+               "tips": "When answering multiple-choice cloze questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. luxurious", "B. budget-friendly", "C. eco-friendly", "D. adventurous"],
+               "correctOption": "C. eco-friendly",
+               "explanation": "The correct answer is 'eco-friendly' because the text states that tour operators are offering packages that cater to environmentally-conscious travelers. The distractors 'luxurious', 'budget-friendly', and 'adventurous' are incorrect because they do not accurately describe the type of packages mentioned.",
+               "tips": "When answering multiple-choice cloze questions, pay close attention to the adjectives used in the text. This will help you to choose the correct option and avoid distractors."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. compete", "B. collaborate", "C. interact", "D. coexist"],
+               "correctOption": "C. interact",
+               "explanation": "The correct answer is 'interact' because the text states that tourists can 'hike and wildlife spotting' which allows them to 'interact with nature'. The distractors 'compete', 'collaborate', and 'coexist' are incorrect because they do not accurately describe the type of interaction mentioned.",
+               "tips": "When answering multiple-choice cloze questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. preferred", "B. ideal", "C. popular", "D. sustainable"],
+               "correctOption": "D. sustainable",
+               "explanation": "The correct answer is 'sustainable' because the text states that sustainable travel has become a 'sustainable option' for those looking to explore the world while minimizing their impact on the environment. The distractors 'preferred', 'ideal', and 'popular' are incorrect because they do not accurately describe the type of option mentioned.",
+               "tips": "When answering multiple-choice cloze questions, pay close attention to the adjectives used in the text. This will help you to choose the correct option and avoid distractors."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Cultural Heritage",
+         "content": "The city's rich cultural heritage is reflected in its (1) _______ architecture, which dates back to the 19th century. The city's (2) _______ is a testament to its history, with many buildings still standing today. Visitors can explore the city's (3) _______ museum, which features an extensive collection of artifacts and exhibits. The city's (4) _______ traditions are also evident in its vibrant arts scene, with many local artists showcasing their work in galleries and festivals. In addition, the city's (5) _______ community is a hub of activity, with many cultural events and festivals taking place throughout the year.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "historic",
+               "explanation": "The correct answer is 'historic' because the text states that the city's architecture dates back to the 19th century. The historic style is characterized by ornate details and classical influences, which are typical of 19th-century architecture.",
+               "tips": "When answering open cloze questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "cultural",
+               "explanation": "The correct answer is 'cultural' because the text states that the city's architecture is a testament to its history. Cultural heritage refers to the traditions, customs, and values of a particular culture or society.",
+               "tips": "When answering open cloze questions, pay close attention to the adjectives used in the text. This will help you to choose the correct word and avoid distractors."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "national",
+               "explanation": "The correct answer is 'national' because the text states that the city's museum features an extensive collection of artifacts and exhibits. A national museum is a museum that showcases the cultural and historical heritage of a particular nation or country.",
+               "tips": "When answering open cloze questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "cultural",
+               "explanation": "The correct answer is 'cultural' because the text states that the city's traditions are evident in its vibrant arts scene. Cultural traditions refer to the customs, values, and practices of a particular culture or society.",
+               "tips": "When answering open cloze questions, pay close attention to the adjectives used in the text. This will help you to choose the correct word and avoid distractors."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "diverse",
+               "explanation": "The correct answer is 'diverse' because the text states that the city's community is a hub of activity. A diverse community refers to a community that is made up of people from different backgrounds, cultures, and lifestyles.",
+               "tips": "When answering open cloze questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Environmental Issues",
+         "content": "The (1) _______ of plastic bags has become a major concern for many governments around the world. The use of single-use plastic bags has led to a (2) _______ of plastic waste in our oceans. This has resulted in the (3) _______ of many marine species. In addition, the production of plastic bags requires a significant amount of (4) _______ energy. As a result, many countries are now implementing (5) _______ taxes on plastic bags to reduce their use. The goal of these taxes is to (6) _______ people's behavior and encourage them to use reusable bags instead. This will help to (7) _______ the amount of plastic waste in our oceans. By reducing our use of plastic bags, we can (8) _______ a more sustainable future for our planet.",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "options": [],
+               "correctOption": "significance",
+               "explanation": "The correct answer is 'significance' because the text states that the problem of plastic bags has become a major concern. The word 'signify' means to indicate or show something, and the word 'significance' refers to the importance or meaning of something.",
+               "tips": "When answering word formation questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            },
+            {
+               "question": "DEGRADATION",
+               "options": [],
+               "correctOption": "degradation",
+               "explanation": "The correct answer is 'degradation' because the text states that the use of single-use plastic bags has led to a increase in plastic waste. The word 'degradation' means the process of becoming worse or less valuable, and in this context it refers to the decline in the quality of our oceans.",
+               "tips": "When answering word formation questions, pay close attention to the adjectives used in the text. This will help you to choose the correct word and avoid distractors."
+            },
+            {
+               "question": "EXTINCTION",
+               "options": [],
+               "correctOption": "extinction",
+               "explanation": "The correct answer is 'extinction' because the text states that the problem of plastic bags has resulted in the death of many marine species. The word 'extinction' means the state of being completely destroyed or eliminated, and in this context it refers to the loss of species.",
+               "tips": "When answering word formation questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            },
+            {
+               "question": "ENERGY",
+               "options": [],
+               "correctOption": "energetic",
+               "explanation": "The correct answer is 'energetic' because the text states that the production of plastic bags requires a significant amount of energy. The word 'energy' refers to the ability or capacity to do work, and in this context it refers to the physical energy required to produce plastic bags.",
+               "tips": "When answering word formation questions, pay close attention to the adjectives used in the text. This will help you to choose the correct word and avoid distractors."
+            },
+            {
+               "question": "DUTY",
+               "options": [],
+               "correctOption": "dutiful",
+               "explanation": "The correct answer is 'dutiful' because the text states that many countries are now implementing taxes on plastic bags. The word 'duty' refers to a responsibility or obligation, and in this context it refers to the tax imposed on plastic bags.",
+               "tips": "When answering word formation questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            },
+            {
+               "question": "ALTER",
+               "options": [],
+               "correctOption": "alter",
+               "explanation": "The correct answer is 'alter' because the text states that the goal of the taxes is to change people's behavior. The word 'alter' means to make something different or to change its form.",
+               "tips": "When answering word formation questions, pay close attention to the verbs used in the text. This will help you to choose the correct word and avoid distractors."
+            },
+            {
+               "question": "REDUCE",
+               "options": [],
+               "correctOption": "reducing",
+               "explanation": "The correct answer is 'reducing' because the text states that the goal of the taxes is to decrease the amount of plastic waste in our oceans. The word 'reduce' means to make something less in amount or degree, and in this context it refers to the decrease in plastic waste.",
+               "tips": "When answering word formation questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the word that best fits the meaning."
+            },
+            {
+               "question": "ENSURE",
+               "options": [],
+               "correctOption": "ensuring",
+               "explanation": "The correct answer is 'ensuring' because the text states that by reducing our use of plastic bags, we can ensure a more sustainable future for our planet. The word 'ensure' means to make certain or to guarantee that something will happen, and in this context it refers to the guarantee of a sustainable future.",
+               "tips": "When answering word formation questions, pay close attention to the adjectives used in the text. This will help you to choose the correct word and avoid distractors."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Travel",
+         "content": "",
+         "questions": [
+            {
+               "question": "The increasing popularity of sustainable travel has led to a _______ in the number of eco-friendly accommodations available to tourists.",
+               "options": [],
+               "correctOption": "increase in the number of eco-friendly accommodations available to tourists",
+               "explanation": "The correct answer is an 'increase in the number of eco-friendly accommodations available to tourists' because the text states that the popularity of sustainable travel has led to a rise in the number of eco-friendly accommodations available to tourists.",
+               "tips": "When answering key word transformation questions, carefully read the text and consider the context in which each sentence is located. Look for words or phrases that are closely related to the surrounding text and choose the sentence that best fits the meaning."
+            },
+            {
+               "question": "The use of single-use plastic bags has led to a _______ of plastic waste in our oceans.",
+               "options": [],
+               "correctOption": "increase in plastic waste in our oceans",
+               "explanation": "The correct answer is an 'increase in plastic waste in our oceans' because the text states that the use of single-use plastic bags has led to a increase in plastic waste in our oceans.",
+               "tips": "When answering key word transformation questions, pay close attention to the verbs used in the text. This will help you to choose the correct sentence and avoid distractors."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Tourism",
+         "content": "The tourism industry is a significant contributor to the global economy, generating over $8 trillion in revenue each year. However, the industry also has a significant impact on the environment, with many tourists engaging in activities that harm the local ecosystem. In addition, the tourism industry is also a major source of income for many developing countries, providing jobs and economic opportunities for local communities. However, the industry also has a dark side, with many tourists engaging in exploitative practices that harm local people and environments. For example, some tourists engage in 'voluntourism', which involves paying to participate in activities that are not actually beneficial to the local community. This practice is not only exploitative, but it also undermines the value of genuine volunteer work.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What is the tourism industry's impact on the environment?",
+               "options": ["A. The industry has a positive impact on the environment.", "B. The industry has a significant impact on the environment.", "C. The industry has a neutral impact on the environment.", "D. The industry has no impact on the environment."],
+               "correctOption": "B. The industry has a significant impact on the environment.",
+               "explanation": "The correct answer is B because the text states that the industry has a significant impact on the environment, with many tourists engaging in activities that harm the local ecosystem.",
+               "tips": "When answering multiple-choice reading comprehension questions, carefully read the text and consider the context in which each question is located. Look for words or phrases that are closely related to the surrounding text and choose the answer that best fits the meaning."
+            },
+            {
+               "question": "What is the impact of 'voluntourism' on local communities?",
+               "options": ["A. 'Voluntourism' is a beneficial practice that helps local communities.", "B. 'Voluntourism' is a neutral practice that has no impact on local communities.", "C. 'Voluntourism' is an exploitative practice that harms local communities.", "D. 'Voluntourism' is a practice that undermines the value of genuine volunteer work."],
+               "correctOption": "D. 'Voluntourism' is a practice that undermines the value of genuine volunteer work.",
+               "explanation": "The correct answer is D because the text states that 'voluntourism' undermines the value of genuine volunteer work, and it is also an exploitative practice that harms local people and environments.",
+               "tips": "When answering multiple-choice reading comprehension questions, pay close attention to the adjectives used in the text. This will help you to choose the correct answer and avoid distractors."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Travel",
+         "content": "Writer A:\nThe tourism industry is a significant contributor to the global economy, generating over $8 trillion in revenue each year. However, the industry also has a significant impact on the environment, with many tourists engaging in activities that harm the local ecosystem.\n\nWriter B:\nTourism is a major source of income for many developing countries, providing jobs and economic opportunities for local communities. However, the industry also has a dark side, with many tourists engaging in exploitative practices that harm local people and environments.\n\nWriter C:\nThe tourism industry is a complex and multifaceted phenomenon, with both positive and negative impacts on local communities and the environment. While it can provide economic benefits and job opportunities, it can also lead to environmental degradation and cultural homogenization.\n\nWriter D:\nThe tourism industry is a major driver of economic growth and development, but it also has a significant impact on the environment. To mitigate this impact, many tourists are now choosing to engage in sustainable tourism practices, such as eco-tourism and responsible travel.",
+         "instructions": "Read the four texts about the topic. For Questions 1-6, choose from the writers A-D.",
+         "questions": [
+            {
+               "question": "Which writer mentions that the tourism industry has a significant impact on the environment?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because Writer A states that the industry has a significant impact on the environment, with many tourists engaging in activities that harm the local ecosystem.",
+               "tips": "When answering cross-text multiple matching questions, carefully read the texts and consider the context in which each question is located. Look for words or phrases that are closely related to the surrounding text and choose the writer that best fits the meaning."
+            },
+            {
+               "question": "Which writer mentions that the tourism industry has a dark side?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because Writer B states that the industry has a dark side, with many tourists engaging in exploitative practices that harm local people and environments.",
+               "tips": "When answering cross-text multiple matching questions, pay close attention to the adjectives used in the texts. This will help you to choose the correct writer and avoid distractors."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Gapped Text on Travel",
+         "content": "The tourism industry is a significant contributor to the global economy, generating over $8 trillion in revenue each year. However, the industry also has a significant impact on the environment, with many tourists engaging in activities that harm the local ecosystem.\n\nThe tourism industry is a complex and multifaceted phenomenon, with both positive and negative impacts on local communities and the environment. While it can provide economic benefits and job opportunities, it can also lead to environmental degradation and cultural homogenization.\n\nThe industry is also a major source of income for many developing countries, providing jobs and economic opportunities for local communities. However, the industry also has a dark side, with many tourists engaging in exploitative practices that harm local people and environments.\n\nTo mitigate this impact, many tourists are now choosing to engage in sustainable tourism practices, such as eco-tourism and responsible travel. This approach not only helps to reduce the negative impacts of tourism, but it also provides economic benefits to local communities.\n\nThe benefits of sustainable tourism are numerous, including the creation of jobs and economic opportunities for local communities. Additionally, sustainable tourism practices can help to preserve natural resources and protect the environment. However, there are also challenges associated with sustainable tourism, including the need for infrastructure and resources to support sustainable tourism practices.\n\n\n[Gap 1]",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. The tourism industry is a significant contributor to the global economy, generating over $8 trillion in revenue each year.", "B. The industry is also a major source of income for many developing countries, providing jobs and economic opportunities for local communities.", "C. The benefits of sustainable tourism are numerous, including the creation of jobs and economic opportunities for local communities.", "D. The industry is also a major driver of economic growth and development, but it also has a significant impact on the environment."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the gap is located in the paragraph that discusses the benefits of sustainable tourism.",
+               "tips": "When answering gapped text questions, carefully read the text and consider the context in which each gap is located. Look for words or phrases that are closely related to the surrounding text and choose the paragraph that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 8: Multiple Matching on Travel",
+         "content": "The tourism industry is a complex and multifaceted phenomenon, with both positive and negative impacts on local communities and the environment. While it can provide economic benefits and job opportunities, it can also lead to environmental degradation and cultural homogenization.\n\nThe industry is also a major source of income for many developing countries, providing jobs and economic opportunities for local communities. However, the industry also has a dark side, with many tourists engaging in exploitative practices that harm local people and environments.\n\nTo mitigate this impact, many tourists are now choosing to engage in sustainable tourism practices, such as eco-tourism and responsible travel. This approach not only helps to reduce the negative impacts of tourism, but it also provides economic benefits to local communities.\n\nThe benefits of sustainable tourism are numerous, including the creation of jobs and economic opportunities for local communities. Additionally, sustainable tourism practices can help to preserve natural resources and protect the environment.\n\n\nWriter A:\nThe tourism industry is a major driver of economic growth and development, but it also has a significant impact on the environment.\n\nWriter B:\nThe industry is also a major source of income for many developing countries, providing jobs and economic opportunities for local communities.\n\nWriter C:\nThe tourism industry is a complex and multifaceted phenomenon, with both positive and negative impacts on local communities and the environment.\n\nWriter D:\nThe benefits of sustainable tourism are numerous, including the creation of jobs and economic opportunities for local communities.",
+         "questions": [
+            {
+               "question": "Which text mentions that the tourism industry is a complex and multifaceted phenomenon?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because Writer C states that the industry is a complex and multifaceted phenomenon, with both positive and negative impacts on local communities and the environment.",
+               "tips": "When answering multiple matching questions, carefully read the texts and consider the context in which each question is located. Look for words or phrases that are closely related to the surrounding text and choose the writer that best fits the meaning."
+            }
+         ]
+      }
+   ]
+}

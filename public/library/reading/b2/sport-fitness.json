@@ -1,0 +1,208 @@
+{
+  "examTitle": "Sport & Fitness B2 Mock Reading & Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Fitness Trends",
+         "type": "Multiple-choice cloze",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "content": "The latest fitness trend is high-intensity interval training (HIIT). Many gyms are now offering (1) _______ classes, where participants alternate between short bursts of intense exercise and brief periods of rest. One of the benefits of HIIT is that it can be (2) _______ to fit into a busy schedule, as workouts are typically shorter than those of traditional exercise programs. Additionally, HIIT has been shown to be (3) _______ in burning calories, even after the workout is completed.",
+         "options": ["A. convenient", "B. intense", "C. effective", "D. expensive"],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. yoga", "B. Pilates", "C. HIIT", "D. aerobics"],
+               "correctOption": "C. HIIT",
+               "explanation": "The correct answer is HIIT because it is the latest fitness trend mentioned in the text. The other options are incorrect because yoga and Pilates are not mentioned as the latest trend, and aerobics is a type of exercise that is not directly related to the trend.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of the trend."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. difficult", "B. easy", "C. convenient", "D. time-consuming"],
+               "correctOption": "C. convenient",
+               "explanation": "The correct answer is convenient because it describes the benefit of HIIT being able to fit into a busy schedule. The other options are incorrect because they do not accurately describe the benefit of HIIT.",
+               "tips": "Read the sentence carefully and choose the option that best describes the benefit of HIIT."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. efficient", "B. effective", "C. intense", "D. expensive"],
+               "correctOption": "B. effective",
+               "explanation": "The correct answer is effective because it describes the benefit of HIIT in burning calories, even after the workout is completed. The other options are incorrect because they do not accurately describe the benefit of HIIT.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of the benefit of HIIT."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Sports Nutrition",
+         "type": "Open cloze",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "A well-balanced (1) _______ is essential for athletes to perform at their best. A good sports diet should include a variety of (2) _______ such as fruits, vegetables, whole grains, and lean proteins. Additionally, athletes should stay hydrated by drinking plenty of (3) _______ throughout the day.",
+         "options": [],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "diet",
+               "explanation": "The correct answer is diet because it is a noun that refers to the food and drinks that a person consumes. The other options are incorrect because they are not nouns that refer to a person's food and drinks.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of a well-balanced diet."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "foods",
+               "explanation": "The correct answer is foods because it is a plural noun that refers to a variety of healthy foods. The other options are incorrect because they are not plural nouns that refer to a variety of foods.",
+               "tips": "Read the sentence carefully and choose the option that best describes a variety of healthy foods."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "water",
+               "explanation": "The correct answer is water because it is a noun that refers to a drink that athletes should consume throughout the day. The other options are incorrect because they are not nouns that refer to a drink.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of a drink that athletes should consume."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Exercise Benefits",
+         "type": "Word formation",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "content": "Regular exercise has been shown to have numerous (1) _______ (Benefit) for our overall health. One of the most significant benefits is the improvement of mental health, which can lead to a reduced risk of (2) _______ (Mental) illness. Furthermore, regular exercise has been linked to a lower risk of chronic diseases such as heart disease and (3) _______ (Diabetes) type 2.",
+         "options": [],
+         "questions": [
+            {
+               "question": "Benefit",
+               "correctOption": "benefits",
+               "explanation": "The correct answer is benefits because it is a noun that refers to the advantages of regular exercise. The other options are incorrect because they are not nouns that refer to the advantages of regular exercise.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of the advantages of regular exercise."
+            },
+            {
+               "question": "Mental",
+               "correctOption": "mental",
+               "explanation": "The correct answer is mental because it is an adjective that describes the type of illness. The other options are incorrect because they are not adjectives that describe the type of illness.",
+               "tips": "Read the sentence carefully and choose the option that best describes the type of illness."
+            },
+            {
+               "question": "Diabetes",
+               "correctOption": "diabetes",
+               "explanation": "The correct answer is diabetes because it is a noun that refers to a chronic disease. The other options are incorrect because they are not nouns that refer to a chronic disease.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of a chronic disease."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Sports Injuries",
+         "type": "Key word transformations",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "content": "Part 4: Key Word Transformations",
+         "questions": [
+            {
+               "question": "I haven't seen her play tennis for ages. SINCE: It's been a long time _______ her play tennis.",
+               "options": [],
+               "correctOption": "since she hasn't",
+               "explanation": "The correct answer is since she hasn't because it is a phrase that indicates a time period since an event has occurred. The other options are incorrect because they do not accurately convey the same meaning.",
+               "tips": "Read the sentence carefully and choose the option that best conveys the same meaning."
+            },
+            {
+               "question": "The new sports complex has been built in the city centre. WHERE: The new sports complex is located _______ the city centre.",
+               "options": [],
+               "correctOption": "in",
+               "explanation": "The correct answer is in because it is a preposition that indicates a location. The other options are incorrect because they do not accurately convey the same meaning.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of a location."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Sports History",
+         "type": "Multiple-choice reading comprehension",
+         "instructions": "Read the text and answer Questions 1-6. For each question, choose the correct answer A, B, C or D.",
+         "content": "The history of sports is a rich and diverse one, spanning thousands of years. From ancient civilizations to modern-day athletes, sports have played a significant role in shaping cultures and societies. One of the earliest recorded sports is jousting, which originated in medieval Europe and was popularized by the nobility. The modern Olympic Games, on the other hand, have their roots in ancient Greece and were revived in the late 19th century. Today, the Olympics are held every four years and feature athletes from around the world competing in a variety of sports.",
+         "options": [
+            {
+               "option": "A. The modern Olympic Games were first held in ancient Greece.",
+               "explanation": "This option is incorrect because the modern Olympic Games were revived in the late 19th century.",
+               "tips": "Read the text carefully and choose the option that accurately describes the history of the Olympics."
+            },
+            {
+               "option": "B. Jousting was a popular sport in ancient Greece.",
+               "explanation": "This option is incorrect because jousting originated in medieval Europe, not ancient Greece.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of the origins of jousting."
+            },
+            {
+               "option": "C. The modern Olympic Games have their roots in ancient Greece.",
+               "explanation": "This option is correct because the text states that the modern Olympic Games were revived in the late 19th century, but also notes that they have their roots in ancient Greece.",
+               "tips": "Read the text carefully and choose the option that accurately describes the history of the Olympics."
+            },
+            {
+               "option": "D. The Olympics were first held in the late 19th century.",
+               "explanation": "This option is incorrect because the Olympics were first held in ancient Greece, but were revived in the late 19th century.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of the first modern Olympics."
+            }
+         ],
+         "questions": [
+            {
+               "question": "What is the origin of jousting?",
+               "options": ["A. Ancient Greece", "B. Medieval Europe", "C. Ancient Rome", "D. The Middle Ages"],
+               "correctOption": "B. Medieval Europe",
+               "explanation": "The correct answer is Medieval Europe because the text states that jousting originated in medieval Europe.",
+               "tips": "Read the text carefully and choose the option that accurately describes the origins of jousting."
+            },
+            {
+               "question": "Where were the modern Olympic Games first held?",
+               "options": ["A. Ancient Greece", "B. Ancient Rome", "C. Medieval Europe", "D. The late 19th century"],
+               "correctOption": "D. The late 19th century",
+               "explanation": "The correct answer is The late 19th century because the text states that the modern Olympic Games were revived in the late 19th century.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of the first modern Olympics."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Sports Psychology",
+         "type": "Gapped text",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "Sports psychology is a branch of psychology that focuses on the mental and emotional aspects of sports performance. It is a rapidly growing field that has gained increasing recognition in recent years. One of the key areas of study in sports psychology is the role of motivation in sports performance. Motivation is a complex and multi-faceted concept that can be influenced by a variety of factors, including [Gap 1]. In order to achieve optimal performance, athletes need to have a strong sense of self-confidence and self-efficacy, which can be developed through [Gap 2]. Additionally, athletes need to have a positive and supportive team dynamic, which can be fostered through [Gap 3].",
+         "options": ["A. the impact of team dynamics on performance", "B. the role of mental toughness in overcoming obstacles", "C. the importance of goal-setting in achieving success", "D. the role of self-talk in developing a positive mindset", "E. the impact of external factors on motivation", "F. the role of visualization in enhancing performance", "G. the importance of nutrition in maintaining energy levels"],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. the impact of team dynamics on performance", "B. the role of mental toughness in overcoming obstacles", "C. the importance of goal-setting in achieving success", "D. the role of self-talk in developing a positive mindset", "E. the impact of external factors on motivation", "F. the role of visualization in enhancing performance", "G. the importance of nutrition in maintaining energy levels"],
+               "correctOption": "E. the impact of external factors on motivation",
+               "explanation": "The correct answer is the impact of external factors on motivation because it is a relevant and accurate description of a factor that can influence motivation.",
+               "tips": "Read the text carefully and choose the option that accurately describes a factor that can influence motivation."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. the impact of team dynamics on performance", "B. the role of mental toughness in overcoming obstacles", "C. the importance of goal-setting in achieving success", "D. the role of self-talk in developing a positive mindset", "E. the impact of external factors on motivation", "F. the role of visualization in enhancing performance", "G. the importance of nutrition in maintaining energy levels"],
+               "correctOption": "D. the role of self-talk in developing a positive mindset",
+               "explanation": "The correct answer is the role of self-talk in developing a positive mindset because it is a relevant and accurate description of a factor that can influence self-efficacy.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of a factor that can influence self-efficacy."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. the impact of team dynamics on performance", "B. the role of mental toughness in overcoming obstacles", "C. the importance of goal-setting in achieving success", "D. the role of self-talk in developing a positive mindset", "E. the impact of external factors on motivation", "F. the role of visualization in enhancing performance", "G. the importance of nutrition in maintaining energy levels"],
+               "correctOption": "F. the role of visualization in enhancing performance",
+               "explanation": "The correct answer is the role of visualization in enhancing performance because it is a relevant and accurate description of a factor that can influence team dynamics.",
+               "tips": "Read the text carefully and choose the option that accurately describes a factor that can influence team dynamics."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Sports Marketing",
+         "type": "Multiple matching",
+         "instructions": "Read the texts below. For Questions 1-5, choose from the sections A-D. Each section may be chosen more than once.",
+         "content": "A. Sports marketing is a rapidly growing field that involves promoting sports teams, events, and products to a target audience. It requires a deep understanding of the sports industry and the ability to develop effective marketing strategies. B. One of the key challenges facing sports marketers is the increasing amount of competition in the market. This has led to the need for more creative and innovative marketing approaches. C. Sports marketing can be used to build brand awareness and loyalty, as well as to drive sales and revenue. D. To be successful in sports marketing, one needs to have a strong understanding of the target audience and be able to develop effective marketing campaigns that resonate with them.",
+         "options": ["A", "B", "C", "D"],
+         "questions": [
+            {
+               "question": "What is one of the key challenges facing sports marketers?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because it accurately describes one of the key challenges facing sports marketers.",
+               "tips": "Read the text carefully and choose the option that accurately describes a challenge facing sports marketers."
+            },
+            {
+               "question": "What is one of the benefits of sports marketing?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because it accurately describes one of the benefits of sports marketing.",
+               "tips": "Focus on the context of the sentence and choose the option that best fits the description of a benefit of sports marketing."
+            }
+         ]
+      }
+   ]
+}

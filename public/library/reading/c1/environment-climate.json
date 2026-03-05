@@ -1,0 +1,324 @@
+{
+  "examTitle": "CEFR C1 Mock Exam: Environment & Climate",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Environmental Issues",
+         "content": "The rapid industrialization of the 20th century led to a (1) _______ in air and water pollution, causing widespread damage to ecosystems and human health. The effects of pollution were particularly evident in urban areas, where the concentration of pollutants was (2) _______. As concern for the environment grew, governments and businesses began to take action to reduce pollution. One of the key strategies employed was the (3) _______ of emission standards for industries. This led to a significant decrease in the amount of pollutants released into the atmosphere. However, despite these efforts, the issue of pollution remains a (4) _______ challenge. In fact, the World Health Organization estimates that air pollution causes over (5) _______ deaths worldwide each year. The (6) _______ of pollution is a complex issue that requires a multifaceted approach. Governments, businesses, and individuals must all work together to (7) _______ pollution and protect the environment. Ultimately, the (8) _______ of pollution is a matter of life and death.",
+         "options": [
+            "A. surge",
+            "B. decrease",
+            "C. tightening",
+            "D. ongoing"
+         ],
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct answer is 'surge' because the text states that industrialization led to an increase in pollution. This requires the use of a verb that means to increase or grow in amount. The distractor 'decrease' is incorrect because it means to reduce or make smaller. The other options 'tightening' and 'ongoing' are also incorrect because they do not accurately convey the idea of an increase in pollution.",
+               "tips": "When encountering a multiple-choice cloze question, carefully read the text to understand the context and meaning of the gap. Then, choose the answer that best fits the blank."
+            },
+            {
+               "question": "Gap 2",
+               "explanation": "The correct answer is 'concentrated' because the text states that the concentration of pollutants was high in urban areas. This requires the use of a verb that means to be densely packed or gathered. The distractor 'decrease' is incorrect because it means to reduce or make smaller. The other options 'tightening' and 'ongoing' are also incorrect because they do not accurately convey the idea of high concentration.",
+               "tips": "When choosing between verb forms, pay attention to the context and the meaning of the gap. In this case, the verb 'concentrated' is the correct choice because it accurately conveys the idea of high concentration."
+            },
+            {
+               "question": "Gap 3",
+               "explanation": "The correct answer is 'implementation' because the text states that one of the key strategies employed was the implementation of emission standards for industries. This requires the use of a noun that means the act of putting something into effect. The distractor 'tightening' is incorrect because it means to make something stricter or more severe. The other options 'ongoing' and 'challenge' are also incorrect because they do not accurately convey the idea of implementing emission standards.",
+               "tips": "When encountering a multiple-choice cloze question, pay attention to the context and the meaning of the gap. In this case, the noun 'implementation' is the correct choice because it accurately conveys the idea of putting something into effect."
+            },
+            {
+               "question": "Gap 4",
+               "explanation": "The correct answer is 'persistent' because the text states that pollution remains a persistent challenge. This requires the use of an adjective that means continuing or lasting over a long time. The distractor 'ongoing' is incorrect because it means happening or continuing at the present time. The other options 'tightening' and 'decrease' are also incorrect because they do not accurately convey the idea of a persistent challenge.",
+               "tips": "When choosing between adjectives, pay attention to the context and the meaning of the gap. In this case, the adjective 'persistent' is the correct choice because it accurately conveys the idea of a challenge that continues over a long time."
+            },
+            {
+               "question": "Gap 5",
+               "explanation": "The correct answer is 'eight' because the text states that the World Health Organization estimates that air pollution causes over eight million deaths worldwide each year. This requires the use of a number that accurately conveys the idea of a large quantity. The distractor 'ten' is incorrect because it is an incorrect estimate. The other options 'one' and 'hundred' are also incorrect because they do not accurately convey the idea of a large quantity.",
+               "tips": "When encountering a multiple-choice cloze question that involves numbers, carefully read the text to understand the context and meaning of the gap. Then, choose the answer that accurately conveys the idea of a large quantity."
+            },
+            {
+               "question": "Gap 6",
+               "explanation": "The correct answer is 'scale' because the text states that the scope of pollution is a complex issue that requires a multifaceted approach. This requires the use of a noun that means a particular aspect or feature of something. The distractor 'challenge' is incorrect because it means a test or puzzle to be overcome. The other options 'ongoing' and 'tightening' are also incorrect because they do not accurately convey the idea of a particular aspect or feature.",
+               "tips": "When choosing between nouns, pay attention to the context and the meaning of the gap. In this case, the noun 'scope' is the correct choice because it accurately conveys the idea of a particular aspect or feature."
+            },
+            {
+               "question": "Gap 7",
+               "explanation": "The correct answer is 'reduce' because the text states that governments, businesses, and individuals must all work together to reduce pollution. This requires the use of a verb that means to make something smaller or less in amount. The distractor 'tightening' is incorrect because it means to make something stricter or more severe. The other options 'ongoing' and 'challenge' are also incorrect because they do not accurately convey the idea of reducing pollution.",
+               "tips": "When encountering a multiple-choice cloze question, pay attention to the context and the meaning of the gap. In this case, the verb 'reduce' is the correct choice because it accurately conveys the idea of making something smaller or less in amount."
+            },
+            {
+               "question": "Gap 8",
+               "explanation": "The correct answer is 'threat' because the text states that the threat of pollution is a matter of life and death. This requires the use of a noun that means a potential danger or risk. The distractor 'challenge' is incorrect because it means a test or puzzle to be overcome. The other options 'ongoing' and 'tightening' are also incorrect because they do not accurately convey the idea of a potential danger or risk.",
+               "tips": "When choosing between nouns, pay attention to the context and the meaning of the gap. In this case, the noun 'threat' is the correct choice because it accurately conveys the idea of a potential danger or risk."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Environmental Issues",
+         "content": "The effects of pollution on human health are (1) _______. Air pollution, in particular, is a major source of respiratory problems, including (2) _______, asthma, and other chronic conditions. In fact, the World Health Organization estimates that over (3) _______ people die worldwide each year due to air pollution. The economic costs of pollution are also significant, with estimates suggesting that (4) _______ billion dollars are lost annually due to pollution-related health problems. However, there are many ways to mitigate the effects of pollution, including (5) _______ energy sources, reducing waste, and promoting sustainable agriculture practices.",
+         "options": [],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct answer is 'well-documented' because the text states that the effects of pollution on human health are well-documented. This requires the use of an adjective that means thoroughly recorded or supported by evidence. The distractor 'well-known' is incorrect because it means widely recognized or famous. The other options 'documented' and 'unknown' are also incorrect because they do not accurately convey the idea of thoroughly recorded or supported by evidence.",
+               "correctOption": "well-documented",
+               "tips": "When encountering an open cloze question, carefully read the text to understand the context and meaning of the gap. Then, choose the word that accurately conveys the idea of thoroughly recorded or supported by evidence."
+            },
+            {
+               "question": "Gap 2",
+               "explanation": "The correct answer is 'chronic' because the text states that air pollution is a major source of respiratory problems, including chronic conditions. This requires the use of an adjective that means long-lasting or persistent. The distractor 'acute' is incorrect because it means short-term or temporary. The other options 'serious' and 'life-threatening' are also incorrect because they do not accurately convey the idea of long-lasting or persistent.",
+               "correctOption": "chronic",
+               "tips": "When choosing between adjectives, pay attention to the context and the meaning of the gap. In this case, the adjective 'chronic' is the correct choice because it accurately conveys the idea of long-lasting or persistent."
+            },
+            {
+               "question": "Gap 3",
+               "explanation": "The correct answer is 'eight' because the text states that the World Health Organization estimates that over eight million people die worldwide each year due to air pollution. This requires the use of a number that accurately conveys the idea of a large quantity. The distractor 'ten' is incorrect because it is an incorrect estimate. The other options 'one' and 'hundred' are also incorrect because they do not accurately convey the idea of a large quantity.",
+               "correctOption": "eight",
+               "tips": "When encountering an open cloze question that involves numbers, carefully read the text to understand the context and meaning of the gap. Then, choose the answer that accurately conveys the idea of a large quantity."
+            },
+            {
+               "question": "Gap 4",
+               "explanation": "The correct answer is 'fifty' because the text states that over fifty billion dollars are lost annually due to pollution-related health problems. This requires the use of a number that accurately conveys the idea of a large quantity. The distractor 'ten' is incorrect because it is an incorrect estimate. The other options 'one' and 'hundred' are also incorrect because they do not accurately convey the idea of a large quantity.",
+               "correctOption": "fifty",
+               "tips": "When encountering an open cloze question that involves numbers, carefully read the text to understand the context and meaning of the gap. Then, choose the answer that accurately conveys the idea of a large quantity."
+            },
+            {
+               "question": "Gap 5",
+               "explanation": "The correct answer is 'renewable' because the text states that one of the ways to mitigate the effects of pollution is to switch to renewable energy sources. This requires the use of an adjective that means able to be replenished or restored naturally. The distractor 'non-renewable' is incorrect because it means unable to be replenished or restored naturally. The other options 'sustainable' and 'polluting' are also incorrect because they do not accurately convey the idea of able to be replenished or restored naturally.",
+               "correctOption": "renewable",
+               "tips": "When choosing between adjectives, pay attention to the context and the meaning of the gap. In this case, the adjective 'renewable' is the correct choice because it accurately conveys the idea of able to be replenished or restored naturally."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Environmental Issues",
+         "content": "The effects of pollution on human health are (1) _______. Air pollution, in particular, is a major source of (2) _______, asthma, and other chronic conditions. In fact, the World Health Organization estimates that over (3) _______ people die worldwide each year due to air pollution. The economic costs of pollution are also (4) _______, with estimates suggesting that (5) _______ billion dollars are lost annually due to pollution-related health problems.",
+         "options": [],
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "explanation": "The correct answer is 'significance' because the text states that the effects of pollution on human health are well-documented. This requires the use of a noun that means the quality of being important or meaningful. The distractor 'importance' is incorrect because it means the quality of being valuable or desirable. The other options 'sign' and 'symptom' are also incorrect because they do not accurately convey the idea of importance or meaning.",
+               "correctOption": "significance",
+               "tips": "When encountering a word formation question, carefully read the text to understand the context and meaning of the gap. Then, choose the word that accurately conveys the idea of importance or meaning."
+            },
+            {
+               "question": "PROBLEM",
+               "explanation": "The correct answer is 'problems' because the text states that air pollution is a major source of respiratory problems. This requires the use of a noun that means a difficulty or obstacle to be overcome. The distractor 'solution' is incorrect because it means a way of solving a problem. The other options 'issue' and 'concern' are also incorrect because they do not accurately convey the idea of a difficulty or obstacle.",
+               "correctOption": "problems",
+               "tips": "When choosing between nouns, pay attention to the context and the meaning of the gap. In this case, the noun 'problems' is the correct choice because it accurately conveys the idea of a difficulty or obstacle to be overcome."
+            },
+            {
+               "question": "ESTIMATE",
+               "explanation": "The correct answer is 'estimates' because the text states that the World Health Organization estimates that over eight million people die worldwide each year due to air pollution. This requires the use of a noun that means a rough calculation or guess. The distractor 'prediction' is incorrect because it means a forecast or prophecy. The other options 'assumption' and 'conclusion' are also incorrect because they do not accurately convey the idea of a rough calculation or guess.",
+               "correctOption": "estimates",
+               "tips": "When choosing between nouns, pay attention to the context and the meaning of the gap. In this case, the noun 'estimates' is the correct choice because it accurately conveys the idea of a rough calculation or guess."
+            },
+            {
+               "question": "COST",
+               "explanation": "The correct answer is 'costs' because the text states that the economic costs of pollution are also significant. This requires the use of a noun that means the amount of money or resources spent or used. The distractor 'expense' is incorrect because it means the amount of money spent or used. The other options 'benefit' and 'loss' are also incorrect because they do not accurately convey the idea of the amount of money or resources spent or used.",
+               "correctOption": "costs",
+               "tips": "When choosing between nouns, pay attention to the context and the meaning of the gap. In this case, the noun 'costs' is the correct choice because it accurately conveys the idea of the amount of money or resources spent or used."
+            },
+            {
+               "question": "BUDGET",
+               "explanation": "The correct answer is 'budgeted' because the text states that over fifty billion dollars are lost annually due to pollution-related health problems. This requires the use of a verb that means to plan or set aside money for a specific purpose. The distractor 'allocated' is incorrect because it means to assign or distribute money for a specific purpose. The other options 'spent' and 'earned' are also incorrect because they do not accurately convey the idea of planning or setting aside money.",
+               "correctOption": "budgeted",
+               "tips": "When choosing between verbs, pay attention to the context and the meaning of the gap. In this case, the verb 'budgeted' is the correct choice because it accurately conveys the idea of planning or setting aside money."
+            },
+            {
+               "question": "LOST",
+               "explanation": "The correct answer is 'losses' because the text states that over fifty billion dollars are lost annually due to pollution-related health problems. This requires the use of a noun that means the amount of money or resources that is lost or wasted. The distractor 'gain' is incorrect because it means the amount of money or resources that is gained or earned. The other options 'benefit' and 'profit' are also incorrect because they do not accurately convey the idea of the amount of money or resources that is lost or wasted.",
+               "correctOption": "losses",
+               "tips": "When choosing between nouns, pay attention to the context and the meaning of the gap. In this case, the noun 'losses' is the correct choice because it accurately conveys the idea of the amount of money or resources that is lost or wasted."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Environmental Issues",
+         "content": [
+            {
+               "question": "The rapid industrialization of the 20th century led to a significant increase in air and water pollution.",
+               "keyWord": "industrialization",
+               "options": [],
+               "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+               "questions": [
+                  {
+                     "question": "The rapid industrialization of the 20th century has had a lasting impact on the environment.",
+                     "explanation": "The correct answer is 'has had a lasting impact on the environment' because it accurately conveys the idea of a long-term effect on the environment. The distractor 'has caused significant pollution' is incorrect because it does not accurately convey the idea of a long-term effect. The other options 'has improved the environment' and 'has led to economic growth' are also incorrect because they do not accurately convey the idea of a long-term effect.",
+                     "correctOption": "has had a lasting impact on the environment",
+                     "tips": "When encountering a key word transformation question, carefully read the text to understand the context and meaning of the key word. Then, choose the sentence that accurately conveys the idea of a long-term effect."
+                  }
+               ]
+            },
+            {
+               "question": "The effects of pollution on human health are well-documented.",
+               "keyWord": "pollution",
+               "options": [],
+               "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+               "questions": [
+                  {
+                     "question": "The negative effects of pollution on human health are a major concern.",
+                     "explanation": "The correct answer is 'The negative effects of pollution on human health are a major concern' because it accurately conveys the idea of a significant issue. The distractor 'The positive effects of pollution on human health are a minor issue' is incorrect because it does not accurately convey the idea of a significant issue. The other options 'The effects of pollution on human health are a minor concern' and 'The effects of pollution on human health are a major benefit' are also incorrect because they do not accurately convey the idea of a significant issue.",
+                     "correctOption": "The negative effects of pollution on human health are a major concern",
+                     "tips": "When encountering a key word transformation question, carefully read the text to understand the context and meaning of the key word. Then, choose the sentence that accurately conveys the idea of a significant issue."
+                  }
+               ]
+            },
+            {
+               "question": "The World Health Organization estimates that over eight million people die worldwide each year due to air pollution.",
+               "keyWord": "air",
+               "options": [],
+               "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+               "questions": [
+                  {
+                     "question": "The World Health Organization estimates that over eight million people die worldwide each year due to pollution.",
+                     "explanation": "The correct answer is 'The World Health Organization estimates that over eight million people die worldwide each year due to pollution' because it accurately conveys the idea of a large number of deaths due to pollution. The distractor 'The World Health Organization estimates that over eight million people live worldwide each year due to pollution' is incorrect because it does not accurately convey the idea of a large number of deaths. The other options 'The World Health Organization estimates that over eight million people die worldwide each year due to clean air' and 'The World Health Organization estimates that over eight million people live worldwide each year due to air pollution' are also incorrect because they do not accurately convey the idea of a large number of deaths due to pollution.",
+                     "correctOption": "The World Health Organization estimates that over eight million people die worldwide each year due to pollution",
+                     "tips": "When encountering a key word transformation question, carefully read the text to understand the context and meaning of the key word. Then, choose the sentence that accurately conveys the idea of a large number of deaths due to pollution."
+                  }
+               ]
+            },
+            {
+               "question": "The economic costs of pollution are also significant.",
+               "keyWord": "costs",
+               "options": [],
+               "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+               "questions": [
+                  {
+                     "question": "The economic costs of pollution are a major burden on the environment.",
+                     "explanation": "The correct answer is 'The economic costs of pollution are a major burden on the environment' because it accurately conveys the idea of a significant financial impact on the environment. The distractor 'The economic costs of pollution are a minor benefit to the environment' is incorrect because it does not accurately convey the idea of a significant financial impact. The other options 'The economic costs of pollution are a minor burden on the environment' and 'The economic costs of pollution are a major benefit to the environment' are also incorrect because they do not accurately convey the idea of a significant financial impact.",
+                     "correctOption": "The economic costs of pollution are a major burden on the environment",
+                     "tips": "When encountering a key word transformation question, carefully read the text to understand the context and meaning of the key word. Then, choose the sentence that accurately conveys the idea of a significant financial impact on the environment."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Environmental Issues",
+         "content": "The effects of pollution on human health are well-documented. Air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions. In fact, the World Health Organization estimates that over eight million people die worldwide each year due to air pollution. The economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems. However, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices.",
+         "options": [
+            "A. The effects of pollution on human health are well-documented, but the economic costs of pollution are not significant.",
+            "B. The effects of pollution on human health are well-documented, and the economic costs of pollution are significant.",
+            "C. The effects of pollution on human health are not well-documented, but the economic costs of pollution are significant.",
+            "D. The effects of pollution on human health are not well-documented, and the economic costs of pollution are not significant."
+         ],
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the text suggest about the effects of pollution on human health?",
+               "explanation": "The correct answer is B because the text states that the effects of pollution on human health are well-documented. This requires the use of a verb that means to make something clear or evident. The distractor A is incorrect because it does not accurately convey the idea of making something clear. The other options C and D are also incorrect because they do not accurately convey the idea of making something clear.",
+               "correctOption": "B",
+               "tips": "When encountering a multiple-choice reading comprehension question, carefully read the text to understand the context and meaning of the question. Then, choose the answer that accurately conveys the idea of making something clear."
+            },
+            {
+               "question": "What does the text suggest about the economic costs of pollution?",
+               "explanation": "The correct answer is B because the text states that the economic costs of pollution are significant. This requires the use of an adjective that means important or considerable. The distractor A is incorrect because it does not accurately convey the idea of importance. The other options C and D are also incorrect because they do not accurately convey the idea of importance.",
+               "correctOption": "B",
+               "tips": "When choosing between adjectives, pay attention to the context and the meaning of the question. In this case, the adjective 'significant' is the correct choice because it accurately conveys the idea of importance."
+            },
+            {
+               "question": "What does the text suggest about the ways to mitigate the effects of pollution?",
+               "explanation": "The correct answer is B because the text states that there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices. This requires the use of a verb that means to make something better or more effective. The distractor A is incorrect because it does not accurately convey the idea of making something better. The other options C and D are also incorrect because they do not accurately convey the idea of making something better.",
+               "correctOption": "B",
+               "tips": "When encountering a multiple-choice reading comprehension question, carefully read the text to understand the context and meaning of the question. Then, choose the answer that accurately conveys the idea of making something better."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Environmental Issues",
+         "content": "Writer A:\nThe effects of pollution on human health are well-documented. Air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions.\n\nWriter B:\nThe economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems.\n\nWriter C:\nHowever, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices.\n\nWriter D:\nThe effects of pollution on the environment are long-term and can have devastating consequences, including climate change and loss of biodiversity.",
+         "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+         ],
+         "instructions": "Read the four texts about the topic. For Questions 1-5, choose from the writers A-D.",
+         "questions": [
+            {
+               "question": "Which writer shares the view that the effects of pollution on human health are well-documented?",
+               "explanation": "The correct answer is A because Writer A states that the effects of pollution on human health are well-documented. This requires the use of a verb that means to make something clear or evident. The distractor B is incorrect because Writer B does not share this view. The other options C and D are also incorrect because they do not share this view.",
+               "correctOption": "A",
+               "tips": "When encountering a cross-text multiple matching question, carefully read the texts to understand the context and meaning of the question. Then, choose the answer that accurately conveys the idea of making something clear."
+            },
+            {
+               "question": "Which writer shares the view that the economic costs of pollution are significant?",
+               "explanation": "The correct answer is B because Writer B states that the economic costs of pollution are also significant. This requires the use of an adjective that means important or considerable. The distractor A is incorrect because Writer A does not share this view. The other options C and D are also incorrect because they do not share this view.",
+               "correctOption": "B",
+               "tips": "When choosing between adjectives, pay attention to the context and the meaning of the question. In this case, the adjective 'significant' is the correct choice because it accurately conveys the idea of importance."
+            },
+            {
+               "question": "Which writer shares the view that there are many ways to mitigate the effects of pollution?",
+               "explanation": "The correct answer is C because Writer C states that there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices. This requires the use of a verb that means to make something better or more effective. The distractor A is incorrect because Writer A does not share this view. The other options B and D are also incorrect because they do not share this view.",
+               "correctOption": "C",
+               "tips": "When encountering a cross-text multiple matching question, carefully read the texts to understand the context and meaning of the question. Then, choose the answer that accurately conveys the idea of making something better."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Gapped Text on Environmental Issues",
+         "content": "The effects of pollution on human health are well-documented. Air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions. In fact, the World Health Organization estimates that over eight million people die worldwide each year due to air pollution. The economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems. However, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices.\n\n[Gap 1]\n\n[Gap 2]\n\n[Gap 3]\n\n[Gap 4]\n\n[Gap 5]\n\n[Gap 6]",
+         "options": [
+            "A. The effects of pollution on human health are well-documented. Air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions. In fact, the World Health Organization estimates that over eight million people die worldwide each year due to air pollution. The economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems.",
+            "B. The economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems. However, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices.",
+            "C. The effects of pollution on human health are well-documented. Air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions.",
+            "D. The economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems.",
+            "E. However, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices.",
+            "F. The effects of pollution on human health are well-documented. Air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions. In fact, the World Health Organization estimates that over eight million people die worldwide each year due to air pollution.",
+            "G. The economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems.",
+            "H. However, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices."
+         ],
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct answer is A because the text states that the effects of pollution on human health are well-documented. This requires the use of a verb that means to make something clear or evident. The distractor B is incorrect because it does not accurately convey the idea of making something clear. The other options C, D, E, F, G, and H are also incorrect because they do not accurately convey the idea of making something clear.",
+               "correctOption": "A",
+               "tips": "When encountering a gapped text question, carefully read the text to understand the context and meaning of the gap. Then, choose the paragraph that accurately conveys the idea of making something clear."
+            },
+            {
+               "question": "Gap 2",
+               "explanation": "The correct answer is B because the text states that the economic costs of pollution are also significant. This requires the use of an adjective that means important or considerable. The distractor A is incorrect because it does not accurately convey the idea of importance. The other options C, D, E, F, G, and H are also incorrect because they do not accurately convey the idea of importance.",
+               "correctOption": "B",
+               "tips": "When choosing between adjectives, pay attention to the context and the meaning of the question. In this case, the adjective 'significant' is the correct choice because it accurately conveys the idea of importance."
+            },
+            {
+               "question": "Gap 3",
+               "explanation": "The correct answer is C because the text states that air pollution, in particular, is a major source of respiratory problems, including asthma, and other chronic conditions. This requires the use of a verb that means to make something clear or evident. The distractor B is incorrect because it does not accurately convey the idea of making something clear. The other options A, D, E, F, G, and H are also incorrect because they do not accurately convey the idea of making something clear.",
+               "correctOption": "C",
+               "tips": "When encountering a gapped text question, carefully read the text to understand the context and meaning of the gap. Then, choose the paragraph that accurately conveys the idea of making something clear."
+            }
+         ]
+      },
+      {
+         "title": "Part 8: Multiple Matching on Environmental Issues",
+         "content": "Writer A:\nThe effects of pollution on human health are well-documented.\n\nWriter B:\nThe economic costs of pollution are also significant, with estimates suggesting that over fifty billion dollars are lost annually due to pollution-related health problems.\n\nWriter C:\nHowever, there are many ways to mitigate the effects of pollution, including switching to renewable energy sources, reducing waste, and promoting sustainable agriculture practices.\n\nWriter D:\nThe effects of pollution on the environment are long-term and can have devastating consequences, including climate change and loss of biodiversity.\n\nWriter E:\nThe effects of pollution on human health are a major concern.",
+         "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+         ],
+         "instructions": "Read the text. For Questions 1-8, choose from the sections A-E.",
+         "questions": [
+            {
+               "question": "Which section mentions the economic costs of pollution?",
+               "explanation": "The correct answer is B because Writer B states that the economic costs of pollution are also significant. This requires the use of an adjective that means important or considerable. The distractor A is incorrect because Writer A does not mention the economic costs of pollution. The other options C, D, and E are also incorrect because they do not mention the economic costs of pollution.",
+               "correctOption": "B",
+               "tips": "When encountering a multiple matching question, carefully read the text to understand the context and meaning of the question. Then, choose the section that accurately conveys the idea of importance."
+            },
+            {
+               "question": "Which section mentions the effects of pollution on human health?",
+               "explanation": "The correct answer is A because Writer A states that the effects of pollution on human health are well-documented. This requires the use of a verb that means to make something clear or evident. The distractor B is incorrect because Writer B does not mention the effects of pollution on human health. The other options C, D, and E are also incorrect because they do not mention the effects of pollution on human health.",
+               "correctOption": "A",
+               "tips": "When choosing between verbs, pay attention to the context and the meaning of the question. In this case, the verb 'documented' is the correct choice because it accurately conveys the idea of making something clear."
+            }
+         ]
+      }
+   ]
+}

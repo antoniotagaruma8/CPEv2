@@ -1,0 +1,379 @@
+{
+  "examTitle": "CEFR C1 Mock Reading & Use of English Exam: Technology & Innovation",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on AI Ethics",
+         "type": "Multiple-Choice Cloze",
+         "content": "Artificial intelligence has revolutionized various sectors by providing unprecedented efficiency and accuracy. However, the use of AI raises significant ethical concerns. For example, facial recognition technology, which has been widely adopted in law enforcement and retail sectors, has been criticized for its potential to (1) _______ (INFRINGE) individual privacy rights. Furthermore, AI-powered decision-making systems may (2) _______ (BREACH) the principles of transparency and accountability. Despite these challenges, many experts believe that the benefits of AI far outweigh the drawbacks and that the technology can be designed to (3) _______ (ENHANCE) overall societal well-being.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. infringe upon",
+                  "B. respect and protect",
+                  "C. compromise on",
+                  "D. violate"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A. infringe upon' because the passage mentions that facial recognition technology has been criticized for its potential to infringe upon individual privacy rights. Options B, C, and D do not accurately convey the meaning of the passage.",
+               "tips": "When answering multiple-choice cloze questions, read the passage carefully and focus on the context in which the words are used. Eliminate options that do not fit the meaning of the passage."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. uphold",
+                  "B. breach",
+                  "C. maintain",
+                  "D. enforce"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. breach' because the passage mentions that AI-powered decision-making systems may breach the principles of transparency and accountability. Options A, C, and D do not accurately convey the meaning of the passage.",
+               "tips": "When answering multiple-choice cloze questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. improve",
+                  "B. enhance",
+                  "C. maintain",
+                  "D. diminish"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. enhance' because the passage mentions that many experts believe that the benefits of AI far outweigh the drawbacks and that the technology can be designed to enhance overall societal well-being. Options A, C, and D do not accurately convey the meaning of the passage.",
+               "tips": "When answering multiple-choice cloze questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            }
+         ],
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap."
+      },
+      {
+         "title": "Part 2: Open Cloze on Cybersecurity",
+         "type": "Open Cloze",
+         "content": "As the world becomes increasingly dependent on digital technologies, cybersecurity has become a pressing concern. The (1) _______ (THREAT) of cyber attacks has led to a surge in investment in cybersecurity measures. However, despite these efforts, many organizations remain vulnerable to (2) _______ (PENETRATION) by hackers. The lack of skilled cybersecurity professionals is a major (3) _______ (OBSTACLE) to improving cybersecurity.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "threat",
+               "explanation": "The correct answer is 'threat' because the passage mentions the threat of cyber attacks. This word accurately conveys the meaning of the passage.",
+               "tips": "When answering open cloze questions, read the passage carefully and focus on the context in which the word is used."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "vulnerability",
+               "explanation": "The correct answer is 'vulnerability' because the passage mentions that many organizations remain vulnerable to penetration by hackers. This word accurately conveys the meaning of the passage.",
+               "tips": "When answering open cloze questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "hindrance",
+               "explanation": "The correct answer is 'hindrance' because the passage mentions that the lack of skilled cybersecurity professionals is a major hindrance to improving cybersecurity. This word accurately conveys the meaning of the passage.",
+               "tips": "When answering open cloze questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            }
+         ],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap."
+      },
+      {
+         "title": "Part 3: Word Formation on Digital Literacy",
+         "type": "Word Formation",
+         "content": "The (1) _______ (ACCESS) to digital technologies has revolutionized the way we live, work, and communicate. However, this access also raises concerns about (2) _______ (INCLUSION) and (3) _______ (EXCLUSION). For example, some people may lack the skills to effectively use digital technologies, leading to (4) _______ (ISOLATION) and (5) _______ (DISCONNECTION). On the other hand, others may be overwhelmed by the sheer amount of information available online, leading to (6) _______ (SATURATION) and (7) _______ (CONGESTION).",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "options": [],
+               "correctOption": "significance",
+               "explanation": "The correct answer is 'significance' because the passage mentions the significance of the access to digital technologies.",
+               "tips": "When answering word formation questions, read the passage carefully and focus on the context in which the word is used."
+            },
+            {
+               "question": "INCLUSION",
+               "options": [],
+               "correctOption": "inclusivity",
+               "explanation": "The correct answer is 'inclusivity' because the passage mentions the importance of inclusivity in digital literacy.",
+               "tips": "When answering word formation questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "EXCLUSION",
+               "options": [],
+               "correctOption": "exclusivity",
+               "explanation": "The correct answer is 'exclusivity' because the passage mentions the potential for exclusivity in digital literacy.",
+               "tips": "When answering word formation questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            },
+            {
+               "question": "ISOLATION",
+               "options": [],
+               "correctOption": "socialisolation",
+               "explanation": "The correct answer is 'social isolation' because the passage mentions the potential for social isolation due to lack of digital literacy.",
+               "tips": "When answering word formation questions, read the passage carefully and focus on the context in which the word is used."
+            },
+            {
+               "question": "DISCONNECTION",
+               "options": [],
+               "correctOption": "disconnection",
+               "explanation": "The correct answer is 'disconnection' because the passage mentions the potential for disconnection due to lack of digital literacy.",
+               "tips": "When answering word formation questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "SATURATION",
+               "options": [],
+               "correctOption": "informationoverload",
+               "explanation": "The correct answer is 'information overload' because the passage mentions the potential for information overload due to excessive online information.",
+               "tips": "When answering word formation questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            },
+            {
+               "question": "CONGESTION",
+               "options": [],
+               "correctOption": "digitalcongestion",
+               "explanation": "The correct answer is 'digital congestion' because the passage mentions the potential for digital congestion due to excessive online information.",
+               "tips": "When answering word formation questions, read the passage carefully and focus on the context in which the word is used."
+            }
+         ],
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line."
+      },
+      {
+         "title": "Part 4: Key Word Transformations on E-Learning",
+         "type": "Key Word Transformations",
+         "content": "",
+         "questions": [
+            {
+               "question": "While online courses offer great flexibility, many students struggle to stay motivated and engaged.",
+               "keyWord": "motivation",
+               "options": [],
+               "correctOption": "lack of motivation",
+               "explanation": "The correct answer is 'lack of motivation' because the passage mentions that many students struggle to stay motivated and engaged. This phrase accurately conveys the meaning of the passage.",
+               "tips": "When answering key word transformation questions, read the passage carefully and focus on the context in which the word is used."
+            },
+            {
+               "question": "The new e-learning platform has been designed to provide a more interactive and immersive learning experience.",
+               "keyWord": "immersive",
+               "options": [],
+               "correctOption": "immersion",
+               "explanation": "The correct answer is 'immersion' because the passage mentions that the new e-learning platform provides an immersive learning experience. This word accurately conveys the meaning of the passage.",
+               "tips": "When answering key word transformation questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "The rise of e-learning has led to a significant decrease in traditional classroom-based learning.",
+               "keyWord": "decrease",
+               "options": [],
+               "correctOption": "reduction",
+               "explanation": "The correct answer is 'reduction' because the passage mentions a decrease in traditional classroom-based learning. This word accurately conveys the meaning of the passage.",
+               "tips": "When answering key word transformation questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            },
+            {
+               "question": "The new e-learning platform has been designed to cater to the needs of students with disabilities.",
+               "keyWord": "cater",
+               "options": [],
+               "correctOption": "meet the needs of",
+               "explanation": "The correct answer is 'meet the needs of' because the passage mentions that the new e-learning platform has been designed to cater to the needs of students with disabilities. This phrase accurately conveys the meaning of the passage.",
+               "tips": "When answering key word transformation questions, read the passage carefully and focus on the context in which the word is used."
+            },
+            {
+               "question": "The rise of e-learning has led to a significant increase in the demand for online courses.",
+               "keyWord": "increase",
+               "options": [],
+               "correctOption": "rise in demand",
+               "explanation": "The correct answer is 'rise in demand' because the passage mentions that the rise of e-learning has led to a significant increase in the demand for online courses. This phrase accurately conveys the meaning of the passage.",
+               "tips": "When answering key word transformation questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "The new e-learning platform has been designed to provide a more personalized learning experience.",
+               "keyWord": "personalized",
+               "options": [],
+               "correctOption": "tailored to individual needs",
+               "explanation": "The correct answer is 'tailored to individual needs' because the passage mentions that the new e-learning platform has been designed to provide a more personalized learning experience. This phrase accurately conveys the meaning of the passage.",
+               "tips": "When answering key word transformation questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            }
+         ],
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given."
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Digital Divide",
+         "type": "Multiple-Choice Reading Comprehension",
+         "content": "The digital divide refers to the unequal access to digital technologies and the internet. This divide has significant consequences for individuals and society as a whole. For example, those who lack access to digital technologies may be (1) _______ (DISADVANTAGED) in terms of education, employment, and healthcare. Furthermore, the digital divide can have a (2) _______ (NEGATIVE) impact on economic development and social cohesion. In addition, the digital divide can also lead to (3) _______ (INCREASED) inequality and social exclusion.",
+         "questions": [
+            {
+               "question": "What does the writer suggest about individuals who lack access to digital technologies?",
+               "options": [
+                  "A. They are highly privileged",
+                  "B. They are equally disadvantaged",
+                  "C. They are significantly disadvantaged",
+                  "D. They are not affected at all"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C. They are significantly disadvantaged' because the passage mentions that those who lack access to digital technologies may be disadvantaged in terms of education, employment, and healthcare.",
+               "tips": "When answering multiple-choice reading comprehension questions, read the passage carefully and focus on the context in which the words are used."
+            },
+            {
+               "question": "What does the writer suggest about the impact of the digital divide on economic development and social cohesion?",
+               "options": [
+                  "A. It has a positive impact",
+                  "B. It has a neutral impact",
+                  "C. It has a negative impact",
+                  "D. It has no impact"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C. It has a negative impact' because the passage mentions that the digital divide can have a negative impact on economic development and social cohesion.",
+               "tips": "When answering multiple-choice reading comprehension questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "What does the writer suggest about the impact of the digital divide on inequality and social exclusion?",
+               "options": [
+                  "A. It has a positive impact",
+                  "B. It has a neutral impact",
+                  "C. It has an increased impact",
+                  "D. It has no impact"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C. It has an increased impact' because the passage mentions that the digital divide can also lead to increased inequality and social exclusion.",
+               "tips": "When answering multiple-choice reading comprehension questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            }
+         ],
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Digital Literacy",
+         "type": "Cross-Text Multiple Matching",
+         "content": "Writer A: The rapid advancement of digital technologies has led to a significant increase in the demand for digital literacy. This is because digital technologies are increasingly being used in various aspects of life, including education, employment, and healthcare. However, many people lack the necessary skills to effectively use digital technologies, leading to a digital divide.\n\nWriter B: Digital literacy is not just about using digital technologies, but also about understanding the social and cultural implications of digital technologies. For example, social media platforms can be used to spread misinformation and propaganda, leading to social unrest and conflict.\n\nWriter C: The concept of digital literacy is complex and multifaceted. It involves not only technical skills, but also critical thinking and problem-solving skills. Furthermore, digital literacy requires a deep understanding of the social and cultural context in which digital technologies are used.\n\nWriter D: The rise of digital technologies has led to a significant shift in the way we communicate and interact with each other. However, this shift also raises concerns about the impact of digital technologies on our mental and physical health.\n\nWhich writer shares the view that digital literacy is not just about technical skills, but also about understanding the social and cultural implications of digital technologies?",
+         "questions": [
+            {
+               "question": "Which writer shares the view that digital literacy is not just about technical skills, but also about understanding the social and cultural implications of digital technologies?",
+               "options": [
+                  "A. Writer A",
+                  "B. Writer B",
+                  "C. Writer C",
+                  "D. Writer D"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. Writer B' because Writer B mentions that digital literacy involves understanding the social and cultural implications of digital technologies.",
+               "tips": "When answering cross-text multiple matching questions, read the texts carefully and focus on the context in which the words are used."
+            }
+         ],
+         "instructions": "Read the four texts about the topic. For Questions X-X, choose from the writers A-D."
+      },
+      {
+         "title": "Part 7: Gapped Text on Digital Addiction",
+         "type": "Gapped Text",
+         "content": "The use of digital technologies has become an integral part of modern life. However, excessive use of digital technologies can lead to digital addiction. This is because digital technologies can be designed to be highly engaging and addictive, making it difficult for users to (1) _______ (WITHDRAW) from them.\n\nAccording to a recent study, the average person spends over four hours a day on digital devices. This excessive use of digital technologies can have significant consequences for our mental and physical health. For example, it can lead to (2) _______ (DEPRESSION) and (3) _______ (ANXIETY). Furthermore, it can also lead to social isolation and (4) _______ (DISCONNECTION) from the physical world.\n\nThe effects of digital addiction can be severe and long-lasting. It can lead to a range of physical and mental health problems, including headaches, eye strain, and (5) _______ (CARBONARYTHMIA). In addition, it can also lead to social and economic problems, including (6) _______ (UNEMPLOYMENT) and (7) _______ (SOCIALISOLATION).\n\nTo address the issue of digital addiction, it is essential to develop strategies that promote healthy use of digital technologies. This can include setting limits on screen time, using digital detox apps, and engaging in (8) _______ (PHYSICALACTIVITIES). By taking these steps, we can reduce the risk of digital addiction and promote a healthier relationship with digital technologies.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. easily disconnect from",
+                  "B. quickly switch to",
+                  "C. easily withdraw from",
+                  "D. quickly adapt to"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C. easily withdraw from' because the passage mentions that digital technologies can be designed to be highly engaging and addictive, making it difficult for users to withdraw from them.",
+               "tips": "When answering gapped text questions, read the passage carefully and focus on the context in which the words are used."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. happiness",
+                  "B. depression",
+                  "C. anxiety",
+                  "D. stress"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. depression' because the passage mentions that excessive use of digital technologies can lead to depression and anxiety.",
+               "tips": "When answering gapped text questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. happiness",
+                  "B. depression",
+                  "C. anxiety",
+                  "D. stress"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C. anxiety' because the passage mentions that excessive use of digital technologies can lead to depression and anxiety.",
+               "tips": "When answering gapped text questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. connection",
+                  "B. disconnection",
+                  "C. isolation",
+                  "D. separation"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. disconnection' because the passage mentions that excessive use of digital technologies can lead to social isolation and disconnection from the physical world.",
+               "tips": "When answering gapped text questions, read the passage carefully and focus on the context in which the words are used."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. arrhythmia",
+                  "B. carbonarythmia",
+                  "C. heart disease",
+                  "D. high blood pressure"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. carbonarythmia' because the passage mentions that excessive use of digital technologies can lead to a range of physical and mental health problems, including headaches, eye strain, and carbonarythmia.",
+               "tips": "When answering gapped text questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. employment",
+                  "B. unemployment",
+                  "C. underemployment",
+                  "D. overemployment"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. unemployment' because the passage mentions that excessive use of digital technologies can lead to social and economic problems, including unemployment.",
+               "tips": "When answering gapped text questions, focus on the overall meaning of the passage and eliminate options that do not fit the context."
+            },
+            {
+               "question": "Gap 7",
+               "options": [
+                  "A. social integration",
+                  "B. social isolation",
+                  "C. social exclusion",
+                  "D. social connection"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. social isolation' because the passage mentions that excessive use of digital technologies can lead to social isolation and social exclusion.",
+               "tips": "When answering gapped text questions, read the passage carefully and focus on the context in which the words are used."
+            },
+            {
+               "question": "Gap 8",
+               "options": [
+                  "A. physical activities",
+                  "B. mental activities",
+                  "C. intellectual activities",
+                  "D. creative activities"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A. physical activities' because the passage mentions that engaging in physical activities can help reduce the risk of digital addiction.",
+               "tips": "When answering gapped text questions, pay attention to the nuances of vocabulary and the context in which the words are used."
+            }
+         ],
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use."
+      },
+      {
+         "title": "Part 8: Multiple Matching on Digital Literacy",
+         "type": "Multiple Matching",
+         "content": "A. The concept of digital literacy is complex and multifaceted. It involves not only technical skills, but also critical thinking and problem-solving skills.\n\nB. The rise of digital technologies has led to a significant shift in the way we communicate and interact with each other.\n\nC. Digital literacy requires a deep understanding of the social and cultural context in which digital technologies are used.\n\nD. Excessive use of digital technologies can lead to a range of physical and mental health problems, including headaches, eye strain, and digital addiction.\n\nWhich section/text mentions the importance of understanding the social and cultural context in which digital technologies are used?",
+         "questions": [
+            {
+               "question": "Which section/text mentions the importance of understanding the social and cultural context in which digital technologies are used?",
+               "options": [
+                  "A. Section A",
+                  "B. Section B",
+                  "C. Section C",
+                  "D. Section D"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C. Section C' because Section C mentions that digital literacy requires a deep understanding of the social and cultural context in which digital technologies are used.",
+               "tips": "When answering multiple matching questions, read the texts carefully and focus on the context in which the words are used."
+            }
+         ],
+         "instructions": "Read the text. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once."
+      }
+   ]
+}
