@@ -1373,8 +1373,8 @@ export default function DashboardPage() {
     newSubmitted.add(currentQuestion.toString());
     setSubmittedQuestions(newSubmitted);
 
-    // AI Assessment Trigger for Reading Exams
-    if (examType === 'Reading' && newSubmitted.size === totalQuestions) {
+    // AI Assessment Trigger for Reading and Listening Exams
+    if ((examType === 'Reading' || examType === 'Listening') && newSubmitted.size === totalQuestions) {
       setIsAssessingReading(true);
       setIsReadingModalOpen(false); // Make sure it's closed while loading
       try {
@@ -1387,10 +1387,10 @@ export default function DashboardPage() {
           });
           setIsReadingModalOpen(true);
         } else {
-          console.error("Reading Assessment failed:", result.error);
+          console.error("Assessment failed:", result.error);
         }
       } catch (error) {
-        console.error("Error calling reading assessment:", error);
+        console.error("Error calling assessment:", error);
       } finally {
         setIsAssessingReading(false);
       }
@@ -2958,6 +2958,12 @@ export default function DashboardPage() {
                             type="text"
                             value={answers[currentQuestion.toString()] || ''}
                             onChange={(e) => handleAnswer(currentQuestion, e.target.value)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' && !submittedQuestions.has(currentQuestion.toString()) && answers[currentQuestion.toString()]) {
+                                e.preventDefault();
+                                handleSubmitAnswer();
+                              }
+                            }}
                             disabled={submittedQuestions.has(currentQuestion.toString())}
                             placeholder={activePartData?.title?.toLowerCase().includes('gap') || activePartData?.title?.toLowerCase().includes('cloze') ? "Type the missing word(s)..." : "Type your answer here..."}
                             className={`flex-1 p-3 rounded-md border outline-none transition-all ${submittedQuestions.has(currentQuestion.toString())

@@ -23,25 +23,25 @@ export default function OnboardingTour() {
     const steps: Step[] = [
         {
             target: '#generator-section',
-            content: '🚀 This is where the magic happens! Select your target CEFR level, choose a skill (Reading, Writing, Listening, or Speaking), and optionally add a theme to generate a tailored mock exam.',
+            content: '🚀 Start Practicing! You can instantly take one of our Pre-loaded Exams by selecting a skill, or scroll down to generate a Custom Exam tailored to your chosen CEFR level and topic.',
             disableBeacon: true,
             placement: 'bottom',
         },
         {
             target: '#saved-exams-section',
-            content: '📚 All your hard work is saved here. You can revisit past attempts, check your scores, and even share your results with a public link.',
+            content: '📚 All your generated exams are stored securely here. You can revisit past attempts, download them as printable PDFs, or share a clean interface with your students via public link.',
             placement: 'right',
         },
         {
             target: '#progress-tracking-section',
-            content: '📈 Visualize your growth! Track your accuracy across different skills and stay motivated with your weekly goals.',
+            content: '📈 Visualize your growth! Track your accuracy across all four core skills (Reading, Writing, Listening, Speaking) and stay motivated to hit your goals.',
             placement: 'left',
         },
         {
             target: '#user-settings-section',
             content: (
                 <div className="text-center">
-                    <p className="mb-3">🌓 Switch between Dark and Classic modes, manage your subscription, or restart this tour anytime by clicking the Help icon.</p>
+                    <p className="mb-3">🌓 Here you can switch to Dark Mode, manage your subscription, or access the exclusive Teacher Panel. Click the Help icon to restart this tour anytime!</p>
                     <hr className="my-2 opacity-20" />
                     <p className="font-bold text-blue-600">Want more details?</p>
                     <a

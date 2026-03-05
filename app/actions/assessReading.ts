@@ -36,14 +36,19 @@ export async function assessReadingAction(
 
         const checkTextAnswer = (userAnswer: string, correctAnswer: string) => {
             if (!userAnswer || !correctAnswer) return false;
-            if (userAnswer === "No Answer") return false;
 
-            const cleanUser = userAnswer.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-            const cleanCorrect = correctAnswer.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+            const normalize = (str: string) => str.trim().toLowerCase().replace(/[.,/#!$%^&*;:{ }=\-_`~()'"?]/g, "").replace(/\s+/g, " ");
 
-            if (cleanUser === cleanCorrect) return true;
-            if (cleanUser.length >= 3 && cleanCorrect.includes(cleanUser)) return true;
-            if (cleanCorrect.length >= 3 && cleanUser.includes(cleanCorrect)) return true;
+            const u = normalize(userAnswer);
+            let c = correctAnswer.trim().toLowerCase().replace(/^(answer:\s*|correct answer:\s*|correct option:\s*)/i, "");
+
+            if (u === normalize(c)) return true;
+
+            const possibleAnswers = c.split(/\s*(?:\/|,|\bor\b)\s*/).map(a => normalize(a)).filter(Boolean);
+            if (possibleAnswers.length > 0 && possibleAnswers.includes(u)) return true;
+
+            if (u.length > 2 && normalize(c).includes(u)) return true;
+            if (normalize(c).length > 2 && u.includes(normalize(c))) return true;
 
             return false;
         };
@@ -54,7 +59,37 @@ export async function assessReadingAction(
 
         const questionDetails = examData.map((q, index) => {
             const userAnswer = userAnswers[q.id] || "No Answer";
-            const isCorrect = userAnswer === q.correctOption || checkTextAnswer(userAnswer, q.correctOption);
+
+            let isCorrect = false;
+            const rawCorrectOption = q.correctOption || '';
+
+            if (!q.options || q.options.length === 0) {
+                // Text input
+                isCorrect = checkTextAnswer(userAnswer, rawCorrectOption);
+            } else {
+                // Multiple choice
+                let normalizedCorrectLetter = rawCorrectOption.trim();
+                const match = rawCorrectOption.match(/^([A-Z])[\.\)]?\s/i);
+                if (match) {
+                    normalizedCorrectLetter = match[1].toUpperCase();
+                } else if (rawCorrectOption.trim().length === 1) {
+                    normalizedCorrectLetter = rawCorrectOption.trim().toUpperCase();
+                }
+
+                isCorrect = userAnswer === normalizedCorrectLetter;
+
+                if (!isCorrect) {
+                    const cleanOpt = userAnswer.trim().toLowerCase();
+                    const cleanCorrectOption = rawCorrectOption.trim().toLowerCase().replace(/^(answer:\s*|correct answer:\s*|correct option:\s*)/i, "");
+
+                    isCorrect = cleanOpt === cleanCorrectOption
+                        || cleanCorrectOption === `option ${cleanOpt}`
+                        || cleanCorrectOption === `letter ${cleanOpt}`
+                        || (cleanOpt.length > 3 && cleanCorrectOption.includes(cleanOpt))
+                        || (cleanCorrectOption.length > 3 && cleanOpt.includes(cleanCorrectOption));
+                }
+            }
+
             if (isCorrect) correctCount++;
 
             return `Question ${index + 1}: ${q.question}
