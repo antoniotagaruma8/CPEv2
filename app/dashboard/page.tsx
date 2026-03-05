@@ -2315,12 +2315,17 @@ export default function DashboardPage() {
                           // ignore parser error, just use as string
                         }
 
+                        // Inject newlines before Pattern "A. ", "B. ", "C. " to break up long blocks in Multiple Matching
+                        if (activePartData?.title?.toLowerCase().includes('matching')) {
+                          textToRender = textToRender.replace(/([^\n])\s+([A-Z]\.\s+[A-Z])/g, '$1\n\n$2');
+                        }
+
                         return textToRender
                           .replace(/\((\d+)\)\s*[_]{3,}\s*\(\1\)/g, "($1) _________")
                           .split('\n')
                           .filter(line => line.trim())
                           .map((line, index) => (
-                            <p key={index}>{line}</p>
+                            <p key={index} className="mb-4 last:mb-0 leading-relaxed">{line}</p>
                           ));
                       })()
                     )}
@@ -2744,8 +2749,8 @@ export default function DashboardPage() {
                             })}
                             disabled={!submittedQuestions.has(currentQuestion.toString())}
                             className={`px-3 flex items-center justify-center rounded-md border transition-all ${submittedQuestions.has(currentQuestion.toString())
-                                ? 'bg-gray-100 hover:bg-gray-200 text-gray-600 border-gray-300 cursor-pointer'
-                                : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed opacity-60'
+                              ? 'bg-gray-100 hover:bg-gray-200 text-gray-600 border-gray-300 cursor-pointer'
+                              : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed opacity-60'
                               }`}
                             title={!submittedQuestions.has(currentQuestion.toString()) ? "Submit an answer first to unlock" : revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Answer"}
                           >
