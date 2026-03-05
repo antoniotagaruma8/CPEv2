@@ -1,0 +1,330 @@
+{
+  "examTitle": "Travel and Tourism A2 Mock Reading and Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "content": "The sun was shining brightly in the sky as we set off for our holiday. We packed our bags, said goodbye to our family and friends, and drove to the airport. After checking in and dropping off our luggage, we went through security and customs. As we waited for our flight to be called, we grabbed a coffee and a snack from the café. Once we boarded the plane, we found our seats and settled in for the long journey ahead. The flight was smooth and comfortable, and before we knew it, we were landing at our destination. We collected our luggage and hailed a taxi to take us to our hotel.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why did the writer pack their bags?",
+               "options": [
+                  "A. To go to the airport",
+                  "B. To buy a coffee",
+                  "C. Because they were going on holiday"
+               ],
+               "explanation": "The writer packed their bags because they were going on holiday. This is the correct answer because the text states that they 'set off for our holiday'. Options A and B are incorrect because they are not the reason for packing the bags.",
+               "tips": "When reading comprehension questions, look for key words and phrases that help you understand the text. In this case, the phrase 'set off for our holiday' tells us why the writer packed their bags."
+            },
+            {
+               "question": "What did the writer do after dropping off their luggage?",
+               "options": [
+                  "A. They went to the café",
+                  "B. They went through security and customs",
+                  "C. They boarded the plane"
+               ],
+               "explanation": "The writer went through security and customs after dropping off their luggage. This is the correct answer because the text states that they 'went through security and customs' after dropping off their luggage. Options A and C are incorrect because they did not happen immediately after dropping off their luggage.",
+               "tips": "When reading comprehension questions, look for the sequence of events in the text. In this case, the writer dropped off their luggage and then went through security and customs."
+            },
+            {
+               "question": "What was the flight like?",
+               "options": [
+                  "A. It was rough and turbulent",
+                  "B. It was smooth and comfortable",
+                  "C. It was delayed"
+               ],
+               "explanation": "The flight was smooth and comfortable. This is the correct answer because the text states that the flight was 'smooth and comfortable'. Options A and C are incorrect because they are not mentioned in the text.",
+               "tips": "When reading comprehension questions, look for adjectives and adverbs that describe the text. In this case, the word 'smooth' and the word 'comfortable' tell us that the flight was pleasant."
+            },
+            {
+               "question": "Why did the writer grab a coffee and a snack?",
+               "options": [
+                  "A. Because they were hungry",
+                  "B. Because they were tired",
+                  "C. Because they were waiting for their flight to be called"
+               ],
+               "explanation": "The writer grabbed a coffee and a snack because they were waiting for their flight to be called. This is the correct answer because the text states that they 'grabbed a coffee and a snack from the café' while waiting for their flight to be called. Options A and B are incorrect because they are not mentioned in the text.",
+               "tips": "When reading comprehension questions, look for reasons and motivations that are given in the text. In this case, the text states that the writer grabbed a coffee and a snack while waiting for their flight to be called."
+            },
+            {
+               "question": "What did the writer do after collecting their luggage?",
+               "options": [
+                  "A. They boarded the plane",
+                  "B. They hailed a taxi",
+                  "C. They went to the hotel"
+               ],
+               "explanation": "The writer hailed a taxi after collecting their luggage. This is the correct answer because the text states that they 'collected their luggage and hailed a taxi to take us to our hotel'. Options A and C are incorrect because they did not happen immediately after collecting their luggage.",
+               "tips": "When reading comprehension questions, look for the sequence of events in the text. In this case, the writer collected their luggage and then hailed a taxi."
+            },
+            {
+               "question": "Where did the writer go after landing at their destination?",
+               "options": [
+                  "A. To the airport",
+                  "B. To the hotel",
+                  "C. To the café"
+               ],
+               "explanation": "The writer went to the hotel after landing at their destination. This is the correct answer because the text states that they 'collected their luggage and hailed a taxi to take us to our hotel'. Options A and C are incorrect because they are not mentioned in the text.",
+               "tips": "When reading comprehension questions, look for the destination or final location in the text. In this case, the text states that the writer went to the hotel after landing at their destination."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching",
+         "content": {
+            "A": "I love playing basketball with my friends on the weekends.",
+            "B": "The city is very crowded and noisy.",
+            "C": "I hate going to the gym because I get bored easily.",
+            "D": "The beach is my favorite place to relax and swim.",
+            "E": "I prefer reading books to watching TV.",
+            "F": "The park is a great place to walk and exercise.",
+            "G": "I like playing video games with my friends online.",
+            "H": "The mountains are beautiful and peaceful."
+         },
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Which person loves playing basketball?",
+               "options": [
+                  "A",
+                  "B",
+                  "C"
+               ],
+               "explanation": "The person who loves playing basketball is described in option A. This is the correct answer because the text states that they 'love playing basketball with my friends on the weekends'. Options B and C are incorrect because they do not mention basketball.",
+               "tips": "When multiple matching questions, read each description carefully and match it to the correct option."
+            },
+            {
+               "question": "Which person hates going to the gym?",
+               "options": [
+                  "A",
+                  "B",
+                  "C"
+               ],
+               "explanation": "The person who hates going to the gym is described in option C. This is the correct answer because the text states that they 'hate going to the gym because I get bored easily'. Options A and B are incorrect because they do not mention the gym.",
+               "tips": "When multiple matching questions, read each description carefully and match it to the correct option."
+            },
+            {
+               "question": "Which person prefers reading books to watching TV?",
+               "options": [
+                  "A",
+                  "B",
+                  "C"
+               ],
+               "explanation": "The person who prefers reading books to watching TV is described in option E. This is the correct answer because the text states that they 'prefer reading books to watching TV'. Options A and B are incorrect because they do not mention reading or watching TV.",
+               "tips": "When multiple matching questions, read each description carefully and match it to the correct option."
+            },
+            {
+               "question": "Which person likes playing video games with their friends online?",
+               "options": [
+                  "A",
+                  "B",
+                  "C"
+               ],
+               "explanation": "The person who likes playing video games with their friends online is described in option G. This is the correct answer because the text states that they 'like playing video games with my friends online'. Options A and B are incorrect because they do not mention video games.",
+               "tips": "When multiple matching questions, read each description carefully and match it to the correct option."
+            },
+            {
+               "question": "Which person loves playing basketball with their friends on the weekends?",
+               "options": [
+                  "A",
+                  "B",
+                  "C"
+               ],
+               "explanation": "The person who loves playing basketball with their friends on the weekends is described in option A. This is the correct answer because the text states that they 'love playing basketball with my friends on the weekends'. Options B and C are incorrect because they do not mention basketball.",
+               "tips": "When multiple matching questions, read each description carefully and match it to the correct option."
+            },
+            {
+               "question": "Which person hates going to the gym because they get bored easily?",
+               "options": [
+                  "A",
+                  "B",
+                  "C"
+               ],
+               "explanation": "The person who hates going to the gym because they get bored easily is described in option C. This is the correct answer because the text states that they 'hate going to the gym because I get bored easily'. Options A and B are incorrect because they do not mention the gym.",
+               "tips": "When multiple matching questions, read each description carefully and match it to the correct option."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "content": [
+            {
+               "text": "The hotel has a swimming pool and a fitness center. The pool is open from 7am to 10pm. The fitness center is open from 6am to 10pm.",
+               "question": "What time is the swimming pool open?",
+               "options": [
+                  "A. 6am to 10pm",
+                  "B. 7am to 10pm",
+                  "C. 8am to 12pm"
+               ],
+               "explanation": "The swimming pool is open from 7am to 10pm. This is the correct answer because the text states that 'The pool is open from 7am to 10pm'. Options A and C are incorrect because they do not mention the correct time.",
+               "tips": "When reading short texts or signs, look for specific information like opening hours or rules."
+            },
+            {
+               "text": "The restaurant serves breakfast from 7am to 10am. Lunch is served from 12pm to 2pm. Dinner is served from 6pm to 9pm.",
+               "question": "What time is lunch served?",
+               "options": [
+                  "A. 7am to 10am",
+                  "B. 12pm to 2pm",
+                  "C. 6pm to 9pm"
+               ],
+               "explanation": "Lunch is served from 12pm to 2pm. This is the correct answer because the text states that 'Lunch is served from 12pm to 2pm'. Options A and C are incorrect because they do not mention lunch.",
+               "tips": "When reading short texts or signs, look for specific information like meal times or prices."
+            },
+            {
+               "text": "The park is open from 6am to 10pm. The park is closed on Mondays.",
+               "question": "What day is the park closed?",
+               "options": [
+                  "A. Sunday",
+                  "B. Monday",
+                  "C. Tuesday"
+               ],
+               "explanation": "The park is closed on Mondays. This is the correct answer because the text states that 'The park is closed on Mondays'. Options A and C are incorrect because they do not mention the correct day.",
+               "tips": "When reading short texts or signs, look for specific information like opening hours or rules."
+            },
+            {
+               "text": "The store is open from 9am to 6pm. The store is closed on Sundays.",
+               "question": "What day is the store closed?",
+               "options": [
+                  "A. Saturday",
+                  "B. Sunday",
+                  "C. Monday"
+               ],
+               "explanation": "The store is closed on Sundays. This is the correct answer because the text states that 'The store is closed on Sundays'. Options A and C are incorrect because they do not mention the correct day.",
+               "tips": "When reading short texts or signs, look for specific information like opening hours or rules."
+            },
+            {
+               "text": "The museum is open from 10am to 5pm. The museum is closed on Tuesdays.",
+               "question": "What day is the museum closed?",
+               "options": [
+                  "A. Monday",
+                  "B. Tuesday",
+                  "C. Wednesday"
+               ],
+               "explanation": "The museum is closed on Tuesdays. This is the correct answer because the text states that 'The museum is closed on Tuesdays'. Options A and C are incorrect because they do not mention the correct day.",
+               "tips": "When reading short texts or signs, look for specific information like opening hours or rules."
+            },
+            {
+               "text": "The airport is open 24 hours a day.",
+               "question": "What is the airport open?",
+               "options": [
+                  "A. 6am to 10pm",
+                  "B. 7am to 12pm",
+                  "C. 24 hours a day"
+               ],
+               "explanation": "The airport is open 24 hours a day. This is the correct answer because the text states that 'The airport is open 24 hours a day'. Options A and B are incorrect because they do not mention the correct hours.",
+               "tips": "When reading short texts or signs, look for specific information like opening hours or rules."
+            }
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C."
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "The city is very (1) _______ and I love it. The (2) _______ is very beautiful and has many parks. The (3) _______ is a great place to visit and has many shops and restaurants. I like the (4) _______ weather in the city because it is not too hot or too cold. The city has a (5) _______ population and many different cultures. I like the (6) _______ in the city because it is very lively and has many events.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. clean",
+                  "B. dirty",
+                  "C. crowded"
+               ],
+               "explanation": "The correct answer is C. crowded. This is because the text states that the city is 'very (1) _______' and the word 'crowded' implies a busy and populated city. Options A and B are incorrect because they do not fit the context of the sentence.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. library",
+                  "B. university",
+                  "C. park"
+               ],
+               "explanation": "The correct answer is C. park. This is because the text states that the '(2) _______' is 'very beautiful and has many parks', which implies that the park is a notable feature of the city. Options A and B are incorrect because they do not fit the context of the sentence.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. museum",
+                  "B. library",
+                  "C. market"
+               ],
+               "explanation": "The correct answer is C. market. This is because the text states that the '(3) _______' is 'a great place to visit and has many shops and restaurants', which implies that the market is a popular destination. Options A and B are incorrect because they do not fit the context of the sentence.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. cold",
+                  "B. hot",
+                  "C. rainy"
+               ],
+               "explanation": "The correct answer is C. rainy. This is because the text states that the '(4) _______' weather in the city is 'not too hot or too cold', which implies that the weather is mild and perhaps slightly rainy. Options A and B are incorrect because they do not fit the context of the sentence.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. small",
+                  "B. large",
+                  "C. diverse"
+               ],
+               "explanation": "The correct answer is C. diverse. This is because the text states that the city has a '(5) _______' population and many different cultures, which implies that the population is varied and diverse. Options A and B are incorrect because they do not fit the context of the sentence.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. calm",
+                  "B. lively",
+                  "C. quiet"
+               ],
+               "explanation": "The correct answer is B. lively. This is because the text states that the '(6) _______' in the city is 'very lively and has many events', which implies that the city is bustling and vibrant. Options A and C are incorrect because they do not fit the context of the sentence.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "The city is very (1) _______ and I love it. The (2) _______ is very beautiful and has many parks. The (3) _______ is a great place to visit and has many shops and restaurants. I like the (4) _______ weather in the city because it is not too hot or too cold. The city has a (5) _______ population and many different cultures. I like the (6) _______ in the city because it is very lively and has many events.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "explanation": "The correct answer is 'crowded'. This is because the text states that the city is 'very (1) _______' and the word 'crowded' implies a busy and populated city.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "explanation": "The correct answer is 'park'. This is because the text states that the '(2) _______' is 'very beautiful and has many parks', which implies that the park is a notable feature of the city.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "explanation": "The correct answer is 'market'. This is because the text states that the '(3) _______' is 'a great place to visit and has many shops and restaurants', which implies that the market is a popular destination.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "explanation": "The correct answer is 'rainy'. This is because the text states that the '(4) _______' weather in the city is 'not too hot or too cold', which implies that the weather is mild and perhaps slightly rainy.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "explanation": "The correct answer is 'diverse'. This is because the text states that the city has a '(5) _______' population and many different cultures, which implies that the population is varied and diverse.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "explanation": "The correct answer is 'lively'. This is because the text states that the '(6) _______' in the city is 'very lively and has many events', which implies that the city is bustling and vibrant.",
+               "tips": "When filling in gaps, look for words that fit the context of the sentence and make sense grammatically."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,473 @@
+{
+  "examTitle": "Social Media CEFR A2 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Social Media",
+         "content": "The rise of social media has changed the way we communicate and share information. In the past, people used to rely on traditional media like television and newspapers to get their news. However, with the advent of social media, people can now access information from all over the world in real-time. Social media platforms like Facebook, Twitter, and Instagram have made it easier for people to connect with each other and share their thoughts and experiences. According to a recent survey, 70% of online adults use social media, with Facebook being the most popular platform. Social media has also become an important tool for businesses to reach their target audience and promote their products. Many companies now use social media to engage with their customers and build their brand. For example, a popular clothing brand has over 10 million followers on Instagram and uses the platform to share its latest designs and promotions. Social media has also become a popular platform for news and information, with many people relying on social media to stay up-to-date with current events.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why has social media changed the way we communicate?",
+               "options": [
+                  "A. Because it is a new way of writing letters",
+                  "B. Because it makes it easier to share information",
+                  "C. Because it is a way of communicating with animals"
+               ],
+               "explanation": "The correct answer is B. Because it makes it easier to share information. This is because social media platforms have made it easier for people to connect with each other and share their thoughts and experiences.",
+               "tips": "Focus on understanding the main idea of the text and looking for specific information to answer the questions."
+            },
+            {
+               "question": "What is the most popular social media platform?",
+               "options": [
+                  "A. Twitter",
+                  "B. Facebook",
+                  "C. Instagram"
+               ],
+               "explanation": "The correct answer is B. Facebook. This is according to a recent survey that found 70% of online adults use social media, with Facebook being the most popular platform.",
+               "tips": "Look for specific information in the text to answer the question."
+            },
+            {
+               "question": "What do many companies use social media for?",
+               "options": [
+                  "A. To sell their products",
+                  "B. To engage with their customers",
+                  "C. To build their brand"
+               ],
+               "explanation": "The correct answer is C. To build their brand. This is because many companies use social media to engage with their customers and build their brand.",
+               "tips": "Look for specific information in the text to answer the question."
+            },
+            {
+               "question": "What is the name of the clothing brand that has over 10 million followers on Instagram?",
+               "options": [
+                  "A. Nike",
+                  "B. Adidas",
+                  "C. A popular clothing brand"
+               ],
+               "explanation": "The correct answer is C. A popular clothing brand. This is because the text does not specify the name of the clothing brand.",
+               "tips": "Read the text carefully to find specific information to answer the question."
+            },
+            {
+               "question": "What has social media become for many people?",
+               "options": [
+                  "A. A popular platform for news and information",
+                  "B. A platform for businesses to sell their products",
+                  "C. A platform for people to share their thoughts and experiences"
+               ],
+               "explanation": "The correct answer is A. A popular platform for news and information. This is because many people rely on social media to stay up-to-date with current events.",
+               "tips": "Look for specific information in the text to answer the question."
+            },
+            {
+               "question": "Why is social media important for businesses?",
+               "options": [
+                  "A. Because it is a new way of advertising",
+                  "B. Because it makes it easier to reach their target audience",
+                  "C. Because it is a way of communicating with their customers"
+               ],
+               "explanation": "The correct answer is B. Because it makes it easier to reach their target audience. This is because social media has made it easier for businesses to reach their target audience and promote their products.",
+               "tips": "Look for specific information in the text to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Social Media Users",
+         "content": [
+            {
+               "description": "A young adult who uses social media to stay in touch with friends and family",
+               "label": "A"
+            },
+            {
+               "description": "A business owner who uses social media to promote their products",
+               "label": "B"
+            },
+            {
+               "description": "A news journalist who uses social media to share news and information",
+               "label": "C"
+            },
+            {
+               "description": "A celebrity who uses social media to share their personal life",
+               "label": "D"
+            },
+            {
+               "description": "A student who uses social media to share their academic work",
+               "label": "E"
+            },
+            {
+               "description": "A politician who uses social media to share their opinions",
+               "label": "F"
+            },
+            {
+               "description": "A musician who uses social media to share their music",
+               "label": "G"
+            },
+            {
+               "description": "A social media influencer who uses social media to promote products",
+               "label": "H"
+            }
+         ],
+         "options": [
+            "A. Facebook",
+            "B. Twitter",
+            "C. Instagram",
+            "D. YouTube",
+            "E. TikTok",
+            "F. Reddit",
+            "G. Snapchat",
+            "H. Pinterest"
+         ],
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Which person uses social media to stay in touch with friends and family?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is A. A young adult who uses social media to stay in touch with friends and family. This is because the description matches the person who uses social media to stay in touch with friends and family.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            },
+            {
+               "question": "Which person uses social media to promote their products?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is B. A business owner who uses social media to promote their products. This is because the description matches the person who uses social media to promote their products.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            },
+            {
+               "question": "Which person uses social media to share news and information?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is C. A news journalist who uses social media to share news and information. This is because the description matches the person who uses social media to share news and information.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            },
+            {
+               "question": "Which person uses social media to share their personal life?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is D. A celebrity who uses social media to share their personal life. This is because the description matches the person who uses social media to share their personal life.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            },
+            {
+               "question": "Which person uses social media to share their academic work?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is E. A student who uses social media to share their academic work. This is because the description matches the person who uses social media to share their academic work.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            },
+            {
+               "question": "Which person uses social media to share their opinions?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is F. A politician who uses social media to share their opinions. This is because the description matches the person who uses social media to share their opinions.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            },
+            {
+               "question": "Which person uses social media to share their music?",
+               "options": [
+                  "A. A young adult who uses social media to stay in touch with friends and family",
+                  "B. A business owner who uses social media to promote their products",
+                  "C. A news journalist who uses social media to share news and information",
+                  "D. A celebrity who uses social media to share their personal life",
+                  "E. A student who uses social media to share their academic work",
+                  "F. A politician who uses social media to share their opinions",
+                  "G. A musician who uses social media to share their music",
+                  "H. A social media influencer who uses social media to promote products"
+               ],
+               "explanation": "The correct answer is G. A musician who uses social media to share their music. This is because the description matches the person who uses social media to share their music.",
+               "tips": "Read the descriptions carefully to find the correct match."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts on Social Media",
+         "content": [
+            {
+               "text": "Did you know that Facebook has over 2 billion monthly active users? This means that over 25% of the world's population uses Facebook regularly.",
+               "question": "Why is Facebook so popular?",
+               "options": [
+                  "A. Because it is a new way of writing letters",
+                  "B. Because it has over 2 billion monthly active users",
+                  "C. Because it is a way of communicating with animals"
+               ],
+               "explanation": "The correct answer is B. Because it has over 2 billion monthly active users. This is because the text states that Facebook has over 2 billion monthly active users, which makes it a popular platform.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "text": "Twitter is a social media platform that allows users to share short messages called tweets. Tweets can be up to 280 characters long and can include images, videos, and links.",
+               "question": "What is the maximum length of a tweet?",
+               "options": [
+                  "A. 100 characters",
+                  "B. 280 characters",
+                  "C. 500 characters"
+               ],
+               "explanation": "The correct answer is B. 280 characters. This is because the text states that tweets can be up to 280 characters long.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "text": "Instagram is a social media platform that allows users to share photos and videos. Users can also use Instagram to follow other accounts and see what they are posting.",
+               "question": "What can users do on Instagram?",
+               "options": [
+                  "A. Share photos and videos",
+                  "B. Follow other accounts",
+                  "C. Share news and information"
+               ],
+               "explanation": "The correct answer is A. Share photos and videos. This is because the text states that users can share photos and videos on Instagram.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "text": "Reddit is a social media platform that allows users to share news and information. Users can also use Reddit to discuss topics with other users.",
+               "question": "What can users do on Reddit?",
+               "options": [
+                  "A. Share photos and videos",
+                  "B. Share news and information",
+                  "C. Follow other accounts"
+               ],
+               "explanation": "The correct answer is B. Share news and information. This is because the text states that users can share news and information on Reddit.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "text": "Snapchat is a social media platform that allows users to share photos and videos that disappear after 24 hours. Users can also use Snapchat to send messages to other users.",
+               "question": "How long do photos and videos stay on Snapchat?",
+               "options": [
+                  "A. Forever",
+                  "B. 24 hours",
+                  "C. A week"
+               ],
+               "explanation": "The correct answer is B. 24 hours. This is because the text states that photos and videos on Snapchat disappear after 24 hours.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "text": "Pinterest is a social media platform that allows users to share and save images and videos. Users can also use Pinterest to follow other accounts and see what they are posting.",
+               "question": "What can users do on Pinterest?",
+               "options": [
+                  "A. Share photos and videos",
+                  "B. Follow other accounts",
+                  "C. Share news and information"
+               ],
+               "explanation": "The correct answer is A. Share photos and videos. This is because the text states that users can share and save images and videos on Pinterest.",
+               "tips": "Read the text carefully to find the correct answer."
+            }
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why is Facebook so popular?",
+               "options": [
+                  "A. Because it is a new way of writing letters",
+                  "B. Because it has over 2 billion monthly active users",
+                  "C. Because it is a way of communicating with animals"
+               ],
+               "explanation": "The correct answer is B. Because it has over 2 billion monthly active users. This is because the text states that Facebook has over 2 billion monthly active users, which makes it a popular platform.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What is the maximum length of a tweet?",
+               "options": [
+                  "A. 100 characters",
+                  "B. 280 characters",
+                  "C. 500 characters"
+               ],
+               "explanation": "The correct answer is B. 280 characters. This is because the text states that tweets can be up to 280 characters long.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What can users do on Instagram?",
+               "options": [
+                  "A. Share photos and videos",
+                  "B. Follow other accounts",
+                  "C. Share news and information"
+               ],
+               "explanation": "The correct answer is A. Share photos and videos. This is because the text states that users can share photos and videos on Instagram.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What can users do on Reddit?",
+               "options": [
+                  "A. Share photos and videos",
+                  "B. Share news and information",
+                  "C. Follow other accounts"
+               ],
+               "explanation": "The correct answer is B. Share news and information. This is because the text states that users can share news and information on Reddit.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "How long do photos and videos stay on Snapchat?",
+               "options": [
+                  "A. Forever",
+                  "B. 24 hours",
+                  "C. A week"
+               ],
+               "explanation": "The correct answer is B. 24 hours. This is because the text states that photos and videos on Snapchat disappear after 24 hours.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What can users do on Pinterest?",
+               "options": [
+                  "A. Share photos and videos",
+                  "B. Follow other accounts",
+                  "C. Share news and information"
+               ],
+               "explanation": "The correct answer is A. Share photos and videos. This is because the text states that users can share and save images and videos on Pinterest.",
+               "tips": "Read the text carefully to find the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill on Social Media",
+         "content": "The rise of social media has changed the way we communicate and share information. In the past, people used to rely on traditional media like television and newspapers to get their news. However, with the advent of social media, people can now access information from all over the world in real-time. Social media platforms like Facebook, Twitter, and Instagram have made it easier for people to connect with each other and share their thoughts and experiences. According to a recent survey, 70% of online adults use social media, with Facebook being the most popular platform. Social media has also become an important tool for businesses to reach their target audience and promote their products.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. because",
+                  "B. as",
+                  "C. since"
+               ],
+               "explanation": "The correct answer is B. as. This is because the text states that people can now access information from all over the world in real-time.",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. a new way",
+                  "B. a different way",
+                  "C. a modern way"
+               ],
+               "explanation": "The correct answer is A. a new way. This is because the text states that social media has changed the way we communicate.",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. to share their thoughts",
+                  "B. to share their experiences",
+                  "C. to share their news"
+               ],
+               "explanation": "The correct answer is A. to share their thoughts. This is because the text states that people can now access information from all over the world in real-time.",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. 70% of online adults",
+                  "B. 80% of online adults",
+                  "C. 90% of online adults"
+               ],
+               "explanation": "The correct answer is A. 70% of online adults. This is because the text states that 70% of online adults use social media.",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. to reach their target audience",
+                  "B. to promote their products",
+                  "C. to engage with their customers"
+               ],
+               "explanation": "The correct answer is A. to reach their target audience. This is because the text states that social media has become an important tool for businesses to reach their target audience.",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. Facebook being the most popular platform",
+                  "B. Twitter being the most popular platform",
+                  "C. Instagram being the most popular platform"
+               ],
+               "explanation": "The correct answer is A. Facebook being the most popular platform. This is because the text states that Facebook is the most popular platform.",
+               "tips": "Read the text carefully to find the correct gap."
+            }
+         ],
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "options": []
+      },
+      {
+         "title": "Part 5: Open Gap-Fill on Social Media",
+         "content": "The rise of social media has changed the way we communicate and share information. In the past, people used to rely on traditional media like television and newspapers to get their news. However, with the advent of social media, people can now access information from all over the world in real-time. Social media platforms like Facebook, Twitter, and Instagram have made it easier for people to connect with each other and share their thoughts and experiences. According to a recent survey, 70% of online adults use social media, with Facebook being the most popular platform. Social media has also become an important tool for businesses to reach their target audience and promote their products.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "because",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "a new way",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "to share their thoughts",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "70% of online adults",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "to reach their target audience",
+               "tips": "Read the text carefully to find the correct gap."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "Facebook being the most popular platform",
+               "tips": "Read the text carefully to find the correct gap."
+            }
+         ],
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "options": []
+      }
+   ]
+}

@@ -306,6 +306,19 @@ const CEFR_TOPICS = [
   "Food & Nutrition", "Sport & Fitness"
 ];
 
+const CEFR_LEVELS = [
+  { value: 'A1', label: 'A1 Beginner' },
+  { value: 'A2', label: 'A2 Key (KET)' },
+  { value: 'B1', label: 'B1 Preliminary (PET)' },
+  { value: 'B2', label: 'B2 First (FCE)' },
+  { value: 'C1', label: 'C1 Advanced (CAE)' },
+  { value: 'C2', label: 'C2 Proficiency' },
+];
+
+function slugify(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+}
+
 export default function DashboardPage() {
   const {
     generatedExam,
@@ -332,6 +345,8 @@ export default function DashboardPage() {
   const [checkoutBanner, setCheckoutBanner] = useState<'success' | 'canceled' | null>(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
+  const [librarySelectedLevel, setLibrarySelectedLevel] = useState<string | null>(null);
+  const [loadingLibraryTopic, setLoadingLibraryTopic] = useState<string | null>(null);
 
   const [isTeacher, setIsTeacher] = useState(false);
   const [isTeacherModalOpen, setIsTeacherModalOpen] = useState(false);
@@ -1237,6 +1252,32 @@ export default function DashboardPage() {
     generateExam();
   };
 
+  const handleLoadPreloadedExam = async (skill: string, level: string, topicName: string) => {
+    const slug = slugify(topicName);
+    const url = `/library/${skill.toLowerCase()}/${level.toLowerCase()}/${slug}.json`;
+    setLoadingLibraryTopic(topicName);
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Exam not found (${res.status})`);
+      const content = await res.text();
+      setExamType(skill);
+      setCefrLevel(level);
+      setTopic(topicName);
+      setGeneratedExam(content);
+      // Reset exam state
+      setAnswers({});
+      setScores({});
+      setCurrentQuestion(1);
+      setSubmittedQuestions(new Set());
+      setRetryCount({});
+    } catch (err) {
+      console.error('Failed to load preloaded exam:', err);
+      alert('This pre-loaded exam is not available yet. Try generating a custom exam instead.');
+    } finally {
+      setLoadingLibraryTopic(null);
+    }
+  };
+
   // Timer logic
   useEffect(() => {
     if (timeLeft <= 0) return;
@@ -1731,55 +1772,92 @@ export default function DashboardPage() {
 
             {/* Generator Column (2/4) */}
             <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar transition-colors justify-between">
+              {/* ── Pre-loaded Exams Library ── */}
               <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200 shrink-0">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600 shrink-0">
-                  <Lightbulb className="w-4 h-4" strokeWidth={2.5} />
+                  <Library className="w-4 h-4" strokeWidth={2.5} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-slate-800 leading-tight">Create Your Custom CEFR Mock Exam</h3>
-                  <p className="text-xs text-slate-500 leading-tight">Select your target skill and CEFR level to instantly generate realistic exam practice materials.</p>
+                  <h3 className="text-base font-bold text-slate-800 leading-tight">Pre-loaded Exams</h3>
+                  <p className="text-xs text-slate-500 leading-tight">Choose a skill, level, and topic to instantly start practicing.</p>
                 </div>
               </div>
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-1">
+
+              {/* Step 1: Skill Buttons */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-3">
+                {([
+                  { skill: 'Reading', icon: <BookOpen className="w-5 h-5" />, locked: false },
+                  { skill: 'Writing', icon: <Edit3 className="w-5 h-5" />, locked: false },
+                  { skill: 'Listening', icon: <Headphones className="w-5 h-5" />, locked: !!(generationInfo && generationInfo.plan === 'free') },
+                  { skill: 'Speaking', icon: <Mic className="w-5 h-5" />, locked: false },
+                ] as const).map(({ skill, icon, locked }) => (
                   <button
-                    type="button"
-                    onClick={() => setExamType('Reading')}
-                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${examType === 'Reading' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
-                  >
-                    <BookOpen className={`w-5 h-5 mb-1.5 ${examType === 'Reading' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
-                    <span className="text-[11px] font-bold">Reading</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setExamType('Writing')}
-                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${examType === 'Writing' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
-                  >
-                    <Edit3 className={`w-5 h-5 mb-1.5 ${examType === 'Writing' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
-                    <span className="text-[11px] font-bold">Writing</span>
-                  </button>
-                  <button
+                    key={skill}
                     type="button"
                     onClick={() => {
-                      if (generationInfo && generationInfo.plan === 'free') return;
-                      setExamType('Listening');
+                      if (locked) return;
+                      setExamType(skill);
+                      setLibrarySelectedLevel(null);
                     }}
-                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all relative ${generationInfo && generationInfo.plan === 'free' ? 'opacity-60 cursor-not-allowed bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : examType === 'Listening' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all relative ${locked ? 'opacity-50 cursor-not-allowed bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : examType === skill ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm ring-1 ring-blue-200' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
                   >
-                    {generationInfo && generationInfo.plan === 'free' && <span className="absolute -top-1.5 -right-1.5 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1 py-0.5 rounded shadow-sm border border-amber-200 tracking-wider">PRO</span>}
-                    <Headphones className={`w-5 h-5 mb-1.5 ${examType === 'Listening' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
-                    <span className="text-[11px] font-bold">Listening</span>
+                    {locked && <span className="absolute -top-1.5 -right-1.5 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1 py-0.5 rounded shadow-sm border border-amber-200 tracking-wider">PRO</span>}
+                    <span className={`mb-1.5 ${examType === skill ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`}>{icon}</span>
+                    <span className="text-[11px] font-bold">{skill}</span>
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => setExamType('Speaking')}
-                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${examType === 'Speaking' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
-                  >
-                    <Mic className={`w-5 h-5 mb-1.5 ${examType === 'Speaking' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
-                    <span className="text-[11px] font-bold">Speaking</span>
-                  </button>
-                </div>
+                ))}
+              </div>
 
+              {/* Step 2: Level Tabs */}
+              <div className="mb-3">
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Select CEFR Level</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {CEFR_LEVELS.map(({ value, label }) => (
+                    <button
+                      key={value}
+                      type="button"
+                      onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
+                      className={`text-[11px] px-2.5 py-1 rounded-lg border font-bold transition-all ${librarySelectedLevel === value ? 'bg-blue-600 border-blue-600 text-white shadow-sm' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700'}`}
+                    >
+                      {value}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 3: Topic Cards Grid */}
+              {librarySelectedLevel && (
+                <div className="mb-4">
+                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                    {examType} · {librarySelectedLevel} — Choose a Topic
+                  </p>
+                  <div className="grid grid-cols-2 gap-1.5">
+                    {CEFR_TOPICS.map((t) => (
+                      <button
+                        key={t}
+                        type="button"
+                        disabled={!!loadingLibraryTopic}
+                        onClick={() => handleLoadPreloadedExam(examType, librarySelectedLevel, t)}
+                        className={`text-left p-2.5 rounded-lg border transition-all group ${loadingLibraryTopic === t ? 'bg-blue-50 dark:bg-blue-900/30 border-blue-300 dark:border-blue-700 animate-pulse' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-slate-700/60 hover:shadow-sm'}`}
+                      >
+                        <span className={`text-[11px] font-semibold leading-tight block ${loadingLibraryTopic === t ? 'text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400'}`}>
+                          {loadingLibraryTopic === t ? '⏳ Loading...' : t}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* ── Divider ── */}
+              <div className="flex items-center gap-2 my-3">
+                <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700"></div>
+                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">or create your own</span>
+                <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700"></div>
+              </div>
+
+              {/* ── Custom Generator Form ── */}
+              <form onSubmit={handleSubmit} className="space-y-3">
                 <div className="w-full">
                   <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">Target CEFR Level</label>
                   <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
@@ -1845,7 +1923,7 @@ export default function DashboardPage() {
                     disabled={loading}
                     className={`w-full mt-2 py-2.5 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all flex items-center justify-between ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}
                   >
-                    <span>{loading ? 'Generating...' : 'Generate Exam'}</span>
+                    <span>{loading ? 'Generating...' : 'Generate Custom Exam'}</span>
                     {generationInfo && generationInfo.plan === 'free' && !loading && (
                       <div className="flex items-center gap-2 bg-black/10 px-2 py-0.5 rounded text-[11px] font-medium border border-white/10">
                         <span>Free remaining:</span>

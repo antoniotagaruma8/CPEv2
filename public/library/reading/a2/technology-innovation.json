@@ -1,0 +1,215 @@
+{
+  "examTitle": "CEFR A2 Technology & Innovation Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "content": "Technology has changed our lives in many ways. We use computers, mobile phones and the internet to communicate and access information. People can now work from home or anywhere in the world with a laptop and internet connection. This has made it easier for people to balance work and family life. However, some people worry about the impact of technology on our mental and physical health.",
+         "questions": [
+            {
+               "question": "What has changed our lives in many ways?",
+               "options": ["A. Television", "B. Computers", "C. Mobile phones"],
+               "explanation": "The correct answer is B. Computers, as computers have changed our lives in many ways.",
+               "tips": "Read the text carefully to understand the main idea."
+            },
+            {
+               "question": "What do people use to access information?",
+               "options": ["A. Books", "B. Computers", "C. Mobile phones"],
+               "explanation": "The correct answer is B. Computers, as people use computers to access information.",
+               "tips": "Look for words and phrases that indicate the main idea."
+            },
+            {
+               "question": "What has made it easier for people to balance work and family life?",
+               "options": ["A. Technology", "B. Mobile phones", "C. Computers"],
+               "explanation": "The correct answer is A. Technology, as technology has made it easier for people to balance work and family life.",
+               "tips": "Identify the benefits of technology in the text."
+            },
+            {
+               "question": "What do some people worry about?",
+               "options": ["A. The impact of technology on our mental health", "B. The impact of technology on our physical health", "C. The impact of technology on our financial health"],
+               "explanation": "The correct answer is B. The impact of technology on our physical health, as some people worry about the impact of technology on our physical health.",
+               "tips": "Look for words and phrases that indicate a negative consequence."
+            },
+            {
+               "question": "Why do some people worry about technology?",
+               "options": ["A. Because it is too expensive", "B. Because it is too complicated", "C. Because it affects our mental and physical health"],
+               "explanation": "The correct answer is C. Because it affects our mental and physical health, as some people worry about the impact of technology on our mental and physical health.",
+               "tips": "Identify the reasons why people worry about technology."
+            },
+            {
+               "question": "What can people do with a laptop and internet connection?",
+               "options": ["A. Play games", "B. Watch TV", "C. Work from home or anywhere in the world"],
+               "explanation": "The correct answer is C. Work from home or anywhere in the world, as people can work from home or anywhere in the world with a laptop and internet connection.",
+               "tips": "Look for words and phrases that indicate the benefits of technology."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching",
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "content": {
+            "A": "A young girl who loves reading books",
+            "B": "A boy who wants to be a scientist",
+            "C": "A woman who loves cooking",
+            "D": "A man who wants to be a teacher",
+            "E": "A girl who loves dancing",
+            "F": "A boy who wants to be an engineer",
+            "G": "A woman who loves gardening",
+            "H": "A man who wants to be a doctor"
+         },
+         "questions": [
+            {
+               "question": "Who is a young girl who loves reading books?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is A, as the description says 'A young girl who loves reading books'.",
+               "tips": "Look for the description that matches the question."
+            },
+            {
+               "question": "Who wants to be a scientist?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is B, as the description says 'A boy who wants to be a scientist'.",
+               "tips": "Identify the person who wants to be a scientist."
+            },
+            {
+               "question": "Who loves cooking?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is C, as the description says 'A woman who loves cooking'.",
+               "tips": "Look for the person who loves cooking."
+            },
+            {
+               "question": "Who wants to be a teacher?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is D, as the description says 'A man who wants to be a teacher'.",
+               "tips": "Identify the person who wants to be a teacher."
+            },
+            {
+               "question": "Who loves dancing?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is E, as the description says 'A girl who loves dancing'.",
+               "tips": "Look for the person who loves dancing."
+            },
+            {
+               "question": "Who wants to be an engineer?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is F, as the description says 'A boy who wants to be an engineer'.",
+               "tips": "Identify the person who wants to be an engineer."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "The library is open from 9 am to 5 pm on weekdays. It is closed on weekends."
+            },
+            {
+               "text": "The meeting will start at 2 pm on Friday. Please be there on time."
+            },
+            {
+               "text": "The bus will arrive at 3:30 pm. Please be ready to leave."
+            },
+            {
+               "text": "The restaurant is closed on Mondays. Please come back on Tuesday."
+            },
+            {
+               "text": "The school will be closed for two weeks. Please check the website for updates."
+            },
+            {
+               "text": "The store will be open from 10 am to 6 pm on Sundays. Please visit us."
+            }
+         ],
+         "questions": [
+            {
+               "question": "What time is the library open on weekdays?",
+               "options": ["A. 9 am to 5 pm", "B. 10 am to 6 pm", "C. 12 pm to 8 pm"],
+               "explanation": "The correct answer is A. 9 am to 5 pm, as the text says 'The library is open from 9 am to 5 pm on weekdays'.",
+               "tips": "Look for the specific information in the text."
+            },
+            {
+               "question": "What day will the meeting start?",
+               "options": ["A. Monday", "B. Tuesday", "C. Friday"],
+               "explanation": "The correct answer is C. Friday, as the text says 'The meeting will start at 2 pm on Friday'.",
+               "tips": "Identify the specific day mentioned in the text."
+            },
+            {
+               "question": "What time will the bus arrive?",
+               "options": ["A. 2 pm", "B. 3:30 pm", "C. 4 pm"],
+               "explanation": "The correct answer is B. 3:30 pm, as the text says 'The bus will arrive at 3:30 pm'.",
+               "tips": "Look for the specific time mentioned in the text."
+            },
+            {
+               "question": "Which day is the restaurant closed?",
+               "options": ["A. Monday", "B. Tuesday", "C. Wednesday"],
+               "explanation": "The correct answer is A. Monday, as the text says 'The restaurant is closed on Mondays'.",
+               "tips": "Identify the specific day mentioned in the text."
+            },
+            {
+               "question": "How many weeks will the school be closed?",
+               "options": ["A. One week", "B. Two weeks", "C. Three weeks"],
+               "explanation": "The correct answer is B. Two weeks, as the text says 'The school will be closed for two weeks'.",
+               "tips": "Look for the specific information in the text."
+            },
+            {
+               "question": "What time will the store be open on Sundays?",
+               "options": ["A. 9 am to 5 pm", "B. 10 am to 6 pm", "C. 12 pm to 8 pm"],
+               "explanation": "The correct answer is B. 10 am to 6 pm, as the text says 'The store will be open from 10 am to 6 pm on Sundays'.",
+               "tips": "Identify the specific time mentioned in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "content": "Technology has changed our lives in many ways. We use computers, mobile phones and the (1) _______ (internet) to communicate and access information. People can now work from home or anywhere in the world with a laptop and (2) _______ (connection) to the internet. This has made it easier for people to balance work and family life. However, some people worry about the (3) _______ (impact) of technology on our mental and physical health.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. internet", "B. phone", "C. computer"],
+               "explanation": "The correct answer is A. internet, as the text says 'We use computers, mobile phones and the internet to communicate and access information'.",
+               "tips": "Look for the specific information in the text."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. connection", "B. phone", "C. computer"],
+               "explanation": "The correct answer is A. connection, as the text says 'People can now work from home or anywhere in the world with a laptop and connection to the internet'.",
+               "tips": "Identify the specific word mentioned in the text."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. impact", "B. effect", "C. influence"],
+               "explanation": "The correct answer is A. impact, as the text says 'However, some people worry about the impact of technology on our mental and physical health'.",
+               "tips": "Look for the specific word mentioned in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "content": "Technology has changed our lives in many ways. We use computers, mobile phones and the (1) _______ (7) to communicate and access information. People can now work from home or anywhere in the world with a laptop and (2) _______ (7) to the internet. This has made it easier for people to balance work and family life. However, some people worry about the (3) _______ (7) of technology on our mental and physical health.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "internet",
+               "explanation": "The correct answer is internet, as it is the word that fits in the gap.",
+               "tips": "Look for the context of the sentence to determine the correct word."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "connection",
+               "explanation": "The correct answer is connection, as it is the word that fits in the gap.",
+               "tips": "Identify the specific word that completes the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "impact",
+               "explanation": "The correct answer is impact, as it is the word that fits in the gap.",
+               "tips": "Look for the context of the sentence to determine the correct word."
+            }
+         ]
+      }
+   ]
+}

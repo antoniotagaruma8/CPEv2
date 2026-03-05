@@ -1,0 +1,218 @@
+{
+  "examTitle": "Shopping & Fashion A1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Shopping",
+         "content": "Shopping is a fun activity. You can buy clothes, shoes, and accessories. My favourite shopping place is the mall. There are many shops there. You can find everything you need. The shops are open from 10 am to 6 pm. You can go shopping with your friends. It's a good way to spend time together. You can also eat food at the restaurants. The food is delicious. You can eat a sandwich or a salad. It's up to you.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What can you buy at the shops in the mall?",
+               "options": ["A. Food", "B. Clothes, shoes, and accessories", "C. Furniture"],
+               "correctOption": "B",
+               "explanation": "The text says, 'You can buy clothes, shoes, and accessories.' This is why option B is correct. Options A and C are incorrect because the text does not mention buying food or furniture.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "How long are the shops open?",
+               "options": ["A. 8 am to 12 pm", "B. 10 am to 6 pm", "C. 12 pm to 8 pm"],
+               "correctOption": "B",
+               "explanation": "The text says, 'The shops are open from 10 am to 6 pm.' This is why option B is correct. Options A and C are incorrect because the text does not mention these times.",
+               "tips": "Look for the correct information in the text and choose the correct answer."
+            },
+            {
+               "question": "Who can you go shopping with?",
+               "options": ["A. Your family", "B. Your friends", "C. Your teacher"],
+               "correctOption": "B",
+               "explanation": "The text says, 'You can go shopping with your friends.' This is why option B is correct. Options A and C are incorrect because the text does not mention going shopping with your family or teacher.",
+               "tips": "Read the text carefully and find the correct information."
+            },
+            {
+               "question": "What can you eat at the restaurants?",
+               "options": ["A. A sandwich or a salad", "B. A burger or a hot dog", "C. A cake or a pie"],
+               "correctOption": "A",
+               "explanation": "The text says, 'You can eat a sandwich or a salad.' This is why option A is correct. Options B and C are incorrect because the text does not mention eating a burger or hot dog, cake or pie.",
+               "tips": "Look for the correct information in the text and choose the correct answer."
+            },
+            {
+               "question": "Where is your favourite shopping place?",
+               "options": ["A. The mall", "B. The park", "C. The cinema"],
+               "correctOption": "A",
+               "explanation": "The text says, 'My favourite shopping place is the mall.' This is why option A is correct. Options B and C are incorrect because the text does not mention the park or cinema.",
+               "tips": "Read the text carefully and find the correct information."
+            },
+            {
+               "question": "When can you go shopping?",
+               "options": ["A. Anytime", "B. In the morning", "C. In the evening"],
+               "correctOption": "B",
+               "explanation": "The text says, 'The shops are open from 10 am to 6 pm.' This is why option B is correct. Options A and C are incorrect because the text does not mention shopping anytime or in the evening.",
+               "tips": "Look for the correct information in the text and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching on Shopping Places",
+         "content": [
+            {
+               "label": "A",
+               "text": "You can buy clothes, shoes, and accessories there."
+            },
+            {
+               "label": "B",
+               "text": "You can eat food at the restaurants."
+            },
+            {
+               "label": "C",
+               "text": "You can go shopping with your friends."
+            },
+            {
+               "label": "D",
+               "text": "The shops are open from 10 am to 6 pm."
+            },
+            {
+               "label": "E",
+               "text": "You can find everything you need there."
+            },
+            {
+               "label": "F",
+               "text": "My favourite shopping place is the mall."
+            },
+            {
+               "label": "G",
+               "text": "It's a good way to spend time together."
+            },
+            {
+               "label": "H",
+               "text": "The food is delicious."
+            }
+         ],
+         "instructions": "Match the descriptions to the correct shopping places. There are more places than you need.",
+         "questions": [
+            {
+               "question": "Which text states what you can buy at the shopping place?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "E",
+               "explanation": "The correct text is 'You can find everything you need there.' This is why option E is correct.",
+               "tips": "Read the text carefully and match it to the correct shopping place."
+            },
+            {
+               "question": "Which text states what you can do at the shopping place?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "F",
+               "explanation": "The correct text is 'My favourite shopping place is the mall.' This is why option F is correct.",
+               "tips": "Read the text carefully and match it to the correct shopping place."
+            },
+            {
+               "question": "Which text states what you can eat at the shopping place?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "H",
+               "explanation": "The correct text is 'The food is delicious.' This is why option H is correct.",
+               "tips": "Read the text carefully and match it to the correct shopping place."
+            },
+            {
+               "question": "Which text states who you can go shopping with?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "C",
+               "explanation": "The correct text is 'You can go shopping with your friends.' This is why option C is correct.",
+               "tips": "Read the text carefully and match it to the correct shopping place."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice Cloze on Shopping Signs",
+         "content": [
+            {
+               "text": "The store is closed. Please come back tomorrow."
+            },
+            {
+               "text": "Free parking for customers."
+            },
+            {
+               "text": "Do not eat or drink in the store."
+            },
+            {
+               "text": "Lost and found: please contact the manager."
+            },
+            {
+               "text": "Do not take pictures in the store."
+            },
+            {
+               "text": "The store is open on Sundays."
+            }
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the first sign mean?",
+               "options": ["A. The store is open 24/7", "B. The store is closed", "C. The store is having a sale"],
+               "correctOption": "B",
+               "explanation": "The sign says, 'The store is closed.' This is why option B is correct.",
+               "tips": "Read the sign carefully and choose the correct answer."
+            },
+            {
+               "question": "What does the second sign mean?",
+               "options": ["A. Customers must pay to park", "B. Customers can park for free", "C. Customers must walk to the store"],
+               "correctOption": "B",
+               "explanation": "The sign says, 'Free parking for customers.' This is why option B is correct.",
+               "tips": "Read the sign carefully and choose the correct answer."
+            },
+            {
+               "question": "What does the third sign mean?",
+               "options": ["A. You can eat and drink in the store", "B. You cannot eat or drink in the store", "C. You can take pictures in the store"],
+               "correctOption": "B",
+               "explanation": "The sign says, 'Do not eat or drink in the store.' This is why option B is correct.",
+               "tips": "Read the sign carefully and choose the correct answer."
+            },
+            {
+               "question": "What does the fourth sign mean?",
+               "options": ["A. The manager is not available", "B. The lost and found is for customers to find their lost items", "C. The store has a lost and found"],
+               "correctOption": "C",
+               "explanation": "The sign says, 'Lost and found: please contact the manager.' This is why option C is correct.",
+               "tips": "Read the sign carefully and choose the correct answer."
+            },
+            {
+               "question": "What does the fifth sign mean?",
+               "options": ["A. You can take pictures in the store", "B. You cannot take pictures in the store", "C. You can eat and drink in the store"],
+               "correctOption": "B",
+               "explanation": "The sign says, 'Do not take pictures in the store.' This is why option B is correct.",
+               "tips": "Read the sign carefully and choose the correct answer."
+            },
+            {
+               "question": "What does the sixth sign mean?",
+               "options": ["A. The store is not open on Sundays", "B. The store is open on Sundays", "C. The store is closed on Sundays"],
+               "correctOption": "B",
+               "explanation": "The sign says, 'The store is open on Sundays.' This is why option B is correct.",
+               "tips": "Read the sign carefully and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill on Shopping",
+         "content": "Shopping is a fun activity. You can buy clothes, shoes, and (1) _______ at the mall.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. food", "B. accessories", "C. toys"],
+               "correctOption": "B",
+               "explanation": "The correct word is 'accessories.' This is why option B is correct.",
+               "tips": "Read the text carefully and choose the correct word for the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill on Shopping",
+         "content": "My favourite shopping place is the mall. You can buy clothes, shoes, and (1) _______ there.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "accessories",
+               "explanation": "The correct word is 'accessories.' This is why option B is correct.",
+               "tips": "Read the text carefully and write the correct word for the gap."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,152 @@
+{
+  "examTitle": "Technology & Innovation - CEFR A1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "content": "Technology has changed our lives in many ways. We use computers, phones, and tablets to communicate with each other. The internet is a big part of our lives. We use it to find information, watch videos, and listen to music. The internet is also used for shopping and banking. Many websites are available to help us with our daily tasks. We can even use the internet to learn new skills and languages.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What do we use to communicate with each other?",
+               "options": ["Computers", "Phones", "Cars"],
+               "correctOption": "B",
+               "explanation": "The text states that we use computers, phones, and tablets to communicate with each other. Option B is correct because it is one of the devices listed in the text. Options A and C are incorrect because they are not mentioned in the text as devices for communication.",
+               "tips": "Pay close attention to the text and find the correct answer based on what is written."
+            },
+            {
+               "question": "What is the internet used for?",
+               "options": ["To play games", "To find information, watch videos, and listen to music", "To take a bath"],
+               "correctOption": "B",
+               "explanation": "The text states that the internet is used for many things, including finding information, watching videos, and listening to music. Option B is correct because it is one of the activities mentioned in the text. Options A and C are incorrect because they are not mentioned in the text.",
+               "tips": "Read the text carefully and find the correct answer based on what is written."
+            },
+            {
+               "question": "What can we use the internet for?",
+               "options": ["Only for shopping", "Only for banking", "For shopping, banking, and many other things"],
+               "correctOption": "C",
+               "explanation": "The text states that the internet is used for many things, including shopping and banking. Option C is correct because it is the correct statement. Options A and B are incorrect because they are not the only things we can use the internet for.",
+               "tips": "Pay close attention to the text and find the correct answer based on what is written."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching",
+         "content": [
+            "The company has a new policy.",
+            "The company is looking for new employees.",
+            "The company is moving to a new building.",
+            "The company is happy with its current employees.",
+            "The company is offering a new program for its employees.",
+            "The company is changing its logo."
+         ],
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "questions": [
+            {
+               "question": "Which text states that the company has a new policy?",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "A",
+               "explanation": "The text states that the company has a new policy. Option A is correct because it is the description that matches the text. Options B, C, D, E, F, and G are incorrect because they do not match the text.",
+               "tips": "Read the texts carefully and match the description to the correct item."
+            },
+            {
+               "question": "Which text states that the company is looking for new employees?",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "B",
+               "explanation": "The text states that the company is looking for new employees. Option B is correct because it is the description that matches the text. Options A, C, D, E, F, and G are incorrect because they do not match the text.",
+               "tips": "Read the texts carefully and match the description to the correct item."
+            },
+            {
+               "question": "Which text states that the company is happy with its current employees?",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "C",
+               "explanation": "The text states that the company is happy with its current employees. Option C is correct because it is the description that matches the text. Options A, B, D, E, F, and G are incorrect because they do not match the text.",
+               "tips": "Read the texts carefully and match the description to the correct item."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "content": [
+            "Welcome to our store!",
+            "The restaurant is closed.",
+            "The library is open from 9am to 5pm.",
+            "The bus stop is ahead.",
+            "The office is on the second floor.",
+            "The phone number is 555-1234."
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the first sign mean?",
+               "options": ["This is a store", "This is a restaurant", "This is a library"],
+               "correctOption": "A",
+               "explanation": "The first sign says 'Welcome to our store!' which means it is a store. Option A is correct because it is the correct statement. Options B and C are incorrect because they are not correct statements.",
+               "tips": "Read the signs carefully and find the correct answer based on what is written."
+            },
+            {
+               "question": "What does the second sign mean?",
+               "options": ["This is a library", "This is a restaurant", "The restaurant is closed"],
+               "correctOption": "C",
+               "explanation": "The second sign says 'The restaurant is closed.' which means it is a closed restaurant. Option C is correct because it is the correct statement. Options A and B are incorrect because they are not correct statements.",
+               "tips": "Read the signs carefully and find the correct answer based on what is written."
+            },
+            {
+               "question": "What does the third sign mean?",
+               "options": ["The library is open from 8am to 4pm", "The library is open from 9am to 5pm", "The library is closed"],
+               "correctOption": "B",
+               "explanation": "The third sign says 'The library is open from 9am to 5pm.' which means it is open during those hours. Option B is correct because it is the correct statement. Options A and C are incorrect because they are not correct statements.",
+               "tips": "Read the signs carefully and find the correct answer based on what is written."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "The company is (1) ___________ a new policy. The policy is (2) ___________ to all employees. The company is (3) ___________ to hire new employees. The company is (4) ___________ to move to a new building. The company is (5) ___________ its logo. The company is (6) ___________ happy with its current employees.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["introducing", "replacing", "changing"],
+               "correctOption": "A",
+               "explanation": "The sentence states that the company is introducing a new policy. Option A is correct because it is the correct statement. Options B and C are incorrect because they are not correct statements.",
+               "tips": "Read the text carefully and choose the correct word for each gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["given", "shown", "told"],
+               "correctOption": "B",
+               "explanation": "The sentence states that the policy is shown to all employees. Option B is correct because it is the correct statement. Options A and C are incorrect because they are not correct statements.",
+               "tips": "Read the text carefully and choose the correct word for each gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["looking to", "trying to", "decided to"],
+               "correctOption": "A",
+               "explanation": "The sentence states that the company is looking to hire new employees. Option A is correct because it is the correct statement. Options B and C are incorrect because they are not correct statements.",
+               "tips": "Read the text carefully and choose the correct word for each gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "The company is (1) ___________ a new policy. The policy is (2) ___________ to all employees. The company is (3) ___________ to hire new employees. The company is (4) ___________ to move to a new building. The company is (5) ___________ its logo. The company is (6) ___________ happy with its current employees.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "introducing",
+               "explanation": "The sentence states that the company is introducing a new policy. The correct word is 'introducing'.",
+               "tips": "Read the text carefully and write the correct word for each gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "given",
+               "explanation": "The sentence states that the policy is given to all employees. The correct word is 'given'.",
+               "tips": "Read the text carefully and write the correct word for each gap."
+            }
+         ]
+      }
+   ]
+}

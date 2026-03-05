@@ -1,0 +1,340 @@
+{
+  "examTitle": "A2 Mock Reading and Use of English: Education & Learning",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension - Student Life",
+         "content": "Student life can be very different from one place to another. In some countries, students live with their families in their own homes, while in other places, they live in boarding schools. In boarding schools, students share rooms and meals with their friends. They usually have a busy schedule, with classes and homework every day. Some students prefer this kind of life, as it helps them to be more independent and make new friends easily. However, others may find it difficult to adjust to the new environment and may feel homesick. It's essential for students to choose the right type of school for their needs and personality.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why do some students prefer living in boarding schools?",
+               "options": [
+                  "A. They want to be closer to their families",
+                  "B. They want to be more independent and make new friends easily",
+                  "C. They want to have more free time to play games"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that some students prefer living in boarding schools as it helps them to be more independent and make new friends easily. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the different types of student life and the reasons why some students prefer one type over another."
+            },
+            {
+               "question": "What do some students find difficult about living in boarding schools?",
+               "options": [
+                  "A. They find it easy to make new friends",
+                  "B. They find it difficult to adjust to the new environment and may feel homesick",
+                  "C. They find it easy to do their homework"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that some students may find it difficult to adjust to the new environment and may feel homesick. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the potential challenges that students may face when living in boarding schools."
+            },
+            {
+               "question": "What is essential for students to do when choosing a school?",
+               "options": [
+                  "A. They should choose a school that is close to their home",
+                  "B. They should choose a school that is right for their needs and personality",
+                  "C. They should choose a school that has a lot of free time"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that it's essential for students to choose the right type of school for their needs and personality. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the importance of choosing the right school for each student's individual needs."
+            },
+            {
+               "question": "What do students usually have every day in boarding schools?",
+               "options": [
+                  "A. Only classes",
+                  "B. Only homework",
+                  "C. Classes and homework"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that students usually have a busy schedule, with classes and homework every day. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the daily routine of students in boarding schools."
+            },
+            {
+               "question": "Why do some students live in their own homes?",
+               "options": [
+                  "A. Because they want to be more independent and make new friends easily",
+                  "B. Because they prefer a quieter life",
+                  "C. Because it's a common practice in some countries"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that in some countries, students live with their families in their own homes. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the different types of student life and the reasons why some students prefer one type over another."
+            },
+            {
+               "question": "What may happen to some students who live in boarding schools?",
+               "options": [
+                  "A. They will always feel happy and never feel homesick",
+                  "B. They may feel homesick",
+                  "C. They will always have a lot of free time"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that some students may feel homesick when living in boarding schools. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the potential challenges that students may face when living in boarding schools."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching - Student Life in Different Countries",
+         "content": {
+            "A": "In some countries, students have to walk to school, while in other places, they have buses or trains to take them to school.",
+            "B": "In some countries, students live with their families in their own homes, while in other places, they live in boarding schools.",
+            "C": "In some countries, students have to study at night, while in other places, they have the day to study.",
+            "D": "In some countries, students have to pay for their education, while in other places, it's free."
+         },
+         "options": [
+            "A. A and B",
+            "B. B and C",
+            "C. C and D",
+            "D. A and C"
+         ],
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Which texts state that students have to walk to school or have buses or trains to take them to school?",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because text A states that in some countries, students have to walk to school, while in other places, they have buses or trains to take them to school. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the different ways that students get to school in different countries."
+            },
+            {
+               "question": "Which texts state that some students live with their families in their own homes, while others live in boarding schools?",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because text B states that in some countries, students live with their families in their own homes, while in other places, they live in boarding schools. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the different types of student life and the reasons why some students prefer one type over another."
+            },
+            {
+               "question": "Which texts state that students have to study at night or have the day to study?",
+               "correctOption": "C",
+               "explanation": "The correct answer is C because text C states that in some countries, students have to study at night, while in other places, they have the day to study. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the different schedules that students follow in different countries."
+            },
+            {
+               "question": "Which texts state that students have to pay for their education or that it's free?",
+               "correctOption": "D",
+               "explanation": "The correct answer is D because text D states that in some countries, students have to pay for their education, while in other places, it's free. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the different financial situations that students face in different countries."
+            },
+            {
+               "question": "Which texts state that students have a lot of free time?",
+               "correctOption": "None",
+               "explanation": "The correct answer is None because none of the texts state that students have a lot of free time. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the daily routines of students in different countries."
+            },
+            {
+               "question": "Which texts state that students usually have a busy schedule?",
+               "correctOption": "None",
+               "explanation": "The correct answer is None because none of the texts state that students usually have a busy schedule. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the daily routines of students in different countries."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Sigsn - School Rules",
+         "content": [
+            "Please turn off your phone during classes.",
+            "You must wear a uniform to school.",
+            "You can have a snack during breaks.",
+            "You must be on time for classes.",
+            "You can't bring any electronic devices to school.",
+            "You must respect your teachers."
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What should you do with your phone during classes?",
+               "options": [
+                  "A. You can use it to play games",
+                  "B. You should turn it off",
+                  "C. You can use it to text your friends"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that you should turn off your phone during classes. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school rules related to electronic devices."
+            },
+            {
+               "question": "What do you have to wear to school?",
+               "options": [
+                  "A. A uniform",
+                  "B. Your favorite clothes",
+                  "C. A coat and a hat"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that you must wear a uniform to school. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school rules related to clothing."
+            },
+            {
+               "question": "When can you have a snack?",
+               "options": [
+                  "A. During classes",
+                  "B. During breaks",
+                  "C. At home"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that you can have a snack during breaks. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school rules related to snacks."
+            },
+            {
+               "question": "What is important to do in school?",
+               "options": [
+                  "A. To be late for classes",
+                  "B. To respect your teachers",
+                  "C. To bring electronic devices to school"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that you must respect your teachers. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school rules related to behavior."
+            },
+            {
+               "question": "What can't you bring to school?",
+               "options": [
+                  "A. A backpack",
+                  "B. A phone",
+                  "C. An electronic device"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that you can't bring any electronic devices to school. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school rules related to electronic devices."
+            },
+            {
+               "question": "What is important to do in school?",
+               "options": [
+                  "A. To be late for classes",
+                  "B. To respect your teachers",
+                  "C. To bring electronic devices to school"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that you must respect your teachers. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school rules related to behavior."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill - School Life",
+         "content": "The school day starts at (1) _______ and ends at (2) _______. Students have (3) _______ free time to play with their friends. They usually have (4) _______ classes, which include English, math, science, and social studies. After school, students often (5) _______ with their friends or join a sports team.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. 8 o'clock",
+                  "B. 9 o'clock",
+                  "C. 10 o'clock"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that students have a busy schedule and the school day starts in the morning. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school schedule and the daily routine of students."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. 2 o'clock",
+                  "B. 3 o'clock",
+                  "C. 4 o'clock"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that students have a busy schedule and the school day ends in the afternoon. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school schedule and the daily routine of students."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. one hour",
+                  "B. two hours",
+                  "C. three hours"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that students have free time to play with their friends. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the daily routine of students and their free time."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. three",
+                  "B. four",
+                  "C. five"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that students usually have classes, which include English, math, science, and social studies. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the school curriculum and the subjects that students study."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. go home",
+                  "B. join a sports team",
+                  "C. have lunch"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that students often join a sports team after school. The other options are incorrect because they do not match the information in the text.",
+               "tips": "While reading the text, pay attention to the daily routine of students and their activities after school."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. watch TV",
+                  "B. play video games",
+                  "C. eat dinner"
+               ],
+               "correctOption": "None",
+               "explanation": "The correct answer is None because none of the options match the information in the text. The text states that students often join a sports team after school, not engage in the activities mentioned in the options.",
+               "tips": "While reading the text, pay attention to the daily routine of students and their activities after school."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill - School Life",
+         "content": "The school day starts at (1) _______ and ends at (2) _______. Students have (3) _______ free time to play with their friends. They usually have (4) _______ classes, which include English, math, science, and social studies. After school, students often (5) _______ with their friends or join a sports team. The school year starts in (6) _______ and ends in (7) _______. Students have (8) _______ breaks during the day.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "nine",
+               "explanation": "The correct answer is 'nine' because it is a common time for schools to start the day.",
+               "tips": "While reading the text, pay attention to the school schedule and the daily routine of students."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "three",
+               "explanation": "The correct answer is 'three' because it is a common time for schools to end the day.",
+               "tips": "While reading the text, pay attention to the school schedule and the daily routine of students."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "two",
+               "explanation": "The correct answer is 'two' because it is a common amount of free time for students to play with their friends.",
+               "tips": "While reading the text, pay attention to the daily routine of students and their free time."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "five",
+               "explanation": "The correct answer is 'five' because it is a common number of classes for students to have.",
+               "tips": "While reading the text, pay attention to the school curriculum and the subjects that students study."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "hang",
+               "explanation": "The correct answer is 'hang' because it is a common way for students to spend time with their friends after school.",
+               "tips": "While reading the text, pay attention to the daily routine of students and their activities after school."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "September",
+               "explanation": "The correct answer is 'September' because it is a common time for the school year to start.",
+               "tips": "While reading the text, pay attention to the school schedule and the daily routine of students."
+            },
+            {
+               "question": "Gap 7",
+               "correctOption": "June",
+               "explanation": "The correct answer is 'June' because it is a common time for the school year to end.",
+               "tips": "While reading the text, pay attention to the school schedule and the daily routine of students."
+            },
+            {
+               "question": "Gap 8",
+               "correctOption": "two",
+               "explanation": "The correct answer is 'two' because it is a common number of breaks for students to have during the day.",
+               "tips": "While reading the text, pay attention to the daily routine of students and their breaks."
+            }
+         ]
+      }
+   ]
+}

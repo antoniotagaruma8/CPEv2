@@ -1,0 +1,227 @@
+{
+  "examTitle": "Relationships and Family A1 CEFR Mock Reading and Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Family Relationships",
+         "content": "In many families, children are very important. Parents love and take care of them. They teach them how to read, write, and do math. Children also have brothers and sisters. They play together and help each other. Family members often go on holiday together. They like to explore new places and try new foods. Some families have pets, like dogs and cats. These pets are very loving and friendly.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What do parents do with their children?",
+               "options": ["A. They play with them", "B. They teach them", "C. They go on holiday with them"],
+               "explanation": "The correct answer is B. They teach them. This is because the text states that parents teach children how to read, write, and do math.",
+               "tips": "When answering multiple-choice questions, always read the entire text before making a decision."
+            },
+            {
+               "question": "Who do children play with?",
+               "options": ["A. Their friends", "B. Their brothers and sisters", "C. Their parents"],
+               "explanation": "The correct answer is B. Their brothers and sisters. This is because the text states that children play with their brothers and sisters.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "What do family members like to do on holiday?",
+               "options": ["A. They like to stay at home", "B. They like to explore new places", "C. They like to try new foods"],
+               "explanation": "The correct answer is B. They like to explore new places. This is because the text states that family members like to explore new places on holiday.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What do some families have in their homes?",
+               "options": ["A. Only brothers and sisters", "B. Only pets", "C. Only pets and dogs"],
+               "explanation": "The correct answer is B. Only pets. This is because the text states that some families have pets, like dogs and cats.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "How do pets behave?",
+               "options": ["A. They are very mean", "B. They are very loving and friendly", "C. They are very sad"],
+               "explanation": "The correct answer is B. They are very loving and friendly. This is because the text states that pets are very loving and friendly.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Why do family members go on holiday together?",
+               "options": ["A. They like to stay at home", "B. They like to explore new places and try new foods", "C. They like to play with their pets"],
+               "explanation": "The correct answer is B. They like to explore new places and try new foods. This is because the text states that family members like to explore new places and try new foods on holiday.",
+               "tips": "Read the text carefully to find the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching",
+         "content": [
+            "A family is a group of people who live together.",
+            "Parents love and take care of their children.",
+            "Children have brothers and sisters and play together.",
+            "Family members often go on holiday together.",
+            "Some families have pets, like dogs and cats.",
+            "Parents teach children how to read, write, and do math."
+         ],
+         "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+         "questions": [
+            {
+               "question": "Which text states that parents teach children how to read, write, and do math?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is F. Parents teach children how to read, write, and do math.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "Which text states that family members often go on holiday together?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is D. Family members often go on holiday together.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Which text states that some families have pets, like dogs and cats?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is E. Some families have pets, like dogs and cats.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "Which text states that parents love and take care of their children?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is B. Parents love and take care of their children.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Which text states that children have brothers and sisters and play together?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is C. Children have brothers and sisters and play together.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "Which text states that a family is a group of people who live together?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is A. A family is a group of people who live together.",
+               "tips": "Read the text carefully to find the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "content": [
+            "Welcome to our family!",
+            "Please take your seat.",
+            "Children must be accompanied by an adult.",
+            "No smoking allowed.",
+            "Please do not touch the plants.",
+            "Thank you for visiting."
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the sign say?",
+               "options": ["A. Welcome to our home", "B. Welcome to our family", "C. Please take your seat"],
+               "explanation": "The correct answer is B. Welcome to our family. This is because the text states 'Welcome to our family!'",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What does the sign say?",
+               "options": ["A. No smoking allowed", "B. Please take your seat", "C. Thank you for visiting"],
+               "explanation": "The correct answer is A. No smoking allowed. This is because the text states 'No smoking allowed.'",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "What does the sign say?",
+               "options": ["A. Children must be accompanied by an adult", "B. Please do not touch the plants", "C. No pets allowed"],
+               "explanation": "The correct answer is A. Children must be accompanied by an adult. This is because the text states 'Children must be accompanied by an adult.'",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What does the sign say?",
+               "options": ["A. No pets allowed", "B. Please do not touch the plants", "C. Thank you for visiting"],
+               "explanation": "The correct answer is B. Please do not touch the plants. This is because the text states 'Please do not touch the plants.'",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "What does the sign say?",
+               "options": ["A. Welcome to our home", "B. Please take your seat", "C. Thank you for visiting"],
+               "explanation": "The correct answer is C. Thank you for visiting. This is because the text states 'Thank you for visiting.'",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "What does the sign say?",
+               "options": ["A. No pets allowed", "B. No smoking allowed", "C. Please do not touch the plants"],
+               "explanation": "The correct answer is B. No smoking allowed. This is because the text states 'No smoking allowed.'",
+               "tips": "Look for specific details in the text to help you answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "In many families, children are very important. Parents (1) __________ (love) and take care of them. They teach them how to read, write, and do math. Children also have brothers and sisters. They (2) __________ (play) together and help each other. Family members often go on holiday together. They (3) __________ (like) to explore new places and try new foods. Some families have pets, like dogs and cats. These pets (4) __________ (be) very loving and friendly.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. love", "B. hate", "C. take care of"],
+               "explanation": "The correct answer is A. love. This is because the text states that parents love and take care of their children.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. play", "B. help", "C. work"],
+               "explanation": "The correct answer is A. play. This is because the text states that children play with their brothers and sisters.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. like", "B. don't like", "C. want to"],
+               "explanation": "The correct answer is B. don't like. This is because the text states that family members like to explore new places and try new foods.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. are", "B. be", "C. were"],
+               "explanation": "The correct answer is B. be. This is because the text states that pets are very loving and friendly.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "In many families, children are very (1) __________. Parents (2) __________ (love) and take care of them. They (3) __________ (teach) them how to read, write, and do math. Children also (4) __________ (play) together and (5) __________ (help) each other. Family members (6) __________ (go) on holiday together.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "important",
+               "options": [],
+               "explanation": "The correct answer is important. This is because the text states that children are very important.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "love",
+               "options": [],
+               "explanation": "The correct answer is love. This is because the text states that parents love and take care of their children.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "teach",
+               "options": [],
+               "explanation": "The correct answer is teach. This is because the text states that parents teach children how to read, write, and do math.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "play",
+               "options": [],
+               "explanation": "The correct answer is play. This is because the text states that children play with their brothers and sisters.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "help",
+               "options": [],
+               "explanation": "The correct answer is help. This is because the text states that children help each other.",
+               "tips": "Read the text carefully to find the correct answer."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "go",
+               "options": [],
+               "explanation": "The correct answer is go. This is because the text states that family members go on holiday together.",
+               "tips": "Look for specific details in the text to help you answer the question."
+            }
+         ]
+      }
+   ]
+}

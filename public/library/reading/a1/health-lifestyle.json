@@ -1,0 +1,390 @@
+{
+  "examTitle": "CEFR A1 Mock Exam: Health & Lifestyle",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Health",
+         "content": "The World Health Organisation (WHO) is an international health agency. It is a specialised agency of the United Nations. Its main goal is to ensure that every human being has the right to the highest possible level of health. The organisation aims to promote health, keep the world safe, and serve the vulnerable population. WHO is working to combat diseases, promote health through the appropriate use of medications, and strengthen the health systems. The WHO was founded in 1948. It has its headquarters in Geneva, Switzerland. WHO works to make the world a healthier and more peaceful place.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the main goal of the World Health Organisation?",
+               "options": [
+                  "A. To keep the world safe",
+                  "B. To promote health",
+                  "C. To serve the vulnerable population"
+               ],
+               "correctOption": "B. To promote health",
+               "explanation": "The correct answer is B. To promote health, because the organisation aims to promote health, as stated in the first paragraph. Option A is incorrect because, although WHO does work to keep the world safe, it is not its main goal. Option C is also incorrect because although WHO does serve the vulnerable population, it is not its main goal.",
+               "tips": "Read the text carefully and pay attention to the main goal of the World Health Organisation."
+            },
+            {
+               "question": "Where is the World Health Organisation's headquarters located?",
+               "options": [
+                  "A. London, UK",
+                  "B. Geneva, Switzerland",
+                  "C. New York, USA"
+               ],
+               "correctOption": "B. Geneva, Switzerland",
+               "explanation": "The correct answer is B. Geneva, Switzerland, because it is stated in the first paragraph that WHO has its headquarters in Geneva, Switzerland. Option A is incorrect because WHO's headquarters is not located in London, UK. Option C is also incorrect because WHO's headquarters is not located in New York, USA.",
+               "tips": "Read the text carefully and pay attention to the location of WHO's headquarters."
+            },
+            {
+               "question": "What year was the World Health Organisation founded?",
+               "options": [
+                  "A. 1945",
+                  "B. 1948",
+                  "C. 1950"
+               ],
+               "correctOption": "B. 1948",
+               "explanation": "The correct answer is B. 1948, because it is stated in the second paragraph that WHO was founded in 1948. Option A is incorrect because WHO was not founded in 1945. Option C is also incorrect because WHO was not founded in 1950.",
+               "tips": "Read the text carefully and pay attention to the year WHO was founded."
+            },
+            {
+               "question": "What is one of the ways WHO works to combat diseases?",
+               "options": [
+                  "A. By promoting health through the appropriate use of medications",
+                  "B. By strengthening the health systems",
+                  "C. By making the world a healthier and more peaceful place"
+               ],
+               "correctOption": "A. By promoting health through the appropriate use of medications",
+               "explanation": "The correct answer is A. By promoting health through the appropriate use of medications, because it is stated in the second paragraph that WHO works to combat diseases, promote health through the appropriate use of medications, and strengthen the health systems. Option B is incorrect because, although WHO does work to strengthen the health systems, it is not one of the ways WHO works to combat diseases. Option C is also incorrect because, although WHO does work to make the world a healthier and more peaceful place, it is not one of the ways WHO works to combat diseases.",
+               "tips": "Read the text carefully and pay attention to the ways WHO works to combat diseases."
+            },
+            {
+               "question": "What is the name of the international health agency mentioned in the text?",
+               "options": [
+                  "A. World Health Organisation",
+                  "B. United Nations",
+                  "C. World Bank"
+               ],
+               "correctOption": "A. World Health Organisation",
+               "explanation": "The correct answer is A. World Health Organisation, because it is stated in the first paragraph that the World Health Organisation is an international health agency. Option B is incorrect because, although the United Nations is mentioned in the text, it is not an international health agency. Option C is also incorrect because the World Bank is not mentioned in the text.",
+               "tips": "Read the text carefully and pay attention to the name of the international health agency mentioned."
+            },
+            {
+               "question": "Where is WHO's headquarters located in relation to the city where the United Nations is based?",
+               "options": [
+                  "A. In the same city",
+                  "B. In a different city",
+                  "C. In a different country"
+               ],
+               "correctOption": "A. In the same city",
+               "explanation": "The correct answer is A. In the same city, because it is stated in the first paragraph that WHO's headquarters is located in Geneva, Switzerland, and the United Nations is based in New York, USA. However, Geneva and New York are in different cities, but in the same country is not correct. The correct answer is Geneva and New York are in the same region, but they are in different cities, so option A is not correct. Option B is incorrect because, although Geneva and New York are not in the same city, they are in the same region. Option C is also incorrect because, although Geneva and New York are in different cities, they are in the same country.",
+               "tips": "Read the text carefully and pay attention to the location of WHO's headquarters in relation to the city where the United Nations is based."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching on Health",
+         "content": [
+            "The World Health Organisation is based in Geneva, Switzerland.",
+            "The WHO's main goal is to promote health and keep the world safe.",
+            "The WHO is an international health agency.",
+            "The WHO was founded in 1945.",
+            "The WHO works to combat diseases and strengthen the health systems.",
+            "The WHO has its headquarters in New York, USA."
+         ],
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "questions": [
+            {
+               "question": "Which text states that the World Health Organisation is based in Geneva, Switzerland?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A, because it is stated in the first paragraph that the World Health Organisation is based in Geneva, Switzerland. Option B is incorrect because the second paragraph does not mention the location of WHO's headquarters. Option C is also incorrect because the third paragraph does not mention the location of WHO's headquarters. Option D is incorrect because the fourth paragraph does not mention the location of WHO's headquarters. Option E is incorrect because the fifth paragraph does not mention the location of WHO's headquarters. Option F is incorrect because the sixth paragraph does not mention the location of WHO's headquarters. Option G is incorrect because the description does not match any of the paragraphs. Option H is incorrect because the description does not match any of the paragraphs.",
+               "tips": "Read the text carefully and pay attention to the descriptions."
+            },
+            {
+               "question": "Which text states that the WHO's main goal is to promote health and keep the world safe?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B, because it is stated in the first paragraph that the WHO's main goal is to promote health and keep the world safe. Option A is incorrect because the first paragraph does not mention the main goal of WHO. Option C is also incorrect because the third paragraph does not mention the main goal of WHO. Option D is incorrect because the fourth paragraph does not mention the main goal of WHO. Option E is incorrect because the fifth paragraph does not mention the main goal of WHO. Option F is incorrect because the sixth paragraph does not mention the main goal of WHO. Option G is incorrect because the description does not match any of the paragraphs. Option H is incorrect because the description does not match any of the paragraphs.",
+               "tips": "Read the text carefully and pay attention to the descriptions."
+            },
+            {
+               "question": "Which text states that the WHO is an international health agency?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C, because it is stated in the third paragraph that the WHO is an international health agency. Option A is incorrect because the first paragraph does not mention that WHO is an international health agency. Option B is also incorrect because the second paragraph does not mention that WHO is an international health agency. Option D is incorrect because the fourth paragraph does not mention that WHO is an international health agency. Option E is incorrect because the fifth paragraph does not mention that WHO is an international health agency. Option F is incorrect because the sixth paragraph does not mention that WHO is an international health agency. Option G is incorrect because the description does not match any of the paragraphs. Option H is incorrect because the description does not match any of the paragraphs.",
+               "tips": "Read the text carefully and pay attention to the descriptions."
+            },
+            {
+               "question": "Which text states that the WHO was founded in 1945?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D, because it is stated in the fourth paragraph that the WHO was founded in 1945. Option A is incorrect because the first paragraph does not mention the year WHO was founded. Option B is also incorrect because the second paragraph does not mention the year WHO was founded. Option C is incorrect because the third paragraph does not mention the year WHO was founded. Option E is incorrect because the fifth paragraph does not mention the year WHO was founded. Option F is incorrect because the sixth paragraph does not mention the year WHO was founded. Option G is incorrect because the description does not match any of the paragraphs. Option H is incorrect because the description does not match any of the paragraphs.",
+               "tips": "Read the text carefully and pay attention to the descriptions."
+            },
+            {
+               "question": "Which text states that the WHO works to combat diseases and strengthen the health systems?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption": "E",
+               "explanation": "The correct answer is E, because it is stated in the fifth paragraph that the WHO works to combat diseases and strengthen the health systems. Option A is incorrect because the first paragraph does not mention the ways WHO works to combat diseases. Option B is also incorrect because the second paragraph does not mention the ways WHO works to combat diseases. Option C is incorrect because the third paragraph does not mention the ways WHO works to combat diseases. Option D is incorrect because the fourth paragraph does not mention the ways WHO works to combat diseases. Option F is incorrect because the sixth paragraph does not mention the ways WHO works to combat diseases. Option G is incorrect because the description does not match any of the paragraphs. Option H is incorrect because the description does not match any of the paragraphs.",
+               "tips": "Read the text carefully and pay attention to the descriptions."
+            },
+            {
+               "question": "Which text states that the WHO has its headquarters in New York, USA?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption": "H",
+               "explanation": "The correct answer is H, because it is stated in the sixth paragraph that the WHO has its headquarters in New York, USA. Option A is incorrect because the first paragraph does not mention the location of WHO's headquarters. Option B is also incorrect because the second paragraph does not mention the location of WHO's headquarters. Option C is incorrect because the third paragraph does not mention the location of WHO's headquarters. Option D is incorrect because the fourth paragraph does not mention the location of WHO's headquarters. Option E is incorrect because the fifth paragraph does not mention the location of WHO's headquarters. Option F is incorrect because the description does not match any of the paragraphs.",
+               "tips": "Read the text carefully and pay attention to the descriptions."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs on Health",
+         "content": [
+            "Smoking is bad for your health.",
+            "The doctor will see you now.",
+            "Please wash your hands.",
+            "The hospital is closed today.",
+            "The pharmacy is open.",
+            "Please do not eat the yellow fruit."
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the first sign mean?",
+               "options": [
+                  "A. The doctor is available now",
+                  "B. Smoking is good for your health",
+                  "C. Smoking is bad for your health"
+               ],
+               "correctOption": "C. Smoking is bad for your health",
+               "explanation": "The correct answer is C. Smoking is bad for your health, because it is stated in the first sign that smoking is bad for your health. Option A is incorrect because the first sign does not mention that the doctor is available now. Option B is also incorrect because the first sign does not mention that smoking is good for your health.",
+               "tips": "Read the sign carefully and pay attention to the message."
+            },
+            {
+               "question": "What does the second sign mean?",
+               "options": [
+                  "A. The doctor will see you in five minutes",
+                  "B. The doctor will see you now",
+                  "C. The doctor is not available"
+               ],
+               "correctOption": "B. The doctor will see you now",
+               "explanation": "The correct answer is B. The doctor will see you now, because it is stated in the second sign that the doctor will see you now. Option A is incorrect because the second sign does not mention that the doctor will see you in five minutes. Option C is also incorrect because the second sign does not mention that the doctor is not available.",
+               "tips": "Read the sign carefully and pay attention to the message."
+            },
+            {
+               "question": "What does the third sign mean?",
+               "options": [
+                  "A. Please do not wash your hands",
+                  "B. Please wash your hands",
+                  "C. Please do not eat the yellow fruit"
+               ],
+               "correctOption": "B. Please wash your hands",
+               "explanation": "The correct answer is B. Please wash your hands, because it is stated in the third sign that you should wash your hands. Option A is incorrect because the third sign does not mention that you should not wash your hands. Option C is also incorrect because the third sign does not mention the yellow fruit.",
+               "tips": "Read the sign carefully and pay attention to the message."
+            },
+            {
+               "question": "What does the fourth sign mean?",
+               "options": [
+                  "A. The hospital is open today",
+                  "B. The hospital is closed today",
+                  "C. The pharmacy is open"
+               ],
+               "correctOption": "B. The hospital is closed today",
+               "explanation": "The correct answer is B. The hospital is closed today, because it is stated in the fourth sign that the hospital is closed today. Option A is incorrect because the fourth sign does not mention that the hospital is open today. Option C is also incorrect because the fourth sign does not mention the pharmacy.",
+               "tips": "Read the sign carefully and pay attention to the message."
+            },
+            {
+               "question": "What does the fifth sign mean?",
+               "options": [
+                  "A. The pharmacy is closed",
+                  "B. The pharmacy is open",
+                  "C. The hospital is closed today"
+               ],
+               "correctOption": "B. The pharmacy is open",
+               "explanation": "The correct answer is B. The pharmacy is open, because it is stated in the fifth sign that the pharmacy is open. Option A is incorrect because the fifth sign does not mention that the pharmacy is closed. Option C is also incorrect because the fifth sign does not mention the hospital.",
+               "tips": "Read the sign carefully and pay attention to the message."
+            },
+            {
+               "question": "What does the sixth sign mean?",
+               "options": [
+                  "A. The yellow fruit is healthy",
+                  "B. The yellow fruit is not healthy",
+                  "C. Please do not eat the yellow fruit"
+               ],
+               "correctOption": "C. Please do not eat the yellow fruit",
+               "explanation": "The correct answer is C. Please do not eat the yellow fruit, because it is stated in the sixth sign that you should not eat the yellow fruit. Option A is incorrect because the sixth sign does not mention that the yellow fruit is healthy. Option B is also incorrect because the sixth sign does not mention that the yellow fruit is not healthy.",
+               "tips": "Read the sign carefully and pay attention to the message."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill on Health",
+         "content": "The World Health Organisation (1) _______ in 1948 to promote health and keep the world safe. The WHO is an international (2) _______ that works to combat diseases and strengthen the health (3) _______. The organisation has its headquarters in Geneva, (4) _______ it is located in a different city from the United Nations. The WHO works to make the world a healthier and more peaceful (5) _______. The organisation is based in Europe, (6) _______ it is not located in the United States.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. founded",
+                  "B. established",
+                  "C. created"
+               ],
+               "correctOption": "A. founded",
+               "explanation": "The correct answer is A. founded, because it is stated in the first sentence that the World Health Organisation was founded in 1948. Option B is incorrect because the text does not mention that the WHO was established in 1948. Option C is also incorrect because the text does not mention that the WHO was created in 1948.",
+               "tips": "Read the text carefully and pay attention to the verb used to describe the founding of the WHO."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. agency",
+                  "B. organisation",
+                  "C. institution"
+               ],
+               "correctOption": "A. agency",
+               "explanation": "The correct answer is A. agency, because it is stated in the second sentence that the WHO is an international agency. Option B is incorrect because the text does not mention that the WHO is an organisation. Option C is also incorrect because the text does not mention that the WHO is an institution.",
+               "tips": "Read the text carefully and pay attention to the noun used to describe the WHO."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. systems",
+                  "B. health",
+                  "C. services"
+               ],
+               "correctOption": "B. health",
+               "explanation": "The correct answer is B. health, because it is stated in the second sentence that the WHO works to combat diseases and strengthen the health systems. Option A is incorrect because the text does not mention that the WHO works to combat diseases and strengthen the systems. Option C is also incorrect because the text does not mention that the WHO works to combat diseases and strengthen the services.",
+               "tips": "Read the text carefully and pay attention to the noun used to describe the health systems."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. although",
+                  "B. although it",
+                  "C. because"
+               ],
+               "correctOption": "B. although it",
+               "explanation": "The correct answer is B. although it, because it is stated in the third sentence that the WHO's headquarters is located in Geneva, although it is located in a different city from the United Nations. Option A is incorrect because the text does not mention that the WHO's headquarters is located in Geneva, although. Option C is also incorrect because the text does not mention that the WHO's headquarters is located in Geneva because.",
+               "tips": "Read the text carefully and pay attention to the conjunction used to connect the two clauses."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. place",
+                  "B. world",
+                  "C. country"
+               ],
+               "correctOption": "B. world",
+               "explanation": "The correct answer is B. world, because it is stated in the fourth sentence that the WHO works to make the world a healthier and more peaceful place. Option A is incorrect because the text does not mention that the WHO works to make the place a healthier and more peaceful place. Option C is also incorrect because the text does not mention that the WHO works to make the country a healthier and more peaceful place.",
+               "tips": "Read the text carefully and pay attention to the noun used to describe the place where the WHO works."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. but",
+                  "B. although",
+                  "C. because"
+               ],
+               "correctOption": "B. although",
+               "explanation": "The correct answer is B. although, because it is stated in the fifth sentence that the WHO is based in Europe, although it is not located in the United States. Option A is incorrect because the text does not mention that the WHO is based in Europe, but. Option C is also incorrect because the text does not mention that the WHO is based in Europe because.",
+               "tips": "Read the text carefully and pay attention to the conjunction used to connect the two clauses."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill on Health",
+         "content": "The World Health Organisation (1) _______ in 1948 to promote health and keep the world safe. The WHO is an international (2) _______ that works to combat diseases and strengthen the health (3) _______. The organisation has its headquarters in Geneva, (4) _______ it is located in a different city from the United Nations. The WHO works to make the world a healthier and more peaceful (5) _______. The organisation is based in Europe, (6) _______ it is not located in the United States.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "founded",
+               "explanation": "The correct answer is founded, because it is stated in the first sentence that the World Health Organisation was founded in 1948.",
+               "tips": "Read the text carefully and pay attention to the verb used to describe the founding of the WHO."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "agency",
+               "explanation": "The correct answer is agency, because it is stated in the second sentence that the WHO is an international agency.",
+               "tips": "Read the text carefully and pay attention to the noun used to describe the WHO."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "systems",
+               "explanation": "The correct answer is systems, because it is stated in the second sentence that the WHO works to combat diseases and strengthen the health systems.",
+               "tips": "Read the text carefully and pay attention to the noun used to describe the health systems."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "although",
+               "explanation": "The correct answer is although, because it is stated in the third sentence that the WHO's headquarters is located in Geneva, although it is located in a different city from the United Nations.",
+               "tips": "Read the text carefully and pay attention to the conjunction used to connect the two clauses."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "world",
+               "explanation": "The correct answer is world, because it is stated in the fourth sentence that the WHO works to make the world a healthier and more peaceful place.",
+               "tips": "Read the text carefully and pay attention to the noun used to describe the place where the WHO works."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "although",
+               "explanation": "The correct answer is although, because it is stated in the fifth sentence that the WHO is based in Europe, although it is not located in the United States.",
+               "tips": "Read the text carefully and pay attention to the conjunction used to connect the two clauses."
+            }
+         ]
+      }
+   ]
+}

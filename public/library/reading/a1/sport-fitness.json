@@ -1,0 +1,264 @@
+{
+  "examTitle": "CEFR A1 Mock Reading and Use of English: Sport & Fitness",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Fitness",
+         "content": "The gym is a place where people go to exercise. They do this to get fit and healthy. Some people go to the gym every day. They use machines and do exercises to build muscle. Others go to the gym to run on the treadmill or use the exercise bike. The gym also has a swimming pool and a sauna. People can go to the gym to relax and have fun. The gym is a great place to meet new people and make friends. The gym is open from 8am to 10pm. People can go to the gym at any time.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the gym?",
+               "options": ["A place to buy food", "A place to exercise", "A place to sleep"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'A place to exercise' because the text states that people go to the gym to exercise. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "Why do people go to the gym?",
+               "options": ["To buy food", "To exercise and get fit", "To sleep"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'To exercise and get fit' because the text states that people go to the gym to exercise and build muscle. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the reasons why people go to the gym. Then, choose the answer that best matches those reasons."
+            },
+            {
+               "question": "What can people do at the gym?",
+               "options": ["Run on the treadmill", "Use the exercise bike", "Both of the above"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'Both of the above' because the text states that people can run on the treadmill or use the exercise bike at the gym. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the activities that people can do at the gym. Then, choose the answer that best matches those activities."
+            },
+            {
+               "question": "What time is the gym open?",
+               "options": ["6am to 8pm", "8am to 10pm", "10am to 12pm"],
+               "correctOption": "B",
+               "explanation": "The correct answer is '8am to 10pm' because the text states that the gym is open from 8am to 10pm. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the time that the gym is open. Then, choose the answer that best matches that time."
+            },
+            {
+               "question": "Why is the gym a great place?",
+               "options": ["Because it is a place to buy food", "Because it is a place to exercise and meet new people", "Because it is a place to sleep"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'Because it is a place to exercise and meet new people' because the text states that the gym is a great place to meet new people and make friends. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the reasons why the gym is a great place. Then, choose the answer that best matches those reasons."
+            },
+            {
+               "question": "What can people do at the gym to relax?",
+               "options": ["Run on the treadmill", "Use the exercise bike", "Go to the swimming pool or sauna"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'Go to the swimming pool or sauna' because the text states that people can go to the gym to relax and have fun, and that the gym has a swimming pool and a sauna. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the activities that people can do at the gym to relax. Then, choose the answer that best matches those activities."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching on Fitness",
+         "content": [
+            "A. The gym is a great place to meet new people and make friends.",
+            "B. People can go to the gym to relax and have fun.",
+            "C. The gym is open from 8am to 10pm.",
+            "D. People can go to the gym to run on the treadmill or use the exercise bike.",
+            "E. The gym has a swimming pool and a sauna.",
+            "F. People go to the gym to exercise and get fit."
+         ],
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "questions": [
+            {
+               "question": "Which text states that people can go to the gym to relax and have fun?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because the text states that people can go to the gym to relax and have fun. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the text that matches the description. Then, choose the correct option."
+            },
+            {
+               "question": "Which text states that the gym is open from 8am to 10pm?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because the text states that the gym is open from 8am to 10pm. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the text that matches the description. Then, choose the correct option."
+            },
+            {
+               "question": "Which text states that people go to the gym to exercise and get fit?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'F' because the text states that people go to the gym to exercise and get fit. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the text that matches the description. Then, choose the correct option."
+            },
+            {
+               "question": "Which text states that people can go to the gym to run on the treadmill or use the exercise bike?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because the text states that people can go to the gym to run on the treadmill or use the exercise bike. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the text that matches the description. Then, choose the correct option."
+            },
+            {
+               "question": "Which text states that the gym has a swimming pool and a sauna?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'E' because the text states that the gym has a swimming pool and a sauna. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the text that matches the description. Then, choose the correct option."
+            },
+            {
+               "question": "Which text states that the gym is a great place to meet new people and make friends?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the text states that the gym is a great place to meet new people and make friends. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Look for the text that matches the description. Then, choose the correct option."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice Reading Comprehension on Fitness",
+         "content": [
+            "The gym is a great place to exercise and get fit. The gym has a swimming pool and a sauna. People can go to the gym to run on the treadmill or use the exercise bike.",
+            "The gym is open from 8am to 10pm. People can go to the gym at any time.",
+            "The gym is a place to meet new people and make friends.",
+            "The gym has a lot of equipment for exercising, such as dumbbells and exercise machines.",
+            "People can go to the gym to relax and have fun.",
+            "The gym is a great place to learn new exercises and get tips from trainers."
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the first sign say?",
+               "options": ["The gym is open from 8am to 10pm", "The gym is a great place to exercise and get fit", "The gym has a swimming pool and a sauna"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'The gym is a great place to exercise and get fit' because the text states that the gym is a great place to exercise and get fit. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "What does the second sign say?",
+               "options": ["The gym is open from 8am to 10pm", "People can go to the gym at any time", "The gym is a great place to meet new people"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'People can go to the gym at any time' because the text states that people can go to the gym at any time. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "What does the third sign say?",
+               "options": ["The gym is a great place to exercise and get fit", "The gym is a place to meet new people and make friends", "The gym has a swimming pool and a sauna"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'The gym is a place to meet new people and make friends' because the text states that the gym is a place to meet new people and make friends. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "What does the fourth sign say?",
+               "options": ["The gym has a lot of equipment for exercising", "The gym is open from 8am to 10pm", "People can go to the gym at any time"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The gym has a lot of equipment for exercising' because the text states that the gym has a lot of equipment for exercising. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "What does the fifth sign say?",
+               "options": ["People can go to the gym to relax and have fun", "The gym is a great place to learn new exercises", "The gym is open from 8am to 10pm"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'People can go to the gym to relax and have fun' because the text states that people can go to the gym to relax and have fun. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "What does the sixth sign say?",
+               "options": ["The gym is a great place to learn new exercises", "The gym has a lot of equipment for exercising", "The gym is open from 8am to 10pm"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The gym is a great place to learn new exercises' because the text states that the gym is a great place to learn new exercises. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Cloze on Fitness",
+         "content": "The gym is a great place to exercise and get fit. The gym has a swimming pool and a sauna. (1) ____________ can go to the gym to run on the treadmill or use the exercise bike. The gym is open from 8am to 10pm. People can go to the gym at any time. The gym is a place to meet new people and make friends. (2) ____________ can go to the gym to relax and have fun.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A anyone", "B people", "C everyone"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'people' because the text states that people can go to the gym to run on the treadmill or use the exercise bike. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A everyone", "B anyone", "C people"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'people' because the text states that people can go to the gym to relax and have fun. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A The gym is open from 8am to 10pm", "B The gym has a swimming pool and a sauna", "C People can go to the gym at any time"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'People can go to the gym at any time' because the text states that people can go to the gym at any time. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A The gym is a place to meet new people and make friends", "B The gym has a lot of equipment for exercising", "C People can go to the gym to relax and have fun"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The gym is a place to meet new people and make friends' because the text states that the gym is a place to meet new people and make friends. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A The gym has a swimming pool and a sauna", "B The gym is open from 8am to 10pm", "C People can go to the gym at any time"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The gym has a swimming pool and a sauna' because the text states that the gym has a swimming pool and a sauna. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A The gym is a great place to exercise and get fit", "B People can go to the gym to relax and have fun", "C The gym is open from 8am to 10pm"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The gym is a great place to exercise and get fit' because the text states that the gym is a great place to exercise and get fit. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, choose the answer that best matches the idea."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Cloze on Fitness",
+         "content": "The gym is a great place to exercise and get fit. The gym has a swimming pool and a sauna. (1) ____________ can go to the gym to run on the treadmill or use the exercise bike. The gym is open from 8am to 10pm. (2) ____________ can go to the gym at any time. The gym is a place to meet new people and make friends. (3) ____________ can go to the gym to relax and have fun.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "people",
+               "options": [],
+               "explanation": "The correct answer is 'people' because the text states that people can go to the gym to run on the treadmill or use the exercise bike. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, write the word that best matches the idea."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "people",
+               "options": [],
+               "explanation": "The correct answer is 'people' because the text states that people can go to the gym at any time. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, write the word that best matches the idea."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "people",
+               "options": [],
+               "explanation": "The correct answer is 'people' because the text states that people can go to the gym to relax and have fun. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, write the word that best matches the idea."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "everyone",
+               "options": [],
+               "explanation": "The correct answer is 'everyone' because the text states that everyone can go to the gym to meet new people and make friends. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, write the word that best matches the idea."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "anyone",
+               "options": [],
+               "explanation": "The correct answer is 'anyone' because the text states that anyone can go to the gym to relax and have fun. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, write the word that best matches the idea."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "people",
+               "options": [],
+               "explanation": "The correct answer is 'people' because the text states that people can go to the gym to exercise and get fit. The other options are incorrect because they do not match the information in the text.",
+               "tips": "Read the text carefully and look for the main idea. Then, write the word that best matches the idea."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,363 @@
+{
+  "examTitle": "Education & Learning A1 Exam",
+   "parts": [
+       {
+           "title": "Part 1: Multiple-Choice Reading Comprehension on School Life",
+           "content": "I go to school every day. My school is very big and has many classrooms. I have a lot of friends in my class. We learn many subjects like English, maths, and science. Our teacher is very kind and helps us with our work. We have a big playground where we play football and basketball during breaks. I like going to school because I learn new things every day and I see my friends.",
+           "instructions": "Read the text. Choose the correct answer A, B or C.",
+           "questions": [
+               {
+                   "question": "What does the writer do every day?",
+                   "options": [
+                       "A. Go to the park",
+                       "B. Go to school",
+                       "C. Watch TV"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The writer mentions that they go to school every day. This is the correct answer because it is stated directly in the text. The other options are incorrect because they are not mentioned in the text. Tip: Read the text carefully and look for the main action the writer does every day."
+               },
+               {
+                   "question": "What is the writer's school like?",
+                   "options": [
+                       "A. Small",
+                       "B. Big",
+                       "C. Old"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The writer describes their school as very big. This is the correct answer because it is stated directly in the text. The other options are incorrect because they do not match the description in the text. Tip: Pay attention to the adjectives used to describe the school."
+               },
+               {
+                   "question": "What subjects do the writer and their friends learn?",
+                   "options": [
+                       "A. Only English",
+                       "B. Only maths",
+                       "C. English, maths, and science"
+                   ],
+                   "correctOption": "C",
+                   "explanation": "The writer mentions that they learn many subjects, including English, maths, and science. This is the correct answer because it is stated directly in the text. The other options are incorrect because they do not include all the subjects mentioned. Tip: Read the text carefully and look for the list of subjects."
+               },
+               {
+                   "question": "What is the writer's teacher like?",
+                   "options": [
+                       "A. Strict",
+                       "B. Kind",
+                       "C. Absent"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The writer describes their teacher as very kind. This is the correct answer because it is stated directly in the text. The other options are incorrect because they do not match the description in the text. Tip: Pay attention to the adjectives used to describe the teacher."
+               },
+               {
+                   "question": "What do the writer and their friends do during breaks?",
+                   "options": [
+                       "A. They sleep",
+                       "B. They play football and basketball",
+                       "C. They watch TV"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The writer mentions that they play football and basketball during breaks. This is the correct answer because it is stated directly in the text. The other options are incorrect because they are not mentioned in the text. Tip: Read the text carefully and look for the activities mentioned."
+               },
+               {
+                   "question": "Why does the writer like going to school?",
+                   "options": [
+                       "A. Because they can sleep",
+                       "B. Because they can watch TV",
+                       "C. Because they learn new things and see their friends"
+                   ],
+                   "correctOption": "C",
+                   "explanation": "The writer likes going to school because they learn new things every day and they see their friends. This is the correct answer because it is stated directly in the text. The other options are incorrect because they do not match the reasons mentioned. Tip: Read the text carefully and look for the reasons why the writer likes school."
+               }
+           ]
+       },
+       {
+           "title": "Part 2: Matching on School Facilities",
+           "content": "The school has a library where students can borrow books. The school also has a cafeteria where students can eat lunch. The school has a gym where students can play sports. The school has a playground where students can play during breaks. The school has a computer room where students can use computers. The school has a music room where students can learn music.",
+           "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+           "options": [
+               "A",
+               "B",
+               "C",
+               "D",
+               "E",
+               "F",
+               "G",
+               "H"
+           ],
+           "questions": [
+               {
+                   "question": "Which room is used for eating lunch?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The cafeteria is the room where students can eat lunch. This is the correct answer because it is the only option that matches the description. Tip: Read the text carefully and look for the room where students eat lunch."
+               },
+               {
+                   "question": "Which room is used for playing sports?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "C",
+                   "explanation": "The gym is the room where students can play sports. This is the correct answer because it is the only option that matches the description. Tip: Read the text carefully and look for the room where students play sports."
+               },
+               {
+                   "question": "Which area is used for playing during breaks?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "D",
+                   "explanation": "The playground is the area where students can play during breaks. This is the correct answer because it is the only option that matches the description. Tip: Read the text carefully and look for the area where students play during breaks."
+               },
+               {
+                   "question": "Which room is used for using computers?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "E",
+                   "explanation": "The computer room is the room where students can use computers. This is the correct answer because it is the only option that matches the description. Tip: Read the text carefully and look for the room where students use computers."
+               },
+               {
+                   "question": "Which room is used for learning music?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "F",
+                   "explanation": "The music room is the room where students can learn music. This is the correct answer because it is the only option that matches the description. Tip: Read the text carefully and look for the room where students learn music."
+               },
+               {
+                   "question": "Which room is used for borrowing books?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The library is the room where students can borrow books. This is the correct answer because it is the only option that matches the description. Tip: Read the text carefully and look for the room where students borrow books."
+               }
+           ]
+       },
+       {
+           "title": "Part 3: Multiple-Choice for Short Texts on School Signs",
+           "content": [
+               "The school is closed on Sundays.",
+               "The library is open from 8am to 5pm.",
+               "The cafeteria serves lunch from 12pm to 1pm.",
+               "The gym is available for use after school.",
+               "The playground is closed during heavy rain.",
+               "The computer room is open from 9am to 4pm."
+           ],
+           "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+           "questions": [
+               {
+                   "question": "What day is the school closed?",
+                   "options": [
+                       "A. Monday",
+                       "B. Sunday",
+                       "C. Saturday"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The school is closed on Sundays. This is the correct answer because it is stated directly in the text. Tip: Read the text carefully and look for the day the school is closed."
+               },
+               {
+                   "question": "What are the library's opening hours?",
+                   "options": [
+                       "A. 8am to 4pm",
+                       "B. 8am to 5pm",
+                       "C. 9am to 3pm"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The library is open from 8am to 5pm. This is the correct answer because it is stated directly in the text. Tip: Read the text carefully and look for the library's opening hours."
+               },
+               {
+                   "question": "What time does the cafeteria serve lunch?",
+                   "options": [
+                       "A. 11am to 12pm",
+                       "B. 12pm to 1pm",
+                       "C. 1pm to 2pm"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The cafeteria serves lunch from 12pm to 1pm. This is the correct answer because it is stated directly in the text. Tip: Read the text carefully and look for the time the cafeteria serves lunch."
+               },
+               {
+                   "question": "When is the gym available for use?",
+                   "options": [
+                       "A. Before school",
+                       "B. After school",
+                       "C. During breaks"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The gym is available for use after school. This is the correct answer because it is stated directly in the text. Tip: Read the text carefully and look for the time the gym is available."
+               },
+               {
+                   "question": "Why is the playground closed?",
+                   "options": [
+                       "A. During light rain",
+                       "B. During heavy rain",
+                       "C. During sunshine"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The playground is closed during heavy rain. This is the correct answer because it is stated directly in the text. Tip: Read the text carefully and look for the reason the playground is closed."
+               },
+               {
+                   "question": "What are the computer room's opening hours?",
+                   "options": [
+                       "A. 8am to 4pm",
+                       "B. 9am to 4pm",
+                       "C. 9am to 5pm"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The computer room is open from 9am to 4pm. This is the correct answer because it is stated directly in the text. Tip: Read the text carefully and look for the computer room's opening hours."
+               }
+           ]
+       },
+       {
+           "title": "Part 4: Multiple-Choice Gap-Fill on Student Life",
+           "content": "I (1) _______ to school every day. My school is very big and has many (2) _______. I have a lot of (3) _______ in my class. We learn many (4) _______ like English, maths, and science. Our teacher is very (5) _______ and helps us with our work. We have a big (6) _______ where we play football and basketball during breaks.",
+           "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+           "questions": [
+               {
+                   "question": "Gap 1",
+                   "options": [
+                       "A. Go",
+                       "B. Goes",
+                       "C. Going"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is 'go' because it is the correct verb to use in this context. The subject 'I' is singular, so the verb 'go' is the correct choice. Tip: Read the text carefully and look for the correct verb to use in the gap."
+               },
+               {
+                   "question": "Gap 2",
+                   "options": [
+                       "A. Classrooms",
+                       "B. Teachers",
+                       "C. Students"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is 'classrooms' because it is the most logical choice in this context. The text mentions that the school is very big and has many classrooms. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               },
+               {
+                   "question": "Gap 3",
+                   "options": [
+                       "A. Friends",
+                       "B. Teachers",
+                       "C. Parents"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is 'friends' because it is the most logical choice in this context. The text mentions that the writer has a lot of friends in their class. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               },
+               {
+                   "question": "Gap 4",
+                   "options": [
+                       "A. Subjects",
+                       "B. Teachers",
+                       "C. Classes"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is 'subjects' because it is the most logical choice in this context. The text mentions that the writer learns many subjects like English, maths, and science. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               },
+               {
+                   "question": "Gap 5",
+                   "options": [
+                       "A. Kind",
+                       "B. Strict",
+                       "C. Happy"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is 'kind' because it is the most logical choice in this context. The text mentions that the teacher is very kind and helps the students with their work. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               },
+               {
+                   "question": "Gap 6",
+                   "options": [
+                       "A. Playground",
+                       "B. Gym",
+                       "C. Classroom"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is 'playground' because it is the most logical choice in this context. The text mentions that the writer has a big playground where they play football and basketball during breaks. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               }
+           ]
+       },
+       {
+           "title": "Part 5: Open Gap-Fill on School Routine",
+           "content": "I (1) _______ to school at 8am. My first (2) _______ is English. I (3) _______ my homework every day. My favourite (4) _______ is physical education. I (5) _______ lunch in the cafeteria. I (6) _______ home at 3pm.",
+           "instructions": "Read the text. Write ONE word for each gap.",
+           "questions": [
+               {
+                   "question": "Gap 1",
+                   "options": [],
+                   "correctOption": "go",
+                   "explanation": "The correct answer is 'go' because it is the correct verb to use in this context. The subject 'I' is singular, so the verb 'go' is the correct choice. Tip: Read the text carefully and look for the correct verb to use in the gap."
+               },
+               {
+                   "question": "Gap 2",
+                   "options": [],
+                   "correctOption": "class",
+                   "explanation": "The correct answer is 'class' because it is the most logical choice in this context. The text mentions that the writer's first class is English. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               },
+               {
+                   "question": "Gap 3",
+                   "options": [],
+                   "correctOption": "do",
+                   "explanation": "The correct answer is 'do' because it is the correct verb to use in this context. The subject 'I' is singular, so the verb 'do' is the correct choice. Tip: Read the text carefully and look for the correct verb to use in the gap."
+               },
+               {
+                   "question": "Gap 4",
+                   "options": [],
+                   "correctOption": "subject",
+                   "explanation": "The correct answer is 'subject' because it is the most logical choice in this context. The text mentions that the writer's favourite subject is physical education. Tip: Read the text carefully and look for the most logical choice to fill the gap."
+               },
+               {
+                   "question": "Gap 5",
+                   "options": [],
+                   "correctOption": "have",
+                   "explanation": "The correct answer is 'have' because it is the correct verb to use in this context. The subject 'I' is singular, so the verb 'have' is the correct choice. Tip: Read the text carefully and look for the correct verb to use in the gap."
+               },
+               {
+                   "question": "Gap 6",
+                   "options": [],
+                   "correctOption": "go",
+                   "explanation": "The correct answer is 'go' because it is the correct verb to use in this context. The subject 'I' is singular, so the verb 'go' is the correct choice. Tip: Read the text carefully and look for the correct verb to use in the gap."
+               }
+           ]
+       }
+   ]
+}

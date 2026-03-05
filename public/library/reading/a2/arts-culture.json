@@ -1,0 +1,243 @@
+{
+  "examTitle": "Arts & Culture CEFR A2 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Museum Visits",
+         "content": "The museum was very busy when we visited. We had to wait for 30 minutes to get in. The museum had four floors. Each floor had many things to see. There were paintings, sculptures, and even old cars. The museum had a big cafe where we could buy food and drinks. We saw a lot of interesting things, but we wanted to see more. We decided to come back another day. This time, we wanted to see the new exhibition.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why was the museum very busy?",
+               "options": ["Because it was a holiday.", "Because it was a weekend.", "Because many people wanted to visit."],
+               "explanation": "The answer is 'Because many people wanted to visit.' This is because the text states that the museum had to wait for 30 minutes to get in, implying that there were a lot of visitors.",
+               "correctOption": "C"
+            },
+            {
+               "question": "How many floors did the museum have?",
+               "options": ["One", "Three", "Four"],
+               "explanation": "The answer is 'Four'. This is because the text explicitly states that the museum had four floors.",
+               "correctOption": "C"
+            },
+            {
+               "question": "What did we buy at the cafe?",
+               "options": ["Souvenirs", "Food and drinks", "Tickets"],
+               "explanation": "The answer is 'Food and drinks'. This is because the text states that we could buy food and drinks at the cafe.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What did we want to see more of?",
+               "options": ["The paintings", "The sculptures", "Everything"],
+               "explanation": "The answer is 'Everything'. This is because the text states that we wanted to see more, implying that we wanted to see everything that the museum had to offer.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Why did we decide to come back another day?",
+               "options": ["Because we wanted to buy souvenirs.", "Because we wanted to see the new exhibition.", "Because we wanted to see the old cars."],
+               "explanation": "The answer is 'Because we wanted to see the new exhibition.' This is because the text states that we decided to come back another day to see the new exhibition.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What did we see at the museum?",
+               "options": ["Only paintings and sculptures.", "Only old cars.", "Many things, including paintings, sculptures, and old cars."],
+               "explanation": "The answer is 'Many things, including paintings, sculptures, and old cars.' This is because the text states that we saw a lot of interesting things, including paintings, sculptures, and old cars.",
+               "correctOption": "C"
+            }
+         ],
+         "tips": "When reading the text, pay close attention to the details. Use context clues to help you answer the questions."
+      },
+      {
+         "title": "Part 2: Matching Museum Visitors",
+         "content": {
+            "A": "A family with two children",
+            "B": "A couple on a date",
+            "C": "A group of school students",
+            "D": "A young woman with a camera"
+         },
+         "instructions": "Read the descriptions of the people. Choose the best option (A-D) for each person.",
+         "questions": [
+            {
+               "question": "What type of group is option A?",
+               "options": ["A family with two children", "A couple on a date", "A group of school students", "A young woman with a camera"],
+               "explanation": "The answer is 'A family with two children'. This is because option A describes a family with two children.",
+               "correctOption": "A"
+            },
+            {
+               "question": "What type of group is option B?",
+               "options": ["A family with two children", "A couple on a date", "A group of school students", "A young woman with a camera"],
+               "explanation": "The answer is 'A couple on a date'. This is because option B describes a couple on a date.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What type of group is option C?",
+               "options": ["A family with two children", "A couple on a date", "A group of school students", "A young woman with a camera"],
+               "explanation": "The answer is 'A group of school students'. This is because option C describes a group of school students.",
+               "correctOption": "C"
+            },
+            {
+               "question": "What type of person is option D?",
+               "options": ["A family with two children", "A couple on a date", "A group of school students", "A young woman with a camera"],
+               "explanation": "The answer is 'A young woman with a camera'. This is because option D describes a young woman with a camera.",
+               "correctOption": "D"
+            },
+            {
+               "question": "What type of group is option A?",
+               "options": ["A couple on a date", "A group of school students", "A young woman with a camera", "A family with two children"],
+               "explanation": "The answer is 'A family with two children'. This is because option A describes a family with two children.",
+               "correctOption": "A"
+            },
+            {
+               "question": "What type of group is option B?",
+               "options": ["A group of school students", "A young woman with a camera", "A family with two children", "A couple on a date"],
+               "explanation": "The answer is 'A couple on a date'. This is because option B describes a couple on a date.",
+               "correctOption": "B"
+            }
+         ],
+         "tips": "When reading the descriptions, look for key words and phrases that can help you identify the person or group."
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "content": [
+            "The museum is open from 10am to 5pm.",
+            "Please do not touch the exhibits.",
+            "The cafe serves coffee, tea, and sandwiches.",
+            "The museum is closed on Mondays.",
+            "Please wear a mask when you visit.",
+            "The ticket price is 10 euros for adults and 5 euros for children."
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "When is the museum open?",
+               "options": ["From 9am to 6pm", "From 10am to 5pm", "From 11am to 4pm"],
+               "explanation": "The answer is 'From 10am to 5pm'. This is because the text states that the museum is open from 10am to 5pm.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What should you not do at the museum?",
+               "options": ["Take photos", "Touch the exhibits", "Talk to the staff"],
+               "explanation": "The answer is 'Touch the exhibits'. This is because the text states that you should not touch the exhibits.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What does the cafe serve?",
+               "options": ["Only coffee and tea", "Only sandwiches", "Coffee, tea, and sandwiches"],
+               "explanation": "The answer is 'Coffee, tea, and sandwiches'. This is because the text states that the cafe serves coffee, tea, and sandwiches.",
+               "correctOption": "C"
+            },
+            {
+               "question": "When is the museum closed?",
+               "options": ["Every day", "On Mondays", "On Tuesdays"],
+               "explanation": "The answer is 'On Mondays'. This is because the text states that the museum is closed on Mondays.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What should you wear when visiting the museum?",
+               "options": ["A hat and sunglasses", "A mask", "A suit and tie"],
+               "explanation": "The answer is 'A mask'. This is because the text states that you should wear a mask when you visit.",
+               "correctOption": "B"
+            },
+            {
+               "question": "How much does a ticket cost?",
+               "options": ["5 euros for adults and 10 euros for children", "10 euros for adults and 5 euros for children", "20 euros for adults and 10 euros for children"],
+               "explanation": "The answer is '10 euros for adults and 5 euros for children'. This is because the text states that the ticket price is 10 euros for adults and 5 euros for children.",
+               "correctOption": "B"
+            }
+         ],
+         "tips": "When reading the texts and short messages, look for key words and phrases that can help you answer the questions."
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "The museum has a (1) _______ of art from all over the world. We saw many (2) _______ paintings, including a famous one by Van Gogh. The museum is located in a (3) _______ area of the city. It's easy to (4) _______ to by public transportation. The museum is (5) _______ open from 10am to 5pm. Visitors are asked to (6) _______ their bags before entering.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["a collection", "a few", "a lot"],
+               "explanation": "The answer is 'a collection'. This is because the text states that the museum has a collection of art from all over the world.",
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 2",
+               "options": ["old", "new", "many"],
+               "explanation": "The answer is 'many'. This is because the text states that we saw many paintings, including a famous one by Van Gogh.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 3",
+               "options": ["old", "new", "central"],
+               "explanation": "The answer is 'central'. This is because the text states that the museum is located in a central area of the city.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 4",
+               "options": ["walk to", "drive to", "get to"],
+               "explanation": "The answer is 'get to'. This is because the text states that it's easy to get to the museum by public transportation.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 5",
+               "options": ["not", "only", "always"],
+               "explanation": "The answer is 'not'. This is because the text states that the museum is not open from 10am to 5pm.",
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 6",
+               "options": ["check", "lock", "take"],
+               "explanation": "The answer is 'take'. This is because the text states that visitors are asked to take their bags before entering.",
+               "correctOption": "B"
+            }
+         ],
+         "tips": "When filling in the gaps, look for words that fit grammatically and semantically in the sentence."
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "The museum is (1) _______ a famous art collection. We saw many (2) _______ paintings, including a famous one by Van Gogh. The museum is (3) _______ in a central area of the city. It's easy to (4) _______ to by public transportation. The museum is (5) _______ open from 10am to 5pm. Visitors are asked to (6) _______ their bags before entering.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "houses",
+               "explanation": "The answer is 'houses'. This is because the text states that the museum is housed in a famous art collection.",
+               "tips": "When filling in the gap, think about the context and the meaning of the sentence."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "many",
+               "explanation": "The answer is 'many'. This is because the text states that we saw many paintings, including a famous one by Van Gogh.",
+               "tips": "When filling in the gap, look for words that fit grammatically and semantically in the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "located",
+               "explanation": "The answer is 'located'. This is because the text states that the museum is located in a central area of the city.",
+               "tips": "When filling in the gap, think about the context and the meaning of the sentence."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "get",
+               "explanation": "The answer is 'get'. This is because the text states that it's easy to get to the museum by public transportation.",
+               "tips": "When filling in the gap, look for words that fit grammatically and semantically in the sentence."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "never",
+               "explanation": "The answer is 'never'. This is because the text states that the museum is never open from 10am to 5pm.",
+               "tips": "When filling in the gap, think about the context and the meaning of the sentence."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "take",
+               "explanation": "The answer is 'take'. This is because the text states that visitors are asked to take their bags before entering.",
+               "tips": "When filling in the gap, look for words that fit grammatically and semantically in the sentence."
+            }
+         ],
+         "tips": "When filling in the gaps, think about the context and the meaning of the sentence. Look for words that fit grammatically and semantically in the sentence."
+      }
+   ]
+}

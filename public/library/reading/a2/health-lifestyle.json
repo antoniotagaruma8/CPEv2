@@ -1,0 +1,291 @@
+{
+  "examTitle": "CEFR A2 Mock Reading and Use of English Exam: Health & Lifestyle",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "content": "The importance of sleep is not to be underestimated. A good night's sleep is essential for both physical and mental health. Research has shown that people who get adequate sleep are less likely to develop chronic diseases, such as heart disease and diabetes. They also perform better in school and at work. Furthermore, sleep deprivation can lead to mood swings, anxiety, and depression. It is recommended that adults get between 7-9 hours of sleep each night. Children and teenagers need even more sleep, with recommendations ranging from 8-12 hours. By prioritizing sleep, individuals can improve their overall health and wellbeing.",
+         "questions": [
+            {
+               "question": "What is the main purpose of the text?",
+               "A": "To describe the benefits of exercise",
+               "B": "To explain the importance of sleep",
+               "C": "To discuss the effects of stress",
+               "correctOption": "B",
+               "explanation": "The text emphasizes the significance of sleep for both physical and mental health. This is the main purpose of the text. Distractors A and C are incorrect because they are not the main focus of the text.",
+               "tips": "When reading comprehension questions, look for the main idea or purpose of the text."
+            },
+            {
+               "question": "What happens when people do not get enough sleep?",
+               "A": "They become more energetic",
+               "B": "They experience mood swings, anxiety, and depression",
+               "C": "They develop stronger immune systems",
+               "correctOption": "B",
+               "explanation": "The text states that sleep deprivation can lead to mood swings, anxiety, and depression. This is the correct answer. Distractors A and C are incorrect because they do not accurately describe the effects of sleep deprivation.",
+               "tips": "When answering questions about the effects of a particular action or situation, look for specific examples or evidence in the text."
+            },
+            {
+               "question": "How many hours of sleep do children and teenagers need?",
+               "A": "8-12 hours",
+               "B": "7-9 hours",
+               "C": "5-7 hours",
+               "correctOption": "A",
+               "explanation": "The text states that children and teenagers need between 8-12 hours of sleep. This is the correct answer. Distractors B and C are incorrect because they do not accurately describe the sleep needs of children and teenagers.",
+               "tips": "When answering questions that require specific information, look for exact numbers or ranges in the text."
+            },
+            {
+               "question": "What is recommended for adults to get each night?",
+               "A": "10-12 hours",
+               "B": "8-10 hours",
+               "C": "7-9 hours",
+               "correctOption": "C",
+               "explanation": "The text states that adults should get between 7-9 hours of sleep each night. This is the correct answer. Distractors A and B are incorrect because they do not accurately describe the recommended sleep duration for adults.",
+               "tips": "When answering questions that require specific information, look for exact numbers or ranges in the text."
+            },
+            {
+               "question": "Why is sleep important for physical health?",
+               "A": "Because it helps people develop chronic diseases",
+               "B": "Because it reduces the risk of chronic diseases",
+               "C": "Because it has no impact on physical health",
+               "correctOption": "B",
+               "explanation": "The text states that research has shown that people who get adequate sleep are less likely to develop chronic diseases. This is the correct answer. Distractors A and C are incorrect because they do not accurately describe the relationship between sleep and physical health.",
+               "tips": "When answering questions that require specific information, look for exact numbers or ranges in the text."
+            },
+            {
+               "question": "What can happen to people who get inadequate sleep?",
+               "A": "They will become more energetic and productive",
+               "B": "They will experience mood swings, anxiety, and depression",
+               "C": "They will not develop chronic diseases",
+               "correctOption": "B",
+               "explanation": "The text states that sleep deprivation can lead to mood swings, anxiety, and depression. This is the correct answer. Distractors A and C are incorrect because they do not accurately describe the effects of inadequate sleep.",
+               "tips": "When answering questions about the effects of a particular action or situation, look for specific examples or evidence in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching",
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "content": {
+            "A": "A young woman who loves to exercise and eat healthy foods.",
+            "B": "A busy professional who has no time for hobbies.",
+            "C": "A person who prioritizes sleep and relaxation.",
+            "D": "A foodie who loves trying new restaurants.",
+            "E": "A stay-at-home parent who takes care of their children.",
+            "F": "A person who values work-life balance.",
+            "G": "A student who spends most of their time studying.",
+            "H": "A person who enjoys reading and learning new things.",
+            "I": "A person who values their free time and likes to travel."
+         },
+         "options": ["A. A young woman who loves to exercise and eat healthy foods.", "B. A busy professional who has no time for hobbies.", "C. A person who prioritizes sleep and relaxation.", "D. A foodie who loves trying new restaurants.", "E. A stay-at-home parent who takes care of their children.", "F. A person who values work-life balance.", "G. A student who spends most of their time studying.", "H. A person who enjoys reading and learning new things.", "I. A person who values their free time and likes to travel."],
+         "questions": [
+            {
+               "question": "Which person prioritizes sleep and relaxation?",
+               "correctOption": "C",
+               "explanation": "The description of person C highlights their importance of sleep and relaxation. This is the correct answer. Distractors A, B, D, E, F, G, H, and I do not accurately describe person C.",
+               "tips": "When matching descriptions to people, look for specific details that match the description."
+            },
+            {
+               "question": "Which person values work-life balance?",
+               "correctOption": "F",
+               "explanation": "The description of person F emphasizes their importance of work-life balance. This is the correct answer. Distractors A, B, C, D, E, G, H, and I do not accurately describe person F.",
+               "tips": "When matching descriptions to people, look for specific details that match the description."
+            },
+            {
+               "question": "Which person loves to exercise and eat healthy foods?",
+               "correctOption": "A",
+               "explanation": "The description of person A highlights their love for exercise and healthy foods. This is the correct answer. Distractors B, C, D, E, F, G, H, and I do not accurately describe person A.",
+               "tips": "When matching descriptions to people, look for specific details that match the description."
+            },
+            {
+               "question": "Which person has no time for hobbies?",
+               "correctOption": "B",
+               "explanation": "The description of person B emphasizes their busy schedule and lack of time for hobbies. This is the correct answer. Distractors A, C, D, E, F, G, H, and I do not accurately describe person B.",
+               "tips": "When matching descriptions to people, look for specific details that match the description."
+            },
+            {
+               "question": "Which person values their free time and likes to travel?",
+               "correctOption": "I",
+               "explanation": "The description of person I emphasizes their importance of free time and love for travel. This is the correct answer. Distractors A, B, C, D, E, F, G, and H do not accurately describe person I.",
+               "tips": "When matching descriptions to people, look for specific details that match the description."
+            },
+            {
+               "question": "Which person spends most of their time studying?",
+               "correctOption": "G",
+               "explanation": "The description of person G highlights their focus on studying. This is the correct answer. Distractors A, B, C, D, E, F, H, and I do not accurately describe person G.",
+               "tips": "When matching descriptions to people, look for specific details that match the description."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "The new gym in town offers a free trial membership for the first week. Don't miss out on this opportunity to try out their state-of-the-art equipment and expert trainers. Contact us to sign up today!",
+               "question": "What is the purpose of the message?",
+               "A": "To inform people about the gym's opening hours",
+               "B": "To promote the gym's free trial membership",
+               "C": "To advertise the gym's equipment",
+               "correctOption": "B",
+               "explanation": "The message emphasizes the importance of signing up for the free trial membership, which is the purpose of the message. Distractors A and C are incorrect because they do not accurately describe the purpose of the message.",
+               "tips": "When answering questions about the purpose of a message, look for language that emphasizes the main idea."
+            },
+            {
+               "text": "Warning: Do not try to climb the waterfall. It is very slippery and can be dangerous.",
+               "question": "What is the main message?",
+               "A": "It is safe to climb the waterfall",
+               "B": "It is not safe to climb the waterfall",
+               "C": "Climbing the waterfall is a good way to get exercise",
+               "correctOption": "B",
+               "explanation": "The message explicitly states that it is not safe to climb the waterfall, which is the main message. Distractors A and C are incorrect because they do not accurately describe the main message.",
+               "tips": "When answering questions about the main message, look for explicit language that conveys the main idea."
+            },
+            {
+               "text": "The restaurant is open for lunch from 11am to 2pm and for dinner from 5pm to 10pm.",
+               "question": "What is the opening time for dinner?",
+               "A": "5pm",
+               "B": "10pm",
+               "C": "7pm",
+               "correctOption": "B",
+               "explanation": "The text specifies the opening time for dinner as 5pm to 10pm, which indicates that the correct answer is 10pm. Distractors A and C are incorrect because they do not accurately describe the opening time for dinner.",
+               "tips": "When answering questions that require specific information, look for exact numbers or ranges in the text."
+            },
+            {
+               "text": "The library is closed on Sundays and public holidays.",
+               "question": "Which days is the library closed?",
+               "A": "Mondays and Tuesdays",
+               "B": "Sundays and public holidays",
+               "C": "Thursdays and Fridays",
+               "correctOption": "B",
+               "explanation": "The text specifies that the library is closed on Sundays and public holidays, which is the correct answer. Distractors A and C are incorrect because they do not accurately describe the days the library is closed.",
+               "tips": "When answering questions that require specific information, look for exact numbers or ranges in the text."
+            },
+            {
+               "text": "The school has a uniform policy. Students must wear a white shirt and black trousers.",
+               "question": "What is the school's policy on uniforms?",
+               "A": "Students can wear any color shirt and trousers",
+               "B": "Students must wear a white shirt and black trousers",
+               "C": "Students do not need to wear uniforms",
+               "correctOption": "B",
+               "explanation": "The text explicitly states the school's uniform policy, which is the correct answer. Distractors A and C are incorrect because they do not accurately describe the school's policy.",
+               "tips": "When answering questions about policies, look for explicit language that conveys the main idea."
+            },
+            {
+               "text": "The conference will take place on Friday at 2pm.",
+               "question": "What is the date of the conference?",
+               "A": "Monday",
+               "B": "Friday",
+               "C": "Saturday",
+               "correctOption": "B",
+               "explanation": "The text specifies the date of the conference as Friday, which is the correct answer. Distractors A and C are incorrect because they do not accurately describe the date of the conference.",
+               "tips": "When answering questions that require specific information, look for exact numbers or ranges in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "content": "The city has a (1) _______ (1) public transportation system. The buses and trains are (2) _______ (2) frequently, and the fares are (3) _______ (3) reasonable. The city also has a (4) _______ (4) network of bike paths and walking trails. These paths and trails are (5) _______ (5) popular with locals and visitors alike. Overall, the city is (6) _______ (6) for people who enjoy using public transportation.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "A": "efficient",
+               "B": "inefficient",
+               "C": "good",
+               "correctOption": "A",
+               "explanation": "The text describes the public transportation system as 'efficient', which indicates that the correct answer is A. Distractors B and C are incorrect because they do not accurately describe the public transportation system.",
+               "tips": "When answering questions about descriptive language, look for adjectives that convey a specific meaning."
+            },
+            {
+               "question": "Gap 2",
+               "A": "very",
+               "B": "not",
+               "C": "fairly",
+               "correctOption": "A",
+               "explanation": "The text states that the buses and trains are 'frequently', which indicates that the correct answer is A. Distractors B and C are incorrect because they do not accurately describe the frequency of the buses and trains.",
+               "tips": "When answering questions about frequency, look for adverbs that convey a specific meaning."
+            },
+            {
+               "question": "Gap 3",
+               "A": "very",
+               "B": "not",
+               "C": "reasonably",
+               "correctOption": "C",
+               "explanation": "The text states that the fares are 'reasonable', which indicates that the correct answer is C. Distractors A and B are incorrect because they do not accurately describe the fares.",
+               "tips": "When answering questions about price, look for adjectives that convey a specific meaning."
+            },
+            {
+               "question": "Gap 4",
+               "A": "good",
+               "B": "bad",
+               "C": "excellent",
+               "correctOption": "A",
+               "explanation": "The text describes the network of bike paths and walking trails as 'good', which indicates that the correct answer is A. Distractors B and C are incorrect because they do not accurately describe the network.",
+               "tips": "When answering questions about descriptive language, look for adjectives that convey a specific meaning."
+            },
+            {
+               "question": "Gap 5",
+               "A": "very",
+               "B": "not",
+               "C": "fairly",
+               "correctOption": "C",
+               "explanation": "The text states that the paths and trails are 'popular', which indicates that the correct answer is C. Distractors A and B are incorrect because they do not accurately describe the popularity of the paths and trails.",
+               "tips": "When answering questions about popularity, look for adverbs that convey a specific meaning."
+            },
+            {
+               "question": "Gap 6",
+               "A": "good",
+               "B": "bad",
+               "C": "well",
+               "correctOption": "C",
+               "explanation": "The text states that the city is 'suitable' for people who enjoy using public transportation, which indicates that the correct answer is C. Distractors A and B are incorrect because they do not accurately describe the city.",
+               "tips": "When answering questions about suitability, look for adverbs that convey a specific meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "content": "The city has a (1) _______ (1) public transportation system. The buses and trains are (2) _______ (2) frequently, and the fares are (3) _______ (3) reasonable. The city also has a (4) _______ (4) network of bike paths and walking trails. These paths and trails are (5) _______ (5) popular with locals and visitors alike. Overall, the city is (6) _______ (6) for people who enjoy using public transportation.",
+         "options": [],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "efficient",
+               "explanation": "The correct answer is 'efficient' because it accurately describes the public transportation system.",
+               "tips": "When answering questions about descriptive language, look for adjectives that convey a specific meaning."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "very",
+               "explanation": "The correct answer is 'very' because it accurately describes the frequency of the buses and trains.",
+               "tips": "When answering questions about frequency, look for adverbs that convey a specific meaning."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "reasonably",
+               "explanation": "The correct answer is 'reasonably' because it accurately describes the fares.",
+               "tips": "When answering questions about price, look for adjectives that convey a specific meaning."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "good",
+               "explanation": "The correct answer is 'good' because it accurately describes the network of bike paths and walking trails.",
+               "tips": "When answering questions about descriptive language, look for adjectives that convey a specific meaning."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "fairly",
+               "explanation": "The correct answer is 'fairly' because it accurately describes the popularity of the paths and trails.",
+               "tips": "When answering questions about popularity, look for adverbs that convey a specific meaning."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "suitable",
+               "explanation": "The correct answer is 'suitable' because it accurately describes the city.",
+               "tips": "When answering questions about suitability, look for adverbs that convey a specific meaning."
+            }
+         ]
+      }
+   ]
+}

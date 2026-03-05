@@ -1,0 +1,264 @@
+{
+  "examTitle": "A1 Science & Research Reading Comprehension Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Environmental Issues",
+         "content": "The Earth is our home. We must take care of it. People are harming the Earth by throwing away plastic and cutting down trees. This is causing problems for animals and the environment. We must think about what we are doing and make changes. We can use less plastic and plant more trees. This will help the animals and keep the Earth clean.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the Earth?",
+               "options": ["A house", "B home", "C car"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B home' because the text says 'The Earth is our home.' The other options are incorrect because 'A house' is not the same as 'home', and 'C car' is not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words like 'home' and 'Earth'."
+            },
+            {
+               "question": "What are people harming?",
+               "options": ["A air", "B water", "C trees"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C trees' because the text says 'People are harming the Earth by cutting down trees.' The other options are incorrect because 'A air' is not mentioned in the text, and 'B water' is not the main point of the text.",
+               "tips": "Look for key phrases like 'harming the Earth' and 'cutting down trees'."
+            },
+            {
+               "question": "What will help the animals?",
+               "options": ["A using more plastic", "B planting more trees", "C cutting down trees"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B planting more trees' because the text says 'We can use less plastic and plant more trees.' This will help the animals. The other options are incorrect because 'A using more plastic' will harm the animals, and 'C cutting down trees' is a problem, not a solution.",
+               "tips": "Look for key words like 'help' and 'animals'."
+            },
+            {
+               "question": "What must we think about?",
+               "options": ["A what we eat", "B what we wear", "C what we are doing"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C what we are doing' because the text says 'We must think about what we are doing and make changes.' The other options are incorrect because they are not related to the main point of the text.",
+               "tips": "Look for key phrases like 'think about' and 'make changes'."
+            },
+            {
+               "question": "What will keep the Earth clean?",
+               "options": ["A using more plastic", "B planting more trees", "C cutting down trees"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B planting more trees' because the text says 'This will help the animals and keep the Earth clean.' The other options are incorrect because 'A using more plastic' will harm the Earth, and 'C cutting down trees' is a problem, not a solution.",
+               "tips": "Look for key words like 'clean' and 'Earth'."
+            },
+            {
+               "question": "Why must we take care of the Earth?",
+               "options": ["A because it's our home", "B because it's big", "C because it's far away"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A because it's our home' because the text says 'The Earth is our home. We must take care of it.' The other options are incorrect because they are not related to the main point of the text.",
+               "tips": "Look for key words like 'home' and 'must take care of'."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching on Science Research",
+         "content": [
+            "Climate change is a big problem. It is causing rising sea levels and extreme weather events. We must reduce our carbon footprint to slow down climate change.",
+            "Scientists are doing research to find new ways to reduce carbon emissions. They are testing new technologies and methods to make our energy production cleaner.",
+            "The Earth is our home. We must take care of it. We can do this by reducing, reusing, and recycling.",
+            "The world is a big place. We must take care of it. We can do this by planting trees and reducing pollution.",
+            "Animals are our friends. We must take care of them. We can do this by protecting their habitats and reducing pollution.",
+            "The Earth is getting warmer. This is causing problems for animals and the environment. We must think about what we are doing and make changes."
+         ],
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "questions": [
+            {
+               "question": "Which text states that climate change is a big problem?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the text says 'Climate change is a big problem.' The other options are incorrect because they do not mention climate change as a big problem.",
+               "tips": "Look for key words like 'big problem' and 'climate change'."
+            },
+            {
+               "question": "Which text mentions reducing our carbon footprint?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the text says 'We must reduce our carbon footprint to slow down climate change.' The other options are incorrect because they do not mention reducing our carbon footprint.",
+               "tips": "Look for key words like 'reduce' and 'carbon footprint'."
+            },
+            {
+               "question": "Which text mentions reducing, reusing, and recycling?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because the text says 'The Earth is our home. We must take care of it. We can do this by reducing, reusing, and recycling.' The other options are incorrect because they do not mention reducing, reusing, and recycling.",
+               "tips": "Look for key words like 'reduce', 'reuse', and 'recycle'."
+            },
+            {
+               "question": "Which text mentions planting trees?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because the text says 'We can do this by planting trees and reducing pollution.' The other options are incorrect because they do not mention planting trees.",
+               "tips": "Look for key words like 'plant' and 'trees'."
+            },
+            {
+               "question": "Which text mentions protecting animal habitats?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because the text says 'We can do this by protecting their habitats and reducing pollution.' The other options are incorrect because they do not mention protecting animal habitats.",
+               "tips": "Look for key words like 'protect' and 'habitats'."
+            },
+            {
+               "question": "Which text mentions rising sea levels?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the text says 'Climate change is a big problem. It is causing rising sea levels and extreme weather events.' The other options are incorrect because they do not mention rising sea levels.",
+               "tips": "Look for key words like 'rising' and 'sea levels'."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice on Science Signs",
+         "content": [
+            "Beware of the wild animals in the park.",
+            "The lab is closed for maintenance.",
+            "Please do not eat or drink in the library.",
+            "The museum is open from 10am to 5pm.",
+            "The science experiment is in the next room.",
+            "The weather forecast is on TV."
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the first sign mean?",
+               "options": ["A Do not enter", "B Be careful", "C Take a picture"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B Be careful' because the text says 'Beware of the wild animals in the park.' This means you should be careful when walking in the park because there may be wild animals.",
+               "tips": "Look for key words like 'beware' and 'wild animals'."
+            },
+            {
+               "question": "What does the second sign mean?",
+               "options": ["A The lab is open", "B The lab is closed for maintenance", "C The lab is open for experiments"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B The lab is closed for maintenance' because the text says 'The lab is closed for maintenance.' This means the lab is not available for use.",
+               "tips": "Look for key words like 'closed' and 'maintenance'."
+            },
+            {
+               "question": "What does the third sign mean?",
+               "options": ["A You can eat and drink in the library", "B Please do not eat or drink in the library", "C You can take a break in the library"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B Please do not eat or drink in the library' because the text says 'Please do not eat or drink in the library.' This means you should not eat or drink in the library.",
+               "tips": "Look for key words like 'please do not' and 'library'."
+            },
+            {
+               "question": "What does the fourth sign mean?",
+               "options": ["A The museum is closed", "B The museum is open from 10am to 5pm", "C The museum is open 24 hours"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B The museum is open from 10am to 5pm' because the text says 'The museum is open from 10am to 5pm.' This means the museum is available for visitors during these hours.",
+               "tips": "Look for key words like 'open' and 'hours'."
+            },
+            {
+               "question": "What does the fifth sign mean?",
+               "options": ["A The science experiment is in the previous room", "B The science experiment is in the next room", "C The science experiment is in the same room"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B The science experiment is in the next room' because the text says 'The science experiment is in the next room.' This means the science experiment is located in a nearby room.",
+               "tips": "Look for key words like 'next room' and 'science experiment'."
+            },
+            {
+               "question": "What does the sixth sign mean?",
+               "options": ["A The weather forecast is not available", "B The weather forecast is on TV", "C The weather forecast is on the radio"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B The weather forecast is on TV' because the text says 'The weather forecast is on TV.' This means you can find the weather forecast on TV.",
+               "tips": "Look for key words like 'on TV' and 'weather forecast'."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Cloze on Science Research",
+         "content": "Scientists are (1) _______ new ways to reduce carbon emissions. They are (2) _______ technologies and methods to make our energy production cleaner. The Earth is getting (3) _______ and this is causing problems for animals and the environment. We must (4) _______ about what we are doing and make changes. We can do this by (5) _______ less plastic and planting more trees. This will (6) _______ the Earth clean.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A discovering", "B reducing", "C finding"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A discovering' because the text says 'Scientists are discovering new ways to reduce carbon emissions.' The other options are incorrect because 'B reducing' is already mentioned in the text, and 'C finding' is not the best fit for the sentence.",
+               "tips": "Look for key words like 'discovering' and 'new ways'."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A testing", "B developing", "C making"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A testing' because the text says 'They are testing technologies and methods to make our energy production cleaner.' The other options are incorrect because 'B developing' is too vague, and 'C making' is too general.",
+               "tips": "Look for key words like 'testing' and 'technologies'."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A colder", "B warmer", "C cleaner"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B warmer' because the text says 'The Earth is getting warmer and this is causing problems for animals and the environment.' The other options are incorrect because 'A colder' is the opposite of what the text says, and 'C cleaner' is not relevant to the sentence.",
+               "tips": "Look for key words like 'getting warmer' and 'problems'."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A think", "B make", "C do"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A think' because the text says 'We must think about what we are doing and make changes.' The other options are incorrect because 'B make' is already mentioned in the text, and 'C do' is too general.",
+               "tips": "Look for key words like 'think' and 'about'."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A use", "B make", "C reduce"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C reduce' because the text says 'We can do this by reducing less plastic and planting more trees.' The other options are incorrect because 'A use' is too vague, and 'B make' is too general.",
+               "tips": "Look for key words like 'reduce' and 'less plastic'."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A keep", "B make", "C make"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A keep' because the text says 'This will keep the Earth clean.' The other options are incorrect because 'B make' is already mentioned in the text, and 'C make' is a repeat of option B.",
+               "tips": "Look for key words like 'keep' and 'clean'."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Cloze on Science Research",
+         "content": "The Earth is (1) _______ our home. We must (2) _______ it by reducing, reusing, and recycling. The Earth is (3) _______ warmer and this is causing problems for animals and the environment. We must (4) _______ about what we are doing and make changes. We can do this by (5) _______ less plastic and planting more trees. This will (6) _______ the Earth clean.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "our",
+               "explanation": "The correct answer is 'our' because the text says 'The Earth is our home.' This means the Earth is our home.",
+               "tips": "Look for key words like 'our' and 'home'."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "take",
+               "explanation": "The correct answer is 'take' because the text says 'We must take care of it by reducing, reusing, and recycling.' This means we must take care of the Earth.",
+               "tips": "Look for key words like 'take' and 'care of'."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "getting",
+               "explanation": "The correct answer is 'getting' because the text says 'The Earth is getting warmer and this is causing problems for animals and the environment.' This means the Earth is getting warmer.",
+               "tips": "Look for key words like 'getting' and 'warmer'."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "think",
+               "explanation": "The correct answer is 'think' because the text says 'We must think about what we are doing and make changes.' This means we must think about what we are doing.",
+               "tips": "Look for key words like 'think' and 'about'."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "use",
+               "explanation": "The correct answer is 'use' because the text says 'We can do this by reducing less plastic and planting more trees.' This means we can use less plastic.",
+               "tips": "Look for key words like 'use' and 'less plastic'."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "keep",
+               "explanation": "The correct answer is 'keep' because the text says 'This will keep the Earth clean.' This means this action will keep the Earth clean.",
+               "tips": "Look for key words like 'keep' and 'clean'."
+            }
+         ]
+      }
+   ]
+}

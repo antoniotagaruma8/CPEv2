@@ -1,0 +1,344 @@
+{
+  "examTitle": "Hobbies and Leisure A1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "content": "Every day, people do many things in their free time. They like to play sports, read books, or watch TV. Some people like to play the piano or sing. Others like to dance or ride a bike. They might also like to swim or go to the park. Many people like to spend time with their friends and family. They go to the cinema, eat out, or play games together. Some people like to travel and see new places. They might go to the beach, the mountains, or the city. Everyone is different, and they all have their own interests.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What do people like to do in their free time?",
+               "options": [
+                  "A. They like to play sports, read books, or watch TV.",
+                  "B. They like to play the piano or sing.",
+                  "C. They like to dance or ride a bike."
+               ],
+               "explanation": "The correct answer is A. The text states that people like to play sports, read books, or watch TV in their free time. The other options, B and C, are not mentioned in the text.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "What do some people like to do?",
+               "options": [
+                  "A. They like to play the piano or sing.",
+                  "B. They like to dance or ride a bike.",
+                  "C. They like to swim or go to the park."
+               ],
+               "explanation": "The correct answer is A. The text states that some people like to play the piano or sing. The other options, B and C, are not mentioned in the text.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "What do many people like to do?",
+               "options": [
+                  "A. They go to the cinema, eat out, or play games together.",
+                  "B. They go to the beach, the mountains, or the city.",
+                  "C. They like to play sports, read books, or watch TV."
+               ],
+               "explanation": "The correct answer is A. The text states that many people like to spend time with their friends and family. They go to the cinema, eat out, or play games together. The other options, B and C, are not mentioned in the text.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "What do some people like to do?",
+               "options": [
+                  "A. They like to travel and see new places.",
+                  "B. They like to play sports, read books, or watch TV.",
+                  "C. They like to dance or ride a bike."
+               ],
+               "explanation": "The correct answer is A. The text states that some people like to travel and see new places. The other options, B and C, are not mentioned in the text.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "What do people like to do at the beach?",
+               "options": [
+                  "A. They like to play sports or read books.",
+                  "B. They like to swim or go to the park.",
+                  "C. They like to travel and see new places."
+               ],
+               "explanation": "The correct answer is B. The text states that some people like to swim or go to the beach. The other options, A and C, are not mentioned in the text.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "What do people like to do in their free time?",
+               "options": [
+                  "A. They like to play sports, read books, or watch TV.",
+                  "B. They like to travel and see new places.",
+                  "C. They like to dance or ride a bike."
+               ],
+               "explanation": "The correct answer is A. The text states that people like to play sports, read books, or watch TV in their free time. The other options, B and C, are not mentioned in the text.",
+               "tips": "Read the text carefully and look for the correct information."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching",
+         "content": [
+            "A. Many people like to spend time with their friends and family. They go to the cinema, eat out, or play games together.",
+            "B. Some people like to travel and see new places. They might go to the beach, the mountains, or the city.",
+            "C. They might also like to swim or go to the park.",
+            "D. Everyone is different, and they all have their own interests.",
+            "E. They like to play sports, read books, or watch TV.",
+            "F. Some people like to dance or ride a bike.",
+            "G. Others like to play the piano or sing.",
+            "H. They might also like to watch TV."
+         ],
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "questions": [
+            {
+               "question": "Which text states that many people like to spend time with their friends and family?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct answer is D. The text states that everyone is different, and they all have their own interests. The other options, A, B, and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Which text states that some people like to travel and see new places?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct answer is B. The text states that some people like to travel and see new places. The other options, A, C, and D, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Which text states that some people like to dance or ride a bike?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct answer is F. The text states that some people like to dance or ride a bike. The other options, A, B, and D, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Which text states that some people like to play the piano or sing?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct answer is G. The text states that some people like to play the piano or sing. The other options, A, B, and D, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Which text states that many people like to play sports, read books, or watch TV?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct answer is E. The text states that many people like to play sports, read books, or watch TV. The other options, A, B, and D, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Which text states that some people like to swim or go to the park?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct answer is C. The text states that some people like to swim or go to the park. The other options, A, B, and D, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Sigins",
+         "content": [
+            "Sign at the park: \"No dogs allowed\"",
+            "Text message: \"Meet me at the cinema at 7pm\"",
+            "Sign at the airport: \"Baggage claim\"",
+            "Sign at the swimming pool: \"No divings\"",
+            "Notice: \"The library is open until 10pm\"",
+            "Sign at the restaurant: \"Smoking area\""
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the sign at the park say?",
+               "options": [
+                  "A. No dogs allowed",
+                  "B. Dogs are welcome",
+                  "C. No cats allowed"
+               ],
+               "explanation": "The correct answer is A. The sign at the park says \"No dogs allowed\". The other options, B and C, are not correct.",
+               "tips": "Read the sign carefully and look for the correct information."
+            },
+            {
+               "question": "What does the text message say?",
+               "options": [
+                  "A. Meet me at the cinema at 7pm",
+                  "B. Meet me at the library at 7pm",
+                  "C. Meet me at the park at 7pm"
+               ],
+               "explanation": "The correct answer is A. The text message says \"Meet me at the cinema at 7pm\". The other options, B and C, are not correct.",
+               "tips": "Read the text message carefully and look for the correct information."
+            },
+            {
+               "question": "What does the sign at the airport say?",
+               "options": [
+                  "A. Baggage claim",
+                  "B. Baggage check",
+                  "C. Baggage storage"
+               ],
+               "explanation": "The correct answer is A. The sign at the airport says \"Baggage claim\". The other options, B and C, are not correct.",
+               "tips": "Read the sign carefully and look for the correct information."
+            },
+            {
+               "question": "What does the sign at the swimming pool say?",
+               "options": [
+                  "A. No divings",
+                  "B. No swimming",
+                  "C. No playing"
+               ],
+               "explanation": "The correct answer is A. The sign at the swimming pool says \"No divings\". The other options, B and C, are not correct.",
+               "tips": "Read the sign carefully and look for the correct information."
+            },
+            {
+               "question": "What does the notice say?",
+               "options": [
+                  "A. The library is open until 9pm",
+                  "B. The library is open until 10pm",
+                  "C. The library is open until 11pm"
+               ],
+               "explanation": "The correct answer is B. The notice says \"The library is open until 10pm\". The other options, A and C, are not correct.",
+               "tips": "Read the notice carefully and look for the correct information."
+            },
+            {
+               "question": "What does the sign at the restaurant say?",
+               "options": [
+                  "A. No smoking",
+                  "B. Smoking area",
+                  "C. No eating"
+               ],
+               "explanation": "The correct answer is B. The sign at the restaurant says \"Smoking area\". The other options, A and C, are not correct.",
+               "tips": "Read the sign carefully and look for the correct information."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "Every day, people do many things in their free time. They like to (1) _______ sports, read books, or watch TV. Some people like to (2) _______ the piano or sing. Others like to (3) _______ or ride a bike. They might also like to (4) _______ or go to the park. Many people like to (5) _______ time with their friends and family. They go to the cinema, eat out, or (6) _______ games together.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. play",
+                  "B. watch",
+                  "C. read"
+               ],
+               "explanation": "The correct answer is A. The text states that people like to play sports, read books, or watch TV in their free time. The other options, B and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. play",
+                  "B. sing",
+                  "C. dance"
+               ],
+               "explanation": "The correct answer is B. The text states that some people like to play the piano or sing. The other options, A and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. dance",
+                  "B. ride",
+                  "C. swim"
+               ],
+               "explanation": "The correct answer is B. The text states that others like to dance or ride a bike. The other options, A and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. swim",
+                  "B. go",
+                  "C. play"
+               ],
+               "explanation": "The correct answer is B. The text states that some people like to swim or go to the park. The other options, A and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. spend",
+                  "B. take",
+                  "C. make"
+               ],
+               "explanation": "The correct answer is A. The text states that many people like to spend time with their friends and family. The other options, B and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. play",
+                  "B. watch",
+                  "C. eat"
+               ],
+               "explanation": "The correct answer is B. The text states that they go to the cinema, eat out, or play games together. The other options, A and C, are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "Every day, people do many things in their (1) _______. They like to play sports, read books, or (2) _______ TV. Some people like to play the piano or (3) _______. Others like to (4) _______ or ride a bike. They might also like to (5) _______ or go to the park. Many people like to (6) _______ time with their friends and family.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "time",
+               "explanation": "The correct answer is \"time\". The text states that people do many things in their free time. The other options are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "watch",
+               "explanation": "The correct answer is \"watch\". The text states that people like to play sports, read books, or watch TV in their free time. The other options are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "sing",
+               "explanation": "The correct answer is \"sing\". The text states that some people like to play the piano or sing. The other options are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "dance",
+               "explanation": "The correct answer is \"dance\". The text states that others like to dance or ride a bike. The other options are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "spend",
+               "explanation": "The correct answer is \"spend\". The text states that many people like to spend time with their friends and family. The other options are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "play",
+               "explanation": "The correct answer is \"play\". The text states that they go to the cinema, eat out, or play games together. The other options are not correct.",
+               "tips": "Read the text carefully and look for the correct information."
+            }
+         ]
+      }
+   ]
+}

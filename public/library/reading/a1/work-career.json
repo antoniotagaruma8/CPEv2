@@ -1,0 +1,250 @@
+{
+  "examTitle": "Work & Career A1 Beginner Exam",
+   "parts": [
+       {
+           "title": "Part 1: Multiple-Choice Reading Comprehension on Job Search",
+           "content": "Finding a job can be difficult. Many people look for work on the internet. They can send their CV to companies. Some people go to job interviews. They wear nice clothes and try to be friendly. The interviewer asks questions. The person looking for a job tries to answer well. If they do a good job, they might get the job. Many people start work at 9 am. They have a break at 12 pm for lunch. Then they work until 5 pm.",
+           "instructions": "Read the text. Choose the correct answer A, B or C.",
+           "questions": [
+               {
+                   "question": "What time do many people start work?",
+                   "options": ["A. 8 am", "B. 9 am", "C. 10 am"],
+                   "correctOption": "B. 9 am",
+                   "explanation": "The text states that many people start work at 9 am. This is the correct answer because it is directly mentioned in the text. The other options are incorrect because they are not mentioned in the text.",
+                   "tips": "To answer this question, read the text carefully and look for the sentence that mentions the start time of work."
+               },
+               {
+                   "question": "What do people do at 12 pm?",
+                   "options": ["A. They finish work", "B. They have a break for lunch", "C. They start work"],
+                   "correctOption": "B. They have a break for lunch",
+                   "explanation": "The text states that people have a break at 12 pm for lunch. This is the correct answer because it is directly mentioned in the text. The other options are incorrect because they are not mentioned in the text.",
+                   "tips": "To answer this question, read the text carefully and look for the sentence that mentions what people do at 12 pm."
+               },
+               {
+                   "question": "What do people wear to job interviews?",
+                   "options": ["A. Casual clothes", "B. Nice clothes", "C. Uniforms"],
+                   "correctOption": "B. Nice clothes",
+                   "explanation": "The text states that people wear nice clothes to job interviews. This is the correct answer because it is directly mentioned in the text. The other options are incorrect because they are not mentioned in the text.",
+                   "tips": "To answer this question, read the text carefully and look for the sentence that mentions what people wear to job interviews."
+               },
+               {
+                   "question": "What do interviewers do during a job interview?",
+                   "options": ["A. They answer questions", "B. They ask questions", "C. They give a presentation"],
+                   "correctOption": "B. They ask questions",
+                   "explanation": "The text states that the interviewer asks questions during a job interview. This is the correct answer because it is directly mentioned in the text. The other options are incorrect because they are not mentioned in the text.",
+                   "tips": "To answer this question, read the text carefully and look for the sentence that mentions what the interviewer does during a job interview."
+               },
+               {
+                   "question": "What might happen if someone does a good job in a job interview?",
+                   "options": ["A. They will not get the job", "B. They might get the job", "C. They will definitely get the job"],
+                   "correctOption": "B. They might get the job",
+                   "explanation": "The text states that if someone does a good job in a job interview, they might get the job. This is the correct answer because it is directly mentioned in the text. The other options are incorrect because they are not mentioned in the text.",
+                   "tips": "To answer this question, read the text carefully and look for the sentence that mentions what might happen if someone does a good job in a job interview."
+               },
+               {
+                   "question": "How many hours do people usually work in a day?",
+                   "options": ["A. 6 hours", "B. 7 hours", "C. 8 hours"],
+                   "correctOption": "C. 8 hours",
+                   "explanation": "The text states that people work from 9 am to 5 pm, which is 8 hours. This is the correct answer because it can be calculated from the text. The other options are incorrect because they are not mentioned in the text.",
+                   "tips": "To answer this question, read the text carefully and calculate the number of hours people work in a day."
+               }
+           ]
+       },
+       {
+           "title": "Part 2: Multiple Matching on Job Types",
+           "content": "A. A doctor is a person who helps people who are sick or hurt. B. A teacher is a person who teaches students in a school. C. A chef is a person who cooks food in a restaurant. D. A lawyer is a person who helps people with legal problems. E. A engineer is a person who designs and builds things. F. A nurse is a person who helps doctors and takes care of patients. G. A police officer is a person who helps keep people safe. H. A firefighter is a person who puts out fires and saves people.",
+           "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+           "questions": [
+               {
+                   "question": "Which text describes a person who helps people who are sick or hurt?",
+                   "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                   "correctOption": "A",
+                   "explanation": "The text A describes a doctor, who is a person who helps people who are sick or hurt. This is the correct answer because it matches the description. The other options are incorrect because they do not match the description.",
+                   "tips": "To answer this question, read the descriptions carefully and match them to the correct item."
+               },
+               {
+                   "question": "Which text describes a person who teaches students in a school?",
+                   "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                   "correctOption": "B",
+                   "explanation": "The text B describes a teacher, who is a person who teaches students in a school. This is the correct answer because it matches the description. The other options are incorrect because they do not match the description.",
+                   "tips": "To answer this question, read the descriptions carefully and match them to the correct item."
+               },
+               {
+                   "question": "Which text describes a person who cooks food in a restaurant?",
+                   "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                   "correctOption": "C",
+                   "explanation": "The text C describes a chef, who is a person who cooks food in a restaurant. This is the correct answer because it matches the description. The other options are incorrect because they do not match the description.",
+                   "tips": "To answer this question, read the descriptions carefully and match them to the correct item."
+               },
+               {
+                   "question": "Which text describes a person who helps people with legal problems?",
+                   "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                   "correctOption": "D",
+                   "explanation": "The text D describes a lawyer, who is a person who helps people with legal problems. This is the correct answer because it matches the description. The other options are incorrect because they do not match the description.",
+                   "tips": "To answer this question, read the descriptions carefully and match them to the correct item."
+               },
+               {
+                   "question": "Which text describes a person who designs and builds things?",
+                   "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                   "correctOption": "E",
+                   "explanation": "The text E describes an engineer, who is a person who designs and builds things. This is the correct answer because it matches the description. The other options are incorrect because they do not match the description.",
+                   "tips": "To answer this question, read the descriptions carefully and match them to the correct item."
+               },
+               {
+                   "question": "Which text describes a person who helps keep people safe?",
+                   "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                   "correctOption": "G",
+                   "explanation": "The text G describes a police officer, who is a person who helps keep people safe. This is the correct answer because it matches the description. The other options are incorrect because they do not match the description.",
+                   "tips": "To answer this question, read the descriptions carefully and match them to the correct item."
+               }
+           ]
+       },
+       {
+           "title": "Part 3: Multiple-Choice for Short Texts on Job Search",
+           "content": "Text 1: \"We are looking for a new employee to join our team. If you are interested, please send us your CV.\" Text 2: \"The job interview will be on Friday at 2 pm. Please be on time.\" Text 3: \"We are a company that makes software. We are looking for a new programmer to join our team.\" Text 4: \"If you want to work with us, you need to have a degree in computer science.\" Text 5: \"The job is full-time and the salary is $50,000 per year.\" Text 6: \"If you are interested in the job, please call us at 555-1234.\"",
+           "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+           "questions": [
+               {
+                   "question": "What is Text 1 about?",
+                   "options": ["A. A job interview", "B. A new employee", "C. A job advertisement"],
+                   "correctOption": "C. A job advertisement",
+                   "explanation": "Text 1 is about a job advertisement because it says \"We are looking for a new employee to join our team.\" This is the correct answer because it matches the content of the text. The other options are incorrect because they do not match the content of the text.",
+                   "tips": "To answer this question, read the text carefully and determine what it is about."
+               },
+               {
+                   "question": "What is the time of the job interview in Text 2?",
+                   "options": ["A. 10 am", "B. 2 pm", "C. 5 pm"],
+                   "correctOption": "B. 2 pm",
+                   "explanation": "The time of the job interview in Text 2 is 2 pm because it says \"The job interview will be on Friday at 2 pm.\" This is the correct answer because it matches the content of the text. The other options are incorrect because they do not match the content of the text.",
+                   "tips": "To answer this question, read the text carefully and look for the time of the job interview."
+               },
+               {
+                   "question": "What type of company is mentioned in Text 3?",
+                   "options": ["A. A restaurant", "B. A software company", "C. A hospital"],
+                   "correctOption": "B. A software company",
+                   "explanation": "The type of company mentioned in Text 3 is a software company because it says \"We are a company that makes software.\" This is the correct answer because it matches the content of the text. The other options are incorrect because they do not match the content of the text.",
+                   "tips": "To answer this question, read the text carefully and determine what type of company is mentioned."
+               },
+               {
+                   "question": "What is required to work with the company in Text 4?",
+                   "options": ["A. A degree in business", "B. A degree in computer science", "C. A degree in engineering"],
+                   "correctOption": "B. A degree in computer science",
+                   "explanation": "The requirement to work with the company in Text 4 is a degree in computer science because it says \"If you want to work with us, you need to have a degree in computer science.\" This is the correct answer because it matches the content of the text. The other options are incorrect because they do not match the content of the text.",
+                   "tips": "To answer this question, read the text carefully and determine what is required to work with the company."
+               },
+               {
+                   "question": "What is the salary of the job in Text 5?",
+                   "options": ["A. $30,000 per year", "B. $50,000 per year", "C. $70,000 per year"],
+                   "correctOption": "B. $50,000 per year",
+                   "explanation": "The salary of the job in Text 5 is $50,000 per year because it says \"The job is full-time and the salary is $50,000 per year.\" This is the correct answer because it matches the content of the text. The other options are incorrect because they do not match the content of the text.",
+                   "tips": "To answer this question, read the text carefully and look for the salary of the job."
+               },
+               {
+                   "question": "What should you do if you are interested in the job in Text 6?",
+                   "options": ["A. Send an email", "B. Call the company", "C. Visit the company"],
+                   "correctOption": "B. Call the company",
+                   "explanation": "If you are interested in the job in Text 6, you should call the company because it says \"If you are interested in the job, please call us at 555-1234.\" This is the correct answer because it matches the content of the text. The other options are incorrect because they do not match the content of the text.",
+                   "tips": "To answer this question, read the text carefully and determine what you should do if you are interested in the job."
+               }
+           ]
+       },
+       {
+           "title": "Part 4: Multiple-Choice Gap-Fill on Job Application",
+           "content": "I am writing to apply for the (1) _______ position at your company. I saw the job (2) _______ on your website and I am very interested in the (3) _______. I have a degree in business and I am confident that I have the (4) _______ skills to do the job well. I would like to (5) _______ my CV and a cover letter for your review. I am available for an (6) _______ at your convenience.",
+           "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+           "questions": [
+               {
+                   "question": "Gap 1",
+                   "options": ["A. manager", "B. job", "C. available"],
+                   "correctOption": "B. job",
+                   "explanation": "The correct answer is \"job\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 2",
+                   "options": ["A. advertisement", "B. application", "C. interview"],
+                   "correctOption": "A. advertisement",
+                   "explanation": "The correct answer is \"advertisement\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 3",
+                   "options": ["A. company", "B. position", "C. job"],
+                   "correctOption": "B. position",
+                   "explanation": "The correct answer is \"position\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 4",
+                   "options": ["A. necessary", "B. important", "C. required"],
+                   "correctOption": "A. necessary",
+                   "explanation": "The correct answer is \"necessary\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 5",
+                   "options": ["A. send", "B. attach", "C. include"],
+                   "correctOption": "A. send",
+                   "explanation": "The correct answer is \"send\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 6",
+                   "options": ["A. meeting", "B. interview", "C. conversation"],
+                   "correctOption": "B. interview",
+                   "explanation": "The correct answer is \"interview\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               }
+           ]
+       },
+       {
+           "title": "Part 5: Open Gap-Fill on Job Description",
+           "content": "The (1) _______ of the job is to help the manager with (2) _______ tasks. The job (3) _______ a lot of responsibility and (4) _______ skills. The company is looking for someone who is (5) _______ and can work well in a (6) _______.",
+           "instructions": "Read the text. Write ONE word for each gap.",
+           "questions": [
+               {
+                   "question": "Gap 1",
+                   "options": [],
+                   "correctOption": "purpose",
+                   "explanation": "The correct answer is \"purpose\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 2",
+                   "options": [],
+                   "correctOption": "daily",
+                   "explanation": "The correct answer is \"daily\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 3",
+                   "options": [],
+                   "correctOption": "requires",
+                   "explanation": "The correct answer is \"requires\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 4",
+                   "options": [],
+                   "correctOption": "good",
+                   "explanation": "The correct answer is \"good\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 5",
+                   "options": [],
+                   "correctOption": "flexible",
+                   "explanation": "The correct answer is \"flexible\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               },
+               {
+                   "question": "Gap 6",
+                   "options": [],
+                   "correctOption": "team",
+                   "explanation": "The correct answer is \"team\" because it makes sense in the context of the sentence. The other options are incorrect because they do not make sense in the context of the sentence.",
+                   "tips": "To answer this question, read the sentence carefully and determine what word fits best in the gap."
+               }
+           ]
+       }
+   ]
+}

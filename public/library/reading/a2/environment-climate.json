@@ -1,0 +1,340 @@
+{
+  "examTitle": "Environment & Climate: Reading & Use of English A2 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "content": "The Earth's climate is changing due to human activities. Greenhouse gases, such as carbon dioxide and methane, are released into the atmosphere. This traps heat and causes the Earth's temperature to rise. The consequences of climate change are severe. Rising sea levels threaten coastal areas and cities. Extreme weather events, like hurricanes and droughts, are becoming more frequent. The loss of biodiversity is also a major concern. We must reduce our carbon footprint and protect the environment.",
+         "questions": [
+            {
+               "question": "Why is the Earth's temperature rising?",
+               "options": [
+                  "A. Because of the Earth's rotation",
+                  "B. Because of human activities",
+                  "C. Because of the Earth's orbit"
+               ],
+               "correctOption": "B",
+               "explanation": "This is because human activities release greenhouse gases, such as carbon dioxide and methane, which trap heat and cause the Earth's temperature to rise. Distractors A and C are incorrect because the Earth's rotation and orbit have no direct impact on the Earth's temperature.",
+               "tips": "Pay close attention to the text and identify the main idea of each paragraph. Use context clues to help you choose the correct answer."
+            },
+            {
+               "question": "What are the consequences of climate change?",
+               "options": [
+                  "A. Rising sea levels",
+                  "B. Extreme weather events",
+                  "C. All of the above"
+               ],
+               "correctOption": "C",
+               "explanation": "The text states that rising sea levels, extreme weather events, and the loss of biodiversity are all consequences of climate change. Distractors A and B are partially correct but do not cover all the consequences. Therefore, option C is the most accurate answer.",
+               "tips": "Read the text carefully and make a list of the consequences mentioned. Then, compare your list with the options provided."
+            },
+            {
+               "question": "What can we do to protect the environment?",
+               "options": [
+                  "A. Reduce our carbon footprint",
+                  "B. Increase our carbon footprint",
+                  "C. Ignore the problem"
+               ],
+               "correctOption": "A",
+               "explanation": "The text emphasizes the importance of reducing our carbon footprint to protect the environment. Distractors B and C are incorrect because increasing our carbon footprint would worsen the problem, and ignoring the issue would have severe consequences.",
+               "tips": "Look for verbs and phrases that indicate what people can do to address the issue. Use context clues to help you choose the correct answer."
+            },
+            {
+               "question": "What is happening to biodiversity?",
+               "options": [
+                  "A. It is increasing",
+                  "B. It is decreasing",
+                  "C. It is staying the same"
+               ],
+               "correctOption": "B",
+               "explanation": "The text mentions that the loss of biodiversity is a major concern. This indicates that biodiversity is decreasing. Distractors A and C are incorrect because the text does not mention an increase or stability in biodiversity.",
+               "tips": "Look for phrases that indicate a change or trend. Use context clues to help you choose the correct answer."
+            },
+            {
+               "question": "What will happen to coastal areas and cities?",
+               "options": [
+                  "A. They will become safer",
+                  "B. They will become more vulnerable",
+                  "C. They will stay the same"
+               ],
+               "correctOption": "B",
+               "explanation": "The text states that rising sea levels threaten coastal areas and cities. This indicates that they will become more vulnerable to flooding and damage. Distractors A and C are incorrect because the text does not mention an improvement or stability in their safety.",
+               "tips": "Look for phrases that indicate a consequence or outcome. Use context clues to help you choose the correct answer."
+            },
+            {
+               "question": "What is the main reason for climate change?",
+               "options": [
+                  "A. The Earth's rotation",
+                  "B. Human activities",
+                  "C. The Earth's orbit"
+               ],
+               "correctOption": "B",
+               "explanation": "The text emphasizes that human activities are the main reason for climate change. Distractors A and C are incorrect because the Earth's rotation and orbit have no direct impact on climate change.",
+               "tips": "Look for phrases that indicate the main cause or reason for a problem. Use context clues to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching",
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "content": {
+            "A": "She is a famous environmental activist.",
+            "B": "He is a scientist who studies climate change.",
+            "C": "She is a young girl who loves animals.",
+            "D": "He is a politician who supports renewable energy.",
+            "E": "They are a group of people who work to protect the environment.",
+            "F": "She is a teacher who educates students about climate change.",
+            "G": "He is a businessman who invests in green technology.",
+            "H": "They are a family who recycles and reduces their waste."
+         },
+         "options": [
+            "A. A young girl who loves animals",
+            "B. A scientist who studies climate change",
+            "C. A famous environmental activist",
+            "D. A politician who supports renewable energy",
+            "E. A group of people who work to protect the environment",
+            "F. A teacher who educates students about climate change",
+            "G. A businessman who invests in green technology",
+            "H. A family who recycles and reduces their waste"
+         ],
+         "questions": [
+            {
+               "question": "Which person is a famous environmental activist?",
+               "correctOption": "C",
+               "explanation": "The description mentions that she is a famous environmental activist. Distractors A and B are incorrect because they do not match the description.",
+               "tips": "Read each description carefully and compare it with the options provided."
+            },
+            {
+               "question": "Which person is a scientist who studies climate change?",
+               "correctOption": "B",
+               "explanation": "The description mentions that he is a scientist who studies climate change. Distractors A and C are incorrect because they do not match the description.",
+               "tips": "Look for phrases that indicate a person's profession or area of study."
+            },
+            {
+               "question": "Which group of people work to protect the environment?",
+               "correctOption": "E",
+               "explanation": "The description mentions that they are a group of people who work to protect the environment. Distractors A and B are incorrect because they do not match the description.",
+               "tips": "Look for phrases that indicate a group of people working together towards a common goal."
+            },
+            {
+               "question": "Which person is a teacher who educates students about climate change?",
+               "correctOption": "F",
+               "explanation": "The description mentions that she is a teacher who educates students about climate change. Distractors A and C are incorrect because they do not match the description.",
+               "tips": "Look for phrases that indicate a person's profession or area of expertise."
+            },
+            {
+               "question": "Which person is a businessman who invests in green technology?",
+               "correctOption": "G",
+               "explanation": "The description mentions that he is a businessman who invests in green technology. Distractors A and C are incorrect because they do not match the description.",
+               "tips": "Look for phrases that indicate a person's profession or area of investment."
+            },
+            {
+               "question": "Which family recycles and reduces their waste?",
+               "correctOption": "H",
+               "explanation": "The description mentions that they are a family who recycles and reduces their waste. Distractors A and B are incorrect because they do not match the description.",
+               "tips": "Look for phrases that indicate a family's practices or habits."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "The park is closed due to heavy rain.",
+               "question": "Why is the park closed?",
+               "options": [
+                  "A. Because of heavy rain",
+                  "B. Because of a festival",
+                  "C. Because of a concert"
+               ],
+               "correctOption": "A",
+               "explanation": "The text explicitly states that the park is closed due to heavy rain. Distractors B and C are incorrect because they do not match the reason given.",
+               "tips": "Read the text carefully and identify the main reason or cause mentioned."
+            },
+            {
+               "text": "The recycling bin is full. Please take out the trash.",
+               "question": "What should you do?",
+               "options": [
+                  "A. Take out the trash",
+                  "B. Leave the trash in the bin",
+                  "C. Go shopping for more bins"
+               ],
+               "correctOption": "A",
+               "explanation": "The text instructs the reader to take out the trash. Distractors B and C are incorrect because they do not match the instruction given.",
+               "tips": "Look for phrases that indicate a request or instruction."
+            },
+            {
+               "text": "The library is open from 9am to 5pm.",
+               "question": "When is the library open?",
+               "options": [
+                  "A. From 9am to 5pm",
+                  "B. From 10am to 6pm",
+                  "C. From 8am to 7pm"
+               ],
+               "correctOption": "A",
+               "explanation": "The text explicitly states that the library is open from 9am to 5pm. Distractors B and C are incorrect because they do not match the hours given.",
+               "tips": "Read the text carefully and identify the specific times or dates mentioned."
+            },
+            {
+               "text": "Meet me at the park at 2pm.",
+               "question": "Where should you meet the person?",
+               "options": [
+                  "A. At home",
+                  "B. At the park",
+                  "C. At the store"
+               ],
+               "correctOption": "B",
+               "explanation": "The text explicitly states that you should meet the person at the park. Distractors A and C are incorrect because they do not match the location given.",
+               "tips": "Look for phrases that indicate a specific location or place."
+            },
+            {
+               "text": "The concert is cancelled due to bad weather.",
+               "question": "Why was the concert cancelled?",
+               "options": [
+                  "A. Because of bad weather",
+                  "B. Because of a technical issue",
+                  "C. Because of a change in schedule"
+               ],
+               "correctOption": "A",
+               "explanation": "The text explicitly states that the concert was cancelled due to bad weather. Distractors B and C are incorrect because they do not match the reason given.",
+               "tips": "Read the text carefully and identify the main reason or cause mentioned."
+            },
+            {
+               "text": "Please turn off the lights when you leave.",
+               "question": "What should you do?",
+               "options": [
+                  "A. Turn on the lights",
+                  "B. Leave the lights on",
+                  "C. Turn off the lights"
+               ],
+               "correctOption": "C",
+               "explanation": "The text instructs the reader to turn off the lights. Distractors A and B are incorrect because they do not match the instruction given.",
+               "tips": "Look for phrases that indicate a request or instruction."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "content": "The company is (1) _______ a new product. The product is (2) _______ for the environment. It uses (3) _______ energy and produces (4) _______ waste. The company hopes that the product will (5) _______ in the market and be (6) _______ by customers.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. launching",
+                  "B. producing",
+                  "C. selling"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'launching' because the company is introducing a new product. Distractors B and C are incorrect because they do not match the context.",
+               "tips": "Read the text carefully and identify the verb that best fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. suitable",
+                  "B. harmful",
+                  "C. helpful"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'suitable' because the product is designed for the environment. Distractors B and C are incorrect because they do not match the context.",
+               "tips": "Look for phrases that indicate a relationship between the product and the environment."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. renewable",
+                  "B. non-renewable",
+                  "C. sustainable"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'renewable' because the product uses energy that can be replenished naturally. Distractors B and C are incorrect because they do not match the context.",
+               "tips": "Read the text carefully and identify the type of energy used by the product."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. minimal",
+                  "B. excessive",
+                  "C. zero"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'minimal' because the product produces little to no waste. Distractors B and C are incorrect because they do not match the context.",
+               "tips": "Look for phrases that indicate the amount of waste produced by the product."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. sell",
+                  "B. succeed",
+                  "C. fail"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'succeed' because the company hopes that the product will be popular and profitable. Distractors A and C are incorrect because they do not match the context.",
+               "tips": "Read the text carefully and identify the verb that best fits the context."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. liked",
+                  "B. liked by",
+                  "C. loved"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'liked by' because the company hopes that customers will appreciate the product. Distractors A and C are incorrect because they do not match the context.",
+               "tips": "Look for phrases that indicate the relationship between customers and the product."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "content": "The company is (1) _______ a new product. The product is (2) _______ for the environment. It uses (3) _______ energy and produces (4) _______ waste. The company hopes that the product will (5) _______ in the market and be (6) _______ by customers.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "launching",
+               "explanation": "The correct answer is 'launching' because the company is introducing a new product.",
+               "tips": "Read the text carefully and identify the verb that best fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "friendly",
+               "explanation": "The correct answer is 'friendly' because the product is designed for the environment.",
+               "tips": "Look for phrases that indicate a relationship between the product and the environment."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "solar",
+               "explanation": "The correct answer is 'solar' because the product uses energy that can be replenished naturally.",
+               "tips": "Read the text carefully and identify the type of energy used by the product."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "little",
+               "explanation": "The correct answer is 'little' because the product produces little to no waste.",
+               "tips": "Look for phrases that indicate the amount of waste produced by the product."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "popular",
+               "explanation": "The correct answer is 'popular' because the company hopes that the product will be popular and profitable.",
+               "tips": "Read the text carefully and identify the verb that best fits the context."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "loved",
+               "explanation": "The correct answer is 'loved' because the company hopes that customers will appreciate the product.",
+               "tips": "Look for phrases that indicate the relationship between customers and the product."
+            }
+         ]
+      }
+   ]
+}

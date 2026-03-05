@@ -1,0 +1,350 @@
+{
+  "examTitle": "CEFR A1 Mock Exam: Food & Nutrition",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Food Basics",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "content": "Eating well is very important. We need food to give us energy. Food is made of different things like fruits, vegetables, and grains. Fruits are sweet and good for us. They have vitamins and minerals. We can eat them raw or cook them. Vegetables are also good for us. They have fibre and vitamins. Grains are a good source of carbohydrates. We can eat bread, rice, and pasta. We should eat a variety of foods every day.",
+         "questions": [
+            {
+               "question": "What do we need food for?",
+               "options": [
+                  "A. To make us strong",
+                  "B. To give us energy",
+                  "C. To make us happy"
+               ],
+               "explanation": "The correct answer is 'B. To give us energy' because the text states that 'We need food to give us energy'. The distractors 'A. To make us strong' and 'C. To make us happy' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "What are some examples of fruits?",
+               "options": [
+                  "A. Bread, rice, and pasta",
+                  "B. Fruits, vegetables, and grains",
+                  "C. Chicken, fish, and eggs"
+               ],
+               "explanation": "The correct answer is 'B. Fruits, vegetables, and grains' because the text lists these as examples of food. The distractors 'A. Bread, rice, and pasta' and 'C. Chicken, fish, and eggs' are not correct because they are not mentioned in the text.",
+               "tips": "Look for key words or phrases in the text that can help you answer the question."
+            },
+            {
+               "question": "What are some benefits of eating fruits?",
+               "options": [
+                  "A. They have fibre and vitamins",
+                  "B. They have only sweet things",
+                  "C. They have only healthy things"
+               ],
+               "explanation": "The correct answer is 'A. They have fibre and vitamins' because the text states that 'Fruits are sweet and good for us. They have vitamins and minerals'. The distractors 'B. They have only sweet things' and 'C. They have only healthy things' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "What should we eat every day?",
+               "options": [
+                  "A. Only fruits",
+                  "B. Only vegetables",
+                  "C. A variety of foods"
+               ],
+               "explanation": "The correct answer is 'C. A variety of foods' because the text states that 'We should eat a variety of foods every day'. The distractors 'A. Only fruits' and 'B. Only vegetables' are not correct because the text mentions eating a variety of foods.",
+               "tips": "Look for key words or phrases in the text that can help you answer the question."
+            },
+            {
+               "question": "What are some examples of grains?",
+               "options": [
+                  "A. Fruits, vegetables, and grains",
+                  "B. Bread, rice, and pasta",
+                  "C. Chicken, fish, and eggs"
+               ],
+               "explanation": "The correct answer is 'B. Bread, rice, and pasta' because the text lists these as examples of grains. The distractors 'A. Fruits, vegetables, and grains' and 'C. Chicken, fish, and eggs' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Why is it important to eat well?",
+               "options": [
+                  "A. So we can be happy",
+                  "B. So we can be strong",
+                  "C. So we can give energy to others"
+               ],
+               "explanation": "The correct answer is 'B. So we can be strong' because the text states that 'Eating well is very important'. The distractors 'A. So we can be happy' and 'C. So we can give energy to others' are not correct because they are not mentioned in the text.",
+               "tips": "Look for key words or phrases in the text that can help you answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Food and Nutrition Descriptions",
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "content": [
+            "Fruits are sweet and good for us.",
+            "We need food to give us energy.",
+            "Bread, rice, and pasta are good sources of carbohydrates.",
+            "Vegetables have fibre and vitamins.",
+            "We should eat a variety of foods every day.",
+            "Eating well is very important."
+         ],
+         "options": [
+            "A. Eating well is very important",
+            "B. Fruits are sweet and good for us",
+            "C. We need food to give us energy",
+            "D. Vegetables have fibre and vitamins",
+            "E. Bread, rice, and pasta are good sources of carbohydrates",
+            "F. We should eat a variety of foods every day"
+         ],
+         "questions": [
+            {
+               "question": "Which text states that we should eat a variety of foods every day?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F"
+               ],
+               "explanation": "The correct answer is 'F. We should eat a variety of foods every day' because the text states that 'We should eat a variety of foods every day'. The distractors 'A. Eating well is very important', 'B. Fruits are sweet and good for us', 'C. We need food to give us energy', 'D. Vegetables have fibre and vitamins', and 'E. Bread, rice, and pasta are good sources of carbohydrates' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Which text states that fruits are sweet and good for us?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F"
+               ],
+               "explanation": "The correct answer is 'B. Fruits are sweet and good for us' because the text states that 'Fruits are sweet and good for us'. The distractors 'A. Eating well is very important', 'C. We need food to give us energy', 'D. Vegetables have fibre and vitamins', 'E. Bread, rice, and pasta are good sources of carbohydrates', and 'F. We should eat a variety of foods every day' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Which text states that we need food to give us energy?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F"
+               ],
+               "explanation": "The correct answer is 'C. We need food to give us energy' because the text states that 'We need food to give us energy'. The distractors 'A. Eating well is very important', 'B. Fruits are sweet and good for us', 'D. Vegetables have fibre and vitamins', 'E. Bread, rice, and pasta are good sources of carbohydrates', and 'F. We should eat a variety of foods every day' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Which text states that vegetables have fibre and vitamins?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F"
+               ],
+               "explanation": "The correct answer is 'D. Vegetables have fibre and vitamins' because the text states that 'Vegetables are also good for us. They have fibre and vitamins'. The distractors 'A. Eating well is very important', 'B. Fruits are sweet and good for us', 'C. We need food to give us energy', 'E. Bread, rice, and pasta are good sources of carbohydrates', and 'F. We should eat a variety of foods every day' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Which text states that bread, rice, and pasta are good sources of carbohydrates?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F"
+               ],
+               "explanation": "The correct answer is 'E. Bread, rice, and pasta are good sources of carbohydrates' because the text states that 'Grains are a good source of carbohydrates. We can eat bread, rice, and pasta'. The distractors 'A. Eating well is very important', 'B. Fruits are sweet and good for us', 'C. We need food to give us energy', 'D. Vegetables have fibre and vitamins', and 'F. We should eat a variety of foods every day' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Which text states that eating well is very important?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F"
+               ],
+               "explanation": "The correct answer is 'A. Eating well is very important' because the text states that 'Eating well is very important'. The distractors 'B. Fruits are sweet and good for us', 'C. We need food to give us energy', 'D. Vegetables have fibre and vitamins', 'E. Bread, rice, and pasta are good sources of carbohydrates', and 'F. We should eat a variety of foods every day' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice Signs and Short Texts",
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "Breakfast: 7:00-9:00 am",
+               "question": "What time is breakfast?"
+            },
+            {
+               "text": "Lunch: 12:00-2:00 pm",
+               "question": "What time is lunch?"
+            },
+            {
+               "text": "Dinner: 6:00-8:00 pm",
+               "question": "What time is dinner?"
+            },
+            {
+               "text": "Please wash your hands before eating.",
+               "question": "What should you do before eating?"
+            },
+            {
+               "text": "This restaurant is closed today.",
+               "question": "Why can't you eat here today?"
+            },
+            {
+               "text": "The cafeteria is open from 8:00 am to 5:00 pm.",
+               "question": "What time is the cafeteria open?"
+            }
+         ],
+         "questions": [
+            {
+               "question": "What time is breakfast?",
+               "options": [
+                  "A. 7:00-9:00 am",
+                  "B. 12:00-2:00 pm",
+                  "C. 6:00-8:00 pm"
+               ],
+               "explanation": "The correct answer is 'A. 7:00-9:00 am' because the text states that 'Breakfast: 7:00-9:00 am'. The distractors 'B. 12:00-2:00 pm' and 'C. 6:00-8:00 pm' are not correct because they are the times for lunch and dinner, respectively.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "What time is lunch?",
+               "options": [
+                  "A. 7:00-9:00 am",
+                  "B. 12:00-2:00 pm",
+                  "C. 6:00-8:00 pm"
+               ],
+               "explanation": "The correct answer is 'B. 12:00-2:00 pm' because the text states that 'Lunch: 12:00-2:00 pm'. The distractors 'A. 7:00-9:00 am' and 'C. 6:00-8:00 pm' are not correct because they are the times for breakfast and dinner, respectively.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "What time is dinner?",
+               "options": [
+                  "A. 7:00-9:00 am",
+                  "B. 12:00-2:00 pm",
+                  "C. 6:00-8:00 pm"
+               ],
+               "explanation": "The correct answer is 'C. 6:00-8:00 pm' because the text states that 'Dinner: 6:00-8:00 pm'. The distractors 'A. 7:00-9:00 am' and 'B. 12:00-2:00 pm' are not correct because they are the times for breakfast and lunch, respectively.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "What should you do before eating?",
+               "options": [
+                  "A. Watch TV",
+                  "B. Wash your hands",
+                  "C. Take a nap"
+               ],
+               "explanation": "The correct answer is 'B. Wash your hands' because the text states that 'Please wash your hands before eating'. The distractors 'A. Watch TV' and 'C. Take a nap' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Why can't you eat here today?",
+               "options": [
+                  "A. Because the restaurant is closed",
+                  "B. Because the restaurant is open",
+                  "C. Because the restaurant is full"
+               ],
+               "explanation": "The correct answer is 'A. Because the restaurant is closed' because the text states that 'This restaurant is closed today'. The distractors 'B. Because the restaurant is open' and 'C. Because the restaurant is full' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "What time is the cafeteria open?",
+               "options": [
+                  "A. 8:00 am-5:00 pm",
+                  "B. 12:00-2:00 pm",
+                  "C. 6:00-8:00 pm"
+               ],
+               "explanation": "The correct answer is 'A. 8:00 am-5:00 pm' because the text states that 'The cafeteria is open from 8:00 am to 5:00 pm'. The distractors 'B. 12:00-2:00 pm' and 'C. 6:00-8:00 pm' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "content": "Eating well is very important. We need food to give us (1) _______ . Food is made of different things like fruits, vegetables, and grains. Fruits are sweet and good for us. They have (2) _______ and minerals. We can eat them raw or cook them. Vegetables are also good for us. They have fibre and (3) _______ . Grains are a good source of carbohydrates. We can eat bread, rice, and pasta. We should eat a variety of foods every day.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. energy",
+                  "B. vitamins",
+                  "C. water"
+               ],
+               "explanation": "The correct answer is 'A. energy' because the text states that 'We need food to give us energy'. The distractors 'B. vitamins' and 'C. water' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. vitamins and minerals",
+                  "B. fibre and minerals",
+                  "C. water and carbs"
+               ],
+               "explanation": "The correct answer is 'A. vitamins and minerals' because the text states that 'Fruits are sweet and good for us. They have vitamins and minerals'. The distractors 'B. fibre and minerals' and 'C. water and carbs' are not correct because they are not mentioned in the text.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. vitamins",
+                  "B. minerals",
+                  "C. fibre"
+               ],
+               "explanation": "The correct answer is 'C. fibre' because the text states that 'Vegetables are also good for us. They have fibre and vitamins'. The distractors 'A. vitamins' and 'B. minerals' are not correct because they are not mentioned in the text as the correct item.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "content": "Eating well is very _______ (1) _______ . We need food to give us _______ (2) _______ . Food is made of different things like _______ (3) _______ , vegetables, and grains. Fruits are sweet and good for us. They have _______ (4) _______ and minerals. We can eat them raw or cook them. Vegetables are also good for us. They have fibre and _______ (5) _______ . Grains are a good source of carbohydrates. We can eat bread, rice, and pasta. We should eat a variety of foods every _______ (6) _______ .",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "important",
+               "explanation": "The correct answer is 'important' because the text states that 'Eating well is very important'.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "energy",
+               "explanation": "The correct answer is 'energy' because the text states that 'We need food to give us energy'.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "fruits",
+               "explanation": "The correct answer is 'fruits' because the text lists 'fruits, vegetables, and grains' as examples of food.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "vitamins",
+               "explanation": "The correct answer is 'vitamins' because the text states that 'Fruits are sweet and good for us. They have vitamins and minerals'.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "vitamins",
+               "explanation": "The correct answer is 'vitamins' because the text states that 'Vegetables are also good for us. They have fibre and vitamins'.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "day",
+               "explanation": "The correct answer is 'day' because the text states that 'We should eat a variety of foods every day'.",
+               "tips": "Read the text carefully and look for key words or phrases that can help you answer the question."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,226 @@
+{
+  "examTitle": "CEFR A1 Mock Reading and Use of English Exam - Arts & Culture",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Famous Artists",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "content": "The Louvre Museum is one of the most famous museums in the world. It is located in Paris, France. Many people visit the Louvre every year. The Louvre has a lot of artworks by famous artists. Leonardo da Vinci, Michelangelo, and Raphael are some of the most famous artists whose artworks are in the Louvre. Their artworks are very beautiful and many people like them. The Louvre also has artworks by other artists from many different countries. The artworks in the Louvre are very important because they tell us about the history of art. They also help us to understand the different cultures of the past.",
+         "questions": [
+            {
+               "question": "Where is the Louvre Museum located?",
+               "options": ["A. London, England", "B. Paris, France", "C. New York, USA"],
+               "explanation": "The correct answer is B. Paris, France. This is because the text states that the Louvre Museum is located in Paris, France. The other options are incorrect because the text does not mention London or New York as the location of the Louvre Museum.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks where the Louvre Museum is located, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Who are some famous artists whose artworks are in the Louvre?",
+               "options": ["A. Leonardo da Vinci, Michelangelo, and Raphael", "B. Vincent van Gogh, Claude Monet, and Pablo Picasso", "C. Johannes Vermeer, Rembrandt, and Caravaggio"],
+               "explanation": "The correct answer is A. Leonardo da Vinci, Michelangelo, and Raphael. This is because the text states that the Louvre has artworks by these three artists. The other options are incorrect because they mention different artists.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks about famous artists, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Why are the artworks in the Louvre important?",
+               "options": ["A. Because they are very expensive", "B. Because they are very beautiful", "C. Because they tell us about the history of art and the different cultures of the past"],
+               "explanation": "The correct answer is C. Because they tell us about the history of art and the different cultures of the past. This is because the text states that the artworks in the Louvre are important because they tell us about the history of art and the different cultures of the past. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks why the artworks in the Louvre are important, so look for the sentence that tells you this."
+            },
+            {
+               "question": "How many people visit the Louvre every year?",
+               "options": ["A. A few people", "B. Many people", "C. No one"],
+               "explanation": "The correct answer is B. Many people. This is because the text states that many people visit the Louvre every year. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how many people visit the Louvre every year, so look for the sentence that tells you this."
+            },
+            {
+               "question": "What is the Louvre Museum?",
+               "options": ["A. A library", "B. A museum", "C. A park"],
+               "explanation": "The correct answer is B. A museum. This is because the text states that the Louvre is one of the most famous museums in the world. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the Louvre Museum is, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Where is the text talking about?",
+               "options": ["A. Paris, France", "B. New York, USA", "C. London, England"],
+               "explanation": "The correct answer is A. Paris, France. This is because the text states that the Louvre Museum is located in Paris, France. The other options are incorrect because the text does not mention London or New York as the location of the Louvre Museum.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks where the text is talking about, so look for the information that tells you this."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Famous Paintings with their Artists",
+         "instructions": "Match the descriptions to the correct artist. There are more items than you need.",
+         "content": "The Mona Lisa is a famous painting by Leonardo da Vinci. It is a portrait of a woman. The painting is very small and is made of oil on a wooden panel. The Starry Night is a painting by Vincent van Gogh. It is a depiction of the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence. The Last Supper is a painting by Leonardo da Vinci. It is a depiction of the last meal Jesus shared with his twelve apostles before he was betrayed.",
+         "questions": [
+            {
+               "question": "Which artist painted The Starry Night?",
+               "options": ["A. Leonardo da Vinci", "B. Vincent van Gogh", "C. Michelangelo"],
+               "explanation": "The correct answer is B. Vincent van Gogh. This is because the text states that The Starry Night is a painting by Vincent van Gogh. The other options are incorrect because they mention different artists.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which artist painted The Starry Night, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Which painting is a portrait of a woman?",
+               "options": ["A. The Last Supper", "B. The Mona Lisa", "C. The Starry Night"],
+               "explanation": "The correct answer is B. The Mona Lisa. This is because the text states that The Mona Lisa is a portrait of a woman. The other options are incorrect because they do not mention that they are portraits of a woman.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which painting is a portrait of a woman, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Which artist painted The Last Supper?",
+               "options": ["A. Vincent van Gogh", "B. Leonardo da Vinci", "C. Michelangelo"],
+               "explanation": "The correct answer is B. Leonardo da Vinci. This is because the text states that The Last Supper is a painting by Leonardo da Vinci. The other options are incorrect because they mention different artists.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which artist painted The Last Supper, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Which painting is a depiction of the view from the east-facing window of an asylum room?",
+               "options": ["A. The Mona Lisa", "B. The Last Supper", "C. The Starry Night"],
+               "explanation": "The correct answer is C. The Starry Night. This is because the text states that The Starry Night is a depiction of the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which painting is a depiction of the view from the east-facing window of an asylum room, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Which artist painted The Mona Lisa?",
+               "options": ["A. Michelangelo", "B. Vincent van Gogh", "C. Leonardo da Vinci"],
+               "explanation": "The correct answer is C. Leonardo da Vinci. This is because the text states that The Mona Lisa is a painting by Leonardo da Vinci. The other options are incorrect because they mention different artists.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which artist painted The Mona Lisa, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Which painting is a depiction of the last meal Jesus shared with his twelve apostles?",
+               "options": ["A. The Starry Night", "B. The Last Supper", "C. The Mona Lisa"],
+               "explanation": "The correct answer is B. The Last Supper. This is because the text states that The Last Supper is a depiction of the last meal Jesus shared with his twelve apostles. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which painting is a depiction of the last meal Jesus shared with his twelve apostles, so look for the sentence that tells you this."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "content": "Welcome to the Louvre Museum. The Louvre is one of the most famous museums in the world. It has a lot of artworks by famous artists. The museum is open every day from 9am to 6pm. Please take your ticket and go through the security check. The museum is closed on Mondays.",
+         "questions": [
+            {
+               "question": "What is the Louvre Museum?",
+               "options": ["A. A library", "B. A museum", "C. A park"],
+               "explanation": "The correct answer is B. A museum. This is because the text states that the Louvre is one of the most famous museums in the world. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the Louvre Museum is, so look for the sentence that tells you this."
+            },
+            {
+               "question": "What are the opening hours of the Louvre Museum?",
+               "options": ["A. 9am to 6pm", "B. 10am to 7pm", "C. 11am to 8pm"],
+               "explanation": "The correct answer is A. 9am to 6pm. This is because the text states that the museum is open every day from 9am to 6pm. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the opening hours of the Louvre Museum are, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Which day of the week is the Louvre Museum closed?",
+               "options": ["A. Monday", "B. Tuesday", "C. Wednesday"],
+               "explanation": "The correct answer is A. Monday. This is because the text states that the museum is closed on Mondays. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks which day of the week the Louvre Museum is closed, so look for the sentence that tells you this."
+            },
+            {
+               "question": "What do you need to do when you enter the Louvre Museum?",
+               "options": ["A. Take a picture", "B. Take your ticket and go through the security check", "C. Buy a ticket"],
+               "explanation": "The correct answer is B. Take your ticket and go through the security check. This is because the text states that you should take your ticket and go through the security check when you enter the museum. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what you need to do when you enter the Louvre Museum, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Is the Louvre Museum open every day?",
+               "options": ["A. Yes", "B. No", "C. Only on weekends"],
+               "explanation": "The correct answer is A. Yes. This is because the text states that the museum is open every day from 9am to 6pm. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks if the Louvre Museum is open every day, so look for the sentence that tells you this."
+            },
+            {
+               "question": "What is the purpose of the security check at the Louvre Museum?",
+               "options": ["A. To take a picture", "B. To buy a ticket", "C. To go through the security check"],
+               "explanation": "The correct answer is C. To go through the security check. This is because the text states that you should take your ticket and go through the security check when you enter the museum. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what is the purpose of the security check at the Louvre Museum, so look for the sentence that tells you this."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "content": "The famous painting, (1) _______ (2) _______ by Leonardo da Vinci, is a (3) _______ portrait of a woman. The subject of the painting, (4) _______ Lisa, is believed to be (5) _______ by many art historians. The painting is (6) _______ small, only 30 x 21 cm in size.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. The Mona Lisa", "B. The Last Supper", "C. The Starry Night"],
+               "explanation": "The correct answer is A. The Mona Lisa. This is because the text states that the famous painting is called The Mona Lisa. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the famous painting is called, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. was painted", "B. is painted", "C. is shown"],
+               "explanation": "The correct answer is A. was painted. This is because the text states that the painting was painted by Leonardo da Vinci. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how the painting was painted, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. a big", "B. a small", "C. a very small"],
+               "explanation": "The correct answer is C. a very small. This is because the text states that the painting is very small. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how small the painting is, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. Lisa", "B. Mary", "C. Sarah"],
+               "explanation": "The correct answer is A. Lisa. This is because the text states that the subject of the painting is called Lisa. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the subject of the painting is called, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. believed to be", "B. known to be", "C. thought to be"],
+               "explanation": "The correct answer is A. believed to be. This is because the text states that many art historians believe the subject of the painting to be Lisa. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how many art historians believe the subject of the painting to be, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. is very small", "B. is small", "C. is very big"],
+               "explanation": "The correct answer is B. is small. This is because the text states that the painting is small. The other options are incorrect because they do not mention this.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how small the painting is, so look for the sentence that tells you this."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "content": "The (1) _______ (2) _______ is a famous painting by Leonardo da Vinci. It is a (3) _______ portrait of a woman. The subject of the painting, (4) _______ Lisa, is believed to be (5) _______ by many art historians. The painting is (6) _______ small, only 30 x 21 cm in size.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "famous",
+               "explanation": "The correct answer is famous. This is because the text states that the Mona Lisa is a famous painting.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the Mona Lisa is, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "was",
+               "explanation": "The correct answer is was. This is because the text states that the Mona Lisa was painted by Leonardo da Vinci.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how the Mona Lisa was painted, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "very",
+               "explanation": "The correct answer is very. This is because the text states that the Mona Lisa is a very small painting.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how small the Mona Lisa is, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "the",
+               "explanation": "The correct answer is the. This is because the text states that the subject of the painting is called the Mona Lisa.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks what the subject of the painting is called, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "believed",
+               "explanation": "The correct answer is believed. This is because the text states that many art historians believe the subject of the painting to be Lisa.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how many art historians believe the subject of the painting to be, so look for the sentence that tells you this."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "is",
+               "explanation": "The correct answer is is. This is because the text states that the Mona Lisa is a small painting.",
+               "tips": "When reading the text, look for the information that answers the question. In this case, the question asks how small the Mona Lisa is, so look for the sentence that tells you this."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,115 @@
+{
+  "examTitle": "Work and Career: A2 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "content": "Many people like to work from home because they can avoid the daily commute. They can also work in their pajamas if they want to. Some people think it's a good idea to have a dedicated workspace at home. This can help them stay focused and avoid distractions. However, not everyone agrees. Some people think that working from home can be isolating and that it's better to be around other people. They also think that it can be harder to separate work from personal life when you're working from home.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why do some people like to work from home?",
+               "options": ["A. To avoid the daily commute", "B. To have a dedicated workspace", "C. To be around other people"],
+               "explanation": "The correct answer is A. To avoid the daily commute. This is because the text states that many people like to work from home because they can avoid the daily commute. Options B and C are incorrect because the text does not mention anything about having a dedicated workspace or being around other people as reasons why people like to work from home.",
+               "tips": "Look for the main reasons why people like to work from home in the text."
+            },
+            {
+               "question": "What can working from home make harder?",
+               "options": ["A. Separating work from personal life", "B. Avoiding distractions", "C. Staying focused"],
+               "explanation": "The correct answer is A. Separating work from personal life. This is because the text states that some people think that working from home can be harder to separate work from personal life. Options B and C are incorrect because the text does not mention anything about working from home making it harder to avoid distractions or stay focused.",
+               "tips": "Look for the reasons why some people think working from home is not a good idea in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching",
+         "content": {
+            "A": "John is a marketing manager at a large company.",
+            "B": "Emily is a freelance writer and works from home.",
+            "C": "Michael is a teacher and has a part-time job as a waiter.",
+            "D": "Sarah is a software engineer and works remotely two days a week.",
+            "E": "David is a entrepreneur and has his own business."
+         },
+         "options": ["A. B", "B. C", "C. D", "D. E", "E. A"],
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "What is John's job?",
+               "options": ["A. Freelance writer", "B. Marketing manager", "C. Software engineer", "D. Teacher"],
+               "explanation": "The correct answer is B. Marketing manager. This is because the text states that John is a marketing manager at a large company. Options A, C, and D are incorrect because the text does not mention anything about John being a freelance writer, software engineer, or teacher.",
+               "tips": "Look for the job descriptions in the text."
+            },
+            {
+               "question": "How many days a week does Sarah work remotely?",
+               "options": ["A. 2 days", "B. 3 days", "C. 4 days", "D. 5 days"],
+               "explanation": "The correct answer is A. 2 days. This is because the text states that Sarah is a software engineer and works remotely two days a week. Options B, C, and D are incorrect because the text does not mention anything about Sarah working remotely three, four, or five days a week.",
+               "tips": "Look for specific details about Sarah's job in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs",
+         "content": [
+            "The meeting will start at 2 PM. Please be there on time.",
+            "Lost and found: If you have lost something, please contact reception.",
+            "The cafeteria is open from 12 PM to 2 PM.",
+            "Please do not eat in the library.",
+            "The company will be closed on Monday for a holiday.",
+            "The deadline for the project is Friday at 5 PM."
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What time will the meeting start?",
+               "options": ["A. 1 PM", "B. 2 PM", "C. 3 PM"],
+               "explanation": "The correct answer is B. 2 PM. This is because the text states that the meeting will start at 2 PM. Options A and C are incorrect because the text does not mention anything about the meeting starting at 1 PM or 3 PM.",
+               "tips": "Look for specific details about the meeting in the text."
+            },
+            {
+               "question": "Where should you not eat?",
+               "options": ["A. The cafeteria", "B. The library", "C. The reception"],
+               "explanation": "The correct answer is B. The library. This is because the text states that you should not eat in the library. Options A and C are incorrect because the text does not mention anything about not eating in the cafeteria or reception.",
+               "tips": "Look for the rules and regulations in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "Many people like to work from (1) _______ because they can avoid the daily (2) _______. They can also work in their (3) _______ if they want to. Some people think it's a good idea to have a dedicated (4) _______ at home. This can help them stay focused and avoid (5) _______. However, not everyone agrees. Some people think that working from home can be (6) _______ and that it's better to be around other people.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. office", "B. home", "C. school"],
+               "explanation": "The correct answer is B. home. This is because the text states that many people like to work from home. Options A and C are incorrect because the text does not mention anything about working from an office or school.",
+               "tips": "Look for the main reasons why people like to work from home in the text."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. commute", "B. work", "C. life"],
+               "explanation": "The correct answer is A. commute. This is because the text states that they can avoid the daily commute. Options B and C are incorrect because the text does not mention anything about avoiding work or life.",
+               "tips": "Look for the reasons why people like to work from home in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "Many people like to work from (1) _______ because they can avoid the daily (2) _______. They can also work in their (3) _______ if they want to. Some people think it's a good idea to have a dedicated (4) _______ at home. This can help them stay (5) _______ and avoid (6) _______. However, not everyone agrees. Some people think that working from home can be (7) _______ and that it's better to be around other people.",
+         "options": [],
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "home",
+               "explanation": "The correct answer is home. This is because the text states that many people like to work from home.",
+               "tips": "Look for the main reasons why people like to work from home in the text."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "commute",
+               "explanation": "The correct answer is commute. This is because the text states that they can avoid the daily commute.",
+               "tips": "Look for the reasons why people like to work from home in the text."
+            }
+         ]
+      }
+   ]
+}

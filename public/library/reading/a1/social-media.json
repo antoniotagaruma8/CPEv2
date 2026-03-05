@@ -1,0 +1,89 @@
+{
+  "examTitle": "Social Media for Absolute Beginners",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension - Social Media",
+         "questions": 6,
+         "content": "Social media is an important part of modern life. Many people use social media to stay in touch with friends and family who live far away. They also use it to find out what is happening in the world. Some people use social media to share their thoughts and feelings. Others use it to show off their lives. But social media can also be bad for people. It can make them feel lonely and unhappy. Some people spend too much time on social media and not enough time with real people.",
+         "instructions": "Read the text. Choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What do people use social media for?",
+               "options": ["A. To stay in touch with friends and family", "B. To play games", "C. To watch TV"],
+               "explanation": "The writer says that people use social media to stay in touch with friends and family who live far away. This is a correct statement. The other options are not mentioned in the text.",
+               "tips": "Read the text carefully and look for information about what people use social media for."
+            },
+            {
+               "question": "Why is social media bad for people?",
+               "options": ["A. Because it makes them feel happy", "B. Because it makes them feel lonely and unhappy", "C. Because it makes them strong"],
+               "explanation": "The writer says that social media can make people feel lonely and unhappy. This is a correct statement. The other options are not mentioned in the text.",
+               "tips": "Read the text carefully and look for information about the negative effects of social media."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching - Social Media Descriptions",
+         "questions": 6,
+         "content": "Some people use social media to share their thoughts and feelings. Others use it to show off their lives. Social media can make people feel lonely and unhappy. It can also make them feel happy and connected to others. Some people use social media to find out what is happening in the world.",
+         "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+         "questions": [
+            {
+               "question": "Which text states that some people use social media to share their thoughts and feelings?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is A. However, there are more options than questions, which is normal for matching tasks.",
+               "tips": "Read the descriptions carefully and match them to the correct item."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Social Media",
+         "questions": 6,
+         "content": [
+            "Follow me on Instagram @john123.",
+            "I love Facebook. It's so much fun!",
+            "Twitter is a great way to stay up-to-date with news.",
+            "I'm not on social media. I don't have time.",
+            "Social media is bad for you. It's true.",
+            "I'm following 500 people on Twitter."
+         ],
+         "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the first text say?",
+               "options": ["A. The author loves Facebook", "B. The author is following 500 people on Twitter", "C. The author wants you to follow them on Instagram"],
+               "explanation": "The correct answer is C. The text says 'Follow me on Instagram @john123.'",
+               "tips": "Read the text carefully and look for the main message."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill - Social Media",
+         "questions": 6,
+         "content": "Social media is a (1) _______ way to stay in touch with friends and family who live far away. Many people use social media to (2) _______ their thoughts and feelings. Some people use social media to (3) _______ off their lives. But social media can also be (4) _______ for people. It can make them feel (5) _______ and unhappy. Some people spend too much time on social media and not enough time with (6) _______ people.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. good", "B. bad", "C. easy"],
+               "explanation": "The correct answer is A. The text says that social media is a good way to stay in touch with friends and family.",
+               "tips": "Read the text carefully and look for words that make sense in the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill - Social Media",
+         "questions": 6,
+         "content": "Some people use social media (1) _______ share their thoughts and feelings. Others use it (2) _______ show off their lives. Social media can (3) _______ people feel lonely and unhappy. It can also (4) _______ people feel happy and connected to others. Some people use social media (5) _______ find out what is happening in the world. They use it (6) _______ stay in touch with friends and family who live far away.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "to",
+               "explanation": "The correct answer is 'to'. The text says that some people use social media to share their thoughts and feelings.",
+               "tips": "Read the text carefully and look for words that make sense in the context."
+            }
+         ]
+      }
+   ]
+}

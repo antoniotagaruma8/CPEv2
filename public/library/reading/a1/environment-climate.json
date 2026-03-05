@@ -1,0 +1,376 @@
+{
+  "examTitle": "Environment & Climate A1 Exam",
+   "parts": [
+       {
+           "title": "Part 1: Multiple-Choice Reading Comprehension on Environmental Issues",
+           "content": "The Earth is our home. We must keep it clean. There are many ways to help the environment. We can use public transport or walk to school. We can also turn off the lights when we are not using them. Some people like to plant trees and flowers in their gardens. This helps to keep the air clean. What can we do to help the environment? We can start by reducing, reusing, and recycling. We can reduce the amount of plastic we use, reuse bags and bottles, and recycle paper and glass. Every small action can help to make a big difference.",
+           "instructions": "Read the text. Choose the correct answer A, B or C.",
+           "questions": [
+               {
+                   "question": "What must we do to the Earth?",
+                   "options": [
+                       "A. Make it dirty",
+                       "B. Keep it clean",
+                       "C. Sell it"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the text states that we must keep the Earth clean. Option A is incorrect because it is the opposite of what the text says. Option C is also incorrect because we cannot sell the Earth.",
+                   "tips": "Read the question carefully and look for the answer in the text."
+               },
+               {
+                   "question": "How can we help the environment?",
+                   "options": [
+                       "A. By using more plastic",
+                       "B. By using public transport or walking to school",
+                       "C. By turning on the lights all the time"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the text states that we can use public transport or walk to school to help the environment. Option A is incorrect because using more plastic harms the environment. Option C is also incorrect because turning on the lights all the time wastes energy.",
+                   "tips": "Think about what you can do in your daily life to help the environment."
+               },
+               {
+                   "question": "What can we do to reduce waste?",
+                   "options": [
+                       "A. Use more plastic bags",
+                       "B. Reduce, reuse, and recycle",
+                       "C. Throw away more paper"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the text states that we can reduce, reuse, and recycle to help the environment. Option A is incorrect because using more plastic bags harms the environment. Option C is also incorrect because throwing away more paper wastes resources.",
+                   "tips": "Remember the 3Rs: reduce, reuse, and recycle."
+               },
+               {
+                   "question": "Why is it important to plant trees and flowers?",
+                   "options": [
+                       "A. Because they are pretty",
+                       "B. Because they help to keep the air clean",
+                       "C. Because they can be used as food"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the text states that planting trees and flowers helps to keep the air clean. Option A is incorrect because while trees and flowers may be pretty, this is not the reason mentioned in the text. Option C is also incorrect because the text does not mention using trees and flowers as food.",
+                   "tips": "Think about how plants can help the environment."
+               },
+               {
+                   "question": "What can we do to make a big difference?",
+                   "options": [
+                       "A. Do nothing",
+                       "B. Take small actions",
+                       "C. Wait for someone else to act"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the text states that every small action can help to make a big difference. Option A is incorrect because doing nothing will not help the environment. Option C is also incorrect because waiting for someone else to act will not solve the problem.",
+                   "tips": "Remember that every small action counts."
+               },
+               {
+                   "question": "Why is it important to keep the Earth clean?",
+                   "options": [
+                       "A. Because it is our home",
+                       "B. Because it is not our responsibility",
+                       "C. Because it is someone else's problem"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is A, because the text states that the Earth is our home and we must keep it clean. Option B is incorrect because it is our responsibility to take care of the Earth. Option C is also incorrect because it is not someone else's problem, it is our problem.",
+                   "tips": "Think about why it is important to take care of the Earth."
+               }
+           ]
+       },
+       {
+           "title": "Part 2: Matching Environmental Practices with Descriptions",
+           "content": "A. Using public transport\nB. Planting trees\nC. Reducing plastic use\nD. Turning off lights\nE. Recycling paper\nF. Using solar energy\nG. Walking to school\nH. Using a bike",
+           "instructions": "Match the descriptions to the correct item. There are more items than you need.",
+           "questions": [
+               {
+                   "question": "Which option helps to reduce air pollution?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is A, because using public transport helps to reduce air pollution. Options B, C, D, E, F, G, and H are all good for the environment, but they do not directly reduce air pollution.",
+                   "tips": "Think about how different actions can affect the environment."
+               },
+               {
+                   "question": "Which option helps to conserve water?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "D",
+                   "explanation": "The correct answer is D, because turning off lights helps to conserve energy, which in turn helps to conserve water. Options A, B, C, E, F, G, and H are all good for the environment, but they do not directly conserve water.",
+                   "tips": "Think about how different actions can affect the environment."
+               },
+               {
+                   "question": "Which option helps to reduce waste?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "E",
+                   "explanation": "The correct answer is E, because recycling paper helps to reduce waste. Options A, B, C, D, F, G, and H are all good for the environment, but they do not directly reduce waste.",
+                   "tips": "Think about how different actions can affect the environment."
+               },
+               {
+                   "question": "Which option helps to reduce carbon footprint?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "F",
+                   "explanation": "The correct answer is F, because using solar energy helps to reduce carbon footprint. Options A, B, C, D, E, G, and H are all good for the environment, but they do not directly reduce carbon footprint.",
+                   "tips": "Think about how different actions can affect the environment."
+               },
+               {
+                   "question": "Which option helps to promote sustainable transportation?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "G",
+                   "explanation": "The correct answer is G, because walking to school helps to promote sustainable transportation. Options A, B, C, D, E, F, and H are all good for the environment, but they do not directly promote sustainable transportation.",
+                   "tips": "Think about how different actions can affect the environment."
+               },
+               {
+                   "question": "Which option helps to reduce energy consumption?",
+                   "options": [
+                       "A",
+                       "B",
+                       "C",
+                       "D",
+                       "E",
+                       "F",
+                       "G",
+                       "H"
+                   ],
+                   "correctOption": "D",
+                   "explanation": "The correct answer is D, because turning off lights helps to reduce energy consumption. Options A, B, C, E, F, G, and H are all good for the environment, but they do not directly reduce energy consumption.",
+                   "tips": "Think about how different actions can affect the environment."
+               }
+           ]
+       },
+       {
+           "title": "Part 3: Multiple-Choice for Short Environmental Texts",
+           "content": "Notice: Please turn off the lights when you leave the room.\nSign: Keep our park clean.\nLabel: Made from recycled materials.\nText message: Don't forget to bring your reusable bag.\nNotice: The beach is closed due to pollution.\nNotice: Please conserve water by taking shorter showers.",
+           "instructions": "Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+           "questions": [
+               {
+                   "question": "What does the notice about the lights mean?",
+                   "options": [
+                       "A. Turn on the lights when you leave the room",
+                       "B. Turn off the lights when you leave the room",
+                       "C. Leave the lights on all the time"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the notice asks people to turn off the lights when they leave the room. Option A is incorrect because it is the opposite of what the notice says. Option C is also incorrect because it wastes energy.",
+                   "tips": "Read the notice carefully and think about what it means."
+               },
+               {
+                   "question": "What does the sign about the park mean?",
+                   "options": [
+                       "A. Litter is allowed in the park",
+                       "B. Keep our park clean",
+                       "C. The park is closed"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the sign asks people to keep the park clean. Option A is incorrect because it is the opposite of what the sign says. Option C is also incorrect because the sign does not mention the park being closed.",
+                   "tips": "Read the sign carefully and think about what it means."
+               },
+               {
+                   "question": "What does the label about recycled materials mean?",
+                   "options": [
+                       "A. The product is made from new materials",
+                       "B. The product is made from recycled materials",
+                       "C. The product is not recyclable"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the label states that the product is made from recycled materials. Option A is incorrect because it is the opposite of what the label says. Option C is also incorrect because the label does not mention the product not being recyclable.",
+                   "tips": "Read the label carefully and think about what it means."
+               },
+               {
+                   "question": "What does the text message about the reusable bag mean?",
+                   "options": [
+                       "A. Don't bring a reusable bag",
+                       "B. Bring a reusable bag",
+                       "C. Use a plastic bag instead"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the text message reminds the person to bring a reusable bag. Option A is incorrect because it is the opposite of what the text message says. Option C is also incorrect because using a plastic bag instead is not what the text message suggests.",
+                   "tips": "Read the text message carefully and think about what it means."
+               },
+               {
+                   "question": "What does the notice about the beach mean?",
+                   "options": [
+                       "A. The beach is open",
+                       "B. The beach is closed due to pollution",
+                       "C. The beach is closed for maintenance"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the notice states that the beach is closed due to pollution. Option A is incorrect because the notice says the beach is closed, not open. Option C is also incorrect because the notice does not mention the beach being closed for maintenance.",
+                   "tips": "Read the notice carefully and think about what it means."
+               },
+               {
+                   "question": "What does the notice about water conservation mean?",
+                   "options": [
+                       "A. Take longer showers to conserve water",
+                       "B. Take shorter showers to conserve water",
+                       "C. Don't conserve water"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because the notice asks people to take shorter showers to conserve water. Option A is incorrect because taking longer showers would waste water, not conserve it. Option C is also incorrect because the notice does not suggest not conserving water.",
+                   "tips": "Read the notice carefully and think about what it means."
+               }
+           ]
+       },
+       {
+           "title": "Part 4: Multiple-Choice Gap-Fill on Environmental Issues",
+           "content": "The (1) _______ of the Earth is our most important resource. We must (2) _______ our energy consumption to reduce pollution. One way to do this is to use (3) _______ energy sources like solar and wind power. We can also (4) _______ our carbon footprint by reducing our use of fossil fuels. Additionally, we must (5) _______ our natural resources like water and land. Finally, we must (6) _______ to reduce, reuse, and recycle to minimize waste.",
+           "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+           "questions": [
+               {
+                   "question": "Gap 1",
+                   "options": [
+                       "A. Air",
+                       "B. Water",
+                       "C. Environment"
+                   ],
+                   "correctOption": "C",
+                   "explanation": "The correct answer is C, because the environment is our most important resource. Option A is incorrect because while air is important, it is not the most important resource. Option B is also incorrect because while water is crucial, it is not the most important resource mentioned in the context.",
+                   "tips": "Think about what the most important resource is in the context of the environment."
+               },
+               {
+                   "question": "Gap 2",
+                   "options": [
+                       "A. Increase",
+                       "B. Reduce",
+                       "C. Maintain"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because reducing energy consumption helps to reduce pollution. Option A is incorrect because increasing energy consumption would increase pollution. Option C is also incorrect because maintaining current energy consumption levels would not reduce pollution.",
+                   "tips": "Think about how reducing energy consumption can help the environment."
+               },
+               {
+                   "question": "Gap 3",
+                   "options": [
+                       "A. Renewable",
+                       "B. Non-renewable",
+                       "C. Sustainable"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is A, because renewable energy sources like solar and wind power are beneficial for the environment. Option B is incorrect because non-renewable energy sources harm the environment. Option C is also incorrect because while sustainable is a related concept, it is not the specific term used in this context.",
+                   "tips": "Think about the different types of energy sources and their impact on the environment."
+               },
+               {
+                   "question": "Gap 4",
+                   "options": [
+                       "A. Increase",
+                       "B. Reduce",
+                       "C. Maintain"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because reducing our carbon footprint helps the environment. Option A is incorrect because increasing our carbon footprint would harm the environment. Option C is also incorrect because maintaining our current carbon footprint would not improve the situation.",
+                   "tips": "Think about how reducing our carbon footprint can help the environment."
+               },
+               {
+                   "question": "Gap 5",
+                   "options": [
+                       "A. Protect",
+                       "B. Conserve",
+                       "C. Waste"
+                   ],
+                   "correctOption": "B",
+                   "explanation": "The correct answer is B, because conserving our natural resources is important for the environment. Option A is incorrect because while protecting resources is related, conserving is the more specific and appropriate term in this context. Option C is also incorrect because wasting resources is the opposite of what we should do.",
+                   "tips": "Think about the importance of conserving natural resources."
+               },
+               {
+                   "question": "Gap 6",
+                   "options": [
+                       "A. Try",
+                       "B. Forget",
+                       "C. Remember"
+                   ],
+                   "correctOption": "A",
+                   "explanation": "The correct answer is A, because trying to reduce, reuse, and recycle is a positive action for the environment. Option B is incorrect because forgetting to reduce, reuse, and recycle would be harmful. Option C is also incorrect because while remembering is important, trying is the more active and appropriate verb in this context.",
+                   "tips": "Think about the importance of taking action to reduce waste."
+               }
+           ]
+       },
+       {
+           "title": "Part 5: Open Gap-Fill on Environmental Conservation",
+           "content": "We must (1) _______ our environment to keep it clean. The (2) _______ of recycling is very important. We can (3) _______ our carbon footprint by using public transport. The (4) _______ of renewable energy sources is increasing. We must (5) _______ our natural resources like water and land. Finally, we must (6) _______ to reduce waste and promote sustainability.",
+           "instructions": "Read the text. Write ONE word for each gap.",
+           "questions": [
+               {
+                   "question": "Gap 1",
+                   "options": [],
+                   "correctOption": "protect",
+                   "explanation": "The correct answer is protect, because we must protect our environment to keep it clean. This is a basic and important concept in environmental conservation.",
+                   "tips": "Think about what we need to do to keep the environment clean."
+               },
+               {
+                   "question": "Gap 2",
+                   "options": [],
+                   "correctOption": "importance",
+                   "explanation": "The correct answer is importance, because the importance of recycling is very important for the environment. This highlights the significance of recycling in conservation efforts.",
+                   "tips": "Think about why recycling is crucial for the environment."
+               },
+               {
+                   "question": "Gap 3",
+                   "options": [],
+                   "correctOption": "reduce",
+                   "explanation": "The correct answer is reduce, because using public transport helps to reduce our carbon footprint. This is a direct action that individuals can take to contribute to environmental conservation.",
+                   "tips": "Think about how using public transport can help the environment."
+               },
+               {
+                   "question": "Gap 4",
+                   "options": [],
+                   "correctOption": "use",
+                   "explanation": "The correct answer is use, because the use of renewable energy sources is increasing. This indicates a positive trend towards more sustainable energy practices.",
+                   "tips": "Think about the benefits of using renewable energy sources."
+               },
+               {
+                   "question": "Gap 5",
+                   "options": [],
+                   "correctOption": "conserve",
+                   "explanation": "The correct answer is conserve, because we must conserve our natural resources like water and land. This emphasizes the need to protect and preserve these vital resources for future generations.",
+                   "tips": "Think about the importance of conserving natural resources."
+               },
+               {
+                   "question": "Gap 6",
+                   "options": [],
+                   "correctOption": "try",
+                   "explanation": "The correct answer is try, because we must try to reduce waste and promote sustainability. This encourages active effort and commitment to environmental conservation.",
+                   "tips": "Think about what we can do to reduce waste and promote sustainability."
+               }
+           ]
+       }
+   ]
+}

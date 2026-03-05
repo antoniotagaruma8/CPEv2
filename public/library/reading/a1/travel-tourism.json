@@ -1,0 +1,376 @@
+{
+  "examTitle":"Travel & Tourism A1 Mock Exam",
+   "parts":[
+      {
+         "title":"Part 1: Multiple-Choice Reading Comprehension on Travel Plans",
+         "content":"I am going to the beach for my holiday. The weather is usually sunny in July. I will pack my swimsuit, sunglasses, and sun cream. My friends and I will play volleyball and swim in the sea. We will have a picnic on the beach with sandwiches, fruit, and water. I am very excited about my trip.",
+         "instructions":"Read the text. Choose the correct answer A, B or C.",
+         "questions":[
+            {
+               "question":"What is the writer going to do for their holiday?",
+               "options":[
+                  "A. Go to the mountains",
+                  "B. Go to the beach",
+                  "C. Go to the city"
+               ],
+               "correctOption":"B",
+               "explanation":"The writer states they are going to the beach for their holiday. The other options are not mentioned in the text.",
+               "tips":"Read the text carefully to find the answer."
+            },
+            {
+               "question":"What will the writer pack for their trip?",
+               "options":[
+                  "A. A book and a chair",
+                  "B. A swimsuit, sunglasses, and sun cream",
+                  "C. A bike and a ball"
+               ],
+               "correctOption":"B",
+               "explanation":"The writer mentions packing a swimsuit, sunglasses, and sun cream. The other options are not mentioned.",
+               "tips":"Look for the relevant information in the text."
+            },
+            {
+               "question":"What will the writer and their friends do on the beach?",
+               "options":[
+                  "A. Play football and watch TV",
+                  "B. Play volleyball and swim in the sea",
+                  "C. Read books and take a nap"
+               ],
+               "correctOption":"B",
+               "explanation":"The writer states they will play volleyball and swim in the sea. The other options are not mentioned.",
+               "tips":"Find the relevant sentence in the text."
+            },
+            {
+               "question":"What will the writer and their friends have on the beach?",
+               "options":[
+                  "A. A party with music and dancing",
+                  "B. A picnic with sandwiches, fruit, and water",
+                  "C. A barbecue with burgers and hot dogs"
+               ],
+               "correctOption":"B",
+               "explanation":"The writer mentions having a picnic with sandwiches, fruit, and water. The other options are not mentioned.",
+               "tips":"Read the text carefully to find the answer."
+            },
+            {
+               "question":"How does the writer feel about their trip?",
+               "options":[
+                  "A. Very bored",
+                  "B. Very excited",
+                  "C. Very tired"
+               ],
+               "correctOption":"B",
+               "explanation":"The writer states they are very excited about their trip. The other options are not mentioned.",
+               "tips":"Look for the writer's emotions in the text."
+            },
+            {
+               "question":"What is the usual weather like in July?",
+               "options":[
+                  "A. Rainy and cold",
+                  "B. Sunny and hot",
+                  "C. Cloudy and windy"
+               ],
+               "correctOption":"B",
+               "explanation":"The writer states the weather is usually sunny in July. The other options are not mentioned.",
+               "tips":"Find the relevant information in the text."
+            }
+         ]
+      },
+      {
+         "title":"Part 2: Matching on Travel Information",
+         "content":"A. The hotel is located near the city center. B. The train station is 5 kilometers away. C. The beach is 10 kilometers away. D. The hotel has a fitness center and a spa. E. The hotel offers free Wi-Fi and breakfast. F. The hotel is open 24 hours a day. G. The hotel has a restaurant and a bar. H. The hotel is closed on Sundays.",
+         "instructions":"Match the descriptions to the correct item. There are more items than you need.",
+         "questions":[
+            {
+               "question":"Where is the hotel located?",
+               "options":[
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption":"A",
+               "explanation":"The hotel is located near the city center, according to option A.",
+               "tips":"Match the description to the correct item."
+            },
+            {
+               "question":"How far is the train station from the hotel?",
+               "options":[
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption":"B",
+               "explanation":"The train station is 5 kilometers away, according to option B.",
+               "tips":"Find the relevant information in the options."
+            },
+            {
+               "question":"What facilities does the hotel have?",
+               "options":[
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption":"D",
+               "explanation":"The hotel has a fitness center and a spa, according to option D.",
+               "tips":"Match the description to the correct item."
+            },
+            {
+               "question":"What services does the hotel offer?",
+               "options":[
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption":"E",
+               "explanation":"The hotel offers free Wi-Fi and breakfast, according to option E.",
+               "tips":"Find the relevant information in the options."
+            },
+            {
+               "question":"What are the hotel's opening hours?",
+               "options":[
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption":"F",
+               "explanation":"The hotel is open 24 hours a day, according to option F.",
+               "tips":"Match the description to the correct item."
+            },
+            {
+               "question":"What amenities does the hotel have?",
+               "options":[
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "correctOption":"G",
+               "explanation":"The hotel has a restaurant and a bar, according to option G.",
+               "tips":"Find the relevant information in the options."
+            }
+         ]
+      },
+      {
+         "title":"Part 3: Multiple-Choice for Short Texts on Travel Notices",
+         "content":"Notice 1: The hotel lobby is closed for renovation. Notice 2: The beach is open from 8am to 6pm. Notice 3: The train station is closed on Sundays. Notice 4: The hotel offers a free shuttle service to the airport. Notice 5: The city center is 10 kilometers away. Notice 6: The hotel has a fitness center and a spa.",
+         "instructions":"Read the signs and short texts. For each question, choose the correct answer A, B or C.",
+         "questions":[
+            {
+               "question":"What is happening to the hotel lobby?",
+               "options":[
+                  "A. It is open 24 hours a day",
+                  "B. It is closed for renovation",
+                  "C. It is open only to guests"
+               ],
+               "correctOption":"B",
+               "explanation":"The hotel lobby is closed for renovation, according to Notice 1.",
+               "tips":"Read the notice carefully to find the answer."
+            },
+            {
+               "question":"What are the opening hours of the beach?",
+               "options":[
+                  "A. 9am to 5pm",
+                  "B. 8am to 6pm",
+                  "C. 10am to 4pm"
+               ],
+               "correctOption":"B",
+               "explanation":"The beach is open from 8am to 6pm, according to Notice 2.",
+               "tips":"Find the relevant information in the notice."
+            },
+            {
+               "question":"When is the train station closed?",
+               "options":[
+                  "A. On Mondays",
+                  "B. On Sundays",
+                  "C. On Saturdays"
+               ],
+               "correctOption":"B",
+               "explanation":"The train station is closed on Sundays, according to Notice 3.",
+               "tips":"Read the notice carefully to find the answer."
+            },
+            {
+               "question":"What service does the hotel offer to the airport?",
+               "options":[
+                  "A. A paid shuttle service",
+                  "B. A free shuttle service",
+                  "C. A taxi service"
+               ],
+               "correctOption":"B",
+               "explanation":"The hotel offers a free shuttle service to the airport, according to Notice 4.",
+               "tips":"Find the relevant information in the notice."
+            },
+            {
+               "question":"How far is the city center from the hotel?",
+               "options":[
+                  "A. 5 kilometers",
+                  "B. 10 kilometers",
+                  "C. 15 kilometers"
+               ],
+               "correctOption":"B",
+               "explanation":"The city center is 10 kilometers away, according to Notice 5.",
+               "tips":"Read the notice carefully to find the answer."
+            },
+            {
+               "question":"What facilities does the hotel have?",
+               "options":[
+                  "A. A restaurant and a bar",
+                  "B. A fitness center and a spa",
+                  "C. A swimming pool and a gym"
+               ],
+               "correctOption":"B",
+               "explanation":"The hotel has a fitness center and a spa, according to Notice 6.",
+               "tips":"Find the relevant information in the notice."
+            }
+         ]
+      },
+      {
+         "title":"Part 4: Multiple-Choice Gap-Fill on Travel Information",
+         "content":"The hotel is located (1) _______ the city center. The train station is (2) _______ kilometers away. The hotel has a (3) _______ center and a spa. The hotel offers (4) _______ Wi-Fi and breakfast. The hotel is (5) _______ 24 hours a day. The hotel has a (6) _______ and a bar.",
+         "instructions":"Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions":[
+            {
+               "question":"Gap 1",
+               "options":[
+                  "A. near",
+                  "B. far",
+                  "C. in"
+               ],
+               "correctOption":"A",
+               "explanation":"The hotel is located near the city center.",
+               "tips":"Choose the word that best fits the sentence."
+            },
+            {
+               "question":"Gap 2",
+               "options":[
+                  "A. 5",
+                  "B. 10",
+                  "C. 15"
+               ],
+               "correctOption":"A",
+               "explanation":"The train station is 5 kilometers away.",
+               "tips":"Find the correct number to fill the gap."
+            },
+            {
+               "question":"Gap 3",
+               "options":[
+                  "A. fitness",
+                  "B. swimming",
+                  "C. gym"
+               ],
+               "correctOption":"A",
+               "explanation":"The hotel has a fitness center and a spa.",
+               "tips":"Choose the word that best fits the sentence."
+            },
+            {
+               "question":"Gap 4",
+               "options":[
+                  "A. free",
+                  "B. paid",
+                  "C. limited"
+               ],
+               "correctOption":"A",
+               "explanation":"The hotel offers free Wi-Fi and breakfast.",
+               "tips":"Find the correct word to fill the gap."
+            },
+            {
+               "question":"Gap 5",
+               "options":[
+                  "A. open",
+                  "B. closed",
+                  "C. available"
+               ],
+               "correctOption":"A",
+               "explanation":"The hotel is open 24 hours a day.",
+               "tips":"Choose the word that best fits the sentence."
+            },
+            {
+               "question":"Gap 6",
+               "options":[
+                  "A. restaurant",
+                  "B. bar",
+                  "C. cafe"
+               ],
+               "correctOption":"A",
+               "explanation":"The hotel has a restaurant and a bar.",
+               "tips":"Find the correct word to fill the gap."
+            }
+         ]
+      },
+      {
+         "title":"Part 5: Open Gap-Fill on Travel Plans",
+         "content":"I am going to the (1) _______ for my holiday. The weather is usually (2) _______ in July. I will pack my (3) _______ and sunglasses. My friends and I will play (4) _______ and swim in the sea. We will have a (5) _______ on the beach with sandwiches and fruit. I am very (6) _______ about my trip.",
+         "instructions":"Read the text. Write ONE word for each gap.",
+         "questions":[
+            {
+               "question":"Gap 1",
+               "options":[],
+               "correctOption":"beach",
+               "explanation":"The correct word is 'beach' because it is the destination for the holiday.",
+               "tips":"Choose a word that fits the context."
+            },
+            {
+               "question":"Gap 2",
+               "options":[],
+               "correctOption":"sunny",
+               "explanation":"The correct word is 'sunny' because it describes the weather in July.",
+               "tips":"Find a word that fits the description."
+            },
+            {
+               "question":"Gap 3",
+               "options":[],
+               "correctOption":"swimsuit",
+               "explanation":"The correct word is 'swimsuit' because it is something you pack for a beach holiday.",
+               "tips":"Choose a word that is relevant to the context."
+            },
+            {
+               "question":"Gap 4",
+               "options":[],
+               "correctOption":"volleyball",
+               "explanation":"The correct word is 'volleyball' because it is a game played on the beach.",
+               "tips":"Find a word that fits the activity."
+            },
+            {
+               "question":"Gap 5",
+               "options":[],
+               "correctOption":"picnic",
+               "explanation":"The correct word is 'picnic' because it is a meal eaten on the beach.",
+               "tips":"Choose a word that fits the context."
+            },
+            {
+               "question":"Gap 6",
+               "options":[],
+               "correctOption":"excited",
+               "explanation":"The correct word is 'excited' because it describes the feeling about the trip.",
+               "tips":"Find a word that fits the emotion."
+            }
+         ]
+      }
+   ]
+}
