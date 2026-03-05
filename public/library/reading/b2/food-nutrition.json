@@ -1,0 +1,251 @@
+{
+  "examTitle": "Food & Nutrition B2 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Food Safety",
+         "type": "Multiple-choice cloze",
+         "content": "The food industry has become increasingly concerned about food safety in recent years. According to the World Health Organization (WHO), (1) _______ (1) foodborne illnesses are responsible for approximately 600 million illnesses and 420,000 deaths annually. The main culprits behind these illnesses are the (2) _______ (2) of food products, inadequate food handling and storage, and the lack of proper (3) _______ (3) in food production and processing. Furthermore, the WHO has reported that (4) _______ (4) of food safety regulations are often inadequate or poorly enforced in certain regions. As a result, consumers are (5) _______ (5) to be more aware of the potential risks associated with foodborne illnesses.",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["most", "all", "some", "few"],
+               "correctOption": "all",
+               "explanation": "The correct answer is 'all' because the text states that foodborne illnesses are responsible for approximately 600 million illnesses and 420,000 deaths annually, which suggests that it is all foodborne illnesses that are responsible.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that food safety is a concern, and the supporting details are the statistics and reasons behind the concern."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["preparation", "distribution", "production", "processing"],
+               "correctOption": "production",
+               "explanation": "The correct answer is 'production' because the text mentions that the lack of proper 'production and processing' is one of the main culprits behind foodborne illnesses.",
+               "tips": "When reading a text, try to identify the key words and phrases that are related to the main idea. In this case, the key phrase is 'production and processing'."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["practice", "policy", "law", "regulation"],
+               "correctOption": "regulation",
+               "explanation": "The correct answer is 'regulation' because the text mentions that the lack of proper 'regulation' in food production and processing is one of the main culprits behind foodborne illnesses.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'regulation' is a key concept in the text."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["implementation", "enforcement", "compliance", "application"],
+               "correctOption": "enforcement",
+               "explanation": "The correct answer is 'enforcement' because the text mentions that the lack of proper 'enforcement' of food safety regulations is one of the main culprits behind foodborne illnesses.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'enforcement' is a key concept in the text."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["encouraged", "obliged", "instructed", "required"],
+               "correctOption": "encouraged",
+               "explanation": "The correct answer is 'encouraged' because the text suggests that consumers need to be more aware of the potential risks associated with foodborne illnesses.",
+               "tips": "When reading a text, try to understand the tone and the language used. In this case, the text is encouraging consumers to be more aware of the potential risks."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Nutrition Labels",
+         "type": "Open cloze",
+         "content": "When shopping for food, it's essential to read the (1) _______ (1) carefully. Nutrition labels provide valuable information about the nutrients and ingredients in a product. The label should include the (2) _______ (2) of the food, the number of calories and the (3) _______ (3) of fat, sugar, and salt. Moreover, the label should indicate whether the product contains any (4) _______ (4) ingredients, such as nuts or gluten.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "label",
+               "explanation": "The correct answer is 'label' because the text mentions that it's essential to read the label carefully.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that nutrition labels are important."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "name",
+               "explanation": "The correct answer is 'name' because the text mentions that the label should include the name of the food.",
+               "tips": "When reading a text, try to identify the key words and phrases that are related to the main idea. In this case, the key phrase is 'name of the food'."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "amount",
+               "explanation": "The correct answer is 'amount' because the text mentions that the label should include the amount of fat, sugar, and salt.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'amount' is a key concept in the text."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "allergenic",
+               "explanation": "The correct answer is 'allergenic' because the text mentions that the label should indicate whether the product contains any allergenic ingredients.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'allergenic' is a key concept in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Food Trends",
+         "type": "Word formation",
+         "content": "The rise of plant-based diets has led to the (1) _______ (INCREASE) of demand for vegan products. According to a recent survey, (2) _______ (DECREASE) sales of meat products have also been observed. Furthermore, the trend towards sustainability has led to the (3) _______ (PROMOTE) of eco-friendly packaging. As a result, many companies are now (4) _______ (ADVERTISE) their products as environmentally friendly.",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "IMPROVE",
+               "options": [],
+               "correctOption": "improvement",
+               "explanation": "The correct answer is 'improvement' because the text mentions that the trend towards sustainability has led to the promotion of eco-friendly packaging, which implies an improvement in the way products are packaged.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'improvement' is a key concept in the text."
+            },
+            {
+               "question": "DECREASE",
+               "options": [],
+               "correctOption": "decrease",
+               "explanation": "The correct answer is 'decrease' because the text mentions that a recent survey has observed a decrease in sales of meat products.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'decrease' is a key concept in the text."
+            },
+            {
+               "question": "PROMOTE",
+               "options": [],
+               "correctOption": "promotion",
+               "explanation": "The correct answer is 'promotion' because the text mentions that the trend towards sustainability has led to the promotion of eco-friendly packaging.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'promotion' is a key concept in the text."
+            },
+            {
+               "question": "ADVERTISE",
+               "options": [],
+               "correctOption": "advertisement",
+               "explanation": "The correct answer is 'advertisement' because the text mentions that many companies are now advertising their products as environmentally friendly.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'advertisement' is a key concept in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Food Culture",
+         "type": "Key word transformations",
+         "content": "The traditional food culture of Japan is known for its emphasis on fresh ingredients and seasonality. The Japanese prefer to eat (1) _______ (1) food, especially raw fish and vegetables, which are often served as sashimi or salad.",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "Since",
+               "options": [],
+               "correctOption": "since",
+               "explanation": "The correct answer is 'since' because the text mentions that the Japanese prefer to eat recent food, especially raw fish and vegetables.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'since' is a key concept in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Food Technology",
+         "type": "Multiple-choice reading",
+         "content": "The use of food technology has revolutionized the way we produce and consume food. One of the most significant advances in food technology is the development of (1) _______ (1) packaging, which has extended the shelf life of perishable products and reduced food waste. Furthermore, the use of (2) _______ (2) processing has enabled the production of a wide range of convenience foods, such as pre-cooked meals and ready-to-eat snacks. The impact of food technology on the food industry has been (3) _______ (3) significant, with many companies investing heavily in research and development to create new and innovative products.",
+         "instructions": "Read the text and answer Questions 1-3. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What has the development of advanced packaging extended the shelf life of?",
+               "options": ["perishable products", "non-perishable products", "both perishable and non-perishable products", "neither perishable nor non-perishable products"],
+               "correctOption": "perishable products",
+               "explanation": "The correct answer is 'perishable products' because the text mentions that the development of advanced packaging has extended the shelf life of perishable products.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that advanced packaging has extended the shelf life of perishable products."
+            },
+            {
+               "question": "What has enabled the production of a wide range of convenience foods?",
+               "options": ["the use of advanced processing", "the use of traditional processing", "the use of both advanced and traditional processing", "the use of neither advanced nor traditional processing"],
+               "correctOption": "the use of advanced processing",
+               "explanation": "The correct answer is 'the use of advanced processing' because the text mentions that the use of advanced processing has enabled the production of a wide range of convenience foods.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'advanced' is a key concept in the text."
+            },
+            {
+               "question": "What has been the impact of food technology on the food industry?",
+               "options": ["insignificant", "significant", "very significant", "extremely significant"],
+               "correctOption": "significant",
+               "explanation": "The correct answer is 'significant' because the text mentions that the impact of food technology on the food industry has been significant.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that the impact of food technology on the food industry has been significant."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Food Marketing",
+         "type": "Gapped text",
+         "content": "The rise of social media has transformed the way food companies market their products. [Gap 1] [Gap 2] is no longer just about advertising food products, but also about creating a brand image and engaging with customers. Food companies are [Gap 3] to use social media to promote their products and reach a wider audience. For example, [Gap 4] companies are now using Instagram to showcase their products and interact with customers. However, [Gap 5] companies are also using social media to spread misinformation and manipulate customers. [Gap 6] the benefits and risks of social media marketing, food companies need to be careful about how they use this platform.",
+         "options": ["A. With the increasing popularity of social media, food companies are now able to reach a wider audience.", "B. The rise of social media has made it easier for food companies to promote their products.", "C. Food companies are now able to use social media to create a brand image and engage with customers.", "D. The use of social media has reduced the need for traditional advertising.", "E. Some food companies are using social media to spread misinformation and manipulate customers.", "F. The benefits of social media marketing far outweigh the risks."],
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is option A because the text mentions that the rise of social media has transformed the way food companies market their products.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that social media has transformed the way food companies market their products."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is option B because the text mentions that food companies are no longer just about advertising food products, but also about creating a brand image and engaging with customers.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'brand image' is a key concept in the text."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is option C because the text mentions that food companies are now able to use social media to promote their products and reach a wider audience.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'promote' is a key concept in the text."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is option A because the text mentions that some food companies are now using Instagram to showcase their products and interact with customers.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'Instagram' is a key concept in the text."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "E",
+               "explanation": "The correct answer is option E because the text mentions that some food companies are using social media to spread misinformation and manipulate customers.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'misinformation' is a key concept in the text."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is option B because the text mentions that the benefits and risks of social media marketing need to be carefully considered.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that the benefits and risks of social media marketing need to be carefully considered."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Food Culture",
+         "type": "Multiple matching",
+         "content": "A. In some cultures, it is considered impolite to eat with your left hand. B. The use of chopsticks is a common practice in many Asian countries. C. In Japan, it is customary to eat sushi with your hands. D. In some cultures, it is believed that certain foods are taboo.",
+         "instructions": "Read the texts below. For Questions 1-5, choose from the sections A-D. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text states that in some cultures, it is considered impolite to eat with your left hand?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is option A because the text states that in some cultures, it is considered impolite to eat with your left hand.",
+               "tips": "When reading a text, try to understand the main idea and the supporting details. In this case, the main idea is that in some cultures, it is considered impolite to eat with your left hand."
+            },
+            {
+               "question": "Which text states that the use of chopsticks is a common practice in many Asian countries?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is option B because the text states that the use of chopsticks is a common practice in many Asian countries.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'chopsticks' is a key concept in the text."
+            },
+            {
+               "question": "Which text states that in Japan, it is customary to eat sushi with your hands?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is option C because the text states that in Japan, it is customary to eat sushi with your hands.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'sushi' is a key concept in the text."
+            },
+            {
+               "question": "Which text states that in some cultures, it is believed that certain foods are taboo?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "The correct answer is option D because the text states that in some cultures, it is believed that certain foods are taboo.",
+               "tips": "When reading a text, try to understand the different types of words that are used. In this case, the word 'taboo' is a key concept in the text."
+            }
+         ]
+      }
+   ]
+}

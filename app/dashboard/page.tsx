@@ -1774,7 +1774,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Generator Column (2/4) */}
-            <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar transition-colors justify-between">
+            <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar transition-colors">
               {/* ── Pre-loaded Exams Library ── */}
               <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200 shrink-0">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600 shrink-0">
@@ -1787,7 +1787,7 @@ export default function DashboardPage() {
               </div>
 
               {/* 4 Clean Skill Buttons */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-3">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-3 relative z-10">
                 {([
                   { skill: 'Reading', icon: <BookOpen className="w-5 h-5" />, color: 'blue', locked: false },
                   { skill: 'Writing', icon: <Edit3 className="w-5 h-5" />, color: 'emerald', locked: false },

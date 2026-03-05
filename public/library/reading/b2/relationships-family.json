@@ -1,0 +1,383 @@
+{
+  "examTitle": "CEFR B2 Mock Reading & Use of English Exam: Relationships & Family",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Family Values",
+         "type": "Multiple-Choice Cloze",
+         "content": "The importance of family values has been debated by sociologists and psychologists for decades. Some argue that the nuclear family is the most effective structure for raising children, while others claim that extended family ties are essential for emotional support. In recent years, the rise of single-parent households has led to concerns about the impact on children's development. For example, a study found that children from single-parent households were more likely to experience behavioral problems and lower academic achievement. Furthermore, research has shown that families with strong support networks tend to have better mental health outcomes. However, others argue that the notion of a 'traditional' family is outdated and that alternative family structures are just as valid. As a result, policymakers are facing a dilemma: how to balance the needs of different family types while promoting social cohesion.",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. structure", "B. support", "C. development", "D. cohesion"],
+               "correctOption": "A. structure",
+               "explanation": "The correct answer is 'structure' because the passage discusses the effectiveness of different family structures. The distractors 'support', 'development', and 'cohesion' are all relevant to the topic, but they do not fit the gap as well as 'structure' does.",
+               "tips": "When answering multiple-choice cloze questions, focus on the context of the sentence and try to identify the word that fits best. Don't be afraid to look at the options and eliminate the ones that don't make sense."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. debate", "B. argue", "C. claim", "D. discuss"],
+               "correctOption": "B. argue",
+               "explanation": "The correct answer is 'argue' because the passage states that sociologists and psychologists have been 'debated' by, but then it specifies that some 'argue' that the nuclear family is the most effective structure. The distractors 'debate', 'claim', and 'discuss' are all related to the topic, but they don't fit the context as well as 'argue' does.",
+               "tips": "Pay attention to the context and the specific verb used in the sentence. In this case, the verb 'argue' is used to specify the action of the sociologists and psychologists."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. problems", "B. achievements", "C. outcomes", "D. results"],
+               "correctOption": "A. problems",
+               "explanation": "The correct answer is 'problems' because the passage states that children from single-parent households were more likely to experience 'behavioral problems' and 'lower academic achievement'. The distractors 'achievements', 'outcomes', and 'results' are all related to the topic, but they don't fit the context as well as 'problems' does.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the children experience 'behavioral problems' and 'lower academic achievement'."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. valid", "B. outdated", "C. effective", "D. traditional"],
+               "correctOption": "B. outdated",
+               "explanation": "The correct answer is 'outdated' because the passage states that the notion of a 'traditional' family is 'outdated' and that alternative family structures are just as valid. The distractors 'valid', 'effective', and 'traditional' are all related to the topic, but they don't fit the context as well as 'outdated' does.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the notion of a 'traditional' family is 'outdated'."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. balance", "B. promote", "C. support", "D. cohesion"],
+               "correctOption": "A. balance",
+               "explanation": "The correct answer is 'balance' because the passage states that policymakers are facing a 'dilemma' and need to 'balance' the needs of different family types. The distractors 'promote', 'support', and 'cohesion' are all related to the topic, but they don't fit the context as well as 'balance' does.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that policymakers need to 'balance' the needs of different family types."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. types", "B. structures", "C. networks", "D. households"],
+               "correctOption": "B. structures",
+               "explanation": "The correct answer is 'structures' because the passage discusses the different 'family structures' and how they impact children's development. The distractors 'types', 'networks', and 'households' are all related to the topic, but they don't fit the context as well as 'structures' does.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the passage discusses the different 'family structures'."
+            },
+            {
+               "question": "Gap 7",
+               "options": ["A. cohesion", "B. support", "C. development", "D. structure"],
+               "correctOption": "C. development",
+               "explanation": "The correct answer is 'development' because the passage states that families with strong support networks tend to have 'better mental health outcomes' and that this is related to 'children's development'. The distractors 'cohesion', 'support', and 'structure' are all related to the topic, but they don't fit the context as well as 'development' does.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the passage discusses 'children's development'."
+            },
+            {
+               "question": "Gap 8",
+               "options": ["A. structures", "B. networks", "C. households", "D. outcomes"],
+               "correctOption": "D. outcomes",
+               "explanation": "The correct answer is 'outcomes' because the passage states that families with strong support networks tend to have 'better mental health outcomes'. The distractors 'structures', 'networks', and 'households' are all related to the topic, but they don't fit the context as well as 'outcomes' does.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the passage discusses 'better mental health outcomes'."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Family Relationships",
+         "type": "Open Cloze",
+         "content": "The family is a complex institution that has been studied by sociologists and psychologists for decades. Despite its importance, the family is a private institution that is difficult to study. However, researchers have used various methods to collect data on family relationships. For example, they have conducted surveys and interviews with family members. Additionally, they have used observational studies to examine family interactions. The data collected has provided valuable insights into family dynamics and relationships.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 9",
+               "options": [],
+               "correctOption": "institution",
+               "explanation": "The correct answer is 'institution' because the passage refers to the family as a 'complex institution' that has been studied by sociologists and psychologists. The word 'institution' fits the context of the sentence because it refers to a social organization or establishment.",
+               "tips": "When answering open cloze questions, try to identify the word that fits the context of the sentence. In this case, the passage refers to the family as a 'complex institution'."
+            },
+            {
+               "question": "Gap 10",
+               "options": [],
+               "correctOption": "private",
+               "explanation": "The correct answer is 'private' because the passage states that the family is a 'private institution' that is difficult to study. The word 'private' fits the context of the sentence because it refers to something that is not open to the public.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the family is a 'private institution'."
+            },
+            {
+               "question": "Gap 11",
+               "options": [],
+               "correctOption": "various",
+               "explanation": "The correct answer is 'various' because the passage states that researchers have used 'various methods' to collect data on family relationships. The word 'various' fits the context of the sentence because it refers to different or multiple methods.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that researchers have used 'various methods'."
+            },
+            {
+               "question": "Gap 12",
+               "options": [],
+               "correctOption": "data",
+               "explanation": "The correct answer is 'data' because the passage states that the data collected has provided valuable insights into family dynamics and relationships. The word 'data' fits the context of the sentence because it refers to facts or information.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the data collected has provided valuable insights."
+            },
+            {
+               "question": "Gap 13",
+               "options": [],
+               "correctOption": "valuable",
+               "explanation": "The correct answer is 'valuable' because the passage states that the data collected has provided 'valuable insights' into family dynamics and relationships. The word 'valuable' fits the context of the sentence because it refers to something that is worth a lot.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the data collected has provided 'valuable insights'."
+            },
+            {
+               "question": "Gap 14",
+               "options": [],
+               "correctOption": "dynamics",
+               "explanation": "The correct answer is 'dynamics' because the passage states that the data collected has provided insights into 'family dynamics' and relationships. The word 'dynamics' fits the context of the sentence because it refers to the study of the interactions and relationships within a system.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the data collected has provided insights into 'family dynamics'."
+            },
+            {
+               "question": "Gap 15",
+               "options": [],
+               "correctOption": "relationships",
+               "explanation": "The correct answer is 'relationships' because the passage states that the data collected has provided insights into family dynamics and 'relationships'. The word 'relationships' fits the context of the sentence because it refers to the connections and interactions between people.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that the data collected has provided insights into 'relationships'."
+            },
+            {
+               "question": "Gap 16",
+               "options": [],
+               "correctOption": "psychologists",
+               "explanation": "The correct answer is 'psychologists' because the passage states that sociologists and psychologists have studied the family for decades. The word 'psychologists' fits the context of the sentence because it refers to the study of the human mind and behavior.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that sociologists and psychologists have studied the family."
+            },
+            {
+               "question": "Gap 17",
+               "options": [],
+               "correctOption": "decades",
+               "explanation": "The correct answer is 'decades' because the passage states that sociologists and psychologists have studied the family for 'decades'. The word 'decades' fits the context of the sentence because it refers to a period of time of ten years.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage specifies that sociologists and psychologists have studied the family for 'decades'."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Family Life",
+         "type": "Word Formation",
+         "content": "The family is a complex institution that has been studied by sociologists and psychologists for many (1) _______ (YEARS). Despite its importance, the family is a private (2) _______ (INSTITUTION) that is difficult to study. However, researchers have used various (3) _______ (METHODS) to collect data on family relationships. For example, they have conducted (4) _______ (SURVEYS) and (5) _______ (INTERVIEWS) with family members. Additionally, they have used (6) _______ (OBSERVATIONAL) studies to examine family (7) _______ (INTERACTIONS).",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "YEARS",
+               "options": [],
+               "correctOption": "years",
+               "explanation": "The correct answer is 'years' because the passage requires the formation of the plural noun from the given word 'YEARS'.",
+               "tips": "When answering word formation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires the formation of the plural noun from the given word 'YEARS'."
+            },
+            {
+               "question": "INSTITUTION",
+               "options": [],
+               "correctOption": "institution",
+               "explanation": "The correct answer is 'institution' because the passage requires the formation of the noun from the given word 'INSTITUTION'.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage requires the formation of the noun from the given word 'INSTITUTION'."
+            },
+            {
+               "question": "METHODS",
+               "options": [],
+               "correctOption": "methods",
+               "explanation": "The correct answer is 'methods' because the passage requires the formation of the plural noun from the given word 'METHODS'.",
+               "tips": "When answering word formation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires the formation of the plural noun from the given word 'METHODS'."
+            },
+            {
+               "question": "SURVEYS",
+               "options": [],
+               "correctOption": "surveys",
+               "explanation": "The correct answer is 'surveys' because the passage requires the formation of the plural noun from the given word 'SURVEYS'.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage requires the formation of the plural noun from the given word 'SURVEYS'."
+            },
+            {
+               "question": "INTERVIEWS",
+               "options": [],
+               "correctOption": "interviews",
+               "explanation": "The correct answer is 'interviews' because the passage requires the formation of the plural noun from the given word 'INTERVIEWS'.",
+               "tips": "When answering word formation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires the formation of the plural noun from the given word 'INTERVIEWS'."
+            },
+            {
+               "question": "OBSERVATIONAL",
+               "options": [],
+               "correctOption": "observational",
+               "explanation": "The correct answer is 'observational' because the passage requires the formation of the adjective from the given word 'OBSERVATIONAL'.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage requires the formation of the adjective from the given word 'OBSERVATIONAL'."
+            },
+            {
+               "question": "INTERACTIONS",
+               "options": [],
+               "correctOption": "interactions",
+               "explanation": "The correct answer is 'interactions' because the passage requires the formation of the plural noun from the given word 'INTERACTIONS'.",
+               "tips": "When answering word formation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires the formation of the plural noun from the given word 'INTERACTIONS'."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Family Relationships",
+         "type": "Key Word Transformations",
+         "content": "",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "I haven't seen my sister for ages. SINCE: It's been a long time _______ her.",
+               "options": [],
+               "correctOption": "since",
+               "explanation": "The correct answer is 'since' because the passage requires a word that indicates a point in time when something started. The word 'since' fits the context of the sentence because it refers to a period of time.",
+               "tips": "When answering key word transformation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires a word that indicates a point in time when something started."
+            },
+            {
+               "question": "The new policy has caused a lot of controversy. AS: It has led to a lot of _______ about the policy.",
+               "options": [],
+               "correctOption": "controversy",
+               "explanation": "The correct answer is 'controversy' because the passage requires a word that refers to a situation where people strongly disagree. The word 'controversy' fits the context of the sentence because it refers to a situation where people strongly disagree.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage requires a word that refers to a situation where people strongly disagree."
+            },
+            {
+               "question": "The company has been in financial trouble for months. FOR: It has been struggling financially _______ months.",
+               "options": [],
+               "correctOption": "for",
+               "explanation": "The correct answer is 'for' because the passage requires a preposition that indicates a period of time. The word 'for' fits the context of the sentence because it refers to a period of time.",
+               "tips": "When answering key word transformation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires a preposition that indicates a period of time."
+            },
+            {
+               "question": "The new employee is struggling to adapt to the company's culture. DESPITE: She is facing a lot of challenges in trying to _______ the company's culture.",
+               "options": [],
+               "correctOption": "despite",
+               "explanation": "The correct answer is 'despite' because the passage requires a word that indicates a contrast or obstacle. The word 'despite' fits the context of the sentence because it refers to a situation where something is difficult to do.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage requires a word that indicates a contrast or obstacle."
+            },
+            {
+               "question": "The project has been delayed several times. AGAIN: It has been delayed _______ several times.",
+               "options": [],
+               "correctOption": "again",
+               "explanation": "The correct answer is 'again' because the passage requires a word that indicates repetition or recurrence. The word 'again' fits the context of the sentence because it refers to a situation where something happens repeatedly.",
+               "tips": "When answering key word transformation questions, try to identify the word that fits the context of the sentence. In this case, the passage requires a word that indicates repetition or recurrence."
+            },
+            {
+               "question": "The company's profits have increased significantly over the past year. BY: It has increased _______ a significant margin over the past year.",
+               "options": [],
+               "correctOption": "by",
+               "explanation": "The correct answer is 'by' because the passage requires a preposition that indicates a measure or degree. The word 'by' fits the context of the sentence because it refers to a measure or degree.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage requires a preposition that indicates a measure or degree."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Family Relationships",
+         "type": "Multiple-Choice Reading Comprehension",
+         "content": "The family is a complex institution that has been studied by sociologists and psychologists for decades. Despite its importance, the family is a private institution that is difficult to study. However, researchers have used various methods to collect data on family relationships. For example, they have conducted surveys and interviews with family members. Additionally, they have used observational studies to examine family interactions. The data collected has provided valuable insights into family dynamics and relationships.",
+         "instructions": "Read the text and answer Questions 18-23. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the writer suggest about the importance of the family?",
+               "options": ["A. The family is not important because it is a private institution.", "B. The family is a complex institution that has been studied by sociologists and psychologists for decades.", "C. The family is not a private institution, it's a public one.", "D. The family is not a complex institution, it's a simple one."],
+               "correctOption": "B. The family is a complex institution that has been studied by sociologists and psychologists for decades.",
+               "explanation": "The correct answer is 'B' because the passage states that the family is a 'complex institution' that has been studied by sociologists and psychologists for decades. The writer suggests that the family is important because it has been studied extensively.",
+               "tips": "When answering multiple-choice reading comprehension questions, try to identify the main idea of the passage and the writer's point of view. In this case, the passage states that the family is a 'complex institution' and has been studied extensively."
+            },
+            {
+               "question": "What does the writer suggest about the difficulty of studying the family?",
+               "options": ["A. The family is easy to study because it's a public institution.", "B. The family is difficult to study because it's a private institution.", "C. The family is not difficult to study, it's a simple institution.", "D. The family is not private, it's public."],
+               "correctOption": "B. The family is difficult to study because it's a private institution.",
+               "explanation": "The correct answer is 'B' because the passage states that the family is a 'private institution' that is difficult to study. The writer suggests that the family is difficult to study because it's private.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage states that the family is a 'private institution' and is difficult to study."
+            },
+            {
+               "question": "What does the writer suggest about the methods used to collect data on family relationships?",
+               "options": ["A. The writers used only one method to collect data on family relationships.", "B. The writers used various methods to collect data on family relationships.", "C. The writers used no methods to collect data on family relationships.", "D. The writers used old methods to collect data on family relationships."],
+               "correctOption": "B. The writers used various methods to collect data on family relationships.",
+               "explanation": "The correct answer is 'B' because the passage states that researchers have used 'various methods' to collect data on family relationships. The writer suggests that the writers used multiple methods to collect data.",
+               "tips": "When answering multiple-choice reading comprehension questions, try to identify the supporting details in the passage. In this case, the passage states that researchers have used 'various methods' to collect data."
+            },
+            {
+               "question": "What does the writer suggest about the insights gained from the data collected?",
+               "options": ["A. The writer suggests that the data collected has provided no insights into family dynamics and relationships.", "B. The writer suggests that the data collected has provided valuable insights into family dynamics and relationships.", "C. The writer suggests that the data collected has provided some insights into family dynamics and relationships.", "D. The writer suggests that the data collected has provided old insights into family dynamics and relationships."],
+               "correctOption": "B. The writer suggests that the data collected has provided valuable insights into family dynamics and relationships.",
+               "explanation": "The correct answer is 'B' because the passage states that the data collected has provided 'valuable insights' into family dynamics and relationships. The writer suggests that the data collected has provided valuable insights.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage states that the data collected has provided 'valuable insights'."
+            },
+            {
+               "question": "What does the writer suggest about the family dynamics and relationships?",
+               "options": ["A. The writer suggests that family dynamics and relationships are not important.", "B. The writer suggests that family dynamics and relationships are complex and difficult to study.", "C. The writer suggests that family dynamics and relationships are not complex, they're simple.", "D. The writer suggests that family dynamics and relationships are not private, they're public."],
+               "correctOption": "B. The writer suggests that family dynamics and relationships are complex and difficult to study.",
+               "explanation": "The correct answer is 'B' because the passage states that the data collected has provided insights into 'family dynamics' and relationships. The writer suggests that the family dynamics and relationships are complex and difficult to study.",
+               "tips": "When answering multiple-choice reading comprehension questions, try to identify the main idea of the passage and the writer's point of view. In this case, the passage states that the data collected has provided insights into 'family dynamics' and relationships."
+            },
+            {
+               "question": "What does the writer suggest about the researchers who studied the family?",
+               "options": ["A. The writer suggests that the researchers used old methods to collect data on family relationships.", "B. The writer suggests that the researchers used various methods to collect data on family relationships.", "C. The writer suggests that the researchers used no methods to collect data on family relationships.", "D. The writer suggests that the researchers used only one method to collect data on family relationships."],
+               "correctOption": "B. The writer suggests that the researchers used various methods to collect data on family relationships.",
+               "explanation": "The correct answer is 'B' because the passage states that researchers have used 'various methods' to collect data on family relationships. The writer suggests that the researchers used multiple methods.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage states that researchers have used 'various methods'."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Family Relationships",
+         "type": "Gapped Text",
+         "content": "The family is a complex institution that has been studied by sociologists and psychologists for decades. Despite its importance, the family is a private institution that is difficult to study. However, researchers have used various methods to collect data on family relationships. For example, they have conducted [Gap 1] and interviews with family members. Additionally, they have used observational studies to examine [Gap 2]. The data collected has provided valuable insights into family dynamics and relationships. The family is a complex institution that has been studied by sociologists and psychologists for many years. Despite its importance, the family is a private institution that is difficult to study. However, researchers have used various methods to collect data on family relationships. For example, they have conducted [Gap 3] and interviews with family members. Additionally, they have used observational studies to examine [Gap 4]. The data collected has provided valuable insights into family dynamics and relationships. Family relationships are complex and difficult to understand. Researchers have used various methods to collect data on family relationships. For example, they have conducted [Gap 5] and interviews with family members. Additionally, they have used observational studies to examine [Gap 6].",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. surveys", "B. observations", "C. interviews", "D. experiments"],
+               "correctOption": "A. surveys",
+               "explanation": "The correct answer is 'A. surveys' because the passage states that researchers have conducted 'surveys' and interviews with family members. The sentence A is the correct fit for the gap.",
+               "tips": "When answering gapped text questions, try to identify the sentence that fits the context of the passage. In this case, the passage states that researchers have conducted 'surveys' and interviews."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. interactions", "B. relationships", "C. dynamics", "D. structures"],
+               "correctOption": "A. interactions",
+               "explanation": "The correct answer is 'A. interactions' because the passage states that researchers have used observational studies to examine 'family interactions'. The sentence A is the correct fit for the gap.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage states that researchers have used observational studies to examine 'family interactions'."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. observations", "B. surveys", "C. interviews", "D. experiments"],
+               "correctOption": "B. surveys",
+               "explanation": "The correct answer is 'B. surveys' because the passage states that researchers have conducted 'surveys' and interviews with family members. The sentence B is the correct fit for the gap.",
+               "tips": "When answering gapped text questions, try to identify the sentence that fits the context of the passage. In this case, the passage states that researchers have conducted 'surveys' and interviews."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. interactions", "B. relationships", "C. dynamics", "D. structures"],
+               "correctOption": "A. interactions",
+               "explanation": "The correct answer is 'A. interactions' because the passage states that researchers have used observational studies to examine 'family interactions'. The sentence A is the correct fit for the gap.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage states that researchers have used observational studies to examine 'family interactions'."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. surveys", "B. observations", "C. interviews", "D. experiments"],
+               "correctOption": "A. surveys",
+               "explanation": "The correct answer is 'A. surveys' because the passage states that researchers have conducted 'surveys' and interviews with family members. The sentence A is the correct fit for the gap.",
+               "tips": "When answering gapped text questions, try to identify the sentence that fits the context of the passage. In this case, the passage states that researchers have conducted 'surveys' and interviews."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. interactions", "B. relationships", "C. dynamics", "D. structures"],
+               "correctOption": "A. interactions",
+               "explanation": "The correct answer is 'A. interactions' because the passage states that researchers have used observational studies to examine 'family interactions'. The sentence A is the correct fit for the gap.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage states that researchers have used observational studies to examine 'family interactions'."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Family Relationships",
+         "type": "Multiple Matching",
+         "content": "A: The family is a complex institution that has been studied by sociologists and psychologists for decades. Despite its importance, the family is a private institution that is difficult to study. However, researchers have used various methods to collect data on family relationships. For example, they have conducted surveys and interviews with family members. Additionally, they have used observational studies to examine family interactions. The data collected has provided valuable insights into family dynamics and relationships. B: Family relationships are complex and difficult to understand. Researchers have used various methods to collect data on family relationships. For example, they have conducted surveys and interviews with family members. Additionally, they have used observational studies to examine family interactions. The data collected has provided valuable insights into family dynamics and relationships. C: The family is a complex institution that has been studied by sociologists and psychologists for many years. Despite its importance, the family is a private institution that is difficult to study. However, researchers have used various methods to collect data on family relationships. For example, they have conducted surveys and interviews with family members. Additionally, they have used observational studies to examine family interactions. The data collected has provided valuable insights into family dynamics and relationships. D: Family relationships are private and difficult to study. Researchers have used various methods to collect data on family relationships. For example, they have conducted surveys and interviews with family members. Additionally, they have used observational studies to examine family interactions. The data collected has provided valuable insights into family dynamics and relationships.",
+         "instructions": "Read the texts below. For Questions 24-33, choose from the sections A-D. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text states that the family is a complex institution that has been studied by sociologists and psychologists for decades?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the passage in section A states that the family is a 'complex institution' that has been studied by sociologists and psychologists for decades.",
+               "tips": "When answering multiple matching questions, try to identify the text that fits the context of the question. In this case, the passage in section A states that the family is a 'complex institution'."
+            },
+            {
+               "question": "Which text states that family relationships are complex and difficult to understand?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because the passage in section B states that 'family relationships are complex and difficult to understand'.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage in section B states that 'family relationships are complex and difficult to understand'."
+            },
+            {
+               "question": "Which text states that the family is a complex institution that has been studied by sociologists and psychologists for many years?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because the passage in section C states that the family is a 'complex institution' that has been studied by sociologists and psychologists for many years.",
+               "tips": "When answering multiple matching questions, try to identify the text that fits the context of the question. In this case, the passage in section C states that the family is a 'complex institution'."
+            },
+            {
+               "question": "Which text states that family relationships are private and difficult to study?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because the passage in section D states that 'family relationships are private and difficult to study'.",
+               "tips": "Read the passage carefully and try to identify the specific words and phrases that fit the context. In this case, the passage in section D states that 'family relationships are private and difficult to study'."
+            }
+         ]
+      }
+   ]
+}

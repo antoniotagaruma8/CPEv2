@@ -1,0 +1,242 @@
+{
+  "examTitle": "Social Media and Online Communication",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Social Media Platforms",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "content": "Social media platforms have become an integral part of our lives. They provide a means to stay connected with friends and family who live far away. In addition, many people use social media to (1) _______ their personal and professional networks. For instance, LinkedIn is a popular platform for professionals to (2) _______ their skills and experience. Furthermore, Facebook and Instagram allow users to (3) _______ their personal lives with friends and family. However, excessive use of social media has been linked to various negative effects on mental health. For this reason, it is essential to (4) _______ a balance between online and offline activities. Social media platforms must also (5) _______ their algorithms to prevent the spread of misinformation. By doing so, they can (6) _______ a safer and more positive online environment. (7) _______ their efforts, many social media platforms are introducing features that promote digital well-being.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["extend", "develop", "expand", "grow"],
+               "correctOption": "expand",
+               "explanation": "The answer is 'expand' because it best fits the context of the sentence. The correct answer means to increase or broaden one's personal and professional networks.",
+               "tips": "Pay attention to the context and the meaning of the word in this sentence."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["showcase", "highlight", "display", "demonstrate"],
+               "correctOption": "highlight",
+               "explanation": "The answer is 'highlight' because it best fits the context of the sentence. The correct answer means to draw attention to one's skills and experience.",
+               "tips": "Consider the word's connotation and the intended meaning in this sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["share", "post", "update", "reveal"],
+               "correctOption": "reveal",
+               "explanation": "The answer is 'reveal' because it best fits the context of the sentence. The correct answer means to make one's personal life public.",
+               "tips": "Think about the verb's meaning and how it relates to the sentence's context."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["find", "establish", "achieve", "strike"],
+               "correctOption": "achieve",
+               "explanation": "The answer is 'achieve' because it best fits the context of the sentence. The correct answer means to reach a balance between online and offline activities.",
+               "tips": "Look for words that convey a sense of balance or equilibrium."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["improve", "change", "alter", "modify"],
+               "correctOption": "modify",
+               "explanation": "The answer is 'modify' because it best fits the context of the sentence. The correct answer means to adjust or change their algorithms.",
+               "tips": "Consider the word's meaning and how it applies to the sentence's context."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["create", "establish", "promote", "develop"],
+               "correctOption": "promote",
+               "explanation": "The answer is 'promote' because it best fits the context of the sentence. The correct answer means to support or encourage a safer and more positive online environment.",
+               "tips": "Think about the verb's meaning and how it relates to the sentence's context."
+            },
+            {
+               "question": "Gap 7",
+               "options": ["continue", "persist", "sustain", "enhance"],
+               "correctOption": "sustain",
+               "explanation": "The answer is 'sustain' because it best fits the context of the sentence. The correct answer means to maintain or continue their efforts.",
+               "tips": "Look for words that convey a sense of ongoing action or effort."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Social Media and Mental Health",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "Excessive social media use has been linked to various negative effects on mental health. Studies have shown that people who spend more time on social media are more likely to (1) _______ symptoms of depression. Furthermore, social media can also contribute to anxiety and loneliness. In fact, a recent study found that people who use social media for more than two hours a day are twice as likely to (2) _______ symptoms of anxiety. Social media platforms must take responsibility for promoting digital well-being and (3) _______ users from excessive use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "experience",
+               "explanation": "The correct answer is 'experience' because it best fits the context of the sentence. It means to feel or show symptoms of depression.",
+               "tips": "Think about the verb's meaning and how it applies to the sentence's context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "exhibit",
+               "explanation": "The correct answer is 'exhibit' because it best fits the context of the sentence. It means to show or display symptoms of anxiety.",
+               "tips": "Look for words that convey a sense of showing or displaying something."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "protect",
+               "explanation": "The correct answer is 'protect' because it best fits the context of the sentence. It means to safeguard or shield users from excessive use.",
+               "tips": "Think about the verb's meaning and how it applies to the sentence's context."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Social Media Marketing",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "content": "Social media marketing is a (1) _______ of promoting products or services through online platforms. It involves creating engaging content that (2) _______ with the target audience. By using relevant hashtags, social media marketers can (3) _______ their reach and increase brand awareness. However, social media marketing requires a (4) _______ understanding of the target audience's needs and preferences. It also demands a (5) _______ approach to content creation, taking into account the platform's algorithm and user behavior.",
+         "questions": [
+            {
+               "question": "1. ADJECTIVE",
+               "options": [],
+               "correctOption": "effective",
+               "explanation": "The correct answer is 'effective' because it best fits the context of the sentence. It means capable of producing the desired result.",
+               "tips": "Think about the adjectives that describe the sentence's meaning."
+            },
+            {
+               "question": "2. VERB",
+               "options": [],
+               "correctOption": "resonate",
+               "explanation": "The correct answer is 'resonate' because it best fits the context of the sentence. It means to have an impact or affect someone.",
+               "tips": "Look for verbs that convey a sense of impact or effect."
+            },
+            {
+               "question": "3. VERB",
+               "options": [],
+               "correctOption": "expand",
+               "explanation": "The correct answer is 'expand' because it best fits the context of the sentence. It means to increase or broaden something.",
+               "tips": "Think about the verbs that describe the sentence's meaning."
+            },
+            {
+               "question": "4. ADJECTIVE",
+               "options": [],
+               "correctOption": "in-depth",
+               "explanation": "The correct answer is 'in-depth' because it best fits the context of the sentence. It means detailed or thorough.",
+               "tips": "Look for adjectives that convey a sense of thoroughness or detail."
+            },
+            {
+               "question": "5. ADJECTIVE",
+               "options": [],
+               "correctOption": "flexible",
+               "explanation": "The correct answer is 'flexible' because it best fits the context of the sentence. It means adaptable or able to adjust.",
+               "tips": "Think about the adjectives that describe the sentence's meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Social Media and Relationships",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "I haven't seen her for ages. SINCE: _______",
+               "options": [],
+               "correctOption": "it's been a long time",
+               "explanation": "The correct answer is 'it's been a long time' because it best fits the context of the sentence. It means since a long time has passed.",
+               "tips": "Think about the word's meaning and how it applies to the sentence's context."
+            },
+            {
+               "question": "The company has been using social media for years. BY: _______",
+               "options": [],
+               "correctOption": "now",
+               "explanation": "The correct answer is 'now' because it best fits the context of the sentence. It means at the present time.",
+               "tips": "Look for words that convey a sense of time or timing."
+            },
+            {
+               "question": "Social media has changed the way we communicate. IN: _______",
+               "options": [],
+               "correctOption": "fact",
+               "explanation": "The correct answer is 'fact' because it best fits the context of the sentence. It means in reality.",
+               "tips": "Think about the word's meaning and how it applies to the sentence's context."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Social Media and Society",
+         "instructions": "Read the text and answer Questions 1-6. For each question, choose the correct answer A, B, C or D.",
+         "content": "Social media has become an integral part of modern society. It has changed the way we communicate, interact, and share information. Social media platforms have given people a voice, allowing them to express their opinions and connect with others. However, social media has also raised concerns about the spread of misinformation, cyberbullying, and online harassment. The impact of social media on society is a complex issue, and it requires a nuanced approach to address its challenges. Social media companies must take responsibility for promoting digital well-being and protecting users' privacy. In addition, governments and regulatory bodies must establish clear guidelines and regulations to ensure the safe and responsible use of social media. The future of social media will depend on its ability to balance individual freedom with collective responsibility.",
+         "questions": [
+            {
+               "question": "What is the main theme of the text?",
+               "options": ["The benefits of social media", "The impact of social media on society", "The importance of digital well-being", "The role of social media companies"],
+               "correctOption": "The impact of social media on society",
+               "explanation": "The correct answer is 'The impact of social media on society' because it best fits the context of the text. The text discusses the complex issues surrounding social media and its effects on society.",
+               "tips": "Look for the main idea or theme of the text."
+            },
+            {
+               "question": "What is the author's concern about social media?",
+               "options": ["The spread of misinformation", "Cyberbullying and online harassment", "Digital well-being and user privacy", "The impact on individual freedom"],
+               "correctOption": "The spread of misinformation, cyberbullying and online harassment",
+               "explanation": "The correct answer is 'The spread of misinformation, cyberbullying and online harassment' because it best fits the context of the text. The author mentions these concerns as issues surrounding social media.",
+               "tips": "Identify the author's concerns or worries about social media."
+            },
+            {
+               "question": "What is the role of social media companies?",
+               "options": ["To promote digital well-being and protect users' privacy", "To establish clear guidelines and regulations", "To balance individual freedom with collective responsibility", "To spread misinformation and engage in cyberbullying"],
+               "correctOption": "To promote digital well-being and protect users' privacy",
+               "explanation": "The correct answer is 'To promote digital well-being and protect users' privacy' because it best fits the context of the text. The author mentions that social media companies must take responsibility for promoting digital well-being and protecting users' privacy.",
+               "tips": "Look for the role or responsibility of social media companies in the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Social Media and Relationships",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "Social media has changed the way we communicate. [Gap 1] It has given people a voice, allowing them to express their opinions and connect with others. However, social media has also raised concerns about the spread of misinformation, [Gap 2] cyberbullying, and online harassment. The impact of social media on society is a complex issue, [Gap 3] requires a nuanced approach to address its challenges. Social media companies must take responsibility for promoting digital well-being and [Gap 4] users' privacy. In addition, governments and regulatory bodies must establish clear guidelines and regulations to ensure the safe and responsible use of social media.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["It has changed the way we interact", "It has given people a voice", "It has raised concerns about the spread of misinformation", "It has affected our relationships"],
+               "correctOption": "It has given people a voice",
+               "explanation": "The correct answer is 'It has given people a voice' because it best fits the context of the sentence. The sentence states that social media has given people a voice, allowing them to express their opinions and connect with others.",
+               "tips": "Look for the sentence that completes the idea or thought in the text."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["and online harassment", "or cyberbullying", "and the spread of misinformation", "or online harassment"],
+               "correctOption": "and online harassment",
+               "explanation": "The correct answer is 'and online harassment' because it best fits the context of the sentence. The sentence mentions the spread of misinformation, cyberbullying, and online harassment as concerns about social media.",
+               "tips": "Identify the correct conjunction or preposition to complete the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["requires a simple approach", "requires a complex approach", "requires a detailed approach", "requires a nuanced approach"],
+               "correctOption": "requires a nuanced approach",
+               "explanation": "The correct answer is 'requires a nuanced approach' because it best fits the context of the sentence. The sentence states that the impact of social media on society is a complex issue, which requires a nuanced approach to address its challenges.",
+               "tips": "Look for the sentence that completes the idea or thought in the text."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["and protect users' data", "and promote digital well-being", "and establish clear guidelines", "and regulate social media"],
+               "correctOption": "and protect users' privacy",
+               "explanation": "The correct answer is 'and protect users' privacy' because it best fits the context of the sentence. The sentence states that social media companies must take responsibility for promoting digital well-being and protecting users' privacy.",
+               "tips": "Identify the correct conjunction or preposition to complete the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Social Media and Technology",
+         "instructions": "Read the texts below. For Questions 1-6, choose from the sections A-D. Each section may be chosen more than once.",
+         "content": "A. Social media has become an essential part of modern life. It has changed the way we communicate, interact, and share information. However, social media has also raised concerns about the spread of misinformation, cyberbullying, and online harassment. The impact of social media on society is a complex issue, requiring a nuanced approach to address its challenges. Social media companies must take responsibility for promoting digital well-being and protecting users' privacy.\n\nB. Social media has given people a voice, allowing them to express their opinions and connect with others. However, social media has also raised concerns about the spread of misinformation, cyberbullying, and online harassment. The impact of social media on society is a complex issue, requiring a nuanced approach to address its challenges. Social media companies must take responsibility for promoting digital well-being and protecting users' privacy.\n\nC. Social media has changed the way we communicate, interact, and share information. It has given people a voice, allowing them to express their opinions and connect with others. However, social media has also raised concerns about the spread of misinformation, cyberbullying, and online harassment. The impact of social media on society is a complex issue, requiring a nuanced approach to address its challenges.\n\nD. Social media companies must take responsibility for promoting digital well-being and protecting users' privacy. In addition, governments and regulatory bodies must establish clear guidelines and regulations to ensure the safe and responsible use of social media. The future of social media will depend on its ability to balance individual freedom with collective responsibility.",
+         "questions": [
+            {
+               "question": "What is the main theme of the text in section A?",
+               "options": ["The benefits of social media", "The impact of social media on society", "The importance of digital well-being", "The role of social media companies"],
+               "correctOption": "The impact of social media on society",
+               "explanation": "The correct answer is 'The impact of social media on society' because it best fits the context of the text. Section A discusses the complex issues surrounding social media and its effects on society.",
+               "tips": "Look for the main idea or theme of the text."
+            },
+            {
+               "question": "What is the author's concern about social media in section D?",
+               "options": ["The spread of misinformation", "Cyberbullying and online harassment", "Digital well-being and user privacy", "The impact on individual freedom"],
+               "correctOption": "Digital well-being and user privacy",
+               "explanation": "The correct answer is 'Digital well-being and user privacy' because it best fits the context of the text. Section D mentions that social media companies must take responsibility for promoting digital well-being and protecting users' privacy.",
+               "tips": "Identify the author's concerns or worries about social media."
+            }
+         ]
+      }
+   ]
+}

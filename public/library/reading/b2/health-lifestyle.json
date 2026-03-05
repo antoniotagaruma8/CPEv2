@@ -1,0 +1,315 @@
+{
+  "examTitle": "Health & Lifestyle: A Balanced Approach",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Healthy Eating",
+         "type": "Multiple-Choice Cloze",
+         "content": "The benefits of a balanced diet are numerous and well-documented. A healthy diet can (1) _______ (improve) our physical and mental wellbeing, (2) _______ (reduce) the risk of chronic diseases such as heart disease and diabetes, and (3) _______ (increase) our energy levels and productivity. Eating a variety of whole foods, including fruits, vegetables, whole grains, and lean proteins, can also (4) _______ (support) the health of our gut microbiome. Furthermore, a healthy diet can (5) _______ (enhance) our cognitive function and (6) _______ (improve) our mood. By making informed food choices, we can take control of our health and wellbeing and (7) _______ (achieve) a better quality of life.",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["enhance", "improve", "reduce", "increase"],
+               "correctOption": "improve"
+            },
+            {
+               "question": "Gap 2",
+               "options": ["increase", "reduce", "enhance", "support"],
+               "correctOption": "reduce"
+            },
+            {
+               "question": "Gap 3",
+               "options": ["support", "increase", "reduce", "improve"],
+               "correctOption": "increase"
+            },
+            {
+               "question": "Gap 4",
+               "options": ["improve", "enhance", "reduce", "support"],
+               "correctOption": "support"
+            },
+            {
+               "question": "Gap 5",
+               "options": ["reduce", "improve", "increase", "enhance"],
+               "correctOption": "enhance"
+            },
+            {
+               "question": "Gap 6",
+               "options": ["support", "enhance", "reduce", "improve"],
+               "correctOption": "improve"
+            },
+            {
+               "question": "Gap 7",
+               "options": ["reduce", "increase", "support", "improve"],
+               "correctOption": "achieve"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct answer is 'improve' because the sentence is describing the benefits of a balanced diet, and 'improve' is a suitable verb to use in this context.",
+               "distractors": [
+                  {
+                     "option": "enhance",
+                     "reason": "While 'enhance' is a suitable verb, it doesn't quite fit the context of the sentence."
+                  }
+               ]
+            },
+            {
+               "question": "Gap 2",
+               "explanation": "The correct answer is 'reduce' because the sentence is describing the benefits of a balanced diet, and 'reduce' is a suitable verb to use in this context.",
+               "distractors": [
+                  {
+                     "option": "increase",
+                     "reason": "While 'increase' is a suitable verb, it doesn't quite fit the context of the sentence."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering multiple-choice questions, read the text carefully and choose the answer that best fits the context of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Nutrition",
+         "type": "Open Cloze",
+         "content": "A healthy diet is essential for maintaining good (1) _______ (health). Eating a balanced diet can help prevent chronic diseases such as heart disease and (2) _______ (diabetes). Foods high in sugar and salt can have a negative impact on our (3) _______ (wellbeing) and (4) _______ (productivity). On the other hand, foods rich in fruits and vegetables can improve our (5) _______ (energy) levels and help us stay focused.",
+         "instructions": "Read the text below and think of the word which best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "health"
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "diabetes"
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "wellbeing"
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "productivity"
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "energy"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct answer is 'health' because the sentence is describing the importance of a healthy diet for our overall health.",
+               "distractors": [
+                  {
+                     "option": "fitness",
+                     "reason": "While 'fitness' is related to health, it's not the best fit in this context."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering open cloze questions, think carefully about the word that best fits the context of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Stress Management",
+         "type": "Word Formation",
+         "content": "The town has seen a significant (1) _______ (improve) in mental health services over the past few years. This is largely due to the efforts of local (2) _______ (advocate) groups who have been working tirelessly to raise awareness about the importance of stress management. One of the most effective ways to manage stress is to engage in regular (3) _______ (exercise), such as walking or yoga. Additionally, practicing (4) _______ (meditation) can also help to reduce stress and improve overall wellbeing.",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "IMPROVE",
+               "options": [],
+               "correctOption": "improvement"
+            },
+            {
+               "question": "ADVOCATE",
+               "options": [],
+               "correctOption": "advocates"
+            },
+            {
+               "question": "EXERCISE",
+               "options": [],
+               "correctOption": "exercising"
+            },
+            {
+               "question": "MEDITATION",
+               "options": [],
+               "correctOption": "meditating"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "IMPROVE",
+               "explanation": "The correct answer is 'improvement' because the sentence is describing a significant improvement in mental health services.",
+               "distractors": [
+                  {
+                     "option": "improver",
+                     "reason": "While 'improver' is related to 'improve', it's not the best fit in this context."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering word formation questions, think carefully about the word that fits the context of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Time Management",
+         "type": "Key Word Transformations",
+         "content": "The key to effective time management is to prioritize tasks and (1) _______ (divide) your day into manageable chunks.",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "I have a lot of work to do today. SINCE: It's because I (1) _______ (haven't) finished my project yet.",
+               "options": [],
+               "correctOption": "haven't finished"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "I have a lot of work to do today. SINCE: It's because I (1) _______ (haven't) finished my project yet.",
+               "explanation": "The correct answer is 'haven't finished' because the sentence is describing the reason for having a lot of work to do.",
+               "distractors": [
+                  {
+                     "option": "haven't started",
+                     "reason": "While 'haven't started' is related to time management, it's not the best fit in this context."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering key word transformations, think carefully about the word that fits the context of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Mental Health",
+         "type": "Multiple-Choice Reading Comprehension",
+         "content": "The stigma surrounding mental health is a major barrier to seeking help. According to a recent survey, 75% of people who experience mental health issues do not seek professional help due to fear of being judged or stigmatized. This is despite the fact that mental health is just as important as physical health. In fact, the World Health Organization estimates that one in four people will experience a mental health issue at some point in their lives. It's time for us to break down the stigma surrounding mental health and encourage people to seek help when they need it. By doing so, we can reduce the number of people who suffer in silence and improve overall mental wellbeing.",
+         "instructions": "Read the text and answer Questions 1-6. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What is the main reason people do not seek help for mental health issues?",
+               "options": ["Fear of being judged", "Lack of access to treatment", "Stigma surrounding mental health", "Other"],
+               "correctOption": "A"
+            },
+            {
+               "question": "According to the World Health Organization, what percentage of people will experience a mental health issue at some point in their lives?",
+               "options": ["One in five", "One in four", "One in ten", "Other"],
+               "correctOption": "B"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "What is the main reason people do not seek help for mental health issues?",
+               "explanation": "The correct answer is 'Fear of being judged' because the text states that 75% of people who experience mental health issues do not seek professional help due to fear of being judged or stigmatized.",
+               "distractors": [
+                  {
+                     "option": "Lack of access to treatment",
+                     "reason": "While 'Lack of access to treatment' is a related issue, it's not the main reason people do not seek help."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering multiple-choice reading comprehension questions, read the text carefully and choose the answer that best fits the context of the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Healthy Habits",
+         "type": "Gapped Text",
+         "content": "Maintaining a healthy lifestyle is crucial for overall wellbeing. A balanced diet, regular exercise, and sufficient sleep are essential for keeping our bodies healthy. However, many of us lead (1) [Gap 1] lifestyles, where we often prioritize work and other responsibilities over our own health. This can lead to a range of negative consequences, including increased stress levels, decreased energy levels, and poor mental health. In order to maintain a healthy lifestyle, it's essential to set boundaries and prioritize self-care. This might involve (2) [Gap 2] time for relaxation and activities that bring us joy. Regular exercise is also crucial for maintaining good health, and can include activities such as walking, running, and (3) [Gap 3] sports. Furthermore, getting enough sleep is vital for physical and mental recovery, and adults should aim for (4) [Gap 4] hours of sleep per night.",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. busy", "B. unhealthy", "C. stressful", "D. chaotic", "E. relaxed", "F. productive", "G. fulfilling"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. finding", "B. making", "C. taking", "D. creating", "E. having", "F. getting", "G. allowing"],
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. team", "B. individual", "C. contact", "D. competitive", "E. recreational", "F. social", "G. physical"],
+               "correctOption": "D"
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. 5-7", "B. 7-9", "C. 9-11", "D. 11-13", "E. 13-15", "F. 5", "G. 7"],
+               "correctOption": "A"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct answer is 'busy' because the sentence is describing a lifestyle where we often prioritize work and other responsibilities over our own health.",
+               "distractors": [
+                  {
+                     "option": "A. busy",
+                     "reason": "While 'busy' is a suitable description, it's not the best fit in this context."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering gapped text questions, read the text carefully and choose the answer that best fits the context of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Nutrition",
+         "type": "Multiple Matching",
+         "content": "A. Eating a balanced diet is essential for maintaining good health. B. Regular exercise can help prevent chronic diseases such as heart disease and diabetes. C. Foods high in sugar and salt can have a negative impact on our wellbeing. D. Practicing meditation can reduce stress and improve overall wellbeing.",
+         "instructions": "Read the texts below. For Questions 1-5, choose from the sections A-D. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text states that regular exercise can help prevent chronic diseases such as heart disease and diabetes?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Which text states that foods high in sugar and salt can have a negative impact on our wellbeing?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C"
+            }
+         ],
+         "explanations": [
+            {
+               "question": "Which text states that regular exercise can help prevent chronic diseases such as heart disease and diabetes?",
+               "explanation": "The correct answer is 'B' because the text states that regular exercise can help prevent chronic diseases such as heart disease and diabetes.",
+               "distractors": [
+                  {
+                     "option": "A",
+                     "reason": "While text A mentions the importance of a balanced diet, it doesn't specifically mention the benefits of regular exercise."
+                  }
+               ]
+            }
+         ],
+         "tips": [
+            {
+               "tip": "When answering multiple matching questions, read the texts carefully and choose the answer that best fits the context of the question."
+            }
+         ]
+      }
+   ]
+}

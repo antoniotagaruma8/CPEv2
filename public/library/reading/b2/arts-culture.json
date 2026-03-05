@@ -1,0 +1,362 @@
+{
+  "examTitle": "Arts & Culture Reading & Use of English Exam B2",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Art Gallery Visits",
+         "content": "The art gallery visit was a (1) _______ experience. The crowds were huge, and the noise level was (2) _______. We had to wait in line for almost two hours to get (3) _______ the entrance. When we finally got inside, we were (4) _______ by the beautiful paintings. The artist's use of color was (5) _______ and the themes were (6) _______. We spent hours admiring the (7) _______ and talking about our favorite pieces. Unfortunately, we had to leave before (8) _______ the museum.",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. wonderful", "B. boring", "C. terrible", "D. amazing"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'wonderful' because the experience was described as a positive one. The other options do not fit the context of the sentence.",
+               "tips": "Read the text carefully and try to understand the context. Use vocabulary associated with art gallery visits to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. much lower", "B. much higher", "C. relatively low", "D. relatively high"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'relatively high' because the noise level was described as a challenge. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with noise levels to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. getting in", "B. paying for", "C. buying", "D. getting out"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'getting in' because the sentence is describing the experience of waiting to enter the gallery. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with entering a building to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. impressed", "B. shocked", "C. disappointed", "D. bored"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'impressed' because the sentence is describing a positive reaction to the art. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with reactions to art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. simple", "B. complex", "C. beautiful", "D. interesting"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'beautiful' because the artist's use of color was described as a key aspect of the art. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. abstract", "B. concrete", "C. abstract and concrete", "D. simple"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'abstract and concrete' because the themes of the art were described as a mix of different ideas. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art themes to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 7",
+               "options": ["A. paintings", "B. sculptures", "C. installations", "D. photographs"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'paintings' because the sentence is describing the type of art that was admired. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art types to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 8",
+               "options": ["A. before seeing", "B. before buying", "C. before visiting", "D. before leaving"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'before leaving' because the sentence is describing the action that had to be done before leaving the gallery. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with leaving a place to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Artistic Expression",
+         "content": "Artistic (1) _______ is a way for people to express their (2) _______ and creativity. It can be a (3) _______ way to communicate emotions and (4) _______ the world around us. Artists use a variety of mediums to create their work, (5) _______ from paint to sculpture.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 9",
+               "options": [],
+               "correctOption": "expression",
+               "explanation": "The correct answer is 'expression' because artistic expression is a way for people to express their thoughts and feelings. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 10",
+               "options": [],
+               "correctOption": "feelings",
+               "explanation": "The correct answer is 'feelings' because artistic expression is a way for people to express their emotions and thoughts. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with emotions to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 11",
+               "options": [],
+               "correctOption": "effective",
+               "explanation": "The correct answer is 'effective' because artistic expression can be a powerful way to communicate emotions and ideas. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 12",
+               "options": [],
+               "correctOption": "understand",
+               "explanation": "The correct answer is 'understand' because artistic expression can help people understand the world around them. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with understanding to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 13",
+               "options": [],
+               "correctOption": "ranging",
+               "explanation": "The correct answer is 'ranging' because artists use a variety of mediums to create their work. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 14",
+               "options": [],
+               "correctOption": "from",
+               "explanation": "The correct answer is 'from' because it is a preposition used to introduce a list of examples. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with lists to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 15",
+               "options": [],
+               "correctOption": "paint",
+               "explanation": "The correct answer is 'paint' because it is an example of a medium used by artists. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Artistic Techniques",
+         "content": "The artist used a (1) _______ brush to create the intricate (2) _______ on the canvas. The (3) _______ of the painting was so delicate that it seemed to (4) _______ the eye. The colors used in the painting were so vibrant that they seemed to (5) _______ off the wall. The overall (6) _______ of the painting was one of calm and serenity.",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "FLEET",
+               "options": [],
+               "correctOption": "fleetness",
+               "explanation": "The correct answer is 'fleetness' because it is a word formed from the base word FLEET. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "DETAIL",
+               "options": [],
+               "correctOption": "detailed",
+               "explanation": "The correct answer is 'detailed' because it is a word formed from the base word DETAIL. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "DELICACY",
+               "options": [],
+               "correctOption": "delicateness",
+               "explanation": "The correct answer is 'delicateness' because it is a word formed from the base word DELICACY. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "CAPTURE",
+               "options": [],
+               "correctOption": "captivating",
+               "explanation": "The correct answer is 'captivating' because it is a word formed from the base word CAPTURE. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "REFLECT",
+               "options": [],
+               "correctOption": "reflective",
+               "explanation": "The correct answer is 'reflective' because it is a word formed from the base word REFLECT. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "COLOR",
+               "options": [],
+               "correctOption": "colorful",
+               "explanation": "The correct answer is 'colorful' because it is a word formed from the base word COLOR. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "MANNER",
+               "options": [],
+               "correctOption": "manor",
+               "explanation": "The correct answer is 'manor' because it is a word formed from the base word MANNER. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Artistic Movements",
+         "content": "The art movement was (1) _______ in the 19th century. It was characterized by (2) _______ and experimentation. The artists involved in the movement were (3) _______ to push the boundaries of what was considered acceptable in art.",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "Since: It began in the 19th century. ",
+               "options": [],
+               "correctOption": "It began in the 19th century.",
+               "explanation": "The correct answer is 'It began in the 19th century.' because it is a transformation of the original sentence using the word 'since'. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art movements to help you choose the correct answer."
+            },
+            {
+               "question": "Characterized by: The movement was experimental.",
+               "options": [],
+               "correctOption": "The movement was experimental.",
+               "explanation": "The correct answer is 'The movement was experimental.' because it is a transformation of the original sentence using the word 'characterized by'. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Characterized by: The artists involved in the movement.",
+               "options": [],
+               "correctOption": "The artists involved in the movement.",
+               "explanation": "The correct answer is 'The artists involved in the movement.' because it is a transformation of the original sentence using the word 'characterized by'. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Pushed to: The artists involved in the movement.",
+               "options": [],
+               "correctOption": "The artists involved in the movement.",
+               "explanation": "The correct answer is 'The artists involved in the movement.' because it is a transformation of the original sentence using the word 'pushed to'. The other options do not fit the context of the sentence.",
+               "tips": "Use vocabulary associated with art to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Artistic Critics",
+         "content": "Art critics play a (1) _______ role in the art world, providing (2) _______ and analysis of the latest art trends. They are often seen as (3) _______ and sometimes even (4) _______ in their opinions. However, their role is also (5) _______ in shaping public opinion about art. In recent years, the rise of social media has given art critics a (6) _______ platform to share their thoughts and opinions with a wider audience.",
+         "instructions": "Read the text and answer Questions 17-22. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What is the role of art critics in the art world?",
+               "options": ["A. To create art", "B. To provide opinions and analysis", "C. To sell art", "D. To promote artists"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'To provide opinions and analysis' because art critics play a key role in shaping public opinion about art. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "What is the tone of art critics in their opinions?",
+               "options": ["A. Neutral", "B. Objective", "C. Subjective", "D. Biased"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'Biased' because art critics are often seen as subjective and sometimes even biased in their opinions. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "How does the rise of social media affect art critics?",
+               "options": ["A. It has given them a smaller platform", "B. It has given them a larger platform", "C. It has made their opinions less influential", "D. It has made their opinions more influential"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'It has given them a larger platform' because the rise of social media has given art critics a wider audience to share their thoughts and opinions. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with social media to help you choose the correct answer."
+            },
+            {
+               "question": "What is the purpose of art criticism in shaping public opinion?",
+               "options": ["A. To promote artists", "B. To sell art", "C. To provide opinions and analysis", "D. To create art"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'To provide opinions and analysis' because art criticism plays a key role in shaping public opinion about art. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "How does social media affect the role of art critics?",
+               "options": ["A. It has made their role less influential", "B. It has made their role more influential", "C. It has given them a smaller platform", "D. It has given them a larger platform"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'It has given them a larger platform' because the rise of social media has given art critics a wider audience to share their thoughts and opinions. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with social media to help you choose the correct answer."
+            },
+            {
+               "question": "What is the impact of social media on art critics?",
+               "options": ["A. It has made them more influential", "B. It has made them less influential", "C. It has given them a smaller platform", "D. It has given them a larger platform"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'It has given them a larger platform' because the rise of social media has given art critics a wider audience to share their thoughts and opinions. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with social media to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Artistic Movements",
+         "content": "The art movement was characterized by [Gap 1]. The artists involved in the movement were [Gap 2] to push the boundaries of what was considered acceptable in art. The movement was [Gap 3] in the 19th century and had a significant impact on the art world. The artists involved in the movement were [Gap 4] to experiment with new techniques and mediums. The movement was [Gap 5] by the artists' desire to challenge traditional art forms. The movement had a [Gap 6] impact on the art world and paved the way for future artistic movements.",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. experimental", "B. traditional", "C. innovative", "D. abstract", "E. figurative", "F. impressionist"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'experimental' because the art movement was characterized by a desire to experiment with new techniques and mediums. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. not", "B. were", "C. were not", "D. had", "E. had not", "F. were not"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'were' because the artists involved in the movement were encouraged to push the boundaries of what was considered acceptable in art. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. initiated", "B. began", "C. started", "D. emerged", "E. appeared", "F. took place"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'began' because the movement was characterized by a new beginning in the 19th century. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. were", "B. were not", "C. had", "D. had not", "E. were", "F. were not"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'were' because the artists involved in the movement were encouraged to experiment with new techniques and mediums. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. driven", "B. motivated", "C. encouraged", "D. inspired", "E. pushed", "F. driven"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'inspired' because the movement was driven by the artists' desire to challenge traditional art forms. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. significant", "B. minor", "C. major", "D. positive", "E. negative", "F. lasting"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'lasting' because the movement had a lasting impact on the art world and paved the way for future artistic movements. The other options do not fit the context of the sentence.",
+               "tips": "Read the sentence carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Artistic Styles",
+         "content": "A. The art movement was characterized by a focus on realism and attention to detail. The artists involved in the movement were known for their technical skill and ability to capture the world around them in a realistic way.\n\nB. The art movement was characterized by a focus on abstraction and experimentation. The artists involved in the movement were known for their ability to push the boundaries of what was considered acceptable in art.\n\nC. The art movement was characterized by a focus on expressionism and emotional intensity. The artists involved in the movement were known for their ability to capture the human experience in a way that was both personal and universal.\n\nD. The art movement was characterized by a focus on cubism and fragmentation. The artists involved in the movement were known for their ability to break down objects into their component parts and reassemble them in new and innovative ways.\n\nE. The art movement was characterized by a focus on futurism and speed. The artists involved in the movement were known for their ability to capture the energy and dynamism of modern life.\n\nF. The art movement was characterized by a focus on surrealism and the subconscious. The artists involved in the movement were known for their ability to tap into the world of dreams and the subconscious.",
+         "instructions": "Read the texts below. For Questions 23-32, choose from the sections A-F. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which art movement was characterized by a focus on realism and attention to detail?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the art movement described in section A is characterized by a focus on realism and attention to detail. The other options do not fit the context of the sentence.",
+               "tips": "Read the section carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Which art movement was characterized by a focus on abstraction and experimentation?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because the art movement described in section B is characterized by a focus on abstraction and experimentation. The other options do not fit the context of the sentence.",
+               "tips": "Read the section carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Which art movement was characterized by a focus on expressionism and emotional intensity?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because the art movement described in section C is characterized by a focus on expressionism and emotional intensity. The other options do not fit the context of the sentence.",
+               "tips": "Read the section carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Which art movement was characterized by a focus on cubism and fragmentation?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because the art movement described in section D is characterized by a focus on cubism and fragmentation. The other options do not fit the context of the sentence.",
+               "tips": "Read the section carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Which art movement was characterized by a focus on futurism and speed?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'E' because the art movement described in section E is characterized by a focus on futurism and speed. The other options do not fit the context of the sentence.",
+               "tips": "Read the section carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            },
+            {
+               "question": "Which art movement was characterized by a focus on surrealism and the subconscious?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'F' because the art movement described in section F is characterized by a focus on surrealism and the subconscious. The other options do not fit the context of the sentence.",
+               "tips": "Read the section carefully and try to understand the context. Use vocabulary associated with art to help you choose the correct answer."
+            }
+         ]
+      }
+   ]
+}

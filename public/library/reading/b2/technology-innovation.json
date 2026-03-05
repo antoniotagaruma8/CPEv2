@@ -1,0 +1,302 @@
+{
+  "examTitle": "CEFR B2 Mock Exam: Technology & Innovation",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Emerging Technologies",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "content": "The recent advancements in artificial intelligence and machine learning have led to a significant (1) _______ (TRANSFORM) in various industries. Companies are now able to automate tasks, making them more efficient and cost-effective. For instance, a recent study found that a (2) _______ (REDUCE) in the number of employees was not necessarily a bad thing. In fact, many companies have reported a (3) _______ (IMPROVE) in productivity and employee job satisfaction. However, this shift towards automation has also raised concerns about job (4) _______ (SECURITY). Many experts believe that this could lead to widespread unemployment.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. revolutionize",
+                  "B. modernize",
+                  "C. digitalize",
+                  "D. mechanize"
+               ],
+               "correctOption": "A. revolutionize",
+               "explanation": "The correct answer is 'revolutionize' because the passage describes a significant change in various industries due to AI and ML. The other options do not convey the same level of change.",
+               "tips": "When reading the passage, focus on the key words and phrases that indicate a significant change or impact."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. increase",
+                  "B. reduce",
+                  "C. stabilize",
+                  "D. fluctuate"
+               ],
+               "correctOption": "B. reduce",
+               "explanation": "The correct answer is 'reduce' because the passage mentions a reduction in the number of employees. The other options do not match the context.",
+               "tips": "Pay attention to the context and the word 'for instance' to understand the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. decrease",
+                  "B. improve",
+                  "C. remain the same",
+                  "D. worsen"
+               ],
+               "correctOption": "B. improve",
+               "explanation": "The correct answer is 'improve' because the passage mentions an improvement in productivity and employee job satisfaction. The other options do not match the context.",
+               "tips": "Focus on the positive outcomes mentioned in the passage to arrive at the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. threat",
+                  "B. concern",
+                  "C. opportunity",
+                  "D. advantage"
+               ],
+               "correctOption": "B. concern",
+               "explanation": "The correct answer is 'concern' because the passage mentions a concern about job security. The other options do not match the context.",
+               "tips": "Identify the negative sentiment in the passage to arrive at the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Cybersecurity",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The increasing reliance on the (1) _______ (INTERNET) has led to a significant rise in cyber threats. Companies are now investing heavily in (2) _______ (SECURITY) measures to protect their data. However, this has also created a (3) _______ (DEMAND) for skilled cybersecurity professionals. As a result, many companies are now offering (4) _______ (TRAINING) programs to help employees improve their cybersecurity skills.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "internet",
+               "options": [],
+               "explanation": "The correct answer is 'internet' because the passage mentions the increasing reliance on the internet. The word 'internet' is a noun that fits the context.",
+               "tips": "Focus on the first word of the sentence to arrive at the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "security",
+               "options": [],
+               "explanation": "The correct answer is 'security' because the passage mentions investing in security measures. The word 'security' is a noun that fits the context.",
+               "tips": "Identify the key word that completes the sentence grammatically."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "demand",
+               "options": [],
+               "explanation": "The correct answer is 'demand' because the passage mentions a demand for skilled cybersecurity professionals. The word 'demand' is a noun that fits the context.",
+               "tips": "Focus on the word that completes the sentence logically."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "training",
+               "options": [],
+               "explanation": "The correct answer is 'training' because the passage mentions training programs to improve cybersecurity skills. The word 'training' is a noun that fits the context.",
+               "tips": "Identify the word that completes the sentence grammatically and logically."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Renewable Energy",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "content": "The use of (1) _______ (SOLAR) panels has become increasingly popular in recent years. The cost of (2) _______ (PRODUCE) electricity from solar panels has decreased significantly. However, the (3) _______ (LIMIT) of solar panels is that they require a significant amount of space.",
+         "questions": [
+            {
+               "question": "SOLAR",
+               "correctOption": "solar",
+               "options": [],
+               "explanation": "The correct answer is 'solar' because the passage mentions the use of solar panels. The word 'solar' is an adjective that fits the context.",
+               "tips": "Focus on the word that completes the sentence grammatically."
+            },
+            {
+               "question": "PRODUCE",
+               "correctOption": "produced",
+               "options": [],
+               "explanation": "The correct answer is 'produced' because the passage mentions the cost of producing electricity from solar panels. The word 'produced' is a verb that fits the context.",
+               "tips": "Identify the word that completes the sentence logically."
+            },
+            {
+               "question": "LIMIT",
+               "correctOption": "limited",
+               "options": [],
+               "explanation": "The correct answer is 'limited' because the passage mentions the limitation of solar panels. The word 'limited' is a verb that fits the context.",
+               "tips": "Focus on the word that completes the sentence grammatically and logically."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Environmental Issues",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "content": "The company has been investing heavily in sustainable practices. SINCE: It's been a long time _______ this.",
+         "questions": [
+            {
+               "question": "SINCE: It's been a long time _______ this.",
+               "correctOption": "since they started",
+               "options": [],
+               "explanation": "The correct answer is 'since they started' because it indicates a time period since the company started investing in sustainable practices.",
+               "tips": "Use the word 'since' to indicate a time period."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Technology Trends",
+         "instructions": "Read the text and answer Questions 1-6. For each question, choose the correct answer A, B, C or D.",
+         "content": "The increasing use of technology has led to a significant shift in the way we communicate. Social media platforms have become an essential part of our daily lives. According to a recent study, the average person spends over 2 hours a day on social media. This has led to a (1) _______ in the way we interact with each other. Instead of face-to-face interactions, we now rely on digital communication. However, this has also led to a (2) _______ in empathy and social skills. The writer believes that this trend is (3) _______ and will continue to shape our society in the future.",
+         "questions": [
+            {
+               "question": "What is the main effect of the increasing use of technology on the way we communicate?",
+               "options": [
+                  "A. There is no significant effect on the way we communicate.",
+                  "B. We now spend more time face-to-face interacting with each other.",
+                  "C. There is a significant shift in the way we interact with each other.",
+                  "D. We rely less on technology and more on traditional communication methods."
+               ],
+               "correctOption": "C. There is a significant shift in the way we interact with each other.",
+               "explanation": "The correct answer is 'C' because the passage mentions a significant shift in the way we interact with each other due to the increasing use of technology.",
+               "tips": "Focus on the word that completes the sentence logically."
+            },
+            {
+               "question": "What is the effect of social media on empathy and social skills?",
+               "options": [
+                  "A. There is a significant increase in empathy and social skills.",
+                  "B. There is no significant effect on empathy and social skills.",
+                  "C. There is a significant decrease in empathy and social skills.",
+                  "D. There is a balance between the two."
+               ],
+               "correctOption": "C. There is a significant decrease in empathy and social skills.",
+               "explanation": "The correct answer is 'C' because the passage mentions a decrease in empathy and social skills due to the increasing use of social media.",
+               "tips": "Identify the word that completes the sentence logically."
+            },
+            {
+               "question": "What does the writer believe about the trend of increasing technology use?",
+               "options": [
+                  "A. The trend is not significant and will not continue to shape our society.",
+                  "B. The trend is neutral and will not have a significant impact on our society.",
+                  "C. The trend is significant and will continue to shape our society in the future.",
+                  "D. The trend is negative and will have a negative impact on our society."
+               ],
+               "correctOption": "C. The trend is significant and will continue to shape our society in the future.",
+               "explanation": "The correct answer is 'C' because the passage mentions that the writer believes the trend is significant and will continue to shape our society in the future.",
+               "tips": "Focus on the word that completes the sentence logically."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Environmental Issues",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "The increasing use of technology has led to a significant shift in the way we communicate. Social media platforms have become an essential part of our daily lives. [Gap 1] According to a recent study, the average person spends over 2 hours a day on social media. This has led to a [Gap 2] in the way we interact with each other. Instead of face-to-face interactions, we now rely on digital communication. However, this has also led to a [Gap 3] in empathy and social skills. The writer believes that this trend is [Gap 4] and will continue to shape our society in the future. The use of renewable energy sources is becoming increasingly important. It is essential to reduce our carbon footprint and invest in sustainable practices. A recent study found that the demand for renewable energy sources is [Gap 5] than ever before. This trend is expected to continue in the future. The use of solar panels is a [Gap 6] way to generate electricity.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. However, a recent study found that the average person spends over 2 hours a day on social media.",
+                  "B. According to a recent study, the average person spends over 2 hours a day on social media.",
+                  "C. In fact, a recent study found that the average person spends over 2 hours a day on social media.",
+                  "D. In addition, a recent study found that the average person spends over 2 hours a day on social media."
+               ],
+               "correctOption": "B. According to a recent study, the average person spends over 2 hours a day on social media.",
+               "explanation": "The correct answer is 'B' because it is grammatically correct and logically fits the context.",
+               "tips": "Identify the sentence that completes the paragraph grammatically."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. There is a significant increase in empathy and social skills.",
+                  "B. There is no significant effect on empathy and social skills.",
+                  "C. There is a significant decrease in empathy and social skills.",
+                  "D. There is a balance between the two."
+               ],
+               "correctOption": "C. There is a significant decrease in empathy and social skills.",
+               "explanation": "The correct answer is 'C' because it logically fits the context and is supported by the passage.",
+               "tips": "Focus on the sentence that completes the paragraph logically."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. There is a significant increase in empathy and social skills.",
+                  "B. There is no significant effect on empathy and social skills.",
+                  "C. There is a significant decrease in empathy and social skills.",
+                  "D. There is a balance between the two."
+               ],
+               "correctOption": "C. There is a significant decrease in empathy and social skills.",
+               "explanation": "The correct answer is 'C' because it logically fits the context and is supported by the passage.",
+               "tips": "Identify the sentence that completes the paragraph logically."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. The trend is not significant and will not continue to shape our society.",
+                  "B. The trend is neutral and will not have a significant impact on our society.",
+                  "C. The trend is significant and will continue to shape our society in the future.",
+                  "D. The trend is negative and will have a negative impact on our society."
+               ],
+               "correctOption": "C. The trend is significant and will continue to shape our society in the future.",
+               "explanation": "The correct answer is 'C' because it logically fits the context and is supported by the passage.",
+               "tips": "Focus on the sentence that completes the paragraph logically."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. less than ever before.",
+                  "B. more than ever before.",
+                  "C. as much as ever before.",
+                  "D. no more than ever before."
+               ],
+               "correctOption": "B. more than ever before.",
+               "explanation": "The correct answer is 'B' because it logically fits the context and is supported by the passage.",
+               "tips": "Identify the sentence that completes the paragraph logically."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. an expensive way to generate electricity.",
+                  "B. a sustainable way to generate electricity.",
+                  "C. a traditional way to generate electricity.",
+                  "D. a convenient way to generate electricity."
+               ],
+               "correctOption": "B. a sustainable way to generate electricity.",
+               "explanation": "The correct answer is 'B' because it logically fits the context and is supported by the passage.",
+               "tips": "Focus on the sentence that completes the paragraph logically."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Environmental Issues",
+         "instructions": "Read the texts below. For Questions 1-5, choose from the sections A-D. Each section may be chosen more than once.",
+         "content": "A. The increasing use of technology has led to a significant shift in the way we communicate. Social media platforms have become an essential part of our daily lives. According to a recent study, the average person spends over 2 hours a day on social media. This has led to a significant decrease in face-to-face interactions. B. The use of renewable energy sources is becoming increasingly important. It is essential to reduce our carbon footprint and invest in sustainable practices. A recent study found that the demand for renewable energy sources is more than ever before. This trend is expected to continue in the future. C. The writer believes that the trend of increasing technology use is significant and will continue to shape our society in the future. The use of solar panels is a sustainable way to generate electricity. D. The use of artificial intelligence has led to a significant increase in productivity. However, this has also led to a significant decrease in empathy and social skills.",
+         "questions": [
+            {
+               "question": "Which text states that the average person spends over 2 hours a day on social media?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because it is supported by the passage.",
+               "tips": "Identify the text that supports the statement."
+            },
+            {
+               "question": "Which text states that the trend of increasing technology use is significant and will continue to shape our society in the future?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because it is supported by the passage.",
+               "tips": "Focus on the text that supports the statement."
+            },
+            {
+               "question": "Which text states that the use of solar panels is a sustainable way to generate electricity?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because it is supported by the passage.",
+               "tips": "Identify the text that supports the statement."
+            }
+         ]
+      }
+   ]
+}

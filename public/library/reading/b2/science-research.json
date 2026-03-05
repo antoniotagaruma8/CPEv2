@@ -1,0 +1,276 @@
+{
+  "examTitle": "B2 Science & Research Mock Reading & Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Environmental Research",
+         "content": "The impact of climate change on marine ecosystems has been extensively studied in recent years. Rising sea temperatures have led to a (1) _______ in coral reef growth, causing widespread damage to habitats and ecosystems. This has resulted in a (2) _______ in biodiversity, with many species facing extinction. In addition, the increased frequency of extreme weather events, such as hurricanes and storms, has caused (3) _______ damage to coastal communities. The economic cost of these disasters is also significant, with (4) _______ billions of dollars spent on recovery efforts each year. Furthermore, the effects of climate change are not limited to coastal areas; inland regions are also experiencing (5) _______ changes in precipitation patterns, leading to droughts and water scarcity. As a result, it is essential to continue (6) _______ into the causes and effects of climate change to better understand its impact on our planet. This knowledge will enable us to (7) _______ effective strategies to mitigate its effects.",
+         "options": ["A. decrease", "A. significantly", "A. devastating", "A. several", "A. severe", "A. researching", "A. develop"],
+         "questionField": ["Gap 1", "Gap 2", "Gap 3", "Gap 4", "Gap 5", "Gap 6", "Gap 7"],
+         "instructions": "Read the text below and decide which answer best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "A. decrease",
+               "explanation": "The correct answer is 'decrease' because the text states that rising sea temperatures have led to a decrease in coral reef growth. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "A. significantly",
+               "explanation": "The correct answer is 'significantly' because the text states that the decrease in biodiversity has been significant. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, pay attention to the use of adverbs like 'significantly' and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "A. devastating",
+               "explanation": "The correct answer is 'devastating' because the text states that the damage to coastal communities has been devastating. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "A. several",
+               "explanation": "The correct answer is 'several' because the text states that several billions of dollars have been spent on recovery efforts each year. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, pay attention to the use of numerals like 'several' and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "A. severe",
+               "explanation": "The correct answer is 'severe' because the text states that the changes in precipitation patterns have been severe. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "A. researching",
+               "explanation": "The correct answer is 'researching' because the text states that it is essential to continue researching into the causes and effects of climate change. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, pay attention to the use of verbs like 'researching' and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 7",
+               "correctOption": "A. develop",
+               "explanation": "The correct answer is 'develop' because the text states that we need to develop effective strategies to mitigate the effects of climate change. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice questions, carefully read the text and choose the option that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Scientific Research Methods",
+         "content": "The researcher decided to (1) _______ a new study to investigate the effects of climate change on marine ecosystems. The study would involve (2) _______ data from various sources, including satellite imagery and field observations. The researcher would then (3) _______ the data to identify patterns and trends. Finally, the researcher would (4) _______ the results to a wider audience through a series of publications and presentations.",
+         "options": [],
+         "questionField": ["Gap 9", "Gap 10", "Gap 11", "Gap 12"],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 9",
+               "correctOption": "conduct",
+               "explanation": "The correct answer is 'conduct' because the text states that the researcher decided to conduct a new study. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering open-cloze questions, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "Gap 10",
+               "correctOption": "collect",
+               "explanation": "The correct answer is 'collect' because the text states that the study would involve collecting data from various sources. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering open-cloze questions, pay attention to the use of verbs like 'collect' and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 11",
+               "correctOption": "analyze",
+               "explanation": "The correct answer is 'analyze' because the text states that the researcher would analyze the data to identify patterns and trends. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering open-cloze questions, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "Gap 12",
+               "correctOption": "present",
+               "explanation": "The correct answer is 'present' because the text states that the researcher would present the results to a wider audience. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering open-cloze questions, pay attention to the use of verbs like 'present' and choose the option that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Environmental Technology",
+         "content": "The new (1) _______ (GENERATE) system uses renewable energy to power homes and businesses. The system is based on a combination of solar panels and wind turbines, which (2) _______ (PRODUCE) a significant amount of electricity. The electricity is then (3) _______ (DISTRIBUT) to the grid, where it can be used by consumers. The system is (4) _______ (DESIGN) to be efficient and cost-effective, reducing the need for fossil fuels and minimizing environmental impact. The company behind the system is (5) _______ (INVIT) to showcase their innovative technology at a major trade show.",
+         "options": [],
+         "questionField": ["IMPROVE", "IMPROVE", "IMPROVE", "IMPROVE", "IMPROVE"],
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "IMPROVE",
+               "correctOption": "generator",
+               "explanation": "The correct answer is 'generator' because it is a word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering word-formation questions, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "IMPROVE",
+               "correctOption": "producer",
+               "explanation": "The correct answer is 'producer' because it is a word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering word-formation questions, pay attention to the use of prefixes and suffixes to form new words."
+            },
+            {
+               "question": "IMPROVE",
+               "correctOption": "distributor",
+               "explanation": "The correct answer is 'distributor' because it is a word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering word-formation questions, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "IMPROVE",
+               "correctOption": "designed",
+               "explanation": "The correct answer is 'designed' because it is a word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering word-formation questions, pay attention to the use of verbs like 'designed' and choose the option that best fits the context."
+            },
+            {
+               "question": "IMPROVE",
+               "correctOption": "invited",
+               "explanation": "The correct answer is 'invited' because it is a word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering word-formation questions, carefully read the text and choose the word that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Scientific Research",
+         "content": "",
+         "options": [],
+         "questionField": [],
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "I haven't seen her for ages. SINCE: It's been a long time _______ her.",
+               "correctOption": "since",
+               "explanation": "The correct answer is 'since' because it is the word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering key word transformations, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "The new policy has been in effect for several months. AS A RESULT: The company's profits _______ by 20%.",
+               "correctOption": "have increased",
+               "explanation": "The correct answer is 'have increased' because it is the word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering key word transformations, pay attention to the use of prepositions like 'as a result' and choose the option that best fits the context."
+            },
+            {
+               "question": "The researchers used a variety of methods to collect data. THESE INCLUDED: Interviews, questionnaires, and surveys.",
+               "correctOption": "these included",
+               "explanation": "The correct answer is 'these included' because it is the word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering key word transformations, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "The new product has been very successful. THIS IS DUE TO: The company's effective marketing strategy.",
+               "correctOption": "this is due to",
+               "explanation": "The correct answer is 'this is due to' because it is the word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering key word transformations, pay attention to the use of prepositions like 'due to' and choose the option that best fits the context."
+            },
+            {
+               "question": "The company's profits have been increasing steadily over the past year. HOWEVER: The current economic downturn has affected their performance.",
+               "correctOption": "however",
+               "explanation": "The correct answer is 'however' because it is the word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering key word transformations, carefully read the text and choose the word that best fits the context."
+            },
+            {
+               "question": "The researchers used a variety of methods to collect data. ONE OF THESE WAS: Interviews with participants.",
+               "correctOption": "one of these was",
+               "explanation": "The correct answer is 'one of these was' because it is the word that fits in the gap in the text. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering key word transformations, pay attention to the use of prepositions like 'one of these' and choose the option that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Environmental Science",
+         "content": "The effects of climate change on marine ecosystems have been extensively studied in recent years. Rising sea temperatures have led to a decline in coral reef growth, causing widespread damage to habitats and ecosystems. This has resulted in a significant loss of biodiversity, with many species facing extinction. In addition, the increased frequency of extreme weather events, such as hurricanes and storms, has caused devastating damage to coastal communities. The economic cost of these disasters is also significant, with billions of dollars spent on recovery efforts each year. Furthermore, the effects of climate change are not limited to coastal areas; inland regions are also experiencing severe changes in precipitation patterns, leading to droughts and water scarcity. As a result, it is essential to continue researching into the causes and effects of climate change to better understand its impact on our planet.",
+         "options": [
+            "A. The effects of climate change are limited to coastal areas.",
+            "B. The effects of climate change are not limited to coastal areas.",
+            "C. The effects of climate change are only experienced by humans.",
+            "D. The effects of climate change are only experienced by animals."
+         ],
+         "questionField": [],
+         "instructions": "Read the text and answer Questions 13-18. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the writer suggest about the effects of climate change on coral reefs?",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that rising sea temperatures have led to a decline in coral reef growth. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice reading comprehension questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "What is the result of the increased frequency of extreme weather events?",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the increased frequency of extreme weather events has caused devastating damage to coastal communities. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice reading comprehension questions, pay attention to the use of verbs like 'caused' and choose the option that best fits the context."
+            },
+            {
+               "question": "What is the economic cost of the disasters caused by climate change?",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that billions of dollars are spent on recovery efforts each year. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice reading comprehension questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "What is the effect of climate change on inland regions?",
+               "correctOption": "D",
+               "explanation": "The correct answer is D because the text states that inland regions are experiencing severe changes in precipitation patterns, leading to droughts and water scarcity. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice reading comprehension questions, pay attention to the use of prepositions like 'leading to' and choose the option that best fits the context."
+            },
+            {
+               "question": "What is the purpose of continuing to research into the causes and effects of climate change?",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that it is essential to continue researching into the causes and effects of climate change to better understand its impact on our planet. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-choice reading comprehension questions, carefully read the text and choose the option that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Environmental Science",
+         "content": "The effects of climate change on marine ecosystems have been extensively studied in recent years. Rising sea temperatures have led to a decline in coral reef growth, causing widespread damage to habitats and ecosystems. This has resulted in a significant loss of biodiversity, with many species facing extinction. In addition, the increased frequency of extreme weather events, such as hurricanes and storms, has caused devastating damage to coastal communities. The economic cost of these disasters is also significant, with billions of dollars spent on recovery efforts each year. Furthermore, the effects of climate change are not limited to coastal areas; inland regions are also experiencing severe changes in precipitation patterns, leading to droughts and water scarcity. As a result, it is essential to continue researching into the causes and effects of climate change to better understand its impact on our planet. However, the problem of climate change is not only environmental; it also has social and economic implications. [Gap 1] the effects of climate change are not limited to coastal areas, many communities are also affected. The impact of climate change on human health is a major concern, with many diseases and illnesses being linked to climate change. Additionally, the economic costs of climate change are significant, with many businesses and industries being affected. [Gap 2] the effects of climate change are not limited to the environment, they also have social and economic implications. The impact of climate change on human health is a major concern, with many diseases and illnesses being linked to climate change.",
+         "options": [
+            "A. In addition to the environmental impacts, climate change also has social and economic implications.",
+            "B. The effects of climate change are not limited to coastal areas, many communities are also affected.",
+            "C. The impact of climate change on human health is a major concern, with many diseases and illnesses being linked to climate change.",
+            "D. The economic costs of climate change are significant, with many businesses and industries being affected.",
+            "E. The problem of climate change is not only environmental; it also has social and economic implications.",
+            "F. The effects of climate change are not limited to the environment, they also have social and economic implications."
+         ],
+         "questionField": [
+            "Gap 1",
+            "Gap 2"
+         ],
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the effects of climate change are not limited to coastal areas, many communities are also affected. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering gapped text questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text states that the effects of climate change are not limited to the environment, they also have social and economic implications. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering gapped text questions, pay attention to the use of prepositions like 'not limited to' and choose the option that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Environmental Science",
+         "content": "The effects of climate change on marine ecosystems have been extensively studied in recent years. Rising sea temperatures have led to a decline in coral reef growth, causing widespread damage to habitats and ecosystems. This has resulted in a significant loss of biodiversity, with many species facing extinction. In addition, the increased frequency of extreme weather events, such as hurricanes and storms, has caused devastating damage to coastal communities. The economic cost of these disasters is also significant, with billions of dollars spent on recovery efforts each year. Furthermore, the effects of climate change are not limited to coastal areas; inland regions are also experiencing severe changes in precipitation patterns, leading to droughts and water scarcity. As a result, it is essential to continue researching into the causes and effects of climate change to better understand its impact on our planet. However, the problem of climate change is not only environmental; it also has social and economic implications. [Text A] The effects of climate change are not limited to coastal areas; inland regions are also experiencing severe changes in precipitation patterns. [Text B] The impact of climate change on human health is a major concern, with many diseases and illnesses being linked to climate change. [Text C] The economic costs of climate change are significant, with many businesses and industries being affected. [Text D] The problem of climate change is not only environmental; it also has social and economic implications. [Text E] The effects of climate change are not limited to the environment, they also have social and economic implications. [Text F] The impact of climate change on marine ecosystems has been extensively studied in recent years.",
+         "options": [
+            "A. The effects of climate change are not limited to coastal areas; inland regions are also experiencing severe changes in precipitation patterns.",
+            "B. The impact of climate change on human health is a major concern, with many diseases and illnesses being linked to climate change.",
+            "C. The economic costs of climate change are significant, with many businesses and industries being affected.",
+            "D. The problem of climate change is not only environmental; it also has social and economic implications.",
+            "E. The effects of climate change are not limited to the environment, they also have social and economic implications.",
+            "F. The impact of climate change on marine ecosystems has been extensively studied in recent years."
+         ],
+         "questionField": [],
+         "instructions": "Read the texts below. For Questions 19-20, choose from the sections A-F. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text states that the effects of climate change are not limited to coastal areas?",
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the effects of climate change are not limited to coastal areas; inland regions are also experiencing severe changes in precipitation patterns. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-matching questions, carefully read the text and choose the option that best fits the context."
+            },
+            {
+               "question": "Which text states that the impact of climate change on human health is a major concern?",
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the impact of climate change on human health is a major concern, with many diseases and illnesses being linked to climate change. The other options do not accurately reflect the meaning of the sentence.",
+               "tips": "When answering multiple-matching questions, pay attention to the use of prepositions like 'major concern' and choose the option that best fits the context."
+            }
+         ]
+      }
+   ]
+}
