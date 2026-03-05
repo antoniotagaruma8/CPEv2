@@ -1275,20 +1275,8 @@ export default function DashboardPage() {
         }
       }
 
-      if (!isCorrect && !isAdmin) {
-        const currentRetry = retryCount[currentQuestion.toString()] || 0;
-        if (currentRetry < 1) {
-          setRetryCount(prev => {
-            const next = { ...prev };
-            next[currentQuestion.toString()] = currentRetry + 1;
-            return next;
-          });
-          alert("Incorrect answer. Please try again! (1 attempt remaining)");
-          return;
-        } else {
-          setRetryCount(prev => ({ ...prev, [currentQuestion.toString()]: 2 }));
-        }
-      }
+      // One attempt only — mark retryCount as done so answer key / possible answers unlock
+      setRetryCount(prev => ({ ...prev, [currentQuestion.toString()]: 2 }));
     }
 
     const newSubmitted = new Set(submittedQuestions);
@@ -1328,6 +1316,25 @@ export default function DashboardPage() {
 
   const handleAnswer = (question: number, option: string) => {
     setAnswers(prev => ({ ...prev, [question]: option }));
+    // Auto-submit for multiple-choice questions (one attempt only)
+    if (examType !== 'Speaking' && examType !== 'Writing') {
+      if (!submittedQuestions.has(question.toString())) {
+        // Use a microtask to ensure state update settles first
+        setTimeout(() => {
+          setCurrentQuestion(question);
+          // Directly submit
+          const activeQ = examQuestions.find(q => q.id.toString() === question.toString());
+          if (activeQ) {
+            setRetryCount(prev => ({ ...prev, [question.toString()]: 2 }));
+            setSubmittedQuestions(prev => {
+              const newSet = new Set(prev);
+              newSet.add(question.toString());
+              return newSet;
+            });
+          }
+        }, 0);
+      }
+    }
   };
 
   const toggleFlag = (question: number) => {
@@ -2800,10 +2807,24 @@ export default function DashboardPage() {
                   )}
                 </div>
 
+                {submittedQuestions.has(currentQuestion.toString()) && (
+                  <div className="mt-6 mb-4 space-y-4 overflow-hidden animate-slide-down">
+                    <div className="p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg shadow-sm">
+                      <div className="flex items-start gap-3">
+                        <svg className="w-6 h-6 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div>
+                          <h4 className="font-bold text-blue-800">Rationale</h4>
+                          <p className="text-sm text-gray-700 mt-1">{activeQuestionData.explanation}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {!isSpeakingPart3 && (activeQuestionData.tips || (displayPossibleAnswers && displayPossibleAnswers.length > 0)) && (
-                  <div className="space-y-4 animate-fade-in">
+                  <div className="space-y-4 animate-fade-in transition-all duration-500">
                     {activeQuestionData.tips && (
-                      <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg shadow-sm">
+                      <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg shadow-sm mt-2">
                         <div className="flex justify-between items-center">
                           <h4 className="font-bold text-yellow-800 flex items-center gap-2">
                             <span>💡</span> Tips
@@ -2915,28 +2936,17 @@ export default function DashboardPage() {
                   </div>
                 )}
 
-                {submittedQuestions.has(currentQuestion.toString()) && (
-                  <div className="mt-6 space-y-4 animate-fade-in">
-                    <div className="p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                {submittedQuestions.has(currentQuestion.toString()) && activePartData?.examinerNotes && (
+                  <div className="mt-4 overflow-hidden animate-slide-down" style={{ animationDelay: '150ms' }}>
+                    <div className="p-4 bg-green-50 border-l-4 border-green-400 rounded-r-lg shadow-sm">
                       <div className="flex items-start gap-3">
-                        <svg className="w-6 h-6 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <svg className="w-6 h-6 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
                         <div>
-                          <h4 className="font-bold text-blue-800">Rationale</h4>
-                          <p className="text-sm text-gray-700 mt-1">{activeQuestionData.explanation}</p>
+                          <h4 className="font-bold text-green-800">Part Examiner Notes</h4>
+                          <p className="text-sm text-gray-700 mt-1 whitespace-pre-line">{activePartData.examinerNotes}</p>
                         </div>
                       </div>
                     </div>
-                    {activePartData?.examinerNotes && (
-                      <div className="p-4 bg-green-50 border-l-4 border-green-400 rounded-r-lg">
-                        <div className="flex items-start gap-3">
-                          <svg className="w-6 h-6 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l.707-.707M6.343 17.657l-.707-.707m12.728 0l.707-.707M12 21v-1m-4-4H7v4h1v-4zm8 0h1v4h-1v-4z" /></svg>
-                          <div>
-                            <h4 className="font-bold text-green-800">Tips</h4>
-                            <p className="text-sm text-gray-700 mt-1 whitespace-pre-line">{activePartData.examinerNotes}</p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 )}
               </div>
