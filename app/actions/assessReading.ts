@@ -27,13 +27,27 @@ export async function assessReadingAction(
     try {
         const client = getGroqClient();
 
+        const checkTextAnswer = (userAnswer: string, correctAnswer: string) => {
+            if (!userAnswer || !correctAnswer) return false;
+            if (userAnswer === "No Answer") return false;
+
+            const cleanUser = userAnswer.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+            const cleanCorrect = correctAnswer.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+
+            if (cleanUser === cleanCorrect) return true;
+            if (cleanUser.length >= 3 && cleanCorrect.includes(cleanUser)) return true;
+            if (cleanCorrect.length >= 3 && cleanUser.includes(cleanCorrect)) return true;
+
+            return false;
+        };
+
         // Calculate the raw score locally first to pass into the prompt
         let correctCount = 0;
         const totalQuestions = examData.length;
 
         const questionDetails = examData.map((q, index) => {
             const userAnswer = userAnswers[q.id] || "No Answer";
-            const isCorrect = userAnswer === q.correctOption;
+            const isCorrect = userAnswer === q.correctOption || checkTextAnswer(userAnswer, q.correctOption);
             if (isCorrect) correctCount++;
 
             return `Question ${index + 1}: ${q.question}
@@ -42,8 +56,6 @@ Candidate's Answer: ${userAnswer}
 Result: ${isCorrect ? 'Correct' : 'Incorrect'}`;
         }).join('\n\n');
 
-        const rawScoreOutOf10 = Math.round((correctCount / totalQuestions) * 10);
-
         // AI Assessment (Text to Insights) using Llama-3.3-70b-versatile
         const systemPrompt = `You are a certified Cambridge/CEFR English Examiner for the ${cefrLevel} level test.
 Your job is to evaluate a candidate's overall performance on a Reading & Use of English exam based on their answers.
@@ -51,14 +63,14 @@ CRITICAL: You are writing DIRECTLY to the candidate. Address them as "you" and "
 
 You MUST output your evaluation strictly as a valid JSON object matching this schema:
 {
-  "score": number, // This should be exactly ${rawScoreOutOf10} (out of 10).
+  "score": number, // This MUST be exactly ${correctCount} (the total number of correct answers).
   "feedback": "string", // 2-3 sentences of direct, encouraging feedback explaining their performance based on which questions they got wrong/right, and addressing them directly as "you".
   "suggestion": "string" // 1-2 actionable tips on how they could improve their reading comprehension or vocabulary for the ${cefrLevel} level, addressing them directly as "you".
 }
 Do not return any markdown wrappers, ONLY the raw JSON object.`;
 
         const userPrompt = `
-Exam Results (${correctCount}/${totalQuestions} correct):
+Exam Results (${correctCount} out of ${totalQuestions} correct):
 ${questionDetails}
 
 Evaluate the candidate's reading performance based on these specific answers.`;
@@ -83,7 +95,7 @@ Evaluate the candidate's reading performance based on these specific answers.`;
 
         return {
             success: true,
-            score: typeof assessmentJSON.score === 'number' ? assessmentJSON.score : rawScoreOutOf10,
+            score: typeof assessmentJSON.score === 'number' ? assessmentJSON.score : correctCount,
             feedback: assessmentJSON.feedback || "Good effort. Keep practicing to improve your reading comprehension.",
             suggestion: assessmentJSON.suggestion || "Review the questions you missed and read more English texts daily."
         };
