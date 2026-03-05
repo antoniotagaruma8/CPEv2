@@ -18,7 +18,7 @@ import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 import { isUserTeacher, activateTeacherStatus } from '../actions/teacherActions';
-import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw, GraduationCap } from 'lucide-react';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw, GraduationCap, BookOpen, Edit3, Headphones } from 'lucide-react';
 import html2canvas from 'html2canvas';
 
 interface Question {
@@ -1741,36 +1741,55 @@ export default function DashboardPage() {
                 </div>
               </div>
               <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div>
-                    <label htmlFor="examType" className="block text-[11px] font-bold text-slate-600 mb-1">Exam Skill</label>
-                    <select id="examType" value={examType} onChange={(e) => {
-                      const val = e.target.value;
-                      if (val === 'Listening' && generationInfo && generationInfo.plan === 'free') {
-                        return; // Don't allow selecting Listening for free tier
-                      }
-                      setExamType(val);
-                    }} className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
-                      <option value="Reading">Reading & Use of English</option>
-                      <option value="Writing">Writing</option>
-                      <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>{generationInfo && generationInfo.plan === 'free' ? '🔒 Listening (Premium)' : 'Listening'}</option>
-                      <option value="Speaking">Speaking</option>
-                    </select>
-                    {generationInfo && generationInfo.plan === 'free' && (
-                      <p className="mt-0.5 text-[10px] text-amber-600 flex items-center gap-1 leading-tight"><span>🔒</span> Listening is a Premium feature</p>
-                    )}
-                  </div>
-                  <div>
-                    <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">CEFR Level</label>
-                    <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition">
-                      <option value="A1">A1 Beginner</option>
-                      <option value="A2">A2 Key (KET)</option>
-                      <option value="B1">B1 Preliminary (PET)</option>
-                      <option value="B2">B2 First (FCE)</option>
-                      <option value="C1">C1 Advanced (CAE)</option>
-                      <option value="C2">C2 Proficiency</option>
-                    </select>
-                  </div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-1">
+                  <button
+                    type="button"
+                    onClick={() => setExamType('Reading')}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${examType === 'Reading' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
+                  >
+                    <BookOpen className={`w-5 h-5 mb-1.5 ${examType === 'Reading' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
+                    <span className="text-[11px] font-bold">Reading</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setExamType('Writing')}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${examType === 'Writing' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
+                  >
+                    <Edit3 className={`w-5 h-5 mb-1.5 ${examType === 'Writing' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
+                    <span className="text-[11px] font-bold">Writing</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (generationInfo && generationInfo.plan === 'free') return;
+                      setExamType('Listening');
+                    }}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all relative ${generationInfo && generationInfo.plan === 'free' ? 'opacity-60 cursor-not-allowed bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : examType === 'Listening' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
+                  >
+                    {generationInfo && generationInfo.plan === 'free' && <span className="absolute -top-1.5 -right-1.5 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1 py-0.5 rounded shadow-sm border border-amber-200 tracking-wider">PRO</span>}
+                    <Headphones className={`w-5 h-5 mb-1.5 ${examType === 'Listening' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
+                    <span className="text-[11px] font-bold">Listening</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setExamType('Speaking')}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all ${examType === 'Speaking' ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
+                  >
+                    <Mic className={`w-5 h-5 mb-1.5 ${examType === 'Speaking' ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`} />
+                    <span className="text-[11px] font-bold">Speaking</span>
+                  </button>
+                </div>
+
+                <div className="w-full">
+                  <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">Target CEFR Level</label>
+                  <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
+                    <option value="A1">A1 Beginner</option>
+                    <option value="A2">A2 Key (KET)</option>
+                    <option value="B1">B1 Preliminary (PET)</option>
+                    <option value="B2">B2 First (FCE)</option>
+                    <option value="C1">C1 Advanced (CAE)</option>
+                    <option value="C2">C2 Proficiency</option>
+                  </select>
                 </div>
                 {isAdmin && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
