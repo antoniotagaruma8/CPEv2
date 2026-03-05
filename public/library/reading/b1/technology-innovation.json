@@ -1,0 +1,308 @@
+{
+  "examTitle": "CEFR B1 Mock Reading and Use of English - Technology & Innovation",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Technology Trends",
+         "content": "The rise of technology has transformed the way we live and work. The internet, mobile phones, and social media have become an integral part of our daily lives. According to a recent survey, the use of technology has increased exponentially over the past decade. The survey also found that people are using technology to learn new skills, connect with others, and access information. In fact, the majority of respondents believed that technology has improved their quality of life. However, some experts have raised concerns about the potential negative impact of technology on our mental and physical health. They argue that excessive use of technology can lead to social isolation, decreased attention span, and increased stress levels. As technology continues to evolve, it is essential to strike a balance between its benefits and drawbacks. Only then can we harness its full potential and create a better future for ourselves and future generations.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the writer say about the impact of technology on our mental and physical health?",
+               "options": [
+                  "A. It has improved our mental and physical health.",
+                  "B. It has decreased our mental and physical health.",
+                  "C. It has had a neutral impact on our mental and physical health.",
+                  "D. It has increased our mental and physical health."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer mentions that some experts have raised concerns about the potential negative impact of technology on our mental and physical health. This suggests that technology can have a negative impact on our health.",
+               "tips": "Pay attention to the writer's tone and the language used to describe the impact of technology on our health."
+            },
+            {
+               "question": "What does the survey found about the use of technology?",
+               "options": [
+                  "A. It has decreased over the past decade.",
+                  "B. It has increased exponentially over the past decade.",
+                  "C. It has remained the same over the past decade.",
+                  "D. It has completely disappeared over the past decade."
+               ],
+               "correctOption": "B",
+               "explanation": "The survey found that the use of technology has increased exponentially over the past decade, according to the writer.",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            },
+            {
+               "question": "What is the majority of respondents' opinion about the impact of technology on their quality of life?",
+               "options": [
+                  "A. It has worsened their quality of life.",
+                  "B. It has improved their quality of life.",
+                  "C. It has had no impact on their quality of life.",
+                  "D. It has decreased their quality of life."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer mentions that the majority of respondents believed that technology has improved their quality of life.",
+               "tips": "Identify the main idea of the text and look for supporting details."
+            },
+            {
+               "question": "What do experts argue about the use of technology?",
+               "options": [
+                  "A. That it has improved our mental and physical health.",
+                  "B. That it has increased our mental and physical health.",
+                  "C. That excessive use of technology can lead to social isolation, decreased attention span, and increased stress levels.",
+                  "D. That technology has no impact on our mental and physical health."
+               ],
+               "correctOption": "C",
+               "explanation": "Experts argue that excessive use of technology can lead to social isolation, decreased attention span, and increased stress levels.",
+               "tips": "Look for quotes or opinions mentioned in the text to answer the question."
+            },
+            {
+               "question": "What is essential to harness the full potential of technology?",
+               "options": [
+                  "A. To use it excessively.",
+                  "B. To balance its benefits and drawbacks.",
+                  "C. To ignore its negative impact.",
+                  "D. To use it only for work."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer emphasizes the importance of striking a balance between the benefits and drawbacks of technology to harness its full potential.",
+               "tips": "Identify the main idea of the text and look for supporting details."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts on Tech Innovations",
+         "content": {
+            "profiles": [
+               "A person who loves playing video games and reading science fiction.",
+               "A person who is interested in environmental issues and sustainable living.",
+               "A person who is passionate about photography and traveling.",
+               "A person who is a tech enthusiast and loves learning new programming languages.",
+               "A person who is a foodie and loves cooking new recipes."
+            ],
+            "texts": [
+               "A. The latest smartphone has a powerful processor and a high-resolution camera, making it perfect for gaming and photography.",
+               "B. The new policy aims to reduce energy consumption and promote sustainable living in urban areas.",
+               "C. The city is hosting a festival to celebrate innovation and creativity in technology and art.",
+               "D. The company is launching a new app that allows users to learn programming languages and develop their coding skills.",
+               "E. The restaurant is offering a special menu that showcases unique and exotic ingredients from around the world.",
+               "F. The environmental group is organizing a campaign to raise awareness about the impact of plastic waste on our oceans.",
+               "G. The tech conference is featuring a keynote speech by a renowned expert in artificial intelligence.",
+               "H. The museum is exhibiting a collection of vintage cameras and photography equipment."
+            ]
+         },
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "questions": [
+            {
+               "question": "Which text is most suitable for a person who loves playing video games and reading science fiction?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "A",
+               "explanation": "The text mentions a smartphone with a powerful processor and a high-resolution camera, which would be appealing to a gamer and a science fiction fan.",
+               "tips": "Read the profiles carefully and look for keywords that match the content of the texts."
+            },
+            {
+               "question": "Which text is most suitable for a person who is interested in environmental issues and sustainable living?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "B",
+               "explanation": "The text mentions a policy aimed at reducing energy consumption and promoting sustainable living, which would be of interest to an environmental enthusiast.",
+               "tips": "Identify the main idea of each text and match it with the profile."
+            },
+            {
+               "question": "Which text is most suitable for a person who is passionate about photography and traveling?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "C",
+               "explanation": "The text mentions a festival celebrating innovation and creativity in technology and art, which would be appealing to a photographer and a traveler.",
+               "tips": "Look for keywords and phrases that match the profile and the text."
+            },
+            {
+               "question": "Which text is most suitable for a person who is a tech enthusiast and loves learning new programming languages?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The text mentions an app that allows users to learn programming languages and develop their coding skills, which would be appealing to a tech enthusiast.",
+               "tips": "Identify the main idea of each text and match it with the profile."
+            },
+            {
+               "question": "Which text is most suitable for a person who is a foodie and loves cooking new recipes?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "E",
+               "explanation": "The text mentions a special menu that showcases unique and exotic ingredients from around the world, which would be appealing to a foodie.",
+               "tips": "Look for keywords and phrases that match the profile and the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts on Tech News",
+         "content": [
+            "The company has announced a new smartwatch that can track your fitness goals and monitor your heart rate. It also has a built-in GPS and can receive notifications.",
+            "The latest smartphone has a powerful processor and a high-resolution camera. It also has a long-lasting battery life and supports 5G connectivity.",
+            "The new app allows users to control their home appliances remotely using their smartphones. It also provides energy consumption data and sends notifications when the appliances are not in use.",
+            "The company is launching a new line of eco-friendly laptops made from recycled materials. They are designed to be energy-efficient and have a long battery life.",
+            "The city is hosting a hackathon to encourage innovation and creativity in technology and entrepreneurship."
+         ],
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What does the new smartwatch track?",
+               "options": [
+                  "A. Only your heart rate.",
+                  "B. Your fitness goals and heart rate.",
+                  "C. Your email and social media notifications."
+               ],
+               "correctOption": "B",
+               "explanation": "The text mentions that the smartwatch can track your fitness goals and monitor your heart rate.",
+               "tips": "Read the text carefully and identify the main idea."
+            },
+            {
+               "question": "What type of connectivity does the latest smartphone support?",
+               "options": [
+                  "A. 4G only.",
+                  "B. 5G only.",
+                  "C. 4G and 5G."
+               ],
+               "correctOption": "C",
+               "explanation": "The text mentions that the smartphone supports 5G connectivity.",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            },
+            {
+               "question": "What does the new app allow users to do?",
+               "options": [
+                  "A. Only control their home appliances remotely.",
+                  "B. Control their home appliances remotely and receive energy consumption data.",
+                  "C. Only receive energy consumption data and send notifications."
+               ],
+               "correctOption": "B",
+               "explanation": "The text mentions that the app allows users to control their home appliances remotely and receive energy consumption data.",
+               "tips": "Identify the main idea of the text and look for supporting details."
+            },
+            {
+               "question": "What is made from recycled materials?",
+               "options": [
+                  "A. Only the laptops.",
+                  "B. The laptops and the smartphones.",
+                  "C. The smartwatches and the home appliances."
+               ],
+               "correctOption": "A",
+               "explanation": "The text mentions that the laptops are made from recycled materials.",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            },
+            {
+               "question": "What is the purpose of the hackathon?",
+               "options": [
+                  "A. To encourage innovation and creativity in technology and entrepreneurship.",
+                  "B. To promote eco-friendly laptops and smartwatches.",
+                  "C. To launch a new line of home appliances."
+               ],
+               "correctOption": "A",
+               "explanation": "The text mentions that the hackathon is to encourage innovation and creativity in technology and entrepreneurship.",
+               "tips": "Identify the main idea of the text and look for supporting details."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences on Tech Innovations",
+         "content": "The latest technology has revolutionized the way we live and work. (1) _______ The internet, mobile phones, and social media have become an integral part of our daily lives. According to a recent survey, the use of technology has increased exponentially over the past decade. (2) _______ The survey also found that people are using technology to learn new skills, connect with others, and access information. In fact, (3) _______ the majority of respondents believed that technology has improved their quality of life. However, some experts have raised concerns about the potential negative impact of technology on our mental and physical health. (4) _______ They argue that excessive use of technology can lead to social isolation, decreased attention span, and increased stress levels. As technology continues to evolve, (5) _______ it is essential to strike a balance between its benefits and drawbacks.",
+         "options": [
+            "A. The world is becoming increasingly dependent on technology.",
+            "B. The use of technology has become widespread.",
+            "C. The majority of respondents believed that technology has improved their quality of life.",
+            "D. Experts argue that excessive use of technology can lead to social isolation, decreased attention span, and increased stress levels.",
+            "E. It is essential to harness the full potential of technology.",
+            "F. Technology has become an essential part of our daily lives."
+         ],
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "A",
+               "explanation": "The correct sentence to fit the gap is 'The world is becoming increasingly dependent on technology.'",
+               "tips": "Read the text carefully and identify the main idea of each sentence."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct sentence to fit the gap is 'The use of technology has become widespread.'",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "C",
+               "explanation": "The correct sentence to fit the gap is 'In fact, the majority of respondents believed that technology has improved their quality of life.'",
+               "tips": "Identify the main idea of the text and look for supporting details."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "D",
+               "explanation": "The correct sentence to fit the gap is 'Experts argue that excessive use of technology can lead to social isolation, decreased attention span, and increased stress levels.'",
+               "tips": "Read the text carefully and identify the main idea of each sentence."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "E",
+               "explanation": "The correct sentence to fit the gap is 'It is essential to harness the full potential of technology.'",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze on Tech News",
+         "content": "The company has announced a (1) _______ (new/innovative) smartwatch that can track your fitness goals and monitor your heart rate. It also has a (2) _______ (built-in/integrated) GPS and can receive notifications.",
+         "options": [
+            "A. The company has announced a new smartwatch that can track your fitness goals and monitor your heart rate.",
+            "B. The company has announced a innovative smartwatch that can track your fitness goals and monitor your heart rate.",
+            "C. The company has announced a smartwatch that can track your fitness goals and monitor your heart rate.",
+            "D. The company has announced a innovative smartwatch that can track your fitness goals and monitor your heart rate.",
+            "E. The company has announced a new innovative smartwatch that can track your fitness goals and monitor your heart rate.",
+            "F. The company has announced a smartwatch that can track your fitness goals and monitor your heart rate."
+         ],
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct word to fit the gap is 'innovative'.",
+               "tips": "Read the text carefully and identify the main idea of each sentence."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct word to fit the gap is 'built-in'.",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill on Tech Innovations",
+         "content": "The latest technology has revolutionized the way we live and work. (1) _______ The internet, mobile phones, and social media have become an essential part of our daily lives. According to a recent survey, (2) _______ the use of technology has increased exponentially over the past decade. The survey also found that people are using technology to (3) _______ new skills, connect with others, and access information. In fact, the majority of respondents believed that technology has (4) _______ their quality of life. However, some experts have raised concerns about the potential negative impact of technology on our mental and physical health.",
+         "options": [],
+         "correctOption": ["The world is becoming increasingly dependent on technology.", "The use of technology has become widespread.", "Learn", "Improved"],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "explanation": "The correct word to fit the gap is 'The world is becoming increasingly dependent on technology.'",
+               "tips": "Read the text carefully and identify the main idea of each sentence."
+            },
+            {
+               "question": "Gap 2",
+               "explanation": "The correct word to fit the gap is 'The use of technology has become widespread.'",
+               "tips": "Look for specific details mentioned in the text to answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "explanation": "The correct word to fit the gap is 'learn'.",
+               "tips": "Identify the main idea of the text and look for supporting details."
+            },
+            {
+               "question": "Gap 4",
+               "explanation": "The correct word to fit the gap is 'improved'.",
+               "tips": "Read the text carefully and identify the main idea of each sentence."
+            }
+         ]
+      }
+   ]
+}

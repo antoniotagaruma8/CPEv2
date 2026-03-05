@@ -1,0 +1,135 @@
+{
+  "examTitle": "Relationships & Family English Exam (A2 Level)",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Family",
+         "content": "In many families, both parents work. They often have to leave their children in daycare centers or with grandparents. The children usually spend most of their day in school. When they come home, they do their homework and then play with their friends. In some families, there is no mother or no father. Sometimes, there is a single parent who looks after the children. This parent often works alone, and the children have to do more household chores. They also have to help take care of their younger siblings. In other families, there are two mothers or two fathers. Some families also have adopted children. These children have a different biological parent, but they are still part of the family.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why do many parents leave their children in daycare centers?",
+               "options": ["A. They are lazy.", "B. They have to work.", "C. They are sick."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. They have to work. The text states that both parents work, and they often have to leave their children in daycare centers. The other options are incorrect because there is no mention of parents being lazy or sick.",
+               "tips": "Read the text carefully and look for information that answers the question."
+            },
+            {
+               "question": "What do children usually do after they come home from school?",
+               "options": ["A. They go to bed.", "B. They play with their friends.", "C. They watch TV."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. They play with their friends. The text states that children usually spend most of their day in school and then play with their friends. The other options are incorrect because there is no mention of children going to bed or watching TV.",
+               "tips": "Look for the information in the text that answers the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching",
+         "content": {
+            "A": "Sarah is a young mother with two children.",
+            "B": "John is a single father who looks after his children.",
+            "C": "Emily is a daycare worker who takes care of children all day.",
+            "D": "Michael is a father who works from home and takes care of his children.",
+            "E": "Kate is a single mother who works and looks after her children.",
+            "F": "David is a father who lives with his wife and children.",
+            "G": "Rebecca is a mother who has adopted a child.",
+            "H": "James is a father who spends most of his time playing video games."
+         },
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Which person is a single father?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. John is a single father who looks after his children. The other options are incorrect because there is no mention of John being a single father.",
+               "tips": "Read the descriptions carefully and choose the option that best matches each person."
+            },
+            {
+               "question": "Which person has adopted a child?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "G",
+               "explanation": "The correct answer is G. Rebecca is a mother who has adopted a child. The other options are incorrect because there is no mention of Rebecca being a mother who has adopted a child.",
+               "tips": "Look for the information in the descriptions that answers the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/SIGNS",
+         "content": [
+            {
+               "text": "Hello, my name is Sarah. I am a mother of two children. I work as a teacher and my husband works as an engineer. We have a busy schedule, but we always make time for our children.",
+               "question": "What does Sarah do for a living?",
+               "options": ["A. She is an engineer.", "B. She is a teacher.", "C. She is a doctor."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. She is a teacher. The text states that Sarah works as a teacher. The other options are incorrect because there is no mention of Sarah being an engineer or a doctor.",
+               "tips": "Read the text carefully and look for information that answers the question."
+            },
+            {
+               "text": "Our family is very happy. We have a big house and two cars. We go on vacation every year and always have fun.",
+               "question": "What does the family do every year?",
+               "options": ["A. They go to school.", "B. They go on vacation.", "C. They watch TV."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. They go on vacation. The text states that the family goes on vacation every year. The other options are incorrect because there is no mention of the family going to school or watching TV.",
+               "tips": "Look for the information in the text that answers the question."
+            }
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the family's biggest advantage?",
+               "options": ["A. They have a big house.", "B. They have two cars.", "C. They go on vacation every year."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. They go on vacation every year. The text states that the family goes on vacation every year. The other options are incorrect because there is no mention of the family's biggest advantage being a big house or two cars.",
+               "tips": "Read the text carefully and look for information that answers the question."
+            },
+            {
+               "question": "What does the family's schedule look like?",
+               "options": ["A. They are very busy.", "B. They are very lazy.", "C. They are very tired."],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. They are very busy. The text states that Sarah and her husband work and have a busy schedule. The other options are incorrect because there is no mention of the family being lazy or tired.",
+               "tips": "Look for the information in the text that answers the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill",
+         "content": "Our family is very happy. We have a (1) _______ house and two cars. We go on (2) _______ every year and always have fun. My parents work hard, but they always make time for me. They are very (3) _______ and take care of me when I'm sick. I love my family and I'm very (4) _______ to have them.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. small", "B. big", "C. old"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. big. The text states that the family has a big house. The other options are incorrect because there is no mention of the family having a small or old house.",
+               "tips": "Read the text carefully and look for information that answers the question."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. vacation", "B. holiday", "C. weekend"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. vacation. The text states that the family goes on vacation every year. The other options are incorrect because there is no mention of the family going on holiday or weekend.",
+               "tips": "Look for the information in the text that answers the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill",
+         "content": "Our family is very happy. We have a (1) _______ house and two cars. We go on (2) _______ every year and always have fun. My parents work (3) _______ to take care of me. They are very (4) _______ and I'm very (5) _______ to have them.",
+         "options": [],
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "big",
+               "explanation": "The correct answer is big. The text states that the family has a big house.",
+               "tips": "Read the text carefully and look for information that answers the question."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "vacation",
+               "explanation": "The correct answer is vacation. The text states that the family goes on vacation every year.",
+               "tips": "Look for the information in the text that answers the question."
+            }
+         ]
+      }
+   ]
+}

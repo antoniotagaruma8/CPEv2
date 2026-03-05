@@ -1,0 +1,382 @@
+{
+  "examTitle": "Travel & Tourism CEFR B1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Travel Brochures",
+         "content": "The world's most popular tourist destination is Paris, with over 23 million visitors in 2019. The city's famous landmarks, such as the Eiffel Tower and Notre Dame Cathedral, attract millions of tourists each year. Visitors can also explore the city's many museums, including the Louvre and the Orsay. Paris is known for its romantic atmosphere, beautiful parks, and historic neighborhoods. Visitors can enjoy a variety of activities, such as boat cruises on the Seine, strolls through the Luxembourg Gardens, and shopping on the Champs-Élysées.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the writer say about Paris's famous landmarks?",
+               "options": ["They are the main reason for tourism in Paris.", "They attract millions of tourists each year.", "They are not worth visiting.", "They are not in Paris."],
+               "correctOption": "B",
+               "explanation": "The answer is B because the text states that the Eiffel Tower and Notre Dame Cathedral attract millions of tourists each year. Distractors A and C are incorrect because they do not accurately reflect the text. Distractor D is incorrect because the landmarks are in Paris.",
+               "tips": "Look for specific information in the text to answer the question."
+            },
+            {
+               "question": "What can visitors do in Paris?",
+               "options": ["They can visit museums and historic neighborhoods.", "They can enjoy a variety of activities such as boat cruises and shopping.", "They can visit the city's famous landmarks.", "They can eat at restaurants and cafes."],
+               "correctOption": "B",
+               "explanation": "The answer is B because the text states that visitors can enjoy a variety of activities such as boat cruises on the Seine and shopping on the Champs-Élysées. Distractors A, C, and D are incorrect because they do not accurately reflect the text.",
+               "tips": "Look for specific examples in the text to answer the question."
+            },
+            {
+               "question": "Why is Paris known for its romantic atmosphere?",
+               "options": ["Because of its beautiful parks and historic neighborhoods.", "Because of its famous landmarks.", "Because of its many museums.", "Because of its romantic atmosphere and beautiful parks."],
+               "correctOption": "D",
+               "explanation": "The answer is D because the text states that Paris is known for its romantic atmosphere, beautiful parks, and historic neighborhoods. Distractors A, B, and C are incorrect because they do not accurately reflect the text.",
+               "tips": "Look for specific information in the text to answer the question."
+            },
+            {
+               "question": "What is the estimated number of visitors to Paris in 2019?",
+               "options": ["15 million", "20 million", "23 million", "25 million"],
+               "correctOption": "C",
+               "explanation": "The answer is C because the text states that the world's most popular tourist destination is Paris, with over 23 million visitors in 2019. Distractors A, B, and D are incorrect because they do not accurately reflect the text.",
+               "tips": "Look for specific numbers in the text to answer the question."
+            },
+            {
+               "question": "What can visitors explore in Paris?",
+               "options": ["The city's famous landmarks, museums, and historic neighborhoods.", "The city's many museums and historic neighborhoods.", "The city's famous landmarks and parks.", "The city's parks and historic neighborhoods."],
+               "correctOption": "A",
+               "explanation": "The answer is A because the text states that visitors can explore the city's many museums, including the Louvre and the Orsay, and historic neighborhoods. Distractors B, C, and D are incorrect because they do not accurately reflect the text.",
+               "tips": "Look for specific information in the text to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "content": {
+            "profiles": [
+               {
+                  "name": "John",
+                  "description": "John is a 30-year-old tourist who loves history and architecture."
+               },
+               {
+                  "name": "Emily",
+                  "description": "Emily is a 25-year-old traveler who enjoys trying new foods and drinks."
+               },
+               {
+                  "name": "Michael",
+                  "description": "Michael is a 35-year-old businessman who is interested in technology and innovation."
+               },
+               {
+                  "name": "Sophia",
+                  "description": "Sophia is a 28-year-old student who loves art and culture."
+               },
+               {
+                  "name": "David",
+                  "description": "David is a 40-year-old retiree who enjoys outdoor activities and nature."
+               }
+            ],
+            "texts": [
+               {
+                  "text": "Paris is known for its historic neighborhoods, such as Montmartre and Le Marais. Visitors can explore the city's many museums, including the Louvre and the Orsay."
+               },
+               {
+                  "text": "The Eiffel Tower is a famous landmark in Paris that attracts millions of tourists each year. Visitors can take a boat cruise on the Seine or stroll through the Luxembourg Gardens."
+               },
+               {
+                  "text": "The city of Paris has a vibrant food scene, with many restaurants serving traditional French cuisine. Visitors can try croissants, baguettes, and cheese."
+               },
+               {
+                  "text": "The Louvre Museum in Paris is one of the world's most famous museums, with a collection of art and artifacts from around the world. Visitors can see the Mona Lisa and other famous paintings."
+               },
+               {
+                  "text": "The city of Paris has many parks and gardens, such as the Luxembourg Gardens and the Tuileries Garden. Visitors can stroll through the gardens and enjoy the scenery."
+               },
+               {
+                  "text": "The city of Paris has a rich history, with many historical landmarks and monuments. Visitors can see the Eiffel Tower, the Arc de Triomphe, and the Notre Dame Cathedral."
+               },
+               {
+                  "text": "The city of Paris has a vibrant nightlife, with many bars, clubs, and live music venues. Visitors can enjoy a night out in the city."
+               },
+               {
+                  "text": "The city of Paris has many shopping districts, such as the Champs-Élysées and the Galeries Lafayette. Visitors can shop for fashion, jewelry, and other gifts."
+               }
+            ]
+         },
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "questions": [
+            {
+               "question": "Which text would be most suitable for John?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "Text A is the most suitable for John because it mentions historic neighborhoods, which aligns with his interest in history and architecture.",
+               "tips": "Read the text carefully to determine which one would be most suitable for John."
+            },
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "Text C is the most suitable for Emily because it mentions food, which aligns with her interest in trying new foods and drinks.",
+               "tips": "Read the text carefully to determine which one would be most suitable for Emily."
+            },
+            {
+               "question": "Which text would be most suitable for Michael?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "Text D is the most suitable for Michael because it mentions technology and innovation, which aligns with his interest in technology.",
+               "tips": "Read the text carefully to determine which one would be most suitable for Michael."
+            },
+            {
+               "question": "Which text would be most suitable for Sophia?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "Text B is the most suitable for Sophia because it mentions art and culture, which aligns with her interest in art.",
+               "tips": "Read the text carefully to determine which one would be most suitable for Sophia."
+            },
+            {
+               "question": "Which text would be most suitable for David?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "E",
+               "explanation": "Text E is the most suitable for David because it mentions outdoor activities and nature, which aligns with his interest in nature.",
+               "tips": "Read the text carefully to determine which one would be most suitable for David."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "content": {
+            "text1": "The Eiffel Tower is a famous landmark in Paris that attracts millions of tourists each year. Visitors can take a boat cruise on the Seine or stroll through the Luxembourg Gardens.",
+            "text2": "The city of Paris has many parks and gardens, such as the Luxembourg Gardens and the Tuileries Garden. Visitors can stroll through the gardens and enjoy the scenery.",
+            "text3": "The city of Paris has a vibrant food scene, with many restaurants serving traditional French cuisine. Visitors can try croissants, baguettes, and cheese.",
+            "text4": "The city of Paris has many shopping districts, such as the Champs-Élysées and the Galeries Lafayette. Visitors can shop for fashion, jewelry, and other gifts.",
+            "text5": "The city of Paris has a rich history, with many historical landmarks and monuments. Visitors can see the Eiffel Tower, the Arc de Triomphe, and the Notre Dame Cathedral."
+         },
+         "instructions": "Read the texts. For each question, choose the correct answer A, B, C.",
+         "questions": [
+            {
+               "question": "What can visitors do in the Luxembourg Gardens?",
+               "options": ["Take a boat cruise on the Seine.", "Stroll through the gardens and enjoy the scenery.", "Shop for fashion and jewelry.", "See the Eiffel Tower."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that visitors can stroll through the gardens and enjoy the scenery.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "What is the food scene like in Paris?",
+               "options": ["The city has a boring food scene.", "The city has a vibrant food scene.", "The city has no restaurants.", "The city has only fast food restaurants."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the city of Paris has a vibrant food scene.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Where can visitors shop in Paris?",
+               "options": ["Only on the Champs-Élysées.", "Only at the Galeries Lafayette.", "In many shopping districts, such as the Champs-Élysées and the Galeries Lafayette.", "Nowhere in Paris."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that visitors can shop for fashion, jewelry, and other gifts in many shopping districts.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "What is the history of Paris like?",
+               "options": ["The city has no history.", "The city has a rich history.", "The city has a boring history.", "The city has a short history."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the city of Paris has a rich history.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "What can visitors see in Paris?",
+               "options": ["Only the Eiffel Tower.", "Only the Arc de Triomphe.", "The Eiffel Tower, the Arc de Triomphe, and the Notre Dame Cathedral.", "Nothing in Paris."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that visitors can see the Eiffel Tower, the Arc de Triomphe, and the Notre Dame Cathedral.",
+               "tips": "Read the text carefully to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "content": "The city of Paris has many parks and gardens, such as the Luxembourg Gardens and the Tuileries Garden. Visitors can [Gap 1] through the gardens and enjoy the scenery. The Luxembourg Gardens are particularly [Gap 2] because of their beautiful fountains and statues. Visitors can also [Gap 3] a boat cruise on the Seine or take a stroll through the Montmartre neighborhood. The city of Paris has a rich history, with many [Gap 4] and monuments. Visitors can see the Eiffel Tower, the Arc de Triomphe, and the Notre Dame Cathedral. The city of Paris has a vibrant [Gap 5] scene, with many restaurants serving traditional French cuisine.",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. Take a stroll through the gardens and enjoy the scenery.",
+                  "B. Walk through the gardens and enjoy the scenery.",
+                  "C. Run through the gardens and enjoy the scenery.",
+                  "D. Visit the gardens and enjoy the scenery.",
+                  "E. Explore the gardens and enjoy the scenery.",
+                  "F. Go through the gardens and enjoy the scenery."
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. Famous because of their beautiful fountains and statues.",
+                  "B. Beautiful because of their beautiful fountains and statues.",
+                  "C. Interesting because of their beautiful fountains and statues.",
+                  "D. Popular because of their beautiful fountains and statues.",
+                  "E. Unusual because of their beautiful fountains and statues.",
+                  "F. Noteworthy because of their beautiful fountains and statues."
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. Take a boat cruise on the Seine or take a stroll through the Montmartre neighborhood.",
+                  "B. Take a stroll through the Montmartre neighborhood or take a boat cruise on the Seine.",
+                  "C. Visit the Seine or take a stroll through the Montmartre neighborhood.",
+                  "D. Explore the Seine or take a stroll through the Montmartre neighborhood.",
+                  "E. Go through the Seine or take a stroll through the Montmartre neighborhood.",
+                  "F. Run through the Seine or take a stroll through the Montmartre neighborhood."
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. Statues and fountains.",
+                  "B. Monuments and statues.",
+                  "C. Parks and gardens.",
+                  "D. Buildings and monuments.",
+                  "E. Historical landmarks and monuments.",
+                  "F. Famous landmarks and monuments."
+               ],
+               "correctOption": "E",
+               "explanation": "The correct answer is E because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. Food scene.",
+                  "B. Music scene.",
+                  "C. Art scene.",
+                  "D. Fashion scene.",
+                  "E. Cultural scene.",
+                  "F. Historical scene."
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "content": "The city of Paris has [Gap 1] many parks and gardens, such as the Luxembourg Gardens and the Tuileries Garden. Visitors can [Gap 2] through the gardens and enjoy the scenery. The Luxembourg Gardens are particularly [Gap 3] because of their beautiful fountains and statues. Visitors can also [Gap 4] a boat cruise on the Seine or take a stroll through the Montmartre neighborhood. The city of Paris has a rich history, with many [Gap 5] and monuments.",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. Many",
+                  "B. Few",
+                  "C. Some",
+                  "D. Several",
+                  "E. Numerous",
+                  "F. Plenty"
+               ],
+               "correctOption": "E",
+               "explanation": "The correct answer is E because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. Walk",
+                  "B. Run",
+                  "C. Visit",
+                  "D. Explore",
+                  "E. Go",
+                  "F. Take"
+               ],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. Famous",
+                  "B. Beautiful",
+                  "C. Interesting",
+                  "D. Popular",
+                  "E. Unusual",
+                  "F. Noteworthy"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. Visit",
+                  "B. Take",
+                  "C. Run",
+                  "D. Explore",
+                  "E. Go",
+                  "F. Walk"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. Parks and gardens",
+                  "B. Monuments and statues",
+                  "C. Buildings and landmarks",
+                  "D. Historical landmarks and monuments",
+                  "E. Famous landmarks and monuments",
+                  "F. Historical buildings and monuments"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "content": "The city of Paris has [Gap 1] many parks and gardens, such as the Luxembourg Gardens and the Tuileries Garden. Visitors can [Gap 2] through the gardens and enjoy the scenery. The Luxembourg Gardens are particularly [Gap 3] because of their beautiful fountains and statues. Visitors can also [Gap 4] a boat cruise on the Seine or take a stroll through the Montmartre neighborhood. The city of Paris has a rich history, with many [Gap 5] and monuments.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "numerous",
+               "explanation": "The correct answer is numerous because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "take",
+               "explanation": "The correct answer is take because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "beautiful",
+               "explanation": "The correct answer is beautiful because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "take",
+               "explanation": "The correct answer is take because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "historical",
+               "explanation": "The correct answer is historical because it fits the context of the sentence.",
+               "tips": "Read the text carefully to determine the correct answer."
+            }
+         ]
+      }
+   ]
+}

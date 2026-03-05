@@ -1,0 +1,323 @@
+{
+  "examTitle": "B1 Environmental Issues Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Climate Change",
+         "content": "Climate change is one of the most pressing issues of our time. It is causing widespread devastation to our planet and its ecosystems. Rising temperatures are melting polar ice caps, leading to sea-level rise and more frequent natural disasters. The consequences are severe and far-reaching, affecting not just the environment but also human health and the economy. The good news is that there are many simple steps we can take to reduce our carbon footprint and contribute to a more sustainable future. For instance, we can carpool, use public transport, or even bike to work. We can also reduce our energy consumption by turning off lights and electronics when not in use. Furthermore, we can make conscious choices about the products we buy, choosing items with minimal packaging and made from sustainable materials. By making these small changes, we can collectively make a significant difference and help mitigate the effects of climate change.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What is the main topic of the text?",
+               "options": ["Climate change", "Sustainable living", "Environmental conservation", "Reducing carbon footprint"],
+               "correctOption": "A",
+               "explanation": "The text discusses the impact of climate change on the planet and its ecosystems. The correct answer is 'Climate change'. The other options are related to the topic but are not the main focus of the text.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for key words or phrases that match the options."
+            },
+            {
+               "question": "What can we do to reduce our carbon footprint?",
+               "options": ["Use more energy", "Buy more cars", "Carpool, use public transport or bike", "Throw away more waste"],
+               "correctOption": "C",
+               "explanation": "The text suggests that we can reduce our carbon footprint by carpooling, using public transport, or biking to work. The other options are incorrect as they would increase our carbon footprint.",
+               "tips": "When answering multiple-choice questions, look for specific actions or behaviors mentioned in the text as possible solutions to the problem."
+            },
+            {
+               "question": "What is the consequence of melting polar ice caps?",
+               "options": ["More frequent natural disasters", "Less frequent natural disasters", "No effect on natural disasters", "More frequent rain"],
+               "correctOption": "A",
+               "explanation": "The text states that melting polar ice caps lead to sea-level rise and more frequent natural disasters. The correct answer is 'More frequent natural disasters'. The other options are incorrect.",
+               "tips": "When answering multiple-choice questions, look for cause-and-effect relationships mentioned in the text to determine the correct answer."
+            },
+            {
+               "question": "What can we do to reduce our energy consumption?",
+               "options": ["Use more lights and electronics", "Turn off lights and electronics when not in use", "Use more energy-efficient appliances", "Buy more energy-consuming products"],
+               "correctOption": "B",
+               "explanation": "The text suggests that we can reduce our energy consumption by turning off lights and electronics when not in use. The correct answer is 'Turn off lights and electronics when not in use'. The other options are incorrect as they would increase energy consumption.",
+               "tips": "When answering multiple-choice questions, look for specific actions or behaviors mentioned in the text as possible solutions to the problem."
+            },
+            {
+               "question": "What can we do to contribute to a more sustainable future?",
+               "options": ["Buy more products with minimal packaging", "Choose products made from sustainable materials", "Both", "Neither"],
+               "correctOption": "B",
+               "explanation": "The text suggests that we can contribute to a more sustainable future by choosing products made from sustainable materials. The correct answer is 'Choose products made from sustainable materials'. The other options are incorrect as they do not match the text.",
+               "tips": "When answering multiple-choice questions, look for specific actions or behaviors mentioned in the text as possible solutions to the problem."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "content": {
+            "profiles": [
+               "Alex is a passionate environmentalist who spends most of his free time volunteering for local conservation efforts.",
+               "Ben is a young professional who works in the city and has a busy schedule.",
+               "Charlie is a student who loves outdoor activities such as hiking and camping.",
+               "David is a retiree who enjoys gardening and spending time in nature.",
+               "Emily is a busy mom who is always on the go and doesn't have much time for hobbies."
+            ],
+            "texts": [
+               "A: I love nothing more than spending time in the great outdoors.",
+               "B: As a busy professional, I don't have much time for hobbies, but I do try to stay active by going to the gym.",
+               "C: My favorite thing to do is hike through the mountains and feel connected to nature.",
+               "D: I've always been passionate about gardening and growing my own food.",
+               "E: As a mom, I'm always on the go, but I do try to squeeze in some time for myself by reading a book or taking a walk.",
+               "F: I've recently started volunteering for a local conservation organization and it's been a really rewarding experience.",
+               "G: I'm a bit of a homebody and prefer to spend my free time relaxing at home.",
+               "H: I love trying new outdoor activities such as kayaking and rock climbing."
+            ]
+         },
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Alex?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "F",
+               "explanation": "The text 'F' mentions volunteering for a local conservation organization, which matches Alex's passion for environmental conservation.",
+               "tips": "When reading the texts, look for keywords or phrases that match the person's description to determine the correct answer."
+            },
+            {
+               "question": "Which text would be most suitable for Ben?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "B",
+               "explanation": "The text 'B' mentions being a busy professional and not having much time for hobbies, which matches Ben's description.",
+               "tips": "When reading the texts, look for keywords or phrases that match the person's description to determine the correct answer."
+            },
+            {
+               "question": "Which text would be most suitable for Charlie?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "C",
+               "explanation": "The text 'C' mentions hiking and camping, which matches Charlie's love for outdoor activities.",
+               "tips": "When reading the texts, look for keywords or phrases that match the person's description to determine the correct answer."
+            },
+            {
+               "question": "Which text would be most suitable for David?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The text 'D' mentions gardening and growing one's own food, which matches David's hobby.",
+               "tips": "When reading the texts, look for keywords or phrases that match the person's description to determine the correct answer."
+            },
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "E",
+               "explanation": "The text 'E' mentions being a busy mom and trying to squeeze in some time for oneself, which matches Emily's description.",
+               "tips": "When reading the texts, look for keywords or phrases that match the person's description to determine the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "content": [
+            "The local park is closed due to maintenance. Please visit our website for updates.",
+            "The new bike path is now open for use. We invite you to come and explore the area.",
+            "The city council has announced plans to build a new library in the downtown area. The library will feature a state-of-the-art reading room and a collection of over 10,000 books.",
+            "The school is hosting a charity event to raise funds for a local children's hospital. Please join us for a fun-filled afternoon of games and activities.",
+            "The weather forecast is predicting heavy rain and strong winds for the next 24 hours. Please take necessary precautions to ensure your safety."
+         ],
+         "instructions": "Read the texts. For each question, choose the correct answer A, B, C.",
+         "questions": [
+            {
+               "question": "Why is the local park closed?",
+               "options": ["Maintenance", "Construction", "Renovation", "Demolition"],
+               "correctOption": "A",
+               "explanation": "The text states that the park is closed due to maintenance.",
+               "tips": "When reading short texts, look for key words or phrases that provide the necessary information to answer the question."
+            },
+            {
+               "question": "What is the main purpose of the charity event?",
+               "options": ["To raise funds for a local children's hospital", "To promote literacy among children", "To celebrate the school's anniversary", "To host a sports tournament"],
+               "correctOption": "A",
+               "explanation": "The text states that the event is to raise funds for a local children's hospital.",
+               "tips": "When reading short texts, look for key words or phrases that provide the necessary information to answer the question."
+            },
+            {
+               "question": "What feature will the new library have?",
+               "options": ["A collection of over 10,000 books", "A state-of-the-art reading room", "Both", "Neither"],
+               "correctOption": "B",
+               "explanation": "The text states that the library will feature a state-of-the-art reading room.",
+               "tips": "When reading short texts, look for key words or phrases that provide the necessary information to answer the question."
+            },
+            {
+               "question": "What is the weather forecast predicting?",
+               "options": ["Clear skies and sunny weather", "Heavy rain and strong winds", "Light drizzle and cloudy skies", "Snow and freezing temperatures"],
+               "correctOption": "B",
+               "explanation": "The text states that the weather forecast is predicting heavy rain and strong winds.",
+               "tips": "When reading short texts, look for key words or phrases that provide the necessary information to answer the question."
+            },
+            {
+               "question": "What is the new bike path open for?",
+               "options": ["Maintenance", "Repair", "Use", "Closure"],
+               "correctOption": "C",
+               "explanation": "The text states that the new bike path is now open for use.",
+               "tips": "When reading short texts, look for key words or phrases that provide the necessary information to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "content": "The city council has announced plans to build a new library in the downtown area. The library will feature a state-of-the-art reading room and a collection of over 10,000 books. [Gap 1] The library will also have a [Gap 2] for children to learn and play. The library will be open Monday to Saturday, from 9am to 5pm. It will be closed on Sundays and public holidays. [Gap 3] The library will offer a range of services, including free Wi-Fi and a quiet reading area. [Gap 4] The library will be a great resource for the community. [Gap 5] The construction of the library is expected to begin next year.",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. The library will also have a garden for visitors to enjoy.",
+                  "B. The library will also have a café for people to relax in.",
+                  "C. The library will also have a meeting room for community groups to use.",
+                  "D. The library will also have a parking garage for visitors.",
+                  "E. The library will also have a storage room for books and other materials.",
+                  "F. The library will also have a playground for children to play in."
+               ],
+               "correctOption": "C",
+               "explanation": "The correct sentence to fill in the gap is 'The library will also have a meeting room for community groups to use.'",
+               "tips": "When filling in gaps in a text, look for the sentence that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. The library will also have a computer lab for students to learn in.",
+                  "B. The library will also have a music room for people to practice in.",
+                  "C. The library will also have a gym for people to exercise in.",
+                  "D. The library will also have a reading room for people to study in.",
+                  "E. The library will also have a library for people to take books home in.",
+                  "F. The library will also have a science lab for people to conduct experiments in."
+               ],
+               "correctOption": "D",
+               "explanation": "The correct sentence to fill in the gap is 'The library will also have a reading room for people to study in.'",
+               "tips": "When filling in gaps in a text, look for the sentence that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. The library will be open 24 hours a day, 7 days a week.",
+                  "B. The library will be closed on Mondays and Tuesdays.",
+                  "C. The library will offer a range of services, including free Wi-Fi and a quiet reading area.",
+                  "D. The library will have a collection of over 10,000 books.",
+                  "E. The library will feature a state-of-the-art reading room.",
+                  "F. The library will have a meeting room for community groups to use."
+               ],
+               "correctOption": "C",
+               "explanation": "The correct sentence to fill in the gap is 'The library will offer a range of services, including free Wi-Fi and a quiet reading area.'",
+               "tips": "When filling in gaps in a text, look for the sentence that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. The library will be a great resource for the community.",
+                  "B. The library will be a great place for students to study.",
+                  "C. The library will be a great place for people to relax.",
+                  "D. The library will be a great place for children to learn.",
+                  "E. The library will be a great place for people to exercise.",
+                  "F. The library will be a great place for people to practice music."
+               ],
+               "correctOption": "A",
+               "explanation": "The correct sentence to fill in the gap is 'The library will be a great resource for the community.'",
+               "tips": "When filling in gaps in a text, look for the sentence that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. The construction of the library is expected to begin next year.",
+                  "B. The construction of the library is expected to begin this year.",
+                  "C. The construction of the library is expected to begin in 5 years.",
+                  "D. The construction of the library is expected to begin in 10 years.",
+                  "E. The construction of the library is expected to begin in 2025.",
+                  "F. The construction of the library is expected to begin in 2030."
+               ],
+               "correctOption": "A",
+               "explanation": "The correct sentence to fill in the gap is 'The construction of the library is expected to begin next year.'",
+               "tips": "When filling in gaps in a text, look for the sentence that makes the most sense in the context of the passage."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "content": "The new [1] _______ in the city is a great place to visit. It has a [2] _______ of over 10,000 books and a [3] _______ reading room. The library is open Monday to Saturday, from 9am to 5pm. It is closed on Sundays and public holidays. Visitors can [4] _______ free Wi-Fi and use the quiet reading area. The library also offers a range of [5] _______ for children to learn and play.",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. museum", "B. library", "C. park", "D. zoo"],
+               "correctOption": "B",
+               "explanation": "The correct word to fill in the gap is 'library' as it is the correct term for the new building in the city.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. collection", "B. exhibition", "C. gallery", "D. display"],
+               "correctOption": "A",
+               "explanation": "The correct word to fill in the gap is 'collection' as it refers to the number of books available in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. quiet", "B. reading", "C. study", "D. meeting"],
+               "correctOption": "B",
+               "explanation": "The correct word to fill in the gap is 'reading' as it refers to the type of room available in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. access", "B. use", "C. enjoy", "D. visit"],
+               "correctOption": "B",
+               "explanation": "The correct word to fill in the gap is 'use' as it refers to the action of visitors in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. services", "B. activities", "C. courses", "D. resources"],
+               "correctOption": "A",
+               "explanation": "The correct word to fill in the gap is 'services' as it refers to the range of activities available for children in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "content": "The new [1] _______ in the city is a great place to visit. It has a [2] _______ of over 10,000 books and a [3] _______ reading room. The library is open [4] _______, from 9am to 5pm. It is closed on [5] _______ and public holidays. Visitors can [6] _______ free Wi-Fi and use the quiet reading area.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "library",
+               "explanation": "The correct word to fill in the gap is 'library' as it is the correct term for the new building in the city.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "collection",
+               "explanation": "The correct word to fill in the gap is 'collection' as it refers to the number of books available in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "reading",
+               "explanation": "The correct word to fill in the gap is 'reading' as it refers to the type of room available in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "Monday to Saturday",
+               "explanation": "The correct phrase to fill in the gap is 'Monday to Saturday' as it refers to the days the library is open.",
+               "tips": "When filling in gaps in a text, look for the phrase or word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "Sundays and public holidays",
+               "explanation": "The correct phrase to fill in the gap is 'Sundays and public holidays' as it refers to the days the library is closed.",
+               "tips": "When filling in gaps in a text, look for the phrase or word that makes the most sense in the context of the passage."
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "access",
+               "explanation": "The correct word to fill in the gap is 'access' as it refers to the action of visitors in the library.",
+               "tips": "When filling in gaps in a text, look for the word that makes the most sense in the context of the passage."
+            }
+         ]
+      }
+   ]
+}

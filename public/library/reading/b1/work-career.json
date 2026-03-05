@@ -1,0 +1,321 @@
+{
+  "examTitle": "Work and Career B1 Mock Reading Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension - Workplace Etiquette",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "<p>The company has introduced a new policy to promote a positive and respectful work environment. Employees are encouraged to greet each other with a smile and a friendly hello. The receptionist will make sure to welcome all visitors and guests with a warm smile and a refreshing cold drink. The management has also organized a team-building event to foster a sense of unity and cooperation among colleagues.</p><p>The event was a huge success, with everyone participating and having a great time. The team-building activity helped to break the ice and created a relaxed atmosphere. As a result, the office has become a more enjoyable place to work, and employees are more motivated and productive.</p><p>The company's commitment to creating a positive work environment has not gone unnoticed. The employees appreciate the efforts made by the management to make the workplace a better place to be. The new policy has been well received, and employees are looking forward to more team-building events and social activities.</p>",
+         "questions": [
+            {
+               "question": "What does the writer say about the team-building event?",
+               "options": ["It was a failure and everyone was disappointed.", "It was a huge success and everyone enjoyed it.", "It was not very successful but the employees appreciated the effort.", "It was cancelled due to bad weather."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that the team-building event helped to break the ice and created a relaxed atmosphere, but it also mentions that the event was not very successful. The distractors A and B are incorrect because they contradict the text, and D is incorrect because there is no mention of bad weather.",
+               "tips": "When reading comprehension questions, pay close attention to the text and look for specific details that support the answer. Do not rely on general impressions or assumptions."
+            },
+            {
+               "question": "What is the purpose of the new policy introduced by the company?",
+               "options": ["To reduce employee turnover", "To increase employee productivity", "To create a positive and respectful work environment", "To reduce office expenses"],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that the new policy aims to promote a positive and respectful work environment. The distractors A and D are incorrect because they are not mentioned in the text, and B is incorrect because while it may be a consequence of the new policy, it is not the primary purpose.",
+               "tips": "When reading comprehension questions, look for the main idea or purpose of the text, and use specific details to support your answer."
+            },
+            {
+               "question": "What did the receptionist do to welcome visitors and guests?",
+               "options": ["She shook hands with them", "She offered them a cold drink", "She smiled and said hello", "She ignored them"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the receptionist offered a refreshing cold drink to welcome visitors and guests. The distractors A and D are incorrect because they are not mentioned in the text, and C is incorrect because while the text mentions that employees are encouraged to greet each other with a smile, it does not mention the receptionist doing the same.",
+               "tips": "When reading comprehension questions, look for specific details in the text to support your answer, and avoid making assumptions."
+            },
+            {
+               "question": "How did the team-building event affect the office atmosphere?",
+               "options": ["It made the office a more stressful place", "It made the office a more enjoyable place", "It had no effect on the office atmosphere", "It made the office a more boring place"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the team-building event helped to break the ice and created a relaxed atmosphere. The distractors A, C, and D are incorrect because they contradict the text.",
+               "tips": "When reading comprehension questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "What did the employees appreciate about the company's new policy?",
+               "options": ["The extra breaks they got", "The new coffee machine", "The company's commitment to creating a positive work environment", "The flexible working hours"],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that the employees appreciated the company's efforts to make the workplace a better place to be. The distractors A, B, and D are incorrect because they are not mentioned in the text.",
+               "tips": "When reading comprehension questions, look for specific details in the text to support your answer, and avoid making assumptions."
+            },
+            {
+               "question": "What was the outcome of the new policy?",
+               "options": ["The employees became less motivated and productive", "The employees became more motivated and productive", "The company's profits decreased", "The company's profits increased"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the new policy helped to create a more enjoyable place to work, and as a result, employees became more motivated and productive. The distractors A, C, and D are incorrect because they contradict the text.",
+               "tips": "When reading comprehension questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts - Job Seeking",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+         "content": [
+            {
+               "description": "A 30-year-old software engineer looking for a new job opportunity",
+               "text": "I am a highly motivated and experienced software engineer looking for a new challenge. I have a strong background in Java and Python programming languages and have worked on several large-scale projects. I am confident that my skills and experience would be a great fit for this company."
+            },
+            {
+               "description": "A 25-year-old marketing manager looking to switch industries",
+               "text": "As a creative and ambitious marketing manager, I am eager to bring my skills and experience to a new industry. I have a strong background in social media marketing and have worked on several successful campaigns. I am excited about the opportunity to learn and grow in a new field."
+            },
+            {
+               "description": "A 35-year-old project manager looking for a leadership role",
+               "text": "I am a seasoned project manager with over 10 years of experience in managing large-scale projects. I have a strong background in leadership and have successfully led teams to deliver projects on time and within budget. I am looking for a leadership role where I can utilize my skills and experience to drive success."
+            },
+            {
+               "description": "A 28-year-old data analyst looking to transition to a business role",
+               "text": "As a data analyst with a strong background in data visualization and analysis, I am eager to bring my skills and experience to a business role. I have a strong understanding of business operations and have worked on several projects to improve business efficiency. I am excited about the opportunity to learn and grow in a new field."
+            },
+            {
+               "description": "A 40-year-old HR manager looking for a new challenge",
+               "text": "I am a seasoned HR manager with over 15 years of experience in recruitment, talent development, and employee engagement. I have a strong background in HR operations and have successfully implemented several HR initiatives. I am looking for a new challenge where I can utilize my skills and experience to drive success."
+            },
+            {
+               "description": "A 22-year-old recent graduate looking for an entry-level job",
+               "text": "I am a recent graduate with a degree in computer science. I have a strong background in programming languages and have worked on several personal projects. I am eager to bring my skills and experience to a new company and learn from experienced professionals."
+            },
+            {
+               "description": "A 50-year-old executive looking for a board position",
+               "text": "I am a seasoned executive with over 25 years of experience in leadership and management. I have a strong background in business operations and have successfully led several companies to deliver results. I am looking for a board position where I can utilize my skills and experience to drive success."
+            },
+            {
+               "description": "A 38-year-old product manager looking for a new opportunity",
+               "text": "I am a product manager with a strong background in product development and launch. I have a strong understanding of customer needs and have successfully launched several products. I am looking for a new opportunity where I can utilize my skills and experience to drive success."
+            }
+         ],
+         "questions": [
+            {
+               "question": "Which text would be most suitable for a 30-year-old software engineer?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text describes a software engineer looking for a new challenge, which matches the description of the 30-year-old software engineer. The other options do not match the description.",
+               "tips": "When matching profiles to texts, look for specific details that match the description, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Which text would be most suitable for a 25-year-old marketing manager?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text describes a marketing manager looking to switch industries, which matches the description of the 25-year-old marketing manager. The other options do not match the description.",
+               "tips": "When matching profiles to texts, look for specific details that match the description, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Which text would be most suitable for a 35-year-old project manager?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text describes a project manager looking for a leadership role, which matches the description of the 35-year-old project manager. The other options do not match the description.",
+               "tips": "When matching profiles to texts, look for specific details that match the description, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Which text would be most suitable for a 28-year-old data analyst?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The correct answer is D because the text describes a data analyst looking to transition to a business role, which matches the description of the 28-year-old data analyst. The other options do not match the description.",
+               "tips": "When matching profiles to texts, look for specific details that match the description, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Which text would be most suitable for a 40-year-old HR manager?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The correct answer is D because the text describes an HR manager looking for a new challenge, which matches the description of the 40-year-old HR manager. The other options do not match the description.",
+               "tips": "When matching profiles to texts, look for specific details that match the description, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Which text would be most suitable for a 22-year-old recent graduate?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text describes a recent graduate looking for an entry-level job, which matches the description of the 22-year-old recent graduate. The other options do not match the description.",
+               "tips": "When matching profiles to texts, look for specific details that match the description, and use evidence from the text to justify your answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts - Job Applications",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "The job description states that the ideal candidate should have at least 5 years of experience in marketing. However, the company is willing to consider candidates with less experience if they have a strong portfolio and a passion for the industry."
+            },
+            {
+               "text": "The company is looking for a highly motivated and organized individual to join their team. The ideal candidate should have a strong background in project management and be able to work well under pressure."
+            },
+            {
+               "text": "The job requires the candidate to have excellent communication skills and be able to work effectively with a team. The company is looking for someone who is confident, outgoing, and able to think creatively."
+            },
+            {
+               "text": "The job description states that the ideal candidate should have a degree in business administration or a related field. However, the company is willing to consider candidates with other qualifications if they have relevant work experience."
+            },
+            {
+               "text": "The company is looking for a highly skilled and experienced software engineer to join their team. The ideal candidate should have a strong background in programming languages and be able to work independently."
+            }
+         ],
+         "questions": [
+            {
+               "question": "What does the job description state about the ideal candidate's experience?",
+               "options": ["At least 5 years of experience in marketing", "Less than 5 years of experience in marketing", "No specific experience required"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the ideal candidate should have at least 5 years of experience in marketing. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "What are the company's requirements for the ideal candidate?",
+               "options": ["A strong background in project management and the ability to work well under pressure", "Excellent communication skills and the ability to work effectively with a team", "A degree in business administration or a related field"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the ideal candidate should have excellent communication skills and be able to work effectively with a team. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "What is the company looking for in a candidate?",
+               "options": ["Confidence, outgoingness, and the ability to think creatively", "A strong background in programming languages and the ability to work independently", "A degree in business administration or a related field"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the company is looking for someone who is confident, outgoing, and able to think creatively. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "What does the job description state about the ideal candidate's qualifications?",
+               "options": ["A degree in business administration or a related field", "Any relevant qualification", "No specific qualification required"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the company is willing to consider candidates with other qualifications if they have relevant work experience. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "What is the company looking for in a software engineer?",
+               "options": ["A strong background in programming languages and the ability to work independently", "Excellent communication skills and the ability to work effectively with a team", "A degree in business administration or a related field"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the company is looking for a highly skilled and experienced software engineer to join their team. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences - Job Interviews",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "<p>The job interview was an excellent opportunity for the candidate to showcase their skills and experience. (1) _______ The interviewer asked the candidate a series of questions to assess their knowledge and abilities. The candidate answered confidently and provided specific examples to support their answers. (2) _______ The interviewer was impressed with the candidate's performance and decided to offer them the job on the spot. (3) _______ The candidate was thrilled to have been offered the job and accepted without hesitation.</p><p>The company was pleased with the candidate's performance and felt that they would be a great fit for the team. (4) _______ The candidate's skills and experience made them an ideal candidate for the job. (5) _______ The company looked forward to working with the candidate and believed that they would make a valuable contribution to the team.</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. The job interview was an excellent opportunity for the candidate to learn more about the company.", "B. The interviewer asked the candidate a series of questions to assess their knowledge and abilities.", "C. The candidate answered confidently and provided specific examples to support their answers.", "D. The interviewer was impressed with the candidate's performance and decided to offer them the job on the spot.", "E. The candidate was thrilled to have been offered the job and accepted without hesitation.", "F. The company was pleased with the candidate's performance and felt that they would be a great fit for the team."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the interviewer asked the candidate a series of questions to assess their knowledge and abilities. The other options are incorrect because they contradict the text.",
+               "tips": "When reading gapped texts, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. The job interview was an excellent opportunity for the candidate to learn more about the company.", "B. The interviewer asked the candidate a series of questions to assess their knowledge and abilities.", "C. The candidate answered confidently and provided specific examples to support their answers.", "D. The interviewer was impressed with the candidate's performance and decided to offer them the job on the spot.", "E. The candidate was thrilled to have been offered the job and accepted without hesitation.", "F. The company was pleased with the candidate's performance and felt that they would be a great fit for the team."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the text states that the candidate answered confidently and provided specific examples to support their answers. The other options are incorrect because they contradict the text.",
+               "tips": "When reading gapped texts, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. The job interview was an excellent opportunity for the candidate to learn more about the company.", "B. The interviewer asked the candidate a series of questions to assess their knowledge and abilities.", "C. The candidate answered confidently and provided specific examples to support their answers.", "D. The interviewer was impressed with the candidate's performance and decided to offer them the job on the spot.", "E. The candidate was thrilled to have been offered the job and accepted without hesitation.", "F. The company was pleased with the candidate's performance and felt that they would be a great fit for the team."],
+               "correctOption": "D",
+               "explanation": "The correct answer is D because the text states that the interviewer was impressed with the candidate's performance and decided to offer them the job on the spot. The other options are incorrect because they contradict the text.",
+               "tips": "When reading gapped texts, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. The job interview was an excellent opportunity for the candidate to learn more about the company.", "B. The interviewer asked the candidate a series of questions to assess their knowledge and abilities.", "C. The candidate answered confidently and provided specific examples to support their answers.", "D. The interviewer was impressed with the candidate's performance and decided to offer them the job on the spot.", "E. The candidate was thrilled to have been offered the job and accepted without hesitation.", "F. The company was pleased with the candidate's performance and felt that they would be a great fit for the team."],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text states that the company was pleased with the candidate's performance and felt that they would be a great fit for the team. The other options are incorrect because they contradict the text.",
+               "tips": "When reading gapped texts, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. The job interview was an excellent opportunity for the candidate to learn more about the company.", "B. The interviewer asked the candidate a series of questions to assess their knowledge and abilities.", "C. The candidate answered confidently and provided specific examples to support their answers.", "D. The interviewer was impressed with the candidate's performance and decided to offer them the job on the spot.", "E. The candidate was thrilled to have been offered the job and accepted without hesitation.", "F. The company was pleased with the candidate's performance and felt that they would be a great fit for the team."],
+               "correctOption": "E",
+               "explanation": "The correct answer is E because the text states that the candidate was thrilled to have been offered the job and accepted without hesitation. The other options are incorrect because they contradict the text.",
+               "tips": "When reading gapped texts, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze - Job Advertisements",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "The company is seeking a highly motivated and experienced (1) _______ to join their team. The ideal candidate should have a strong background in marketing and be able to work well under pressure. The company is offering a competitive salary and benefits package, including (2) _______ health insurance and a generous (3) _______ allowance. The company is an equal opportunities employer and welcomes applications from (4) _______ backgrounds. The ideal candidate should be able to work independently and as part of a team. The company is looking for someone who is highly (5) _______ and able to think creatively.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. Manager", "B. Executive", "C. Marketing", "D. Sales", "E. Administrator", "F. Director"],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text states that the company is seeking a highly motivated and experienced director to join their team. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice gap-fill questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. Private", "B. Comprehensive", "C. Basic", "D. Optional", "E. Required", "F. Voluntary"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the text states that the company is offering comprehensive health insurance. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice gap-fill questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. Annual", "B. Bi-annual", "C. Monthly", "D. Quarterly", "E. Half-yearly", "F. Daily"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A because the text states that the company is offering a generous annual allowance. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice gap-fill questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. Male", "B. Female", "C. Ethnic", "D. Cultural", "E. Racial", "F. National"],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text states that the company is an equal opportunities employer and welcomes applications from all national backgrounds. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice gap-fill questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. Highly ambitious", "B. Highly motivated", "C. Highly skilled", "D. Highly experienced", "E. Highly intelligent", "F. Highly creative"],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the text states that the company is looking for someone who is highly creative. The other options are incorrect because they contradict the text.",
+               "tips": "When reading multiple-choice gap-fill questions, look for specific details in the text to support your answer, and use evidence from the text to justify your answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill - Job Interviews",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The job interview was an excellent opportunity for the candidate to (1) _______ their skills and experience. The interviewer asked the candidate a series of questions to assess their (2) _______ and abilities. The candidate answered confidently and provided specific (3) _______ to support their answers. The interviewer was impressed with the candidate's (4) _______ and decided to offer them the job on the spot. The company was pleased with the candidate's (5) _______ and felt that they would be a great fit for the team.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "showcase",
+               "explanation": "The correct answer is showcase because the text states that the job interview was an excellent opportunity for the candidate to showcase their skills and experience. The other options are incorrect because they contradict the text.",
+               "tips": "When reading open gap-fill questions, think of the word that best fits the context of the sentence and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "knowledge",
+               "explanation": "The correct answer is knowledge because the text states that the interviewer asked the candidate a series of questions to assess their knowledge and abilities. The other options are incorrect because they contradict the text.",
+               "tips": "When reading open gap-fill questions, think of the word that best fits the context of the sentence and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "examples",
+               "explanation": "The correct answer is examples because the text states that the candidate answered confidently and provided specific examples to support their answers. The other options are incorrect because they contradict the text.",
+               "tips": "When reading open gap-fill questions, think of the word that best fits the context of the sentence and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "performance",
+               "explanation": "The correct answer is performance because the text states that the interviewer was impressed with the candidate's performance and decided to offer them the job on the spot. The other options are incorrect because they contradict the text.",
+               "tips": "When reading open gap-fill questions, think of the word that best fits the context of the sentence and use evidence from the text to justify your answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "performance",
+               "explanation": "The correct answer is performance because the text states that the company was pleased with the candidate's performance and felt that they would be a great fit for the team. The other options are incorrect because they contradict the text.",
+               "tips": "When reading open gap-fill questions, think of the word that best fits the context of the sentence and use evidence from the text to justify your answer."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,441 @@
+{
+  "examTitle": "B1 Education & Learning Mock Reading Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading - Education Policy",
+         "questions": 5,
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "<p>The government has announced plans to reform the education system. The new policy aims to increase funding for schools and make education more accessible. However, some critics argue that the policy will lead to a lack of discipline in the classroom. The writer of an article in The Times suggests that the policy will have both positive and negative effects.</p><p>On the one hand, the policy will provide more opportunities for students from low-income backgrounds. On the other hand, it may lead to a decrease in academic standards.</p><p>Some experts believe that the policy is a step in the right direction, while others think it is a mistake. The government has promised to review the policy in five years' time.</p>",
+         "questions": [
+            {
+               "question": "What does the writer say about the new education policy?",
+               "options": [
+                  "A. It will lead to a lack of discipline in the classroom.",
+                  "B. It will increase funding for schools and make education more accessible.",
+                  "C. It will have both positive and negative effects.",
+                  "D. It will decrease academic standards."
+               ],
+               "correctOption": "C",
+               "explanation": "The writer mentions that the policy will have both positive and negative effects, so the correct answer is C. The other options are incorrect because they only focus on one aspect of the policy.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for keywords that match the options."
+            },
+            {
+               "question": "What is the main argument of the critics of the policy?",
+               "options": [
+                  "A. That the policy will provide more opportunities for students.",
+                  "B. That the policy will lead to a lack of discipline in the classroom.",
+                  "C. That the policy will increase funding for schools.",
+                  "D. That the policy will decrease academic standards."
+               ],
+               "correctOption": "B",
+               "explanation": "The critics argue that the policy will lead to a lack of discipline in the classroom, so the correct answer is B. The other options are incorrect because they are either positive or neutral.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for keywords that match the options."
+            },
+            {
+               "question": "What has the government promised to do with the policy?",
+               "options": [
+                  "A. Review the policy in five years' time.",
+                  "B. Increase funding for schools.",
+                  "C. Decrease academic standards.",
+                  "D. Provide more opportunities for students."
+               ],
+               "correctOption": "A",
+               "explanation": "The government has promised to review the policy in five years' time, so the correct answer is A. The other options are incorrect because they are either unrelated or opposite to the government's promise.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for keywords that match the options."
+            },
+            {
+               "question": "What do some experts believe about the policy?",
+               "options": [
+                  "A. It is a step in the right direction.",
+                  "B. It is a mistake.",
+                  "C. It will provide more opportunities for students.",
+                  "D. It will decrease academic standards."
+               ],
+               "correctOption": "A",
+               "explanation": "Some experts believe that the policy is a step in the right direction, so the correct answer is A. The other options are incorrect because they are either opposite or unrelated to the experts' view.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for keywords that match the options."
+            },
+            {
+               "question": "What is one of the potential effects of the policy?",
+               "options": [
+                  "A. An increase in academic standards.",
+                  "B. A decrease in funding for schools.",
+                  "C. A lack of discipline in the classroom.",
+                  "D. An increase in opportunities for students."
+               ],
+               "correctOption": "C",
+               "explanation": "One of the potential effects of the policy is a lack of discipline in the classroom, so the correct answer is C. The other options are incorrect because they are either opposite or unrelated to the potential effect.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for keywords that match the options."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "questions": 5,
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "profiles": [
+               {
+                  "name": "Emily",
+                  "description": "Emily is a 25-year-old English teacher who loves reading and writing."
+               },
+               {
+                  "name": "David",
+                  "description": "David is a 30-year-old engineer who enjoys playing sports and watching movies."
+               },
+               {
+                  "name": "Sarah",
+                  "description": "Sarah is a 28-year-old scientist who loves hiking and traveling."
+               },
+               {
+                  "name": "John",
+                  "description": "John is a 35-year-old businessman who enjoys playing golf and listening to music."
+               },
+               {
+                  "name": "Michael",
+                  "description": "Michael is a 22-year-old student who loves playing video games and watching TV."
+               }
+            ],
+            "texts": [
+               {
+                  "label": "A",
+                  "text": "I love reading about science and technology."
+               },
+               {
+                  "label": "B",
+                  "text": "I enjoy playing sports and watching movies."
+               },
+               {
+                  "label": "C",
+                  "text": "I love hiking and traveling to new places."
+               },
+               {
+                  "label": "D",
+                  "text": "I enjoy playing golf and listening to music."
+               },
+               {
+                  "label": "E",
+                  "text": "I love reading about history and politics."
+               },
+               {
+                  "label": "F",
+                  "text": "I enjoy playing video games and watching TV."
+               },
+               {
+                  "label": "G",
+                  "text": "I love writing stories and poetry."
+               },
+               {
+                  "label": "H",
+                  "text": "I enjoy reading about business and economics."
+               }
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "G",
+               "explanation": "Emily is an English teacher who loves reading and writing, so the text about writing stories and poetry would be most suitable for her.",
+               "tips": "When matching profiles to texts, read the description of the person and look for keywords that match the text."
+            },
+            {
+               "question": "Which text would be most suitable for David?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "David is an engineer who enjoys playing sports and watching movies, so the text about playing sports and watching movies would be most suitable for him.",
+               "tips": "When matching profiles to texts, read the description of the person and look for keywords that match the text."
+            },
+            {
+               "question": "Which text would be most suitable for Sarah?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "Sarah is a scientist who loves hiking and traveling, so the text about hiking and traveling would be most suitable for her.",
+               "tips": "When matching profiles to texts, read the description of the person and look for keywords that match the text."
+            },
+            {
+               "question": "Which text would be most suitable for John?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "John is a businessman who enjoys playing golf and listening to music, so the text about playing golf and listening to music would be most suitable for him.",
+               "tips": "When matching profiles to texts, read the description of the person and look for keywords that match the text."
+            },
+            {
+               "question": "Which text would be most suitable for Michael?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "F",
+               "explanation": "Michael is a student who loves playing video games and watching TV, so the text about playing video games and watching TV would be most suitable for him.",
+               "tips": "When matching profiles to texts, read the description of the person and look for keywords that match the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "questions": 5,
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "The new policy aims to increase funding for schools and make education more accessible. However, some critics argue that the policy will lead to a lack of discipline in the classroom."
+            },
+            {
+               "text": "The government has promised to review the policy in five years' time. In the meantime, they will work with teachers and parents to implement the changes."
+            },
+            {
+               "text": "Some experts believe that the policy is a step in the right direction. However, others think it is a mistake and will lead to a decrease in academic standards."
+            },
+            {
+               "text": "The policy will provide more opportunities for students from low-income backgrounds. However, it may also lead to a lack of discipline in the classroom."
+            },
+            {
+               "text": "The government has announced plans to reform the education system. The new policy aims to increase funding for schools and make education more accessible."
+            }
+         ],
+         "questions": [
+            {
+               "question": "What is the main goal of the new policy?",
+               "options": [
+                  "A. To increase funding for schools and make education more accessible.",
+                  "B. To decrease academic standards.",
+                  "C. To lead to a lack of discipline in the classroom."
+               ],
+               "correctOption": "A",
+               "explanation": "The policy aims to increase funding for schools and make education more accessible, so the correct answer is A. The other options are incorrect because they are either opposite or unrelated to the policy's goal.",
+               "tips": "When reading short texts, look for keywords that match the question and choose the correct answer."
+            },
+            {
+               "question": "What has the government promised to do with the policy?",
+               "options": [
+                  "A. Review the policy in five years' time.",
+                  "B. Implement the changes in one year.",
+                  "C. Decrease funding for schools."
+               ],
+               "correctOption": "A",
+               "explanation": "The government has promised to review the policy in five years' time, so the correct answer is A. The other options are incorrect because they are either opposite or unrelated to the government's promise.",
+               "tips": "When reading short texts, look for keywords that match the question and choose the correct answer."
+            },
+            {
+               "question": "What do some experts believe about the policy?",
+               "options": [
+                  "A. It is a step in the right direction.",
+                  "B. It is a mistake.",
+                  "C. It will lead to a decrease in academic standards."
+               ],
+               "correctOption": "A",
+               "explanation": "Some experts believe that the policy is a step in the right direction, so the correct answer is A. The other options are incorrect because they are either opposite or unrelated to the experts' view.",
+               "tips": "When reading short texts, look for keywords that match the question and choose the correct answer."
+            },
+            {
+               "question": "What is one of the potential effects of the policy?",
+               "options": [
+                  "A. An increase in academic standards.",
+                  "B. A lack of discipline in the classroom.",
+                  "C. A decrease in funding for schools."
+               ],
+               "correctOption": "B",
+               "explanation": "One of the potential effects of the policy is a lack of discipline in the classroom, so the correct answer is B. The other options are incorrect because they are either opposite or unrelated to the potential effect.",
+               "tips": "When reading short texts, look for keywords that match the question and choose the correct answer."
+            },
+            {
+               "question": "What is the main argument of the critics of the policy?",
+               "options": [
+                  "A. That the policy will provide more opportunities for students.",
+                  "B. That the policy will lead to a lack of discipline in the classroom.",
+                  "C. That the policy will increase funding for schools."
+               ],
+               "correctOption": "B",
+               "explanation": "The critics argue that the policy will lead to a lack of discipline in the classroom, so the correct answer is B. The other options are incorrect because they are either positive or neutral.",
+               "tips": "When reading short texts, look for keywords that match the question and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "questions": 5,
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "<p>The new policy aims to increase funding for schools and make education more accessible. It will also provide more opportunities for students from low-income backgrounds. However, some critics argue that the policy will lead to a lack of discipline in the classroom. The government has promised to review the policy in five years' time. The policy will have both positive and negative effects. Some experts believe that the policy is a step in the right direction. The government has announced plans to reform the education system. The new policy will increase funding for schools and make education more accessible.</p><p>[Gap 1]</p><p>[Gap 2]</p><p>[Gap 3]</p><p>[Gap 4]</p><p>[Gap 5]</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. Some experts believe that the policy is a step in the right direction.",
+                  "B. The government has announced plans to reform the education system.",
+                  "C. The new policy will increase funding for schools and make education more accessible.",
+                  "D. The government has promised to review the policy in five years' time.",
+                  "E. The policy will have both positive and negative effects.",
+                  "F. This sentence is not needed."
+               ],
+               "correctOption": "C",
+               "explanation": "The sentence 'The new policy will increase funding for schools and make education more accessible.' should be inserted in the first gap because it is the first sentence of the text.",
+               "tips": "When inserting sentences, read the text carefully and look for the correct sentence to fit each gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. The new policy will increase funding for schools and make education more accessible.",
+                  "B. Some experts believe that the policy is a step in the right direction.",
+                  "C. The government has announced plans to reform the education system.",
+                  "D. The government has promised to review the policy in five years' time.",
+                  "E. The policy will have both positive and negative effects.",
+                  "F. This sentence is not needed."
+               ],
+               "correctOption": "D",
+               "explanation": "The sentence 'The government has promised to review the policy in five years' time.' should be inserted in the second gap because it is the sentence that follows the sentence about the policy's effects.",
+               "tips": "When inserting sentences, read the text carefully and look for the correct sentence to fit each gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. The new policy will increase funding for schools and make education more accessible.",
+                  "B. Some experts believe that the policy is a step in the right direction.",
+                  "C. The government has announced plans to reform the education system.",
+                  "D. The government has promised to review the policy in five years' time.",
+                  "E. The policy will have both positive and negative effects.",
+                  "F. This sentence is not needed."
+               ],
+               "correctOption": "B",
+               "explanation": "The sentence 'Some experts believe that the policy is a step in the right direction.' should be inserted in the third gap because it is the sentence that follows the sentence about the policy's effects.",
+               "tips": "When inserting sentences, read the text carefully and look for the correct sentence to fit each gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. The new policy will increase funding for schools and make education more accessible.",
+                  "B. Some experts believe that the policy is a step in the right direction.",
+                  "C. The government has announced plans to reform the education system.",
+                  "D. The government has promised to review the policy in five years' time.",
+                  "E. The policy will have both positive and negative effects.",
+                  "F. This sentence is not needed."
+               ],
+               "correctOption": "E",
+               "explanation": "The sentence 'The policy will have both positive and negative effects.' should be inserted in the fourth gap because it is the sentence that follows the sentence about the government's promise.",
+               "tips": "When inserting sentences, read the text carefully and look for the correct sentence to fit each gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. The new policy will increase funding for schools and make education more accessible.",
+                  "B. Some experts believe that the policy is a step in the right direction.",
+                  "C. The government has announced plans to reform the education system.",
+                  "D. The government has promised to review the policy in five years' time.",
+                  "E. The policy will have both positive and negative effects.",
+                  "F. This sentence is not needed."
+               ],
+               "correctOption": "F",
+               "explanation": "The sentence 'This sentence is not needed.' should be inserted in the fifth gap because it is the sentence that does not fit anywhere else in the text.",
+               "tips": "When inserting sentences, read the text carefully and look for the correct sentence to fit each gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "questions": 5,
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "<p>The new policy will (1) _______ funding for schools and make education more accessible. This will (2) _______ more opportunities for students from low-income backgrounds. However, some critics argue that the policy will (3) _______ to a lack of discipline in the classroom. The government has promised to (4) _______ the policy in five years' time. The policy will have both positive and (5) _______ effects.</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. increase",
+                  "B. decrease",
+                  "C. provide",
+                  "D. remove"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct word to fill the first gap is 'increase' because the policy aims to increase funding for schools.",
+               "tips": "When filling gaps, read the text carefully and choose the correct word that fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. provide",
+                  "B. decrease",
+                  "C. increase",
+                  "D. remove"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct word to fill the second gap is 'increase' because the policy aims to provide more opportunities for students.",
+               "tips": "When filling gaps, read the text carefully and choose the correct word that fits the context."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. lead",
+                  "B. result",
+                  "C. cause",
+                  "D. contribute"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct word to fill the third gap is 'lead' because the critics argue that the policy will lead to a lack of discipline in the classroom.",
+               "tips": "When filling gaps, read the text carefully and choose the correct word that fits the context."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. review",
+                  "B. implement",
+                  "C. approve",
+                  "D. reject"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct word to fill the fourth gap is 'review' because the government has promised to review the policy in five years' time.",
+               "tips": "When filling gaps, read the text carefully and choose the correct word that fits the context."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. positive",
+                  "B. negative",
+                  "C. both",
+                  "D. neither"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct word to fill the fifth gap is 'both' because the policy will have both positive and negative effects.",
+               "tips": "When filling gaps, read the text carefully and choose the correct word that fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "questions": 5,
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "<p>The new policy will (1) _______ funding for schools and make education more accessible. This will (2) _______ more opportunities for students from low-income backgrounds. However, some critics argue that the policy will (3) _______ to a lack of discipline in the classroom. The government has promised to (4) _______ the policy in five years' time. The policy will have both positive and (5) _______ effects.</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "increase",
+               "explanation": "The correct word to fill the first gap is 'increase' because the policy aims to increase funding for schools.",
+               "tips": "When filling gaps, read the text carefully and choose the word that fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "provide",
+               "explanation": "The correct word to fill the second gap is 'provide' because the policy aims to provide more opportunities for students.",
+               "tips": "When filling gaps, read the text carefully and choose the word that fits the context."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "lead",
+               "explanation": "The correct word to fill the third gap is 'lead' because the critics argue that the policy will lead to a lack of discipline in the classroom.",
+               "tips": "When filling gaps, read the text carefully and choose the word that fits the context."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "review",
+               "explanation": "The correct word to fill the fourth gap is 'review' because the government has promised to review the policy in five years' time.",
+               "tips": "When filling gaps, read the text carefully and choose the word that fits the context."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "both",
+               "explanation": "The correct word to fill the fifth gap is 'both' because the policy will have both positive and negative effects.",
+               "tips": "When filling gaps, read the text carefully and choose the word that fits the context."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,155 @@
+{
+  "examTitle": "A2 Reading and Use of English Mock Exam: Shopping & Fashion",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Shopping",
+         "type": "Multiple-Choice Reading",
+         "content": "Shopping is a big part of our lives. People buy clothes, food, and other things they need. Some people like shopping because it's fun. Others don't like shopping because it takes a long time. We can shop at the supermarket, a store, or online. When we shop online, we can see the prices and descriptions of the products. If we want to buy something, we can click the 'buy now' button.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why do some people like shopping?",
+               "options": ["A. It's boring", "B. It's fun", "C. It's necessary"],
+               "correctOption": "B. It's fun",
+               "explanation": "The text states that some people like shopping because it's fun. This is a good reason for enjoying an activity.",
+               "tips": "Read the text carefully and look for the reasons why people like or dislike shopping."
+            },
+            {
+               "question": "Where can we shop?",
+               "options": ["A. Only online", "B. Only at the supermarket", "C. At the supermarket, a store, or online"],
+               "correctOption": "C. At the supermarket, a store, or online",
+               "explanation": "The text states that we can shop at the supermarket, a store, or online. This is a good answer because it includes all the options.",
+               "tips": "Read the text carefully and look for the places where we can shop."
+            },
+            {
+               "question": "What do we do when we shop online?",
+               "options": ["A. We can't see the prices and descriptions", "B. We can see the prices and descriptions, and click the 'buy now' button", "C. We have to call the store"],
+               "correctOption": "B. We can see the prices and descriptions, and click the 'buy now' button",
+               "explanation": "The text states that when we shop online, we can see the prices and descriptions of the products, and click the 'buy now' button. This is a good answer because it includes the correct actions.",
+               "tips": "Read the text carefully and look for the actions we take when we shop online."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching - Shopping Descriptions",
+         "type": "Matching",
+         "content": [
+            "Sarah likes buying clothes from her favourite store.",
+            "Emily likes shopping online because it's faster.",
+            "Tom likes going to the supermarket because it's cheaper.",
+            "David likes shopping with his friends because it's fun."
+         ],
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Which person likes buying clothes from her favourite store?",
+               "options": ["A. Emily", "B. Tom", "C. Sarah", "D. David"],
+               "correctOption": "C. Sarah",
+               "explanation": "The text states that Sarah likes buying clothes from her favourite store. This is a good answer because it matches the description.",
+               "tips": "Read the descriptions carefully and look for the person who likes buying clothes from her favourite store."
+            },
+            {
+               "question": "Which person likes shopping online because it's faster?",
+               "options": ["A. Emily", "B. Tom", "C. Sarah", "D. David"],
+               "correctOption": "A. Emily",
+               "explanation": "The text states that Emily likes shopping online because it's faster. This is a good answer because it matches the description.",
+               "tips": "Read the descriptions carefully and look for the person who likes shopping online because it's faster."
+            },
+            {
+               "question": "Which person likes going to the supermarket because it's cheaper?",
+               "options": ["A. Emily", "B. Tom", "C. Sarah", "D. David"],
+               "correctOption": "B. Tom",
+               "explanation": "The text states that Tom likes going to the supermarket because it's cheaper. This is a good answer because it matches the description.",
+               "tips": "Read the descriptions carefully and look for the person who likes going to the supermarket because it's cheaper."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/SIGNS - Fashion Labels",
+         "type": "Multiple-Choice for Short Texts/SIGNS",
+         "content": [
+            "New Arrival: Fashionable Clothes for Men and Women",
+            "Price: 20% off all items",
+            "Sale: 50% off all shoes",
+            "Closed: We are closed on Sunday",
+            "Opening Hours: 10am - 6pm",
+            "Returns: You can return items within 30 days"
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the discount for all items?",
+               "options": ["A. 10% off", "B. 20% off", "C. 50% off"],
+               "correctOption": "B. 20% off",
+               "explanation": "The text states that the price is 20% off all items. This is a good answer because it includes the correct discount.",
+               "tips": "Read the text carefully and look for the discount for all items."
+            },
+            {
+               "question": "What is the sale for all shoes?",
+               "options": ["A. 10% off", "B. 20% off", "C. 50% off"],
+               "correctOption": "C. 50% off",
+               "explanation": "The text states that the sale is 50% off all shoes. This is a good answer because it includes the correct sale.",
+               "tips": "Read the text carefully and look for the sale for all shoes."
+            },
+            {
+               "question": "When are we closed?",
+               "options": ["A. Monday", "B. Sunday", "C. Friday"],
+               "correctOption": "B. Sunday",
+               "explanation": "The text states that we are closed on Sunday. This is a good answer because it includes the correct day.",
+               "tips": "Read the text carefully and look for the day when we are closed."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill - Shopping Vocabulary",
+         "type": "Multiple-Choice Gap-Fill",
+         "content": "When we go to the supermarket, we look at the _______________ (1) _______ on the shelves. We can find bread, milk, and other _______________ (2) _______. Some supermarkets have a _______________ (3) _______ section where we can find healthy food. If we want to buy something, we can take it to the _______________ (4) _______ and pay for it. If we don't want it, we can put it back on the _______________ (5) _______. We can also buy _______________ (6) _______ online and have it delivered to our home.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. prices", "B. labels", "C. signs"],
+               "correctOption": "B. labels",
+               "explanation": "The correct answer is 'labels' because the text states that we look at the labels on the shelves.",
+               "tips": "Read the text carefully and look for the word that completes the sentence."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. food", "B. products", "C. items"],
+               "correctOption": "A. food",
+               "explanation": "The correct answer is 'food' because the text states that we can find bread, milk, and other food on the shelves.",
+               "tips": "Read the text carefully and look for the word that completes the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. healthy", "B. organic", "C. natural"],
+               "correctOption": "A. healthy",
+               "explanation": "The correct answer is 'healthy' because the text states that some supermarkets have a healthy food section.",
+               "tips": "Read the text carefully and look for the word that completes the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill - Shopping Vocabulary",
+         "type": "Open Gap-Fill",
+         "content": "When we go to the supermarket, we look at the _______________ (1) _______ on the shelves. We can find _______________ (2) _______, _______________ (3) _______, and other _______________ (4) _______. Some supermarkets have a _______________ (5) _______ section where we can find _______________ (6) _______. If we want to buy something, we can take it to the _______________ (7) _______ and pay for it.",
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "labels",
+               "explanation": "The correct answer is 'labels' because the text states that we look at the labels on the shelves.",
+               "tips": "Read the text carefully and look for the word that completes the sentence."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "food",
+               "explanation": "The correct answer is 'food' because the text states that we can find bread, milk, and other food on the shelves.",
+               "tips": "Read the text carefully and look for the word that completes the sentence."
+            }
+         ]
+      }
+   ]
+}

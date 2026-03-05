@@ -1783,71 +1783,83 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              {/* Step 1: Skill Buttons */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-3">
+              {/* Skill Accordion Cards */}
+              <div className="space-y-2 mb-3">
                 {([
-                  { skill: 'Reading', icon: <BookOpen className="w-5 h-5" />, locked: false },
-                  { skill: 'Writing', icon: <Edit3 className="w-5 h-5" />, locked: false },
-                  { skill: 'Listening', icon: <Headphones className="w-5 h-5" />, locked: !!(generationInfo && generationInfo.plan === 'free') },
-                  { skill: 'Speaking', icon: <Mic className="w-5 h-5" />, locked: false },
-                ] as const).map(({ skill, icon, locked }) => (
-                  <button
-                    key={skill}
-                    type="button"
-                    onClick={() => {
-                      if (locked) return;
-                      setExamType(skill);
-                      setLibrarySelectedLevel(null);
-                    }}
-                    className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all relative ${locked ? 'opacity-50 cursor-not-allowed bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : examType === skill ? 'border-blue-500 bg-blue-50/80 text-blue-700 shadow-sm ring-1 ring-blue-200' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:border-blue-200 dark:hover:border-blue-800 hover:bg-slate-50 dark:hover:bg-slate-800/80'}`}
-                  >
-                    {locked && <span className="absolute -top-1.5 -right-1.5 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1 py-0.5 rounded shadow-sm border border-amber-200 tracking-wider">PRO</span>}
-                    <span className={`mb-1.5 ${examType === skill ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`}>{icon}</span>
-                    <span className="text-[11px] font-bold">{skill}</span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Step 2: Level Tabs */}
-              <div className="mb-3">
-                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Select CEFR Level</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {CEFR_LEVELS.map(({ value, label }) => (
-                    <button
-                      key={value}
-                      type="button"
-                      onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
-                      className={`text-[11px] px-2.5 py-1 rounded-lg border font-bold transition-all ${librarySelectedLevel === value ? 'bg-blue-600 border-blue-600 text-white shadow-sm' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700'}`}
-                    >
-                      {value}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Step 3: Topic Cards Grid */}
-              {librarySelectedLevel && (
-                <div className="mb-4">
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
-                    {examType} · {librarySelectedLevel} — Choose a Topic
-                  </p>
-                  <div className="grid grid-cols-2 gap-1.5">
-                    {CEFR_TOPICS.map((t) => (
+                  { skill: 'Reading', icon: <BookOpen className="w-4 h-4" />, locked: false },
+                  { skill: 'Writing', icon: <Edit3 className="w-4 h-4" />, locked: false },
+                  { skill: 'Listening', icon: <Headphones className="w-4 h-4" />, locked: !!(generationInfo && generationInfo.plan === 'free') },
+                  { skill: 'Speaking', icon: <Mic className="w-4 h-4" />, locked: false },
+                ] as const).map(({ skill, icon, locked }) => {
+                  const isOpen = examType === skill;
+                  return (
+                    <div key={skill} className={`rounded-xl border-2 transition-all overflow-hidden ${locked ? 'opacity-50 border-slate-200 dark:border-slate-800' : isOpen ? 'border-blue-400 bg-blue-50/40 dark:bg-blue-950/20 shadow-sm' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-blue-200 dark:hover:border-blue-800'}`}>
+                      {/* Skill Header */}
                       <button
-                        key={t}
                         type="button"
-                        disabled={!!loadingLibraryTopic}
-                        onClick={() => handleLoadPreloadedExam(examType, librarySelectedLevel, t)}
-                        className={`text-left p-2.5 rounded-lg border transition-all group ${loadingLibraryTopic === t ? 'bg-blue-50 dark:bg-blue-900/30 border-blue-300 dark:border-blue-700 animate-pulse' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-slate-700/60 hover:shadow-sm'}`}
+                        onClick={() => {
+                          if (locked) return;
+                          if (isOpen) {
+                            setExamType('Reading');
+                            setLibrarySelectedLevel(null);
+                          } else {
+                            setExamType(skill);
+                            setLibrarySelectedLevel(null);
+                          }
+                        }}
+                        className={`w-full flex items-center gap-2.5 p-3 text-left transition-colors relative ${locked ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                       >
-                        <span className={`text-[11px] font-semibold leading-tight block ${loadingLibraryTopic === t ? 'text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400'}`}>
-                          {loadingLibraryTopic === t ? '⏳ Loading...' : t}
-                        </span>
+                        {locked && <span className="absolute top-1.5 right-2 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1 py-0.5 rounded shadow-sm border border-amber-200 tracking-wider">PRO</span>}
+                        <span className={`${isOpen ? 'text-blue-600' : 'text-slate-400 dark:text-slate-500'}`}>{icon}</span>
+                        <span className={`text-sm font-bold ${isOpen ? 'text-blue-700 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300'}`}>{skill}</span>
+                        <span className={`ml-auto text-[10px] transition-transform ${isOpen ? 'rotate-90' : ''}`}>▶</span>
                       </button>
-                    ))}
-                  </div>
-                </div>
-              )}
+
+                      {/* Level Sub-folders (visible when skill is open) */}
+                      {isOpen && !locked && (
+                        <div className="px-3 pb-3">
+                          <div className="flex flex-wrap gap-1.5 mb-2">
+                            {CEFR_LEVELS.map(({ value }) => (
+                              <button
+                                key={value}
+                                type="button"
+                                onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
+                                className={`text-[11px] px-2.5 py-1 rounded-lg border font-bold transition-all ${librarySelectedLevel === value ? 'bg-blue-600 border-blue-600 text-white shadow-sm' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700'}`}
+                              >
+                                {value}
+                              </button>
+                            ))}
+                          </div>
+
+                          {/* Topic Cards (visible when level is selected) */}
+                          {librarySelectedLevel && (
+                            <div>
+                              <p className="text-[9px] font-bold text-blue-400 uppercase tracking-wider mb-1.5">
+                                {skill} · {librarySelectedLevel} — Pick a Topic
+                              </p>
+                              <div className="grid grid-cols-2 gap-1.5">
+                                {CEFR_TOPICS.map((t) => (
+                                  <button
+                                    key={t}
+                                    type="button"
+                                    disabled={!!loadingLibraryTopic}
+                                    onClick={() => handleLoadPreloadedExam(skill, librarySelectedLevel, t)}
+                                    className={`text-left p-2 rounded-lg border transition-all group ${loadingLibraryTopic === t ? 'bg-blue-100 dark:bg-blue-900/40 border-blue-300 dark:border-blue-700 animate-pulse' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-slate-700/60 hover:shadow-sm'}`}
+                                  >
+                                    <span className={`text-[11px] font-semibold leading-tight block ${loadingLibraryTopic === t ? 'text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400'}`}>
+                                      {loadingLibraryTopic === t ? '⏳ Loading...' : t}
+                                    </span>
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
 
               {/* ── Divider ── */}
               <div className="flex items-center gap-2 my-3">

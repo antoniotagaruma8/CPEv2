@@ -1,0 +1,303 @@
+{
+  "examTitle": "Food & Nutrition (CEFR A2 Mock Reading & Use of English)",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Food Labels",
+         "content": "Food labels can be confusing. They often contain a lot of information. Some people do not read them carefully. For example, if you are lactose intolerant, you should look for milk alternatives. Lactose-free milk is not the same as milk alternatives. Milk alternatives have no lactose in them. Lactose in milk can cause some people to feel sick. The symptoms can be uncomfortable. Some people may have to go to the hospital. But most people can avoid these symptoms by choosing milk alternatives. There are many different types of milk alternatives. You can find them in most supermarkets. Some popular brands include almond milk, soy milk, and oat milk. They are all low in calories and fat.",
+         "instructions": "Read the text and answer the questions.",
+         "questions": [
+            {
+               "question": "What can lactose intolerant people do to avoid feeling sick?",
+               "options": [
+                  "A. Eat more dairy products",
+                  "B. Choose milk alternatives",
+                  "C. Avoid reading food labels"
+               ],
+               "explanation": "The writer suggests that lactose intolerant people should choose milk alternatives to avoid feeling sick. This is because lactose-free milk is not the same as milk alternatives, and milk alternatives have no lactose in them. Options A and C are incorrect because they do not provide a solution to the problem.",
+               "tips": "When reading food labels, pay attention to the ingredients and look for milk alternatives if you are lactose intolerant."
+            },
+            {
+               "question": "What can happen to people if they consume lactose in milk?",
+               "options": [
+                  "A. They may become very happy",
+                  "B. They may feel sick",
+                  "C. They may gain weight"
+               ],
+               "explanation": "The writer suggests that lactose in milk can cause people to feel sick. This is because lactose in milk can cause uncomfortable symptoms, and in some cases, people may have to go to the hospital. Options A and C are incorrect because they do not accurately describe the consequences of consuming lactose in milk.",
+               "tips": "When reading food labels, look for information about the ingredients, and be aware of the potential consequences of consuming certain ingredients."
+            },
+            {
+               "question": "Where can you find milk alternatives?",
+               "options": [
+                  "A. Only in health food stores",
+                  "B. In most supermarkets",
+                  "C. Only online"
+               ],
+               "explanation": "The writer suggests that milk alternatives can be found in most supermarkets. This is because they are low in calories and fat, and many people prefer them to traditional milk. Options A and C are incorrect because they do not accurately describe where milk alternatives can be found.",
+               "tips": "When shopping for milk alternatives, look for them in the dairy or health food section of the supermarket."
+            },
+            {
+               "question": "What are some popular brands of milk alternatives?",
+               "options": [
+                  "A. Almond milk, soy milk, and oat milk",
+                  "B. Cow milk, goat milk, and sheep milk",
+                  "C. Rice milk, coconut milk, and cashew milk"
+               ],
+               "explanation": "The writer suggests that some popular brands of milk alternatives include almond milk, soy milk, and oat milk. These brands are popular because they are low in calories and fat. Options B and C are incorrect because they do not accurately describe popular brands of milk alternatives.",
+               "tips": "When shopping for milk alternatives, look for popular brands that are low in calories and fat."
+            },
+            {
+               "question": "Why should people read food labels carefully?",
+               "options": [
+                  "A. Because they are boring",
+                  "B. Because they are confusing",
+                  "C. Because they contain important information"
+               ],
+               "explanation": "The writer suggests that people should read food labels carefully because they contain important information. This information can help people make informed choices about the food they eat. Options A and B are incorrect because they do not accurately describe why people should read food labels.",
+               "tips": "When reading food labels, look for information about the ingredients, and be aware of the potential consequences of consuming certain ingredients."
+            },
+            {
+               "question": "What can happen if people do not read food labels carefully?",
+               "options": [
+                  "A. They may become very happy",
+                  "B. They may feel sick",
+                  "C. They may gain weight"
+               ],
+               "explanation": "The writer suggests that if people do not read food labels carefully, they may consume ingredients that can cause them to feel sick. This is because food labels contain important information about the ingredients and potential consequences of consumption. Options A and C are incorrect because they do not accurately describe the consequences of not reading food labels carefully.",
+               "tips": "When reading food labels, look for information about the ingredients, and be aware of the potential consequences of consuming certain ingredients."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching - Food Preferences",
+         "content": [
+            "A: I love eating at restaurants. It's a great way to try new foods and meet new people.",
+            "B: I prefer eating at home. It's more convenient and saves me money.",
+            "C: I only eat food that is organic and locally sourced.",
+            "D: I enjoy trying new recipes and experimenting with different flavors.",
+            "E: I'm a vegetarian and try to avoid meat as much as possible.",
+            "F: I'm a big fan of spicy food and love trying new dishes.",
+            "G: I have a food allergy and have to be careful about what I eat.",
+            "H: I don't really enjoy eating at restaurants because it's too expensive."
+         ],
+         "instructions": "Read the descriptions of the people and choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Which person enjoys trying new recipes and experimenting with different flavors?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct option is D because the person described in this sentence enjoys trying new recipes and experimenting with different flavors.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's preferences and habits."
+            },
+            {
+               "question": "Which person is a vegetarian and tries to avoid meat as much as possible?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "E"
+               ],
+               "explanation": "The correct option is E because the person described in this sentence is a vegetarian and tries to avoid meat as much as possible.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's dietary preferences and habits."
+            },
+            {
+               "question": "Which person prefers eating at home because it's more convenient and saves them money?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "H"
+               ],
+               "explanation": "The correct option is B because the person described in this sentence prefers eating at home because it's more convenient and saves them money.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's eating habits and preferences."
+            },
+            {
+               "question": "Which person enjoys trying new dishes and loves spicy food?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "F"
+               ],
+               "explanation": "The correct option is F because the person described in this sentence enjoys trying new dishes and loves spicy food.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's preferences and habits."
+            },
+            {
+               "question": "Which person has a food allergy and has to be careful about what they eat?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "G"
+               ],
+               "explanation": "The correct option is G because the person described in this sentence has a food allergy and has to be careful about what they eat.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's health and dietary needs."
+            },
+            {
+               "question": "Which person loves eating at restaurants because it's a great way to try new foods and meet new people?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "H"
+               ],
+               "explanation": "The correct option is A because the person described in this sentence loves eating at restaurants because it's a great way to try new foods and meet new people.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's eating habits and preferences."
+            },
+            {
+               "question": "Which person is a big fan of organic and locally sourced food?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "explanation": "The correct option is C because the person described in this sentence is a big fan of organic and locally sourced food.",
+               "tips": "When reading the descriptions, look for sentences that describe the person's dietary preferences and habits."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice Cloze - Food Safety",
+         "content": "When handling food, it's (1) _______ to wash your hands. This (2) _______ is especially important when preparing food for (3) _______ people. If you're unsure about the safety of a particular food, it's (4) _______ to err on the side of caution and avoid eating it. Some foods, such as raw meat and eggs, can be (5) _______ to eat because of the risk of contamination.",
+         "instructions": "Read the text and answer the questions.",
+         "questions": [
+            {
+               "question": "What should you do when handling food?",
+               "options": [
+                  "A. Not wash your hands",
+                  "B. Wash your hands",
+                  "C. Not eat the food",
+                  "D. Not drink the water"
+               ],
+               "explanation": "The writer suggests that you should wash your hands when handling food. This is because washing your hands is an important step in maintaining food safety. Options A, C, and D are incorrect because they do not accurately describe the recommended action.",
+               "tips": "When handling food, make sure to wash your hands thoroughly with soap and water."
+            },
+            {
+               "question": "Why is it especially important to wash your hands when preparing food for other people?",
+               "options": [
+                  "A. Because it's more fun",
+                  "B. Because it's more convenient",
+                  "C. Because it's more hygienic",
+                  "D. Because it's more expensive"
+               ],
+               "explanation": "The writer suggests that it's especially important to wash your hands when preparing food for other people because it's more hygienic. This is because washing your hands helps to prevent the spread of germs and bacteria. Options A, B, and D are incorrect because they do not accurately describe the reason for washing your hands.",
+               "tips": "When preparing food for other people, make sure to wash your hands thoroughly with soap and water."
+            },
+            {
+               "question": "What should you do if you're unsure about the safety of a particular food?",
+               "options": [
+                  "A. Eat it anyway",
+                  "B. Avoid eating it",
+                  "C. Cook it more",
+                  "D. Not care"
+               ],
+               "explanation": "The writer suggests that you should err on the side of caution and avoid eating the food if you're unsure about its safety. This is because it's better to be safe than sorry when it comes to food safety. Options A, C, and D are incorrect because they do not accurately describe the recommended action.",
+               "tips": "When in doubt, it's always better to err on the side of caution and avoid eating the food."
+            },
+            {
+               "question": "What can be a risk when eating certain foods, such as raw meat and eggs?",
+               "options": [
+                  "A. Overeating",
+                  "B. Under-eating",
+                  "C. Contamination",
+                  "D. Allergies"
+               ],
+               "explanation": "The writer suggests that the risk of contamination is a concern when eating certain foods, such as raw meat and eggs. This is because these foods can be contaminated with bacteria and other pathogens. Options A, B, and D are incorrect because they do not accurately describe the risk.",
+               "tips": "When eating foods that can be contaminated, make sure to handle and cook them safely to reduce the risk of foodborne illness."
+            },
+            {
+               "question": "What is the best course of action when preparing food for other people?",
+               "options": [
+                  "A. Not wash your hands",
+                  "B. Wash your hands thoroughly",
+                  "C. Not cook the food",
+                  "D. Not give them any food"
+               ],
+               "explanation": "The writer suggests that the best course of action when preparing food for other people is to wash your hands thoroughly. This is because washing your hands helps to prevent the spread of germs and bacteria. Options A, C, and D are incorrect because they do not accurately describe the recommended action.",
+               "tips": "When preparing food for other people, make sure to wash your hands thoroughly with soap and water."
+            },
+            {
+               "question": "What is the main reason for washing your hands when handling food?",
+               "options": [
+                  "A. To make the food taste better",
+                  "B. To make the food look better",
+                  "C. To maintain food safety",
+                  "D. To waste less food"
+               ],
+               "explanation": "The writer suggests that the main reason for washing your hands when handling food is to maintain food safety. This is because washing your hands helps to prevent the spread of germs and bacteria. Options A, B, and D are incorrect because they do not accurately describe the reason for washing your hands.",
+               "tips": "When handling food, make sure to wash your hands thoroughly with soap and water to maintain food safety."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill - Food and Culture",
+         "content": "In many cultures, food is a (1) _______ part of family gatherings and celebrations. For example, in some countries, a traditional meal is served at weddings and other special occasions. The food is often (2) _______ and delicious, and it's a way for people to come together and share in the joy of the occasion. In some cultures, food is also (3) _______ to the gods and goddesses of the past. This is because food is a symbol of abundance and fertility, and it's a way to show respect and gratitude to the gods.",
+         "instructions": "Read the text and choose the best word (A, B, or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. important",
+                  "B. unimportant",
+                  "C. insignificant"
+               ],
+               "explanation": "The writer suggests that food is an important part of family gatherings and celebrations. This is because food is often a central part of these events, and it's a way for people to come together and share in the joy of the occasion. Option B is incorrect because it implies that food is not significant or meaningful in these situations. Option C is also incorrect because it implies that food is not worth considering or taking seriously.",
+               "tips": "When reading the text, look for words that describe the importance or significance of food in different cultures."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. cold",
+                  "B. hot",
+                  "C. delicious"
+               ],
+               "explanation": "The writer suggests that the traditional meal is often delicious. This is because food is often prepared with care and attention to detail, and it's a way to show respect and hospitality to guests. Option A is incorrect because it implies that the food is not enjoyable or appealing. Option B is also incorrect because it implies that the food is not appetizing or tasty.",
+               "tips": "When reading the text, look for words that describe the quality or character of the food."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. given",
+                  "B. offered",
+                  "C. dedicated"
+               ],
+               "explanation": "The writer suggests that food is dedicated to the gods and goddesses of the past. This is because food is a symbol of abundance and fertility, and it's a way to show respect and gratitude to the gods. Option A is incorrect because it implies that food is simply handed over or passed on to the gods. Option B is also incorrect because it implies that food is offered or presented to the gods, but not necessarily dedicated or committed to them.",
+               "tips": "When reading the text, look for words that describe the attitude or intention behind the act of offering food to the gods."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill - Food and Health",
+         "content": "A balanced diet is essential for maintaining good health. It's (1) _______ to eat a variety of foods, including fruits, vegetables, whole grains, and lean proteins. These foods provide the nutrients and energy that our bodies need to function properly. A diet that is (2) _______ in processed and unhealthy foods can lead to a range of health problems, including obesity, diabetes, and heart disease. On the other hand, a diet that is (3) _______ in whole, nutrient-rich foods can help to prevent these conditions and promote overall health and wellbeing.",
+         "instructions": "Read the text and write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "important",
+               "explanation": "The writer suggests that it's essential to eat a variety of foods to maintain good health. This is because these foods provide the nutrients and energy that our bodies need to function properly. Option B is incorrect because it implies that eating a variety of foods is not necessary or important. Option C is also incorrect because it implies that eating a variety of foods is not beneficial or helpful to our health.",
+               "tips": "When reading the text, look for words that describe the importance or significance of eating a variety of foods for maintaining good health."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "deficient",
+               "explanation": "The writer suggests that a diet that is deficient in processed and unhealthy foods can lead to a range of health problems. This is because these foods can cause a range of negative health effects, including obesity, diabetes, and heart disease. Option A is incorrect because it implies that a diet that is deficient in processed and unhealthy foods is healthy or beneficial. Option C is also incorrect because it implies that a diet that is deficient in processed and unhealthy foods is not a concern or issue.",
+               "tips": "When reading the text, look for words that describe the negative consequences or effects of a diet that is deficient in processed and unhealthy foods."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "rich",
+               "explanation": "The writer suggests that a diet that is rich in whole, nutrient-rich foods can help to prevent health problems and promote overall health and wellbeing. This is because these foods provide the nutrients and energy that our bodies need to function properly. Option A is incorrect because it implies that a diet that is rich in whole, nutrient-rich foods is not beneficial or helpful to our health. Option B is also incorrect because it implies that a diet that is rich in whole, nutrient-rich foods is not necessary or important.",
+               "tips": "When reading the text, look for words that describe the benefits or advantages of a diet that is rich in whole, nutrient-rich foods."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,313 @@
+{
+  "examTitle": "Health & Lifestyle - B1 Mock Reading and Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Healthy Diets",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "Eating a healthy diet is essential for a long and happy life. A balanced diet should include plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats. Fruits and vegetables are rich in vitamins, minerals, and antioxidants, which can help protect against chronic diseases such as heart disease, diabetes, and some cancers. Whole grains, such as brown rice, quinoa, and whole-wheat bread, are good sources of fiber, which can help lower cholesterol levels and regulate blood sugar. Lean proteins, like chicken, fish, and beans, are essential for building and repairing muscles. Healthy fats, found in nuts, seeds, and avocados, can help lower cholesterol levels and reduce inflammation. A healthy diet can also help with weight management, improve mood, and boost energy levels.",
+         "questions": [
+            {
+               "question": "What does the writer suggest is essential for a long and happy life?",
+               "options": [
+                  "A. Eating only fruits and vegetables",
+                  "B. Consuming plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats",
+                  "C. Drinking plenty of water and exercising regularly",
+                  "D. Avoiding all types of fat"
+               ],
+               "explanation": "The correct answer is B because the writer emphasizes the importance of a balanced diet that includes a variety of food groups.",
+               "tip": "Pay attention to the writer's main idea and supporting details."
+            },
+            {
+               "question": "What are the benefits of eating whole grains?",
+               "options": [
+                  "A. They can help build and repair muscles",
+                  "B. They can help lower cholesterol levels and regulate blood sugar",
+                  "C. They can help protect against chronic diseases",
+                  "D. They can help boost energy levels"
+               ],
+               "explanation": "The correct answer is B because the writer states that whole grains are a good source of fiber, which can help lower cholesterol levels and regulate blood sugar.",
+               "tip": "Identify the benefits of each food group mentioned in the text."
+            },
+            {
+               "question": "What can healthy fats help with?",
+               "options": [
+                  "A. Lowering blood sugar levels",
+                  "B. Reducing inflammation and lowering cholesterol levels",
+                  "C. Building and repairing muscles",
+                  "D. Improving mood"
+               ],
+               "explanation": "The correct answer is B because the writer states that healthy fats can help lower cholesterol levels and reduce inflammation.",
+               "tip": "Pay attention to the specific benefits mentioned for each food group."
+            },
+            {
+               "question": "What is one of the benefits of a healthy diet?",
+               "options": [
+                  "A. Reducing the risk of chronic diseases",
+                  "B. Improving mood and boosting energy levels",
+                  "C. Lowering cholesterol levels and regulating blood sugar",
+                  "D. All of the above"
+               ],
+               "explanation": "The correct answer is D because the writer mentions several benefits of a healthy diet, including reducing the risk of chronic diseases, improving mood, and boosting energy levels.",
+               "tip": "Summarize the main benefits of a healthy diet mentioned in the text."
+            },
+            {
+               "question": "What should a balanced diet include?",
+               "options": [
+                  "A. Only fruits and vegetables",
+                  "B. Plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats",
+                  "C. Only lean proteins and healthy fats",
+                  "D. Only whole grains and lean proteins"
+               ],
+               "explanation": "The correct answer is B because the writer emphasizes the importance of including a variety of food groups in a balanced diet.",
+               "tip": "Identify the specific food groups mentioned as essential for a balanced diet."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple Matching - Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "descriptions": [
+               "Person A is a health-conscious individual who loves hiking and trying out new recipes.",
+               "Person B is a busy working professional who values convenience and speed.",
+               "Person C is a fitness enthusiast who prioritizes exercise and healthy eating.",
+               "Person D is a foodie who enjoys trying out different cuisines and cooking techniques.",
+               "Person E is a young mother who is concerned about her family's health and wellbeing."
+            ],
+            "texts": [
+               "A new study suggests that regular exercise can reduce the risk of chronic diseases.",
+               "A local restaurant offers a healthy menu with plenty of options for vegetarians and vegans.",
+               "A new app allows users to track their daily intake of fruits and vegetables.",
+               "A recent survey found that most people prefer to eat out rather than cook at home.",
+               "A fitness program offers personalized coaching and nutrition planning for its members.",
+               "A cookbook provides easy-to-follow recipes for healthy meals.",
+               "A healthy food delivery service offers a range of nutritious meals and snacks.",
+               "A wellness retreat offers yoga classes, meditation sessions, and healthy meals."
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Person A?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is F because the text mentions a cookbook with easy-to-follow recipes for healthy meals, which aligns with Person A's love of trying out new recipes.",
+               "tip": "Match the person's characteristics and interests with the text that best suits them."
+            },
+            {
+               "question": "Which text would be most suitable for Person B?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is B because the text mentions a local restaurant that offers a healthy menu with plenty of options, which aligns with Person B's value of convenience.",
+               "tip": "Consider the person's priorities and needs when matching them with a text."
+            },
+            {
+               "question": "Which text would be most suitable for Person C?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is A because the text mentions a new study that suggests regular exercise can reduce the risk of chronic diseases, which aligns with Person C's prioritization of exercise.",
+               "tip": "Look for texts that align with the person's values and interests."
+            },
+            {
+               "question": "Which text would be most suitable for Person D?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is G because the text mentions a healthy food delivery service that offers a range of nutritious meals and snacks, which aligns with Person D's love of trying out different cuisines.",
+               "tip": "Consider the person's preferences and hobbies when matching them with a text."
+            },
+            {
+               "question": "Which text would be most suitable for Person E?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is E because the text mentions a wellness retreat that offers yoga classes, meditation sessions, and healthy meals, which aligns with Person E's concern for her family's health and wellbeing.",
+               "tip": "Look for texts that align with the person's values and priorities."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            "A new study has found that a diet rich in fruits and vegetables can reduce the risk of chronic diseases.",
+            "Regular exercise can improve mental health and reduce stress levels.",
+            "A healthy breakfast can provide essential nutrients and energy for the day.",
+            "A recent survey found that most people prefer to eat out rather than cook at home.",
+            "A fitness program offers personalized coaching and nutrition planning for its members."
+         ],
+         "questions": [
+            {
+               "question": "According to the first text, what can a diet rich in fruits and vegetables do?",
+               "options": [
+                  "A. Reduce the risk of chronic diseases",
+                  "B. Improve mental health and reduce stress levels",
+                  "C. Provide essential nutrients and energy for the day"
+               ],
+               "explanation": "The correct answer is A because the text states that a diet rich in fruits and vegetables can reduce the risk of chronic diseases.",
+               "tip": "Identify the main idea of each text and choose the correct answer accordingly."
+            },
+            {
+               "question": "According to the second text, what can regular exercise do?",
+               "options": [
+                  "A. Reduce the risk of chronic diseases",
+                  "B. Improve mental health and reduce stress levels",
+                  "C. Provide essential nutrients and energy for the day"
+               ],
+               "explanation": "The correct answer is B because the text states that regular exercise can improve mental health and reduce stress levels.",
+               "tip": "Focus on the main idea of each text and choose the correct answer."
+            },
+            {
+               "question": "According to the third text, what can a healthy breakfast do?",
+               "options": [
+                  "A. Reduce the risk of chronic diseases",
+                  "B. Improve mental health and reduce stress levels",
+                  "C. Provide essential nutrients and energy for the day"
+               ],
+               "explanation": "The correct answer is C because the text states that a healthy breakfast can provide essential nutrients and energy for the day.",
+               "tip": "Identify the main benefit of each text and choose the correct answer."
+            },
+            {
+               "question": "According to the fourth text, what do most people prefer?",
+               "options": [
+                  "A. Eating out",
+                  "B. Eating at home",
+                  "C. Both eating in and eating out"
+               ],
+               "explanation": "The correct answer is A because the text states that most people prefer to eat out rather than cook at home.",
+               "tip": "Identify the main idea of each text and choose the correct answer accordingly."
+            },
+            {
+               "question": "According to the fifth text, what does a fitness program offer?",
+               "options": [
+                  "A. Personalized coaching and nutrition planning",
+                  "B. A healthy breakfast",
+                  "C. A new study on chronic diseases"
+               ],
+               "explanation": "The correct answer is A because the text states that a fitness program offers personalized coaching and nutrition planning for its members.",
+               "tip": "Identify the main benefit of each text and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "Eating a healthy diet is essential for a long and happy life. A balanced diet should include plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats. Fruits and vegetables are rich in vitamins, minerals, and antioxidants, which can help protect against chronic diseases such as heart disease, diabetes, and some cancers. [Gap 1] Whole grains, such as brown rice, quinoa, and whole-wheat bread, are good sources of fiber, which can help lower cholesterol levels and regulate blood sugar. [Gap 2] Lean proteins, like chicken, fish, and beans, are essential for building and repairing muscles. [Gap 3] Healthy fats, found in nuts, seeds, and avocados, can help lower cholesterol levels and reduce inflammation. [Gap 4] A healthy diet can also help with weight management, improve mood, and boost energy levels. [Gap 5] [A. Eating a balanced diet can reduce the risk of chronic diseases. B. Fruits and vegetables are rich in fiber. C. A healthy diet is essential for a long and happy life. D. Whole grains are a good source of protein. E. Lean proteins are essential for building and repairing muscles. F. A healthy diet can improve mood and boost energy levels.]",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. Eating a balanced diet can reduce the risk of chronic diseases.", "B. Fruits and vegetables are rich in fiber.", "C. A healthy diet is essential for a long and happy life.", "D. Whole grains are a good source of protein.", "E. Lean proteins are essential for building and repairing muscles.", "F. A healthy diet can improve mood and boost energy levels."],
+               "correctOption": "C",
+               "explanation": "The correct answer is C because the sentence is a repetition of the first sentence and fits the context.",
+               "tip": "Read the context and look for a sentence that fits the meaning of the text."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. Eating a balanced diet can reduce the risk of chronic diseases.", "B. Fruits and vegetables are rich in fiber.", "C. A healthy diet is essential for a long and happy life.", "D. Whole grains are a good source of protein.", "E. Lean proteins are essential for building and repairing muscles.", "F. A healthy diet can improve mood and boost energy levels."],
+               "correctOption": "D",
+               "explanation": "The correct answer is D because the sentence is a correct statement and fits the context.",
+               "tip": "Identify the main idea of each sentence and choose the correct answer accordingly."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. Eating a balanced diet can reduce the risk of chronic diseases.", "B. Fruits and vegetables are rich in fiber.", "C. A healthy diet is essential for a long and happy life.", "D. Whole grains are a good source of protein.", "E. Lean proteins are essential for building and repairing muscles.", "F. A healthy diet can improve mood and boost energy levels."],
+               "correctOption": "E",
+               "explanation": "The correct answer is E because the sentence is a correct statement and fits the context.",
+               "tip": "Read the context and look for a sentence that fits the meaning of the text."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. Eating a balanced diet can reduce the risk of chronic diseases.", "B. Fruits and vegetables are rich in fiber.", "C. A healthy diet is essential for a long and happy life.", "D. Whole grains are a good source of protein.", "E. Lean proteins are essential for building and repairing muscles.", "F. A healthy diet can improve mood and boost energy levels."],
+               "correctOption": "F",
+               "explanation": "The correct answer is F because the sentence is a correct statement and fits the context.",
+               "tip": "Identify the main idea of each sentence and choose the correct answer accordingly."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. Eating a balanced diet can reduce the risk of chronic diseases.", "B. Fruits and vegetables are rich in fiber.", "C. A healthy diet is essential for a long and happy life.", "D. Whole grains are a good source of protein.", "E. Lean proteins are essential for building and repairing muscles.", "F. A healthy diet can improve mood and boost energy levels."],
+               "correctOption": "B",
+               "explanation": "The correct answer is B because the sentence is a correct statement and fits the context.",
+               "tip": "Read the context and look for a sentence that fits the meaning of the text."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "Eating a healthy diet is (1) _______________________ for a long and happy life. A balanced diet should include plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats. Fruits and vegetables are rich in vitamins, minerals, and antioxidants, which can help protect against chronic diseases such as heart disease, diabetes, and some cancers. Whole grains, such as brown rice, quinoa, and whole-wheat bread, are (2) _______________________ sources of fiber, which can help lower cholesterol levels and regulate blood sugar. Lean proteins, like chicken, fish, and beans, are (3) _______________________ for building and repairing muscles. Healthy fats, found in nuts, seeds, and avocados, can help lower cholesterol levels and reduce (4) _______________________ . A healthy diet can also help with weight management, improve mood, and boost energy levels.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. very",
+                  "B. essential",
+                  "C. important",
+                  "D. necessary"
+               ],
+               "explanation": "The correct answer is B because the sentence states that a healthy diet is essential for a long and happy life.",
+               "tip": "Identify the main idea of the sentence and choose the correct answer accordingly."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. good",
+                  "B. excellent",
+                  "C. bad",
+                  "D. poor"
+               ],
+               "explanation": "The correct answer is A because the sentence states that whole grains are good sources of fiber.",
+               "tip": "Read the context and look for a word that fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. necessary",
+                  "B. essential",
+                  "C. important",
+                  "D. good"
+               ],
+               "explanation": "The correct answer is B because the sentence states that lean proteins are essential for building and repairing muscles.",
+               "tip": "Identify the main idea of the sentence and choose the correct answer accordingly."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. inflammation",
+                  "B. stress",
+                  "C. anxiety",
+                  "D. depression"
+               ],
+               "explanation": "The correct answer is A because the sentence states that healthy fats can help lower cholesterol levels and reduce inflammation.",
+               "tip": "Read the context and look for a word that fits the meaning of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "Eating a healthy diet is (1) _______________________ for a long and happy life. A balanced diet should include plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats. Fruits and vegetables are rich in vitamins, minerals, and antioxidants, which can help protect against chronic diseases such as heart disease, diabetes, and some cancers. Whole grains, such as brown rice, quinoa, and whole-wheat bread, are (2) _______________________ sources of fiber, which can help lower cholesterol levels and regulate blood sugar. Lean proteins, like chicken, fish, and beans, are (3) _______________________ for building and repairing muscles. Healthy fats, found in nuts, seeds, and avocados, can help lower cholesterol levels and reduce (4) _______________________ . A healthy diet can also help with weight management, improve mood, and boost energy levels.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "essential",
+               "explanation": "The correct answer is essential because the sentence states that a healthy diet is essential for a long and happy life.",
+               "tip": "Use a word that fits the meaning of the sentence and is grammatically correct."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "good",
+               "explanation": "The correct answer is good because the sentence states that whole grains are good sources of fiber.",
+               "tip": "Read the context and choose a word that fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "essential",
+               "explanation": "The correct answer is essential because the sentence states that lean proteins are essential for building and repairing muscles.",
+               "tip": "Use a word that fits the meaning of the sentence and is grammatically correct."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "inflammation",
+               "explanation": "The correct answer is inflammation because the sentence states that healthy fats can help lower cholesterol levels and reduce inflammation.",
+               "tip": "Read the context and choose a word that fits the meaning of the sentence."
+            }
+         ]
+      }
+   ]
+}

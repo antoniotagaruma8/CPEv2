@@ -1,0 +1,228 @@
+{
+  "examTitle": "CEFR A2 Mock Reading and Use of English: Sport & Fitness",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension on Fitness Centers",
+         "content": "Fitness centers are popular places for people to exercise and stay healthy. Many people go to the gym to work out on machines like treadmills and exercise bikes. Others prefer group fitness classes like yoga or spinning. Some people even join fitness clubs to meet new friends who have similar interests. Fitness centers usually offer classes for different levels of fitness and age groups. They also have personal trainers who can help you set and reach your fitness goals. Many gyms have pools, saunas, and steam rooms for relaxation. Some even have restaurants or cafes where you can eat or drink after your workout.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "Why do many people go to the gym?",
+               "options": ["A. To play team sports", "B. To work out on machines", "C. To play video games"],
+               "explanation": "The answer is B. To work out on machines because the text states that many people go to the gym to work out on machines like treadmills and exercise bikes.",
+               "tips": "Pay attention to the details in the text and try to understand the main idea of the passage."
+            },
+            {
+               "question": "What do some people join at a fitness center?",
+               "options": ["A. A book club", "B. A fitness club", "C. A dance class"],
+               "explanation": "The answer is B. A fitness club because the text states that some people even join fitness clubs to meet new friends who have similar interests.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "What do fitness centers usually offer?",
+               "options": ["A. Only personal trainers", "B. Only group fitness classes", "C. Classes for different levels of fitness and age groups"],
+               "explanation": "The answer is C. Classes for different levels of fitness and age groups because the text states that fitness centers usually offer classes for different levels of fitness and age groups.",
+               "tips": "Look for the main idea of the passage and try to find the correct answer."
+            },
+            {
+               "question": "What can you do at some gyms?",
+               "options": ["A. Only work out", "B. Only eat", "C. Eat or drink after your workout"],
+               "explanation": "The answer is C. Eat or drink after your workout because the text states that some gyms have restaurants or cafes where you can eat or drink after your workout.",
+               "tips": "Read the passage carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Why do some people join fitness clubs?",
+               "options": ["A. To meet new people", "B. To work out alone", "C. To join a team sport"],
+               "explanation": "The answer is A. To meet new people because the text states that some people even join fitness clubs to meet new friends who have similar interests.",
+               "tips": "Look for the details in the text and try to understand the main idea of the passage."
+            },
+            {
+               "question": "What do personal trainers do?",
+               "options": ["A. They teach group fitness classes", "B. They help you set and reach your fitness goals", "C. They only work out with you"],
+               "explanation": "The answer is B. They help you set and reach your fitness goals because the text states that personal trainers can help you set and reach your fitness goals.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching on Fitness and Health",
+         "content": "A. Sarah is a personal trainer.\nB. Emma is a doctor.\nC. Jack is a fitness enthusiast.\nD. Michael is a nutritionist.\nE. Emily is a fitness instructor.\nF. David is a fitness center owner.\nG. Rachel is a fitness model.\nH. Olivia is a fitness blogger.",
+         "instructions": "Read the descriptions of the people. Choose the best option (A-H) for each person.",
+         "questions": [
+            {
+               "question": "Who is a personal trainer?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is A. Sarah because the text states that Sarah is a personal trainer.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Who is a fitness instructor?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is E. Emily because the text states that Emily is a fitness instructor.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            },
+            {
+               "question": "Who is a fitness model?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is G. Rachel because the text states that Rachel is a fitness model.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Who is a nutritionist?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is D. Michael because the text states that Michael is a nutritionist.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            },
+            {
+               "question": "Who is a fitness center owner?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is F. David because the text states that David is a fitness center owner.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Who is a fitness enthusiast?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "explanation": "The correct answer is C. Jack because the text states that Jack is a fitness enthusiast.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts/Signs on Fitness",
+         "content": [
+            "The gym is open from 6am to 10pm.",
+            "Please wear a mask when you enter the gym.",
+            "The swimming pool is closed today due to maintenance.",
+            "Please do not eat or drink in the gym.",
+            "The fitness center offers group fitness classes for all levels.",
+            "The personal training session is cancelled for today."
+         ],
+         "instructions": "Read the texts and short messages. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the opening time of the gym?",
+               "options": ["A. From 6am to 10pm", "B. From 10am to 6pm", "C. From 8am to 12pm"],
+               "explanation": "The correct answer is A. From 6am to 10pm because the text states that The gym is open from 6am to 10pm.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Why do you need to wear a mask at the gym?",
+               "options": ["A. To show off your muscles", "B. To show your style", "C. To prevent the spread of germs"],
+               "explanation": "The correct answer is C. To prevent the spread of germs because the text states that Please wear a mask when you enter the gym.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            },
+            {
+               "question": "Why is the swimming pool closed today?",
+               "options": ["A. Due to a storm", "B. Due to maintenance", "C. Due to a holiday"],
+               "explanation": "The correct answer is B. Due to maintenance because the text states that The swimming pool is closed today due to maintenance.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "What should you not do in the gym?",
+               "options": ["A. Eat or drink", "B. Wear a mask", "C. Use the equipment"],
+               "explanation": "The correct answer is A. Eat or drink because the text states that Please do not eat or drink in the gym.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            },
+            {
+               "question": "What does the fitness center offer?",
+               "options": ["A. Personal training sessions only", "B. Group fitness classes only", "C. Group fitness classes for all levels"],
+               "explanation": "The correct answer is C. Group fitness classes for all levels because the text states that The fitness center offers group fitness classes for all levels.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Why is the personal training session cancelled?",
+               "options": ["A. Due to a storm", "B. Due to maintenance", "C. Due to a holiday"],
+               "explanation": "The correct answer is Not provided because the text does not state the reason for the cancellation.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Gap-Fill on Fitness",
+         "content": "Fitness centers are popular places for people to (1) _______ and stay healthy. Many people go to the gym to (2) _______ out on machines like treadmills and exercise bikes. Others prefer group fitness classes (3) _______ yoga or spinning. Some people even join fitness clubs to (4) _______ new friends who have similar interests. Fitness centers usually offer classes (5) _______ different levels of fitness and age groups. They also have personal trainers who can (6) _______ you set and reach your fitness goals.",
+         "instructions": "Read the text. Choose the best word (A, B or C) for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. exercise", "B. relax", "C. work"],
+               "explanation": "The correct answer is A. exercise because the text states that Fitness centers are popular places for people to exercise and stay healthy.",
+               "tips": "Look for the main idea of the passage and try to find the correct answer among the options."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. to work out", "B. to take a rest", "C. to read a book"],
+               "explanation": "The correct answer is A. to work out because the text states that Many people go to the gym to work out on machines like treadmills and exercise bikes.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. instead of", "B. in addition to", "C. including"],
+               "explanation": "The correct answer is C. including because the text states that Others prefer group fitness classes including yoga or spinning.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. meet", "B. avoid", "C. ignore"],
+               "explanation": "The correct answer is A. meet because the text states that Some people even join fitness clubs to meet new friends who have similar interests.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. for", "B. with", "C. to"],
+               "explanation": "The correct answer is C. to because the text states that Fitness centers usually offer classes to different levels of fitness and age groups.",
+               "tips": "Look for the details in the text and try to find the correct answer among the options."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. help", "B. prevent", "C. assist"],
+               "explanation": "The correct answer is A. help because the text states that They also have personal trainers who can help you set and reach your fitness goals.",
+               "tips": "Read carefully and try to find the correct answer among the options."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Open Gap-Fill on Fitness and Health",
+         "content": "A healthy diet is (1) _______ eating plenty of fruits and vegetables every day. Regular exercise is also (2) _______ for maintaining a healthy weight. People who (3) _______ a lot of exercise tend to be happier and more energetic. A balanced diet and regular exercise can (4) _______ many health problems. Many people (5) _______ a fitness class to stay healthy. Some people even (6) _______ a personal trainer to help them reach their fitness goals.",
+         "options": [],
+         "instructions": "Read the text. Write ONE word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "eating",
+               "explanation": "The correct answer is eating because a healthy diet is achieved by eating plenty of fruits and vegetables every day.",
+               "tips": "Look for the main idea of the passage and try to find the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "important",
+               "explanation": "The correct answer is important because regular exercise is important for maintaining a healthy weight.",
+               "tips": "Read carefully and try to find the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "engage",
+               "explanation": "The correct answer is engage because people who engage a lot of exercise tend to be happier and more energetic.",
+               "tips": "Look for the details in the text and try to find the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "prevent",
+               "explanation": "The correct answer is prevent because a balanced diet and regular exercise can prevent many health problems.",
+               "tips": "Read carefully and try to find the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "join",
+               "explanation": "The correct answer is join because many people join a fitness class to stay healthy.",
+               "tips": "Look for the details in the text and try to find the correct answer."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "hire",
+               "explanation": "The correct answer is hire because some people even hire a personal trainer to help them reach their fitness goals.",
+               "tips": "Read carefully and try to find the correct answer."
+            }
+         ]
+      }
+   ]
+}

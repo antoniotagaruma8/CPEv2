@@ -1,0 +1,344 @@
+{
+  "examTitle": "Social Media and Online Communication (B1)",
+   
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension - Social Media Trends",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "Social media has become an essential tool for businesses to promote their products and services. According to a recent survey, 70% of online consumers are influenced by social media when making purchasing decisions. However, the effectiveness of social media advertising is still a topic of debate. While some marketers claim that social media advertising is a waste of money, others argue that it is a crucial part of their marketing strategy. The key to success lies in understanding the target audience and creating content that resonates with them. For instance, a clothing brand may use Instagram to showcase their latest fashion designs, while a food delivery service may use Facebook to promote their special offers. In addition, social media platforms provide valuable data that can be used to track the success of marketing campaigns. By analyzing this data, businesses can refine their marketing strategies and improve their online presence.",
+         "questions": [
+            {
+               "question": "What do online consumers use social media for when making purchasing decisions?",
+               "options": ["To research products before buying", "To get inspired by fashion designs", "To look for special offers", "To get influenced by social media"],
+               "correctOption": "D",
+               "explanation": "The correct answer is D) To get influenced by social media. This is because the text states that 70% of online consumers are influenced by social media when making purchasing decisions.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "What is the key to success in social media advertising?",
+               "options": ["Understanding the target audience", "Creating engaging content", "Using social media platforms", "Tracking the success of marketing campaigns"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) Understanding the target audience. This is because the text states that the key to success lies in understanding the target audience and creating content that resonates with them.",
+               "tips": "When answering multiple-choice questions, look for key phrases or sentences that support the answer choice."
+            },
+            {
+               "question": "What can businesses use social media data for?",
+               "options": ["To track the success of marketing campaigns", "To create engaging content", "To understand the target audience", "To get inspiration for fashion designs"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) To track the success of marketing campaigns. This is because the text states that social media platforms provide valuable data that can be used to track the success of marketing campaigns.",
+               "tips": "When answering multiple-choice questions, look for specific information in the text that supports the answer choice."
+            },
+            {
+               "question": "What is the purpose of social media advertising for a clothing brand?",
+               "options": ["To get inspired by fashion designs", "To showcase their latest fashion designs", "To promote their special offers", "To track the success of marketing campaigns"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B) To showcase their latest fashion designs. This is because the text states that a clothing brand may use Instagram to showcase their latest fashion designs.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "What is the main topic of the article?",
+               "options": ["The effectiveness of social media advertising", "The importance of social media in business", "The benefits of using Instagram for fashion brands", "The role of social media in online marketing"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) The effectiveness of social media advertising. This is because the text states that the effectiveness of social media advertising is still a topic of debate.",
+               "tips": "When answering multiple-choice questions, look for key phrases or sentences that support the answer choice."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts - Social Media Influencers",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "profiles": [
+               {
+                  "name": "Emily",
+                  "description": "Emily is a fashion blogger who loves to share her favorite fashion trends with her followers."
+               },
+               {
+                  "name": "David",
+                  "description": "David is a fitness enthusiast who shares his workout routines and healthy recipes on social media."
+               },
+               {
+                  "name": "Sophia",
+                  "description": "Sophia is a travel blogger who loves to explore new destinations and share her experiences with her followers."
+               },
+               {
+                  "name": "Jack",
+                  "description": "Jack is a food critic who reviews restaurants and shares his thoughts on social media."
+               },
+               {
+                  "name": "Lily",
+                  "description": "Lily is a beauty influencer who shares her favorite makeup products and skincare routines with her followers."
+               }
+            ],
+            "texts": [
+               {
+                  "text": "I love trying out new restaurants and cafes in the city. Follow me for food reviews and recommendations!"
+               },
+               {
+                  "text": "Stay fit and healthy with my workout routines and healthy recipes! Follow me for motivation and inspiration!"
+               },
+               {
+                  "text": "Get ready to explore the world with me! Follow me for travel tips and destination guides!"
+               },
+               {
+                  "text": "Beauty enthusiasts, rejoice! Follow me for makeup tutorials, skincare tips, and product reviews!"
+               },
+               {
+                  "text": "Fashionistas, get ready to stay on trend with me! Follow me for fashion advice, style tips, and trend reports!"
+               },
+               {
+                  "text": "Don't miss out on my latest fashion designs! Follow me for exclusive updates and behind-the-scenes peeks!"
+               },
+               {
+                  "text": "Get fit, stay healthy, and look great with my fitness tips and healthy recipes! Follow me for motivation and inspiration!"
+               },
+               {
+                  "text": "Follow me for destination guides, travel tips, and cultural insights from around the world!"
+               }
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "E",
+               "explanation": "The correct answer is E) Fashionistas, get ready to stay on trend with me! This is because Emily is a fashion blogger who loves to share her favorite fashion trends with her followers.",
+               "tips": "When answering matching questions, read the descriptions of the people and the texts carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "Which text would be most suitable for David?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B) Stay fit and healthy with my workout routines and healthy recipes! This is because David is a fitness enthusiast who shares his workout routines and healthy recipes on social media.",
+               "tips": "When answering matching questions, read the descriptions of the people and the texts carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "Which text would be most suitable for Sophia?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "F",
+               "explanation": "The correct answer is F) Get ready to explore the world with me! This is because Sophia is a travel blogger who loves to explore new destinations and share her experiences with her followers.",
+               "tips": "When answering matching questions, read the descriptions of the people and the texts carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "Which text would be most suitable for Jack?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) I love trying out new restaurants and cafes in the city. This is because Jack is a food critic who reviews restaurants and shares his thoughts on social media.",
+               "tips": "When answering matching questions, read the descriptions of the people and the texts carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "Which text would be most suitable for Lily?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The correct answer is D) Beauty enthusiasts, rejoice! This is because Lily is a beauty influencer who shares her favorite makeup products and skincare routines with her followers.",
+               "tips": "When answering matching questions, read the descriptions of the people and the texts carefully and look for specific information that supports the answer choice."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts - Social Media Marketing",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "Social media marketing is a powerful tool for businesses to reach their target audience and build brand awareness. With billions of active users worldwide, social media platforms offer unparalleled opportunities for businesses to connect with potential customers."
+            },
+            {
+               "text": "According to a recent survey, 70% of online consumers are influenced by social media when making purchasing decisions. This highlights the importance of social media marketing in shaping consumer behavior and driving sales."
+            },
+            {
+               "text": "However, social media marketing is not without its challenges. With the rise of algorithmic feeds, businesses must adapt their strategies to ensure their content reaches their target audience."
+            },
+            {
+               "text": "To maximize the effectiveness of social media marketing, businesses must prioritize engagement and interaction with their followers. This can be achieved through regular posting, responding to comments, and using relevant hashtags."
+            },
+            {
+               "text": "In addition to these strategies, businesses can also leverage social media analytics to track the success of their marketing campaigns and refine their approaches over time."
+            }
+         ],
+         "questions": [
+            {
+               "question": "What is the primary goal of social media marketing for businesses?",
+               "options": ["A. To reach their target audience and build brand awareness", "B. To increase sales and revenue", "C. To reduce marketing costs"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) To reach their target audience and build brand awareness. This is because the text states that social media marketing is a powerful tool for businesses to reach their target audience and build brand awareness.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "What percentage of online consumers are influenced by social media when making purchasing decisions?",
+               "options": ["A. 50%", "B. 60%", "C. 70%"],
+               "correctOption": "C",
+               "explanation": "The correct answer is C) 70%. This is because the text states that 70% of online consumers are influenced by social media when making purchasing decisions.",
+               "tips": "When answering multiple-choice questions, look for specific information in the text that supports the answer choice."
+            },
+            {
+               "question": "What is one of the challenges of social media marketing?",
+               "options": ["A. Reaching a wider audience", "B. Adapting to algorithmic feeds", "C. Increasing engagement"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B) Adapting to algorithmic feeds. This is because the text states that with the rise of algorithmic feeds, businesses must adapt their strategies to ensure their content reaches their target audience.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "What can businesses do to maximize the effectiveness of social media marketing?",
+               "options": ["A. Prioritize engagement and interaction with their followers", "B. Use relevant hashtags", "C. Increase their marketing budget"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) Prioritize engagement and interaction with their followers. This is because the text states that businesses must prioritize engagement and interaction with their followers to maximize the effectiveness of social media marketing.",
+               "tips": "When answering multiple-choice questions, read the text carefully and look for specific information that supports the answer choice."
+            },
+            {
+               "question": "What can businesses use to track the success of their marketing campaigns?",
+               "options": ["A. Social media analytics", "B. Google Analytics", "C. Email marketing tools"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) Social media analytics. This is because the text states that businesses can also leverage social media analytics to track the success of their marketing campaigns.",
+               "tips": "When answering multiple-choice questions, look for specific information in the text that supports the answer choice."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences - Social Media and Online Safety",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "Social media has become an essential tool for communication and self-expression. However, with the rise of social media, there are also concerns about online safety and security. (1) _______ According to a recent survey, 70% of online users are worried about their personal data being compromised. (2) _______ This highlights the importance of being cautious when sharing personal information online. (3) _______ Moreover, there are also risks associated with online harassment and cyberbullying. (4) _______ To mitigate these risks, it is essential to follow online safety guidelines and best practices. (5) _______ By doing so, individuals can protect themselves and their personal data from potential threats.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. While social media has many benefits, it also has some drawbacks.",
+                  "B. As a result, social media companies are under pressure to improve their security measures.",
+                  "C. However, with the rise of social media, there are also concerns about online safety and security.",
+                  "D. Furthermore, online safety is not just a personal issue, but also a social one.",
+                  "E. In addition, social media platforms can be vulnerable to cyber attacks and data breaches.",
+                  "F. In conclusion, online safety is a crucial aspect of social media usage."
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C) However, with the rise of social media, there are also concerns about online safety and security. This sentence fits the context of the paragraph and provides a clear transition to the next idea.",
+               "tips": "When answering gapped text questions, read the text carefully and look for the sentence that fits the context and provides a clear transition to the next idea."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. As a result, social media companies are under pressure to improve their security measures.",
+                  "B. While social media has many benefits, it also has some drawbacks.",
+                  "C. However, with the rise of social media, there are also concerns about online safety and security.",
+                  "D. Furthermore, online safety is not just a personal issue, but also a social one.",
+                  "E. In addition, social media platforms can be vulnerable to cyber attacks and data breaches.",
+                  "F. In conclusion, online safety is a crucial aspect of social media usage."
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) As a result, social media companies are under pressure to improve their security measures. This sentence provides a logical consequence of the idea presented in the previous sentence.",
+               "tips": "When answering gapped text questions, read the text carefully and look for the sentence that provides a logical consequence of the idea presented in the previous sentence."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. While social media has many benefits, it also has some drawbacks.",
+                  "B. As a result, social media companies are under pressure to improve their security measures.",
+                  "C. However, with the rise of social media, there are also concerns about online safety and security.",
+                  "D. Furthermore, online safety is not just a personal issue, but also a social one.",
+                  "E. In addition, social media platforms can be vulnerable to cyber attacks and data breaches.",
+                  "F. In conclusion, online safety is a crucial aspect of social media usage."
+               ],
+               "correctOption": "E",
+               "explanation": "The correct answer is E) In addition, social media platforms can be vulnerable to cyber attacks and data breaches. This sentence provides additional information about the risks associated with online safety and security.",
+               "tips": "When answering gapped text questions, read the text carefully and look for the sentence that provides additional information about the topic."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. While social media has many benefits, it also has some drawbacks.",
+                  "B. As a result, social media companies are under pressure to improve their security measures.",
+                  "C. However, with the rise of social media, there are also concerns about online safety and security.",
+                  "D. Furthermore, online safety is not just a personal issue, but also a social one.",
+                  "E. In addition, social media platforms can be vulnerable to cyber attacks and data breaches.",
+                  "F. In conclusion, online safety is a crucial aspect of social media usage."
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D) Furthermore, online safety is not just a personal issue, but also a social one. This sentence provides a clear transition to the next idea and highlights the importance of online safety.",
+               "tips": "When answering gapped text questions, read the text carefully and look for the sentence that provides a clear transition to the next idea."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. While social media has many benefits, it also has some drawbacks.",
+                  "B. As a result, social media companies are under pressure to improve their security measures.",
+                  "C. However, with the rise of social media, there are also concerns about online safety and security.",
+                  "D. Furthermore, online safety is not just a personal issue, but also a social one.",
+                  "E. In addition, social media platforms can be vulnerable to cyber attacks and data breaches.",
+                  "F. To mitigate these risks, it is essential to follow online safety guidelines and best practices."
+               ],
+               "correctOption": "F",
+               "explanation": "The correct answer is F) To mitigate these risks, it is essential to follow online safety guidelines and best practices. This sentence provides a clear conclusion to the paragraph and highlights the importance of online safety.",
+               "tips": "When answering gapped text questions, read the text carefully and look for the sentence that provides a clear conclusion to the paragraph."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze - Social Media and Online Safety",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "Social media has become an essential tool for communication and self-expression. However, with the rise of social media, there are also concerns about (1) _______ and security. According to a recent survey, 70% of online users are worried about their personal data being (2) _______ . This highlights the importance of being cautious when sharing personal information online. To (3) _______ these risks, it is essential to follow online safety guidelines and best practices.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. safety", "B. security", "C. online safety", "D. data protection", "E. cyber threats", "F. hacking"],
+               "correctOption": "B",
+               "explanation": "The correct answer is B) security. This is because the text states that there are concerns about online safety and security.",
+               "tips": "When answering multiple-choice gap-fill questions, read the text carefully and look for the word that fits the context and provides a clear meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. compromised", "B. stolen", "C. leaked", "D. shared", "E. protected", "F. deleted"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) compromised. This is because the text states that online users are worried about their personal data being compromised.",
+               "tips": "When answering multiple-choice gap-fill questions, read the text carefully and look for the word that fits the context and provides a clear meaning."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. mitigate", "B. avoid", "C. prevent", "D. reduce", "E. minimize", "F. eliminate"],
+               "correctOption": "A",
+               "explanation": "The correct answer is A) mitigate. This is because the text states that individuals can take measures to mitigate the risks associated with online safety and security.",
+               "tips": "When answering multiple-choice gap-fill questions, read the text carefully and look for the word that fits the context and provides a clear meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill - Social Media and Online Safety",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "Social media has become an essential tool for communication and self-expression. However, with the rise of social media, there are also concerns about (1) _______ and (2) _______ . According to a recent survey, 70% of online users are worried about their (3) _______ data being (4) _______ . This highlights the importance of being (5) _______ when sharing personal information online.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "security",
+               "explanation": "The correct answer is security. This is because the text states that there are concerns about online safety and security.",
+               "tips": "When answering open gap-fill questions, read the text carefully and think of the word that fits the context and provides a clear meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "safety",
+               "explanation": "The correct answer is safety. This is because the text states that there are concerns about online safety and security.",
+               "tips": "When answering open gap-fill questions, read the text carefully and think of the word that fits the context and provides a clear meaning."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "personal",
+               "explanation": "The correct answer is personal. This is because the text states that online users are worried about their personal data being compromised.",
+               "tips": "When answering open gap-fill questions, read the text carefully and think of the word that fits the context and provides a clear meaning."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "compromised",
+               "explanation": "The correct answer is compromised. This is because the text states that online users are worried about their personal data being compromised.",
+               "tips": "When answering open gap-fill questions, read the text carefully and think of the word that fits the context and provides a clear meaning."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "cautious",
+               "explanation": "The correct answer is cautious. This is because the text states that individuals must be cautious when sharing personal information online.",
+               "tips": "When answering open gap-fill questions, read the text carefully and think of the word that fits the context and provides a clear meaning."
+            }
+         ]
+      }
+   ]
+}

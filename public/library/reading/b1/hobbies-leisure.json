@@ -1,0 +1,451 @@
+{
+  "examTitle": "Hobbies & Leisure B1 Mock Reading Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the writer suggest about the festival in the first paragraph?",
+               "options": [
+                  "A. It is a traditional event.",
+                  "B. It is a modern festival.",
+                  "C. It is a popular festival.",
+                  "D. It is a boring festival."
+               ],
+               "explanation": "The writer suggests that the festival is a popular event by mentioning that it has been running for 50 years and attracts many visitors. Options B and D are incorrect because the writer does not mention that it is a modern festival or a boring festival.",
+               "correctOption": "C"
+            },
+            {
+               "question": "What does the writer say about the food at the festival?",
+               "options": [
+                  "A. It is very expensive.",
+                  "B. It is very delicious.",
+                  "C. It is very spicy.",
+                  "D. It is very boring."
+               ],
+               "explanation": "The writer does not mention anything about the food at the festival. Option B is incorrect because the writer does not say that the food is delicious. Option C is incorrect because the writer does not mention that the food is spicy.",
+               "correctOption": "A"
+            },
+            {
+               "question": "What does the writer say about the music at the festival?",
+               "options": [
+                  "A. It is very loud.",
+                  "B. It is very quiet.",
+                  "C. It is very modern.",
+                  "D. It is very traditional."
+               ],
+               "explanation": "The writer does not mention anything about the music at the festival. Option A is incorrect because the writer does not say that the music is loud. Option C is incorrect because the writer does not mention that the music is modern.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What does the writer say about the festival in the second paragraph?",
+               "options": [
+                  "A. It is a fun event.",
+                  "B. It is a sad event.",
+                  "C. It is a happy event.",
+                  "D. It is a boring event."
+               ],
+               "explanation": "The writer says that the festival is a fun event by mentioning that it has a range of activities and attractions.",
+               "correctOption": "A"
+            },
+            {
+               "question": "What does the writer say about the festival in the final paragraph?",
+               "options": [
+                  "A. It is a popular event.",
+                  "B. It is a modern festival.",
+                  "C. It is a traditional event.",
+                  "D. It is a boring festival."
+               ],
+               "explanation": "The writer does not mention anything about the festival in the final paragraph.",
+               "correctOption": "A"
+            }
+         ],
+         "content": "The festival has been running for 50 years and attracts many visitors. It has a range of activities and attractions, including live music, food stalls, and games. The festival is a fun event that people of all ages can enjoy. The festival is held in a large park and features a range of music, from traditional to modern. The festival is a popular event that people come from all over to attend."
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Sarah?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "content": "Sarah is a 25-year-old marketing executive who loves trying new foods and drinks. She is always on the go and has a busy schedule. She loves taking photos of her food and sharing them on social media. She is from a big city and has never lived in a small town.",
+               "explanation": "The most suitable text for Sarah would be B, as it describes someone who enjoys trying new foods and drinks and is always on the go.",
+               "correctOption": "B"
+            },
+            {
+               "question": "Which text would be most suitable for John?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "content": "John is a 30-year-old graphic designer who loves playing music and painting. He is a bit of a homebody and prefers to stay at home. He loves listening to classical music and is a fan of the Beatles. He has been to many festivals and concerts in his life.",
+               "explanation": "The most suitable text for John would be C, as it describes someone who enjoys playing music and painting, and is a bit of a homebody.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "content": "Emily is a 20-year-old student who loves reading and writing. She is a bit shy and prefers to stay at home. She loves playing video games and watching movies. She has never been to a music festival.",
+               "explanation": "The most suitable text for Emily would be A, as it describes someone who enjoys reading and writing, and is a bit shy.",
+               "correctOption": "A"
+            },
+            {
+               "question": "Which text would be most suitable for Michael?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "content": "Michael is a 28-year-old software engineer who loves playing sports and hiking. He is very active and enjoys spending time outdoors. He loves playing football and basketball, and is a fan of the Manchester United football team. He has been to many music festivals in his life.",
+               "explanation": "The most suitable text for Michael would be D, as it describes someone who enjoys playing sports and hiking, and is very active.",
+               "correctOption": "D"
+            },
+            {
+               "question": "Which text would be most suitable for Rachel?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+               ],
+               "content": "Rachel is a 22-year-old artist who loves painting and drawing. She is very creative and enjoys expressing herself through art. She loves listening to indie music and is a fan of the Arctic Monkeys. She has never been to a music festival.",
+               "explanation": "The most suitable text for Rachel would be B, as it describes someone who enjoys painting and drawing, and is very creative.",
+               "correctOption": "B"
+            }
+         ],
+         "content": [
+            {
+               "text": "This person is a 25-year-old marketing executive who loves trying new foods and drinks. They are always on the go and have a busy schedule. They love taking photos of their food and sharing them on social media. They are from a big city and have never lived in a small town.",
+               "label": "A"
+            },
+            {
+               "text": "This person is a 30-year-old graphic designer who loves playing music and painting. They are a bit of a homebody and prefer to stay at home. They love listening to classical music and are a fan of the Beatles. They have been to many festivals and concerts in their life.",
+               "label": "B"
+            },
+            {
+               "text": "This person is a 20-year-old student who loves reading and writing. They are a bit shy and prefer to stay at home. They love playing video games and watching movies. They have never been to a music festival.",
+               "label": "C"
+            },
+            {
+               "text": "This person is a 28-year-old software engineer who loves playing sports and hiking. They are very active and enjoy spending time outdoors. They love playing football and basketball, and are a fan of the Manchester United football team. They have been to many music festivals in their life.",
+               "label": "D"
+            },
+            {
+               "text": "This person is a 22-year-old artist who loves painting and drawing. They are very creative and enjoy expressing themselves through art. They love listening to indie music and are a fan of the Arctic Monkeys. They have never been to a music festival.",
+               "label": "E"
+            },
+            {
+               "text": "This person is a 35-year-old writer who loves reading and writing. They are a bit introverted and prefer to stay at home. They love playing chess and are a fan of the works of Shakespeare. They have been to many book festivals in their life.",
+               "label": "F"
+            },
+            {
+               "text": "This person is a 40-year-old musician who loves playing music and singing. They are very outgoing and enjoy performing in front of crowds. They love listening to rock music and are a fan of the Rolling Stones. They have been to many music festivals in their life.",
+               "label": "G"
+            },
+            {
+               "text": "This person is a 45-year-old photographer who loves taking photos and traveling. They are very adventurous and enjoy exploring new places. They love taking photos of landscapes and are a fan of the work of Ansel Adams. They have been to many music festivals in their life.",
+               "label": "H"
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "questions": [
+            {
+               "question": "What is the main purpose of the advertisement?",
+               "options": [
+                  "A. To promote a new product.",
+                  "B. To persuade customers to buy a product.",
+                  "C. To inform customers about a sale.",
+                  "D. To educate customers about a topic."
+               ],
+               "content": "Are you tired of using the same old toothbrush? Introducing the new and improved toothbrush with soft bristles and a comfortable handle. Get it now and start brushing your teeth with confidence!",
+               "explanation": "The main purpose of the advertisement is to persuade customers to buy the product. Option A is incorrect because the advertisement is not promoting a new product. Option C is incorrect because the advertisement is not informing customers about a sale.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What is the main idea of the notice?",
+               "options": [
+                  "A. To inform customers about a new policy.",
+                  "B. To warn customers about a problem.",
+                  "C. To remind customers about an event.",
+                  "D. To persuade customers to take action."
+               ],
+               "content": "Attention all customers! Please be aware of the new parking restrictions in the area. From now on, parking will only be allowed in designated areas.",
+               "explanation": "The main idea of the notice is to warn customers about a problem. Option A is incorrect because the notice is not informing customers about a new policy. Option C is incorrect because the notice is not reminding customers about an event.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What is the main purpose of the message?",
+               "options": [
+                  "A. To invite friends to a party.",
+                  "B. To inform friends about a change.",
+                  "C. To persuade friends to take action.",
+                  "D. To educate friends about a topic."
+               ],
+               "content": "Hey guys! I've decided to change my phone number. From now on, please contact me at 01234 567890.",
+               "explanation": "The main purpose of the message is to inform friends about a change. Option A is incorrect because the message is not inviting friends to a party. Option C is incorrect because the message is not persuading friends to take action.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What is the main idea of the text?",
+               "options": [
+                  "A. To persuade readers to buy a product.",
+                  "B. To inform readers about a topic.",
+                  "C. To entertain readers with a story.",
+                  "D. To educate readers about a topic."
+               ],
+               "content": "The new coffee shop in town is a must-visit destination for coffee lovers. With its wide selection of coffee beans and expert baristas, you'll be spoiled for choice.",
+               "explanation": "The main idea of the text is to inform readers about a topic. Option A is incorrect because the text is not persuading readers to buy a product. Option C is incorrect because the text is not entertaining readers with a story.",
+               "correctOption": "B"
+            },
+            {
+               "question": "What is the main purpose of the text?",
+               "options": [
+                  "A. To persuade readers to take action.",
+                  "B. To inform readers about a topic.",
+                  "C. To entertain readers with a story.",
+                  "D. To educate readers about a topic."
+               ],
+               "content": "The new park in town is a great place to spend a sunny afternoon. With its beautiful gardens and playgrounds, you'll find something for everyone.",
+               "explanation": "The main purpose of the text is to inform readers about a topic. Option A is incorrect because the text is not persuading readers to take action. Option C is incorrect because the text is not entertaining readers with a story.",
+               "correctOption": "B"
+            }
+         ],
+         "content": [
+            {
+               "text": "Are you tired of using the same old toothbrush? Introducing the new and improved toothbrush with soft bristles and a comfortable handle. Get it now and start brushing your teeth with confidence!",
+               "label": "A"
+            },
+            {
+               "text": "Attention all customers! Please be aware of the new parking restrictions in the area. From now on, parking will only be allowed in designated areas.",
+               "label": "B"
+            },
+            {
+               "text": "Hey guys! I've decided to change my phone number. From now on, please contact me at 01234 567890.",
+               "label": "C"
+            },
+            {
+               "text": "The new coffee shop in town is a must-visit destination for coffee lovers. With its wide selection of coffee beans and expert baristas, you'll be spoiled for choice.",
+               "label": "D"
+            },
+            {
+               "text": "The new park in town is a great place to spend a sunny afternoon. With its beautiful gardens and playgrounds, you'll find something for everyone.",
+               "label": "E"
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text — Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. The festival is held in a large park.",
+                  "B. The festival features a range of music, from traditional to modern.",
+                  "C. The festival is a popular event that people come from all over to attend.",
+                  "D. The festival is a fun event that people of all ages can enjoy.",
+                  "E. The festival is a traditional event.",
+                  "F. The festival is a boring event."
+               ],
+               "content": "The festival has been running for 50 years. [Gap 1] It has a range of activities and attractions, including live music, food stalls, and games. [Gap 2] The festival is a fun event that people of all ages can enjoy. [Gap 3] The festival is held in a large park and features a range of music, from traditional to modern. [Gap 4] The festival is a popular event that people come from all over to attend. [Gap 5]",
+               "explanation": "The correct sentence for Gap 1 is B. The festival features a range of music, from traditional to modern. Options A, C, D, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. The festival features a range of music, from traditional to modern.",
+                  "B. The festival is a popular event that people come from all over to attend.",
+                  "C. The festival is a fun event that people of all ages can enjoy.",
+                  "D. The festival is a traditional event.",
+                  "E. The festival is a boring event.",
+                  "F. The festival has been running for 50 years."
+               ],
+               "content": "The festival has been running for 50 years. [Gap 1] It has a range of activities and attractions, including live music, food stalls, and games. [Gap 2] The festival is a fun event that people of all ages can enjoy. [Gap 3] The festival is held in a large park and features a range of music, from traditional to modern. [Gap 4] The festival is a popular event that people come from all over to attend. [Gap 5]",
+               "explanation": "The correct sentence for Gap 2 is C. The festival is a fun event that people of all ages can enjoy. Options A, B, D, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. The festival is a popular event that people come from all over to attend.",
+                  "B. The festival features a range of music, from traditional to modern.",
+                  "C. The festival is a fun event that people of all ages can enjoy.",
+                  "D. The festival has been running for 50 years.",
+                  "E. The festival is a traditional event.",
+                  "F. The festival is a boring event."
+               ],
+               "content": "The festival has been running for 50 years. [Gap 1] It has a range of activities and attractions, including live music, food stalls, and games. [Gap 2] The festival is a fun event that people of all ages can enjoy. [Gap 3] The festival is held in a large park and features a range of music, from traditional to modern. [Gap 4] The festival is a popular event that people come from all over to attend. [Gap 5]",
+               "explanation": "The correct sentence for Gap 3 is D. The festival has been running for 50 years. Options A, B, C, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "D"
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. The festival features a range of music, from traditional to modern.",
+                  "B. The festival is a popular event that people come from all over to attend.",
+                  "C. The festival is a fun event that people of all ages can enjoy.",
+                  "D. The festival has been running for 50 years.",
+                  "E. The festival is a traditional event.",
+                  "F. The festival is a boring event."
+               ],
+               "content": "The festival has been running for 50 years. [Gap 1] It has a range of activities and attractions, including live music, food stalls, and games. [Gap 2] The festival is a fun event that people of all ages can enjoy. [Gap 3] The festival is held in a large park and features a range of music, from traditional to modern. [Gap 4] The festival is a popular event that people come from all over to attend. [Gap 5]",
+               "explanation": "The correct sentence for Gap 4 is E. The festival is a popular event that people come from all over to attend. Options A, B, C, D, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "E"
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. The festival features a range of music, from traditional to modern.",
+                  "B. The festival is a popular event that people come from all over to attend.",
+                  "C. The festival is a fun event that people of all ages can enjoy.",
+                  "D. The festival has been running for 50 years.",
+                  "E. The festival is a traditional event.",
+                  "F. The festival is a boring event."
+               ],
+               "content": "The festival has been running for 50 years. [Gap 1] It has a range of activities and attractions, including live music, food stalls, and games. [Gap 2] The festival is a fun event that people of all ages can enjoy. [Gap 3] The festival is held in a large park and features a range of music, from traditional to modern. [Gap 4] The festival is a popular event that people come from all over to attend. [Gap 5]",
+               "explanation": "The correct sentence for Gap 5 is F. The festival is a boring event. Options A, B, C, D, and E are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "F"
+            }
+         ],
+         "content": "The festival has been running for 50 years. It has a range of activities and attractions, including live music, food stalls, and games. The festival is a fun event that people of all ages can enjoy. The festival is held in a large park and features a range of music, from traditional to modern. The festival is a popular event that people come from all over to attend."
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. the",
+                  "B. a",
+                  "C. an",
+                  "D. this",
+                  "E. that",
+                  "F. these"
+               ],
+               "content": "The festival has been running for (1) _______ years. It has a range of activities and attractions, including live music, food stalls, and games.",
+               "explanation": "The correct word for Gap 1 is C. an. Options A, B, D, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. has",
+                  "B. have",
+                  "C. had",
+                  "D. is",
+                  "E. are",
+                  "F. were"
+               ],
+               "content": "The festival has been running for (1) _______ years. It (2) _______ a range of activities and attractions, including live music, food stalls, and games.",
+               "explanation": "The correct word for Gap 2 is B. have. Options A, C, D, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. is",
+                  "B. are",
+                  "C. am",
+                  "D. be",
+                  "E. been",
+                  "F. being"
+               ],
+               "content": "The festival has been running for (1) _______ years. It (2) _______ a range of activities and attractions, including live music, food stalls, and games. The festival (3) _______ a fun event that people of all ages can enjoy.",
+               "explanation": "The correct word for Gap 3 is B. are. Options A, C, D, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. has",
+                  "B. have",
+                  "C. had",
+                  "D. is",
+                  "E. are",
+                  "F. were"
+               ],
+               "content": "The festival has been running for (1) _______ years. It (2) _______ a range of activities and attractions, including live music, food stalls, and games. The festival (3) _______ a fun event that people of all ages can enjoy. The festival (4) _______ held in a large park and features a range of music, from traditional to modern.",
+               "explanation": "The correct word for Gap 4 is D. is. Options A, B, C, E, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "D"
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. has",
+                  "B. have",
+                  "C. had",
+                  "D. is",
+                  "E. are",
+                  "F. were"
+               ],
+               "content": "The festival has been running for (1) _______ years. It (2) _______ a range of activities and attractions, including live music, food stalls, and games. The festival (3) _______ a fun event that people of all ages can enjoy. The festival (4) _______ held in a large park and features a range of music, from traditional to modern. The festival (5) _______ a popular event that people come from all over to attend.",
+               "explanation": "The correct word for Gap 5 is E. are. Options A, B, C, D, and F are incorrect because they do not fit the context of the sentence.",
+               "correctOption": "E"
+            }
+         ],
+         "content": "The festival (1) _______ been running for 50 years. It (2) _______ a range of activities and attractions, including live music, food stalls, and games. The festival (3) _______ a fun event that people of all ages can enjoy. The festival (4) _______ held in a large park and features a range of music, from traditional to modern. The festival (5) _______ a popular event that people come from all over to attend."
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "content": "The festival (1) _______ been running for 50 years. It has a range of activities and attractions, including live music, food stalls, and games.",
+               "explanation": "The word that best fits the gap is 'has'.",
+               "correctOption": "has"
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "content": "The festival has (1) _______ a range of activities and attractions, including live music, food stalls, and games. The festival is a fun event that people of all ages can enjoy.",
+               "explanation": "The word that best fits the gap is 'been'.",
+               "correctOption": "been"
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "content": "The festival has been running for 50 years. It has a range of activities and attractions, including live music, food stalls, and games. The festival (1) _______ a fun event that people of all ages can enjoy.",
+               "explanation": "The word that best fits the gap is 'is'.",
+               "correctOption": "is"
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "content": "The festival has been running for 50 years. It has a range of activities and attractions, including live music, food stalls, and games. The festival (1) _______ a fun event that people of all ages can enjoy. The festival (2) _______ held in a large park and features a range of music, from traditional to modern.",
+               "explanation": "The words that best fit the gaps are 'is' and 'is'.",
+               "correctOption": "is"
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "content": "The festival has been running for 50 years. It has a range of activities and attractions, including live music, food stalls, and games. The festival (1) _______ a fun event that people of all ages can enjoy. The festival (2) _______ held in a large park and features a range of music, from traditional to modern. The festival (3) _______ a popular event that people come from all over to attend.",
+               "explanation": "The words that best fit the gaps are 'is', 'is', and 'is'.",
+               "correctOption": "is"
+            }
+         ],
+         "content": "The festival has been running for 50 years. It has a range of activities and attractions, including live music, food stalls, and games. The festival is a fun event that people of all ages can enjoy. The festival is held in a large park and features a range of music, from traditional to modern. The festival is a popular event that people come from all over to attend."
+      }
+   ]
+}
