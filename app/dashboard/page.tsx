@@ -1326,25 +1326,6 @@ export default function DashboardPage() {
 
   const handleAnswer = (question: number, option: string) => {
     setAnswers(prev => ({ ...prev, [question]: option }));
-    // Auto-submit for multiple-choice questions (one attempt only)
-    if (examType !== 'Speaking' && examType !== 'Writing') {
-      if (!submittedQuestions.has(question.toString())) {
-        // Use a microtask to ensure state update settles first
-        setTimeout(() => {
-          setCurrentQuestion(question);
-          // Directly submit
-          const activeQ = examQuestions.find(q => q.id.toString() === question.toString());
-          if (activeQ) {
-            setRetryCount(prev => ({ ...prev, [question.toString()]: 2 }));
-            setSubmittedQuestions(prev => {
-              const newSet = new Set(prev);
-              newSet.add(question.toString());
-              return newSet;
-            });
-          }
-        }, 0);
-      }
-    }
   };
 
   const toggleFlag = (question: number) => {
@@ -2509,18 +2490,29 @@ export default function DashboardPage() {
                               </button>
                             </div>
                           )}
-                          {/* Floating Next Button */}
-                          {(submittedQuestions.has(currentQuestion.toString()) || (answers[currentQuestion.toString()] && examType !== 'Speaking' && examType !== 'Writing')) && currentQuestion < totalQuestions && (
-                            <div className="shrink-0 mt-1 ml-2">
-                              <button
-                                onClick={() => setCurrentQuestion(q => q + 1)}
-                                className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-100 hover:bg-blue-200 text-blue-700 dark:bg-blue-900/40 dark:hover:bg-blue-800/60 dark:text-blue-300 rounded-lg text-sm font-bold shadow-sm transition-all transform hover:scale-105 border border-blue-200 dark:border-blue-800/50"
-                                title="Next Question"
-                              >
-                                Next <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                              </button>
-                            </div>
-                          )}
+                          {/* Inline Action Button */}
+                          <div className="shrink-0 mt-1 ml-2 flex flex-col items-end gap-2">
+                            <button
+                              onClick={() => {
+                                const isSubmitted = submittedQuestions.has(currentQuestion.toString());
+                                if (isSubmitted) {
+                                  if (currentQuestion < totalQuestions) {
+                                    setCurrentQuestion(q => q + 1);
+                                  }
+                                } else {
+                                  handleSubmitAnswer();
+                                }
+                              }}
+                              disabled={(!submittedQuestions.has(currentQuestion.toString()) && !answers[currentQuestion.toString()] && examType !== 'Speaking' && examType !== 'Writing') || (submittedQuestions.has(currentQuestion.toString()) && currentQuestion === totalQuestions)}
+                              className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-bold shadow-md transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                            >
+                              {submittedQuestions.has(currentQuestion.toString()) ? (
+                                <>Next <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></>
+                              ) : (
+                                examType === 'Speaking' || examType === 'Writing' ? 'Done' : 'Submit'
+                              )}
+                            </button>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -3438,22 +3430,6 @@ export default function DashboardPage() {
           >
             <Flag className={`w-3 h-3 sm:w-4 sm:h-4 ${flagged.has(currentQuestion) ? 'text-yellow-400 fill-current' : ''}`} strokeWidth={2.5} />
             <span className="hidden sm:inline">Review</span>
-          </button>
-          <button
-            onClick={() => {
-              const isSubmitted = submittedQuestions.has(currentQuestion.toString());
-              if (isSubmitted) {
-                if (currentQuestion < totalQuestions) {
-                  setCurrentQuestion(q => q + 1);
-                }
-              } else {
-                handleSubmitAnswer();
-              }
-            }}
-            disabled={(!submittedQuestions.has(currentQuestion.toString()) && !answers[currentQuestion.toString()] && examType !== 'Speaking' && examType !== 'Writing') || (submittedQuestions.has(currentQuestion.toString()) && currentQuestion === totalQuestions)}
-            className="px-4 py-1.5 sm:px-6 sm:py-2 rounded bg-blue-600 hover:bg-blue-700 text-xs sm:text-sm font-bold transition-colors text-white disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {submittedQuestions.has(currentQuestion.toString()) ? 'Next' : (examType === 'Speaking' || examType === 'Writing' ? 'Done' : 'Submit')}
           </button>
         </div>
 
