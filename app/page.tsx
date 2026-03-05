@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { signIn, SessionProvider, useSession } from 'next-auth/react';
-import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap, FileText, Download, BarChart2 } from 'lucide-react';
+import { BookOpen, Lightbulb, Monitor, Sparkles, Share2, Star, Check, X, CheckCircle2, PlayCircle, ShieldCheck, ChevronDown, Users, GraduationCap, FileText, Download, BarChart2, Mic } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -272,6 +272,97 @@ function LandingPageContent() {
           </div>
         </div>
 
+        {/* Speaking Feature Highlight (Our Edge) */}
+        <div className="bg-slate-900 py-24 overflow-hidden relative">
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+              <div className="flex-1 text-center lg:text-left">
+                <div className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-300 mb-6">
+                  <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
+                  Our Competitive Edge
+                </div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Master the Speaking Test with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Instant AI Feedback</span>
+                </h2>
+                <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                  Unlike traditional reviewers or generic books, you can actually <strong>record your answers</strong> directly on our platform. Within seconds, our AI analyzes your pronunciation, grammar, and fluency—giving you actionable feedback to improve your speech instantly.
+                </p>
+                <ul className="space-y-4 text-left inline-block max-w-lg mx-auto lg:mx-0">
+                  <li className="flex items-start gap-4 text-slate-200">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                      <Mic className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <span><strong>Record answers</strong> mirroring the real exam format and timing.</span>
+                  </li>
+                  <li className="flex items-start gap-4 text-slate-200">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-4 h-4 text-purple-400" />
+                    </div>
+                    <span><strong>Instant AI analysis</strong> of your pronunciation, vocabulary, and fluency.</span>
+                  </li>
+                  <li className="flex items-start gap-4 text-slate-200">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                      <BarChart2 className="w-4 h-4 text-green-400" />
+                    </div>
+                    <span><strong>Targeted feedback</strong> to fix mistakes and boost your overall score.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex-1 w-full max-w-xl lg:max-w-none">
+                <div className="relative rounded-2xl bg-slate-800 border border-slate-700 shadow-2xl p-2 sm:p-4">
+                  {/* Mockup of speaking test interface */}
+                  <div className="bg-slate-900 rounded-xl overflow-hidden border border-slate-700 relative">
+                    <div className="p-4 sm:p-6 border-b border-slate-800">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="h-6 w-24 bg-slate-800 rounded-md"></div>
+                        <div className="h-6 w-16 bg-blue-900/50 text-blue-400 rounded-md flex items-center justify-center text-xs font-bold">01:45</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="h-4 w-full bg-slate-800 rounded-md"></div>
+                        <div className="h-4 w-5/6 bg-slate-800 rounded-md"></div>
+                        <div className="h-4 w-4/6 bg-slate-800 rounded-md"></div>
+                      </div>
+                    </div>
+                    <div className="p-4 sm:p-6 flex flex-col items-center justify-center py-10 gap-6">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-blue-500 rounded-full animate-ping opacity-20"></div>
+                        <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center shadow-[0_0_30px_rgba(37,99,235,0.4)] relative z-10">
+                          <Mic className="w-8 h-8 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex gap-1 text-slate-400 text-sm font-medium animate-pulse">
+                        Listening to your answer...
+                      </div>
+                      {/* Audio wave animation */}
+                      <div className="flex items-center gap-1 h-8">
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(i => (
+                          <div key={i} className="w-1.5 bg-blue-500 rounded-full" style={{ height: `${Math.max(20, Math.random() * 100)}%`, opacity: 0.6 + Math.random() * 0.4 }}></div>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Feedback mock popup */}
+                    <div className="absolute bottom-4 left-4 right-4 bg-white rounded-xl shadow-2xl p-4 sm:p-5 border border-slate-200 lg:translate-y-6 lg:translate-x-6 max-w-sm lg:ml-auto z-20">
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                          <CheckCircle2 className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-sm mb-1">Great vocabulary!</div>
+                          <div className="text-sm text-slate-600">
+                            You correctly used the idiom <em>"a blessing in disguise"</em>. Work on pausing less between clauses to improve fluency.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Features Section */}
         <div id="features" className="bg-white py-24">
           <div className="max-w-7xl mx-auto px-6">
@@ -371,6 +462,94 @@ function LandingPageContent() {
                     <li className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Print authentic Cambridge-style PDFs for class</li>
                   </ul>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Comparison Section */}
+        <div className="bg-white py-24 border-t border-slate-100 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-sm font-medium text-orange-800 mb-4">
+                <span className="flex h-2 w-2 rounded-full bg-orange-600 mr-2"></span>
+                The Smart Choice
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why our platform wins</h2>
+              <p className="text-lg text-slate-600">
+                We combine the personalization of a tutor with the convenience and affordability of a book.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 items-start relative">
+              {/* Desktop connecting lines */}
+              <div className="hidden md:block absolute top-[120px] left-1/6 right-1/6 h-0.5 bg-slate-100 z-0"></div>
+
+              {/* Books */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 opacity-90 relative z-10 hover:shadow-lg transition-shadow">
+                <div className="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center mb-6">
+                  <BookOpen className="w-7 h-7 text-slate-600" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-6">Generic Books</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 text-slate-600 items-start">
+                    <X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span>Generic content that doesn't adapt to your weaknesses</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-600 items-start">
+                    <X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span>No interactive speaking practice or feedback</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-600 items-start">
+                    <X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span>Static answers without detailed AI analysis</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Our Platform */}
+              <div className="bg-blue-50 p-8 rounded-2xl border-2 border-blue-600 shadow-xl shadow-blue-600/10 relative z-20 transform md:-translate-y-4">
+                <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1.5 rounded-bl-xl rounded-tr-xl text-xs font-bold uppercase tracking-wider">CEFR Mock Exams</div>
+                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-600/30">
+                  <Monitor className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-900 mb-6">Self-Paced Platform</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 text-blue-900 font-medium items-start">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                    <span>100% focused on exact skills needed for CEFR exams</span>
+                  </li>
+                  <li className="flex gap-3 text-blue-900 font-medium items-start">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                    <span>Instant, personalized AI feedback on Speaking & Writing</span>
+                  </li>
+                  <li className="flex gap-3 text-blue-900 font-medium items-start">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                    <span>Available 24/7 with endless realistic mock exams</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Personal Tutor */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 opacity-90 relative z-10 hover:shadow-lg transition-shadow">
+                <div className="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center mb-6">
+                  <Users className="w-7 h-7 text-slate-600" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-6">Personal Tutor</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 text-slate-600 items-start">
+                    <X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span>Very expensive, often costing €30-€50+ per hour</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-600 items-start">
+                    <X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span>Difficult to schedule around your busy lifestyle</span>
+                  </li>
+                  <li className="flex gap-3 text-slate-600 items-start">
+                    <X className="w-5 h-5 text-red-500 shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span>Limited availability for instant, on-demand answers</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
