@@ -1088,7 +1088,7 @@ export default function DashboardPage() {
           setIsReadingModalOpen(true);
         } else {
           console.error("Reading Assessment failed:", result.error);
-          alert("Failed to assess the Reading exam.");
+          alert(`Failed to assess the Reading exam: ${result.error || 'Unknown error. Please try again or check your internet connection.'}`);
         }
       } catch (error) {
         console.error("Error calling reading assessment:", error);

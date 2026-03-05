@@ -21,7 +21,14 @@ export async function assessReadingAction(
     examData: any[],
     cefrLevel: string
 ): Promise<{ success: boolean; error?: string; score?: number; feedback?: string; suggestion?: string; }> {
-    if (!userAnswers || Object.keys(userAnswers).length === 0) return { success: false, error: 'No answers provided.' };
+    if (!userAnswers || Object.keys(userAnswers).length === 0) {
+        return {
+            success: true,
+            score: 0,
+            feedback: "You didn't provide any answers to the questions, which made it impossible to assess your reading comprehension. It's essential to attempt all questions to the best of your ability to demonstrate your knowledge and understanding. Don't be discouraged, as this is an opportunity to learn and improve for the next test.",
+            suggestion: "Make sure to read each question carefully and provide an answer, even if you're not entirely sure. Practice active reading by underlining or highlighting key information."
+        };
+    }
     if (!examData || examData.length === 0) return { success: false, error: 'No exam data provided.' };
 
     try {
