@@ -2320,13 +2320,28 @@ export default function DashboardPage() {
                         </div>
                       ))
                     ) : (
-                      (activePartData.content || '')
-                        .replace(/\((\d+)\)\s*[_]{3,}\s*\(\1\)/g, "($1) _________")
-                        .split('\n')
-                        .filter(line => line.trim())
-                        .map((line, index) => (
-                          <p key={index}>{line}</p>
-                        ))
+                      (() => {
+                        let textToRender = activePartData.content || '';
+                        // Try to parse if it looks like JSON containing exactly what the user asked
+                        try {
+                          if (textToRender.trim().startsWith('{') && textToRender.trim().endsWith('}')) {
+                            const parsed = JSON.parse(textToRender);
+                            if (parsed && typeof parsed.passage === 'string') {
+                              textToRender = parsed.passage;
+                            }
+                          }
+                        } catch (e) {
+                          // ignore parser error, just use as string
+                        }
+
+                        return textToRender
+                          .replace(/\((\d+)\)\s*[_]{3,}\s*\(\1\)/g, "($1) _________")
+                          .split('\n')
+                          .filter(line => line.trim())
+                          .map((line, index) => (
+                            <p key={index}>{line}</p>
+                          ));
+                      })()
                     )}
                   </div>
                 )}
