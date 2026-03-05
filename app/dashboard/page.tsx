@@ -528,7 +528,8 @@ export default function DashboardPage() {
   const [readingAssessmentResult, setReadingAssessmentResult] = useState<{ score: number, feedback: string, suggestion: string } | null>(null);
 
 
-  const handleSaveAndExit = () => {
+  const handleSaveAndExit = async () => {
+    await handleSaveExam();
     setGeneratedExam('');
     setExamParts([]);
     setExamQuestions([]);
@@ -1059,6 +1060,15 @@ export default function DashboardPage() {
   };
 
   const handleFinishTest = async () => {
+    const totalQ = examQuestions.length;
+    const answeredQ = Object.keys(answers).length;
+
+    if (totalQ > 0 && answeredQ < totalQ) {
+      if (!confirm("You haven't finished the exam! Finishing now will affect your progress tracking and overall statistics. Are you sure you want to finish?")) {
+        return;
+      }
+    }
+
     // If it's a Reading exam, trigger assessment before clearing if it hasn't been assessed yet
     if (examType === 'Reading' && !isAssessingReading && !readingAssessmentResult) {
       if (confirm("Are you sure you want to finish the exam and get your assessment?")) {
@@ -2264,10 +2274,6 @@ export default function DashboardPage() {
             <span className="text-[8px] sm:text-[10px] uppercase tracking-wider text-gray-500 dark:text-slate-400 font-bold">Time Remaining</span>
             <span className="text-lg sm:text-xl font-mono font-bold text-gray-900 dark:text-white">{formatTime(timeLeft)}</span>
           </div>
-          <button onClick={handleSaveAndExit} className="bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 px-3 py-1.5 sm:px-4 sm:py-2 rounded text-xs sm:text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors flex items-center gap-2">
-            <span className="hidden sm:inline">Save & Exit</span>
-            <span className="sm:hidden">Save</span>
-          </button>
           <button onClick={() => signOut({ callbackUrl: '/' })} className="bg-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded text-xs sm:text-sm font-bold hover:bg-red-700 transition-colors flex items-center gap-2">
             <span className="hidden sm:inline">Sign Out</span>
             <span className="sm:hidden">Exit</span>
@@ -2314,9 +2320,13 @@ export default function DashboardPage() {
                         </div>
                       ))
                     ) : (
-                      (activePartData.content || '').split('\n').filter(line => line.trim()).map((line, index) => (
-                        <p key={index}>{line}</p>
-                      ))
+                      (activePartData.content || '')
+                        .replace(/\((\d+)\)\s*[_]{3,}\s*\(\1\)/g, "($1) _________")
+                        .split('\n')
+                        .filter(line => line.trim())
+                        .map((line, index) => (
+                          <p key={index}>{line}</p>
+                        ))
                     )}
                   </div>
                 )}
@@ -3447,11 +3457,11 @@ export default function DashboardPage() {
 
         <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
           <button
-            onClick={handleSaveExam}
+            onClick={handleSaveAndExit}
             disabled={isSaving || isCurrentExamSaved}
             className={`w-full sm:w-auto px-4 py-1.5 sm:px-6 sm:py-2 rounded text-white text-xs sm:text-sm font-bold shadow-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${isCurrentExamSaved ? 'bg-gray-500' : 'bg-green-600 hover:bg-green-700'}`}
           >
-            {isSaving ? 'Saving...' : (isCurrentExamSaved ? 'Exam Saved!' : 'Save Exam')}
+            {isSaving ? 'Saving...' : (isCurrentExamSaved ? 'Exiting...' : 'Save & Exit')}
           </button>
           <button
             onClick={handleFinishTest}

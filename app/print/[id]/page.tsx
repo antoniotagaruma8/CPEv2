@@ -355,7 +355,8 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                                             {part.content && (
                                                 <div className="mb-6 border-y-2 border-black py-4">
                                                     <p className="font-sans whitespace-pre-wrap text-justify leading-relaxed">
-                                                        {part.content}
+                                                        {(part.content || '')
+                                                            .replace(/\((\d+)\)\s*[_]{3,}\s*\(\1\)/g, "($1) _________")}
                                                     </p>
                                                 </div>
                                             )}
@@ -382,7 +383,8 @@ export default function PrintExamPage({ params }: { params: Promise<{ id: string
                                             {part.content && (
                                                 <div className="mb-6 border-y-2 border-black py-4">
                                                     <p className="font-sans whitespace-pre-wrap text-justify leading-relaxed">
-                                                        {part.content}
+                                                        {(part.content || '')
+                                                            .replace(/\((\d+)\)\s*[_]{3,}\s*\(\1\)/g, "($1) _________")}
                                                     </p>
                                                 </div>
                                             )}
