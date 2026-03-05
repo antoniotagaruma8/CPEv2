@@ -1063,36 +1063,38 @@ export default function DashboardPage() {
     const totalQ = examQuestions.length;
     const answeredQ = Object.keys(answers).length;
 
+    let confirmMessage = "Are you sure you want to finish the exam and get your assessment?";
+
     if (totalQ > 0 && answeredQ < totalQ) {
-      if (!confirm("You haven't finished the exam! Finishing now will affect your progress tracking and overall statistics. Are you sure you want to finish?")) {
-        return;
-      }
+      confirmMessage = "You haven't finished the exam! Finishing now will affect your progress tracking and overall statistics. Are you sure you want to finish and get your assessment?";
+    }
+
+    if (!confirm(confirmMessage)) {
+      return;
     }
 
     // If it's a Reading exam, trigger assessment before clearing if it hasn't been assessed yet
     if (examType === 'Reading' && !isAssessingReading && !readingAssessmentResult) {
-      if (confirm("Are you sure you want to finish the exam and get your assessment?")) {
-        setIsAssessingReading(true);
-        setIsReadingModalOpen(false); // Make sure it's closed while loading
-        try {
-          const result = await assessReadingAction(answers, examQuestions, cefrLevel);
-          if (result.success && result.score !== undefined) {
-            setReadingAssessmentResult({
-              score: result.score,
-              feedback: result.feedback || "Good effort.",
-              suggestion: result.suggestion || "Keep practicing."
-            });
-            setIsReadingModalOpen(true);
-          } else {
-            console.error("Reading Assessment failed:", result.error);
-            alert("Failed to assess the Reading exam.");
-          }
-        } catch (error) {
-          console.error("Error calling reading assessment:", error);
-          alert("Error assessing exam.");
-        } finally {
-          setIsAssessingReading(false);
+      setIsAssessingReading(true);
+      setIsReadingModalOpen(false); // Make sure it's closed while loading
+      try {
+        const result = await assessReadingAction(answers, examQuestions, cefrLevel);
+        if (result.success && result.score !== undefined) {
+          setReadingAssessmentResult({
+            score: result.score,
+            feedback: result.feedback || "Good effort.",
+            suggestion: result.suggestion || "Keep practicing."
+          });
+          setIsReadingModalOpen(true);
+        } else {
+          console.error("Reading Assessment failed:", result.error);
+          alert("Failed to assess the Reading exam.");
         }
+      } catch (error) {
+        console.error("Error calling reading assessment:", error);
+        alert("Error assessing exam.");
+      } finally {
+        setIsAssessingReading(false);
       }
       return;
     }
