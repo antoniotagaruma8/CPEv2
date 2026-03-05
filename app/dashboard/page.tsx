@@ -3602,20 +3602,6 @@ export default function DashboardPage() {
 
       <footer className="bg-[#2d2d2d] text-white flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:py-0 shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] gap-2 sm:gap-0 h-auto sm:h-20">
         <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
-          <button
-            onClick={() => setCurrentQuestion(q => Math.max(1, q - 1))}
-            disabled={currentQuestion === 1}
-            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded bg-[#3d3d3d] hover:bg-[#4d4d4d] text-xs sm:text-sm font-medium transition-colors text-gray-300 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Back
-          </button>
-          <button
-            onClick={() => toggleFlag(currentQuestion)}
-            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded bg-[#3d3d3d] hover:bg-[#4d4d4d] text-xs sm:text-sm font-medium transition-colors text-gray-300 hover:text-white flex items-center gap-2"
-          >
-            <Flag className={`w-3 h-3 sm:w-4 sm:h-4 ${flagged.has(currentQuestion) ? 'text-yellow-400 fill-current' : ''}`} strokeWidth={2.5} />
-            <span className="hidden sm:inline">Review</span>
-          </button>
         </div>
 
         <div className="flex-1 flex items-center justify-center gap-1 overflow-x-auto py-2 no-scrollbar mx-2 sm:mx-4 w-full sm:w-auto">
