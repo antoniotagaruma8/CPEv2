@@ -2484,6 +2484,18 @@ export default function DashboardPage() {
                               </button>
                             </div>
                           )}
+                          {/* Floating Next Button */}
+                          {(submittedQuestions.has(currentQuestion.toString()) || (answers[currentQuestion.toString()] && examType !== 'Speaking' && examType !== 'Writing')) && currentQuestion < totalQuestions && (
+                            <div className="shrink-0 mt-1 ml-2">
+                              <button
+                                onClick={() => setCurrentQuestion(q => q + 1)}
+                                className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-100 hover:bg-blue-200 text-blue-700 dark:bg-blue-900/40 dark:hover:bg-blue-800/60 dark:text-blue-300 rounded-lg text-sm font-bold shadow-sm transition-all transform hover:scale-105 border border-blue-200 dark:border-blue-800/50"
+                                title="Next Question"
+                              >
+                                Next <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </div>
                     )}
