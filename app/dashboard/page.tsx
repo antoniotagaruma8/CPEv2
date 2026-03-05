@@ -2653,7 +2653,11 @@ export default function DashboardPage() {
                               }
                             }
 
-                            const isMatching = activePartData?.title?.toLowerCase().includes('matching');
+                            if (isSubmitted && !isSelected && !isCorrectAnswer) {
+                              return null; // Hide distractors
+                            }
+
+                            const displayOpt = opt.replace(/^[A-Z][\.\)]\s*/i, "");
 
                             return isMatching ? (
                               <label key={opt} className={`relative flex flex-col items-center justify-center p-4 bg-white rounded-xl border-2 transition-all cursor-pointer group ${isSubmitted
@@ -2671,7 +2675,7 @@ export default function DashboardPage() {
                                   disabled={isSubmitted}
                                 />
                                 <div className={`text-lg font-bold mb-1 ${isSelected ? 'text-blue-700' : 'text-gray-500 group-hover:text-blue-500'}`}>{letter}</div>
-                                <div className="text-xs text-center text-gray-700 font-medium line-clamp-3">{opt}</div>
+                                <div className="text-xs text-center text-gray-700 font-medium line-clamp-3">{displayOpt}</div>
                                 {isSubmitted && isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full p-1 shadow-sm"><Check className="w-3 h-3" strokeWidth={3} /></div>}
                                 {isSubmitted && isSelected && !isCorrectAnswer && <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 shadow-sm"><X className="w-3 h-3" strokeWidth={3} /></div>}
                               </label>
@@ -2687,7 +2691,7 @@ export default function DashboardPage() {
                                 />
                                 <span className="text-sm text-gray-700 group-hover:text-gray-900">
                                   <span className="font-bold mr-2 text-gray-900">{letter}</span>
-                                  {opt}
+                                  {displayOpt}
                                 </span>
                               </label>
                             );
