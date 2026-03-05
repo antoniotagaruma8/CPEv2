@@ -2967,28 +2967,30 @@ export default function DashboardPage() {
                               : 'border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200'
                               }`}
                           />
-                          <button
-                            onClick={() => setRevealedAnswers(prev => {
-                              const newSet = new Set(prev);
-                              if (newSet.has(currentQuestion.toString())) newSet.delete(currentQuestion.toString());
-                              else newSet.add(currentQuestion.toString());
-                              return newSet;
-                            })}
-                            disabled={!submittedQuestions.has(currentQuestion.toString())}
-                            className={`px-3 flex items-center justify-center rounded-md border transition-all ${submittedQuestions.has(currentQuestion.toString())
-                              ? 'bg-gray-100 hover:bg-gray-200 text-gray-600 border-gray-300 cursor-pointer'
-                              : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed opacity-60'
-                              }`}
-                            title={!submittedQuestions.has(currentQuestion.toString()) ? "Submit an answer first to unlock" : revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Answer"}
-                          >
-                            {revealedAnswers.has(currentQuestion.toString()) ? (
-                              <EyeOff className="w-5 h-5" />
-                            ) : (
-                              <Eye className="w-5 h-5" />
-                            )}
-                          </button>
+                          {isAdmin && (
+                            <button
+                              onClick={() => setRevealedAnswers(prev => {
+                                const newSet = new Set(prev);
+                                if (newSet.has(currentQuestion.toString())) newSet.delete(currentQuestion.toString());
+                                else newSet.add(currentQuestion.toString());
+                                return newSet;
+                              })}
+                              disabled={!submittedQuestions.has(currentQuestion.toString())}
+                              className={`px-3 flex items-center justify-center rounded-md border transition-all ${submittedQuestions.has(currentQuestion.toString())
+                                ? 'bg-gray-100 hover:bg-gray-200 text-gray-600 border-gray-300 cursor-pointer'
+                                : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed opacity-60'
+                                }`}
+                              title={!submittedQuestions.has(currentQuestion.toString()) ? "Submit an answer first to unlock" : revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Answer"}
+                            >
+                              {revealedAnswers.has(currentQuestion.toString()) ? (
+                                <EyeOff className="w-5 h-5" />
+                              ) : (
+                                <Eye className="w-5 h-5" />
+                              )}
+                            </button>
+                          )}
                         </div>
-                        {revealedAnswers.has(currentQuestion.toString()) && (
+                        {isAdmin && revealedAnswers.has(currentQuestion.toString()) && (
                           <div className="text-sm text-blue-600 bg-blue-50 p-2 rounded border border-blue-100">
                             <span className="font-bold">Answer:</span> {activeQuestionData.correctOption}
                           </div>
