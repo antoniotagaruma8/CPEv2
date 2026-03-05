@@ -143,30 +143,15 @@ function LandingPageContent() {
                       </div>
                       <div className="ml-4 bg-white px-3 py-1 rounded-md text-xs text-slate-400 border border-slate-200 flex-1 text-center font-mono">cefr-mock-exams.com/practice/review</div>
                     </div>
-                    <div className="p-6 md:p-8 bg-white">
-                      <div className="flex gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                          <Lightbulb className="w-6 h-6" strokeWidth={2} />
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-slate-900">Question Analysis</h3>
-                          <p className="text-sm text-slate-500">Detailed breakdown of your answer.</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="p-3 bg-slate-50 rounded-lg text-sm">
-                          <span className="font-bold text-slate-700 block mb-1">Rationale</span>
-                          <span className="text-slate-600">The correct answer is "despite" because it introduces a contrast with a noun phrase.</span>
-                        </div>
-                        <div className="p-3 bg-blue-50 border border-blue-100 rounded-lg text-sm">
-                          <span className="font-bold text-blue-800 block mb-1">How to approach</span>
-                          <span className="text-blue-700">Identify the contrast between the two clauses and check the grammatical structure following the gap.</span>
-                        </div>
-                        <div className="p-3 bg-green-50 border border-green-100 rounded-lg text-sm">
-                          <span className="font-bold text-green-800 block mb-1">Tip</span>
-                          <span className="text-green-700">"Although" would require a full clause (subject + verb).</span>
-                        </div>
-                      </div>
+                    <div className="w-full bg-slate-900">
+                      <video
+                        src="/videos/highlights.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
