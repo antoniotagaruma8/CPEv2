@@ -2653,6 +2653,8 @@ export default function DashboardPage() {
                               }
                             }
 
+                            const isMatching = activePartData?.title?.toLowerCase().includes('matching');
+
                             if (isSubmitted && !isSelected && !isCorrectAnswer) {
                               return null; // Hide distractors
                             }
