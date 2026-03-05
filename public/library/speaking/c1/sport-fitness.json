@@ -1,0 +1,125 @@
+{
+  "examTitle": "CEFR C1 Mock Speaking: Sport & Fitness",
+   "parts": [
+      {
+         "title": "Examiner Interview: Personal Sport and Fitness Profile",
+         "instructions": "Please introduce yourself and share your personal sport and fitness profile.",
+         "content": "Examiner: Hi, thank you for coming in today. Can you please start by introducing yourself and tell me about your personal sport and fitness profile?",
+         "questions": [
+            {
+               "question": "Interview",
+               "part1Questions": [
+                  {
+                     "question": "What type of sport or physical activity do you enjoy doing in your free time?",
+                     "answer": "I'm a big fan of hiking and rock climbing. I find it helps me relax and clear my mind.",
+                     "tips": "Use specific examples and details to support your answer."
+                  },
+                  {
+                     "question": "Have you ever participated in any competitive sports or fitness events?",
+                     "answer": "Yes, I've competed in a few local triathlons and half-marathons. It's a great way to challenge myself and stay motivated.",
+                     "tips": "Provide concrete examples and describe the experience in detail."
+                  },
+                  {
+                     "question": "How do you typically stay active or fit during the week?",
+                     "answer": "I try to go to the gym at least 3 times a week and also make time for some form of cardio, such as cycling or swimming, on the weekends.",
+                     "tips": "Use a mix of present simple and present continuous to describe your routine."
+                  },
+                  {
+                     "question": "Do you follow any specific diet or nutrition plan to support your fitness goals?",
+                     "answer": "I try to eat a balanced diet with plenty of fruits, vegetables, and lean proteins. I also make sure to stay hydrated throughout the day.",
+                     "tips": "Use the passive voice to describe the benefits of a balanced diet."
+                  },
+                  {
+                     "question": "How do you motivate yourself to stay active and healthy?",
+                     "answer": "I find that having a supportive community or group of friends who share similar interests helps me stay motivated and accountable.",
+                     "tips": "Use a conditional sentence to describe a hypothetical situation."
+                  },
+                  {
+                     "question": "Can you tell me about any specific challenges you've faced in your fitness journey?",
+                     "answer": "One of the biggest challenges I've faced is finding time to balance my fitness routine with work and other responsibilities. However, I've learned to prioritize my health and make time for the things that matter most.",
+                     "tips": "Use a mix of past simple and past continuous to describe your experiences."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title": "Comparing Fitness Trends: Long Turn",
+         "instructions": "Please compare and contrast two of the following photos: a group fitness class, a personal trainer with a client, and a person running on a treadmill.",
+         "content": "Examiner: Now, let's look at these three photos. Please choose two that you'd like to compare and contrast.",
+         "questions": [
+            {
+               "question": "Which two photos would you like to compare and contrast? Please explain why you chose these two photos and what you think is the main difference between them.",
+               "imagePrompts": [
+                  "A group fitness class with multiple people exercising together",
+                  "A personal trainer working with a client to improve their form",
+                  "A person running on a treadmill, looking focused and determined"
+               ],
+               "possibleAnswers": [
+                  "Photos A and B",
+                  "Photos B and C",
+                  "Photos A and C"
+               ]
+            }
+         ]
+      },
+      {
+         "title": "Collaborative Task: Fitness and Technology",
+         "instructions": "Please discuss the following topics with your examiner: the impact of technology on fitness, the role of social media in promoting fitness, and the benefits of using wearable devices for tracking fitness goals.",
+         "content": "Examiner: Let's start by discussing the impact of technology on fitness. How do you think technology has changed the way people approach fitness?",
+         "questions": [
+            {
+               "question": "The impact of technology on fitness has made it easier for people to track their progress and stay motivated. However, some argue that it has also led to a culture of competition and comparison. What are your thoughts on this?",
+               "possibleAnswers": [
+                  "I think technology has made fitness more accessible and convenient, but it's also created unrealistic expectations and pressures.",
+                  "I believe technology has revolutionized the fitness industry, but it's also led to a loss of community and human connection.",
+                  "I think technology has had a positive impact on fitness, but it's also created new challenges and distractions."
+               ],
+               "tips": "Use specific examples and details to support your answer."
+            }
+         ]
+      },
+      {
+         "title": "Advanced Abstract Discussion: The Psychology of Fitness",
+         "instructions": "Please discuss the following questions with your examiner: what motivates people to engage in physical activity, how do emotions play a role in fitness, and what are the psychological benefits of exercise?",
+         "content": "Examiner: Let's start by discussing what motivates people to engage in physical activity. What do you think drives people to exercise?",
+         "questions": [
+            {
+               "question": "General Discussion",
+               "part1Questions": [
+                  {
+                     "question": "What do you think motivates people to engage in physical activity?",
+                     "answer": "I believe that people are motivated to exercise for a variety of reasons, including personal satisfaction, social pressure, and a desire to improve their health.",
+                     "tips": "Use a mix of present simple and present continuous to describe the different motivations."
+                  },
+                  {
+                     "question": "How do emotions play a role in fitness?",
+                     "answer": "Emotions play a significant role in fitness, as people often engage in physical activity as a way to cope with stress, anxiety, or other negative emotions.",
+                     "tips": "Use a conditional sentence to describe a hypothetical situation."
+                  },
+                  {
+                     "question": "What are the psychological benefits of exercise?",
+                     "answer": "Exercise has a range of psychological benefits, including improved mood, reduced stress, and increased self-esteem.",
+                     "tips": "Use the passive voice to describe the benefits of exercise."
+                  },
+                  {
+                     "question": "Can you think of any other psychological benefits of exercise?",
+                     "answer": "Yes, exercise can also improve sleep quality, boost cognitive function, and enhance overall well-being.",
+                     "tips": "Use a mix of present simple and present continuous to describe the benefits."
+                  },
+                  {
+                     "question": "How do you think exercise affects people's self-esteem?",
+                     "answer": "I believe that exercise can have a positive impact on self-esteem, as people often experience a sense of accomplishment and pride in their physical abilities.",
+                     "tips": "Use a conditional sentence to describe a hypothetical situation."
+                  },
+                  {
+                     "question": "Can you think of any other ways in which exercise can affect people's self-esteem?",
+                     "answer": "Yes, exercise can also improve body image and reduce self-criticism, leading to a more positive and confident self-image.",
+                     "tips": "Use the passive voice to describe the benefits of exercise."
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

@@ -2080,73 +2080,105 @@ export default function DashboardPage() {
         )}
 
         {/* ── Pre-loaded Exams Library Modal (empty state) ── */}
-        {libraryModalSkill && (
-          <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}>
-            <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative animate-spring-up overflow-hidden max-h-[85vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-              <button
-                onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}
-                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors z-10"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="mb-5 flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center">
-                  {libraryModalSkill === 'Reading' && <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                  {libraryModalSkill === 'Writing' && <Edit3 className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                  {libraryModalSkill === 'Listening' && <Headphones className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                  {libraryModalSkill === 'Speaking' && <Mic className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                </div>
-                <div>
-                  <h2 className="text-xl font-black text-slate-800 dark:text-white">{libraryModalSkill} Exams</h2>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Select a CEFR level, then pick a topic.</p>
-                </div>
-              </div>
-
-              {/* Level Selection */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {CEFR_LEVELS.map(({ value, label }) => (
+        {libraryModalSkill && (() => {
+          const skillConfig: Record<string, { gradient: string; iconBg: string; accent: string; accentBorder: string; accentText: string; accentHover: string; lightBg: string; }> = {
+            Reading: { gradient: 'from-blue-500 to-indigo-600', iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600', accent: 'bg-blue-600 border-blue-600', accentBorder: 'border-blue-200 dark:border-blue-800', accentText: 'text-blue-600 dark:text-blue-400', accentHover: 'hover:border-blue-300 hover:bg-blue-50/60 dark:hover:border-blue-700 dark:hover:bg-blue-950/40', lightBg: 'from-blue-50 via-indigo-50 to-blue-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-blue-950/20' },
+            Writing: { gradient: 'from-emerald-500 to-green-600', iconBg: 'bg-gradient-to-br from-emerald-500 to-green-600', accent: 'bg-emerald-600 border-emerald-600', accentBorder: 'border-emerald-200 dark:border-emerald-800', accentText: 'text-emerald-600 dark:text-emerald-400', accentHover: 'hover:border-emerald-300 hover:bg-emerald-50/60 dark:hover:border-emerald-700 dark:hover:bg-emerald-950/40', lightBg: 'from-emerald-50 via-green-50 to-emerald-50 dark:from-emerald-950/20 dark:via-green-950/20 dark:to-emerald-950/20' },
+            Listening: { gradient: 'from-violet-500 to-purple-600', iconBg: 'bg-gradient-to-br from-violet-500 to-purple-600', accent: 'bg-violet-600 border-violet-600', accentBorder: 'border-violet-200 dark:border-violet-800', accentText: 'text-violet-600 dark:text-violet-400', accentHover: 'hover:border-violet-300 hover:bg-violet-50/60 dark:hover:border-violet-700 dark:hover:bg-violet-950/40', lightBg: 'from-violet-50 via-purple-50 to-violet-50 dark:from-violet-950/20 dark:via-purple-950/20 dark:to-violet-950/20' },
+            Speaking: { gradient: 'from-orange-500 to-amber-600', iconBg: 'bg-gradient-to-br from-orange-500 to-amber-600', accent: 'bg-orange-600 border-orange-600', accentBorder: 'border-orange-200 dark:border-orange-800', accentText: 'text-orange-600 dark:text-orange-400', accentHover: 'hover:border-orange-300 hover:bg-orange-50/60 dark:hover:border-orange-700 dark:hover:bg-orange-950/40', lightBg: 'from-orange-50 via-amber-50 to-orange-50 dark:from-orange-950/20 dark:via-amber-950/20 dark:to-orange-950/20' },
+          };
+          const cfg = skillConfig[libraryModalSkill] || skillConfig.Reading;
+          return (
+            <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}>
+              <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-lg w-full shadow-2xl relative animate-spring-up overflow-hidden max-h-[85vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+                {/* Gradient Header */}
+                <div className={`bg-gradient-to-r ${cfg.gradient} px-6 py-5 text-white relative overflow-hidden`}>
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.1)_75%,transparent_75%)] bg-[length:20px_20px] opacity-30"></div>
                   <button
-                    key={value}
-                    type="button"
-                    onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
-                    className={`text-xs px-3 py-1.5 rounded-lg border-2 font-bold transition-all ${librarySelectedLevel === value ? 'bg-blue-600 border-blue-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700'}`}
+                    onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}
+                    className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10 bg-white/10 rounded-full p-1.5 hover:bg-white/20"
                   >
-                    {label}
+                    <X className="w-4 h-4" />
                   </button>
-                ))}
-              </div>
+                  <div className="flex items-center gap-3 relative z-10">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                      {libraryModalSkill === 'Reading' && <BookOpen className="w-6 h-6" />}
+                      {libraryModalSkill === 'Writing' && <Edit3 className="w-6 h-6" />}
+                      {libraryModalSkill === 'Listening' && <Headphones className="w-6 h-6" />}
+                      {libraryModalSkill === 'Speaking' && <Mic className="w-6 h-6" />}
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-black">{libraryModalSkill} Exams</h2>
+                      <p className="text-white/80 text-sm">Select a CEFR level, then pick a topic</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-3 relative z-10">
+                    <span className="text-[10px] font-bold bg-white/20 px-2.5 py-1 rounded-full">📚 {CEFR_LEVELS.length} Levels</span>
+                    <span className="text-[10px] font-bold bg-white/20 px-2.5 py-1 rounded-full">📝 {CEFR_TOPICS.length} Topics each</span>
+                  </div>
+                </div>
 
-              {/* Topic Cards Grid */}
-              {librarySelectedLevel ? (
-                <div>
-                  <p className="text-[10px] font-bold text-blue-500 uppercase tracking-wider mb-2">
-                    {libraryModalSkill} · {librarySelectedLevel} — Choose a Topic
-                  </p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {CEFR_TOPICS.map((t) => (
+                <div className="px-6 py-5 overflow-y-auto">
+                  {/* Level Selection */}
+                  <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2">Choose Level</p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {CEFR_LEVELS.map(({ value, label }) => (
                       <button
-                        key={t}
+                        key={value}
                         type="button"
-                        disabled={!!loadingLibraryTopic}
-                        onClick={() => handleLoadPreloadedExam(libraryModalSkill!, librarySelectedLevel, t)}
-                        className={`text-left p-3 rounded-xl border-2 transition-all group ${loadingLibraryTopic === t ? 'bg-blue-50 dark:bg-blue-900/40 border-blue-300 dark:border-blue-700 animate-pulse' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-slate-700/60 hover:shadow-md active:scale-[0.97]'}`}
+                        onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
+                        className={`text-xs px-3.5 py-2 rounded-xl border-2 font-bold transition-all duration-200 ${librarySelectedLevel === value ? `${cfg.accent} text-white shadow-lg scale-105` : `bg-white dark:bg-slate-800 ${cfg.accentBorder} text-slate-600 dark:text-slate-400 ${cfg.accentHover}`}`}
                       >
-                        <span className={`text-sm font-semibold leading-tight block ${loadingLibraryTopic === t ? 'text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400'}`}>
-                          {loadingLibraryTopic === t ? '⏳ Loading...' : t}
-                        </span>
+                        {label}
                       </button>
                     ))}
                   </div>
+
+                  {/* Topic Cards Grid */}
+                  {librarySelectedLevel ? (
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <p className={`text-[10px] font-bold ${cfg.accentText} uppercase tracking-widest`}>
+                          {libraryModalSkill} · {librarySelectedLevel} — Choose a Topic
+                        </p>
+                        <span className="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">{CEFR_TOPICS.length} exams</span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2">
+                        {CEFR_TOPICS.map((t, i) => (
+                          <button
+                            key={t}
+                            type="button"
+                            disabled={!!loadingLibraryTopic}
+                            onClick={() => handleLoadPreloadedExam(libraryModalSkill!, librarySelectedLevel, t)}
+                            className={`text-left p-3 rounded-xl border-2 transition-all duration-200 group ${loadingLibraryTopic === t ? `bg-gradient-to-r ${cfg.lightBg} ${cfg.accentBorder} animate-pulse` : `bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 ${cfg.accentHover} hover:shadow-md active:scale-[0.97]`}`}
+                          >
+                            <div className="flex items-start gap-2">
+                              <span className={`text-[10px] font-bold mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 ${loadingLibraryTopic === t ? `${cfg.accent} text-white` : 'bg-slate-100 dark:bg-slate-700 text-slate-400 dark:text-slate-500'}`}>{i + 1}</span>
+                              <span className={`text-sm font-semibold leading-tight ${loadingLibraryTopic === t ? cfg.accentText : 'text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
+                                {loadingLibraryTopic === t ? '⏳ Loading...' : t}
+                              </span>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className={`text-center py-10 rounded-xl bg-gradient-to-r ${cfg.lightBg} border-2 border-dashed ${cfg.accentBorder}`}>
+                      <div className={`w-14 h-14 ${cfg.iconBg} rounded-xl flex items-center justify-center text-white mx-auto mb-3 shadow-lg opacity-50`}>
+                        {libraryModalSkill === 'Reading' && <BookOpen className="w-7 h-7" />}
+                        {libraryModalSkill === 'Writing' && <Edit3 className="w-7 h-7" />}
+                        {libraryModalSkill === 'Listening' && <Headphones className="w-7 h-7" />}
+                        {libraryModalSkill === 'Speaking' && <Mic className="w-7 h-7" />}
+                      </div>
+                      <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">Select a level above to browse topics</p>
+                      <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Each level has {CEFR_TOPICS.length} practice exams ready</p>
+                    </div>
+                  )}
                 </div>
-              ) : (
-                <div className="text-center py-8 text-slate-400 dark:text-slate-500">
-                  <p className="text-sm">👆 Select a level above to see available topics</p>
-                </div>
-              )}
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
       </div>
     );
@@ -3670,73 +3702,105 @@ export default function DashboardPage() {
       )}
 
       {/* ── Pre-loaded Exams Library Modal ── */}
-      {libraryModalSkill && (
-        <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}>
-          <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative animate-spring-up overflow-hidden max-h-[85vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors z-10"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="mb-5 flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center">
-                {libraryModalSkill === 'Reading' && <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                {libraryModalSkill === 'Writing' && <Edit3 className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                {libraryModalSkill === 'Listening' && <Headphones className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-                {libraryModalSkill === 'Speaking' && <Mic className="w-6 h-6 text-blue-600 dark:text-blue-400" />}
-              </div>
-              <div>
-                <h2 className="text-xl font-black text-slate-800 dark:text-white">{libraryModalSkill} Exams</h2>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Select a CEFR level, then pick a topic.</p>
-              </div>
-            </div>
-
-            {/* Level Selection */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {CEFR_LEVELS.map(({ value, label }) => (
+      {libraryModalSkill && (() => {
+        const skillConfig: Record<string, { gradient: string; iconBg: string; accent: string; accentBorder: string; accentText: string; accentHover: string; lightBg: string; }> = {
+          Reading: { gradient: 'from-blue-500 to-indigo-600', iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600', accent: 'bg-blue-600 border-blue-600', accentBorder: 'border-blue-200 dark:border-blue-800', accentText: 'text-blue-600 dark:text-blue-400', accentHover: 'hover:border-blue-300 hover:bg-blue-50/60 dark:hover:border-blue-700 dark:hover:bg-blue-950/40', lightBg: 'from-blue-50 via-indigo-50 to-blue-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-blue-950/20' },
+          Writing: { gradient: 'from-emerald-500 to-green-600', iconBg: 'bg-gradient-to-br from-emerald-500 to-green-600', accent: 'bg-emerald-600 border-emerald-600', accentBorder: 'border-emerald-200 dark:border-emerald-800', accentText: 'text-emerald-600 dark:text-emerald-400', accentHover: 'hover:border-emerald-300 hover:bg-emerald-50/60 dark:hover:border-emerald-700 dark:hover:bg-emerald-950/40', lightBg: 'from-emerald-50 via-green-50 to-emerald-50 dark:from-emerald-950/20 dark:via-green-950/20 dark:to-emerald-950/20' },
+          Listening: { gradient: 'from-violet-500 to-purple-600', iconBg: 'bg-gradient-to-br from-violet-500 to-purple-600', accent: 'bg-violet-600 border-violet-600', accentBorder: 'border-violet-200 dark:border-violet-800', accentText: 'text-violet-600 dark:text-violet-400', accentHover: 'hover:border-violet-300 hover:bg-violet-50/60 dark:hover:border-violet-700 dark:hover:bg-violet-950/40', lightBg: 'from-violet-50 via-purple-50 to-violet-50 dark:from-violet-950/20 dark:via-purple-950/20 dark:to-violet-950/20' },
+          Speaking: { gradient: 'from-orange-500 to-amber-600', iconBg: 'bg-gradient-to-br from-orange-500 to-amber-600', accent: 'bg-orange-600 border-orange-600', accentBorder: 'border-orange-200 dark:border-orange-800', accentText: 'text-orange-600 dark:text-orange-400', accentHover: 'hover:border-orange-300 hover:bg-orange-50/60 dark:hover:border-orange-700 dark:hover:bg-orange-950/40', lightBg: 'from-orange-50 via-amber-50 to-orange-50 dark:from-orange-950/20 dark:via-amber-950/20 dark:to-orange-950/20' },
+        };
+        const cfg = skillConfig[libraryModalSkill] || skillConfig.Reading;
+        return (
+          <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-lg w-full shadow-2xl relative animate-spring-up overflow-hidden max-h-[85vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+              {/* Gradient Header */}
+              <div className={`bg-gradient-to-r ${cfg.gradient} px-6 py-5 text-white relative overflow-hidden`}>
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.1)_75%,transparent_75%)] bg-[length:20px_20px] opacity-30"></div>
                 <button
-                  key={value}
-                  type="button"
-                  onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
-                  className={`text-xs px-3 py-1.5 rounded-lg border-2 font-bold transition-all ${librarySelectedLevel === value ? 'bg-blue-600 border-blue-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700'}`}
+                  onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}
+                  className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10 bg-white/10 rounded-full p-1.5 hover:bg-white/20"
                 >
-                  {label}
+                  <X className="w-4 h-4" />
                 </button>
-              ))}
-            </div>
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                    {libraryModalSkill === 'Reading' && <BookOpen className="w-6 h-6" />}
+                    {libraryModalSkill === 'Writing' && <Edit3 className="w-6 h-6" />}
+                    {libraryModalSkill === 'Listening' && <Headphones className="w-6 h-6" />}
+                    {libraryModalSkill === 'Speaking' && <Mic className="w-6 h-6" />}
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-black">{libraryModalSkill} Exams</h2>
+                    <p className="text-white/80 text-sm">Select a CEFR level, then pick a topic</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 mt-3 relative z-10">
+                  <span className="text-[10px] font-bold bg-white/20 px-2.5 py-1 rounded-full">📚 {CEFR_LEVELS.length} Levels</span>
+                  <span className="text-[10px] font-bold bg-white/20 px-2.5 py-1 rounded-full">📝 {CEFR_TOPICS.length} Topics each</span>
+                </div>
+              </div>
 
-            {/* Topic Cards Grid */}
-            {librarySelectedLevel ? (
-              <div>
-                <p className="text-[10px] font-bold text-blue-500 uppercase tracking-wider mb-2">
-                  {libraryModalSkill} · {librarySelectedLevel} — Choose a Topic
-                </p>
-                <div className="grid grid-cols-2 gap-2">
-                  {CEFR_TOPICS.map((t) => (
+              <div className="px-6 py-5 overflow-y-auto">
+                {/* Level Selection */}
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2">Choose Level</p>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {CEFR_LEVELS.map(({ value, label }) => (
                     <button
-                      key={t}
+                      key={value}
                       type="button"
-                      disabled={!!loadingLibraryTopic}
-                      onClick={() => handleLoadPreloadedExam(libraryModalSkill!, librarySelectedLevel, t)}
-                      className={`text-left p-3 rounded-xl border-2 transition-all group ${loadingLibraryTopic === t ? 'bg-blue-50 dark:bg-blue-900/40 border-blue-300 dark:border-blue-700 animate-pulse' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-slate-700/60 hover:shadow-md active:scale-[0.97]'}`}
+                      onClick={() => setLibrarySelectedLevel(value === librarySelectedLevel ? null : value)}
+                      className={`text-xs px-3.5 py-2 rounded-xl border-2 font-bold transition-all duration-200 ${librarySelectedLevel === value ? `${cfg.accent} text-white shadow-lg scale-105` : `bg-white dark:bg-slate-800 ${cfg.accentBorder} text-slate-600 dark:text-slate-400 ${cfg.accentHover}`}`}
                     >
-                      <span className={`text-sm font-semibold leading-tight block ${loadingLibraryTopic === t ? 'text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400'}`}>
-                        {loadingLibraryTopic === t ? '⏳ Loading...' : t}
-                      </span>
+                      {label}
                     </button>
                   ))}
                 </div>
+
+                {/* Topic Cards Grid */}
+                {librarySelectedLevel ? (
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <p className={`text-[10px] font-bold ${cfg.accentText} uppercase tracking-widest`}>
+                        {libraryModalSkill} · {librarySelectedLevel} — Choose a Topic
+                      </p>
+                      <span className="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">{CEFR_TOPICS.length} exams</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {CEFR_TOPICS.map((t, i) => (
+                        <button
+                          key={t}
+                          type="button"
+                          disabled={!!loadingLibraryTopic}
+                          onClick={() => handleLoadPreloadedExam(libraryModalSkill!, librarySelectedLevel, t)}
+                          className={`text-left p-3 rounded-xl border-2 transition-all duration-200 group ${loadingLibraryTopic === t ? `bg-gradient-to-r ${cfg.lightBg} ${cfg.accentBorder} animate-pulse` : `bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 ${cfg.accentHover} hover:shadow-md active:scale-[0.97]`}`}
+                        >
+                          <div className="flex items-start gap-2">
+                            <span className={`text-[10px] font-bold mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 ${loadingLibraryTopic === t ? `${cfg.accent} text-white` : 'bg-slate-100 dark:bg-slate-700 text-slate-400 dark:text-slate-500'}`}>{i + 1}</span>
+                            <span className={`text-sm font-semibold leading-tight ${loadingLibraryTopic === t ? cfg.accentText : 'text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
+                              {loadingLibraryTopic === t ? '⏳ Loading...' : t}
+                            </span>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className={`text-center py-10 rounded-xl bg-gradient-to-r ${cfg.lightBg} border-2 border-dashed ${cfg.accentBorder}`}>
+                    <div className={`w-14 h-14 ${cfg.iconBg} rounded-xl flex items-center justify-center text-white mx-auto mb-3 shadow-lg opacity-50`}>
+                      {libraryModalSkill === 'Reading' && <BookOpen className="w-7 h-7" />}
+                      {libraryModalSkill === 'Writing' && <Edit3 className="w-7 h-7" />}
+                      {libraryModalSkill === 'Listening' && <Headphones className="w-7 h-7" />}
+                      {libraryModalSkill === 'Speaking' && <Mic className="w-7 h-7" />}
+                    </div>
+                    <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">Select a level above to browse topics</p>
+                    <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Each level has {CEFR_TOPICS.length} practice exams ready</p>
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="text-center py-8 text-slate-400 dark:text-slate-500">
-                <p className="text-sm">👆 Select a level above to see available topics</p>
-              </div>
-            )}
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
 
     </div>
   );
