@@ -1566,21 +1566,21 @@ export default function DashboardPage() {
                 const event = new CustomEvent('startOnboardingTour');
                 window.dispatchEvent(event);
               }}
-              className="p-1.5 sm:p-2 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center shrink-0"
               title="Help / Tour"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" x2="12.01" y1="17" y2="17" /></svg>
             </button>
             <button
               onClick={() => setIsPdfModalOpen(true)}
-              className="p-1.5 sm:p-2 rounded-lg bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-900/60 transition-colors flex items-center justify-center"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-900/60 transition-colors flex items-center justify-center shrink-0"
               title="View Presentation"
             >
-              <FileText className="w-4 h-4 sm:w-[18px] sm:h-[18px]" strokeWidth={2} />
+              <FileText className="w-[18px] h-[18px]" strokeWidth={2} />
             </button>
             <button
               onClick={toggleTheme}
-              className="p-1.5 sm:p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold"
+              className="h-9 sm:h-10 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold shrink-0"
               title={isDarkMode ? "Switch to Classic Mode" : "Switch to Dark Mode"}
             >
               {isDarkMode ? '☀️ Classic' : '🌙 Dark'}
@@ -1986,6 +1986,34 @@ export default function DashboardPage() {
           </div>
         )}
 
+        {/* PDF Presentation Modal */}
+        {isPdfModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsPdfModalOpen(false)}>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl flex flex-col ring-1 ring-slate-200 dark:ring-slate-800" onClick={e => e.stopPropagation()}>
+              <div className="flex justify-between items-center px-4 py-3 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 shrink-0">
+                <h3 className="text-slate-800 dark:text-white font-bold flex items-center gap-2 text-sm sm:text-base">
+                  <FileText className="w-5 h-5 text-orange-500" />
+                  CEFR Platform Presentation
+                </h3>
+                <button
+                  onClick={() => setIsPdfModalOpen(false)}
+                  className="p-1.5 flex items-center gap-1 rounded-lg text-slate-500 font-medium hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shrink-0"
+                >
+                  <span className="hidden sm:inline">Close</span> <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="w-full flex-1 bg-slate-200 dark:bg-slate-800 min-h-0">
+                <iframe
+                  src="/presentation/AI_Powered_CEFR_Mastery.pdf"
+                  className="w-full h-full border-none"
+                  style={{ minHeight: '60vh' }}
+                  title="AI CEFR Mastery Presentation"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     );
   }
@@ -2220,7 +2248,7 @@ export default function DashboardPage() {
         <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
           <button
             onClick={toggleTheme}
-            className="p-1 sm:p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center justify-center text-xs sm:text-sm font-bold shrink-0"
             title={isDarkMode ? "Switch to Classic Mode" : "Switch to Dark Mode"}
           >
             {isDarkMode ? '☀️' : '🌙'}
