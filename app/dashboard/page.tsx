@@ -1720,7 +1720,7 @@ export default function DashboardPage() {
                           {examForLabel && <p className="text-[10px] text-slate-500 mb-1">For: <span className="font-semibold text-slate-700">{examForLabel}</span></p>}
                           <div className="flex justify-between items-center text-[10px] text-slate-500 mt-2">
                             <span className="uppercase tracking-wide">{exam.type}</span>
-                            <span>{new Date(exam.created_at || exam.createdAt).toLocaleDateString()}</span>
+                            <span className="text-right">{new Date(exam.created_at || exam.createdAt).toLocaleString([], { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
                           </div>
                         </div>
                       );
