@@ -10,9 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       keyframes: {
-        'slide-down': {
-          '0%': { opacity: '0', maxHeight: '0', transform: 'translateY(-12px)' },
-          '100%': { opacity: '1', maxHeight: '500px', transform: 'translateY(0)' },
+        'expand-down': {
+          '0%': { opacity: '0', gridTemplateRows: '0fr', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', gridTemplateRows: '1fr', transform: 'translateY(0)' },
         },
         'fade-in': {
           '0%': { opacity: '0' },
@@ -20,7 +20,7 @@ const config: Config = {
         },
       },
       animation: {
-        'slide-down': 'slide-down 0.5s ease-out forwards',
+        'expand-down': 'expand-down 0.5s ease-out forwards',
         'fade-in': 'fade-in 0.3s ease-out forwards',
       },
     },

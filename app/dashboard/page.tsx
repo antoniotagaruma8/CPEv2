@@ -2830,7 +2830,7 @@ export default function DashboardPage() {
                 </div>
 
                 {submittedQuestions.has(currentQuestion.toString()) && (
-                  <div className="mt-6 mb-4 space-y-4 overflow-hidden animate-slide-down">
+                  <div className="mt-6 mb-4 overflow-hidden animate-[expand-down_0.5s_ease-out_forwards]">
                     <div className="p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg shadow-sm">
                       <div className="flex items-start gap-3">
                         <svg className="w-6 h-6 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -2844,7 +2844,7 @@ export default function DashboardPage() {
                 )}
 
                 {!isSpeakingPart3 && (activeQuestionData.tips || (displayPossibleAnswers && displayPossibleAnswers.length > 0)) && (
-                  <div className="space-y-4 animate-fade-in transition-all duration-500">
+                  <div className="space-y-4 transition-all duration-700 ease-in-out transform origin-top">
                     {activeQuestionData.tips && (
                       <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg shadow-sm mt-2">
                         <div className="flex justify-between items-center">
