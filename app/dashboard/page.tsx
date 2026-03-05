@@ -3604,17 +3604,39 @@ export default function DashboardPage() {
         <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
         </div>
 
-        <div className="flex-1 flex items-center justify-center gap-1 overflow-x-auto py-2 no-scrollbar mx-2 sm:mx-4 w-full sm:w-auto">
-          {Array.from({ length: totalQuestions }, (_, i) => i + 1).map((q) => (
-            <button
-              key={q}
-              onClick={() => setCurrentQuestion(q)}
-              className={`w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 flex items-center justify-center rounded-sm text-[10px] sm:text-xs font-bold transition-all relative ${getQuestionNavClass(q)}`}
-            >
-              {flagged.has(q) && <div className="absolute top-0.5 right-0.5 w-1 h-1 sm:w-1.5 sm:h-1.5 bg-yellow-400 rounded-full"></div>}
-              {q}
-            </button>
-          ))}
+        <div className="flex-1 flex items-center gap-3 mx-2 sm:mx-4 w-full sm:w-auto py-2">
+          <button
+            onClick={() => setCurrentQuestion(q => Math.max(1, q - 1))}
+            disabled={currentQuestion === 1}
+            className="text-xs font-bold text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors shrink-0 bg-[#3d3d3d] hover:bg-[#4d4d4d] rounded-lg px-2.5 py-1.5"
+          >
+            ◀
+          </button>
+          <div className="flex-1 flex flex-col items-center gap-1">
+            <div className="flex items-center justify-between w-full text-[10px] sm:text-xs font-bold">
+              <span className="text-blue-400">Question {currentQuestion}</span>
+              <span className="text-slate-400">{currentQuestion} / {totalQuestions}</span>
+            </div>
+            <div className="w-full h-2.5 sm:h-3 bg-[#1a1a1a] rounded-full overflow-hidden relative shadow-inner">
+              <div
+                className="h-full rounded-full relative transition-all duration-500 ease-out"
+                style={{
+                  width: `${(currentQuestion / totalQuestions) * 100}%`,
+                  background: 'linear-gradient(90deg, #3B82F6, #6366F1, #8B5CF6)',
+                }}
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" style={{ backgroundSize: '200% auto' }}></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 sm:w-2.5 sm:h-2.5 bg-white rounded-full shadow-[0_0_8px_rgba(99,102,241,0.8),0_0_16px_rgba(99,102,241,0.4)]"></div>
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={() => setCurrentQuestion(q => Math.min(totalQuestions, q + 1))}
+            disabled={currentQuestion === totalQuestions}
+            className="text-xs font-bold text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors shrink-0 bg-[#3d3d3d] hover:bg-[#4d4d4d] rounded-lg px-2.5 py-1.5"
+          >
+            ▶
+          </button>
         </div>
 
         <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
