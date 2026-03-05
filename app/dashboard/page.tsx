@@ -3275,7 +3275,7 @@ export default function DashboardPage() {
             </div>
             <div className="w-full flex-1 bg-slate-200 dark:bg-slate-800 min-h-0">
               <iframe
-                src="/presentation/AI_CEFR_Mastery.pdf"
+                src="/presentation/AI_Powered_CEFR_Mastery.pdf"
                 className="w-full h-full border-none"
                 style={{ minHeight: '60vh' }}
                 title="AI CEFR Mastery Presentation"

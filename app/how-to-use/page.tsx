@@ -62,7 +62,7 @@ function HowToUseContent() {
 
                         <div className="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-slate-900 aspect-video mb-6">
                             <video
-                                src="/videos/CEFR_Mock_Exams.mp4"
+                                src="/videos/AI_English_Exam_Prep.mp4"
                                 controls
                                 className="w-full h-full object-cover"
                             >
@@ -72,7 +72,7 @@ function HowToUseContent() {
 
                         <div className="flex flex-col sm:flex-row gap-4 items-center">
                             <a
-                                href="/presentation/AI_CEFR_Mastery.pdf"
+                                href="/presentation/AI_Powered_CEFR_Mastery.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-6 py-3 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 rounded-xl font-medium transition-colors border border-blue-200 shadow-sm inline-flex items-center gap-2 w-full sm:w-auto justify-center"
