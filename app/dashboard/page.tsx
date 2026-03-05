@@ -1649,8 +1649,8 @@ export default function DashboardPage() {
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-6">
 
             {/* Saved Exams Column (1/4) */}
-            <div id="saved-exams-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl h-fit max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
-              <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2">
+            <div id="saved-exams-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-6 rounded-2xl shadow-xl flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 transition-colors">
+              <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-2 shrink-0">
                 <Library className="w-5 h-5 text-blue-600" strokeWidth={2} />
                 Saved Exams
               </h3>
@@ -1730,8 +1730,8 @@ export default function DashboardPage() {
             </div>
 
             {/* Generator Column (2/4) */}
-            <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 transition-colors">
-              <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200">
+            <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar transition-colors justify-between">
+              <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200 shrink-0">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600 shrink-0">
                   <Lightbulb className="w-4 h-4" strokeWidth={2.5} />
                 </div>
@@ -1841,7 +1841,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Progress Tracking Column (1/4) */}
-            <div id="progress-tracking-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl h-fit border border-slate-200/60 dark:border-slate-700/60 sticky top-4 transition-colors">
+            <div id="progress-tracking-section" className="lg:col-span-1 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl flex flex-col justify-between h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar border border-slate-200/60 dark:border-slate-700/60 transition-colors">
               <div className="flex items-center justify-between mb-4 border-b border-slate-100 dark:border-slate-700 pb-2">
                 <h3 className="font-bold text-slate-800 dark:text-white flex items-center gap-2">
                   <BarChart2 className="w-5 h-5 text-green-600" strokeWidth={2.5} />
@@ -2195,7 +2195,7 @@ export default function DashboardPage() {
     if (!userAnswer || !correctAnswer) return false;
 
     // Normalize spaces and remove punctuation including quotes and question marks
-    const normalize = (str: string) => str.trim().toLowerCase().replace(/[.,/#!$%^&*;:{}=\-_`~()'"?]/g, "").replace(/\s+/g, " ");
+    const normalize = (str: string) => str.trim().toLowerCase().replace(/[.,/#!$%^&*;:{ }=\-_`~()'"?]/g, "").replace(/\s+/g, " ");
 
     const u = normalize(userAnswer);
     let c = correctAnswer.trim().toLowerCase().replace(/^(answer:\s*|correct answer:\s*|correct option:\s*)/i, "");
