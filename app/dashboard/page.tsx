@@ -769,16 +769,35 @@ export default function DashboardPage() {
 
           // Normalize content to always be a string (AI may return arrays of {speaker, transcript} objects)
           let partContent: string;
+          let contentEmbeddedQuestions: any[] = []; // Questions embedded inside content array (e.g. Reading Part 3)
           if (typeof rawContent === 'string') {
             partContent = rawContent;
           } else if (Array.isArray(rawContent)) {
-            partContent = rawContent.map((item: any) => {
-              if (typeof item === 'string') return item;
-              if (item?.speaker && item?.transcript) return `${item.speaker}: ${item.transcript}`;
-              if (item?.speaker && item?.text) return `${item.speaker}: ${item.text}`;
-              if (item?.text) return item.text;
-              return JSON.stringify(item);
-            }).join('\n');
+            // Check if array items have embedded questions (e.g. Part 3: array of {text, question, A, B, C, correctOption})
+            const hasEmbeddedQuestions = rawContent.some((item: any) =>
+              typeof item === 'object' && item !== null && item.question && (item.A || item.options)
+            );
+            if (hasEmbeddedQuestions) {
+              // Extract both content text and questions from each item
+              const textParts: string[] = [];
+              rawContent.forEach((item: any) => {
+                if (typeof item === 'object' && item !== null) {
+                  if (item.text) textParts.push(item.text);
+                  if (item.question) contentEmbeddedQuestions.push(item);
+                } else if (typeof item === 'string') {
+                  textParts.push(item);
+                }
+              });
+              partContent = textParts.join('\n\n');
+            } else {
+              partContent = rawContent.map((item: any) => {
+                if (typeof item === 'string') return item;
+                if (item?.speaker && item?.transcript) return `${item.speaker}: ${item.transcript}`;
+                if (item?.speaker && item?.text) return `${item.speaker}: ${item.text}`;
+                if (item?.text) return item.text;
+                return JSON.stringify(item);
+              }).join('\n');
+            }
           } else if (typeof rawContent === 'object' && rawContent !== null) {
             if (rawContent.speaker && rawContent.transcript) {
               partContent = `${rawContent.speaker}: ${rawContent.transcript}`;
@@ -813,7 +832,10 @@ export default function DashboardPage() {
           }
 
           // If no questions found but part has content, create a synthetic question for Writing/Speaking type exams
-          if (questionsArray.length === 0 && partData?.title && partContent) {
+          if (questionsArray.length === 0 && contentEmbeddedQuestions.length > 0) {
+            // Questions were embedded inside the content array (e.g. Reading Part 3: short texts with inline questions)
+            questionsArray = contentEmbeddedQuestions;
+          } else if (questionsArray.length === 0 && partData?.title && partContent) {
             questionsArray = [{ question: partData.title, options: [] }];
           }
 
@@ -850,7 +872,7 @@ export default function DashboardPage() {
                 id: questionIdCounter++,
                 part: partNumber,
                 topic: rawTitle,
-                question: q.text || q.question || q.prompt || '',
+                question: (q.text && q.question) ? `${q.text}\n\n${q.question}` : (q.question || q.text || q.prompt || ''),
                 options: Array.isArray(q.options)
                   ? q.options.map((opt: any) => {
                     if (typeof opt === 'string') return opt;
@@ -858,12 +880,17 @@ export default function DashboardPage() {
                     return null;
                   }).filter((o: unknown): o is string => typeof o === 'string')
                   : (() => {
-                    // Fallback: extract A/B/C/D/E/F/G/H keys as options (used by pre-loaded exam JSONs)
+                    // Fallback 1: extract A/B/C/D/E/F/G/H keys as options (used by pre-loaded exam JSONs)
                     const letterOpts: string[] = [];
                     for (const letter of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']) {
                       if (typeof q[letter] === 'string') letterOpts.push(`${letter}. ${q[letter]}`);
                     }
-                    return letterOpts;
+                    if (letterOpts.length > 0) return letterOpts;
+                    // Fallback 2: inherit part-level options (e.g. Matching parts where options are shared across questions)
+                    if (Array.isArray(partData?.options) && partData.options.length > 0) {
+                      return partData.options.map((opt: any) => typeof opt === 'string' ? opt : (opt?.text || opt?.value || JSON.stringify(opt)));
+                    }
+                    return [];
                   })(),
                 correctOption: q.correctOption,
                 explanation: q.explanation,
