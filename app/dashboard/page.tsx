@@ -18,7 +18,7 @@ import { assessWritingAction } from '../actions/assessWriting';
 import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 import { isUserTeacher, activateTeacherStatus } from '../actions/teacherActions';
-import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw, GraduationCap, BookOpen, Edit3, Headphones } from 'lucide-react';
+import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw, GraduationCap, BookOpen, Edit3, Headphones, Sun, Moon } from 'lucide-react';
 import html2canvas from 'html2canvas';
 
 interface Question {
@@ -1661,7 +1661,8 @@ export default function DashboardPage() {
               className="h-9 sm:h-10 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold shrink-0"
               title={isDarkMode ? "Switch to Classic Mode" : "Switch to Dark Mode"}
             >
-              {isDarkMode ? '☀️ Classic' : '🌙 Dark'}
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              <span className="hidden sm:inline">{isDarkMode ? 'Classic' : 'Dark'}</span>
             </button>
             <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/50 py-1.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700/50">
               <div className="flex items-center gap-2">
