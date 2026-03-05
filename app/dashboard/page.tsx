@@ -19,6 +19,7 @@ import { assessReadingAction } from '../actions/assessReading';
 import { createCheckoutSession, createPortalSession } from '../actions/subscriptionActions';
 import { isUserTeacher, activateTeacherStatus } from '../actions/teacherActions';
 import { Settings, LogOut, Library, Star, Trash2, Lightbulb, X, BarChart2, Mic, Eye, EyeOff, Check, Pencil, Zap, Flag, Loader2, FileText, Share2, Download, RefreshCcw, GraduationCap } from 'lucide-react';
+import CatStudyBuddy from './CatStudyBuddy';
 import html2canvas from 'html2canvas';
 
 interface Question {
@@ -1731,6 +1732,15 @@ export default function DashboardPage() {
 
             {/* Generator Column (2/4) */}
             <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar transition-colors justify-between">
+              {/* Cat Study Buddy */}
+              <div className="flex justify-center shrink-0">
+                <CatStudyBuddy
+                  isGenerating={loading}
+                  hasExam={examParts.length > 0}
+                  examType={examType}
+                  timeLeftSeconds={timeLeft}
+                />
+              </div>
               <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200 shrink-0">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600 shrink-0">
                   <Lightbulb className="w-4 h-4" strokeWidth={2.5} />
