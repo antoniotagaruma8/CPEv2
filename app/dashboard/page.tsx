@@ -2093,7 +2093,7 @@ export default function DashboardPage() {
               <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-lg w-full shadow-2xl relative animate-spring-up overflow-hidden max-h-[85vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
                 {/* Gradient Header */}
                 <div className={`bg-gradient-to-r ${cfg.gradient} px-6 pt-5 pb-6 text-white relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.1)_75%,transparent_75%)] bg-[length:20px_20px] opacity-30"></div>
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.1)_75%,transparent_75%)] bg-[length:20px_20px] opacity-30 pointer-events-none"></div>
                   <button
                     onClick={() => { setLibraryModalSkill(null); setLibrarySelectedLevel(null); }}
                     className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10 bg-white/10 rounded-full p-1.5 hover:bg-white/20"
