@@ -1,0 +1,131 @@
+{
+  "examTitle": "CEFR B2 Mock Speaking: Work & Career",
+   "parts": [
+      {
+         "title": "Examiner Interview: Personal Profile and Background",
+         "instructions": "The examiner will ask you a series of questions about your personal profile, daily life, hobbies, and background. Please answer the questions as fully as possible.",
+         "content": "Examiner: Good morning, can you start by telling me your full name and age?",
+         "questions": [
+            {
+               "question": "Interview",
+               "part1Questions": [
+                  {
+                     "question": "Can you tell me about your family background? Where were you born and raised?",
+                     "answer": "I was born and raised in a small town in the countryside. My parents are both from the same region and have a strong connection to the land and the local community.",
+                     "tips": "Use descriptive language to paint a picture of your family background. Talk about the values and traditions that were passed down to you."
+                  },
+                  {
+                     "question": "What are your hobbies and interests outside of work or studies?",
+                     "answer": "I enjoy playing sports, reading, and traveling. I also like to try out new recipes in the kitchen and experiment with different cooking techniques.",
+                     "tips": "Be specific about your hobbies and interests. Try to explain why you enjoy them and how they relate to your personal growth."
+                  },
+                  {
+                     "question": "Can you describe your current job or studies? What do you hope to achieve in the next 5 years?",
+                     "answer": "I'm currently working as a marketing specialist for a small startup. In the next 5 years, I hope to move into a leadership role and continue to develop my skills in digital marketing.",
+                     "tips": "Be honest about your current situation and goals. Use specific examples to illustrate your achievements and aspirations."
+                  },
+                  {
+                     "question": "How do you like to spend your free time? Do you have any favorite places or activities?",
+                     "answer": "I enjoy spending my free time outdoors, whether it's hiking, camping, or simply taking a walk in the park. I also appreciate visiting new cities and trying out local cuisine.",
+                     "tips": "Use sensory language to describe your favorite places and activities. Try to convey the emotions and sensations that you experience."
+                  },
+                  {
+                     "question": "Can you tell me about your educational background? What inspired you to pursue your current field of study?",
+                     "answer": "I completed my undergraduate degree in business administration and later pursued a master's degree in marketing. I was inspired by the opportunities and challenges that the field presented.",
+                     "tips": "Be specific about your educational background and career choices. Use examples to illustrate your thought process and decision-making."
+                  },
+                  {
+                     "question": "How do you prioritize your tasks and manage your time? Can you give an example of a particularly challenging project you worked on?",
+                     "answer": "I prioritize my tasks by focusing on the most urgent and important ones first. I also use a planner and set reminders to stay on track. One challenging project I worked on was a marketing campaign for a new product launch, which required coordinating with multiple teams and stakeholders.",
+                     "tips": "Use specific examples to illustrate your time management and prioritization strategies. Try to convey the challenges and solutions you encountered."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title": "Comparing Two Photos: Career Development and Challenges",
+         "instructions": "Please look at the two photos below and compare them. What do you think are the key differences and similarities between the two scenarios?",
+         "content": {
+            "photo1": "A photo of a person sitting at a desk in a traditional office environment, surrounded by computers and paperwork.",
+            "photo2": "A photo of a person working remotely from a coffee shop, surrounded by laptops and coffee cups."
+         },
+         "questions": [
+            {
+               "question": "The two photos depict different work environments. What are some potential benefits and drawbacks of each scenario?",
+               "imagePrompts": [
+                  "Working in a traditional office environment can provide a sense of structure and routine.",
+                  "Working remotely can offer greater flexibility and work-life balance.",
+                  "Working in a traditional office environment can provide opportunities for face-to-face interaction and collaboration.",
+                  "Working remotely can lead to feelings of isolation and disconnection from colleagues."
+               ],
+               "possibleAnswers": [
+                  "Working in a traditional office environment can provide a sense of structure and routine, but it can also be limiting in terms of creativity and innovation. On the other hand, working remotely can offer greater flexibility and work-life balance, but it can also lead to feelings of isolation and disconnection from colleagues.",
+                  "The two photos depict different work environments that cater to different personalities and work styles. While some people thrive in traditional office environments, others prefer the flexibility and autonomy of working remotely.",
+                  "The benefits of working in a traditional office environment include the opportunity for face-to-face interaction and collaboration. However, the drawbacks include the potential for distractions and interruptions. In contrast, working remotely can provide greater focus and productivity, but it can also lead to feelings of isolation and disconnection from colleagues.",
+                  "Ultimately, the choice between working in a traditional office environment or working remotely depends on individual preferences and needs. Both scenarios have their benefits and drawbacks, and what works for one person may not work for another."
+               ]
+            }
+         ]
+      },
+      {
+         "title": "Collaborative Task: The Pros and Cons of Artificial Intelligence in the Workplace",
+         "instructions": "Please discuss the following topics with your partner. What are some potential benefits and drawbacks of using artificial intelligence in the workplace?",
+         "content": "",
+         "questions": [
+            {
+               "question": "The use of artificial intelligence in the workplace is on the rise. What are some potential benefits and drawbacks of this trend?",
+               "possibleAnswers": [
+                  "The benefits of artificial intelligence in the workplace include increased efficiency and productivity, improved accuracy and reliability, and enhanced customer service. However, the drawbacks include the potential for job displacement and the need for significant investment in training and infrastructure.",
+                  "The use of artificial intelligence in the workplace can provide numerous benefits, including improved decision-making and problem-solving capabilities, enhanced data analysis and insights, and increased employee engagement and motivation. However, there are also potential drawbacks, such as the risk of bias and the need for human oversight and accountability.",
+                  "The integration of artificial intelligence in the workplace can lead to significant improvements in productivity and efficiency, as well as enhanced customer satisfaction and loyalty. However, it also raises concerns about job security and the potential for automation to displace human workers.",
+                  "The use of artificial intelligence in the workplace is a double-edged sword. On the one hand, it can provide numerous benefits, including improved data analysis and insights, enhanced customer service, and increased employee engagement and motivation. On the other hand, it also raises concerns about bias, job displacement, and the need for human oversight and accountability."
+               ],
+               "tips": "Use specific examples to illustrate the benefits and drawbacks of artificial intelligence in the workplace. Try to convey the potential impact on employees, customers, and the organization as a whole."
+            }
+         ]
+      },
+      {
+         "title": "Deeper Discussion: The Impact of Artificial Intelligence on the Job Market",
+         "instructions": "Please discuss the following topics with your partner. What are some potential implications of the increasing use of artificial intelligence in the job market?",
+         "content": "",
+         "questions": [
+            {
+               "question": "General Discussion",
+               "part1Questions": [
+                  {
+                     "question": "How do you think the increasing use of artificial intelligence will affect the job market in the next 5-10 years?",
+                     "answer": "I think the increasing use of artificial intelligence will lead to significant changes in the job market, including the creation of new job opportunities and the displacement of certain jobs. It will also require workers to upskill and reskill to remain relevant.",
+                     "tips": "Use specific examples to illustrate the potential impact of artificial intelligence on the job market. Try to convey the potential implications for workers, employers, and the economy as a whole."
+                  },
+                  {
+                     "question": "What are some potential strategies that workers can use to adapt to the changing job market?",
+                     "answer": "Workers can use a variety of strategies to adapt to the changing job market, including upskilling and reskilling, taking on new challenges and responsibilities, and developing transferable skills that are in high demand.",
+                     "tips": "Use specific examples to illustrate the potential strategies that workers can use to adapt to the changing job market. Try to convey the potential benefits and drawbacks of each strategy."
+                  },
+                  {
+                     "question": "How do you think governments and policymakers can help workers adapt to the changing job market?",
+                     "answer": "Governments and policymakers can help workers adapt to the changing job market by providing education and training programs, investing in infrastructure and technology, and implementing policies that support workers who are displaced by automation.",
+                     "tips": "Use specific examples to illustrate the potential ways in which governments and policymakers can help workers adapt to the changing job market. Try to convey the potential benefits and drawbacks of each approach."
+                  },
+                  {
+                     "question": "What are some potential implications of the increasing use of artificial intelligence on social inequality and economic growth?",
+                     "answer": "The increasing use of artificial intelligence could exacerbate social inequality and economic growth if it disproportionately benefits certain groups or individuals. However, it could also lead to significant improvements in productivity and efficiency, which could benefit everyone.",
+                     "tips": "Use specific examples to illustrate the potential implications of the increasing use of artificial intelligence on social inequality and economic growth. Try to convey the potential benefits and drawbacks of each scenario."
+                  },
+                  {
+                     "question": "How do you think the increasing use of artificial intelligence will change the nature of work and the concept of a 'job'?",
+                     "answer": "The increasing use of artificial intelligence will change the nature of work and the concept of a 'job' by requiring workers to be more adaptable and flexible, and by creating new opportunities for entrepreneurship and innovation.",
+                     "tips": "Use specific examples to illustrate the potential changes that the increasing use of artificial intelligence will bring to the nature of work and the concept of a 'job'. Try to convey the potential benefits and drawbacks of each scenario."
+                  },
+                  {
+                     "question": "What are some potential ways in which workers can take advantage of the opportunities presented by the increasing use of artificial intelligence?",
+                     "answer": "Workers can take advantage of the opportunities presented by the increasing use of artificial intelligence by developing transferable skills that are in high demand, taking on new challenges and responsibilities, and being open to new experiences and learning opportunities.",
+                     "tips": "Use specific examples to illustrate the potential ways in which workers can take advantage of the opportunities presented by the increasing use of artificial intelligence. Try to convey the potential benefits and drawbacks of each approach."
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

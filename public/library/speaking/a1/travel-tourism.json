@@ -1,0 +1,69 @@
+{
+  "examTitle": "Basic Travel Conversations",
+   "parts": [
+       {
+           "title": "Part 1: Examiner Interview on Personal Travel Experiences",
+           "instructions": "Answer the examiner's questions about your personal travel experiences and daily life.",
+           "content": "Hello! Can you tell me a little about yourself? What do you like to do in your free time?",
+           "questions": [
+               {
+                   "question": "Interview Questions",
+                   "options": [],
+                   "tips": "Be honest and speak clearly about your personal life and experiences.",
+                   "part1Questions": [
+                       {
+                           "question": "What is your name?",
+                           "answer": "My name is [Name].",
+                           "tips": "Say your name clearly and smile."
+                       },
+                       {
+                           "question": "Where are you from?",
+                           "answer": "I am from [City/Country].",
+                           "tips": "Mention your city or country of origin."
+                       },
+                       {
+                           "question": "What do you like to do in your free time?",
+                           "answer": "I like to [hobby] in my free time.",
+                           "tips": "Talk about a simple hobby, like reading or watching movies."
+                       },
+                       {
+                           "question": "Have you traveled to another country?",
+                           "answer": "Yes/No, I have/haven't traveled to another country.",
+                           "tips": "Answer with a simple yes or no, and be prepared to talk about your experience if you have traveled."
+                       },
+                       {
+                           "question": "What is your favorite type of vacation?",
+                           "answer": "My favorite type of vacation is [type of vacation].",
+                           "tips": "Talk about a simple type of vacation, like a beach vacation or a city trip."
+                       },
+                       {
+                           "question": "Do you prefer to travel alone or with friends?",
+                           "answer": "I prefer to travel [alone/with friends].",
+                           "tips": "Answer with a simple preference and be prepared to talk about why you prefer it."
+                       }
+                   ]
+               }
+           ]
+       },
+       {
+           "title": "Part 2: Collaborative Discussion on Travel Plans",
+           "instructions": "Discuss your travel plans with your partner and decide on a destination.",
+           "content": "You and your partner are planning a trip together. Discuss your options and decide on a destination.",
+           "questions": [
+               {
+                   "question": "Where would you like to go on vacation?",
+                   "options": [],
+                   "imagePrompts": [
+                       "A picture of a beautiful beach with palm trees",
+                       "A picture of a bustling city with tall skyscrapers"
+                   ],
+                   "possibleAnswers": [
+                       "I would like to go to the beach.",
+                       "I think we should visit a city.",
+                       "How about we go to a national park?"
+                   ]
+               }
+           ]
+       }
+   ]
+}

@@ -1,0 +1,387 @@
+{
+  "examTitle": "CEFR C2 Listening Exam: Social Media",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Short Interviews on Social Media Impact",
+         "instructions": "Listen to the short interviews and choose the correct answer to each question.",
+         "content": "Interviewer: Welcome to the show, Dr. Lee.\nDr. Lee: Thank you for having me.\nInterviewer: You're a leading expert on social media addiction. Can you explain why people get hooked?\nDr. Lee: Well, social media taps into our brain's reward system, releasing dopamine with every like, comment, and share. It's a never-ending cycle.\nInterviewer: That's fascinating. What can be done to mitigate this?\nDr. Lee: Implementing time limits, tracking usage, and promoting alternative hobbies can help.\nInterviewer: Great insights, Dr. Lee. Thank you for sharing your expertise.",
+         "questions": [
+            {
+               "question": "What triggers the release of dopamine in social media users?",
+               "options": [
+                  "A. Negative feedback",
+                  "B. Positive reinforcement",
+                  "C. Social interactions",
+                  "D. Reward system activation"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. Reward system activation because Dr. Lee explains that social media taps into our brain's reward system, releasing dopamine with every like, comment, and share.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "What is a potential solution to mitigate social media addiction?",
+               "options": [
+                  "A. Increasing screen time",
+                  "B. Implementing time limits",
+                  "C. Reducing social interactions",
+                  "D. Promoting alternative hobbies"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Implementing time limits because Dr. Lee suggests that implementing time limits can help mitigate social media addiction.",
+               "tips": "Listen for the speaker's suggestion on how to reduce social media addiction."
+            },
+            {
+               "question": "What is Dr. Lee's expertise in?",
+               "options": [
+                  "A. Social media marketing",
+                  "B. Social media addiction",
+                  "C. Psychology",
+                  "D. Sociology"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Social media addiction because Dr. Lee is introduced as a leading expert on social media addiction.",
+               "tips": "Pay attention to the introduction of Dr. Lee and their area of expertise."
+            },
+            {
+               "question": "What can be done to help individuals manage their social media usage?",
+               "options": [
+                  "A. Tracking usage",
+                  "B. Implementing time limits",
+                  "C. Promoting alternative hobbies",
+                  "D. All of the above"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. All of the above because Dr. Lee suggests implementing time limits, tracking usage, and promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestions on how to manage social media usage."
+            },
+            {
+               "question": "What is the result of social media tapping into our brain's reward system?",
+               "options": [
+                  "A. Reduced dopamine release",
+                  "B. Increased dopamine release",
+                  "C. No change in dopamine release",
+                  "D. Decreased social interactions"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Increased dopamine release because Dr. Lee explains that social media taps into our brain's reward system, releasing dopamine with every like, comment, and share.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "What can be done to promote alternative activities?",
+               "options": [
+                  "A. Tracking social media usage",
+                  "B. Implementing time limits",
+                  "C. Promoting alternative hobbies",
+                  "D. Reducing social interactions"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. Promoting alternative hobbies because Dr. Lee suggests promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to promote alternative activities."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Sentence Completion on Social Media Impact",
+         "instructions": "Listen to the dialogue and complete the sentences with the correct words.",
+         "content": "Interviewer: Welcome to the show, Dr. Lee.\nDr. Lee: Thank you for having me.\nInterviewer: You're a leading expert on social media addiction. Can you explain why people get hooked?\nDr. Lee: Well, social media taps into our brain's reward system, releasing dopamine with every like, comment, and share. It's a never-ending cycle.\nInterviewer: That's fascinating. What can be done to mitigate this?\nDr. Lee: Implementing time limits, tracking usage, and promoting alternative hobbies can help.",
+         "questions": [
+            {
+               "question": "The main problem is related to (1) _______ in the city center.",
+               "correctOption": "social media",
+               "explanation": "The correct answer is social media because Dr. Lee explains that social media addiction is a problem that affects many people in the city center.",
+               "tips": "Focus on the speaker's explanation of the main problem and its relation to social media."
+            },
+            {
+               "question": "Implementing (1) _______ can help reduce social media addiction.",
+               "correctOption": "time limits",
+               "explanation": "The correct answer is time limits because Dr. Lee suggests that implementing time limits can help reduce social media addiction.",
+               "tips": "Listen for the speaker's suggestion on how to reduce social media addiction."
+            },
+            {
+               "question": "Social media taps into our brain's (1) _______ system.",
+               "correctOption": "reward",
+               "explanation": "The correct answer is reward because Dr. Lee explains that social media taps into our brain's reward system, releasing dopamine with every like, comment, and share.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "Promoting (1) _______ can help individuals manage their social media usage.",
+               "correctOption": "alternative hobbies",
+               "explanation": "The correct answer is alternative hobbies because Dr. Lee suggests promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to promote alternative activities."
+            },
+            {
+               "question": "Social media addiction is a (1) _______ problem.",
+               "correctOption": "serious",
+               "explanation": "The correct answer is serious because Dr. Lee explains that social media addiction is a problem that affects many people.",
+               "tips": "Focus on the speaker's explanation of the main problem and its relation to social media."
+            },
+            {
+               "question": "Dr. Lee is a leading expert on (1) _______ addiction.",
+               "correctOption": "social media",
+               "explanation": "The correct answer is social media because Dr. Lee is introduced as a leading expert on social media addiction.",
+               "tips": "Pay attention to the introduction of Dr. Lee and their area of expertise."
+            },
+            {
+               "question": "Implementing (1) _______ and tracking usage can help individuals manage their social media usage.",
+               "correctOption": "time limits",
+               "explanation": "The correct answer is time limits because Dr. Lee suggests implementing time limits and tracking usage to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestions on how to manage social media usage."
+            },
+            {
+               "question": "Social media affects our (1) _______ in a significant way.",
+               "correctOption": "mental health",
+               "explanation": "The correct answer is mental health because Dr. Lee explains that social media addiction can have a significant impact on our mental health.",
+               "tips": "Focus on the speaker's explanation of the impact of social media on our mental health."
+            },
+            {
+               "question": "Dr. Lee suggests promoting (1) _______ to help individuals manage their social media usage.",
+               "correctOption": "alternative hobbies",
+               "explanation": "The correct answer is alternative hobbies because Dr. Lee suggests promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to promote alternative activities."
+            },
+            {
+               "question": "Social media addiction is a (1) _______ issue.",
+               "correctOption": "complex",
+               "explanation": "The correct answer is complex because Dr. Lee explains that social media addiction is a complex issue that requires a comprehensive solution.",
+               "tips": "Focus on the speaker's explanation of the main problem and its relation to social media."
+            },
+            {
+               "question": "Implementing (1) _______ can help reduce social media addiction and improve mental health.",
+               "correctOption": "time limits",
+               "explanation": "The correct answer is time limits because Dr. Lee suggests that implementing time limits can help reduce social media addiction and improve mental health.",
+               "tips": "Listen for the speaker's suggestion on how to reduce social media addiction and improve mental health."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice Long Interview on Social Media Impact",
+         "instructions": "Listen to the long interview and choose the correct answer to each question.",
+         "content": "Interviewer: Welcome to the show, Dr. Lee.\nDr. Lee: Thank you for having me.\nInterviewer: You're a leading expert on social media addiction. Can you explain why people get hooked?\nDr. Lee: Well, social media taps into our brain's reward system, releasing dopamine with every like, comment, and share. It's a never-ending cycle.\nInterviewer: That's fascinating. What can be done to mitigate this?\nDr. Lee: Implementing time limits, tracking usage, and promoting alternative hobbies can help.\nInterviewer: Great insights, Dr. Lee. Thank you for sharing your expertise.",
+         "questions": [
+            {
+               "question": "What is the main reason why people get hooked on social media?",
+               "options": [
+                  "A. Social media is a source of entertainment",
+                  "B. Social media taps into our brain's reward system",
+                  "C. Social media is a way to connect with friends",
+                  "D. Social media is a tool for productivity"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Social media taps into our brain's reward system because Dr. Lee explains that social media taps into our brain's reward system, releasing dopamine with every like, comment, and share.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "What can be done to mitigate social media addiction?",
+               "options": [
+                  "A. Increasing screen time",
+                  "B. Implementing time limits",
+                  "C. Reducing social interactions",
+                  "D. Promoting alternative hobbies"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Implementing time limits because Dr. Lee suggests that implementing time limits can help mitigate social media addiction.",
+               "tips": "Listen for the speaker's suggestion on how to reduce social media addiction."
+            },
+            {
+               "question": "What is a potential solution to promote alternative activities?",
+               "options": [
+                  "A. Tracking social media usage",
+                  "B. Implementing time limits",
+                  "C. Promoting alternative hobbies",
+                  "D. Reducing social interactions"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. Promoting alternative hobbies because Dr. Lee suggests promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to promote alternative activities."
+            },
+            {
+               "question": "What is Dr. Lee's area of expertise?",
+               "options": [
+                  "A. Social media marketing",
+                  "B. Social media addiction",
+                  "C. Psychology",
+                  "D. Sociology"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Social media addiction because Dr. Lee is introduced as a leading expert on social media addiction.",
+               "tips": "Pay attention to the introduction of Dr. Lee and their area of expertise."
+            },
+            {
+               "question": "What can be done to help individuals manage their social media usage?",
+               "options": [
+                  "A. Tracking usage",
+                  "B. Implementing time limits",
+                  "C. Promoting alternative hobbies",
+                  "D. All of the above"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. All of the above because Dr. Lee suggests implementing time limits, tracking usage, and promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestions on how to manage social media usage."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple Matching on Social Media Impact",
+         "instructions": "Listen to the dialogue and match the speakers' statements to the correct options.",
+         "content": "Speaker 1: Social media addiction is a serious problem that affects many people.\nSpeaker 2: Implementing time limits and tracking usage can help individuals manage their social media usage.\nSpeaker 3: Social media taps into our brain's reward system, releasing dopamine with every like, comment, and share.\nSpeaker 4: Promoting alternative hobbies can help individuals manage their social media usage.",
+         "questions": [
+            {
+               "question": "Which speaker states that social media addiction is a serious problem?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. Speaker 1 because Speaker 1 states that social media addiction is a serious problem that affects many people.",
+               "tips": "Listen for the speaker's statement on social media addiction."
+            },
+            {
+               "question": "Which speaker suggests implementing time limits and tracking usage?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Speaker 2 because Speaker 2 suggests implementing time limits and tracking usage to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to manage social media usage."
+            },
+            {
+               "question": "Which speaker explains that social media taps into our brain's reward system?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. Speaker 3 because Speaker 3 explains that social media taps into our brain's reward system, releasing dopamine with every like, comment, and share.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "Which speaker suggests promoting alternative hobbies?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. Speaker 4 because Speaker 4 suggests promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to promote alternative activities."
+            },
+            {
+               "question": "Which speaker mentions the impact of social media on our brain's reward system?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. Speaker 3 because Speaker 3 mentions the impact of social media on our brain's reward system, releasing dopamine with every like, comment, and share.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "Which speaker suggests that social media addiction is a serious problem?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. Speaker 1 because Speaker 1 states that social media addiction is a serious problem that affects many people.",
+               "tips": "Listen for the speaker's statement on social media addiction."
+            },
+            {
+               "question": "Which speaker mentions the importance of managing social media usage?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Speaker 2 because Speaker 2 mentions the importance of managing social media usage by implementing time limits and tracking usage.",
+               "tips": "Listen for the speaker's suggestion on how to manage social media usage."
+            },
+            {
+               "question": "Which speaker explains that social media can be addictive?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. Speaker 3 because Speaker 3 explains that social media taps into our brain's reward system, releasing dopamine with every like, comment, and share, making it addictive.",
+               "tips": "Focus on the speaker's explanation of the reward system and dopamine release."
+            },
+            {
+               "question": "Which speaker suggests promoting alternative activities to manage social media usage?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. Speaker 4 because Speaker 4 suggests promoting alternative hobbies to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to promote alternative activities."
+            },
+            {
+               "question": "Which speaker mentions the importance of tracking social media usage?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Speaker 2 because Speaker 2 mentions the importance of tracking social media usage to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to manage social media usage."
+            },
+            {
+               "question": "Which speaker explains that social media addiction can have a significant impact on our mental health?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. Speaker 1 because Speaker 1 states that social media addiction is a serious problem that affects many people, implying a significant impact on our mental health.",
+               "tips": "Listen for the speaker's statement on social media addiction."
+            },
+            {
+               "question": "Which speaker suggests that social media addiction is a complex issue?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. Speaker 1 because Speaker 1 states that social media addiction is a serious problem that affects many people, implying a complex issue.",
+               "tips": "Listen for the speaker's statement on social media addiction."
+            },
+            {
+               "question": "Which speaker mentions the importance of implementing time limits?",
+               "options": [
+                  "A. Speaker 1",
+                  "B. Speaker 2",
+                  "C. Speaker 3",
+                  "D. Speaker 4"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. Speaker 2 because Speaker 2 mentions the importance of implementing time limits to help individuals manage their social media usage.",
+               "tips": "Listen for the speaker's suggestion on how to manage social media usage."
+            }
+         ]
+      }
+   ]
+}

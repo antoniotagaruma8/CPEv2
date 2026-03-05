@@ -1776,120 +1776,133 @@ export default function DashboardPage() {
             {/* Generator Column (2/4) */}
             <div id="generator-section" className="lg:col-span-2 bg-white/95 dark:bg-slate-800/95 p-5 md:p-6 rounded-2xl shadow-xl border border-slate-200/60 dark:border-slate-700/60 flex flex-col h-[calc(100vh-140px)] lg:h-[82vh] overflow-y-auto custom-scrollbar transition-colors">
               {/* ── Pre-loaded Exams Library ── */}
-              <div className="flex items-center gap-2.5 mb-3 pb-2 border-b border-slate-200 shrink-0">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600 shrink-0">
-                  <Library className="w-4 h-4" strokeWidth={2.5} />
+              <div className="rounded-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-violet-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-violet-950/30 p-4 border border-blue-100/80 dark:border-blue-900/40 mb-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-lg shadow-blue-500/30 shrink-0">
+                    <Library className="w-5 h-5" strokeWidth={2.5} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-extrabold text-slate-800 dark:text-white leading-tight">Pre-loaded Exams</h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-tight">Instant practice — choose a skill to start</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-slate-800 leading-tight">Pre-loaded Exams</h3>
-                  <p className="text-xs text-slate-500 leading-tight">Choose a skill to browse ready-made practice exams.</p>
-                </div>
-              </div>
 
-              {/* 4 Clean Skill Buttons */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-3 relative z-10">
-                {([
-                  { skill: 'Reading', icon: <BookOpen className="w-5 h-5" />, color: 'blue', locked: false },
-                  { skill: 'Writing', icon: <Edit3 className="w-5 h-5" />, color: 'emerald', locked: false },
-                  { skill: 'Listening', icon: <Headphones className="w-5 h-5" />, color: 'violet', locked: !!(generationInfo && generationInfo.plan === 'free') },
-                  { skill: 'Speaking', icon: <Mic className="w-5 h-5" />, color: 'orange', locked: false },
-                ] as const).map(({ skill, icon, locked }) => (
-                  <button
-                    key={skill}
-                    type="button"
-                    onClick={() => {
-                      if (locked) return;
-                      setLibraryModalSkill(skill);
-                      setLibrarySelectedLevel(null);
-                    }}
-                    className={`flex flex-col items-center justify-center p-3.5 rounded-xl border-2 transition-all relative ${locked ? 'opacity-50 cursor-not-allowed bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50/60 dark:hover:bg-slate-800/80 hover:shadow-sm active:scale-95'}`}
-                  >
-                    {locked && <span className="absolute -top-1.5 -right-1.5 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1 py-0.5 rounded shadow-sm border border-amber-200 tracking-wider">PRO</span>}
-                    <span className="text-slate-400 dark:text-slate-500 mb-1.5">{icon}</span>
-                    <span className="text-[11px] font-bold">{skill}</span>
-                  </button>
-                ))}
+                {/* 4 Color-coded Skill Buttons */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 relative z-10">
+                  {([
+                    { skill: 'Reading', icon: <BookOpen className="w-5 h-5" />, gradient: 'from-blue-500 to-blue-600', hoverGlow: 'hover:shadow-blue-400/40', bg: 'bg-blue-50 dark:bg-blue-950/30', border: 'border-blue-200 dark:border-blue-800', text: 'text-blue-600 dark:text-blue-400', locked: false },
+                    { skill: 'Writing', icon: <Edit3 className="w-5 h-5" />, gradient: 'from-emerald-500 to-green-600', hoverGlow: 'hover:shadow-emerald-400/40', bg: 'bg-emerald-50 dark:bg-emerald-950/30', border: 'border-emerald-200 dark:border-emerald-800', text: 'text-emerald-600 dark:text-emerald-400', locked: false },
+                    { skill: 'Listening', icon: <Headphones className="w-5 h-5" />, gradient: 'from-violet-500 to-purple-600', hoverGlow: 'hover:shadow-violet-400/40', bg: 'bg-violet-50 dark:bg-violet-950/30', border: 'border-violet-200 dark:border-violet-800', text: 'text-violet-600 dark:text-violet-400', locked: !!(generationInfo && generationInfo.plan === 'free') },
+                    { skill: 'Speaking', icon: <Mic className="w-5 h-5" />, gradient: 'from-orange-500 to-amber-600', hoverGlow: 'hover:shadow-orange-400/40', bg: 'bg-orange-50 dark:bg-orange-950/30', border: 'border-orange-200 dark:border-orange-800', text: 'text-orange-600 dark:text-orange-400', locked: false },
+                  ] as const).map(({ skill, icon, gradient, hoverGlow, bg, border, text, locked }) => (
+                    <button
+                      key={skill}
+                      type="button"
+                      onClick={() => {
+                        if (locked) return;
+                        setLibraryModalSkill(skill);
+                        setLibrarySelectedLevel(null);
+                      }}
+                      className={`group flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all duration-300 relative ${locked ? 'opacity-40 cursor-not-allowed bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800' : `${bg} ${border} hover:shadow-lg ${hoverGlow} hover:scale-[1.04] active:scale-95 cursor-pointer`}`}
+                    >
+                      {locked && <span className="absolute -top-1.5 -right-1.5 text-[8px] font-bold uppercase bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full shadow-sm border border-amber-200 tracking-wider">PRO</span>}
+                      <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center text-white shadow-md mb-2 transition-transform duration-300 ${locked ? '' : 'group-hover:scale-110 group-hover:shadow-lg'}`}>
+                        {icon}
+                      </div>
+                      <span className={`text-xs font-bold ${locked ? 'text-slate-400' : text}`}>{skill}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* ── Divider ── */}
-              <div className="flex items-center gap-2 my-3">
-                <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700"></div>
-                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">or create your own</span>
-                <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700"></div>
+              <div className="flex items-center gap-3 my-4">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">or create your own</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                </div>
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
               </div>
 
               {/* ── Custom Generator Form ── */}
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <label htmlFor="examType" className="block text-[11px] font-bold text-slate-600 mb-1">Exam Skill</label>
-                    <select id="examType" value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
-                      <option value="Reading">Reading & Use of English</option>
-                      <option value="Writing">Writing</option>
-                      <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>Listening {generationInfo && generationInfo.plan === 'free' ? '(PRO)' : ''}</option>
-                      <option value="Speaking">Speaking</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 mb-1">Target CEFR Level</label>
-                    <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-md border-slate-300 border p-2 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition shadow-sm">
-                      <option value="A1">A1 Beginner</option>
-                      <option value="A2">A2 Key (KET)</option>
-                      <option value="B1">B1 Preliminary (PET)</option>
-                      <option value="B2">B2 First (FCE)</option>
-                      <option value="C1">C1 Advanced (CAE)</option>
-                      <option value="C2">C2 Proficiency</option>
-                    </select>
-                  </div>
-                </div>
-
-                {isAdmin && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="rounded-xl bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-700/60 p-4">
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label htmlFor="examFor" className="block text-[11px] font-bold text-slate-600 mb-1">Exam for (Class/Group)</label>
-                      <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                      <label htmlFor="examType" className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">Exam Skill</label>
+                      <select id="examType" value={examType} onChange={(e) => setExamType(e.target.value)} className="w-full rounded-lg border-slate-300 dark:border-slate-600 border p-2 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white dark:bg-slate-800 transition shadow-sm">
+                        <option value="Reading">Reading & Use of English</option>
+                        <option value="Writing">Writing</option>
+                        <option value="Listening" disabled={!!(generationInfo && generationInfo.plan === 'free')}>Listening {generationInfo && generationInfo.plan === 'free' ? '(PRO)' : ''}</option>
+                        <option value="Speaking">Speaking</option>
+                      </select>
                     </div>
                     <div>
-                      <label htmlFor="topic" className="block text-[11px] font-bold text-slate-600 mb-1">Topic / Theme {file ? '(Optional)' : ''}</label>
-                      <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
+                      <label htmlFor="cefrLevel" className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">Target CEFR Level</label>
+                      <select id="cefrLevel" value={cefrLevel} onChange={(e) => setCefrLevel(e.target.value)} className="w-full rounded-lg border-slate-300 dark:border-slate-600 border p-2 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white dark:bg-slate-800 transition shadow-sm">
+                        <option value="A1">A1 Beginner</option>
+                        <option value="A2">A2 Key (KET)</option>
+                        <option value="B1">B1 Preliminary (PET)</option>
+                        <option value="B2">B2 First (FCE)</option>
+                        <option value="C1">C1 Advanced (CAE)</option>
+                        <option value="C2">C2 Proficiency</option>
+                      </select>
                     </div>
                   </div>
-                )}
-                {!isAdmin && (
-                  <div>
-                    <label htmlFor="topic" className="block text-[11px] font-bold text-slate-600 mb-1">Topic / Theme {file ? '(Optional)' : ''}</label>
-                    <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-md border-slate-300 border p-1.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-slate-50 transition" />
-                  </div>
-                )}
 
-                {generationInfo && !generationInfo.allowed && generationInfo.plan === 'free' ? (
-                  <button
-                    type="button"
-                    onClick={handleUpgrade}
-                    disabled={isUpgrading}
-                    className="w-full mt-2 py-2.5 px-4 rounded-lg bg-amber-500 hover:bg-amber-600 focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50"
-                  >
-                    {isUpgrading ? 'Redirecting...' : 'Upgrade to Premium — Out of Free Credits'}
-                    <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded ml-1">🔒</span>
-                  </button>
-                ) : (
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className={`w-full mt-2 py-2.5 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all flex flex-col items-center justify-center gap-1 ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}
-                  >
-                    <span>{loading ? 'Generating...' : 'Generate Custom Exam'}</span>
-                    {generationInfo && generationInfo.plan === 'free' && !loading && (
-                      <div className="flex items-center gap-2 bg-black/10 px-2 py-0.5 rounded text-[11px] font-medium border border-white/10">
-                        <span>Free remaining:</span>
-                        <span className={`font-bold text-[12px] bg-white text-slate-900 px-1 rounded shadow-sm`}>
-                          {Math.max(0, generationInfo.limit - generationInfo.count)}
-                        </span>
+                  {isAdmin && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div>
+                        <label htmlFor="examFor" className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">Exam for (Class/Group)</label>
+                        <input type="text" id="examFor" value={examFor} onChange={(e) => setExamFor(e.target.value)} placeholder="e.g., Class 10A, Advanced Group..." className="w-full rounded-lg border-slate-300 dark:border-slate-600 border p-1.5 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white dark:bg-slate-800 transition" />
                       </div>
-                    )}
-                  </button>
-                )}
-              </form>
+                      <div>
+                        <label htmlFor="topic" className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">Topic / Theme {file ? '(Optional)' : ''}</label>
+                        <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 dark:border-slate-600 border p-1.5 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white dark:bg-slate-800 transition" />
+                      </div>
+                    </div>
+                  )}
+                  {!isAdmin && (
+                    <div>
+                      <label htmlFor="topic" className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">Topic / Theme {file ? '(Optional)' : ''}</label>
+                      <input type="text" id="topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., Technology, Climate Change..." className="w-full rounded-lg border-slate-300 dark:border-slate-600 border p-1.5 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white dark:bg-slate-800 transition" />
+                    </div>
+                  )}
+
+                  {generationInfo && !generationInfo.allowed && generationInfo.plan === 'free' ? (
+                    <button
+                      type="button"
+                      onClick={handleUpgrade}
+                      disabled={isUpgrading}
+                      className="w-full mt-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 text-white font-bold text-sm shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                    >
+                      {isUpgrading ? 'Redirecting...' : 'Upgrade to Premium — Out of Free Credits'}
+                      <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded ml-1">🔒</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className={`w-full mt-2 py-3 px-4 rounded-xl text-white font-bold text-sm shadow-lg transition-all flex flex-col items-center justify-center gap-1 ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-700 hover:via-indigo-700 hover:to-blue-800 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-500/30 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 animate-shimmer'}`}
+                      style={!loading ? { backgroundImage: 'linear-gradient(110deg, #2563EB 0%, #4F46E5 25%, #6366F1 50%, #4F46E5 75%, #2563EB 100%)', backgroundSize: '200% auto' } : undefined}
+                    >
+                      <span className="flex items-center gap-2">
+                        {loading ? 'Generating...' : '✨ Generate Custom Exam'}
+                      </span>
+                      {generationInfo && generationInfo.plan === 'free' && !loading && (
+                        <div className="flex items-center gap-2 bg-white/15 px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-white/20 mt-0.5">
+                          <span>Free remaining:</span>
+                          <span className="font-bold text-[12px] bg-white text-indigo-700 px-1.5 rounded-full shadow-sm">
+                            {Math.max(0, generationInfo.limit - generationInfo.count)}
+                          </span>
+                        </div>
+                      )}
+                    </button>
+                  )}
+                </form>
+              </div>
             </div>
 
             {/* Progress Tracking Column (1/4) */}

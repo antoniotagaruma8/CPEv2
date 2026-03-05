@@ -1,0 +1,66 @@
+{
+  "examTitle": "Work & Career: A2 Mock Speaking Exam",
+   "parts": [
+      {
+         "title": "Part 1: Examiner Interview - Personal Questions",
+         "instructions": "The examiner will ask you questions about your personal life, hobbies, and background. Please answer as clearly and concisely as possible.",
+         "content": "Examiner: Hi, let's start with some basic questions about you. Can you tell me a little bit about yourself?",
+         "questions": [
+            {
+               "question": "Interview Questions",
+               "options": [],
+               "tips": "A strategy guide. Answer the questions as clearly and concisely as possible. Use the present simple tense to describe your daily routines and hobbies.",
+               "part1Questions": [
+                  {
+                     "question": "What's your name and how old are you?",
+                     "answer": "My name is John and I'm 25 years old.",
+                     "tips": "Use the present simple tense to describe your age. Use your full name, first name and surname."
+                  },
+                  {
+                     "question": "Where do you live and what do you like about your home?",
+                     "answer": "I live in a small apartment in the city center. I like it because it's close to my work and I have a view of the park.",
+                     "tips": "Use the present simple tense to describe your home. Describe two or three things you like about your home."
+                  },
+                  {
+                     "question": "What do you like to do in your free time?",
+                     "answer": "I like to play football with my friends and watch movies.",
+                     "tips": "Use the present simple tense to describe your hobbies. Name two or three things you like to do in your free time."
+                  },
+                  {
+                     "question": "What's your favorite subject in school and why?",
+                     "answer": "My favorite subject is English because I like to read and write.",
+                     "tips": "Use the present simple tense to describe your favorite subject. Explain why you like it."
+                  },
+                  {
+                     "question": "Do you have any pets and what kind of pets do you have?",
+                     "answer": "Yes, I have a cat named Max. He's a black cat and he's very playful.",
+                     "tips": "Use the present simple tense to describe your pets. Name your pet and describe its characteristics."
+                  },
+                  {
+                     "question": "What are your plans for the future?",
+                     "answer": "I want to go to university and study business.",
+                     "tips": "Use the present simple tense to describe your plans. Name the university you want to attend and the course you want to study."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Collaborative Task - Talking about a Job",
+         "instructions": "You will talk to your partner about a job. Please discuss the following topic: 'A job that interests you'.",
+         "content": {
+            "question": "A job that interests you",
+            "options": [],
+            "imagePrompts": [
+               "An image of a person working as a chef in a busy restaurant.",
+               "An image of a person working as a teacher in a classroom."
+            ],
+            "possibleAnswers": [
+               "I'm interested in working as a chef because I like cooking and trying new foods.",
+               "I think being a teacher would be great because I enjoy helping people learn.",
+               "I'm interested in working as a scientist because I like solving puzzles and discovering new things."
+            ]
+         }
+      }
+   ]
+}
