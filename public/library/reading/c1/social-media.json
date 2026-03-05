@@ -1,0 +1,338 @@
+{
+  "examTitle": "Social Media and Digital Culture - CEFR C1",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Social Media Impact",
+         "content": "The company announced a (1) _______ in their profits today, largely due to a significant (2) _______ in social media advertising. The rise of influencer marketing has led to a (3) _______ in consumer engagement, with many young adults actively seeking out sponsored content. However, critics argue that social media has a (4) _______ effect on mental health, as excessive screen time can lead to (5) _______ and decreased productivity. The company's decision to invest in social media advertising has been met with both (6) _______ and (7) _______ from investors and consumers alike. As the digital landscape continues to (8) _______, it is clear that social media will play an increasingly (9) _______ role in shaping consumer behavior.",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. drop", "B. rise", "C. increase", "D. surge"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. decrease", "B. increase", "C. shift", "D. boost"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. decrease", "B. increase", "C. boost", "D. surge"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. positive", "B. negative", "C. neutral", "D. mixed"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. depression", "B. anxiety", "C. stress", "D. burnout"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. approval", "B. disapproval", "C. enthusiasm", "D. skepticism"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 7",
+               "options": ["A. optimism", "B. pessimism", "C. uncertainty", "D. caution"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 8",
+               "options": ["A. evolve", "B. change", "C. adapt", "D. shift"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 9",
+               "options": ["A. significant", "B. crucial", "C. vital", "D. essential"],
+               "correctOption": "D"
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Social Media and Culture",
+         "content": "The impact of social media on (1) _______ has been a topic of (2) _______ in recent years. While some argue that social media has led to a (3) _______ in diversity and inclusivity, others claim that it has (4) _______ the existing power structures and social hierarchies. Furthermore, social media has created new (5) _______ for marginalized groups to express themselves and connect with others who share similar experiences. However, this has also led to (6) _______ and exclusion, as some individuals and groups are (7) _______ from online platforms due to their views or identities. In conclusion, the relationship between social media and culture is (8) _______ and multifaceted, and requires further (9) _______ to fully understand its implications.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "culture"
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "debate"
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "increase"
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "reinforced"
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "opportunities"
+            },
+            {
+               "question": "Gap 6",
+               "options": [],
+               "correctOption": "tension"
+            },
+            {
+               "question": "Gap 7",
+               "options": [],
+               "correctOption": "excluded"
+            },
+            {
+               "question": "Gap 8",
+               "options": [],
+               "correctOption": "complex"
+            },
+            {
+               "question": "Gap 9",
+               "options": [],
+               "correctOption": "research"
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Social Media and Society",
+         "content": "The (1) _______ of social media on society is a topic of ongoing (2) _______. While some argue that it has led to a (3) _______ in social connections, others claim that it has (4) _______ the existing social structures. Furthermore, social media has (5) _______ new forms of communication and (6) _______ the way we interact with each other. However, this has also led to (7) _______ and (8) _______ in our online behavior. In conclusion, the impact of social media on society is (9) _______ and multifaceted.",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "options": [],
+               "correctOption": "significance"
+            },
+            {
+               "question": "DISCUSSION",
+               "options": [],
+               "correctOption": "discussions"
+            },
+            {
+               "question": "DECREASE",
+               "options": [],
+               "correctOption": "decreased"
+            },
+            {
+               "question": "REINFORCE",
+               "options": [],
+               "correctOption": "reinforced"
+            },
+            {
+               "question": "CREATE",
+               "options": [],
+               "correctOption": "creating"
+            },
+            {
+               "question": "ALTER",
+               "options": [],
+               "correctOption": "altered"
+            },
+            {
+               "question": "NEGATIVE",
+               "options": [],
+               "correctOption": "negatively"
+            },
+            {
+               "question": "POSITIVE",
+               "options": [],
+               "correctOption": "positively"
+            },
+            {
+               "question": "COMPLEX",
+               "options": [],
+               "correctOption": "complexity"
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Keyword Transformations on Social Media",
+         "content": [
+            {
+               "text": "The company's decision to invest in social media advertising has been met with both optimism and pessimism from investors and consumers alike.",
+               "keyWord": "optimism"
+            },
+            {
+               "text": "Social media has created new opportunities for marginalized groups to express themselves and connect with others who share similar experiences.",
+               "keyWord": "opportunities"
+            },
+            {
+               "text": "The impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications.",
+               "keyWord": "complex"
+            },
+            {
+               "text": "The rise of influencer marketing has led to a significant increase in consumer engagement, with many young adults actively seeking out sponsored content.",
+               "keyWord": "increase"
+            },
+            {
+               "text": "The company's decision to invest in social media advertising has been met with both approval and disapproval from investors and consumers alike.",
+               "keyWord": "approval"
+            },
+            {
+               "text": "Social media has led to a decrease in face-to-face interactions and an increase in online behavior.",
+               "keyWord": "decrease"
+            }
+         ],
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+         "questions": [
+            {
+               "question": "The company's decision to invest in social media advertising has been met with both optimism and pessimism from investors and consumers alike.",
+               "keyWord": "optimism",
+               "options": [],
+               "correctOption": "has led to a positive reaction"
+            },
+            {
+               "question": "Social media has created new opportunities for marginalized groups to express themselves and connect with others who share similar experiences.",
+               "keyWord": "opportunities",
+               "options": [],
+               "correctOption": "has provided them with a chance to"
+            },
+            {
+               "question": "The impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications.",
+               "keyWord": "complex",
+               "options": [],
+               "correctOption": "has a multitude of effects"
+            },
+            {
+               "question": "The rise of influencer marketing has led to a significant increase in consumer engagement, with many young adults actively seeking out sponsored content.",
+               "keyWord": "increase",
+               "options": [],
+               "correctOption": "has resulted in a significant rise"
+            },
+            {
+               "question": "The company's decision to invest in social media advertising has been met with both approval and disapproval from investors and consumers alike.",
+               "keyWord": "approval",
+               "options": [],
+               "correctOption": "has received a positive response"
+            },
+            {
+               "question": "Social media has led to a decrease in face-to-face interactions and an increase in online behavior.",
+               "keyWord": "decrease",
+               "options": [],
+               "correctOption": "has resulted in a decline"
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Social Media",
+         "content": "The rise of social media has led to a significant increase in online behavior, with many individuals spending hours scrolling through their feeds. This has resulted in a (1) _______ in face-to-face interactions, as people increasingly prefer to communicate online. Furthermore, social media has created new opportunities for businesses to reach their target audience, with many companies using platforms like Facebook and Instagram to promote their products. However, this has also led to (2) _______ concerns about data privacy and online security, as companies collect and store vast amounts of personal information. In conclusion, the impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications.",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What has been the result of the rise of social media on face-to-face interactions?",
+               "options": ["A. An increase in face-to-face interactions", "B. A decrease in face-to-face interactions", "C. No change in face-to-face interactions", "D. A positive impact on face-to-face interactions"],
+               "correctOption": "B"
+            },
+            {
+               "question": "What are the main concerns about the impact of social media on society?",
+               "options": ["A. The impact on mental health", "B. The impact on physical health", "C. Concerns about data privacy and online security", "D. Concerns about social media addiction"],
+               "correctOption": "C"
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Social Media",
+         "content": "Writer A:\nSocial media has become an integral part of modern life, with billions of people around the world using platforms like Facebook and Instagram. However, this has also led to concerns about data privacy and online security, as companies collect and store vast amounts of personal information.\n\nWriter B:\nThe rise of social media has led to a significant increase in online behavior, with many individuals spending hours scrolling through their feeds. This has resulted in a decrease in face-to-face interactions, as people increasingly prefer to communicate online.\n\nWriter C:\nSocial media has created new opportunities for businesses to reach their target audience, with many companies using platforms like Facebook and Instagram to promote their products. However, this has also led to concerns about the impact of social media on mental health, as excessive screen time can lead to anxiety and depression.\n\nWriter D:\nThe impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications. While social media has many benefits, such as connecting people around the world, it also has many drawbacks, such as spreading misinformation and promoting hate speech.",
+         "instructions": "Read the four texts about the topic. For Questions 1-6, choose from the writers A-D.",
+         "questions": [
+            {
+               "question": "Which writer agrees that social media has led to a decrease in face-to-face interactions?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B"
+            },
+            {
+               "question": "Which writer disagrees with the idea that social media has a positive impact on mental health?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C"
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Gapped Text on Social Media",
+         "content": "The impact of social media on society is a topic of ongoing (1) _______. While some argue that it has led to a (2) _______ in social connections, others claim that it has (3) _______ the existing social structures. Furthermore, social media has (4) _______ new forms of communication and (5) _______ the way we interact with each other. This has led to (6) _______ and (7) _______ in our online behavior. In conclusion, the impact of social media on society is (8) _______ and multifaceted.",
+
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. debate", "B. discussion", "C. argument", "D. controversy", "E. disagreement", "F. discussion", "G. debate"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. increase", "B. decrease", "C. boost", "D. surge", "E. rise", "F. fall", "G. decline"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. reinforced", "B. strengthened", "C. solidified", "D. confirmed", "E. validated", "F. supported", "G. challenged"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. created", "B. developed", "C. established", "D. formed", "E. generated", "F. produced", "G. introduced"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. altered", "B. changed", "C. modified", "D. adapted", "E. adjusted", "F. transformed", "G. reformed"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. tension", "B. conflict", "C. disagreement", "D. argument", "E. dispute", "F. controversy", "G. debate"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 7",
+               "options": ["A. negativity", "B. positivity", "C. optimism", "D. pessimism", "E. enthusiasm", "F. skepticism", "G. uncertainty"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 8",
+               "options": ["A. complex", "B. multifaceted", "C. intricate", "D. complicated", "E. convoluted", "F. confusing", "G. ambiguous"],
+               "correctOption": "A"
+            }
+         ],
+         "removedTexts": [
+            "Writer A:\nSocial media has become an integral part of modern life, with billions of people around the world using platforms like Facebook and Instagram. However, this has also led to concerns about data privacy and online security, as companies collect and store vast amounts of personal information.\n\nWriter B:\nThe rise of social media has led to a significant increase in online behavior, with many individuals spending hours scrolling through their feeds. This has resulted in a decrease in face-to-face interactions, as people increasingly prefer to communicate online.\n\nWriter C:\nSocial media has created new opportunities for businesses to reach their target audience, with many companies using platforms like Facebook and Instagram to promote their products. However, this has also led to concerns about the impact of social media on mental health, as excessive screen time can lead to anxiety and depression.\n\nWriter D:\nThe impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications. While social media has many benefits, such as connecting people around the world, it also has many drawbacks, such as spreading misinformation and promoting hate speech.\n\nWriter E:\nSocial media has led to a significant increase in online harassment, with many individuals experiencing bullying and abuse. This has resulted in a decrease in online engagement, as people become increasingly hesitant to share their thoughts and opinions.\n\nWriter F:\nThe rise of social media has led to a significant increase in the spread of misinformation, with many individuals sharing false information without fact-checking. This has resulted in a decrease in trust in online sources, as people become increasingly skeptical of the information they see.\n\nWriter G:\nSocial media has created new opportunities for marginalized groups to express themselves and connect with others who share similar experiences. However, this has also led to concerns about online safety, as individuals may be vulnerable to harassment and abuse.",
+            "A. Social media has created new opportunities for businesses to reach their target audience, with many companies using platforms like Facebook and Instagram to promote their products. However, this has also led to concerns about the impact of social media on mental health, as excessive screen time can lead to anxiety and depression.",
+            "B. The rise of social media has led to a significant increase in online behavior, with many individuals spending hours scrolling through their feeds. This has resulted in a decrease in face-to-face interactions, as people increasingly prefer to communicate online.",
+            "C. Social media has led to a significant increase in online harassment, with many individuals experiencing bullying and abuse. This has resulted in a decrease in online engagement, as people become increasingly hesitant to share their thoughts and opinions.",
+            "D. The impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications. While social media has many benefits, such as connecting people around the world, it also has many drawbacks, such as spreading misinformation and promoting hate speech.",
+            "E. The rise of social media has led to a significant increase in the spread of misinformation, with many individuals sharing false information without fact-checking. This has resulted in a decrease in trust in online sources, as people become increasingly skeptical of the information they see.",
+            "F. Social media has created new opportunities for marginalized groups to express themselves and connect with others who share similar experiences. However, this has also led to concerns about online safety, as individuals may be vulnerable to harassment and abuse.",
+            "G. Social media has become an integral part of modern life, with billions of people around the world using platforms like Facebook and Instagram. However, this has also led to concerns about data privacy and online security, as companies collect and store vast amounts of personal information."
+         ]
+      },
+      {
+         "title": "Part 8: Multiple Matching on Social Media",
+         "content": "Writer A:\nSocial media has created new opportunities for businesses to reach their target audience, with many companies using platforms like Facebook and Instagram to promote their products. However, this has also led to concerns about the impact of social media on mental health, as excessive screen time can lead to anxiety and depression.\n\nWriter B:\nThe rise of social media has led to a significant increase in online behavior, with many individuals spending hours scrolling through their feeds. This has resulted in a decrease in face-to-face interactions, as people increasingly prefer to communicate online.\n\nWriter C:\nSocial media has led to a significant increase in online harassment, with many individuals experiencing bullying and abuse. This has resulted in a decrease in online engagement, as people become increasingly hesitant to share their thoughts and opinions.\n\nWriter D:\nThe impact of social media on society is complex and multifaceted, and requires further research to fully understand its implications. While social media has many benefits, such as connecting people around the world, it also has many drawbacks, such as spreading misinformation and promoting hate speech.",
+         "instructions": "Read the text. For Questions 1-8, choose from the sections A-D. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which section states that social media has created new opportunities for businesses to reach their target audience?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A"
+            },
+            {
+               "question": "Which section agrees that social media has led to a significant increase in online behavior?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B"
+            }
+         ]
+      }
+   ]
+}

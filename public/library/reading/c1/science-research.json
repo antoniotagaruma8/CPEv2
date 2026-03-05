@@ -1,0 +1,250 @@
+{
+  "examTitle": "Science & Research Advanced Reading & Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Advanced Scientific Research",
+         "content": "The latest breakthrough in materials science has led to the (1) _______ (DEVELOP) of a new, ultra-lightweight alloy with unprecedented strength. This innovation has the potential to revolutionize the aerospace industry, enabling the (2) _______ (DESIGN) of more efficient aircraft and spacecraft. The new alloy is made from a combination of titanium and carbon nanotubes, which are arranged in a (3) _______ (STRUCTURE) that maximizes its strength-to-weight ratio. The team behind the discovery is confident that their research will have a significant impact on the (4) _______ (INDUSTRY) as a whole. They are now working on scaling up production to make the alloy more (5) _______ (AVAILABLE) to manufacturers. The researchers believe that this technology has the potential to transform the (6) _______ (FIELD) of advanced materials. However, they acknowledge that there are still significant challenges to overcome before the alloy can be widely (7) _______ (APPLICATION).",
+         "options": [
+            "A. creating",
+            "B. designing",
+            "C. engineering",
+            "D. producing"
+         ],
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "A. creating",
+               "explanation": "The correct answer is 'creating' because the breakthrough has led to the development of a new, ultra-lightweight alloy. The other options do not accurately describe the process of developing a new material.",
+               "tips": "When faced with a multiple-choice cloze question, carefully read the text and identify the context in which the gap is located. Then, choose the answer that best fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "B. designing",
+               "explanation": "The correct answer is 'designing' because the innovation has the potential to enable the design of more efficient aircraft and spacecraft. The other options do not accurately describe the potential impact of the alloy.",
+               "tips": "When faced with a multiple-choice cloze question, pay attention to the relationships between the words and phrases in the text. Choose the answer that best maintains the coherence of the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "C. structure",
+               "explanation": "The correct answer is 'structure' because the team has arranged the titanium and carbon nanotubes in a specific structure that maximizes the alloy's strength-to-weight ratio. The other options do not accurately describe the arrangement of the materials.",
+               "tips": "When faced with a multiple-choice cloze question, carefully read the text and identify the key words and phrases that provide context for the gap. Choose the answer that best fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "D. industry",
+               "explanation": "The correct answer is 'industry' because the innovation has the potential to impact the industry as a whole. The other options do not accurately describe the scope of the impact.",
+               "tips": "When faced with a multiple-choice cloze question, pay attention to the relationships between the words and phrases in the text. Choose the answer that best maintains the coherence of the sentence."
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "A. available",
+               "explanation": "The correct answer is 'available' because the team is working on scaling up production to make the alloy more available to manufacturers. The other options do not accurately describe the goal of the team.",
+               "tips": "When faced with a multiple-choice cloze question, carefully read the text and identify the context in which the gap is located. Then, choose the answer that best fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "B. field",
+               "explanation": "The correct answer is 'field' because the researchers believe that this technology has the potential to transform the field of advanced materials. The other options do not accurately describe the scope of the impact.",
+               "tips": "When faced with a multiple-choice cloze question, pay attention to the relationships between the words and phrases in the text. Choose the answer that best maintains the coherence of the sentence."
+            },
+            {
+               "question": "Gap 7",
+               "correctOption": "D. application",
+               "explanation": "The correct answer is 'application' because the researchers acknowledge that there are still significant challenges to overcome before the alloy can be widely applied. The other options do not accurately describe the goal of the researchers.",
+               "tips": "When faced with a multiple-choice cloze question, carefully read the text and identify the context in which the gap is located. Then, choose the answer that best fits the meaning of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Advanced Scientific Research",
+         "content": "The latest breakthrough in materials science has led to the development of a new, ultra-lightweight (1) _______ with unprecedented strength. This innovation has the potential to revolutionize the aerospace (2) _______ by enabling the design of more efficient aircraft and spacecraft. The new alloy is made from a combination of titanium and carbon nanotubes, which are arranged in a structure that maximizes its strength-to-weight (3) _______. The team behind the discovery is confident that their research will have a significant impact on the industry as a whole. They are now working on scaling up production to make the alloy more (4) _______ to manufacturers.",
+         "options": [],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "alloy",
+               "explanation": "The correct answer is 'alloy' because the breakthrough has led to the development of a new, ultra-lightweight alloy. The other options do not accurately describe the material.",
+               "tips": "When faced with an open cloze question, carefully read the text and identify the context in which the gap is located. Then, choose the word that best fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "industry",
+               "explanation": "The correct answer is 'industry' because the innovation has the potential to revolutionize the aerospace industry. The other options do not accurately describe the scope of the impact.",
+               "tips": "When faced with an open cloze question, pay attention to the relationships between the words and phrases in the text. Choose the word that best maintains the coherence of the sentence."
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "ratio",
+               "explanation": "The correct answer is 'ratio' because the team has arranged the titanium and carbon nanotubes in a structure that maximizes the alloy's strength-to-weight ratio. The other options do not accurately describe the arrangement of the materials.",
+               "tips": "When faced with an open cloze question, carefully read the text and identify the key words and phrases that provide context for the gap. Choose the word that best fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "availability",
+               "explanation": "The correct answer is 'availability' because the team is working on scaling up production to make the alloy more available to manufacturers. The other options do not accurately describe the goal of the team.",
+               "tips": "When faced with an open cloze question, pay attention to the relationships between the words and phrases in the text. Choose the word that best maintains the coherence of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Advanced Scientific Research",
+         "content": "The latest breakthrough in materials science has led to the (1) _______ (DEVELOP) of a new, ultra-lightweight alloy with unprecedented strength. This innovation has the potential to (2) _______ (REVOLUTIONIZE) the aerospace industry by enabling the design of more efficient aircraft and spacecraft. The new alloy is made from a combination of titanium and carbon nanotubes, which are arranged in a (3) _______ (STRUCTURE) that maximizes its strength-to-weight ratio. The team behind the discovery is confident that their research will have a significant (4) _______ (IMPACT) on the industry as a whole. They are now working on (5) _______ (SCALE) up production to make the alloy more available to manufacturers.",
+         "options": [],
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "correctOption": "significance",
+               "explanation": "The correct answer is 'significance' because the breakthrough has led to the development of a new, ultra-lightweight alloy with unprecedented strength, which has significant implications for the industry.",
+               "tips": "When faced with a word formation question, carefully read the text and identify the context in which the gap is located. Then, use the word given in capitals to form a word that fits the meaning of the sentence."
+            },
+            {
+               "question": "REVOLUTIONIZE",
+               "correctOption": "revolutionization",
+               "explanation": "The correct answer is 'revolutionization' because the innovation has the potential to revolutionize the aerospace industry. The other options do not accurately describe the scope of the impact.",
+               "tips": "When faced with a word formation question, pay attention to the relationships between the words and phrases in the text. Choose the word that best maintains the coherence of the sentence."
+            },
+            {
+               "question": "STRUCTURE",
+               "correctOption": "structuring",
+               "explanation": "The correct answer is 'structuring' because the team has arranged the titanium and carbon nanotubes in a structure that maximizes the alloy's strength-to-weight ratio. The other options do not accurately describe the arrangement of the materials.",
+               "tips": "When faced with a word formation question, carefully read the text and identify the key words and phrases that provide context for the gap. Choose the word that best fits the meaning of the sentence."
+            },
+            {
+               "question": "IMPACT",
+               "correctOption": "impacting",
+               "explanation": "The correct answer is 'impacting' because the team is confident that their research will have a significant impact on the industry as a whole. The other options do not accurately describe the scope of the impact.",
+               "tips": "When faced with a word formation question, pay attention to the relationships between the words and phrases in the text. Choose the word that best maintains the coherence of the sentence."
+            },
+            {
+               "question": "SCALE",
+               "correctOption": "scaling",
+               "explanation": "The correct answer is 'scaling' because the team is working on scaling up production to make the alloy more available to manufacturers. The other options do not accurately describe the goal of the team.",
+               "tips": "When faced with a word formation question, carefully read the text and identify the context in which the gap is located. Then, use the word given in capitals to form a word that fits the meaning of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Advanced Scientific Research",
+         "content": "",
+         "options": [],
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+         "questions": [
+            {
+               "question": "The team behind the discovery is confident that their research will have a significant impact on the industry as a whole.",
+               "keyWord": "impact",
+               "correctOption": "They believe that their findings will make a significant difference to the industry.",
+               "explanation": "The correct answer is 'They believe that their findings will make a significant difference to the industry.' because it has a similar meaning to the first sentence. The word 'impact' is used to describe the effect of the team's research on the industry.",
+               "tips": "When faced with a key word transformation question, carefully read the first sentence and identify the word that needs to be used in the second sentence. Then, choose the answer that has a similar meaning to the first sentence."
+            },
+            {
+               "question": "The researchers are working on scaling up production to make the alloy more available to manufacturers.",
+               "keyWord": "scale",
+               "correctOption": "They are aiming to increase production to make the alloy more widely available.",
+               "explanation": "The correct answer is 'They are aiming to increase production to make the alloy more widely available.' because it has a similar meaning to the first sentence. The word 'scale' is used to describe the process of increasing production.",
+               "tips": "When faced with a key word transformation question, pay attention to the relationships between the words and phrases in the text. Choose the answer that best maintains the coherence of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Advanced Scientific Research",
+         "content": "The latest breakthrough in materials science has led to the development of a new, ultra-lightweight alloy with unprecedented strength. This innovation has the potential to revolutionize the aerospace industry by enabling the design of more efficient aircraft and spacecraft. The new alloy is made from a combination of titanium and carbon nanotubes, which are arranged in a structure that maximizes its strength-to-weight ratio. The team behind the discovery is confident that their research will have a significant impact on the industry as a whole. They are now working on scaling up production to make the alloy more available to manufacturers. The researchers believe that this technology has the potential to transform the field of advanced materials. However, they acknowledge that there are still significant challenges to overcome before the alloy can be widely applied.",
+         "options": [
+            "A. The team behind the discovery is confident that their research will have a significant impact on the industry as a whole.",
+            "B. The researchers believe that this technology has the potential to transform the field of advanced materials.",
+            "C. The new alloy is made from a combination of titanium and carbon nanotubes.",
+            "D. The team is working on scaling up production to make the alloy more available to manufacturers."
+         ],
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the text suggest about the impact of the new alloy on the industry?",
+               "correctOption": "A. The team behind the discovery is confident that their research will have a significant impact on the industry as a whole.",
+               "explanation": "The correct answer is 'A. The team behind the discovery is confident that their research will have a significant impact on the industry as a whole.' because the text states that the team is confident that their research will have a significant impact on the industry.",
+               "tips": "When faced with a multiple-choice reading comprehension question, carefully read the text and identify the answer that best fits the meaning of the question."
+            },
+            {
+               "question": "What does the text suggest about the potential of the new alloy?",
+               "correctOption": "B. The researchers believe that this technology has the potential to transform the field of advanced materials.",
+               "explanation": "The correct answer is 'B. The researchers believe that this technology has the potential to transform the field of advanced materials.' because the text states that the researchers believe that this technology has the potential to transform the field of advanced materials.",
+               "tips": "When faced with a multiple-choice reading comprehension question, pay attention to the relationships between the words and phrases in the text. Choose the answer that best maintains the coherence of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Advanced Scientific Research",
+         "content": "Writer A: The latest breakthrough in materials science has led to the development of a new, ultra-lightweight alloy with unprecedented strength. This innovation has the potential to revolutionize the aerospace industry by enabling the design of more efficient aircraft and spacecraft. The new alloy is made from a combination of titanium and carbon nanotubes, which are arranged in a structure that maximizes its strength-to-weight ratio.\n\nWriter B: The researchers believe that this technology has the potential to transform the field of advanced materials. However, they acknowledge that there are still significant challenges to overcome before the alloy can be widely applied. The team is working on scaling up production to make the alloy more available to manufacturers.\n\nWriter C: The new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft. The results have been promising, with the alloy showing significant improvements in strength and durability.\n\nWriter D: The industry is watching the development of this new alloy with great interest. The potential for this technology to transform the field of advanced materials is undeniable.",
+         "options": [
+            "A. Writer A",
+            "B. Writer B",
+            "C. Writer C",
+            "D. Writer D"
+         ],
+         "instructions": "Read the four texts about the topic. For Questions 1-6, choose from the writers A-D.",
+         "questions": [
+            {
+               "question": "Which writer states that the new alloy has the potential to transform the field of advanced materials?",
+               "correctOption": "A. Writer A",
+               "explanation": "The correct answer is 'A. Writer A' because the text states that the researchers believe that this technology has the potential to transform the field of advanced materials.",
+               "tips": "When faced with a cross-text multiple matching question, carefully read the texts and identify the answer that best fits the meaning of the question."
+            },
+            {
+               "question": "Which writer states that the team is working on scaling up production to make the alloy more available to manufacturers?",
+               "correctOption": "B. Writer B",
+               "explanation": "The correct answer is 'B. Writer B' because the text states that the team is working on scaling up production to make the alloy more available to manufacturers.",
+               "tips": "When faced with a cross-text multiple matching question, pay attention to the relationships between the words and phrases in the texts. Choose the answer that best maintains the coherence of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Gapped Text on Advanced Scientific Research",
+         "content": "The latest breakthrough in materials science has led to the development of a new, ultra-lightweight [Gap 1] with unprecedented strength. This innovation has the potential to [Gap 2] the aerospace industry by enabling the design of more efficient aircraft and spacecraft. The new [Gap 3] is made from a combination of titanium and carbon nanotubes, which are arranged in a structure that maximizes its strength-to-weight ratio. The team behind the discovery is confident that their research will have a [Gap 4] impact on the industry as a whole. They are now working on [Gap 5] up production to make the alloy more available to manufacturers. The researchers believe that this technology has the potential to [Gap 6] the field of advanced materials. However, they acknowledge that there are still significant challenges to [Gap 7] before the alloy can be widely applied.\n\nA. alloy\nB. revolutionize\nC. structure\nD. industry\nE. scaling\nF. impact\nG. transform\n\nH. overcome",
+         "options": [
+            "A. alloy",
+            "B. revolutionize",
+            "C. structure",
+            "D. industry",
+            "E. scaling",
+            "F. impact",
+            "G. transform",
+            "H. overcome"
+         ],
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-H the one which fits each gap. There is one extra paragraph which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "A. alloy",
+               "explanation": "The correct answer is 'A. alloy' because the text states that the breakthrough has led to the development of a new, ultra-lightweight alloy.",
+               "tips": "When faced with a gapped text question, carefully read the text and identify the context in which the gap is located. Then, choose the answer that best fits the meaning of the sentence."
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "B. revolutionize",
+               "explanation": "The correct answer is 'B. revolutionize' because the text states that the innovation has the potential to revolutionize the aerospace industry.",
+               "tips": "When faced with a gapped text question, pay attention to the relationships between the words and phrases in the text. Choose the answer that best maintains the coherence of the sentence."
+            }
+         ]
+      },
+      {
+         "title": "Part 8: Multiple Matching on Advanced Scientific Research",
+         "content": "The new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft. The results have been promising, with the alloy showing significant improvements in strength and durability. The alloy has also been found to have excellent resistance to corrosion and heat. The industry is watching the development of this new alloy with great interest. The potential for this technology to transform the field of advanced materials is undeniable. The researchers believe that this technology has the potential to make a significant impact on the industry as a whole.\n\nA. The new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft.\nB. The alloy has also been found to have excellent resistance to corrosion and heat.\nC. The industry is watching the development of this new alloy with great interest.\nD. The researchers believe that this technology has the potential to make a significant impact on the industry as a whole.",
+         "options": [
+            "A. The new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft.",
+            "B. The alloy has also been found to have excellent resistance to corrosion and heat.",
+            "C. The industry is watching the development of this new alloy with great interest.",
+            "D. The researchers believe that this technology has the potential to make a significant impact on the industry as a whole."
+         ],
+         "instructions": "Read the text. For Questions 1-8, choose from the sections A-D. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text states that the new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft?",
+               "correctOption": "A. The new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft.",
+               "explanation": "The correct answer is 'A. The new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft.' because the text states that the new alloy has been tested in a variety of applications, including the production of aircraft and spacecraft.",
+               "tips": "When faced with a multiple matching question, carefully read the text and identify the answer that best fits the meaning of the question."
+            }
+         ]
+      }
+   ]
+}

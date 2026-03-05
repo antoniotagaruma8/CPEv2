@@ -1,0 +1,217 @@
+{
+  "examTitle": "Hobbies & Leisure C1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Travel",
+         "type": "Multiple-Choice Cloze",
+         "content": "The city's rich cultural heritage and vibrant atmosphere make it a popular (1) _______ destination for tourists. From the stunning architecture to the mouth-watering cuisine, visitors are spoiled for choice. The city's (2) _______ network is also one of the best in the world, making it easy to get around. Whether you're looking for relaxation or adventure, this city has something for everyone.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. holiday", "B. vacation", "C. destination", "D. travel"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'holiday' because it is the most suitable word to describe a place that people visit for leisure. The other options, while related to travel, do not fit as well in this context.",
+               "tips": "When faced with a multiple-choice cloze question, read the text carefully and identify the context. In this case, the text is talking about a popular destination, so the correct answer should reflect that."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. comprehensive", "B. extensive", "C. efficient", "D. reliable"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'extensive' because it describes the network as being fully developed and covering a wide area. The other options do not quite fit, as 'comprehensive' implies a more thorough or detailed network, 'efficient' suggests a network that is well-run but not necessarily extensive, and 'reliable' implies a network that is trustworthy but not necessarily extensive.",
+               "tips": "When faced with a multiple-choice cloze question, pay attention to the connotations of each option. In this case, 'extensive' has a positive connotation, implying a network that is well-developed and fully functional."
+            }
+         ],
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap."
+      },
+      {
+         "title": "Part 2: Open Cloze on Leisure Activities",
+         "type": "Open Cloze",
+         "content": "Many people enjoy (1) _______ in their free time, whether it's reading a book, watching a movie, or playing a sport. However, others may prefer to (2) _______ and explore new places. Some individuals may also enjoy (3) _______ a hobby, such as painting or playing music.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "engaging in",
+               "explanation": "The correct answer is 'engaging in' because it is the most suitable word to describe the activity of participating in leisure activities. The other options, while related to leisure, do not quite fit.",
+               "tips": "When faced with an open cloze question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "traveling",
+               "explanation": "The correct answer is 'traveling' because it is the most suitable word to describe the activity of exploring new places. The other options do not quite fit, as 'relaxing' implies a state of being calm, 'exercising' suggests physical activity, and 'working' implies a productive activity.",
+               "tips": "When faced with an open cloze question, pay attention to the context and the connotations of each option. In this case, 'traveling' has a positive connotation, implying a fun and exciting activity."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "pursuing",
+               "explanation": "The correct answer is 'pursuing' because it is the most suitable word to describe the activity of cultivating a hobby. The other options do not quite fit, as 'developing' implies growth or improvement, 'practicing' suggests repetition or routine, and 'mastering' implies expertise or skill.",
+               "tips": "When faced with an open cloze question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            }
+         ],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap."
+      },
+      {
+         "title": "Part 3: Word Formation on Hobbies",
+         "type": "Word Formation",
+         "content": "Many people (1) _______ (ENJOY) playing musical instruments in their free time. Some prefer (2) _______ (EXERCISE) regularly to stay healthy, while others like (3) _______ (READ) books to relax. A few individuals (4) _______ (COLLABORATE) with others to create art or music.",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "options": [],
+               "correctOption": "significance",
+               "explanation": "The correct answer is 'significance' because it is the most suitable word to describe the importance or meaning of something. The other options do not quite fit, as 'signifier' implies a word or symbol that conveys meaning, 'signify' is a verb that means to indicate or show something, and 'signification' implies a process of assigning meaning.",
+               "tips": "When faced with a word formation question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "EXERCISE",
+               "options": [],
+               "correctOption": "exercising",
+               "explanation": "The correct answer is 'exercising' because it is the most suitable word to describe the activity of engaging in physical activity. The other options do not quite fit, as 'exercise' is a noun that refers to physical activity, and 'exercising' implies a repetitive or routine activity.",
+               "tips": "When faced with a word formation question, pay attention to the connotations of each option. In this case, 'exercising' has a positive connotation, implying a fun and beneficial activity."
+            },
+            {
+               "question": "READ",
+               "options": [],
+               "correctOption": "reading",
+               "explanation": "The correct answer is 'reading' because it is the most suitable word to describe the activity of engaging with written material. The other options do not quite fit, as 'reader' implies a person who reads, and 'read' is a verb that means to interpret written material.",
+               "tips": "When faced with a word formation question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "COLLABORATE",
+               "options": [],
+               "correctOption": "collaborating",
+               "explanation": "The correct answer is 'collaborating' because it is the most suitable word to describe the activity of working together with others. The other options do not quite fit, as 'collaboration' implies a process of working together, and 'collaborate' is a verb that means to work together.",
+               "tips": "When faced with a word formation question, pay attention to the connotations of each option. In this case, 'collaborating' has a positive connotation, implying a fun and productive activity."
+            }
+         ],
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line."
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Hobbies",
+         "type": "Key Word Transformations",
+         "content": [
+            {
+               "question": "Many people enjoy (1) _______ in their free time.",
+               "keyWord": "enjoy",
+               "options": [],
+               "correctOption": "engaging in",
+               "explanation": "The correct answer is 'engaging in' because it is the most suitable word to describe the activity of participating in leisure activities. The other options do not quite fit, as 'enjoying' implies a state of being happy or content, and 'to enjoy' is a phrase that means to take pleasure in something.",
+               "tips": "When faced with a key word transformation question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "Some individuals (1) _______ with others to create art or music.",
+               "keyWord": "collaborate",
+               "options": [],
+               "correctOption": "are collaborating",
+               "explanation": "The correct answer is 'are collaborating' because it is the most suitable word to describe the activity of working together with others. The other options do not quite fit, as 'collaboration' implies a process of working together, and 'collaborate' is a verb that means to work together.",
+               "tips": "When faced with a key word transformation question, pay attention to the connotations of each option. In this case, 'are collaborating' has a positive connotation, implying a fun and productive activity."
+            }
+         ],
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given."
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Hobbies",
+         "type": "Multiple-Choice Reading Comprehension",
+         "content": "Many people enjoy playing musical instruments in their free time. Some prefer to read books or watch movies to relax. Others like to engage in physical activity, such as playing sports or going to the gym. A few individuals even (1) _______ with others to create art or music. This can be a fun and rewarding experience.",
+         "questions": [
+            {
+               "question": "What do some people prefer to do to relax?",
+               "options": ["A. Play musical instruments", "B. Read books or watch movies", "C. Engage in physical activity", "D. Collaborate with others"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. Read books or watch movies' because the text states that some people prefer to read books or watch movies to relax.",
+               "tips": "When faced with a multiple-choice reading comprehension question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "What do a few individuals do with others?",
+               "options": ["A. Play musical instruments", "B. Read books or watch movies", "C. Engage in physical activity", "D. Collaborate with others"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D. Collaborate with others' because the text states that a few individuals even collaborate with others to create art or music.",
+               "tips": "When faced with a multiple-choice reading comprehension question, pay attention to the connotations of each option. In this case, 'collaborate with others' has a positive connotation, implying a fun and productive activity."
+            }
+         ],
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D."
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Hobbies",
+         "type": "Cross-Text Multiple Matching",
+         "content": "Writer A:\nMany people enjoy playing musical instruments in their free time. Some prefer to read books or watch movies to relax. Others like to engage in physical activity, such as playing sports or going to the gym. A few individuals even collaborate with others to create art or music.\n\nWriter B:\nSome people find pleasure in reading books or watching movies. Others prefer to engage in physical activity, such as playing sports or going to the gym. However, a few individuals may find it more enjoyable to collaborate with others to create art or music.\n\nWriter C:\nPlaying musical instruments can be a fun and rewarding experience. Some people prefer to read books or watch movies to relax. Others like to engage in physical activity, such as playing sports or going to the gym. A few individuals even collaborate with others to create art or music.\n\nWriter D:\nSome individuals prefer to engage in physical activity, such as playing sports or going to the gym. Others find pleasure in reading books or watching movies. A few individuals even collaborate with others to create art or music.",
+         "questions": [
+            {
+               "question": "Which writer shares a similar view with Writer A?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because Writer C shares a similar view with Writer A, stating that playing musical instruments can be a fun and rewarding experience.",
+               "tips": "When faced with a cross-text multiple matching question, read the texts carefully and identify the context. In this case, the texts are talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "Which writer disagrees with Writer A?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because Writer B disagrees with Writer A, stating that some people find it more enjoyable to collaborate with others to create art or music.",
+               "tips": "When faced with a cross-text multiple matching question, pay attention to the connotations of each option. In this case, 'disagrees' implies a difference of opinion or perspective."
+            }
+         ],
+         "instructions": "Read the four texts about the topic. For Questions X-X, choose from the writers A-D."
+      },
+      {
+         "title": "Part 7: Gapped Text on Hobbies",
+         "type": "Gapped Text",
+         "content": "Many people enjoy playing musical instruments in their free time. Some (1) _______ (A. prefer to read books or watch movies to relax, B. enjoy playing musical instruments, C. engage in physical activity, D. collaborate with others) to create art or music. Others like (2) _______ (A. play sports or go to the gym, B. read books or watch movies, C. engage in physical activity, D. collaborate with others) to relax. A few individuals even (3) _______ (A. prefer to read books or watch movies, B. enjoy playing musical instruments, C. engage in physical activity, D. collaborate with others) with others to create art or music. This can be a fun and rewarding experience.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. prefer to read books or watch movies to relax", "B. enjoy playing musical instruments", "C. engage in physical activity", "D. collaborate with others"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. enjoy playing musical instruments' because the text states that some people enjoy playing musical instruments in their free time.",
+               "tips": "When faced with a gapped text question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. play sports or go to the gym", "B. read books or watch movies", "C. engage in physical activity", "D. collaborate with others"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. read books or watch movies' because the text states that some people prefer to read books or watch movies to relax.",
+               "tips": "When faced with a gapped text question, pay attention to the connotations of each option. In this case, 'read books or watch movies' has a positive connotation, implying a fun and relaxing activity."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. prefer to read books or watch movies", "B. enjoy playing musical instruments", "C. engage in physical activity", "D. collaborate with others"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D. collaborate with others' because the text states that a few individuals even collaborate with others to create art or music.",
+               "tips": "When faced with a gapped text question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            }
+         ],
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use."
+      },
+      {
+         "title": "Part 8: Multiple Matching on Hobbies",
+         "type": "Multiple Matching",
+         "content": "Writer A: Many people enjoy playing musical instruments in their free time. Some prefer to read books or watch movies to relax. Others like to engage in physical activity, such as playing sports or going to the gym. A few individuals even collaborate with others to create art or music. This can be a fun and rewarding experience. (1) _______ (A. playing musical instruments, B. reading books or watching movies, C. engaging in physical activity, D. collaborating with others) is a great way to express oneself creatively. (2) _______ (A. reading books or watching movies, B. playing musical instruments, C. engaging in physical activity, D. collaborating with others) can be a good way to relax and unwind. (3) _______ (A. collaborating with others, B. playing musical instruments, C. reading books or watching movies, D. engaging in physical activity) can be a fun and social activity.",
+         "questions": [
+            {
+               "question": "Which activity is a great way to express oneself creatively?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A. playing musical instruments' because the text states that many people enjoy playing musical instruments in their free time, and it is a great way to express oneself creatively.",
+               "tips": "When faced with a multiple matching question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            },
+            {
+               "question": "Which activity can be a good way to relax and unwind?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B. reading books or watching movies' because the text states that some people prefer to read books or watch movies to relax.",
+               "tips": "When faced with a multiple matching question, pay attention to the connotations of each option. In this case, 'reading books or watching movies' has a positive connotation, implying a fun and relaxing activity."
+            },
+            {
+               "question": "Which activity can be a fun and social activity?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D. collaborating with others' because the text states that a few individuals even collaborate with others to create art or music, and it can be a fun and social activity.",
+               "tips": "When faced with a multiple matching question, read the text carefully and identify the context. In this case, the text is talking about leisure activities, so the correct answer should reflect that."
+            }
+         ],
+         "instructions": "Read the text. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once."
+      }
+   ]
+}

@@ -1,0 +1,188 @@
+{
+  "examTitle": "Arts & Culture: Advanced Reading & Use of English",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Art and Identity",
+         "instructions": "Read the text below and decide which answer (A, B, C or D) best fits each gap.",
+         "content": "The (1) _______ (EXPLORE) of one's cultural heritage is a complex and multifaceted process. It involves not only discovering one's roots but also coming to terms with the social, economic, and political context in which they were formed. In the case of the African diaspora, this process is often marked by a sense of disconnection and fragmentation. The (2) _______ (DISRUPT) of traditional cultural practices and the imposition of colonial values have led to a loss of cultural identity and a sense of dislocation. However, this has also created opportunities for the (3) _______ (REIMAGINE) of traditional practices and the creation of new forms of cultural expression.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. Explore the depths of one's cultural heritage", "B. Discover the richness of one's cultural roots", "C. Examine the complexities of cultural identity", "D. Investigate the impact of colonialism on cultural practices"],
+               "correctOption": "C",
+               "explanation": "The correct option is C because it accurately reflects the complexity of exploring one's cultural heritage. Option A is too narrow and focuses on the surface level, while Option B is too simplistic and doesn't capture the nuances of cultural identity. Option D is also incorrect because it focuses on the negative impact of colonialism rather than the complexities of cultural identity.",
+               "tips": "When approaching this question, consider the context of the passage and the meaning of the word 'explore'. Think about how the word is used in different situations and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. The disruption of traditional cultural practices", "B. The fragmentation of cultural identity", "C. The reimagining of traditional practices", "D. The imposition of colonial values"],
+               "correctOption": "A",
+               "explanation": "The correct option is A because it accurately reflects the meaning of the word 'disrupt'. Option B is incorrect because it's too broad and doesn't capture the specific meaning of the word. Option C is also incorrect because it's the opposite of the word 'disrupt'. Option D is incorrect because it's the cause of the disruption rather than the disruption itself.",
+               "tips": "When approaching this question, consider the meaning of the word 'disrupt' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. To recreate traditional cultural practices", "B. To create new forms of cultural expression", "C. To reimagine traditional cultural practices", "D. To disrupt traditional cultural practices"],
+               "correctOption": "C",
+               "explanation": "The correct option is C because it accurately reflects the meaning of the word 'reimagine'. Option A is incorrect because it's too broad and doesn't capture the specific meaning of the word. Option B is also incorrect because it's too general and doesn't reflect the meaning of the word. Option D is incorrect because it's the opposite of the word 'reimagine'.",
+               "tips": "When approaching this question, consider the meaning of the word 'reimagine' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Art and Technology",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The (1) _______ (INTEGRATE) of technology into the art world has led to a range of new artistic possibilities. For example, digital art has allowed artists to create complex and intricate pieces that would be impossible to produce by hand. Additionally, the (2) _______ (ENABLE) of digital tools has enabled artists to experiment with new forms of expression and to push the boundaries of what is possible in the art world.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "integrated",
+               "explanation": "The correct option is integrated because it accurately reflects the meaning of the word. The passage suggests that technology has been integrated into the art world, allowing for new artistic possibilities.",
+               "tips": "When approaching this question, consider the meaning of the word 'integrate' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "enabled",
+               "explanation": "The correct option is enabled because it accurately reflects the meaning of the word. The passage suggests that digital tools have enabled artists to experiment with new forms of expression.",
+               "tips": "When approaching this question, consider the meaning of the word 'enable' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Art and Culture",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "content": "The (1) _______ (SIGNIFY) of this painting is not immediately apparent. It is (2) _______ (SUBTLE) in its use of color and composition. However, upon closer inspection, it becomes (3) _______ (OBSERVE) that the painting is actually a critique of the social and economic conditions of the time.",
+         "questions": [
+            {
+               "question": "SIGNIFY",
+               "options": [],
+               "correctOption": "significance",
+               "explanation": "The correct option is significance because it accurately reflects the meaning of the word. The passage suggests that the painting has significance, and that it is not immediately apparent.",
+               "tips": "When approaching this question, consider the meaning of the word 'signify' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "SUBTLE",
+               "options": [],
+               "correctOption": "subtlety",
+               "explanation": "The correct option is subtlety because it accurately reflects the meaning of the word. The passage suggests that the painting is subtle in its use of color and composition.",
+               "tips": "When approaching this question, consider the meaning of the word 'subtle' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "OBSERVE",
+               "options": [],
+               "correctOption": "observation",
+               "explanation": "The correct option is observation because it accurately reflects the meaning of the word. The passage suggests that the painting is observable, and that it can be observed more closely.",
+               "tips": "When approaching this question, consider the meaning of the word 'observe' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Art and Culture",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+         "content": [
+            {
+               "question": "The museum's collection of modern art is unparalleled in its scope and diversity.",
+               "keyWord": "unparalleled",
+               "options": [],
+               "correctOption": "has no equal in terms of scope and diversity",
+               "explanation": "The correct option is has no equal in terms of scope and diversity because it accurately reflects the meaning of the word. The passage suggests that the museum's collection is unparalleled, and that it is unmatched in its scope and diversity.",
+               "tips": "When approaching this question, consider the meaning of the word 'unparalleled' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "The artist's use of color is a key element of her style.",
+               "keyWord": "element",
+               "options": [],
+               "correctOption": "a crucial part of her artistic technique",
+               "explanation": "The correct option is a crucial part of her artistic technique because it accurately reflects the meaning of the word. The passage suggests that the artist's use of color is an element of her style, and that it is a key part of her artistic technique.",
+               "tips": "When approaching this question, consider the meaning of the word 'element' and how it's used in different situations. Think about how the word is related to the context of the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Art and Culture",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The art world has undergone significant changes in recent years. One of the most notable changes has been the rise of digital art. Digital art has allowed artists to create complex and intricate pieces that would be impossible to produce by hand. Additionally, the use of digital tools has enabled artists to experiment with new forms of expression and to push the boundaries of what is possible in the art world.",
+         "questions": [
+            {
+               "question": "What has been one of the most notable changes in the art world in recent years?",
+               "options": ["A. The rise of digital art", "B. The decline of traditional art forms", "C. The increase in art sales", "D. The decrease in art market value"],
+               "correctOption": "A",
+               "explanation": "The correct option is A because it accurately reflects the information in the passage. The passage suggests that the rise of digital art has been a significant change in the art world.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "What has enabled artists to experiment with new forms of expression?",
+               "options": ["A. The use of digital tools", "B. The rise of digital art", "C. The increase in art sales", "D. The decrease in art market value"],
+               "correctOption": "A",
+               "explanation": "The correct option is A because it accurately reflects the information in the passage. The passage suggests that the use of digital tools has enabled artists to experiment with new forms of expression.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Cross-Text Multiple Matching on Art and Culture",
+         "instructions": "Read the four texts about the topic. For Questions X-X, choose from the writers A-D.",
+         "content": "Writer A:\nThe art world has undergone significant changes in recent years. One of the most notable changes has been the rise of digital art. Digital art has allowed artists to create complex and intricate pieces that would be impossible to produce by hand.\n\nWriter B:\nThe use of digital tools has enabled artists to experiment with new forms of expression and to push the boundaries of what is possible in the art world. However, some critics argue that digital art lacks the aesthetic appeal of traditional art forms.\n\nWriter C:\nThe art market has seen a significant increase in sales in recent years. This has led to an increase in the value of art pieces, making them more desirable to collectors.\n\nWriter D:\nThe rise of digital art has also led to an increase in the number of art galleries and museums. This has provided more opportunities for artists to showcase their work and for collectors to purchase art pieces.",
+         "questions": [
+            {
+               "question": "Which writer agrees with the statement that digital art lacks aesthetic appeal?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct option is B because it accurately reflects the information in the passage. Writer B suggests that digital art lacks aesthetic appeal.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Which writer disagrees with the statement that the art market has seen a significant increase in sales?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct option is C because it accurately reflects the information in the passage. Writer C suggests that the art market has seen a significant increase in sales.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Gapped Text on Art and Culture",
+         "instructions": "Six paragraphs have been removed from the text. Choose from the paragraphs A-G the one which fits each gap. There is one extra paragraph which you do not need to use.",
+         "content": "The art world has undergone significant changes in recent years. One of the most notable changes has been the rise of digital art. Digital art has allowed artists to create complex and intricate pieces that would be impossible to produce by hand. [Gap 1]\nThe use of digital tools has enabled artists to experiment with new forms of expression and to push the boundaries of what is possible in the art world. However, some critics argue that digital art lacks the aesthetic appeal of traditional art forms. [Gap 2]\nThe art market has seen a significant increase in sales in recent years. This has led to an increase in the value of art pieces, making them more desirable to collectors. [Gap 3]\nThe rise of digital art has also led to an increase in the number of art galleries and museums. This has provided more opportunities for artists to showcase their work and for collectors to purchase art pieces. [Gap 4]\nThe art world is now more diverse and inclusive than ever before. Artists from all over the world are now able to showcase their work and connect with other artists and collectors. [Gap 5]\nHowever, some critics argue that the art world is becoming too commercialized and that the focus is now on making money rather than creating art. [Gap 6]\nThe art world will continue to evolve and change in the future. It is impossible to predict what the future holds, but one thing is certain: the art world will continue to be a dynamic and exciting place. [Gap 7]",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. The use of digital tools has enabled artists to experiment with new forms of expression", "B. The art market has seen a significant increase in sales", "C. The rise of digital art has also led to an increase in the number of art galleries and museums", "D. The art world is now more diverse and inclusive than ever before", "E. However, some critics argue that the art world is becoming too commercialized", "F. The art world will continue to evolve and change in the future", "G. Artists from all over the world are now able to showcase their work"],
+               "correctOption": "A",
+               "explanation": "The correct option is A because it accurately reflects the information in the passage. The passage suggests that the use of digital tools has enabled artists to experiment with new forms of expression.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. The use of digital tools has enabled artists to experiment with new forms of expression", "B. The art market has seen a significant increase in sales", "C. The rise of digital art has also led to an increase in the number of art galleries and museums", "D. The art world is now more diverse and inclusive than ever before", "E. However, some critics argue that the art world is becoming too commercialized", "F. The art world will continue to evolve and change in the future", "G. Artists from all over the world are now able to showcase their work"],
+               "correctOption": "B",
+               "explanation": "The correct option is B because it accurately reflects the information in the passage. The passage suggests that some critics argue that digital art lacks aesthetic appeal.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            }
+         ]
+      },
+      {
+         "title": "Part 8: Multiple Matching on Art and Culture",
+         "instructions": "Read the text. For Questions X-X, choose from the sections A-D. Each section may be chosen more than once.",
+         "content": "Section A:\nThe art world has undergone significant changes in recent years. One of the most notable changes has been the rise of digital art. Digital art has allowed artists to create complex and intricate pieces that would be impossible to produce by hand.\n\nSection B:\nThe use of digital tools has enabled artists to experiment with new forms of expression and to push the boundaries of what is possible in the art world. However, some critics argue that digital art lacks the aesthetic appeal of traditional art forms.\n\nSection C:\nThe art market has seen a significant increase in sales in recent years. This has led to an increase in the value of art pieces, making them more desirable to collectors.\n\nSection D:\nThe rise of digital art has also led to an increase in the number of art galleries and museums. This has provided more opportunities for artists to showcase their work and for collectors to purchase art pieces.",
+         "questions": [
+            {
+               "question": "Which section mentions the rise of digital art?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": ["A", "D"],
+               "explanation": "The correct option is A and D because they accurately reflect the information in the passage. Section A suggests that the rise of digital art has been a notable change in the art world, and Section D suggests that the rise of digital art has also led to an increase in the number of art galleries and museums.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            },
+            {
+               "question": "Which section mentions the art market has seen a significant increase in sales?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The correct option is C because it accurately reflects the information in the passage. Section C suggests that the art market has seen a significant increase in sales.",
+               "tips": "When approaching this question, consider the information in the passage and choose the option that best fits the meaning."
+            }
+         ]
+      }
+   ]
+}
