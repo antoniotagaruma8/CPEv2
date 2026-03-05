@@ -85,11 +85,11 @@ function LandingPageContent() {
                   AI-Powered Exam Prep
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] tracking-tight mb-6">
-                  Create Your <br className="hidden lg:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Custom Exam</span>
+                  Pass Your Cambridge Exam <br className="hidden lg:block" />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">on the First Try.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Experience realistic exam simulations for B2 First, C1 Advanced, and C2 Proficiency. Get instant, detailed AI feedback on your writing and speaking.
+                  Stop wasting time on generic books. Take hyper-realistic mock exams for B2 First, C1 Advanced, and C2 Proficiency and get instant, examiner-level AI feedback to guarantee your success.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   {status === "loading" ? (
