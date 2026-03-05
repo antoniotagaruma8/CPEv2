@@ -873,7 +873,7 @@ function LandingPageContent() {
             </div>
             <div className="w-full flex-1 bg-black overflow-hidden flex items-center justify-center">
               <video
-                src="/videos/CEFR_Mock_Exams.mp4"
+                src="/videos/AI_English_Exam_Prep.mp4"
                 controls
                 autoPlay
                 className="w-full h-full max-h-[calc(90vh-60px)] object-contain"
@@ -903,7 +903,7 @@ function LandingPageContent() {
             </div>
             <div className="w-full flex-1 bg-slate-200">
               <iframe
-                src="/presentation/AI_CEFR_Mastery.pdf"
+                src="/presentation/AI_Powered_CEFR_Mastery.pdf"
                 className="w-full h-full border-none"
                 title="AI CEFR Mastery Presentation"
               />
