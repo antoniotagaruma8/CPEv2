@@ -857,7 +857,14 @@ export default function DashboardPage() {
                     if (typeof opt === 'object' && opt !== null) return opt.text || opt.value;
                     return null;
                   }).filter((o: unknown): o is string => typeof o === 'string')
-                  : [],
+                  : (() => {
+                    // Fallback: extract A/B/C/D/E/F/G/H keys as options (used by pre-loaded exam JSONs)
+                    const letterOpts: string[] = [];
+                    for (const letter of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']) {
+                      if (typeof q[letter] === 'string') letterOpts.push(`${letter}. ${q[letter]}`);
+                    }
+                    return letterOpts;
+                  })(),
                 correctOption: q.correctOption,
                 explanation: q.explanation,
                 imagePrompts: (Array.isArray(q.imagePrompts)
