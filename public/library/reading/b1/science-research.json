@@ -1,0 +1,323 @@
+{
+  "examTitle": "B1 Mock Exam: Science and Research",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "<p>The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum. Before Fleming's discovery, bacterial infections were often fatal. The fungus was discovered growing on a petri dish containing a bacterial culture. Fleming observed that the fungus had killed off the surrounding bacteria. He isolated the substance responsible for this effect and named it penicillin. Penicillin was initially used to treat infections in animals but soon became a standard treatment for human illnesses. The development of penicillin paved the way for the creation of many other antibiotics.</p><p>Today, penicillin is still widely used but is often combined with other antibiotics to improve its effectiveness. The discovery of penicillin remains one of the most significant medical breakthroughs of the 20th century.</p>",
+         "questions": [
+            {
+               "question": "What did Alexander Fleming discover in 1928?",
+               "options": ["an antibiotic", "a fungus", "a new type of bacteria", "a disease"],
+               "correctOption": "A",
+               "explanation": "The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections.",
+               "tips": "Read the text carefully to understand the context of Fleming's discovery."
+            },
+            {
+               "question": "What was the initial use of penicillin?",
+               "options": ["to treat human illnesses", "to treat animal illnesses", "to treat fungal infections", "to treat viral infections"],
+               "correctOption": "B",
+               "explanation": "Penicillin was initially used to treat infections in animals.",
+               "tips": "Identify the main idea of the text to determine the initial use of penicillin."
+            },
+            {
+               "question": "What did the development of penicillin pave the way for?",
+               "options": ["the treatment of viral infections", "the creation of many other antibiotics", "the discovery of new diseases", "the development of new medical treatments"],
+               "correctOption": "B",
+               "explanation": "The development of penicillin paved the way for the creation of many other antibiotics.",
+               "tips": "Read the text to understand the significance of Fleming's discovery."
+            },
+            {
+               "question": "Why is penicillin still widely used today?",
+               "options": ["because it is a natural antibiotic", "because it is effective against most bacteria", "because it is often combined with other antibiotics", "because it is a cheap treatment option"],
+               "correctOption": "C",
+               "explanation": "Penicillin is still widely used today because it is often combined with other antibiotics to improve its effectiveness.",
+               "tips": "Identify the main reasons for the continued use of penicillin."
+            },
+            {
+               "question": "What is one of the most significant medical breakthroughs of the 20th century?",
+               "options": ["the discovery of penicillin", "the development of the first vaccine", "the discovery of a new disease", "the creation of a new medical treatment"],
+               "correctOption": "A",
+               "explanation": "The discovery of penicillin remains one of the most significant medical breakthroughs of the 20th century.",
+               "tips": "Read the text to understand the significance of Fleming's discovery."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "descriptions": [
+               "A 25-year-old researcher who specializes in environmental science.",
+               "A 30-year-old doctor who has worked in hospitals for over 10 years.",
+               "A 20-year-old student who is studying biology in college.",
+               "A 40-year-old businessman who has started his own company.",
+               "A 50-year-old professor who teaches science at a university."
+            ],
+            "texts": [
+               "Text A: The scientist spent years studying the effects of climate change on the environment.",
+               "Text B: The doctor has made significant contributions to the field of medicine through his research.",
+               "Text C: The student is working on a project to develop a new type of renewable energy.",
+               "Text D: The businessman has invested heavily in sustainable practices for his company.",
+               "Text E: The professor has written several books on the subject of environmental science.",
+               "Text F: The researcher has been involved in several high-profile projects related to climate change.",
+               "Text G: The doctor has developed a new treatment for a common disease.",
+               "Text H: The student is participating in a program to study the effects of pollution on wildlife."
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be the most suitable for a 25-year-old researcher who specializes in environmental science?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "F",
+               "explanation": "The researcher has been involved in several high-profile projects related to climate change.",
+               "tips": "Read the descriptions of the people and the texts to determine which text would be the most suitable."
+            },
+            {
+               "question": "Which text would be the most suitable for a 30-year-old doctor who has worked in hospitals for over 10 years?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "G",
+               "explanation": "The doctor has developed a new treatment for a common disease.",
+               "tips": "Identify the main contributions of the doctor to determine the most suitable text."
+            },
+            {
+               "question": "Which text would be the most suitable for a 20-year-old student who is studying biology in college?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "H",
+               "explanation": "The student is participating in a program to study the effects of pollution on wildlife.",
+               "tips": "Read the descriptions of the people and the texts to determine which text would be the most suitable."
+            },
+            {
+               "question": "Which text would be the most suitable for a 40-year-old businessman who has started his own company?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The businessman has invested heavily in sustainable practices for his company.",
+               "tips": "Identify the main contributions of the businessman to determine the most suitable text."
+            },
+            {
+               "question": "Which text would be the most suitable for a 50-year-old professor who teaches science at a university?",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "E",
+               "explanation": "The professor has written several books on the subject of environmental science.",
+               "tips": "Read the descriptions of the people and the texts to determine which text would be the most suitable."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            "The company is looking for a new marketing manager. The ideal candidate should have experience in social media marketing.",
+            "The new policy aims to reduce waste in the workplace. Employees are encouraged to recycle and use reusable containers.",
+            "The university is offering a new course on sustainable development. Students will learn about the latest trends and technologies in the field.",
+            "The city is launching a new public transportation system. The buses will be powered by electric energy and will have Wi-Fi on board.",
+            "The company is proud to announce its new sustainable packaging initiative. The goal is to reduce plastic waste and increase recycling rates."
+         ],
+         "questions": [
+            {
+               "question": "What is the ideal candidate looking for in a new marketing manager?",
+               "options": ["experience in social media marketing", "experience in event planning", "experience in graphic design"],
+               "correctOption": "A",
+               "explanation": "The company is looking for a new marketing manager with experience in social media marketing.",
+               "tips": "Read the text carefully to identify the key requirements of the job."
+            },
+            {
+               "question": "What is the goal of the new policy in the workplace?",
+               "options": ["to increase waste", "to reduce waste", "to maintain the current level of waste"],
+               "correctOption": "B",
+               "explanation": "The new policy aims to reduce waste in the workplace.",
+               "tips": "Identify the main objective of the policy to determine the correct answer."
+            },
+            {
+               "question": "What will students learn about in the new course on sustainable development?",
+               "options": ["the history of sustainability", "the latest trends and technologies in the field", "the economic benefits of sustainability"],
+               "correctOption": "B",
+               "explanation": "Students will learn about the latest trends and technologies in the field of sustainable development.",
+               "tips": "Read the text carefully to identify the key topics of the course."
+            },
+            {
+               "question": "What will be powered by electric energy in the new public transportation system?",
+               "options": ["the buses", "the trains", "the subways"],
+               "correctOption": "A",
+               "explanation": "The buses will be powered by electric energy.",
+               "tips": "Identify the main feature of the new public transportation system to determine the correct answer."
+            },
+            {
+               "question": "What is the goal of the company's new sustainable packaging initiative?",
+               "options": ["to increase plastic waste", "to reduce plastic waste and increase recycling rates", "to maintain the current level of plastic waste"],
+               "correctOption": "B",
+               "explanation": "The goal is to reduce plastic waste and increase recycling rates.",
+               "tips": "Read the text carefully to identify the key objectives of the initiative."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text — Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "<p>The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum. Before Fleming's discovery, bacterial infections were often fatal. The fungus was discovered growing on a petri dish containing a bacterial culture. [Gap 1] The substance responsible for this effect was isolated and named penicillin. Fleming observed that the fungus had killed off the surrounding bacteria. [Gap 2] He was the first person to culture the fungus and isolate the substance. [Gap 3] The discovery of penicillin paved the way for the creation of many other antibiotics. Today, penicillin is still widely used but is often combined with other antibiotics to improve its effectiveness. The development of penicillin remains one of the most significant medical breakthroughs of the 20th century. [Gap 4] Fleming's discovery was a major milestone in the history of medicine. [Gap 5] The use of penicillin has saved countless lives and improved the quality of life for millions of people. [Gap 6] The discovery of penicillin has inspired further research into the treatment of bacterial infections.</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. Fleming observed that the fungus had killed off the surrounding bacteria.",
+                  "B. The substance responsible for this effect was isolated and named penicillin.",
+                  "C. Before Fleming's discovery, bacterial infections were often fatal.",
+                  "D. The fungus was discovered growing on a petri dish containing a bacterial culture.",
+                  "E. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum.",
+                  "F. The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections."
+               ],
+               "correctOption": "B",
+               "explanation": "The substance responsible for this effect was isolated and named penicillin.",
+               "tips": "Read the text carefully to determine the correct sentence to fit the gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. Fleming observed that the fungus had killed off the surrounding bacteria.",
+                  "B. The substance responsible for this effect was isolated and named penicillin.",
+                  "C. Before Fleming's discovery, bacterial infections were often fatal.",
+                  "D. The fungus was discovered growing on a petri dish containing a bacterial culture.",
+                  "E. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum.",
+                  "F. The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections."
+               ],
+               "correctOption": "A",
+               "explanation": "Fleming observed that the fungus had killed off the surrounding bacteria.",
+               "tips": "Identify the main action of Fleming to determine the correct sentence to fit the gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. Fleming observed that the fungus had killed off the surrounding bacteria.",
+                  "B. The substance responsible for this effect was isolated and named penicillin.",
+                  "C. Before Fleming's discovery, bacterial infections were often fatal.",
+                  "D. The fungus was discovered growing on a petri dish containing a bacterial culture.",
+                  "E. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum.",
+                  "F. The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections."
+               ],
+               "correctOption": "C",
+               "explanation": "He was the first person to culture the fungus and isolate the substance.",
+               "tips": "Read the text carefully to determine the correct sentence to fit the gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. Fleming observed that the fungus had killed off the surrounding bacteria.",
+                  "B. The substance responsible for this effect was isolated and named penicillin.",
+                  "C. Before Fleming's discovery, bacterial infections were often fatal.",
+                  "D. The fungus was discovered growing on a petri dish containing a bacterial culture.",
+                  "E. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum.",
+                  "F. The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections."
+               ],
+               "correctOption": "D",
+               "explanation": "Fleming's discovery was a major milestone in the history of medicine.",
+               "tips": "Identify the main significance of Fleming's discovery to determine the correct sentence to fit the gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. Fleming observed that the fungus had killed off the surrounding bacteria.",
+                  "B. The substance responsible for this effect was isolated and named penicillin.",
+                  "C. Before Fleming's discovery, bacterial infections were often fatal.",
+                  "D. The fungus was discovered growing on a petri dish containing a bacterial culture.",
+                  "E. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum.",
+                  "F. The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections."
+               ],
+               "correctOption": "E",
+               "explanation": "The use of penicillin has saved countless lives and improved the quality of life for millions of people.",
+               "tips": "Read the text carefully to determine the correct sentence to fit the gap."
+            },
+            {
+               "question": "Gap 6",
+               "options": [
+                  "A. Fleming observed that the fungus had killed off the surrounding bacteria.",
+                  "B. The substance responsible for this effect was isolated and named penicillin.",
+                  "C. Before Fleming's discovery, bacterial infections were often fatal.",
+                  "D. The fungus was discovered growing on a petri dish containing a bacterial culture.",
+                  "E. Penicillin is a natural antibiotic produced by the fungus Penicillium notatum.",
+                  "F. The discovery of penicillin by Alexander Fleming in 1928 revolutionized the treatment of bacterial infections."
+               ],
+               "correctOption": "F",
+               "explanation": "The discovery of penicillin has inspired further research into the treatment of bacterial infections.",
+               "tips": "Identify the main impact of Fleming's discovery to determine the correct sentence to fit the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "<p>The discovery of penicillin by Alexander Fleming in 1928 was a major breakthrough in the field of medicine. He was the first person to [Gap 1] the fungus Penicillium notatum and isolate the substance responsible for its effect. The substance was later named penicillin. Before Fleming's discovery, bacterial infections were often fatal. The fungus was discovered growing on a petri dish containing a bacterial culture. Fleming observed that the fungus had [Gap 2] off the surrounding bacteria. He was the first person to culture the fungus and [Gap 3] the substance. The discovery of penicillin paved the way for the creation of many other antibiotics. Today, penicillin is still widely used but is often combined with other antibiotics to [Gap 4] its effectiveness. The development of penicillin remains one of the most significant medical breakthroughs of the 20th century.</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. discover", "B. cultivate", "C. isolate", "D. observe"],
+               "correctOption": "C",
+               "explanation": "He was the first person to isolate the fungus and the substance responsible for its effect.",
+               "tips": "Read the text carefully to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. killed", "B. killed off", "C. destroyed", "D. eliminated"],
+               "correctOption": "B",
+               "explanation": "Fleming observed that the fungus had killed off the surrounding bacteria.",
+               "tips": "Identify the main action of Fleming to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. isolate", "B. culture", "C. discover", "D. observe"],
+               "correctOption": "B",
+               "explanation": "He was the first person to culture the fungus and isolate the substance.",
+               "tips": "Read the text carefully to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. improve", "B. increase", "C. maintain", "D. reduce"],
+               "correctOption": "A",
+               "explanation": "Today, penicillin is still widely used but is often combined with other antibiotics to improve its effectiveness.",
+               "tips": "Identify the main purpose of combining penicillin with other antibiotics to determine the correct word to fit the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "<p>The discovery of penicillin by Alexander Fleming in 1928 was a [Gap 1] breakthrough in the field of medicine. He was the first person to culture the fungus Penicillium notatum and [Gap 2] the substance responsible for its effect. The substance was later named penicillin. Before Fleming's discovery, bacterial infections were often [Gap 3]. The fungus was discovered growing on a petri dish containing a bacterial culture. Fleming observed that the fungus had killed off the surrounding bacteria. He was the first person to [Gap 4] the fungus and isolate the substance. The discovery of penicillin paved the way for the creation of many other antibiotics. Today, penicillin is still widely used but is often combined with other antibiotics to [Gap 5] its effectiveness.</p>",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "major",
+               "explanation": "The discovery of penicillin by Alexander Fleming in 1928 was a major breakthrough in the field of medicine.",
+               "tips": "Read the text carefully to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "isolate",
+               "explanation": "He was the first person to culture the fungus and isolate the substance.",
+               "tips": "Identify the main action of Fleming to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "fatal",
+               "explanation": "Before Fleming's discovery, bacterial infections were often fatal.",
+               "tips": "Read the text carefully to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "culture",
+               "explanation": "He was the first person to culture the fungus and isolate the substance.",
+               "tips": "Identify the main action of Fleming to determine the correct word to fit the gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "improve",
+               "explanation": "Today, penicillin is still widely used but is often combined with other antibiotics to improve its effectiveness.",
+               "tips": "Read the text carefully to determine the correct word to fit the gap."
+            }
+         ]
+      }
+   ]
+}

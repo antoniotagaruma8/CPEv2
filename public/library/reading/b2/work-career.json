@@ -1,0 +1,321 @@
+{
+  "examTitle": "Work & Career, B2 First Mock Reading & Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Environmental Impact of Business",
+         "content": "The company has implemented various initiatives to reduce its carbon footprint. The first step was to (1) _______ all company cars to electric vehicles. This move not only benefits the environment but also saves the company money on fuel costs. Additionally, the company has introduced a (2) _______ policy to encourage employees to use public transport or carpool. The policy has been well received, with many employees taking advantage of the benefits. Furthermore, the company has (3) _______ its energy-efficient lighting systems to reduce energy consumption. This move has resulted in significant cost savings and a reduced carbon footprint. The company's efforts have not gone unnoticed, and it has received (4) _______ from the local community for its environmental initiatives. The company's commitment to sustainability has also led to an (5) _______ in employee morale, as employees feel that their workplace is taking a positive step towards reducing its impact on the environment. The company's (6) _______ to reduce its carbon footprint has also led to a reduction in waste, with the company implementing a recycling program for all office waste. The company's (7) _______ to reduce its environmental impact has been a key factor in its success and has set a positive example for other businesses to follow. The company's (8) _______ to reduce its carbon footprint has also led to a reduction in energy consumption, with the company investing in energy-efficient technologies.",
+         "instructions": "Read the text below and decide which answer best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. replaced", "B. replaced all", "C. switched", "D. converted"],
+               "correctOption": "B. replaced all",
+               "explanation": "The correct answer is 'replaced all' because the text specifies that all company cars were replaced with electric vehicles.",
+               "tips": "When reading multiple-choice cloze questions, make sure to read the text carefully and identify the correct word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. flexible", "B. strict", "C. generous", "D. relaxed"],
+               "correctOption": "C. generous",
+               "explanation": "The correct answer is 'generous' because the text states that the policy encourages employees to use public transport or carpool and offers benefits.",
+               "tips": "When reading multiple-choice cloze questions, pay attention to the context and the word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. replaced", "B. installed", "C. upgraded", "D. updated"],
+               "correctOption": "B. installed",
+               "explanation": "The correct answer is 'installed' because the text states that the company installed energy-efficient lighting systems.",
+               "tips": "When reading multiple-choice cloze questions, make sure to read the text carefully and identify the correct word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. praise", "B. criticism", "C. awards", "D. recognition"],
+               "correctOption": "D. recognition",
+               "explanation": "The correct answer is 'recognition' because the text states that the company received recognition from the local community for its environmental initiatives.",
+               "tips": "When reading multiple-choice cloze questions, pay attention to the context and the word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. increase", "B. decrease", "C. boost", "D. drop"],
+               "correctOption": "C. boost",
+               "explanation": "The correct answer is 'boost' because the text states that the company's commitment to sustainability led to an increase in employee morale.",
+               "tips": "When reading multiple-choice cloze questions, make sure to read the text carefully and identify the correct word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A. reduction", "B. increase", "C. decrease", "D. drop"],
+               "correctOption": "A. reduction",
+               "explanation": "The correct answer is 'reduction' because the text states that the company implemented a recycling program and reduced waste.",
+               "tips": "When reading multiple-choice cloze questions, pay attention to the context and the word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 7",
+               "options": ["A. commitment", "B. promise", "C. pledge", "D. vow"],
+               "correctOption": "A. commitment",
+               "explanation": "The correct answer is 'commitment' because the text states that the company's commitment to sustainability was a key factor in its success.",
+               "tips": "When reading multiple-choice cloze questions, make sure to read the text carefully and identify the correct word or phrase that fits the gap."
+            },
+            {
+               "question": "Gap 8",
+               "options": ["A. intention", "B. goal", "C. objective", "D. ambition"],
+               "correctOption": "A. intention",
+               "explanation": "The correct answer is 'intention' because the text states that the company's intention to reduce its carbon footprint led to a reduction in energy consumption.",
+               "tips": "When reading multiple-choice cloze questions, pay attention to the context and the word or phrase that fits the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Workplace Culture",
+         "content": "The company has a (1) _______ policy to promote work-life balance. Employees are encouraged to take regular breaks and prioritize their personal needs. The company also has a (2) _______ policy to ensure that all employees feel valued and appreciated. This includes regular team-building activities and recognition of employees' achievements. The company's (3) _______ is to create a positive and inclusive work environment. This is reflected in the company's diversity and inclusion initiatives, which aim to promote equality and respect for all employees. The company's (4) _______ to its employees is evident in the benefits and perks offered, such as flexible working hours and a comprehensive health insurance plan.",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 9",
+               "options": [],
+               "correctOption": "flexible",
+               "explanation": "The correct answer is 'flexible' because the text states that the company has a flexible policy to promote work-life balance.",
+               "tips": "When reading open cloze questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            },
+            {
+               "question": "Gap 10",
+               "options": [],
+               "correctOption": "valuing",
+               "explanation": "The correct answer is 'valuing' because the text states that the company has a policy to ensure that all employees feel valued and appreciated.",
+               "tips": "When reading open cloze questions, pay attention to the context and the word that fits the gap."
+            },
+            {
+               "question": "Gap 11",
+               "options": [],
+               "correctOption": "culture",
+               "explanation": "The correct answer is 'culture' because the text states that the company's culture is to create a positive and inclusive work environment.",
+               "tips": "When reading open cloze questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            },
+            {
+               "question": "Gap 12",
+               "options": [],
+               "correctOption": "commitment",
+               "explanation": "The correct answer is 'commitment' because the text states that the company's commitment to its employees is evident in the benefits and perks offered.",
+               "tips": "When reading open cloze questions, pay attention to the context and the word that fits the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Business Communication",
+         "content": "The company's (1) _______ (DECLARE) of its new product was highly successful, with many customers expressing interest in purchasing the product. The company's (2) _______ (REVIEW) of the product's performance was also positive, with many customers reporting high levels of satisfaction. The company's (3) _______ (IMPROVE) in customer service has been a key factor in its success, with many customers praising the company's friendly and helpful staff. The company's (4) _______ (ASSIGN) of tasks to employees has also been effective, with many employees reporting that they feel motivated and empowered to take on new challenges. The company's (5) _______ (REVIEW) of its marketing strategy has also been positive, with many customers reporting that they are more likely to purchase products from the company due to its effective marketing efforts.",
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "IMPROVE",
+               "options": [],
+               "correctOption": "improvement",
+               "explanation": "The correct answer is 'improvement' because the text states that the company's improvement in customer service has been a key factor in its success.",
+               "tips": "When reading word formation questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            },
+            {
+               "question": "REVIEW",
+               "options": [],
+               "correctOption": "review",
+               "explanation": "The correct answer is 'review' because the text states that the company's review of the product's performance was positive.",
+               "tips": "When reading word formation questions, pay attention to the context and the word that fits the gap."
+            },
+            {
+               "question": "DECLARE",
+               "options": [],
+               "correctOption": "declaration",
+               "explanation": "The correct answer is 'declaration' because the text states that the company's declaration of its new product was highly successful.",
+               "tips": "When reading word formation questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            },
+            {
+               "question": "ASSIGN",
+               "options": [],
+               "correctOption": "assignment",
+               "explanation": "The correct answer is 'assignment' because the text states that the company's assignment of tasks to employees has been effective.",
+               "tips": "When reading word formation questions, pay attention to the context and the word that fits the gap."
+            },
+            {
+               "question": "REVIEW",
+               "options": [],
+               "correctOption": "review",
+               "explanation": "The correct answer is 'review' because the text states that the company's review of its marketing strategy has been positive.",
+               "tips": "When reading word formation questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Business Communication",
+         "content": "The company's new product has been (1) _______ to be a huge success. Since the launch, the company has (2) _______ a significant increase in sales. The company's (3) _______ to its customers has also improved, with many customers reporting high levels of satisfaction. The company's (4) _______ in customer service has been a key factor in its success, with many customers praising the company's friendly and helpful staff.",
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+         "questions": [
+            {
+               "question": "I haven't seen her for ages. SINCE: It's been a long time _______ her.",
+               "options": [],
+               "correctOption": "since",
+               "explanation": "The correct answer is 'since' because the text states that the company's new product has been successful since the launch.",
+               "tips": "When reading key word transformations questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            },
+            {
+               "question": "The company's profits have increased significantly. AS: It's been a few years _______ there has been such a large increase.",
+               "options": [],
+               "correctOption": "since",
+               "explanation": "The correct answer is 'since' because the text states that the company's profits have increased significantly since the launch.",
+               "tips": "When reading key word transformations questions, pay attention to the context and the word that fits the gap."
+            },
+            {
+               "question": "The company's new product has been well received by customers. SO: Many customers are looking forward to _______ the product.",
+               "options": [],
+               "correctOption": "buying",
+               "explanation": "The correct answer is 'buying' because the text states that the company's new product has been well received by customers.",
+               "tips": "When reading key word transformations questions, make sure to read the text carefully and identify the correct word that fits the gap."
+            },
+            {
+               "question": "The company's customer service has improved significantly. SO: Many customers are now more _______ with the company.",
+               "options": [],
+               "correctOption": "satisfied",
+               "explanation": "The correct answer is 'satisfied' because the text states that the company's customer service has improved significantly.",
+               "tips": "When reading key word transformations questions, pay attention to the context and the word that fits the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Business Communication",
+         "content": "The company's new product has been a huge success, with many customers expressing interest in purchasing the product. The company's launch strategy was highly effective, with many customers reporting high levels of satisfaction. The company's commitment to customer service has also been a key factor in its success, with many customers praising the company's friendly and helpful staff. The company's marketing efforts have also been successful, with many customers reporting that they are more likely to purchase products from the company due to its effective marketing efforts. The company's financial performance has also improved, with many customers reporting that they are more likely to invest in the company due to its financial stability. The company's reputation has also improved, with many customers reporting that they have a positive view of the company. The company's future prospects look bright, with many customers reporting that they are likely to purchase products from the company in the future.",
+         "instructions": "Read the text and answer Questions 13-18. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the writer suggest about the company's new product?",
+               "options": ["A. The company's new product has been a failure.", "B. The company's new product has been a huge success.", "C. The company's new product has been moderately successful.", "D. The company's new product has been unpopular."],
+               "correctOption": "B. The company's new product has been a huge success.",
+               "explanation": "The correct answer is 'B. The company's new product has been a huge success.' because the text states that the company's new product has been a huge success, with many customers expressing interest in purchasing the product.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            },
+            {
+               "question": "What does the writer suggest about the company's launch strategy?",
+               "options": ["A. The company's launch strategy was highly ineffective.", "B. The company's launch strategy was moderately effective.", "C. The company's launch strategy was highly effective.", "D. The company's launch strategy was unpopular."],
+               "correctOption": "C. The company's launch strategy was highly effective.",
+               "explanation": "The correct answer is 'C. The company's launch strategy was highly effective.' because the text states that the company's launch strategy was highly effective, with many customers reporting high levels of satisfaction.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            },
+            {
+               "question": "What does the writer suggest about the company's customer service?",
+               "options": ["A. The company's customer service has decreased.", "B. The company's customer service has remained the same.", "C. The company's customer service has improved.", "D. The company's customer service has worsened."],
+               "correctOption": "C. The company's customer service has improved.",
+               "explanation": "The correct answer is 'C. The company's customer service has improved.' because the text states that the company's commitment to customer service has been a key factor in its success.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            },
+            {
+               "question": "What does the writer suggest about the company's marketing efforts?",
+               "options": ["A. The company's marketing efforts have been unsuccessful.", "B. The company's marketing efforts have been moderately successful.", "C. The company's marketing efforts have been highly successful.", "D. The company's marketing efforts have been unpopular."],
+               "correctOption": "C. The company's marketing efforts have been highly successful.",
+               "explanation": "The correct answer is 'C. The company's marketing efforts have been highly successful.' because the text states that the company's marketing efforts have been successful, with many customers reporting that they are more likely to purchase products from the company due to its effective marketing efforts.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            },
+            {
+               "question": "What does the writer suggest about the company's financial performance?",
+               "options": ["A. The company's financial performance has decreased.", "B. The company's financial performance has remained the same.", "C. The company's financial performance has improved.", "D. The company's financial performance has worsened."],
+               "correctOption": "C. The company's financial performance has improved.",
+               "explanation": "The correct answer is 'C. The company's financial performance has improved.' because the text states that the company's financial performance has improved, with many customers reporting that they are more likely to invest in the company due to its financial stability.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            },
+            {
+               "question": "What does the writer suggest about the company's reputation?",
+               "options": ["A. The company's reputation has decreased.", "B. The company's reputation has remained the same.", "C. The company's reputation has improved.", "D. The company's reputation has worsened."],
+               "correctOption": "C. The company's reputation has improved.",
+               "explanation": "The correct answer is 'C. The company's reputation has improved.' because the text states that the company's reputation has improved, with many customers reporting that they have a positive view of the company.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            },
+            {
+               "question": "What does the writer suggest about the company's future prospects?",
+               "options": ["A. The company's future prospects look bleak.", "B. The company's future prospects look uncertain.", "C. The company's future prospects look bright.", "D. The company's future prospects look dim."],
+               "correctOption": "C. The company's future prospects look bright.",
+               "explanation": "The correct answer is 'C. The company's future prospects look bright.' because the text states that the company's future prospects look bright, with many customers reporting that they are likely to purchase products from the company in the future.",
+               "tips": "When reading multiple-choice questions, make sure to read the text carefully and identify the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Business Communication",
+         "content": "The company's new product has been a huge success, with many customers expressing interest in purchasing the product. [Gap 19] The company's launch strategy was highly effective, with many customers reporting high levels of satisfaction. The company's commitment to customer service has also been a key factor in its success, with many customers praising the company's friendly and helpful staff. [Gap 20] The company's financial performance has improved, with many customers reporting that they are more likely to invest in the company due to its financial stability. [Gap 21] The company's reputation has also improved, with many customers reporting that they have a positive view of the company. [Gap 22] The company's future prospects look bright, with many customers reporting that they are likely to purchase products from the company in the future.",
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "options": ["A. The company's new product has been a huge success, with many customers expressing interest in purchasing the product.", "B. The company's launch strategy was highly effective, with many customers reporting high levels of satisfaction.", "C. The company's commitment to customer service has also been a key factor in its success, with many customers praising the company's friendly and helpful staff.", "D. The company's marketing efforts have been successful, with many customers reporting that they are more likely to purchase products from the company due to its effective marketing efforts.", "E. The company's customer service has improved, with many customers reporting that they are more satisfied with the company's service.", "F. The company's financial performance has improved, with many customers reporting that they are more likely to invest in the company due to its financial stability.", "G. The company's reputation has also improved, with many customers reporting that they have a positive view of the company."],
+         "questions": [
+            {
+               "question": "Gap 19",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the sentence fits well with the surrounding text.",
+               "tips": "When reading gapped text questions, make sure to read the text carefully and identify the correct sentence that fits the gap."
+            },
+            {
+               "question": "Gap 20",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'F' because the sentence fits well with the surrounding text.",
+               "tips": "When reading gapped text questions, make sure to read the text carefully and identify the correct sentence that fits the gap."
+            },
+            {
+               "question": "Gap 21",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "G",
+               "explanation": "The correct answer is 'G' because the sentence fits well with the surrounding text.",
+               "tips": "When reading gapped text questions, make sure to read the text carefully and identify the correct sentence that fits the gap."
+            },
+            {
+               "question": "Gap 22",
+               "options": ["A", "B", "C", "D", "E", "F", "G"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'E' because the sentence fits well with the surrounding text.",
+               "tips": "When reading gapped text questions, make sure to read the text carefully and identify the correct sentence that fits the gap."
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Business Communication",
+         "content": "A: The company's new product has been a huge success, with many customers expressing interest in purchasing the product. B: The company's launch strategy was highly effective, with many customers reporting high levels of satisfaction. C: The company's commitment to customer service has also been a key factor in its success, with many customers praising the company's friendly and helpful staff. D: The company's financial performance has improved, with many customers reporting that they are more likely to invest in the company due to its financial stability. E: The company's reputation has also improved, with many customers reporting that they have a positive view of the company. F: The company's future prospects look bright, with many customers reporting that they are likely to purchase products from the company in the future.",
+         "instructions": "Read the texts below. For Questions 23-32, choose from the sections A-F. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text states that the company's new product has been a huge success?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because the text states that the company's new product has been a huge success.",
+               "tips": "When reading multiple matching questions, make sure to read the text carefully and identify the correct section that matches the question."
+            },
+            {
+               "question": "Which text states that the company's launch strategy was highly effective?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because the text states that the company's launch strategy was highly effective.",
+               "tips": "When reading multiple matching questions, make sure to read the text carefully and identify the correct section that matches the question."
+            },
+            {
+               "question": "Which text states that the company's commitment to customer service has been a key factor in its success?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because the text states that the company's commitment to customer service has been a key factor in its success.",
+               "tips": "When reading multiple matching questions, make sure to read the text carefully and identify the correct section that matches the question."
+            },
+            {
+               "question": "Which text states that the company's financial performance has improved?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because the text states that the company's financial performance has improved.",
+               "tips": "When reading multiple matching questions, make sure to read the text carefully and identify the correct section that matches the question."
+            },
+            {
+               "question": "Which text states that the company's reputation has also improved?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'E' because the text states that the company's reputation has also improved.",
+               "tips": "When reading multiple matching questions, make sure to read the text carefully and identify the correct section that matches the question."
+            },
+            {
+               "question": "Which text states that the company's future prospects look bright?",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'F' because the text states that the company's future prospects look bright.",
+               "tips": "When reading multiple matching questions, make sure to read the text carefully and identify the correct section that matches the question."
+            }
+         ]
+      }
+   ]
+}

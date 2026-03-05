@@ -1,0 +1,316 @@
+{
+  "examTitle": "Relationships & Family: CEFR B1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Relationships",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The concept of family has undergone significant changes in recent years. In many parts of the world, the traditional nuclear family of a mother, father, and children is no longer the dominant form. Many families now consist of single parents, blended families, and same-sex couples. This shift is largely due to increasing divorce rates, changes in social norms, and advances in technology that have made it easier for people to connect with each other. As a result, the idea of family has become more complex and diverse. In some cultures, family ties are still very strong, and extended family members play an important role in the lives of their relatives. However, in other cultures, family relationships are less formal, and people are more independent.",
+         "questions": [
+            {
+               "question": "What does the writer say about the traditional nuclear family?",
+               "options": [
+                  "A. It is still the dominant form of family in many parts of the world.",
+                  "B. It is no longer the dominant form of family in many parts of the world.",
+                  "C. It is only found in wealthy countries.",
+                  "D. It is only found in Western cultures."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that the traditional nuclear family is no longer the dominant form of family in many parts of the world. This is because of increasing divorce rates, changes in social norms, and advances in technology. The correct option is B because it accurately reflects the writer's statement.",
+               "tips": "When reading comprehension questions, try to identify the main idea of the text and look for key phrases that support the answer."
+            },
+            {
+               "question": "What is the reason for the increasing complexity and diversity of family structures?",
+               "options": [
+                  "A. Decreasing divorce rates and social norms.",
+                  "B. Increasing divorce rates, changes in social norms, and advances in technology.",
+                  "C. Advances in technology and changes in social norms.",
+                  "D. Decreasing divorce rates and advances in technology."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that the increasing complexity and diversity of family structures is largely due to increasing divorce rates, changes in social norms, and advances in technology. The correct option is B because it accurately reflects the writer's statement.",
+               "tips": "When answering questions, make sure to read the entire text and look for supporting evidence for each option."
+            },
+            {
+               "question": "What is the role of extended family members in some cultures?",
+               "options": [
+                  "A. They play no role in the lives of their relatives.",
+                  "B. They play an important role in the lives of their relatives.",
+                  "C. They are only involved in financial matters.",
+                  "D. They are only involved in social events."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that in some cultures, extended family members play an important role in the lives of their relatives. The correct option is B because it accurately reflects the writer's statement.",
+               "tips": "When reading comprehension questions, try to identify specific details in the text that support the answer."
+            },
+            {
+               "question": "What is the result of the shift in family structures?",
+               "options": [
+                  "A. A decrease in family relationships.",
+                  "B. A change in family relationships.",
+                  "C. An increase in family relationships.",
+                  "D. No change in family relationships."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that the shift in family structures has led to a change in family relationships. The correct option is B because it accurately reflects the writer's statement.",
+               "tips": "When answering questions, try to identify the main idea of the text and look for key phrases that support the answer."
+            },
+            {
+               "question": "What is the role of technology in changing family structures?",
+               "options": [
+                  "A. It has no role.",
+                  "B. It has made it easier for people to connect with each other.",
+                  "C. It has made it harder for people to connect with each other.",
+                  "D. It has changed the way people communicate with each other."
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that advances in technology have made it easier for people to connect with each other, leading to changes in family structures. The correct option is B because it accurately reflects the writer's statement.",
+               "tips": "When reading comprehension questions, try to identify specific details in the text that support the answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "profiles": [
+               "I love spending time outdoors and trying new sports. I'm always up for an adventure!",
+               "I'm a bit of a homebody and enjoy reading and watching movies in my free time.",
+               "I'm a student and I'm really interested in science and technology.",
+               "I'm a creative person and I love painting and drawing.",
+               "I'm a bit of a foodie and I love trying new restaurants and cooking new recipes."
+            ],
+            "texts": [
+               "I love spending time outdoors and trying new sports. I'm always up for an adventure!",
+               "I'm a bit of a homebody and enjoy reading and watching movies in my free time.",
+               "I'm a student and I'm really interested in science and technology.",
+               "I'm a creative person and I love painting and drawing.",
+               "I'm a bit of a foodie and I love trying new restaurants and cooking new recipes.",
+               "I'm a bit of a thrill-seeker and I love bungee jumping and skydiving.",
+               "I'm a bit of a music lover and I love playing the guitar and singing.",
+               "I'm a bit of a bookworm and I love reading and writing poetry."
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for person 1?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The text is suitable for person 1 because it describes someone who loves spending time outdoors and trying new sports.",
+               "tips": "When matching profiles to texts, try to find the text that best matches the person's description."
+            },
+            {
+               "question": "Which text would be most suitable for person 2?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The text is suitable for person 2 because it describes someone who is a homebody and enjoys reading and watching movies.",
+               "tips": "When matching profiles to texts, try to find the text that best matches the person's description."
+            },
+            {
+               "question": "Which text would be most suitable for person 3?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "C",
+               "explanation": "The text is suitable for person 3 because it describes someone who is a student and interested in science and technology.",
+               "tips": "When matching profiles to texts, try to find the text that best matches the person's description."
+            },
+            {
+               "question": "Which text would be most suitable for person 4?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "The text is suitable for person 4 because it describes someone who is creative and loves painting and drawing.",
+               "tips": "When matching profiles to texts, try to find the text that best matches the person's description."
+            },
+            {
+               "question": "Which text would be most suitable for person 5?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "E",
+               "explanation": "The text is suitable for person 5 because it describes someone who is a foodie and loves trying new restaurants and cooking new recipes.",
+               "tips": "When matching profiles to texts, try to find the text that best matches the person's description."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": {
+            "texts": [
+               "The new policy aims to reduce carbon emissions by increasing the use of renewable energy sources. This will not only help the environment but also create new job opportunities in the renewable energy sector.",
+               "The city council has decided to implement a new traffic management system to reduce congestion and pollution. This will involve the installation of smart traffic lights and the creation of new bike lanes.",
+               "The company is looking for a new marketing manager to lead their social media campaign. The ideal candidate will have experience in creating engaging content and analyzing social media metrics.",
+               "The university is offering a new course in sustainable agriculture. This course will cover topics such as organic farming and permaculture, and will be taught by an expert in the field.",
+               "The government has launched a new initiative to promote healthy eating. This will involve the creation of a new food guide and the provision of cooking classes for children."
+            ]
+         },
+         "questions": [
+            {
+               "question": "What is the main goal of the new policy?",
+               "options": ["A. To create new job opportunities", "B. To reduce carbon emissions", "C. To increase the use of renewable energy sources"],
+               "correctOption": "B",
+               "explanation": "The text states that the new policy aims to reduce carbon emissions, so the correct answer is B.",
+               "tips": "When answering multiple-choice questions, try to identify the main idea of the text and look for supporting evidence for each option."
+            },
+            {
+               "question": "What will be the result of the new traffic management system?",
+               "options": ["A. An increase in congestion and pollution", "B. A reduction in congestion and pollution", "C. No change in congestion and pollution"],
+               "correctOption": "B",
+               "explanation": "The text states that the new traffic management system will reduce congestion and pollution, so the correct answer is B.",
+               "tips": "When answering multiple-choice questions, try to identify the main idea of the text and look for supporting evidence for each option."
+            },
+            {
+               "question": "What experience is required for the marketing manager position?",
+               "options": ["A. Experience in creating engaging content and analyzing social media metrics", "B. Experience in creating engaging content only", "C. No experience is required"],
+               "correctOption": "A",
+               "explanation": "The text states that the ideal candidate will have experience in creating engaging content and analyzing social media metrics, so the correct answer is A.",
+               "tips": "When answering multiple-choice questions, try to identify specific details in the text that support the answer."
+            },
+            {
+               "question": "What will be covered in the new course in sustainable agriculture?",
+               "options": ["A. Organic farming and permaculture only", "B. Sustainable agriculture and organic farming", "C. No specific topics will be covered"],
+               "correctOption": "B",
+               "explanation": "The text states that the course will cover topics such as organic farming and permaculture, so the correct answer is B.",
+               "tips": "When answering multiple-choice questions, try to identify specific details in the text that support the answer."
+            },
+            {
+               "question": "What will be provided for children as part of the healthy eating initiative?",
+               "options": ["A. A new food guide only", "B. A new food guide and cooking classes", "C. Cooking classes only"],
+               "correctOption": "B",
+               "explanation": "The text states that the initiative will involve the provision of cooking classes for children, so the correct answer is B.",
+               "tips": "When answering multiple-choice questions, try to identify specific details in the text that support the answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "The city of Paris is famous for its beautiful architecture and rich history. It is home to many famous landmarks such as the Eiffel Tower and the Louvre Museum. The city has a population of over 2 million people and is a major tourist destination. Many people visit Paris every year to see its famous sights. The city has a lot to offer, including art, fashion, and food.",
+         "sentences": [
+            "Paris is a beautiful city with a rich history.",
+            "The Eiffel Tower is a famous landmark in Paris.",
+            "The city has a population of over 2 million people.",
+            "Many people visit Paris every year to see its famous sights.",
+            "The city has a lot to offer, including art, fashion, and food.",
+            "The Louvre Museum is a famous museum in Paris."
+         ],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. Paris is a beautiful city with a rich history.", "B. The Eiffel Tower is a famous landmark in Paris.", "C. The city has a population of over 2 million people.", "D. Many people visit Paris every year to see its famous sights.", "E. The city has a lot to offer, including art, fashion, and food.", "F. The Louvre Museum is a famous museum in Paris."],
+               "correctOption": "A",
+               "explanation": "The sentence \"Paris is a beautiful city with a rich history\" fits well after the first sentence, which introduces the city of Paris.",
+               "tips": "When filling in the gaps, try to choose a sentence that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. Paris is a beautiful city with a rich history.", "B. The Eiffel Tower is a famous landmark in Paris.", "C. The city has a population of over 2 million people.", "D. Many people visit Paris every year to see its famous sights.", "E. The city has a lot to offer, including art, fashion, and food.", "F. The Louvre Museum is a famous museum in Paris."],
+               "correctOption": "B",
+               "explanation": "The sentence \"The Eiffel Tower is a famous landmark in Paris\" fits well after the sentence about the city's beautiful architecture and rich history.",
+               "tips": "When filling in the gaps, try to choose a sentence that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. Paris is a beautiful city with a rich history.", "B. The Eiffel Tower is a famous landmark in Paris.", "C. The city has a population of over 2 million people.", "D. Many people visit Paris every year to see its famous sights.", "E. The city has a lot to offer, including art, fashion, and food.", "F. The Louvre Museum is a famous museum in Paris."],
+               "correctOption": "C",
+               "explanation": "The sentence \"The city has a population of over 2 million people\" fits well after the sentence about the Eiffel Tower.",
+               "tips": "When filling in the gaps, try to choose a sentence that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. Paris is a beautiful city with a rich history.", "B. The Eiffel Tower is a famous landmark in Paris.", "C. The city has a population of over 2 million people.", "D. Many people visit Paris every year to see its famous sights.", "E. The city has a lot to offer, including art, fashion, and food.", "F. The Louvre Museum is a famous museum in Paris."],
+               "correctOption": "D",
+               "explanation": "The sentence \"Many people visit Paris every year to see its famous sights\" fits well after the sentence about the city's population.",
+               "tips": "When filling in the gaps, try to choose a sentence that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. Paris is a beautiful city with a rich history.", "B. The Eiffel Tower is a famous landmark in Paris.", "C. The city has a population of over 2 million people.", "D. Many people visit Paris every year to see its famous sights.", "E. The city has a lot to offer, including art, fashion, and food.", "F. The Louvre Museum is a famous museum in Paris."],
+               "correctOption": "E",
+               "explanation": "The sentence \"The city has a lot to offer, including art, fashion, and food\" fits well after the sentence about the city's famous sights.",
+               "tips": "When filling in the gaps, try to choose a sentence that makes sense in the context of the surrounding text."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text and choose the correct word for each gap.",
+         "content": "The city of Paris is famous for its (1) ____________________ architecture and rich history. It is home to many famous landmarks such as the Eiffel Tower and the Louvre Museum. The city has a (2) ____________________ of over 2 million people and is a major tourist destination. Many people visit Paris every year to see its famous (3) ____________________. The city has (4) ____________________ to offer, including art, fashion, and food. The city's (5) ____________________ is a major part of its appeal.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. beautiful", "B. ugly", "C. interesting", "D. boring"],
+               "correctOption": "A",
+               "explanation": "The correct word is \"beautiful\" because it describes the architecture of the city of Paris.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. small", "B. large", "C. medium", "D. enormous"],
+               "correctOption": "B",
+               "explanation": "The correct word is \"large\" because the city has a population of over 2 million people.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. buildings", "B. landscapes", "C. sights", "D. attractions"],
+               "correctOption": "C",
+               "explanation": "The correct word is \"sights\" because many people visit Paris to see its famous landmarks.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. little", "B. a lot", "C. some", "D. no"],
+               "correctOption": "B",
+               "explanation": "The correct word is \"a lot\" because the city has a lot to offer, including art, fashion, and food.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. culture", "B. history", "C. architecture", "D. atmosphere"],
+               "correctOption": "D",
+               "explanation": "The correct word is \"atmosphere\" because the city's atmosphere is a major part of its appeal.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The city of Paris is famous for its (1) ____________________ architecture and rich history. It is home to many famous landmarks such as the Eiffel Tower and the Louvre Museum. The city has a (2) ____________________ of over 2 million people and is a major tourist destination. Many people visit Paris every year to see its famous (3) ____________________. The city has (4) ____________________ to offer, including art, fashion, and food. The city's (5) ____________________ is a major part of its appeal.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "beautiful",
+               "explanation": "The correct word is \"beautiful\" because it describes the architecture of the city of Paris.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "large",
+               "explanation": "The correct word is \"large\" because the city has a population of over 2 million people.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "sights",
+               "explanation": "The correct word is \"sights\" because many people visit Paris to see its famous landmarks.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "a lot",
+               "explanation": "The correct word is \"a lot\" because the city has a lot to offer, including art, fashion, and food.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "atmosphere",
+               "explanation": "The correct word is \"atmosphere\" because the city's atmosphere is a major part of its appeal.",
+               "tips": "When filling in the gaps, try to choose a word that makes sense in the context of the surrounding text."
+            }
+         ]
+      }
+   ]
+}

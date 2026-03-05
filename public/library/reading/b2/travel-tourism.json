@@ -1,0 +1,284 @@
+{
+  "examTitle": "B2 Travel & Tourism Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Travel Destinations",
+         "content": "The ancient city of Petra is located in Jordan, a country in the Middle East. The city is famous for its rock-cut architecture, including the iconic Treasury building. Visitors to Petra can explore the city's ruins, which date back to the 6th century BC. The city's history is steeped in mystery, with many theories about its origins and purpose. (1) _______ by the Nabataeans, a group of skilled architects and engineers, Petra became a major center of trade and commerce. The city's strategic location made it an important stopover for merchants traveling between the East and West. (2) _______ the rise of the Roman Empire, Petra's importance began to decline. However, its stunning architecture and rich history continue to captivate visitors from around the world. (3) _______ the modern era, Petra has undergone significant restoration work to preserve its ancient structures. Today, it is one of the most popular tourist destinations in the world. (4) _______ its rich history and breathtaking scenery, Petra is a must-visit destination for anyone interested in ancient civilizations. (5) _______ its relatively small size, the city has a surprisingly diverse range of attractions. (6) _______ a UNESCO World Heritage Site, Petra is recognized for its cultural and historical significance. (7) _______ the many tourists who visit each year, Petra remains a hidden gem for those willing to explore its ancient ruins. (8) _______ its natural beauty and intriguing history, Petra is a place that will leave you in awe.",
+         "options": [
+            "A. Built",
+            "B. Founded",
+            "C. Constructed",
+            "D. Established"
+         ],
+         "instructions": "Read the text below and decide which answer best fits each gap.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "B. Founded"
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "A. Built"
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "C. Constructed"
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "D. Established"
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "C. Constructed"
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "A. Built"
+            },
+            {
+               "question": "Gap 7",
+               "correctOption": "B. Founded"
+            },
+            {
+               "question": "Gap 8",
+               "correctOption": "D. Established"
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Open Cloze on Travel Planning",
+         "content": "When planning a trip, (1) _______ essential to research the destination thoroughly. (2) _______ the local culture, customs, and laws is crucial to avoid any misunderstandings. (3) _______ the time of year, weather, and climate can greatly affect the trip. (4) _______ the local language, it's helpful to learn a few basic phrases to communicate with locals. (5) _______ the budget, it's essential to set a realistic budget and stick to it. (6) _______ the itinerary, it's a good idea to leave some room for spontaneity and flexibility. (7) _______ the accommodation, it's best to book in advance to avoid any last-minute hassles. (8) _______ the travel documents, it's necessary to have all the necessary documents, such as a passport, visa, and travel insurance.",
+         "options": [],
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "questions": [
+            {
+               "question": "Gap 9",
+               "correctOption": "is"
+            },
+            {
+               "question": "Gap 10",
+               "correctOption": "understanding"
+            },
+            {
+               "question": "Gap 11",
+               "correctOption": "considering"
+            },
+            {
+               "question": "Gap 12",
+               "correctOption": "speaking"
+            },
+            {
+               "question": "Gap 13",
+               "correctOption": "considering"
+            },
+            {
+               "question": "Gap 14",
+               "correctOption": "planning"
+            },
+            {
+               "question": "Gap 15",
+               "correctOption": "arranging"
+            },
+            {
+               "question": "Gap 16",
+               "correctOption": "checking"
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Word Formation on Travel Experiences",
+         "content": "The trip to the mountains was a unique (1) _______ of breathtaking scenery and thrilling activities. The landscape was dotted with towering peaks, serene lakes, and lush forests. We spent our days hiking through the wilderness, taking in the (2) _______ views from the top of the mountains. In the evenings, we would gather around the campfire, sharing stories and (3) _______ about our adventures. The (4) _______ of the trip was the sense of camaraderie and friendship that developed among our group. We had all come from different backgrounds, but our shared experiences had brought us together. The trip was a (5) _______ of our individual journeys, and we left with a newfound appreciation for the beauty of nature. As we descended back down to civilization, we felt (6) _______ and refreshed, ready to take on new challenges.",
+         "options": [],
+         "instructions": "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+         "questions": [
+            {
+               "question": "IMPROVE",
+               "correctOption": "improvement"
+            },
+            {
+               "question": "VIEW",
+               "correctOption": "views"
+            },
+            {
+               "question": "TALE",
+               "correctOption": "telling"
+            },
+            {
+               "question": "ASPECT",
+               "correctOption": "aspect"
+            },
+            {
+               "question": "SUMMATION",
+               "correctOption": "summation"
+            },
+            {
+               "question": "RENEWED",
+               "correctOption": "renewed"
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Key Word Transformations on Travel Planning",
+         "content": "When planning a trip, it's essential to consider all the factors that can affect the journey.",
+         "questions": [
+            {
+               "question": "I haven't been to Europe before. SINCE: I've always wanted to visit Paris.",
+               "options": [],
+               "correctOption": "since"
+            },
+            {
+               "question": "The company has been in operation for over 20 years. DESPITE: We have never faced a financial crisis.",
+               "options": [],
+               "correctOption": "despite"
+            },
+            {
+               "question": "I've been studying English for three years. UNTIL: I can speak fluently.",
+               "options": [],
+               "correctOption": "until"
+            },
+            {
+               "question": "The new policy has been implemented since 2010. DURING: We have seen a significant increase in efficiency.",
+               "options": [],
+               "correctOption": "during"
+            },
+            {
+               "question": "The company has been struggling to stay afloat. UNLESS: We receive additional funding.",
+               "options": [],
+               "correctOption": "unless"
+            },
+            {
+               "question": "I've been working on this project for months. BEFORE: I can submit the final report.",
+               "options": [],
+               "correctOption": "before"
+            }
+         ],
+         "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given."
+      },
+      {
+         "title": "Part 5: Multiple-Choice Reading Comprehension on Travel",
+         "content": "The article discusses the impact of climate change on tourism. In recent years, the number of tourists visiting destinations affected by climate change has increased significantly. According to the World Tourism Organization, the number of tourists visiting the Maldives has decreased by 20% due to rising sea levels. However, some tour operators are taking steps to mitigate the effects of climate change. For example, resorts are being built on stilts to protect against flooding. Additionally, tour operators are offering carbon offsetting schemes to reduce their carbon footprint. Despite these efforts, the impact of climate change on tourism is still a major concern.",
+         "options": [
+            "A. The number of tourists visiting destinations affected by climate change has decreased.",
+            "B. The number of tourists visiting destinations affected by climate change has increased.",
+            "C. The impact of climate change on tourism is still a major concern.",
+            "D. The number of tourists visiting the Maldives has increased."
+         ],
+         "instructions": "Read the text and answer Questions 1-6. For each question, choose the correct answer A, B, C or D.",
+         "questions": [
+            {
+               "question": "What does the article suggest about the impact of climate change on tourism?",
+               "correctOption": "B. The number of tourists visiting destinations affected by climate change has increased."
+            },
+            {
+               "question": "According to the World Tourism Organization, what has happened to the number of tourists visiting the Maldives?",
+               "correctOption": "A. The number of tourists visiting the Maldives has decreased by 20%."
+            },
+            {
+               "question": "What are some of the steps that tour operators are taking to mitigate the effects of climate change?",
+               "correctOption": "C. Some tour operators are offering carbon offsetting schemes to reduce their carbon footprint."
+            },
+            {
+               "question": "What is one of the concerns about the impact of climate change on tourism?",
+               "correctOption": "D. The impact of climate change on tourism is still a major concern."
+            },
+            {
+               "question": "What is being done to protect against flooding?",
+               "correctOption": "A. Resorts are being built on stilts."
+            },
+            {
+               "question": "What is being offered by tour operators to reduce their carbon footprint?",
+               "correctOption": "B. Carbon offsetting schemes."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Gapped Text on Travel Experiences",
+         "content": "The trip to the mountains was a unique experience that I will never forget. [Gap 1] the breathtaking scenery and thrilling activities, the landscape was dotted with towering peaks, serene lakes, and lush forests. We spent our days hiking through the wilderness, taking [Gap 2] the stunning views from the top of the mountains. In the evenings, we would gather around the campfire, sharing stories and experiences about our adventures. The camaraderie and friendship that developed among our group was [Gap 3] the highlight of the trip. We had all come from different backgrounds, but our shared experiences had brought us together. [Gap 4] the trip, we felt refreshed and rejuvenated, ready to take on new challenges. As we descended back down to civilization, we felt [Gap 5] and grateful for the experience. The memories of the trip will stay with me [Gap 6] a lifetime. The trip was a [Gap 7] of our individual journeys, and we left with a newfound appreciation for the beauty of nature. [Gap 8] the modern era, the mountains continue to inspire and captivate people from all over the world.",
+         "options": [
+            "A. The scenery was breathtaking and the activities were thrilling.",
+            "B. The mountains were dotted with towering peaks, serene lakes, and lush forests.",
+            "C. The camaraderie and friendship that developed among our group was the highlight of the trip.",
+            "D. We had all come from different backgrounds, but our shared experiences had brought us together.",
+            "E. The memories of the trip will stay with me forever.",
+            "F. The trip was a summation of our individual journeys.",
+            "G. The mountains continue to inspire and captivate people from all over the world."
+         ],
+         "instructions": "Six sentences have been removed from the text. Choose from the sentences A-G the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "correctOption": "A"
+            },
+            {
+               "question": "Gap 2",
+               "correctOption": "B"
+            },
+            {
+               "question": "Gap 3",
+               "correctOption": "C"
+            },
+            {
+               "question": "Gap 4",
+               "correctOption": "D"
+            },
+            {
+               "question": "Gap 5",
+               "correctOption": "E"
+            },
+            {
+               "question": "Gap 6",
+               "correctOption": "F"
+            },
+            {
+               "question": "Gap 7",
+               "correctOption": "F"
+            },
+            {
+               "question": "Gap 8",
+               "correctOption": "G"
+            }
+         ]
+      },
+      {
+         "title": "Part 7: Multiple Matching on Travel Experiences",
+         "content": "A. The mountains offered breathtaking scenery and thrilling activities.\nB. We spent our days hiking through the wilderness, taking in the stunning views from the top of the mountains.\nC. The camaraderie and friendship that developed among our group was the highlight of the trip.\nD. We had all come from different backgrounds, but our shared experiences had brought us together.\nE. The memories of the trip will stay with me forever.\nF. The trip was a summation of our individual journeys.\nG. The mountains continue to inspire and captivate people from all over the world.\n\nWhich of the following texts describe the experience of traveling to the mountains?\n1. Which text describes the scenery and activities of the trip?\n2. Which text describes the camaraderie and friendship that developed among the group?\n3. Which text describes the shared experiences that brought the group together?\n4. Which text describes the memories of the trip?\n5. Which text describes the trip as a summation of individual journeys?\n6. Which text describes the impact of the trip on people from all over the world?",
+         "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+         ],
+         "instructions": "Read the texts below. For Questions 1-6, choose from the sections A-G. Each section may be chosen more than once.",
+         "questions": [
+            {
+               "question": "Which text describes the scenery and activities of the trip?",
+               "correctOption": "A"
+            },
+            {
+               "question": "Which text describes the camaraderie and friendship that developed among the group?",
+               "correctOption": "C"
+            },
+            {
+               "question": "Which text describes the shared experiences that brought the group together?",
+               "correctOption": "D"
+            },
+            {
+               "question": "Which text describes the memories of the trip?",
+               "correctOption": "E"
+            },
+            {
+               "question": "Which text describes the trip as a summation of individual journeys?",
+               "correctOption": "F"
+            },
+            {
+               "question": "Which text describes the impact of the trip on people from all over the world?",
+               "correctOption": "G"
+            }
+         ]
+      }
+   ]
+}

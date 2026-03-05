@@ -1,0 +1,396 @@
+{
+  "examTitle": "Shopping & Fashion - CEFR B1 Mock Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The latest fashion trends have taken over the world of shopping. Gone are the days of dull and monotonous clothing. Designers have come up with something new and exciting, and people are loving it. The fashion industry is booming, and it's not just the clothes that are selling. Accessories, shoes, and even beauty products are flying off the shelves. Fashionistas are taking to social media to show off their latest purchases, and influencers are making a killing by promoting the latest trends. But with great fashion comes great responsibility. With so many options available, people are starting to realize that fast fashion is not as sustainable as they thought. They're starting to make a change and opt for eco-friendly clothing. The movement is growing, and it's not just about the clothes; it's about the people behind them too. Fashion is no longer just about looking good; it's about feeling good too.",
+         "questions": [
+            {
+               "question": "What does the writer say about the fashion industry?",
+               "options": [
+                  "A. It's declining due to the rise of fast fashion",
+                  "B. It's booming and people are loving it",
+                  "C. It's not as sustainable as it used to be",
+                  "D. It's only about clothes and not about people"
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that the fashion industry is booming and people are loving it. This is evident from the fact that designers are coming up with new and exciting trends, and people are buying into them.",
+               "tips": "Read the text carefully and look for key phrases that indicate the writer's opinion. Here, the phrase 'the fashion industry is booming' suggests that the writer is positive about the industry."
+            },
+            {
+               "question": "What is the writer suggesting about fast fashion?",
+               "options": [
+                  "A. It's a great way to stay fashionable",
+                  "B. It's not as sustainable as people thought",
+                  "C. It's a waste of money",
+                  "D. It's a trend that's here to stay"
+               ],
+               "correctOption": "B",
+               "explanation": "The writer suggests that fast fashion is not as sustainable as people thought. This is evident from the fact that people are starting to realize the negative impact of fast fashion and are making a change.",
+               "tips": "Look for phrases that indicate a change in opinion or a realization. Here, the phrase 'they're starting to realize' suggests that people are becoming aware of the negative impact of fast fashion."
+            },
+            {
+               "question": "What is the writer saying about fashionistas?",
+               "options": [
+                  "A. They're not fashionable",
+                  "B. They're taking to social media to show off their latest purchases",
+                  "C. They're not making a change",
+                  "D. They're not buying into the latest trends"
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that fashionistas are taking to social media to show off their latest purchases. This suggests that fashionistas are enthusiastic about the latest trends and want to share them with others.",
+               "tips": "Look for phrases that indicate the writer's opinion about a particular group. Here, the phrase 'fashionistas are taking to social media' suggests that the writer views fashionistas as enthusiastic and eager to share their fashion choices."
+            },
+            {
+               "question": "What is the writer saying about the movement towards eco-friendly clothing?",
+               "options": [
+                  "A. It's not a movement",
+                  "B. It's growing and people are making a change",
+                  "C. It's not sustainable",
+                  "D. It's only for fashionistas"
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that the movement towards eco-friendly clothing is growing and people are making a change. This suggests that the writer views the movement as positive and significant.",
+               "tips": "Look for phrases that indicate the writer's opinion about a particular trend or movement. Here, the phrase 'the movement is growing' suggests that the writer views the movement as positive and significant."
+            },
+            {
+               "question": "What is the writer saying about fashion?",
+               "options": [
+                  "A. It's only about clothes",
+                  "B. It's only about people",
+                  "C. It's about looking good",
+                  "D. It's about feeling good too"
+               ],
+               "correctOption": "D",
+               "explanation": "The writer states that fashion is not just about looking good, but also about feeling good. This suggests that the writer views fashion as a way to express oneself and feel confident.",
+               "tips": "Look for phrases that indicate the writer's opinion about the purpose of fashion. Here, the phrase 'it's about feeling good too' suggests that the writer views fashion as a way to express oneself and feel confident."
+            },
+            {
+               "question": "What is the writer saying about influencers?",
+               "options": [
+                  "A. They're not making a killing",
+                  "B. They're making a killing by promoting the latest trends",
+                  "C. They're not promoting the latest trends",
+                  "D. They're only promoting eco-friendly clothing"
+               ],
+               "correctOption": "B",
+               "explanation": "The writer states that influencers are making a killing by promoting the latest trends. This suggests that the writer views influencers as successful and influential.",
+               "tips": "Look for phrases that indicate the writer's opinion about influencers. Here, the phrase 'influencers are making a killing' suggests that the writer views influencers as successful and influential."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "descriptions": [
+               "Person A is a fashion student who is passionate about sustainable fashion.",
+               "Person B is a busy professional who loves to shop online.",
+               "Person C is a fashion influencer who promotes the latest trends.",
+               "Person D is an environmental activist who is against fast fashion.",
+               "Person E is a young adult who is just starting to build their wardrobe."
+            ],
+            "texts": [
+               "Text A: The latest fashion trends are all about sustainability and eco-friendliness. Brands are now using recycled materials and minimizing waste.",
+               "Text B: Online shopping has made it so much easier to get the latest fashion trends. No need to leave the house or deal with crowds.",
+               "Text C: The latest fashion trends are all about statement pieces and bold designs. Don't be afraid to take risks and try something new.",
+               "Text D: Fast fashion is a scourge on the planet. We need to make a change and opt for sustainable fashion.",
+               "Text E: Building a wardrobe from scratch can be overwhelming. Here's a guide to help you get started.",
+               "Text F: Fashion trends come and go, but some things remain timeless. Invest in quality pieces that will last.",
+               "Text G: The fashion industry is a billion-dollar business. With so much money on the line, it's no wonder that designers are pushing the boundaries of fashion.",
+               "Text H: Sustainable fashion is not just about the clothes; it's about the people behind them too. Let's make a change and support fair trade practices."
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Person A?",
+               "options": [
+                  "A", "B", "C", "D", "E", "F", "G", "H"
+               ],
+               "correctOption": "A",
+               "explanation": "Person A is a fashion student who is passionate about sustainable fashion. Text A is the most suitable for Person A as it talks about the latest fashion trends being all about sustainability and eco-friendliness.",
+               "tips": "Look for key phrases in the descriptions that match the content of the texts. Here, the phrase 'sustainable fashion' in Person A's description matches the content of Text A."
+            },
+            {
+               "question": "Which text would be most suitable for Person B?",
+               "options": [
+                  "A", "B", "C", "D", "E", "F", "G", "H"
+               ],
+               "correctOption": "B",
+               "explanation": "Person B is a busy professional who loves to shop online. Text B is the most suitable for Person B as it talks about online shopping making it easier to get the latest fashion trends.",
+               "tips": "Look for key phrases in the descriptions that match the content of the texts. Here, the phrase 'shop online' in Person B's description matches the content of Text B."
+            },
+            {
+               "question": "Which text would be most suitable for Person C?",
+               "options": [
+                  "A", "B", "C", "D", "E", "F", "G", "H"
+               ],
+               "correctOption": "C",
+               "explanation": "Person C is a fashion influencer who promotes the latest trends. Text C is the most suitable for Person C as it talks about statement pieces and bold designs.",
+               "tips": "Look for key phrases in the descriptions that match the content of the texts. Here, the phrase 'promotes the latest trends' in Person C's description matches the content of Text C."
+            },
+            {
+               "question": "Which text would be most suitable for Person D?",
+               "options": [
+                  "A", "B", "C", "D", "E", "F", "G", "H"
+               ],
+               "correctOption": "D",
+               "explanation": "Person D is an environmental activist who is against fast fashion. Text D is the most suitable for Person D as it talks about fast fashion being a scourge on the planet.",
+               "tips": "Look for key phrases in the descriptions that match the content of the texts. Here, the phrase 'against fast fashion' in Person D's description matches the content of Text D."
+            },
+            {
+               "question": "Which text would be most suitable for Person E?",
+               "options": [
+                  "A", "B", "C", "D", "E", "F", "G", "H"
+               ],
+               "correctOption": "E",
+               "explanation": "Person E is a young adult who is just starting to build their wardrobe. Text E is the most suitable for Person E as it talks about building a wardrobe from scratch.",
+               "tips": "Look for key phrases in the descriptions that match the content of the texts. Here, the phrase 'building a wardrobe' in Person E's description matches the content of Text E."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": {
+            "text1": "The latest fashion trend is all about statement pieces and bold designs. Don't be afraid to take risks and try something new.",
+            "text2": "Fashion trends come and go, but some things remain timeless. Invest in quality pieces that will last.",
+            "text3": "The fashion industry is a billion-dollar business. With so much money on the line, it's no wonder that designers are pushing the boundaries of fashion.",
+            "text4": "Sustainable fashion is not just about the clothes; it's about the people behind them too. Let's make a change and support fair trade practices.",
+            "text5": "Building a wardrobe from scratch can be overwhelming. Here's a guide to help you get started."
+         },
+         "questions": [
+            {
+               "question": "What is the main idea of Text 1?",
+               "options": [
+                  "A. Fashion trends are all about being safe and boring",
+                  "B. Fashion trends are all about statement pieces and bold designs",
+                  "C. Fashion trends are all about investing in quality pieces"
+               ],
+               "correctOption": "B",
+               "explanation": "The main idea of Text 1 is that fashion trends are all about statement pieces and bold designs. The text encourages readers to take risks and try something new.",
+               "tips": "Look for key phrases in the text that indicate the main idea. Here, the phrase 'statement pieces and bold designs' suggests that the text is encouraging readers to be bold and try new things."
+            },
+            {
+               "question": "What is the main idea of Text 2?",
+               "options": [
+                  "A. Fashion trends are all about being safe and boring",
+                  "B. Fashion trends are all about investing in quality pieces",
+                  "C. Fashion trends are all about statement pieces and bold designs"
+               ],
+               "correctOption": "B",
+               "explanation": "The main idea of Text 2 is that fashion trends are all about investing in quality pieces. The text encourages readers to invest in pieces that will last.",
+               "tips": "Look for key phrases in the text that indicate the main idea. Here, the phrase 'invest in quality pieces' suggests that the text is encouraging readers to invest in pieces that will last."
+            },
+            {
+               "question": "What is the main idea of Text 3?",
+               "options": [
+                  "A. The fashion industry is not a billion-dollar business",
+                  "B. The fashion industry is a billion-dollar business",
+                  "C. The fashion industry is a small business"
+               ],
+               "correctOption": "B",
+               "explanation": "The main idea of Text 3 is that the fashion industry is a billion-dollar business. The text states that with so much money on the line, designers are pushing the boundaries of fashion.",
+               "tips": "Look for key phrases in the text that indicate the main idea. Here, the phrase 'a billion-dollar business' suggests that the text is stating a fact about the size of the fashion industry."
+            },
+            {
+               "question": "What is the main idea of Text 4?",
+               "options": [
+                  "A. Sustainable fashion is not important",
+                  "B. Sustainable fashion is not just about the clothes",
+                  "C. Sustainable fashion is not a thing"
+               ],
+               "correctOption": "B",
+               "explanation": "The main idea of Text 4 is that sustainable fashion is not just about the clothes. The text states that sustainable fashion is about the people behind the clothes too.",
+               "tips": "Look for key phrases in the text that indicate the main idea. Here, the phrase 'not just about the clothes' suggests that the text is stating a fact about sustainable fashion."
+            },
+            {
+               "question": "What is the main idea of Text 5?",
+               "options": [
+                  "A. Building a wardrobe from scratch is easy",
+                  "B. Building a wardrobe from scratch is overwhelming",
+                  "C. Building a wardrobe from scratch is not necessary"
+               ],
+               "correctOption": "B",
+               "explanation": "The main idea of Text 5 is that building a wardrobe from scratch can be overwhelming. The text states that here's a guide to help readers get started.",
+               "tips": "Look for key phrases in the text that indicate the main idea. Here, the phrase 'overwhelming' suggests that the text is stating a fact about the difficulty of building a wardrobe from scratch."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "The fashion industry is a billion-dollar business. With so much money on the line, designers are pushing the boundaries of fashion. They are creating new and innovative designs that are making headlines. The latest fashion trend is all about statement pieces and bold designs. Don't be afraid to take risks and try something new. [Gap 1] The fashion industry is not just about clothes; it's about the people behind them too. [Gap 2] Fashion trends come and go, but some things remain timeless. [Gap 3] Invest in quality pieces that will last. [Gap 4] Building a wardrobe from scratch can be overwhelming. [Gap 5] Here's a guide to help you get started. A. The fashion industry is a billion-dollar business. B. Fashion trends are all about statement pieces and bold designs. C. The fashion industry is not just about clothes; it's about the people behind them too. D. Fashion trends come and go, but some things remain timeless. E. Invest in quality pieces that will last. F. Building a wardrobe from scratch can be overwhelming.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. The fashion industry is a billion-dollar business.",
+                  "B. Fashion trends are all about statement pieces and bold designs.",
+                  "C. The fashion industry is not just about clothes; it's about the people behind them too.",
+                  "D. Fashion trends come and go, but some things remain timeless.",
+                  "E. Invest in quality pieces that will last.",
+                  "F. Building a wardrobe from scratch can be overwhelming."
+               ],
+               "correctOption": "C",
+               "explanation": "The correct sentence for Gap 1 is 'The fashion industry is not just about clothes; it's about the people behind them too.' This sentence fits perfectly in the text as it emphasizes the importance of the people behind the fashion industry.",
+               "tips": "Look for sentences that fit the context of the text. Here, the sentence 'The fashion industry is not just about clothes; it's about the people behind them too' fits perfectly as it emphasizes the importance of the people behind the fashion industry."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. The fashion industry is a billion-dollar business.",
+                  "B. Fashion trends are all about statement pieces and bold designs.",
+                  "C. The fashion industry is not just about clothes; it's about the people behind them too.",
+                  "D. Fashion trends come and go, but some things remain timeless.",
+                  "E. Invest in quality pieces that will last.",
+                  "F. Building a wardrobe from scratch can be overwhelming."
+               ],
+               "correctOption": "D",
+               "explanation": "The correct sentence for Gap 2 is 'Fashion trends come and go, but some things remain timeless.' This sentence fits perfectly in the text as it emphasizes the importance of timeless fashion trends.",
+               "tips": "Look for sentences that fit the context of the text. Here, the sentence 'Fashion trends come and go, but some things remain timeless' fits perfectly as it emphasizes the importance of timeless fashion trends."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. The fashion industry is a billion-dollar business.",
+                  "B. Fashion trends are all about statement pieces and bold designs.",
+                  "C. The fashion industry is not just about clothes; it's about the people behind them too.",
+                  "D. Fashion trends come and go, but some things remain timeless.",
+                  "E. Invest in quality pieces that will last.",
+                  "F. Building a wardrobe from scratch can be overwhelming."
+               ],
+               "correctOption": "E",
+               "explanation": "The correct sentence for Gap 3 is 'Invest in quality pieces that will last.' This sentence fits perfectly in the text as it emphasizes the importance of investing in quality pieces that will last.",
+               "tips": "Look for sentences that fit the context of the text. Here, the sentence 'Invest in quality pieces that will last' fits perfectly as it emphasizes the importance of investing in quality pieces that will last."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. The fashion industry is a billion-dollar business.",
+                  "B. Fashion trends are all about statement pieces and bold designs.",
+                  "C. The fashion industry is not just about clothes; it's about the people behind them too.",
+                  "D. Fashion trends come and go, but some things remain timeless.",
+                  "E. Invest in quality pieces that will last.",
+                  "F. Building a wardrobe from scratch can be overwhelming."
+               ],
+               "correctOption": "F",
+               "explanation": "The correct sentence for Gap 4 is 'Building a wardrobe from scratch can be overwhelming.' This sentence fits perfectly in the text as it emphasizes the importance of building a wardrobe from scratch being overwhelming.",
+               "tips": "Look for sentences that fit the context of the text. Here, the sentence 'Building a wardrobe from scratch can be overwhelming' fits perfectly as it emphasizes the importance of building a wardrobe from scratch being overwhelming."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. The fashion industry is a billion-dollar business.",
+                  "B. Fashion trends are all about statement pieces and bold designs.",
+                  "C. The fashion industry is not just about clothes; it's about the people behind them too.",
+                  "D. Fashion trends come and go, but some things remain timeless.",
+                  "E. Invest in quality pieces that will last.",
+                  "F. Building a wardrobe from scratch can be overwhelming."
+               ],
+               "correctOption": "A",
+               "explanation": "The correct sentence for Gap 5 is 'The fashion industry is a billion-dollar business.' This sentence fits perfectly in the text as it emphasizes the importance of the fashion industry being a billion-dollar business.",
+               "tips": "Look for sentences that fit the context of the text. Here, the sentence 'The fashion industry is a billion-dollar business' fits perfectly as it emphasizes the importance of the fashion industry being a billion-dollar business."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "The fashion industry is a (1) _______ business. With so much money on the line, designers are (2) _______ the boundaries of fashion. They are creating new and innovative designs that are making headlines. The latest fashion trend is all about (3) _______ pieces and bold designs. Don't be afraid to (4) _______ risks and try something new.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. big",
+                  "B. small",
+                  "C. billion-dollar",
+                  "D. profitable"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct word for Gap 1 is 'billion-dollar'. This word fits perfectly in the text as it emphasizes the importance of the fashion industry being a billion-dollar business.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'billion-dollar' fits perfectly as it emphasizes the importance of the fashion industry being a billion-dollar business."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. pushing",
+                  "B. pulling",
+                  "C. creating",
+                  "D. making"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct word for Gap 2 is 'pushing'. This word fits perfectly in the text as it emphasizes the importance of designers pushing the boundaries of fashion.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'pushing' fits perfectly as it emphasizes the importance of designers pushing the boundaries of fashion."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. statement",
+                  "B. bold",
+                  "C. innovative",
+                  "D. creative"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct word for Gap 3 is 'statement'. This word fits perfectly in the text as it emphasizes the importance of statement pieces and bold designs.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'statement' fits perfectly as it emphasizes the importance of statement pieces and bold designs."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. take",
+                  "B. make",
+                  "C. take",
+                  "D. make"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct word for Gap 4 is 'take'. This word fits perfectly in the text as it emphasizes the importance of taking risks and trying something new.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'take' fits perfectly as it emphasizes the importance of taking risks and trying something new."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The fashion industry is a (1) _______ business. With so much (2) _______ on the line, designers are pushing the boundaries of fashion. They are creating new and (3) _______ designs that are making headlines. The latest fashion trend is all about (4) _______ pieces and bold designs. Don't be afraid to (5) _______ risks and try something new.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "billion-dollar",
+               "explanation": "The correct word for Gap 1 is 'billion-dollar'. This word fits perfectly in the text as it emphasizes the importance of the fashion industry being a billion-dollar business.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'billion-dollar' fits perfectly as it emphasizes the importance of the fashion industry being a billion-dollar business."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "money",
+               "explanation": "The correct word for Gap 2 is 'money'. This word fits perfectly in the text as it emphasizes the importance of money being on the line.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'money' fits perfectly as it emphasizes the importance of money being on the line."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "innovative",
+               "explanation": "The correct word for Gap 3 is 'innovative'. This word fits perfectly in the text as it emphasizes the importance of designers creating innovative designs.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'innovative' fits perfectly as it emphasizes the importance of designers creating innovative designs."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "statement",
+               "explanation": "The correct word for Gap 4 is 'statement'. This word fits perfectly in the text as it emphasizes the importance of statement pieces and bold designs.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'statement' fits perfectly as it emphasizes the importance of statement pieces and bold designs."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "take",
+               "explanation": "The correct word for Gap 5 is 'take'. This word fits perfectly in the text as it emphasizes the importance of taking risks and trying something new.",
+               "tips": "Look for words that fit the context of the text. Here, the word 'take' fits perfectly as it emphasizes the importance of taking risks and trying something new."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,434 @@
+{
+  "examTitle": "Sport & Fitness Reading and Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading on Sports and Fitness Trends",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The sports and fitness industry has seen a significant change in recent years. People are now more aware of the importance of staying fit and healthy. As a result, there has been a rise in the number of people participating in sports and fitness activities. This trend is expected to continue in the coming years. The industry is also seeing a shift towards more sustainable and eco-friendly practices. Companies are now focusing on using recycled materials and reducing their carbon footprint. The trend is expected to have a positive impact on the environment.",
+         "questions": [
+            {
+               "question": "What is the main reason for the rise in the number of people participating in sports and fitness activities?",
+               "options": [
+                  "A. People are now more aware of the importance of staying fit and healthy",
+                  "B. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "D. The trend is expected to have a positive impact on the environment"
+               ],
+               "explanation": "The correct answer is A. The text states that people are now more aware of the importance of staying fit and healthy, which is the main reason for the rise in the number of people participating in sports and fitness activities. The other options are not supported by the text.",
+               "tips": "Read the text carefully and look for the main reason mentioned for the rise in the number of people participating in sports and fitness activities."
+            },
+            {
+               "question": "What is the industry seeing a shift towards?",
+               "options": [
+                  "A. Using more resources and increasing production",
+                  "B. Using recycled materials and reducing their carbon footprint",
+                  "C. Focusing on the environment and sustainability",
+                  "D. Reducing the number of people participating in sports and fitness activities"
+               ],
+               "explanation": "The correct answer is B. The text states that the industry is seeing a shift towards more sustainable and eco-friendly practices, which includes using recycled materials and reducing their carbon footprint. The other options are not supported by the text.",
+               "tips": "Look for the phrase 'shift towards' in the text and identify what the industry is shifting towards."
+            },
+            {
+               "question": "What is expected to have a positive impact on the environment?",
+               "options": [
+                  "A. The rise in the number of people participating in sports and fitness activities",
+                  "B. The industry seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. Companies using recycled materials and reducing their carbon footprint",
+                  "D. The trend in the sports and fitness industry"
+               ],
+               "explanation": "The correct answer is C. The text states that the trend is expected to have a positive impact on the environment, and the specific action mentioned is companies using recycled materials and reducing their carbon footprint. The other options are not supported by the text.",
+               "tips": "Look for the phrase 'positive impact on the environment' in the text and identify what action is expected to have this impact."
+            },
+            {
+               "question": "What is the sports and fitness industry expected to continue in the coming years?",
+               "options": [
+                  "A. Decreasing in popularity",
+                  "B. Remaining the same",
+                  "C. Increasing in popularity",
+                  "D. Focusing on the environment and sustainability"
+               ],
+               "explanation": "The correct answer is C. The text states that the trend is expected to continue in the coming years, and the trend is the rise in the number of people participating in sports and fitness activities, which is expected to increase in popularity. The other options are not supported by the text.",
+               "tips": "Look for the phrase 'expected to continue' in the text and identify what the industry is expected to continue."
+            },
+            {
+               "question": "What is the main change in the sports and fitness industry in recent years?",
+               "options": [
+                  "A. People are now less aware of the importance of staying fit and healthy",
+                  "B. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "D. The trend is expected to have a negative impact on the environment"
+               ],
+               "explanation": "The correct answer is B. The text states that people are now more aware of the importance of staying fit and healthy, which is the main reason for the change in the industry. The other options are not supported by the text.",
+               "tips": "Read the text carefully and look for the main reason mentioned for the change in the industry."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "profiles": [
+               "Alice is a 25-year-old fitness instructor who loves running and swimming.",
+               "Bob is a 30-year-old businessman who enjoys playing golf and tennis.",
+               "Charlie is a 20-year-old student who is interested in yoga and meditation.",
+               "David is a 40-year-old entrepreneur who is passionate about cycling and hiking.",
+               "Emily is a 28-year-old athlete who specializes in triathlons and marathons."
+            ],
+            "texts": [
+               "A. The benefits of yoga for mental health",
+               "B. The importance of proper nutrition for athletes",
+               "C. The advantages of cycling as a mode of transportation",
+               "D. The history of triathlons and their evolution",
+               "E. The benefits of meditation for stress relief",
+               "F. The importance of warming up before exercise",
+               "G. The benefits of swimming for cardiovascular health",
+               "H. The history of golf and its origins"
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Alice?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "explanation": "The correct answer is G. The text 'The benefits of swimming for cardiovascular health' would be most suitable for Alice, who loves swimming.",
+               "tips": "Look at the description of Alice and match her interests with the texts."
+            },
+            {
+               "question": "Which text would be most suitable for Bob?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "explanation": "The correct answer is H. The text 'The history of golf and its origins' would be most suitable for Bob, who enjoys playing golf.",
+               "tips": "Look at the description of Bob and match his interests with the texts."
+            },
+            {
+               "question": "Which text would be most suitable for Charlie?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "explanation": "The correct answer is A. The text 'The benefits of yoga for mental health' would be most suitable for Charlie, who is interested in yoga and meditation.",
+               "tips": "Look at the description of Charlie and match his interests with the texts."
+            },
+            {
+               "question": "Which text would be most suitable for David?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "explanation": "The correct answer is C. The text 'The advantages of cycling as a mode of transportation' would be most suitable for David, who is passionate about cycling and hiking.",
+               "tips": "Look at the description of David and match his interests with the texts."
+            },
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H"
+               ],
+               "explanation": "The correct answer is D. The text 'The history of triathlons and their evolution' would be most suitable for Emily, who specializes in triathlons and marathons.",
+               "tips": "Look at the description of Emily and match her interests with the texts."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            "A) The new gym in town offers a variety of fitness classes, including yoga, Pilates, and spinning. Members can also use the state-of-the-art equipment and take advantage of personalized training sessions.",
+            "B) The local park is a great place to go for a run or a bike ride. It's also a popular spot for picnics and barbecues during the summer months.",
+            "C) The new sports center is a great place to meet friends and make new ones. It offers a range of activities, including basketball, soccer, and volleyball.",
+            "D) The city's cycling infrastructure is being improved, with new bike lanes and bike-share programs being introduced. This will make it easier for people to get around the city without a car.",
+            "E) The local swimming pool is a great place to learn how to swim or improve your existing skills. It's also a popular spot for water aerobics and other aquatic activities.",
+            "F) The new fitness studio offers a range of classes, including Zumba, kickboxing, and dance-based workouts. Members can also use the studio's equipment and take advantage of personalized training sessions.",
+            "G) The city's parks and recreation department offers a variety of programs and activities for kids and adults, including sports leagues, art classes, and fitness programs.",
+            "H) The local running club is a great place to meet other runners and improve your skills. It offers a range of training programs and runs, including hill repeats and long runs."
+         ],
+         "questions": [
+            {
+               "question": "What type of fitness classes are offered at the new gym in town?",
+               "options": [
+                  "A. Yoga, Pilates, and spinning",
+                  "B. Zumba, kickboxing, and dance-based workouts",
+                  "C. Basketball, soccer, and volleyball",
+                  "D. None of the above"
+               ],
+               "explanation": "The correct answer is A. The text states that the gym offers yoga, Pilates, and spinning classes.",
+               "tips": "Read the text carefully and look for the type of fitness classes mentioned."
+            },
+            {
+               "question": "What is a popular activity at the local park?",
+               "options": [
+                  "A. Swimming",
+                  "B. Running",
+                  "C. Picnics and barbecues",
+                  "D. None of the above"
+               ],
+               "explanation": "The correct answer is C. The text states that the park is a popular spot for picnics and barbecues during the summer months.",
+               "tips": "Read the text carefully and look for the popular activity mentioned."
+            },
+            {
+               "question": "What type of training sessions are offered at the new gym in town?",
+               "options": [
+                  "A. Personalized training sessions",
+                  "B. Group fitness classes",
+                  "C. One-on-one training sessions",
+                  "D. None of the above"
+               ],
+               "explanation": "The correct answer is A. The text states that members can take advantage of personalized training sessions.",
+               "tips": "Read the text carefully and look for the type of training sessions mentioned."
+            },
+            {
+               "question": "What is being improved in the city?",
+               "options": [
+                  "A. The city's cycling infrastructure",
+                  "B. The city's running infrastructure",
+                  "C. The city's swimming infrastructure",
+                  "D. None of the above"
+               ],
+               "explanation": "The correct answer is A. The text states that the city's cycling infrastructure is being improved.",
+               "tips": "Read the text carefully and look for the type of infrastructure being improved."
+            },
+            {
+               "question": "What type of water activities are offered at the local swimming pool?",
+               "options": [
+                  "A. Water aerobics and other aquatic activities",
+                  "B. Zumba and kickboxing classes",
+                  "C. Basketball and soccer leagues",
+                  "D. None of the above"
+               ],
+               "explanation": "The correct answer is A. The text states that the pool offers water aerobics and other aquatic activities.",
+               "tips": "Read the text carefully and look for the type of water activities mentioned."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text — Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "The sports and fitness industry has seen a significant change in recent years. People are now more aware of the importance of staying fit and healthy. As a result, there has been a rise in the number of people participating in sports and fitness activities. This trend is expected to continue in the coming years. The industry is also seeing a shift towards more sustainable and eco-friendly practices. Companies are now focusing on using recycled materials and reducing their carbon footprint. The trend is expected to have a positive impact on the environment. [Gap 1] [Gap 2] [Gap 3] [Gap 4] [Gap 5]",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. People are now more aware of the importance of staying fit and healthy",
+                  "B. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "D. The trend is expected to have a negative impact on the environment",
+                  "E. The sports and fitness industry has seen a significant change in recent years",
+                  "F. This trend is expected to continue in the coming years"
+               ],
+               "correctOption": "A",
+               "explanation": "The correct answer is A. The sentence completes the thought in the first paragraph.",
+               "tips": "Read the text carefully and look for the sentence that completes the thought in the first paragraph."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "B. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "C. The trend is expected to have a negative impact on the environment",
+                  "D. The sports and fitness industry has seen a significant change in recent years",
+                  "E. People are now more aware of the importance of staying fit and healthy",
+                  "F. This trend is expected to continue in the coming years"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. The sentence explains the shift towards more sustainable and eco-friendly practices.",
+               "tips": "Read the text carefully and look for the sentence that explains the shift towards more sustainable and eco-friendly practices."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. People are now more aware of the importance of staying fit and healthy",
+                  "B. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. The trend is expected to have a negative impact on the environment",
+                  "D. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "E. The sports and fitness industry has seen a significant change in recent years",
+                  "F. This trend is expected to continue in the coming years"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. The sentence explains the focus on using recycled materials and reducing carbon footprint.",
+               "tips": "Read the text carefully and look for the sentence that explains the focus on using recycled materials and reducing carbon footprint."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. People are now more aware of the importance of staying fit and healthy",
+                  "B. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. The trend is expected to have a negative impact on the environment",
+                  "D. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "E. The sports and fitness industry has seen a significant change in recent years",
+                  "F. This trend is expected to continue in the coming years"
+               ],
+               "correctOption": "F",
+               "explanation": "The correct answer is F. The sentence explains the expected continuation of the trend.",
+               "tips": "Read the text carefully and look for the sentence that explains the expected continuation of the trend."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. People are now more aware of the importance of staying fit and healthy",
+                  "B. The industry is seeing a shift towards more sustainable and eco-friendly practices",
+                  "C. The trend is expected to have a negative impact on the environment",
+                  "D. Companies are now focusing on using recycled materials and reducing their carbon footprint",
+                  "E. The sports and fitness industry has seen a significant change in recent years",
+                  "F. This trend is expected to continue in the coming years"
+               ],
+               "correctOption": "E",
+               "explanation": "The correct answer is E. The sentence explains the significant change in recent years.",
+               "tips": "Read the text carefully and look for the sentence that explains the significant change in recent years."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "The company is (1) _______ a new product line that focuses on sustainable and eco-friendly practices. The new product line is called 'Eco-Friendly' and it includes a range of products such as reusable bags, water bottles, and coffee filters. The company is (2) _______ to launch the new product line in the next quarter. The company's goal is to reduce its carbon footprint and (3) _______ a positive impact on the environment. The new product line is expected to be (4) _______ in the market and will be available for purchase online and in-store. The company is (5) _______ to work with suppliers who share its values and commitment to sustainability.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [
+                  "A. launching",
+                  "B. introducing",
+                  "C. developing",
+                  "D. producing",
+                  "E. distributing",
+                  "F. manufacturing"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. The verb 'introducing' is the best fit for the context.",
+               "tips": "Read the text carefully and look for the verb that best fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [
+                  "A. looking forward to",
+                  "B. planning to",
+                  "C. expecting to",
+                  "D. hoping to",
+                  "E. aiming to",
+                  "F. trying to"
+               ],
+               "correctOption": "B",
+               "explanation": "The correct answer is B. The verb 'planning to' is the best fit for the context.",
+               "tips": "Read the text carefully and look for the verb that best fits the context."
+            },
+            {
+               "question": "Gap 3",
+               "options": [
+                  "A. make",
+                  "B. have",
+                  "C. do",
+                  "D. create",
+                  "E. achieve",
+                  "F. produce"
+               ],
+               "correctOption": "E",
+               "explanation": "The correct answer is E. The verb 'achieve' is the best fit for the context.",
+               "tips": "Read the text carefully and look for the verb that best fits the context."
+            },
+            {
+               "question": "Gap 4",
+               "options": [
+                  "A. successful",
+                  "B. popular",
+                  "C. profitable",
+                  "D. innovative",
+                  "E. effective",
+                  "F. successful"
+               ],
+               "correctOption": "D",
+               "explanation": "The correct answer is D. The adjective 'innovative' is the best fit for the context.",
+               "tips": "Read the text carefully and look for the adjective that best fits the context."
+            },
+            {
+               "question": "Gap 5",
+               "options": [
+                  "A. eager to",
+                  "B. willing to",
+                  "C. committed to",
+                  "D. dedicated to",
+                  "E. passionate about",
+                  "F. enthusiastic about"
+               ],
+               "correctOption": "C",
+               "explanation": "The correct answer is C. The phrase 'committed to' is the best fit for the context.",
+               "tips": "Read the text carefully and look for the phrase that best fits the context."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The company is (1) _______ a new product line that focuses on sustainable and eco-friendly practices. The new product line is called 'Eco-Friendly' and it includes a range of products such as reusable bags, water bottles, and coffee filters. The company is (2) _______ to launch the new product line in the next quarter. The company's goal is to (3) _______ its carbon footprint and have a positive impact on the environment. The new product line is (4) _______ to be successful in the market and will be available for purchase online and in-store. The company is (5) _______ to work with suppliers who share its values and commitment to sustainability.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "introducing",
+               "explanation": "The correct answer is 'introducing'. The verb is the best fit for the context.",
+               "tips": "Read the text carefully and look for the verb that best fits the context."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "planning",
+               "explanation": "The correct answer is 'planning'. The verb is the best fit for the context.",
+               "tips": "Read the text carefully and look for the verb that best fits the context."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "reduce",
+               "explanation": "The correct answer is 'reduce'. The verb is the best fit for the context.",
+               "tips": "Read the text carefully and look for the verb that best fits the context."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "expected",
+               "explanation": "The correct answer is 'expected'. The adjective is the best fit for the context.",
+               "tips": "Read the text carefully and look for the adjective that best fits the context."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "committed",
+               "explanation": "The correct answer is 'committed'. The adjective is the best fit for the context.",
+               "tips": "Read the text carefully and look for the adjective that best fits the context."
+            }
+         ]
+      }
+   ]
+}

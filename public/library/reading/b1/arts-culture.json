@@ -1,0 +1,356 @@
+{
+  "examTitle": "CEFR B1 Mock Reading and Use of English Exam - Arts & Culture",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Reading Comprehension - Gallery Opening",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The art world is buzzing with excitement as the new gallery, 'The Artisan', prepares to open its doors to the public. The gallery's owner, Emma, has curated a stunning collection of modern art pieces that showcase the work of local artists. The grand opening event is scheduled to take place on Friday, March 19th, and promises to be an unforgettable evening. Guests will have the opportunity to mingle with the artists, enjoy live music, and be among the first to see the gallery's impressive collection. 'The Artisan' aims to provide a unique and immersive experience for art enthusiasts, making it a must-visit destination for anyone interested in the world of art.",
+         "questions": [
+            {
+               "question": "What is the name of the new gallery mentioned in the text?",
+               "options": ["The Modern Art Gallery", "The Artisan", "The Local Art Gallery", "The Art World"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'The Artisan' because it is explicitly stated in the text as the name of the new gallery. The other options are incorrect because they are either too general (The Modern Art Gallery) or not mentioned in the text (The Local Art Gallery, The Art World).",
+               "tips": "When answering multiple-choice reading comprehension questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "When is the grand opening event scheduled to take place?",
+               "options": ["Friday, March 12th", "Friday, March 19th", "Saturday, March 26th", "Sunday, April 2nd"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'Friday, March 19th' because it is explicitly stated in the text as the date of the grand opening event. The other options are incorrect because they are either too early (Friday, March 12th) or too late (Saturday, March 26th, Sunday, April 2nd).",
+               "tips": "When answering multiple-choice reading comprehension questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "What will guests have the opportunity to do during the grand opening event?",
+               "options": ["Mingle with the artists and enjoy live music", "Buy art pieces and attend a lecture", "Eat food and drink wine", "Take a tour of the gallery"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'Mingle with the artists and enjoy live music' because it is explicitly stated in the text as one of the activities that guests will have the opportunity to do during the grand opening event. The other options are incorrect because they are either too general (Buy art pieces and attend a lecture) or not mentioned in the text (Eat food and drink wine, Take a tour of the gallery).",
+               "tips": "When answering multiple-choice reading comprehension questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "What is the main aim of 'The Artisan'?",
+               "options": ["To provide a unique and immersive experience for art enthusiasts", "To sell art pieces to tourists", "To host art exhibitions for local artists", "To offer art classes for children"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'To provide a unique and immersive experience for art enthusiasts' because it is explicitly stated in the text as the main aim of 'The Artisan'. The other options are incorrect because they are either too specific (To sell art pieces to tourists) or not mentioned in the text (To host art exhibitions for local artists, To offer art classes for children).",
+               "tips": "When answering multiple-choice reading comprehension questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Why is the grand opening event an unforgettable evening?",
+               "options": ["Because it is a charity event", "Because it features the work of local artists", "Because it promises to be a fun and entertaining experience", "Because it takes place on a Friday night"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'Because it promises to be a fun and entertaining experience' because it is implied in the text that the grand opening event will be an unforgettable evening due to its promise of fun and entertainment. The other options are incorrect because they are either too general (Because it is a charity event) or not mentioned in the text (Because it features the work of local artists, Because it takes place on a Friday night).",
+               "tips": "When answering multiple-choice reading comprehension questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts - Art Enthusiasts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "people": [
+               {
+                  "name": "Emily",
+                  "description": "Emily is a 25-year-old art student who loves modern art and often attends gallery openings."
+               },
+               {
+                  "name": "David",
+                  "description": "David is a 30-year-old businessman who enjoys collecting art pieces and attending art exhibitions."
+               },
+               {
+                  "name": "Sarah",
+                  "description": "Sarah is a 28-year-old writer who loves to read about art history and attend museum exhibitions."
+               },
+               {
+                  "name": "Michael",
+                  "description": "Michael is a 22-year-old artist who loves to paint and attend art workshops."
+               },
+               {
+                  "name": "Jessica",
+                  "description": "Jessica is a 29-year-old art historian who loves to write about art and attend lectures on art history."
+               }
+            ],
+            "texts": [
+               {
+                  "label": "A",
+                  "text": "The Artisan gallery is a must-visit destination for any art enthusiast. With its stunning collection of modern art pieces, it offers a unique and immersive experience for visitors."
+               },
+               {
+                  "label": "B",
+                  "text": "The Museum of Modern Art is a world-renowned institution that showcases a vast collection of modern and contemporary art. Its exhibitions are a must-see for any art lover."
+               },
+               {
+                  "label": "C",
+                  "text": "The Art World is a popular online platform that features the latest art news, reviews, and exhibitions. It's a great resource for art enthusiasts who want to stay up-to-date with the latest developments in the art world."
+               },
+               {
+                  "label": "D",
+                  "text": "The Artisan gallery is a local art space that hosts regular exhibitions and workshops for artists. It's a great place to learn about art and meet other artists."
+               },
+               {
+                  "label": "E",
+                  "text": "The Museum of Modern Art is a leading institution in the field of modern and contemporary art. Its exhibitions and programs are designed to engage and inspire visitors of all ages."
+               },
+               {
+                  "label": "F",
+                  "text": "The Art World is a community of artists, curators, and art enthusiasts who come together to share their passion for art. It's a great place to learn about art and meet other like-minded individuals."
+               },
+               {
+                  "label": "G",
+                  "text": "The Artisan gallery is a unique and immersive experience for art enthusiasts. Its stunning collection of modern art pieces is sure to inspire and delight visitors."
+               },
+               {
+                  "label": "H",
+                  "text": "The Museum of Modern Art is a leading institution in the field of modern and contemporary art. Its exhibitions and programs are designed to engage and inspire visitors of all ages."
+               }
+            ]
+         },
+         "questions": [
+            {
+               "question": "Which text would be most suitable for Emily?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because it is the most relevant text to Emily's interests and hobbies. The other options are less suitable because they either focus on a different aspect of art (B) or are not as relevant to Emily's interests (C, D).",
+               "tips": "When matching profiles to texts, make sure to carefully read the descriptions of the people and the texts, and match the most relevant text to the person's interests and hobbies."
+            },
+            {
+               "question": "Which text would be most suitable for David?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because it is the most relevant text to David's interests and hobbies. The other options are less suitable because they either focus on a different aspect of art (A) or are not as relevant to David's interests (C, D).",
+               "tips": "When matching profiles to texts, make sure to carefully read the descriptions of the people and the texts, and match the most relevant text to the person's interests and hobbies."
+            },
+            {
+               "question": "Which text would be most suitable for Sarah?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'E' because it is the most relevant text to Sarah's interests and hobbies. The other options are less suitable because they either focus on a different aspect of art (A, B) or are not as relevant to Sarah's interests (C, D).",
+               "tips": "When matching profiles to texts, make sure to carefully read the descriptions of the people and the texts, and match the most relevant text to the person's interests and hobbies."
+            },
+            {
+               "question": "Which text would be most suitable for Michael?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because it is the most relevant text to Michael's interests and hobbies. The other options are less suitable because they either focus on a different aspect of art (A, B) or are not as relevant to Michael's interests (C).",
+               "tips": "When matching profiles to texts, make sure to carefully read the descriptions of the people and the texts, and match the most relevant text to the person's interests and hobbies."
+            },
+            {
+               "question": "Which text would be most suitable for Jessica?",
+               "options": ["A", "B", "C", "D"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'F' because it is the most relevant text to Jessica's interests and hobbies. The other options are less suitable because they either focus on a different aspect of art (A, B) or are not as relevant to Jessica's interests (C, D).",
+               "tips": "When matching profiles to texts, make sure to carefully read the descriptions of the people and the texts, and match the most relevant text to the person's interests and hobbies."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts - Art News",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            {
+               "text": "The Artisan gallery has announced its latest exhibition, 'The Art of Modernism', which will feature works by some of the most renowned modern artists. The exhibition will run for six weeks and will include a range of paintings, sculptures, and installations. 'The Art of Modernism' promises to be an unforgettable experience for art lovers and will be a must-visit destination for anyone interested in modern art."
+            },
+            {
+               "text": "The Museum of Modern Art has announced its latest acquisition, a rare painting by the famous artist, Pablo Picasso. The painting, which is valued at millions of dollars, will be on display in the museum's permanent collection starting next month. The acquisition is a significant addition to the museum's collection and will be a major attraction for art lovers."
+            },
+            {
+               "text": "The Art World is a popular online platform that features the latest art news, reviews, and exhibitions. It's a great resource for art enthusiasts who want to stay up-to-date with the latest developments in the art world. The platform is updated regularly and features a range of articles on art-related topics."
+            },
+            {
+               "text": "The Artisan gallery has announced its latest collaboration with a local artist, who will be creating a series of paintings inspired by the gallery's stunning collection of modern art pieces. The paintings will be on display in the gallery starting next month and will be a must-see for any art lover."
+            },
+            {
+               "text": "The Museum of Modern Art has announced its latest exhibition, 'The Art of Expression', which will feature works by some of the most renowned expressionist artists. The exhibition will run for four weeks and will include a range of paintings, sculptures, and installations."
+            }
+         ],
+         "questions": [
+            {
+               "question": "What is the title of the exhibition at the Artisan gallery?",
+               "options": ["The Art of Modernism", "The Art of Expression", "The Art of Abstract", "The Art of Realism"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The Art of Modernism' because it is explicitly stated in the text as the title of the exhibition at the Artisan gallery. The other options are incorrect because they are either not mentioned in the text (The Art of Abstract, The Art of Realism) or refer to a different exhibition (The Art of Expression).",
+               "tips": "When answering multiple-choice questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "What is the value of the rare painting acquired by the Museum of Modern Art?",
+               "options": ["$10 million", "$50 million", "$100 million", "Millions of dollars"],
+               "correctOption": "C",
+               "explanation": "The correct answer is '$100 million' because it is explicitly stated in the text as the value of the rare painting acquired by the Museum of Modern Art. The other options are incorrect because they are either too low ( $10 million, $50 million) or too vague (Millions of dollars).",
+               "tips": "When answering multiple-choice questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "What is the name of the platform that features the latest art news and reviews?",
+               "options": ["The Art World", "The Artisan gallery", "The Museum of Modern Art", "The Art News"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'The Art World' because it is explicitly stated in the text as the name of the platform that features the latest art news and reviews. The other options are incorrect because they are either not relevant to the topic (The Artisan gallery, The Museum of Modern Art) or not mentioned in the text (The Art News).",
+               "tips": "When answering multiple-choice questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Who will be creating a series of paintings inspired by the Artisan gallery's collection?",
+               "options": ["A local artist", "A famous artist", "A well-known curator", "A art historian"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A local artist' because it is explicitly stated in the text as the person who will be creating a series of paintings inspired by the Artisan gallery's collection. The other options are incorrect because they are either not mentioned in the text (A famous artist, A well-known curator, A art historian).",
+               "tips": "When answering multiple-choice questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "What is the title of the exhibition at the Museum of Modern Art?",
+               "options": ["The Art of Modernism", "The Art of Expression", "The Art of Abstract", "The Art of Realism"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'The Art of Expression' because it is explicitly stated in the text as the title of the exhibition at the Museum of Modern Art. The other options are incorrect because they are either not mentioned in the text (The Art of Abstract, The Art of Realism) or refer to a different exhibition (The Art of Modernism).",
+               "tips": "When answering multiple-choice questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences - Art News",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "The Artisan gallery has announced its latest exhibition, 'The Art of Modernism', which will feature works by some of the most renowned modern artists. The exhibition will run for six weeks and will include a range of paintings, sculptures, and installations. The Artisan gallery is a leading institution in the field of modern and contemporary art. [Gap 1] The exhibition promises to be an unforgettable experience for art lovers and will be a must-visit destination for anyone interested in modern art. [Gap 2] The exhibition will feature works by artists such as Picasso, Warhol, and Pollock. [Gap 3] The Artisan gallery is committed to providing a unique and immersive experience for visitors. [Gap 4] The exhibition will run from March 1st to April 15th. [Gap 5] The Artisan gallery is a popular destination for art lovers. [Gap 6] The exhibition will include a range of art pieces, including paintings, sculptures, and installations.",
+         "options": [
+            {
+               "label": "A",
+               "text": "The exhibition promises to be a major attraction for art lovers and will be a must-visit destination for anyone interested in modern art."
+            },
+            {
+               "label": "B",
+               "text": "The Artisan gallery is committed to providing a unique and immersive experience for visitors."
+            },
+            {
+               "label": "C",
+               "text": "The exhibition will feature works by artists such as Picasso, Warhol, and Pollock."
+            },
+            {
+               "label": "D",
+               "text": "The exhibition will run from March 1st to April 15th."
+            },
+            {
+               "label": "E",
+               "text": "The Artisan gallery is a popular destination for art lovers."
+            },
+            {
+               "label": "F",
+               "text": "The exhibition will include a range of art pieces, including paintings, sculptures, and installations."
+            }
+         ],
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because it is the most suitable sentence to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (B, C, E, F) or are too general (D).",
+               "tips": "When answering gapped text questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because it is the most suitable sentence to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (A, C, E, F) or are too specific (D).",
+               "tips": "When answering gapped text questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because it is the most suitable sentence to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (A, B, E, F) or are too vague (D).",
+               "tips": "When answering gapped text questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because it is the most suitable sentence to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (A, B, C, E, F).",
+               "tips": "When answering gapped text questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'E' because it is the most suitable sentence to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (A, B, C, D, F).",
+               "tips": "When answering gapped text questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 6",
+               "options": ["A", "B", "C", "D", "E", "F"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'F' because it is the most suitable sentence to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (A, B, C, D, E).",
+               "tips": "When answering gapped text questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze - Art News",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "The Artisan gallery has announced its latest exhibition, 'The Art of Modernism', which will feature works by some of the most renowned (1) _______ artists. The exhibition will run for six weeks and will include a range of (2) _______ , sculptures, and installations. The Artisan gallery is a (3) _______ institution in the field of modern and contemporary art. The exhibition promises to be an unforgettable (4) _______ for art lovers and will be a must-visit destination for anyone interested in modern art.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["modern", "contemporary", "renowned", "famous"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'modern' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (contemporary, renowned, famous).",
+               "tips": "When answering multiple-choice gap-fill questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["paintings", "sculptures", "installations", "artworks"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'paintings' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (sculptures, installations, artworks).",
+               "tips": "When answering multiple-choice gap-fill questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["leading", "major", "popular", "well-known"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'leading' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (major, popular, well-known).",
+               "tips": "When answering multiple-choice gap-fill questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["experience", "event", "show", "exhibition"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'experience' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text (event, show, exhibition).",
+               "tips": "When answering multiple-choice gap-fill questions, make sure to carefully read the text and identify the key information needed to answer the question."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill - Art News",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The Artisan gallery has announced its latest (1) _______ , 'The Art of Modernism', which will feature works by some of the most renowned modern artists. The exhibition will run for six (2) _______ and will include a range of paintings, sculptures, and (3) _______ . The Artisan gallery is a leading institution in the field of modern and contemporary (4) _______ . The exhibition promises to be an unforgettable experience for art lovers and will be a must-visit (5) _______ for anyone interested in modern art.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "exhibition",
+               "explanation": "The correct answer is 'exhibition' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text.",
+               "tips": "When answering open gap-fill questions, make sure to carefully read the text and think of the word which best fits each gap."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "weeks",
+               "explanation": "The correct answer is 'weeks' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text.",
+               "tips": "When answering open gap-fill questions, make sure to carefully read the text and think of the word which best fits each gap."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "installations",
+               "explanation": "The correct answer is 'installations' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text.",
+               "tips": "When answering open gap-fill questions, make sure to carefully read the text and think of the word which best fits each gap."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "art",
+               "explanation": "The correct answer is 'art' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text.",
+               "tips": "When answering open gap-fill questions, make sure to carefully read the text and think of the word which best fits each gap."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "destination",
+               "explanation": "The correct answer is 'destination' because it is the most suitable word to fit the gap. The other options are incorrect because they either do not make sense in the context of the text.",
+               "tips": "When answering open gap-fill questions, make sure to carefully read the text and think of the word which best fits each gap."
+            }
+         ]
+      }
+   ]
+}

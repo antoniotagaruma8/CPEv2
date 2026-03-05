@@ -1,0 +1,259 @@
+{
+  "examTitle": "CEFR B1 Food & Nutrition Mock Reading and Use of English Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Cloze on Food Culture",
+         "instructions": "Read the text and answer the questions. For each question, choose the correct answer A, B, C or D.",
+         "content": "The food culture in Japan is heavily influenced by the seasons. In the spring, many traditional foods include ingredients such as (1) _______ and (2) _______. These ingredients are often used in (3) _______ and (4) _______. One of the most popular spring dishes is (5) _______.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["miso", "soy sauce", "salt", "pepper"],
+               "correctOption": "A. miso",
+               "explanation": "The correct answer is 'miso' because it is a key ingredient in Japanese cuisine, particularly in spring dishes. The other options do not fit the context of the passage.",
+               "tips": "Pay attention to the context and the season mentioned in the passage to choose the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["cherry blossoms", "rice", "vegetables", "meat"],
+               "correctOption": "C. vegetables",
+               "explanation": "The correct answer is 'vegetables' because they are often used in spring dishes in Japan. The other options do not fit the context of the passage.",
+               "tips": "Use your knowledge of Japanese cuisine and the season mentioned in the passage to choose the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["sushi", "ramen", "tempura", "tonkatsu"],
+               "correctOption": "B. ramen",
+               "explanation": "The correct answer is 'ramen' because it is a popular spring dish in Japan. The other options do not fit the context of the passage.",
+               "tips": "Think about what type of dish is typically eaten in the spring and choose the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["rice", "noodles", "tempura", "sushi"],
+               "correctOption": "B. noodles",
+               "explanation": "The correct answer is 'noodles' because they are often used in spring dishes in Japan. The other options do not fit the context of the passage.",
+               "tips": "Use your knowledge of Japanese cuisine and the season mentioned in the passage to choose the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["chicken teriyaki", "tonkatsu", "gyoza", "ramen"],
+               "correctOption": "C. gyoza",
+               "explanation": "The correct answer is 'gyoza' because it is a popular spring dish in Japan. The other options do not fit the context of the passage.",
+               "tips": "Think about what type of dish is typically eaten in the spring and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Matching Profiles to Texts",
+         "instructions": "Read the descriptions of the 5 people and the 8 texts. Decide which text would be the most suitable for each person.",
+         "content": {
+            "people": [
+               "Alice is a food blogger who loves trying new recipes.",
+               "Bob is a health enthusiast who prioritizes exercise and healthy eating.",
+               "Charlie is a chef who specializes in Italian cuisine.",
+               "David is a food critic who reviews restaurants.",
+               "Emily is a nutritionist who helps people with meal planning."
+            ],
+            "texts": [
+               "A. This restaurant serves the best pizza in town.",
+               "B. This salad is made with fresh ingredients and is a great option for health-conscious eaters.",
+               "C. The chef's special dish of the day is a delicious Italian-style pasta.",
+               "D. This smoothie is packed with protein and will keep you full until lunchtime.",
+               "E. The health benefits of meditation and yoga are undeniable.",
+               "F. This recipe uses a unique combination of spices to create a flavorful dish.",
+               "G. The restaurant's menu is designed to cater to a variety of dietary needs.",
+               "H. This article discusses the benefits of eating a balanced diet."
+            ]
+         },
+         "questions": [
+            {
+               "question": "For Alice",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because it is a restaurant review, which would be of interest to a food blogger like Alice. The other options do not fit her profile.",
+               "tips": "Think about what type of information would be relevant to a food blogger."
+            },
+            {
+               "question": "For Bob",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'B' because it is a health-focused text, which would be of interest to a health enthusiast like Bob. The other options do not fit his profile.",
+               "tips": "Think about what type of information would be relevant to a health enthusiast."
+            },
+            {
+               "question": "For Charlie",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'C' because it is a text about Italian cuisine, which would be relevant to a chef who specializes in Italian cuisine like Charlie. The other options do not fit his profile.",
+               "tips": "Think about what type of information would be relevant to a chef who specializes in Italian cuisine."
+            },
+            {
+               "question": "For David",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'A' because it is a restaurant review, which would be relevant to a food critic like David. The other options do not fit his profile.",
+               "tips": "Think about what type of information would be relevant to a food critic."
+            },
+            {
+               "question": "For Emily",
+               "options": ["A", "B", "C", "D", "E", "F", "G", "H"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'D' because it is a text about nutrition, which would be relevant to a nutritionist like Emily. The other options do not fit her profile.",
+               "tips": "Think about what type of information would be relevant to a nutritionist."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Multiple-Choice for Short Texts",
+         "instructions": "Read the texts. For each question, choose the correct answer A, B or C.",
+         "content": [
+            "This restaurant is known for its delicious burgers and crispy fries. The prices are reasonable, and the service is friendly.",
+            "The new smoothie bar in town offers a variety of healthy options made with fresh ingredients.",
+            "The chef's special dish of the day is a mouth-watering grilled steak served with roasted vegetables.",
+            "This article discusses the benefits of eating a balanced diet for overall health and well-being."
+         ],
+         "questions": [
+            {
+               "question": "What type of food does the restaurant serve?",
+               "options": ["burgers and fries", "smoothies and salads", "steak and vegetables", "pasta and pizza"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'burgers and fries' because the text mentions the restaurant's specialty. The other options do not fit the context of the passage.",
+               "tips": "Read the text carefully and look for key words or phrases that give you a clue about the answer."
+            },
+            {
+               "question": "What is unique about the smoothie bar?",
+               "options": ["It serves healthy options", "It has a wide variety of smoothies", "It offers discounts", "It has a friendly staff"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'It serves healthy options' because the text mentions that the smoothie bar offers a variety of healthy options. The other options do not fit the context of the passage.",
+               "tips": "Think about what makes the smoothie bar unique and choose the correct answer."
+            },
+            {
+               "question": "What type of food does the chef's special dish feature?",
+               "options": ["grilled chicken", "roasted vegetables", "steak", "salad"],
+               "correctOption": "C",
+               "explanation": "The correct answer is 'steak' because the text mentions that the chef's special dish is a mouth-watering grilled steak. The other options do not fit the context of the passage.",
+               "tips": "Read the text carefully and look for key words or phrases that give you a clue about the answer."
+            },
+            {
+               "question": "What is the main topic of the article?",
+               "options": ["the benefits of eating a balanced diet", "the importance of exercise", "the dangers of junk food", "the benefits of meditation"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'the benefits of eating a balanced diet' because the text mentions that the article discusses the benefits of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what the article is mainly about and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Gapped Text - Inserting Sentences",
+         "instructions": "Five sentences have been removed from the text. Choose from the sentences A-F the one which fits each gap. There is one extra sentence which you do not need to use.",
+         "content": "The benefits of eating a balanced diet are numerous. A balanced diet can help you maintain a healthy weight, (1) _______, and improve your overall health. Eating a balanced diet can also reduce your risk of chronic diseases, (2) _______, and improve your mental health. In addition, a balanced diet can give you more energy and improve your concentration. A balanced diet can also help you live longer, (3) _______, and enjoy life to the fullest. Furthermore, eating a balanced diet can help you feel better about yourself, (4) _______, and improve your self-esteem. Finally, a balanced diet can help you maintain a healthy digestive system, (5) _______.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["A. and improve your overall health", "B. and reduce your risk of chronic diseases", "C. and improve your mental health", "D. and give you more energy", "E. and help you live longer", "F. and improve your self-esteem"],
+               "correctOption": "D",
+               "explanation": "The correct answer is 'and give you more energy' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["A. and improve your overall health", "B. and reduce your risk of chronic diseases", "C. and improve your mental health", "D. and give you more energy", "E. and help you live longer", "F. and improve your self-esteem"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'and reduce your risk of chronic diseases' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["A. and improve your overall health", "B. and reduce your risk of chronic diseases", "C. and improve your mental health", "D. and give you more energy", "E. and help you live longer", "F. and improve your self-esteem"],
+               "correctOption": "E",
+               "explanation": "The correct answer is 'and help you live longer' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": ["A. and improve your overall health", "B. and reduce your risk of chronic diseases", "C. and improve your mental health", "D. and give you more energy", "E. and help you live longer", "F. and improve your self-esteem"],
+               "correctOption": "F",
+               "explanation": "The correct answer is 'and improve your self-esteem' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": ["A. and improve your overall health", "B. and reduce your risk of chronic diseases", "C. and improve your mental health", "D. and give you more energy", "E. and help you live longer", "F. and improve your self-esteem"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'and improve your overall health' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 5: Multiple-Choice Gap-Fill / Cloze",
+         "instructions": "Read the text below and choose the correct word for each gap.",
+         "content": "The benefits of eating a balanced diet are numerous. A (1) _______ diet can help you maintain a healthy weight, improve your overall health, and reduce your risk of chronic diseases. Eating a balanced diet can also (2) _______ your mental health and improve your self-esteem. In addition, a balanced diet can give you more energy and improve your concentration. A balanced diet can also (3) _______ you live longer and enjoy life to the fullest.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["balanced", "unbalanced", "healthy", "unhealthy"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'balanced' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what type of diet is beneficial for your health and choose the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": ["improve", "worsen", "reduce", "increase"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'improve' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": ["allow", "help", "prevent", "enable"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'help' because it is a logical consequence of eating a balanced diet. The other options do not fit the context of the passage.",
+               "tips": "Think about what happens when you eat a balanced diet and choose the correct answer."
+            }
+         ]
+      },
+      {
+         "title": "Part 6: Open Gap-Fill",
+         "instructions": "Read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+         "content": "The benefits of eating a (1) _______ diet are numerous. A (2) diet can help you maintain a healthy weight, improve your overall health, and reduce your risk of chronic diseases. Eating a (3) diet can also improve your mental health and improve your self-esteem. In addition, a (4) diet can give you more energy and improve your concentration. A (5) diet can also help you live longer and enjoy life to the fullest.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": [],
+               "correctOption": "balanced",
+               "explanation": "The correct answer is 'balanced' because it is a logical consequence of eating a balanced diet.",
+               "tips": "Think about what type of diet is beneficial for your health and choose the correct answer."
+            },
+            {
+               "question": "Gap 2",
+               "options": [],
+               "correctOption": "balanced",
+               "explanation": "The correct answer is 'balanced' because it is a logical consequence of eating a balanced diet.",
+               "tips": "Think about what type of diet is beneficial for your health and choose the correct answer."
+            },
+            {
+               "question": "Gap 3",
+               "options": [],
+               "correctOption": "balanced",
+               "explanation": "The correct answer is 'balanced' because it is a logical consequence of eating a balanced diet.",
+               "tips": "Think about what type of diet is beneficial for your health and choose the correct answer."
+            },
+            {
+               "question": "Gap 4",
+               "options": [],
+               "correctOption": "balanced",
+               "explanation": "The correct answer is 'balanced' because it is a logical consequence of eating a balanced diet.",
+               "tips": "Think about what type of diet is beneficial for your health and choose the correct answer."
+            },
+            {
+               "question": "Gap 5",
+               "options": [],
+               "correctOption": "balanced",
+               "explanation": "The correct answer is 'balanced' because it is a logical consequence of eating a balanced diet.",
+               "tips": "Think about what type of diet is beneficial for your health and choose the correct answer."
+            }
+         ]
+      }
+   ]
+}
