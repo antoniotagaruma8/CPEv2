@@ -2908,6 +2908,29 @@ export default function DashboardPage() {
                             );
                           })}
                         </div>
+                        {/* Show correct answer clearly after submission */}
+                        {submittedQuestions.has(currentQuestion.toString()) && (() => {
+                          const rawCorrect = activeQuestionData.correctOption || '';
+                          let correctLetter = rawCorrect.trim();
+                          const m = rawCorrect.match(/^([A-Z])[\.\\)]?\s/i);
+                          if (m) correctLetter = m[1].toUpperCase();
+                          else if (rawCorrect.trim().length === 1) correctLetter = rawCorrect.trim().toUpperCase();
+                          const selectedLetter = answers[currentQuestion.toString()] || '';
+                          const isWrong = selectedLetter !== correctLetter;
+                          if (!isWrong) return null;
+                          // Find the full text of the correct option
+                          const correctIndex = correctLetter.charCodeAt(0) - 'A'.charCodeAt(0);
+                          const correctFullText = activeQuestionData.options?.[correctIndex]?.replace(/^[A-Z][\.\\)]\s*/i, '').trim() || rawCorrect;
+                          return (
+                            <div className="mt-3 p-3 bg-green-50 border-2 border-green-200 rounded-xl flex items-start gap-2">
+                              <span className="text-green-600 text-lg">✅</span>
+                              <div>
+                                <p className="text-sm font-bold text-green-700">Correct Answer: {correctLetter}</p>
+                                <p className="text-sm text-green-600">{correctFullText}</p>
+                              </div>
+                            </div>
+                          );
+                        })()}
                       </>
                     ) : examType === 'Speaking' ? (
                       <div className="text-sm text-slate-500 italic mt-6">
