@@ -2742,8 +2742,12 @@ export default function DashboardPage() {
                               else newSet.add(currentQuestion.toString());
                               return newSet;
                             })}
-                            className="px-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-md border border-gray-300 transition-colors"
-                            title={revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Answer"}
+                            disabled={!submittedQuestions.has(currentQuestion.toString())}
+                            className={`px-3 flex items-center justify-center rounded-md border transition-all ${submittedQuestions.has(currentQuestion.toString())
+                                ? 'bg-gray-100 hover:bg-gray-200 text-gray-600 border-gray-300 cursor-pointer'
+                                : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed opacity-60'
+                              }`}
+                            title={!submittedQuestions.has(currentQuestion.toString()) ? "Submit an answer first to unlock" : revealedAnswers.has(currentQuestion.toString()) ? "Hide Answer" : "Show Answer"}
                           >
                             {revealedAnswers.has(currentQuestion.toString()) ? (
                               <EyeOff className="w-5 h-5" />
