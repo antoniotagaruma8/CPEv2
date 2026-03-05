@@ -1,0 +1,62 @@
+{
+  "examTitle": "Science & Research B1 Mock Listening Exam",
+   "parts": [
+      {
+         "title": "Part 1: Multiple-Choice Short Interviews on Daily Life",
+         "instructions": "Listen to the short interviews and choose the correct answer.",
+         "content": "Interviewer: Welcome to the show, Sarah.\nSarah: Thank you for having me.\nInterviewer: So tell us about your work.\nSarah: I'm a biologist, and I study the behavior of animals in their natural habitats.\nInterviewer: That's fascinating! What do you hope to achieve with your research?\nSarah: I hope to contribute to a better understanding of how animals adapt to their environments.\nInterviewer: That's a great goal. Do you have any favorite animals you've studied?\nSarah: Yes, I've always been fascinated by dolphins.\nInterviewer: Why is that?\nSarah: Because of their intelligence and social behavior.",
+         "questions": [
+            {
+               "question": "What does Sarah study as a biologist?",
+               "options": ["Animals in zoos", "Behavior of animals in natural habitats", "Plants in greenhouses"],
+               "correctOption": "B",
+               "imagePrompts": ["A picture of a biologist in a lab", "A picture of an animal in its natural habitat", "A picture of a researcher in a field"],
+               "explanation": "The correct answer is 'Behavior of animals in natural habitats' because Sarah mentions studying animals in their natural habitats. The other options are not relevant to Sarah's work as a biologist.",
+               "tips": "Listen carefully to Sarah's answers and choose the option that matches what she says."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Multiple-Choice Short Recordings on Science and Research",
+         "instructions": "Listen to the short recordings and choose the correct answer.",
+         "content": "Record 1: \nInterviewer: What is the main challenge of conducting research in a lab?\nScientist: The main challenge is managing the variables and controlling the environment.\n\nRecord 2: \nInterviewer: What is the benefit of using technology in research?\nScientist: The benefit is that it allows us to collect and analyze data more efficiently.",
+         "questions": [
+            {
+               "question": "What is the main challenge of conducting research in a lab?",
+               "options": ["Managing the variables and controlling the environment", "Collecting and analyzing data", "Interpreting the results"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'Managing the variables and controlling the environment' because the scientist mentions this as the main challenge. The other options are not relevant to the challenge.",
+               "tips": "Listen carefully to the scientist's answers and choose the option that matches what they say."
+            }
+         ]
+      },
+      {
+         "title": "Part 3: Gap-Fill Notes on Science and Research",
+         "instructions": "Listen to the notes and fill in the gaps.",
+         "content": "The main problem is related to (1) pollution in the city center. This pollution is caused by (2) the increase in vehicles and industrial activities. To solve this problem, we need to (3) reduce our dependence on fossil fuels and (4) invest in renewable energy sources.",
+         "questions": [
+            {
+               "question": "Gap 1",
+               "options": ["pollution", "deforestation", "climate change"],
+               "correctOption": "A",
+               "explanation": "The correct answer is 'pollution' because the text mentions pollution as the main problem. The other options are not relevant to the text.",
+               "tips": "Listen carefully to the audio and fill in the gap with the correct word."
+            }
+         ]
+      },
+      {
+         "title": "Part 4: Multiple-Choice Long Interview on Science and Research",
+         "instructions": "Listen to the long interview and choose the correct answer.",
+         "content": "Interviewer: Welcome to the show, Dr. Smith. Can you tell us about your research on climate change?\nDr. Smith: Thank you for having me. My research focuses on the impact of climate change on global food systems. We've found that (1) the rise in temperatures is affecting crop yields and (2) this is having a significant impact on food security.\nInterviewer: That's fascinating. What do you hope to achieve with your research?\nDr. Smith: I hope to contribute to a better understanding of the relationship between climate change and food systems, and to (3) inform policy decisions that can help mitigate the effects of climate change.\nInterviewer: That's a great goal. Do you have any recommendations for individuals who want to make a positive impact on the issue?\nDr. Smith: Yes, I would recommend (4) reducing meat consumption and (5) supporting sustainable agriculture practices.",
+         "questions": [
+            {
+               "question": "What is the impact of the rise in temperatures on crop yields?",
+               "options": ["It is having a significant positive impact", "It is having a significant negative impact", "It is having no impact"],
+               "correctOption": "B",
+               "explanation": "The correct answer is 'It is having a significant negative impact' because Dr. Smith mentions that the rise in temperatures is affecting crop yields. The other options are not relevant to the impact.",
+               "tips": "Listen carefully to Dr. Smith's answers and choose the option that matches what they say."
+            }
+         ]
+      }
+   ]
+}

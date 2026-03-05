@@ -1,0 +1,70 @@
+{
+  "examTitle": "CEFR C2 Mock Writing Exam: Shopping & Fashion",
+   "parts": [
+      {
+         "title": "Part 1: Writing an Essay Comparing Two Texts on Sustainable Fashion",
+         "instructions": "Write a comparative essay (240-280 words) discussing the advantages and disadvantages of fast fashion and sustainable fashion, as presented in the two texts below.",
+         "content": {
+            "text1": "The fast fashion industry is one of the most polluting and environmentally damaging sectors in the world. The production, transportation, and disposal of cheap clothing contribute to greenhouse gas emissions, water pollution, and textile waste. According to a recent study, the fashion industry is responsible for 10% of global carbon emissions, more than all international flights and maritime shipping combined.",
+            "text2": "In contrast, sustainable fashion prioritizes environmental responsibility and social justice. It involves designing, producing, and distributing clothing in a way that minimizes harm to the planet and its inhabitants. Sustainable fashion encourages consumers to buy second-hand, rent, or buy clothing made from eco-friendly materials. By doing so, individuals can reduce their carbon footprint and contribute to a more circular economy."
+         },
+         "questions": [
+            {
+               "question": "Write your response",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Read both texts carefully and identify the main arguments presented.",
+                  "Step 2: Determine the advantages and disadvantages of fast fashion and sustainable fashion.",
+                  "Step 3: Compare and contrast the two texts, highlighting similarities and differences.",
+                  "Step 4: Organize your ideas into a clear and coherent essay structure."
+               ],
+               "modelAnswer": "The fast fashion industry is a significant contributor to environmental degradation, with its production, transportation, and disposal processes releasing massive amounts of greenhouse gas emissions, polluting waterways, and generating substantial textile waste. In contrast, sustainable fashion prioritizes environmental responsibility and social justice, encouraging consumers to adopt environmentally friendly practices such as buying second-hand, renting, or purchasing clothing made from eco-friendly materials. While fast fashion offers affordability and convenience, its negative impacts far outweigh its benefits. Sustainable fashion, on the other hand, promotes a more circular economy, reducing waste and pollution. However, it also requires a significant investment in design, production, and distribution. Ultimately, the choice between fast fashion and sustainable fashion depends on individual values and priorities. As consumers, we must consider the long-term consequences of our purchasing decisions and make informed choices that align with our values.",
+               "tips": "Use complex vocabulary and sentence structures to demonstrate your mastery of C2 grammar. Address both texts in your essay, comparing and contrasting their arguments. Use transitional phrases to connect your ideas and paragraphs."
+            }
+         ]
+      },
+      {
+         "title": "Part 2: Choose One Task",
+         "instructions": "Choose ONE of the tasks below and write your response in 280-320 words.",
+         "content": "The rise of e-commerce has transformed the retail industry, changing the way consumers shop and interact with brands. As a result, traditional brick-and-mortar stores must adapt to remain competitive. Consider the following announcements and write a response to one of them.",
+         "questions": [
+            {
+               "question": "Task A: ARTICLE\n\nYou have seen the following announcement in an international magazine: 'E-commerce giant Amazon has announced plans to open a chain of physical stores in major cities worldwide. The stores will offer a unique shopping experience, combining online and offline retail.' Write a response to this announcement, discussing the potential impact on the retail industry.",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Read the announcement carefully and identify the key points.",
+                  "Step 2: Consider the potential implications of Amazon's move on the retail industry.",
+                  "Step 3: Organize your ideas into a clear and coherent article structure.",
+                  "Step 4: Use evidence and examples to support your arguments."
+               ],
+               "modelAnswer": "Amazon's decision to open physical stores marks a significant shift in the retail landscape. By combining online and offline retail, Amazon aims to create a unique shopping experience that blends the convenience of e-commerce with the tactile nature of brick-and-mortar stores. This move has the potential to disrupt traditional retail models, forcing competitors to adapt and innovate. As Amazon expands its presence in physical retail, it will be interesting to see how consumers respond to this new format. Will they welcome the opportunity to experience Amazon's brand in person, or will they stick to online shopping? The outcome will depend on how well Amazon executes its strategy and meets the needs of its customers.",
+               "tips": "Use a formal tone and language suitable for an article. Address the announcement and its implications on the retail industry. Use evidence and examples to support your arguments."
+            },
+            {
+               "question": "Task B: LETTER\n\nYou are writing to a friend who is planning a trip to Paris. They have expressed interest in shopping at the city's famous Galeries Lafayette department store. Write a letter to your friend, advising them on what to expect and what to buy.",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Read the scenario carefully and identify the key points.",
+                  "Step 2: Consider the shopping experience at Galeries Lafayette and what your friend should expect.",
+                  "Step 3: Organize your ideas into a clear and coherent letter structure.",
+                  "Step 4: Use persuasive language to recommend specific items to buy."
+               ],
+               "modelAnswer": "Dear [Friend],\n\nI hope this letter finds you well. I heard that you're planning a trip to Paris and that you're interested in shopping at Galeries Lafayette. I highly recommend visiting this iconic department store, which offers an unparalleled shopping experience. The store's grandeur and opulence will leave you in awe, and the wide range of products on offer will cater to your every need. Be sure to check out the beauty section, where you can find high-end skincare and makeup products. I also recommend buying a French perfume to bring back home as a souvenir. Don't miss the opportunity to try on a stylish outfit at the store's in-house salon. I'm sure you'll find something that suits your taste and budget. Have fun shopping, and don't forget to try some of the delicious food at the store's café.",
+               "tips": "Use a formal but friendly tone and language suitable for a letter. Address your friend's interest in shopping at Galeries Lafayette. Use persuasive language to recommend specific items to buy."
+            },
+            {
+               "question": "Task C: REPORT\n\nYou have been asked to write a report on the impact of fast fashion on the environment. Consider the following statistics and write a report highlighting the main points.",
+               "options": [],
+               "howToApproach": [
+                  "Step 1: Read the statistics carefully and identify the key points.",
+                  "Step 2: Consider the impact of fast fashion on the environment.",
+                  "Step 3: Organize your ideas into a clear and coherent report structure.",
+                  "Step 4: Use evidence and examples to support your arguments."
+               ],
+               "modelAnswer": "Executive Summary\n\nFast fashion has become a significant contributor to environmental degradation, with its production, transportation, and disposal processes releasing massive amounts of greenhouse gas emissions, polluting waterways, and generating substantial textile waste. According to a recent study, the fashion industry is responsible for 10% of global carbon emissions, more than all international flights and maritime shipping combined. This report highlights the main points of this issue, including the environmental impacts of fast fashion, the consequences of textile waste, and the potential solutions to mitigate these effects. Recommendations are made to consumers, manufacturers, and policymakers to address this critical issue.",
+               "tips": "Use a formal tone and language suitable for a report. Address the impact of fast fashion on the environment. Use evidence and examples to support your arguments."
+            }
+         ]
+      }
+   ]
+}

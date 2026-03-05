@@ -1876,7 +1876,7 @@ export default function DashboardPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className={`w-full mt-2 py-2.5 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all flex items-center justify-between ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}
+                    className={`w-full mt-2 py-2.5 px-4 rounded-lg text-white font-bold text-sm shadow-md transition-all flex flex-col items-center justify-center gap-1 ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:scale-[1.01] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'}`}
                   >
                     <span>{loading ? 'Generating...' : 'Generate Custom Exam'}</span>
                     {generationInfo && generationInfo.plan === 'free' && !loading && (
