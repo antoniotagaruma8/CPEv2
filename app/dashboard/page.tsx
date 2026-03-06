@@ -2926,7 +2926,7 @@ export default function DashboardPage() {
                             <div className="mt-3 p-3 bg-green-50 border-2 border-green-200 rounded-xl flex items-start gap-2">
                               <span className="text-green-600 text-lg">✅</span>
                               <div>
-                                <p className="text-sm font-bold text-green-700">Correct Answer: {correctLetter}</p>
+                                <p className="text-sm font-bold text-green-700">{correctLetter}</p>
                                 <p className="text-sm text-green-600">{correctFullText}</p>
                               </div>
                             </div>
@@ -3004,7 +3004,7 @@ export default function DashboardPage() {
                         )}
                         {submittedQuestions.has(currentQuestion.toString()) && !checkTextAnswer(answers[currentQuestion.toString()] || '', activeQuestionData.correctOption || '') && (
                           <div className="text-sm text-red-600 bg-red-50 p-2 rounded border border-red-100">
-                            <span className="font-bold">Correct Answer:</span> {activeQuestionData.correctOption}
+                            {activeQuestionData.correctOption}
                           </div>
                         )}
                       </div>
