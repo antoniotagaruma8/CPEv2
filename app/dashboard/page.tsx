@@ -3421,7 +3421,12 @@ export default function DashboardPage() {
 
         {/* Global Writing Assessment Modal overlay */}
         {isWritingModalOpen && writingQuestionId && (() => {
-          const qText = examQuestions.find(q => q.id.toString() === writingQuestionId)?.question || '';
+          const activeQ = examQuestions.find(q => q.id.toString() === writingQuestionId);
+          const activeP = examParts.find(p => p.part === activeQ?.part);
+          const instructions = activeP?.instructions || '';
+          const content = activeP?.content || '';
+          const qText = activeQ?.question || '';
+
           return (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
               <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800 transform transition-all h-[95vh]">
@@ -3449,7 +3454,23 @@ export default function DashboardPage() {
                       <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-2 uppercase tracking-wider flex items-center gap-2">
                         Task Prompt
                       </p>
-                      <p className="text-slate-800 dark:text-slate-200 text-base leading-relaxed whitespace-pre-wrap">{qText}</p>
+                      <div className="text-slate-800 dark:text-slate-200 text-sm leading-relaxed whitespace-pre-wrap">
+                        {instructions && <p className="mb-2 font-semibold text-base">{instructions}</p>}
+                        {content && (
+                          <div className="mb-4 prose prose-sm dark:prose-invert max-w-none bg-white dark:bg-slate-900/50 p-3 rounded-lg border border-slate-200 dark:border-slate-700/50">
+                            {typeof content === 'string' && content.includes('---SPLIT---')
+                              ? content.split('---SPLIT---').map((text, idx) => (
+                                <div key={idx} className="mb-3 last:mb-0">
+                                  <h5 className="font-bold text-xs uppercase tracking-wider mb-1">Text {idx + 1}</h5>
+                                  <p className="whitespace-pre-wrap">{text.trim()}</p>
+                                </div>
+                              ))
+                              : <p className="whitespace-pre-wrap">{typeof content === 'string' ? content : JSON.stringify(content)}</p>}
+                          </div>
+                        )}
+                        {qText && qText !== 'Write your response' && <p className="font-medium text-base mt-2">{qText}</p>}
+                        {(!instructions && !content && (!qText || qText === 'Write your response')) && <p className="italic text-slate-500">No prompt provided.</p>}
+                      </div>
                     </div>
 
                     {/* The Editor */}
