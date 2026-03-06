@@ -3426,6 +3426,7 @@ export default function DashboardPage() {
           const instructions = activeP?.instructions || '';
           const content = activeP?.content || '';
           const qText = activeQ?.question || '';
+          const tips = activeQ?.tips || activeP?.tips || '';
 
           return (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
@@ -3450,7 +3451,7 @@ export default function DashboardPage() {
                   <div className={`p-6 flex-1 flex flex-col border-r border-slate-200 dark:border-slate-800 ${writingAssessmentResult ? 'lg:flex-[1]' : 'w-full'}`}>
 
                     {/* The Prompt */}
-                    <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-4 shrink-0 max-h-[30%] overflow-y-auto custom-scrollbar">
+                    <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-4 shrink-0 max-h-[40%] overflow-y-auto custom-scrollbar">
                       <p className="text-xs text-slate-500 dark:text-slate-400 font-bold mb-2 uppercase tracking-wider flex items-center gap-2">
                         Task Prompt
                       </p>
@@ -3470,6 +3471,17 @@ export default function DashboardPage() {
                         )}
                         {qText && qText !== 'Write your response' && <p className="font-medium text-base mt-2">{qText}</p>}
                         {(!instructions && !content && (!qText || qText === 'Write your response')) && <p className="italic text-slate-500">No prompt provided.</p>}
+
+                        {tips && (
+                          <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800/50 rounded-lg">
+                            <p className="text-xs text-yellow-800 dark:text-yellow-500 font-bold mb-1 uppercase tracking-wider flex items-center gap-1">
+                              <Lightbulb className="w-3 h-3" /> Tips
+                            </p>
+                            <p className="text-sm text-yellow-900 dark:text-yellow-600 leading-relaxed">
+                              {tips}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
 
